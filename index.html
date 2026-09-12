@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Impressionnisme Vivant — The Impressionist Video Explorer & 4K Wallpaper Gallery</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <!-- Hero Header -->
+    <header class="hero">
+        <div class="hero-container">
+            <span class="hero-subtitle-top">Curated Digital Gallery & 4K Art Archive</span>
+            <h1 class="hero-title">L'Impressionnisme Vivant</h1>
+            <p class="hero-tagline">
+                The Impressionist Video Explorer: An art lover's interactive directory and 4K wallpaper archive celebrating Claude Monet and Impressionist visual arts. Explore 199 curated works arranged by channel identity, aesthetic philosophy, and popularity.
+            </p>
+
+            <div class="hero-stats">
+                <div class="stat-pill">
+                    <span>Curated Works:</span>
+                    <strong id="statTotalVideos">199</strong>
+                </div>
+                <div class="stat-pill">
+                    <span>Cumulative Views:</span>
+                    <strong id="statTotalViews">24.2M</strong>
+                </div>
+                <div class="stat-pill">
+                    <span>Total Gallery Time:</span>
+                    <strong id="statTotalRuntime">78h 15m</strong>
+                </div>
+                <div class="stat-pill">
+                    <span>Source Channels:</span>
+                    <strong id="statChannelCount">41</strong>
+                </div>
+                <div class="stat-pill" style="border-color: rgba(224, 169, 109, 0.4); background: rgba(224, 169, 109, 0.15);">
+                    <span>4K Wallpapers:</span>
+                    <strong id="statWallpapersCount">27+</strong>
+                </div>
+            </div>
+
+            <div class="hero-actions">
+                <a href="#explorerSection" class="btn btn-primary" onclick="switchViewMode('videos')">Explore Video Catalog ↓</a>
+                <a href="#explorerSection" class="btn btn-accent" onclick="switchViewMode('wallpapers')">🖼️ 4K Wallpaper Gallery ↓</a>
+                <a href="#channelsSection" class="btn btn-outline-white">Channel Guides 🏛️</a>
+                <a href="https://www.youtube.com/playlist?list=PLeqGkucOU6lA" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white">
+                    Open YouTube Playlist ↗
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- Local Protocol Notice (Shown only if loaded via file://) -->
+        <div id="protocolNotice" class="protocol-banner" style="display: none;">
+            <div class="protocol-content">
+                <span class="protocol-icon">💡</span>
+                <div class="protocol-text">
+                    <strong>Viewing via local file mode (<code>file://</code>):</strong>
+                    YouTube restricts embedded player playback on local file origins (which causes <em>Error 153</em>). You can watch any painting instantly by clicking the red <strong>"Watch on YouTube ↗"</strong> button, or launch the included local server with <code>python3 start_server.py</code> to enable the embedded player.
+                </div>
+            </div>
+        </div>
+
+        <!-- Art Lover Curated Pathways Bar -->
+        <div class="pathways-bar" style="margin-top: 24px;">
+            <button class="pathway-chip active" onclick="selectPathway('all')">✨ All Curated Works (199)</button>
+            <button class="pathway-chip" onclick="selectPathway('archives')">🏛️ Complete Museum Catalogues (LearnFromMasters)</button>
+            <button class="pathway-chip" onclick="selectPathway('immersion')">🎬 Step Inside the Canvas (Living 4K)</button>
+            <button class="pathway-chip" onclick="selectPathway('waterlilies')">🌿 Water Lilies & Garden Sanctuaries</button>
+            <button class="pathway-chip" onclick="selectPathway('masters')">🎻 Neglected Masters & Classical Pairings (K A R O L A)</button>
+            <button class="pathway-chip" onclick="selectPathway('romance')">💌 Parisian Romance & Belle Époque (Cupid Studio)</button>
+        </div>
+
+        <!-- Section: Channel Guide & Characterizations -->
+        <section id="channelsSection">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">🏛️ The Channel Guides & Aesthetic Profiles</h2>
+                    <p class="section-desc">
+                        A critical analysis of the recurring titles, curation strategies, and artistic personalities that define each creator in this collection.
+                    </p>
+                </div>
+            </div>
+
+            <div class="channels-grid" id="channelsGrid">
+                <!-- Injected via app.js -->
+            </div>
+        </section>
+
+        <!-- Section: Gallery Explorer -->
+        <section id="explorerSection">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title" id="sectionHeaderTitle">🎨 The Impressionist Video Explorer</h2>
+                    <p class="section-desc" id="sectionHeaderDesc">
+                        Browse all 199 paintings and visual poems with verified YouTube links, high-res previews, and embedded playback.
+                    </p>
+                </div>
+
+                <!-- View Mode Toggle Control -->
+                <div class="view-mode-toggle">
+                    <button id="toggleBtnVideos" class="toggle-mode-btn active" onclick="switchViewMode('videos')">
+                        🎬 Video Catalog (<span id="toggleVideosCount">199</span>)
+                    </button>
+                    <button id="toggleBtnWallpapers" class="toggle-mode-btn" onclick="switchViewMode('wallpapers')">
+                        🖼️ 4K Wallpaper Gallery (<span id="toggleWallpapersCount">27</span>)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Controls: Search, Filter, Sort -->
+            <div class="controls-card">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search paintings, artists (Monet, Renoir, Sisley), or themes..." />
+                </div>
+
+                <div class="filter-group">
+                    <select id="channelSelect" class="select-dropdown">
+                        <!-- Populated by JS -->
+                    </select>
+
+                    <select id="sortSelect" class="select-dropdown">
+                        <option value="views_desc">Popularity: High to Low</option>
+                        <option value="views_asc">Popularity: Low to High</option>
+                        <option value="duration_desc">Duration: Longest First</option>
+                        <option value="duration_asc">Duration: Shortest First</option>
+                        <option value="title_asc">Title: Alphabetical (A-Z)</option>
+                    </select>
+                </div>
+
+                <div class="results-info" id="resultsCount">Showing 199 works</div>
+            </div>
+
+            <!-- View 1: Video Grid -->
+            <div class="videos-grid" id="videosGrid">
+                <!-- Video cards rendered by app.js -->
+            </div>
+
+            <!-- View 2: Wallpaper Grid (Shown in wallpaper mode) -->
+            <div class="wallpapers-grid" id="wallpapersGrid" style="display: none;">
+                <!-- Wallpapers rendered by app.js -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal 1: Video Player Lightbox -->
+    <div id="modalOverlay" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title" id="modalTitle">Loading video...</div>
+                <div class="modal-header-actions">
+                    <a id="modalYtDirectBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn-modal-yt">
+                        Watch on YouTube ↗
+                    </a>
+                    <button class="btn-close-modal" onclick="closeVideoModal()" aria-label="Close Player">✕</button>
+                </div>
+            </div>
+            <div class="player-frame-wrapper" id="playerFrameWrapper">
+                <!-- iframe injected dynamically -->
+            </div>
+            <div class="modal-footer-notice">
+                <span>Encountering YouTube Error 153?</span> YouTube restricts embedded playback in local file environments.
+                <a id="modalYtFallbackLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-fallback-yt">Click here to watch directly on YouTube ↗</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Wallpaper Gallery Lightbox -->
+    <div id="wallpaperModalOverlay" class="modal-overlay">
+        <div class="wallpaper-modal-content">
+            <div class="wallpaper-modal-header">
+                <div>
+                    <h3 id="wpModalTitle" class="wp-modal-title">Wallpaper Preview</h3>
+                    <div id="wpModalSubtitle" class="wp-modal-subtitle">Claude Monet · 4K UHD</div>
+                </div>
+                <div class="modal-header-actions">
+                    <a id="wpDownloadBtn" href="#" download class="btn-modal-download" target="_blank">
+                        ⬇ Download Full-Res
+                    </a>
+                    <a id="wpJumpVideoBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn-modal-yt">
+                        Jump to Scene in Video ↗
+                    </a>
+                    <button class="btn-close-modal" onclick="closeWallpaperModal()" aria-label="Close Wallpaper Gallery">✕</button>
+                </div>
+            </div>
+
+            <div class="wp-main-view">
+                <img id="wpMainImage" class="wp-large-img" src="" alt="Wallpaper Preview" />
+                <div id="wpBadgeResolution" class="wp-badge-resolution">4K UHD</div>
+            </div>
+
+            <!-- Thumbnail Carousel of Available Snapshots -->
+            <div class="wp-carousel-tray" id="wpCarouselTray">
+                <!-- Thumbnails injected dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-quote">
+            “Color is my day-long obsession, joy, and torment.”
+        </div>
+        <p style="margin-bottom: 8px;">— Claude Monet</p>
+        <p>Curated for Art Lovers & Impressionism Admirers · Generated from YouTube Playlist <a href="https://www.youtube.com/playlist?list=PLeqGkucOU6lA" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; color: var(--color-primary);">sh_Monet inspired Visual Arts</a></p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

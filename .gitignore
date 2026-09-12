@@ -1,0 +1,16 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Environment / Secret Keys
+.env
+
+# Antigravity task logs & cache
+.system_generated/
+*.log
