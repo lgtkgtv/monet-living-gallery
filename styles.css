@@ -264,52 +264,6 @@ a {
   padding: 0 24px;
 }
 
-/* --- Curated Art Lover Pathways Bar --- */
-.pathways-bar {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
-  padding: 18px 0;
-  scrollbar-width: none; /* Firefox */
-  -webkit-overflow-scrolling: touch;
-}
-
-.pathways-bar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
-}
-
-.pathway-chip {
-  flex-shrink: 0;
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  padding: 8px 16px;
-  border-radius: var(--radius-full);
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--color-primary);
-  cursor: pointer;
-  transition: var(--transition);
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  box-shadow: var(--shadow-sm);
-  min-height: 40px;
-}
-
-.pathway-chip:hover {
-  background: #f4ede0;
-  border-color: var(--color-primary-light);
-  transform: translateY(-1px);
-}
-
-.pathway-chip.active {
-  background: var(--color-primary);
-  color: #ffffff;
-  border-color: var(--color-primary);
-  box-shadow: 0 3px 10px rgba(30, 57, 42, 0.25);
-  transform: translateY(-1px);
-}
-
 /* --- Section Headers --- */
 .section-header {
   margin: 40px 0 20px;

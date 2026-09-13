@@ -29,7 +29,7 @@
 
             <!-- Quick Action Jump Buttons -->
             <div class="hero-actions">
-                <a href="#explorerSection" class="btn btn-primary" onclick="switchViewMode('videos'); selectPathway('1080p_plus');">
+                <a href="#explorerSection" class="btn btn-primary" onclick="switchViewMode('videos')">
                     🎬 Explore 1080p HD or Better (<span id="hero1080pBtnCount">191</span>) ↓
                 </a>
                 <a href="#explorerSection" class="btn btn-accent" onclick="switchViewMode('wallpapers')">
@@ -79,19 +79,6 @@
 
     <!-- Main Container -->
     <main class="container">
-
-        <!-- Art Lover Curated Pathways Bar -->
-        <div class="pathways-bar" id="pathwaysBar">
-            <button class="pathway-chip active" onclick="selectPathway('1080p_plus')">💎 1080p HD or better (191)</button>
-            <button class="pathway-chip" onclick="selectPathway('1080p_exact')">✨ 1080p Full HD (141)</button>
-            <button class="pathway-chip" onclick="selectPathway('4k')">👑 4K Ultra-HD Only (43)</button>
-            <button class="pathway-chip" onclick="selectPathway('all')">✨ All Curated Works (198)</button>
-            <button class="pathway-chip" onclick="selectPathway('immersion')">🎬 Step Inside the Canvas (Living 4K)</button>
-            <button class="pathway-chip" onclick="selectPathway('waterlilies')">🌿 Water Lilies & Garden Sanctuaries</button>
-            <button class="pathway-chip" onclick="selectPathway('archives')">🏛️ Museum Catalogues (LearnFromMasters)</button>
-            <button class="pathway-chip" onclick="selectPathway('masters')">🎻 Neglected Masters (K A R O L A)</button>
-            <button class="pathway-chip" onclick="selectPathway('romance')">💌 Belle Époque Romance (Cupid Studio)</button>
-        </div>
 
         <!-- SECTION 1: Impressionist Video Explorer (Displayed First for immediate visual engagement) -->
         <section id="explorerSection">

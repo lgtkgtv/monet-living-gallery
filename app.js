@@ -514,10 +514,6 @@ function resetFilters() {
     const sortSelect = document.getElementById('sortSelect');
     if (sortSelect) sortSelect.value = 'views_desc';
 
-    document.querySelectorAll('.pathway-chip').forEach(c => c.classList.remove('active'));
-    const firstChip = document.querySelector('.pathway-chip');
-    if (firstChip) firstChip.classList.add('active');
-
     applyFilters();
 }
 
