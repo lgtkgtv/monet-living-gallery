@@ -29,17 +29,14 @@
 
             <!-- Quick Action Jump Buttons -->
             <div class="hero-actions">
-                <a href="#explorerSection" class="btn btn-primary" onclick="switchViewMode('videos')">
-                    🎬 Watch 4K Videos (<span id="hero4kBtnCount">43</span>) ↓
+                <a href="#explorerSection" class="btn btn-primary" onclick="switchViewMode('videos'); selectPathway('1080p');">
+                    🎬 Explore 1080p & 4K (<span id="hero1080pBtnCount">191</span>) ↓
                 </a>
                 <a href="#explorerSection" class="btn btn-accent" onclick="switchViewMode('wallpapers')">
-                    🖼️ 4K Wallpapers Archive (<span id="heroWpBtnCount">322+</span>) ↓
+                    🖼️ 4K Wallpapers Archive (<span id="heroWpBtnCount">366+</span>) ↓
                 </a>
                 <a href="#channelsSection" class="btn btn-outline-white">
                     🏛️ Curators & Channels
-                </a>
-                <a href="https://www.youtube.com/playlist?list=PLeqGkucOU6lA" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white">
-                    YouTube Playlist ↗
                 </a>
             </div>
 
@@ -83,9 +80,10 @@
     <!-- Main Container -->
     <main class="container">
 
-        <!-- Art Lover Curated Pathways Bar (Defaulted to 4K Ultra-HD) -->
+        <!-- Art Lover Curated Pathways Bar (Defaulted to 1080p Full HD & 4K) -->
         <div class="pathways-bar" id="pathwaysBar">
-            <button class="pathway-chip active" onclick="selectPathway('4k')">👑 4K Ultra-HD Only (43)</button>
+            <button class="pathway-chip active" onclick="selectPathway('1080p')">💎 1080p Full HD & 4K (191)</button>
+            <button class="pathway-chip" onclick="selectPathway('4k')">👑 4K Ultra-HD Only (43)</button>
             <button class="pathway-chip" onclick="selectPathway('all')">✨ All Curated Works (198)</button>
             <button class="pathway-chip" onclick="selectPathway('immersion')">🎬 Step Inside the Canvas (Living 4K)</button>
             <button class="pathway-chip" onclick="selectPathway('waterlilies')">🌿 Water Lilies & Garden Sanctuaries</button>
@@ -100,7 +98,7 @@
                 <div>
                     <h2 class="section-title" id="sectionHeaderTitle">🎨 The Impressionist Video Explorer</h2>
                     <p class="section-desc" id="sectionHeaderDesc">
-                        Currently presenting <strong>4K Ultra-HD Masterworks</strong> first. Experience high-definition brushwork, living canvas motion, and museum-grade reproductions.
+                        Currently presenting <strong>1080p Full HD & 4K Ultra-HD Masterworks</strong> (191 works). Experience high-definition brushwork, living canvas motion, and museum-grade reproductions.
                     </p>
                 </div>
 
@@ -110,7 +108,7 @@
                         🎬 Video Catalog (<span id="toggleVideosCount">198</span>)
                     </button>
                     <button id="toggleBtnWallpapers" class="toggle-mode-btn" onclick="switchViewMode('wallpapers')">
-                        🖼️ 4K Wallpapers (<span id="toggleWallpapersCount">322</span>)
+                        🖼️ 4K Wallpapers (<span id="toggleWallpapersCount">366</span>)
                     </button>
                 </div>
             </div>
@@ -128,10 +126,10 @@
                     </select>
 
                     <select id="resSelect" class="select-dropdown">
-                        <option value="4K" selected>👑 4K UHD Only (43 works)</option>
+                        <option value="1080P" selected>💎 1080p Full HD or Better (191 works)</option>
+                        <option value="4K">👑 4K UHD Only (43 works)</option>
                         <option value="ALL">All Resolutions (198 works)</option>
-                        <option value="FHD">1080p Full HD (148 works)</option>
-                        <option value="OTHER">1440p / 720p HD</option>
+                        <option value="OTHER">Standard HD (720p / 7 works)</option>
                     </select>
 
                     <select id="sortSelect" class="select-dropdown">
@@ -144,7 +142,7 @@
                     </select>
                 </div>
 
-                <div class="results-info" id="resultsCount">Showing 43 4K works</div>
+                <div class="results-info" id="resultsCount">Showing 191 1080p+ works</div>
             </div>
 
             <!-- View 1: Video Grid -->
@@ -188,17 +186,22 @@
                     <div class="modal-res-tag" id="modalVideoRes">4K UHD (3840×2160)</div>
                 </div>
                 <div class="modal-header-actions">
-                    <a id="modalYtDirectBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn-modal-yt">
-                        Watch on YouTube ↗
-                    </a>
+                    <div class="player-engine-toggle" id="playerEngineToggle">
+                        <button id="engineBtnStandard" class="engine-btn active" onclick="switchPlayerEngine('standard')" title="Standard Privacy-Enhanced Player">
+                            📺 Standard Player
+                        </button>
+                        <button id="engineBtnAdFree" class="engine-btn" onclick="switchPlayerEngine('adfree')" title="Direct Commercial-Free Stream (No Ads)">
+                            🛡️ Ad-Free Stream
+                        </button>
+                    </div>
                     <button class="btn-close-modal" onclick="closeVideoModal()" aria-label="Close Player">✕</button>
                 </div>
             </div>
             <div class="player-frame-wrapper" id="playerFrameWrapper">
-                <!-- iframe injected dynamically via youtube-nocookie.com -->
+                <!-- iframe injected dynamically via youtube-nocookie.com or privacy streaming -->
             </div>
             
-            <!-- Clean, professional modal footer (Error 153 message safely removed) -->
+            <!-- Clean, professional modal footer -->
             <div class="modal-footer-toolbar">
                 <div class="modal-footer-info">
                     <span id="modalFooterChannel" class="modal-footer-channel">Impressionist Masterwork</span>
@@ -207,11 +210,8 @@
                 </div>
                 <div class="modal-footer-actions">
                     <button id="modalViewWallpapersBtn" class="btn-modal-action-wp" onclick="openWallpaperFromModal()" title="View high-resolution wallpaper snapshots from this video">
-                        🖼️ View 4K Wallpapers
+                        🖼️ View Wallpapers (<span id="modalWpCount">0</span>)
                     </button>
-                    <a id="modalYtDirectBtn2" href="#" target="_blank" rel="noopener noreferrer" class="btn-modal-yt" title="Open directly in YouTube App or Web">
-                        Open in YouTube ↗
-                    </a>
                 </div>
             </div>
         </div>
@@ -225,13 +225,18 @@
                     <h3 id="wpModalTitle" class="wp-modal-title">Wallpaper Preview</h3>
                     <div id="wpModalSubtitle" class="wp-modal-subtitle">Claude Monet · 4K UHD</div>
                 </div>
-                <div class="modal-header-actions">
-                    <a id="wpDownloadBtn" href="#" download class="btn-modal-download" target="_blank">
-                        ⬇ Download Full Wallpaper
-                    </a>
-                    <a id="wpJumpVideoBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn-modal-yt">
-                        Jump to Scene in Video ↗
-                    </a>
+                <div class="modal-header-actions wp-header-actions">
+                    <div class="wp-download-btn-group">
+                        <button id="wpDownloadCurrentBtn" class="btn-modal-download" onclick="downloadCurrentWallpaper()" title="Download the currently viewed high-resolution wallpaper">
+                            ⬇ Current (<span id="wpCurrentSceneNum">Scene 1</span>)
+                        </button>
+                        <button id="wpDownloadAllBtn" class="btn-modal-download-all" onclick="downloadAllWallpapers()" title="Download all wallpapers for this title as a ZIP package">
+                            📦 Download All (<span id="wpAllCount">0</span>)
+                        </button>
+                    </div>
+                    <button id="wpJumpVideoBtn" class="btn-modal-jump-scene" onclick="jumpToSceneInPlayer()" title="Watch this scene right in the in-page player">
+                        🎬 Jump to Scene (<span id="wpJumpTimestamp">00:00</span>)
+                    </button>
                     <button class="btn-close-modal" onclick="closeWallpaperModal()" aria-label="Close Wallpaper Gallery">✕</button>
                 </div>
             </div>
@@ -258,6 +263,7 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="./jszip.min.js"></script>
     <script src="./data.js"></script>
     <script src="./app.js"></script>
 </body>

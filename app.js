@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initFiltersAndEvents();
     buildAllWallpapersList();
 
-    // Default to 4K UHD Only as requested for immediate high-end visual impact
+    // Default to 1080p Full HD or better (including 4K) as requested
     const resSelect = document.getElementById('resSelect');
     if (resSelect) {
-        resSelect.value = '4K';
+        resSelect.value = '1080P';
     }
 
     applyFilters();
@@ -96,6 +96,9 @@ function initHeroStats() {
     }
     if (document.getElementById('stat4kCount')) {
         document.getElementById('stat4kCount').textContent = `${meta.count4K} Works`;
+    }
+    if (document.getElementById('hero1080pBtnCount')) {
+        document.getElementById('hero1080pBtnCount').textContent = ALL_VIDEOS.filter(v => v.is4K || v.height >= 1080).length;
     }
     if (document.getElementById('hero4kBtnCount')) {
         document.getElementById('hero4kBtnCount').textContent = meta.count4K;
@@ -182,12 +185,9 @@ function renderChannelCards() {
             </div>
 
             <div class="channel-actions">
-                <button class="btn-filter-channel" onclick="filterByChannel('${profile.name}')">
-                    Explore ${stats.count} Videos
+                <button class="btn-filter-channel" onclick="filterByChannel('${profile.name}')" style="width: 100%;">
+                    🏛️ Explore ${stats.count} Curated Works
                 </button>
-                <a href="${stats.channel_url}" target="_blank" rel="noopener noreferrer" class="btn-visit-channel" title="Open Channel on YouTube">
-                    Visit Channel ↗
-                </a>
             </div>
         `;
         container.appendChild(card);
@@ -222,7 +222,7 @@ function switchViewMode(mode) {
         if (gridVid) gridVid.style.display = 'grid';
         if (gridWp) gridWp.style.display = 'none';
         if (headerTitle) headerTitle.textContent = '🎨 The Impressionist Video Explorer';
-        if (headerDesc) headerDesc.innerHTML = 'Currently showcasing <strong>4K Ultra-HD Masterworks</strong> first. Native resolutions, verified links, and extracted scene snapshots.';
+        if (headerDesc) headerDesc.innerHTML = 'Currently showcasing <strong>1080p Full HD & 4K Ultra-HD Masterworks</strong> (191 works). Native resolutions, verified links, and extracted scene snapshots.';
     } else {
         if (btnWp) btnWp.classList.add('active');
         if (btnVid) btnVid.classList.remove('active');
@@ -268,10 +268,14 @@ function renderVideos(videos) {
         const card = document.createElement('div');
         card.className = 'video-card';
         const resBadgeClass = v.is4K ? 'badge-4k' : (v.height >= 1080 ? 'badge-fhd' : 'badge-sd');
+        let thumbSrc = v.thumb;
+        if (v.channel === 'Cupid Studio' && v.wallpapers && v.wallpapers.length > 0) {
+            thumbSrc = v.wallpapers[0].path;
+        }
         
         card.innerHTML = `
             <div class="thumb-container" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}')">
-                <img class="thumb-img" src="${v.thumb}" alt="${escapeQuotes(v.title)}" loading="lazy" />
+                <img class="thumb-img" src="${thumbSrc}" alt="${escapeQuotes(v.title)}" loading="lazy" />
                 <span class="thumb-badge-views">${formatViews(v.views)}</span>
                 <span class="thumb-badge-res ${resBadgeClass}">${v.qualityLabel}</span>
                 <span class="thumb-badge-duration">${v.durationFormatted}</span>
@@ -293,15 +297,12 @@ function renderVideos(videos) {
                 </div>
 
                 <div class="video-actions">
-                    <button class="btn-card-play" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}')" title="Preview in embedded modal player">
+                    <button class="btn-card-play" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}')" title="Watch in embedded gallery player">
                         ▶ Play Video
                     </button>
                     <button class="btn-card-wallpaper" onclick="openWallpaperModal('${v.id}')" title="View 4K wallpaper scene snapshots for this video">
                         🖼️ Wallpapers ${v.wallpaperCount > 0 ? `<span class="badge-count">${v.wallpaperCount}</span>` : ''}
                     </button>
-                    <a href="${v.url}" target="_blank" rel="noopener noreferrer" class="btn-card-yt" title="Watch full quality on YouTube">
-                        YouTube ↗
-                    </a>
                 </div>
             </div>
         `;
@@ -364,7 +365,7 @@ function applyFilters() {
 
     const query = searchEl ? searchEl.value.toLowerCase().trim() : '';
     const selectedChannel = channelEl ? channelEl.value : 'ALL';
-    const selectedRes = resEl ? resEl.value : '4K';
+    const selectedRes = resEl ? resEl.value : '1080P';
     const sortBy = sortEl ? sortEl.value : 'views_desc';
 
     if (currentViewMode === 'videos') {
@@ -375,9 +376,13 @@ function applyFilters() {
             const matchesChannel = (selectedChannel === 'ALL') || (v.channel === selectedChannel);
             
             let matchesRes = true;
-            if (selectedRes === '4K') matchesRes = v.is4K;
-            else if (selectedRes === 'FHD') matchesRes = (!v.is4K && v.height >= 1080);
-            else if (selectedRes === 'OTHER') matchesRes = (v.height < 1080 || v.height === 1440);
+            if (selectedRes === '1080P' || selectedRes === 'FHD' || selectedRes === 'FHD_PLUS') {
+                matchesRes = (v.is4K || v.height >= 1080);
+            } else if (selectedRes === '4K') {
+                matchesRes = v.is4K;
+            } else if (selectedRes === 'OTHER') {
+                matchesRes = (!v.is4K && v.height < 1080);
+            }
 
             return matchesQuery && matchesChannel && matchesRes;
         });
@@ -400,9 +405,13 @@ function applyFilters() {
             const matchesChannel = (selectedChannel === 'ALL') || (v.channel === selectedChannel);
             
             let matchesRes = true;
-            if (selectedRes === '4K') matchesRes = v.is4K;
-            else if (selectedRes === 'FHD') matchesRes = (!v.is4K && v.height >= 1080);
-            else if (selectedRes === 'OTHER') matchesRes = (v.height < 1080 || v.height === 1440);
+            if (selectedRes === '1080P' || selectedRes === 'FHD' || selectedRes === 'FHD_PLUS') {
+                matchesRes = (v.is4K || v.height >= 1080);
+            } else if (selectedRes === '4K') {
+                matchesRes = v.is4K;
+            } else if (selectedRes === 'OTHER') {
+                matchesRes = (!v.is4K && v.height < 1080);
+            }
 
             if (matchesQuery && matchesChannel && matchesRes && v.wallpapers) {
                 v.wallpapers.forEach(wp => {
@@ -440,15 +449,19 @@ function filterByChannel(channelName) {
 
 function selectPathway(pathwayKey) {
     document.querySelectorAll('.pathway-chip').forEach(c => c.classList.remove('active'));
-    if (event && event.currentTarget) {
-        event.currentTarget.classList.add('active');
+    if (window.event && window.event.currentTarget) {
+        window.event.currentTarget.classList.add('active');
     }
 
     const searchInput = document.getElementById('searchInput');
     const channelSelect = document.getElementById('channelSelect');
     const resSelect = document.getElementById('resSelect');
 
-    if (pathwayKey === '4k') {
+    if (pathwayKey === '1080p') {
+        if (searchInput) searchInput.value = '';
+        if (channelSelect) channelSelect.value = 'ALL';
+        if (resSelect) resSelect.value = '1080P';
+    } else if (pathwayKey === '4k') {
         if (searchInput) searchInput.value = '';
         if (channelSelect) channelSelect.value = 'ALL';
         if (resSelect) resSelect.value = '4K';
@@ -489,7 +502,7 @@ function resetFilters() {
     const channelSelect = document.getElementById('channelSelect');
     if (channelSelect) channelSelect.value = 'ALL';
     const resSelect = document.getElementById('resSelect');
-    if (resSelect) resSelect.value = '4K';
+    if (resSelect) resSelect.value = '1080P';
     const sortSelect = document.getElementById('sortSelect');
     if (sortSelect) sortSelect.value = 'views_desc';
 
@@ -537,25 +550,72 @@ function initFiltersAndEvents() {
 }
 
 // Modal 1: Video Player Lightbox
-function openVideoModal(videoId, title) {
+let playerEngine = 'standard'; // 'standard' or 'adfree'
+let currentModalTitle = '';
+let currentModalStartSec = 0;
+
+function switchPlayerEngine(engine) {
+    playerEngine = engine;
+    const btnStd = document.getElementById('engineBtnStandard');
+    const btnAdFree = document.getElementById('engineBtnAdFree');
+    if (btnStd) btnStd.classList.toggle('active', engine === 'standard');
+    if (btnAdFree) btnAdFree.classList.toggle('active', engine === 'adfree');
+
+    loadPlayerIframe(currentModalVideoId, currentModalTitle, currentModalStartSec);
+}
+
+function loadPlayerIframe(videoId, title, startSec = 0) {
+    const iframeWrapper = document.getElementById('playerFrameWrapper');
+    if (!iframeWrapper || !videoId) return;
+
+    const startParam = startSec > 0 ? `&start=${startSec}` : '';
+
+    if (playerEngine === 'adfree') {
+        // Privacy stream frontend: bypasses commercial video advertisements
+        iframeWrapper.innerHTML = `
+            <iframe 
+                src="https://piped.video/embed/${videoId}?autoplay=1${startParam}" 
+                title="${escapeQuotes(title)} (Commercial-Free)" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        `;
+    } else {
+        const originParam = (window.location.protocol.startsWith('http') && window.location.origin && window.location.origin !== 'null')
+            ? `&origin=${encodeURIComponent(window.location.origin)}`
+            : '';
+
+        iframeWrapper.innerHTML = `
+            <iframe 
+                src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&iv_load_policy=3${startParam}${originParam}" 
+                title="${escapeQuotes(title)}" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        `;
+    }
+}
+
+function openVideoModal(videoId, title, startSec = 0) {
     currentModalVideoId = videoId;
+    currentModalTitle = title;
+    currentModalStartSec = startSec;
+
     const video = ALL_VIDEOS.find(v => v.id === videoId);
     const modal = document.getElementById('modalOverlay');
     const titleEl = document.getElementById('modalTitle');
     const resEl = document.getElementById('modalVideoRes');
-    const iframeWrapper = document.getElementById('playerFrameWrapper');
-    const directBtn = document.getElementById('modalYtDirectBtn');
-    const directBtn2 = document.getElementById('modalYtDirectBtn2');
     const footerChannel = document.getElementById('modalFooterChannel');
     const footerQuality = document.getElementById('modalFooterQuality');
+    const modalWpCount = document.getElementById('modalWpCount');
+    const wpBtn = document.getElementById('modalViewWallpapersBtn');
 
-    const ytUrl = `https://www.youtube.com/watch?v=${videoId}`;
     if (titleEl) titleEl.textContent = title;
     if (resEl && video) {
         resEl.textContent = video.is4K ? `👑 Native 4K UHD (${video.resolution})` : `Native Quality: ${video.qualityLabel} (${video.resolution})`;
     }
-    if (directBtn) directBtn.href = ytUrl;
-    if (directBtn2) directBtn2.href = ytUrl;
 
     if (footerChannel && video) {
         footerChannel.textContent = video.channel;
@@ -564,22 +624,11 @@ function openVideoModal(videoId, title) {
         footerQuality.textContent = video.is4K ? '👑 4K UHD Masterwork' : video.qualityLabel;
     }
 
-    const originParam = (window.location.protocol.startsWith('http') && window.location.origin && window.location.origin !== 'null')
-        ? `&origin=${encodeURIComponent(window.location.origin)}`
-        : '';
+    const wpCount = video ? (video.wallpaperCount || (video.wallpapers ? video.wallpapers.length : 0)) : 0;
+    if (modalWpCount) modalWpCount.textContent = wpCount;
+    if (wpBtn) wpBtn.style.display = wpCount > 0 ? 'inline-flex' : 'none';
 
-    // Use Privacy-Enhanced mode (youtube-nocookie.com) + modestbranding + rel=0 to minimize ad annoyance
-    if (iframeWrapper) {
-        iframeWrapper.innerHTML = `
-            <iframe 
-                src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&iv_load_policy=3${originParam}" 
-                title="${escapeQuotes(title)}" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen>
-            </iframe>
-        `;
-    }
+    loadPlayerIframe(videoId, title, startSec);
 
     if (modal) modal.classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -603,6 +652,9 @@ function closeVideoModal() {
 // Modal 2: Wallpaper Gallery Lightbox
 let activeWallpaperList = [];
 let activeWallpaperIndex = 0;
+let isDownloadingCurrent = false;
+let isDownloadingAll = false;
+const videoZipCache = new Map(); // Cache generated ZIP blobs per video to prevent duplicate downloads
 
 function openWallpaperModal(videoId, initialIdx = 0) {
     const video = ALL_VIDEOS.find(v => v.id === videoId);
@@ -620,9 +672,12 @@ function openWallpaperModal(videoId, initialIdx = 0) {
 
     activeWallpaperList = [];
     if (video.wallpapers && video.wallpapers.length > 0) {
-        activeWallpaperList = [...video.wallpapers];
+        activeWallpaperList = video.wallpapers.map(w => ({
+            ...w,
+            videoId: video.id,
+            videoTitle: video.title
+        }));
     } else {
-        // High-definition YouTube master cover fallback
         activeWallpaperList.push({
             path: video.maxresThumb,
             qualityLabel: `${video.qualityLabel} Master Cover`,
@@ -630,7 +685,8 @@ function openWallpaperModal(videoId, initialIdx = 0) {
             timestampSec: 0,
             width: video.width || 1920,
             height: video.height || 1080,
-            videoId: video.id
+            videoId: video.id,
+            videoTitle: video.title
         });
     }
 
@@ -669,24 +725,159 @@ function displayActiveWallpaper() {
 
     const mainImg = document.getElementById('wpMainImage');
     const badgeRes = document.getElementById('wpBadgeResolution');
-    const downloadBtn = document.getElementById('wpDownloadBtn');
-    const jumpBtn = document.getElementById('wpJumpVideoBtn');
+    const sceneNumEl = document.getElementById('wpCurrentSceneNum');
+    const allCountEl = document.getElementById('wpAllCount');
+    const jumpTimeEl = document.getElementById('wpJumpTimestamp');
 
     if (mainImg) mainImg.src = wp.path;
     const resText = `${wp.qualityLabel || '4K UHD'} · ${wp.width || 3840}×${wp.height || 2160}`;
     const timeText = wp.timestampFormatted ? ` · Scene at ${wp.timestampFormatted}` : '';
     if (badgeRes) badgeRes.textContent = `${resText}${timeText}`;
-    
-    if (downloadBtn) {
-        downloadBtn.href = wp.path;
-        downloadBtn.download = `Impressionism_Wallpaper_${wp.videoId || 'artwork'}_${activeWallpaperIndex + 1}.jpg`;
+
+    if (sceneNumEl) {
+        sceneNumEl.textContent = `Scene ${activeWallpaperIndex + 1}`;
+    }
+    if (allCountEl) {
+        allCountEl.textContent = activeWallpaperList.length;
+    }
+    if (jumpTimeEl) {
+        jumpTimeEl.textContent = wp.timestampFormatted || '00:00';
+    }
+}
+
+// In-Page Scene Jump: seamlessly launches the in-page video player modal at exact scene timestamp
+function jumpToSceneInPlayer() {
+    const wp = activeWallpaperList[activeWallpaperIndex];
+    if (!wp) return;
+
+    const videoId = wp.videoId || currentModalVideoId;
+    if (!videoId) return;
+
+    const video = ALL_VIDEOS.find(v => v.id === videoId);
+    const title = video ? video.title : 'Claude Monet Masterwork';
+    const startSec = wp.timestampSec || 0;
+
+    closeWallpaperModal();
+    openVideoModal(videoId, title, startSec);
+}
+
+// Download currently viewed wallpaper snapshot with sanitized, descriptive title and timestamp
+function downloadCurrentWallpaper() {
+    const wp = activeWallpaperList[activeWallpaperIndex];
+    if (!wp || isDownloadingCurrent) return;
+
+    const video = ALL_VIDEOS.find(v => v.id === wp.videoId) || {};
+    const rawTitle = wp.videoTitle || video.title || 'Monet_Impressionism';
+    const safeTitle = rawTitle.replace(/[/\\?%*:|"<>]/g, '').replace(/\s+/g, '_').substring(0, 45);
+    const sceneIdx = String(activeWallpaperIndex + 1).padStart(2, '0');
+    const timeClean = (wp.timestampFormatted || '00m00s').replace(/[^a-zA-Z0-9]/g, '');
+    const filename = `Monet_${safeTitle}_Scene_${sceneIdx}_${timeClean}_${wp.width || 3840}x${wp.height || 2160}.jpg`;
+
+    isDownloadingCurrent = true;
+    const btn = document.getElementById('wpDownloadCurrentBtn');
+    const originalText = btn ? btn.innerHTML : '';
+
+    if (btn) btn.innerHTML = '✓ Downloading...';
+
+    const a = document.createElement('a');
+    a.href = wp.path;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+    setTimeout(() => {
+        if (btn) btn.innerHTML = originalText;
+        isDownloadingCurrent = false;
+    }, 1200);
+}
+
+// Download all wallpapers for this video packaged cleanly into a single ZIP archive
+async function downloadAllWallpapers() {
+    if (isDownloadingAll) return;
+    if (!activeWallpaperList || activeWallpaperList.length === 0) return;
+
+    const btn = document.getElementById('wpDownloadAllBtn');
+    const originalText = btn ? btn.innerHTML : '';
+
+    const firstWp = activeWallpaperList[0];
+    const videoId = firstWp.videoId || currentModalVideoId;
+    const video = ALL_VIDEOS.find(v => v.id === videoId) || {};
+    const rawTitle = firstWp.videoTitle || video.title || 'Monet_Impressionism';
+    const safeTitle = rawTitle.replace(/[/\\?%*:|"<>]/g, '').replace(/\s+/g, '_').substring(0, 45);
+    const zipFilename = `Monet_${safeTitle}_All_${activeWallpaperList.length}_Wallpapers.zip`;
+
+    // 1. Return cached archive if already built during this session
+    if (videoZipCache.has(videoId)) {
+        const cachedBlob = videoZipCache.get(videoId);
+        triggerBlobDownload(cachedBlob, zipFilename);
+        if (btn) {
+            btn.innerHTML = '✓ Downloaded!';
+            setTimeout(() => { if (btn) btn.innerHTML = originalText; }, 1500);
+        }
+        return;
     }
 
-    if (jumpBtn) {
-        const tsParam = wp.timestampSec ? `&t=${wp.timestampSec}s` : '';
-        jumpBtn.href = `https://www.youtube.com/watch?v=${wp.videoId}${tsParam}`;
-        jumpBtn.textContent = wp.timestampSec ? `Jump to Scene (${wp.timestampFormatted}) ↗` : `Watch Video ↗`;
+    // 2. Check if JSZip library is available
+    if (typeof JSZip === 'undefined') {
+        alert('ZIP packaging library is loading. Downloading current wallpaper snapshot.');
+        downloadCurrentWallpaper();
+        return;
     }
+
+    isDownloadingAll = true;
+    try {
+        const zip = new JSZip();
+        const total = activeWallpaperList.length;
+
+        for (let i = 0; i < total; i++) {
+            const item = activeWallpaperList[i];
+            if (btn) btn.innerHTML = `📦 Packaging ${i + 1}/${total}...`;
+
+            const res = await fetch(item.path);
+            if (!res.ok) throw new Error(`HTTP ${res.status} for ${item.path}`);
+            const blob = await res.blob();
+
+            const sceneIdx = String(i + 1).padStart(2, '0');
+            const timeClean = (item.timestampFormatted || '').replace(/[^a-zA-Z0-9]/g, '');
+            const itemFilename = `${safeTitle}_Scene_${sceneIdx}_${timeClean}_${item.width}x${item.height}.jpg`;
+
+            zip.file(itemFilename, blob);
+        }
+
+        if (btn) btn.innerHTML = '📦 Compressing...';
+        const zipBlob = await zip.generateAsync({
+            type: 'blob',
+            compression: 'STORE'
+        });
+
+        videoZipCache.set(videoId, zipBlob);
+        triggerBlobDownload(zipBlob, zipFilename);
+
+        if (btn) btn.innerHTML = '✓ Complete!';
+        setTimeout(() => {
+            if (btn) btn.innerHTML = originalText;
+            isDownloadingAll = false;
+        }, 1800);
+    } catch (err) {
+        console.error('Error packaging wallpapers zip:', err);
+        if (btn) btn.innerHTML = '⚠️ Error. Try Single';
+        setTimeout(() => {
+            if (btn) btn.innerHTML = originalText;
+            isDownloadingAll = false;
+        }, 2000);
+    }
+}
+
+function triggerBlobDownload(blob, filename) {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 30000);
 }
 
 function closeWallpaperModal() {

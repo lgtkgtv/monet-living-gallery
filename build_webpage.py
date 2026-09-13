@@ -170,17 +170,23 @@ def main():
 
         maxres_url = f"https://i.ytimg.com/vi/{vid}/maxresdefault.jpg"
 
+        channel_name = e.get('channel') or e.get('uploader') or 'Unknown'
+        thumb_img = f'https://i.ytimg.com/vi/{vid}/hqdefault.jpg'
+        # Replace Cupid Studio misleading thumbnails with genuine extracted Impressionist scenery
+        if channel_name == 'Cupid Studio' and video_wallpapers:
+            thumb_img = video_wallpapers[0]['path']
+
         clean_videos.append({
             'id': vid,
             'title': e.get('title'),
-            'channel': e.get('channel') or e.get('uploader') or 'Unknown',
+            'channel': channel_name,
             'channelUrl': e.get('channel_url') or '',
             'views': e.get('view_count') or 0,
             'durationSec': dur,
             'durationFormatted': dur_str,
             'url': e.get('url'),
-            'thumb': f'https://i.ytimg.com/vi/{vid}/hqdefault.jpg',
-            'maxresThumb': maxres_url,
+            'thumb': thumb_img,
+            'maxresThumb': thumb_img if channel_name == 'Cupid Studio' else maxres_url,
             'width': r_info.get('width', 1920),
             'height': r_info.get('height', 1080),
             'resolution': r_info.get('resolution', '1920x1080'),
