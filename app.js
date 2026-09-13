@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initFiltersAndEvents();
     buildAllWallpapersList();
 
-    // Default to 1080p HD or better (including 4K) as requested
+    // Default to 4K UHD Only as requested
     const resSelect = document.getElementById('resSelect');
     if (resSelect) {
-        resSelect.value = '1080P_PLUS';
+        resSelect.value = '4K';
     }
 
     applyFilters();
@@ -494,7 +494,7 @@ function resetFilters() {
     const channelSelect = document.getElementById('channelSelect');
     if (channelSelect) channelSelect.value = 'ALL';
     const resSelect = document.getElementById('resSelect');
-    if (resSelect) resSelect.value = '1080P_PLUS';
+    if (resSelect) resSelect.value = '4K';
     const sortSelect = document.getElementById('sortSelect');
     if (sortSelect) sortSelect.value = 'views_desc';
 
