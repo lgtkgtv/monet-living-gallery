@@ -90,18 +90,23 @@
                     </select>
                 </div>
 
-                <!-- Wallpaper Batch Download Bar (Active in Wallpaper Gallery view) -->
+                <!-- Wallpaper Batch Action Bar (Active in Wallpaper Gallery view) -->
                 <div class="wallpaper-download-bar" id="wallpaperDownloadBar" style="display: none;">
                     <div class="wp-download-bar-info">
-                        <span class="wp-download-icon">📥</span>
+                        <span class="wp-download-icon">🖼️</span>
                         <div>
-                            <strong id="wpDownloadFilterTitle">Download Filtered Wallpapers</strong>
-                            <span id="wpDownloadFilterSubtitle" class="wp-download-subtitle">All wallpapers for selected channel and resolution packaged into a single ZIP archive</span>
+                            <strong id="wpDownloadFilterTitle">Curated Wallpaper Collection</strong>
+                            <span id="wpDownloadFilterSubtitle" class="wp-download-subtitle">All wallpapers for selected channel and resolution</span>
                         </div>
                     </div>
-                    <button id="wpDownloadFilteredBtn" class="btn-download-filtered" onclick="downloadAllFilteredWallpapers()" title="Download all wallpapers matching current channel and resolution filters as a single ZIP archive">
-                        📦 Download All (<span id="wpDownloadFilteredCount">0</span>) Wallpapers (ZIP)
-                    </button>
+                    <div class="wallpaper-bar-actions">
+                        <button id="wpPlaySlideshowBtn" class="btn-play-slideshow" onclick="startSlideshow()" title="Play all matching wallpapers as an immersive fullscreen slideshow">
+                            ▶️ Fullscreen Slideshow (<span id="wpSlideshowCount">0</span>)
+                        </button>
+                        <button id="wpDownloadFilteredBtn" class="btn-download-filtered" onclick="downloadAllFilteredWallpapers()" title="Download all wallpapers matching current channel and resolution filters as a single ZIP archive">
+                            📦 Download All (<span id="wpDownloadFilteredCount">0</span>) (ZIP)
+                        </button>
+                    </div>
                 </div>
 
                 <div class="results-info" id="resultsCount">Showing 191 1080p+ works</div>
@@ -191,6 +196,9 @@
                     <button id="wpJumpVideoBtn" class="btn-modal-jump-scene" onclick="jumpToSceneInPlayer()" title="Watch this scene right in the in-page player">
                         🎬 Jump to Scene (<span id="wpJumpTimestamp">00:00</span>)
                     </button>
+                    <button id="wpModalSlideshowBtn" class="btn-modal-slideshow" onclick="startSlideshowFromCurrentModal()" title="Play these snapshots as an immersive fullscreen slideshow">
+                        📽️ Slideshow
+                    </button>
                     <button class="btn-close-modal" onclick="closeWallpaperModal()" aria-label="Close Wallpaper Gallery">✕</button>
                 </div>
             </div>
@@ -204,6 +212,81 @@
             <div class="wp-carousel-tray" id="wpCarouselTray">
                 <!-- Thumbnails injected dynamically -->
             </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Fullscreen Wallpaper Slideshow -->
+    <div id="slideshowOverlay" class="slideshow-overlay" role="dialog" aria-label="Fullscreen Wallpaper Slideshow" style="display: none;">
+        <!-- Top Toolbar (Fades out when inactive) -->
+        <div class="slideshow-top-bar" id="slideshowTopBar">
+            <div class="slideshow-meta">
+                <span class="slideshow-counter" id="slideshowCounter">1 / 1</span>
+                <div class="slideshow-title-group">
+                    <h3 class="slideshow-art-title" id="slideshowTitle">Impressionist Masterwork</h3>
+                    <div class="slideshow-art-details">
+                        <span id="slideshowChannel" class="slideshow-channel">Channel</span>
+                        <span class="slideshow-bullet">·</span>
+                        <span id="slideshowRes" class="slideshow-res-badge">4K UHD</span>
+                        <span class="slideshow-bullet">·</span>
+                        <span id="slideshowTime" class="slideshow-time">Scene at 00:00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slideshow-top-actions">
+                <div class="slideshow-speed-control" title="Slideshow Interval">
+                    <label for="slideshowSpeedSelect">⏱️ Interval:</label>
+                    <select id="slideshowSpeedSelect" onchange="changeSlideshowSpeed(this.value)">
+                        <option value="3000">3 sec</option>
+                        <option value="5000" selected>5 sec</option>
+                        <option value="8000">8 sec</option>
+                        <option value="12000">12 sec</option>
+                    </select>
+                </div>
+
+                <button class="slideshow-btn-icon" onclick="downloadCurrentSlideshowImage()" title="Download this wallpaper snapshot">
+                    ⬇️
+                </button>
+
+                <button class="slideshow-btn-icon" id="slideshowFullscreenBtn" onclick="toggleNativeFullscreen()" title="Toggle Browser Fullscreen (F)">
+                    ⛶
+                </button>
+
+                <button class="slideshow-btn-icon slideshow-close-btn" onclick="closeSlideshow()" title="Exit Slideshow (Esc)">
+                    ✕
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Slide Display Area -->
+        <div class="slideshow-stage" id="slideshowStage" onclick="toggleSlideshowPlayPause()">
+            <img id="slideshowImage" class="slideshow-img" src="" alt="Slideshow Wallpaper" />
+            
+            <!-- Progress Bar at bottom of stage -->
+            <div class="slideshow-progress-container">
+                <div class="slideshow-progress-bar" id="slideshowProgressBar"></div>
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="slideshow-nav-arrow slideshow-prev" onclick="navigateSlideshow(-1)" aria-label="Previous Wallpaper" title="Previous (Left Arrow)">
+            ❮
+        </button>
+        <button class="slideshow-nav-arrow slideshow-next" onclick="navigateSlideshow(1)" aria-label="Next Wallpaper" title="Next (Right Arrow)">
+            ❯
+        </button>
+
+        <!-- Bottom Toolbar (Play/Pause, Step, Help) -->
+        <div class="slideshow-bottom-bar" id="slideshowBottomBar">
+            <button class="slideshow-ctrl-btn" onclick="navigateSlideshow(-1)" title="Previous (Left Arrow)">
+                ⏮️ Prev
+            </button>
+            <button class="slideshow-ctrl-btn slideshow-play-btn" id="slideshowPlayBtn" onclick="toggleSlideshowPlayPause()" title="Play / Pause (Spacebar)">
+                ⏸️ Pause
+            </button>
+            <button class="slideshow-ctrl-btn" onclick="navigateSlideshow(1)" title="Next (Right Arrow)">
+                Next ⏭️
+            </button>
         </div>
     </div>
 

@@ -857,9 +857,11 @@ function closeWallpaperModal() {
 function updateWallpaperDownloadBar(filteredWp) {
     const downloadBar = document.getElementById('wallpaperDownloadBar');
     const countSpan = document.getElementById('wpDownloadFilteredCount');
+    const slideshowCountSpan = document.getElementById('wpSlideshowCount');
     const titleEl = document.getElementById('wpDownloadFilterTitle');
     const subtitleEl = document.getElementById('wpDownloadFilterSubtitle');
-    const btn = document.getElementById('wpDownloadFilteredBtn');
+    const downloadBtn = document.getElementById('wpDownloadFilteredBtn');
+    const slideshowBtn = document.getElementById('wpPlaySlideshowBtn');
 
     if (!downloadBar) return;
 
@@ -870,22 +872,27 @@ function updateWallpaperDownloadBar(filteredWp) {
 
     const count = filteredWp ? filteredWp.length : 0;
     if (countSpan) countSpan.textContent = count;
+    if (slideshowCountSpan) slideshowCountSpan.textContent = count;
 
     if (titleEl) {
-        titleEl.textContent = `Download Filtered Wallpapers (${count} items)`;
+        titleEl.textContent = `Curated Wallpaper Collection (${count} items)`;
     }
     if (subtitleEl) {
-        subtitleEl.textContent = `Channel: ${channelText} · Resolution: ${resText} · Single ZIP Archive`;
+        subtitleEl.textContent = `Channel: ${channelText} · Resolution: ${resText} · Packaged into a ZIP or Fullscreen Slideshow`;
     }
 
-    if (btn) {
+    if (downloadBtn) {
         if (count === 0) {
-            btn.disabled = true;
-            btn.innerHTML = '⚠️ No Wallpapers for Current Filter';
+            downloadBtn.disabled = true;
+            downloadBtn.innerHTML = '⚠️ No Wallpapers for Current Filter';
         } else {
-            btn.disabled = false;
-            btn.innerHTML = `📦 Download All (${count}) Wallpapers (ZIP)`;
+            downloadBtn.disabled = false;
+            downloadBtn.innerHTML = `📦 Download All (${count}) (ZIP)`;
         }
+    }
+
+    if (slideshowBtn) {
+        slideshowBtn.disabled = (count === 0);
     }
 }
 
@@ -984,3 +991,248 @@ async function downloadAllFilteredWallpapers() {
         }, 3000);
     }
 }
+
+// ==========================================================================
+// FULLSCREEN WALLPAPER SLIDESHOW CONTROLLER
+// ==========================================================================
+
+let slideshowList = [];
+let slideshowCurrentIndex = 0;
+let slideshowIsPlaying = true;
+let slideshowIntervalMs = 5000;
+let slideshowTimer = null;
+let slideshowIdleTimer = null;
+
+function startSlideshow(startIndex = 0, customList = null) {
+    slideshowList = customList || currentWallpapers;
+    if (!slideshowList || slideshowList.length === 0) {
+        alert('No wallpapers available to display for the current filter selection.');
+        return;
+    }
+
+    const overlay = document.getElementById('slideshowOverlay');
+    if (!overlay) return;
+
+    overlay.style.display = 'flex';
+    overlay.classList.add('active');
+    overlay.classList.remove('controls-hidden');
+    document.body.style.overflow = 'hidden';
+
+    slideshowCurrentIndex = Math.min(Math.max(0, startIndex), slideshowList.length - 1);
+    slideshowIsPlaying = true;
+
+    const playBtn = document.getElementById('slideshowPlayBtn');
+    if (playBtn) playBtn.innerHTML = '⏸️ Pause';
+
+    showSlide(slideshowCurrentIndex);
+    startSlideshowTimer();
+
+    // Request native browser fullscreen if supported
+    try {
+        if (overlay.requestFullscreen) {
+            overlay.requestFullscreen().catch(() => {});
+        } else if (overlay.webkitRequestFullscreen) {
+            overlay.webkitRequestFullscreen();
+        }
+    } catch (e) {}
+
+    // Attach idle listeners
+    overlay.removeEventListener('mousemove', handleSlideshowMouseMove);
+    overlay.addEventListener('mousemove', handleSlideshowMouseMove);
+    overlay.removeEventListener('touchstart', handleSlideshowMouseMove);
+    overlay.addEventListener('touchstart', handleSlideshowMouseMove);
+}
+
+function startSlideshowFromCurrentModal() {
+    if (!activeWallpaperList || activeWallpaperList.length === 0) return;
+    const startIdx = activeWallpaperIndex || 0;
+    const list = [...activeWallpaperList];
+    closeWallpaperModal();
+    startSlideshow(startIdx, list);
+}
+
+function showSlide(index) {
+    if (!slideshowList || slideshowList.length === 0) return;
+    slideshowCurrentIndex = (index + slideshowList.length) % slideshowList.length;
+    const wp = slideshowList[slideshowCurrentIndex];
+
+    const img = document.getElementById('slideshowImage');
+    const counter = document.getElementById('slideshowCounter');
+    const title = document.getElementById('slideshowTitle');
+    const channel = document.getElementById('slideshowChannel');
+    const res = document.getElementById('slideshowRes');
+    const time = document.getElementById('slideshowTime');
+
+    if (counter) counter.textContent = `${slideshowCurrentIndex + 1} / ${slideshowList.length}`;
+    if (title) title.textContent = wp.videoTitle || 'Impressionist Masterwork';
+    if (channel) channel.textContent = wp.channel || '';
+    if (res) res.textContent = wp.qualityLabel || `${wp.width}×${wp.height}`;
+    if (time) time.textContent = wp.timestampFormatted ? `Scene at ${wp.timestampFormatted}` : '';
+
+    if (img) {
+        img.style.opacity = '0.35';
+        img.src = wp.path;
+        img.onload = () => {
+            img.style.opacity = '1';
+        };
+    }
+
+    // Preload next 2 slides for instant rendering
+    if (slideshowList.length > 1) {
+        const nextIdx1 = (slideshowCurrentIndex + 1) % slideshowList.length;
+        const nextImg1 = new Image();
+        nextImg1.src = slideshowList[nextIdx1].path;
+
+        const nextIdx2 = (slideshowCurrentIndex + 2) % slideshowList.length;
+        const nextImg2 = new Image();
+        nextImg2.src = slideshowList[nextIdx2].path;
+    }
+
+    restartProgressBar();
+}
+
+function navigateSlideshow(direction) {
+    showSlide(slideshowCurrentIndex + direction);
+    if (slideshowIsPlaying) {
+        startSlideshowTimer();
+    }
+}
+
+function toggleSlideshowPlayPause() {
+    slideshowIsPlaying = !slideshowIsPlaying;
+    const playBtn = document.getElementById('slideshowPlayBtn');
+    
+    if (slideshowIsPlaying) {
+        if (playBtn) playBtn.innerHTML = '⏸️ Pause';
+        startSlideshowTimer();
+    } else {
+        if (playBtn) playBtn.innerHTML = '▶️ Play';
+        clearTimeout(slideshowTimer);
+        const bar = document.getElementById('slideshowProgressBar');
+        if (bar) bar.style.transition = 'none';
+    }
+}
+
+function restartProgressBar() {
+    const bar = document.getElementById('slideshowProgressBar');
+    if (!bar) return;
+    
+    bar.style.transition = 'none';
+    bar.style.width = '0%';
+    
+    if (slideshowIsPlaying) {
+        void bar.offsetWidth; // Force layout reflow
+        bar.style.transition = `width ${slideshowIntervalMs}ms linear`;
+        bar.style.width = '100%';
+    }
+}
+
+function startSlideshowTimer() {
+    clearTimeout(slideshowTimer);
+    restartProgressBar();
+    if (!slideshowIsPlaying) return;
+
+    slideshowTimer = setTimeout(() => {
+        if (slideshowIsPlaying) {
+            navigateSlideshow(1);
+        }
+    }, slideshowIntervalMs);
+}
+
+function changeSlideshowSpeed(val) {
+    slideshowIntervalMs = parseInt(val, 10) || 5000;
+    if (slideshowIsPlaying) {
+        startSlideshowTimer();
+    }
+}
+
+function toggleNativeFullscreen() {
+    const overlay = document.getElementById('slideshowOverlay');
+    if (!overlay) return;
+
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (overlay.requestFullscreen) {
+            overlay.requestFullscreen().catch(() => {});
+        } else if (overlay.webkitRequestFullscreen) {
+            overlay.webkitRequestFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
+function downloadCurrentSlideshowImage() {
+    if (!slideshowList || slideshowList.length === 0) return;
+    const wp = slideshowList[slideshowCurrentIndex];
+    if (!wp) return;
+
+    const safeTitle = (wp.videoTitle || 'Impressionist_Masterwork').replace(/[/\\?%*:|"<>]/g, '').replace(/\s+/g, '_').substring(0, 35);
+    const filename = `${safeTitle}_scene${wp.snapshotIndex || (slideshowCurrentIndex + 1)}_${wp.width}x${wp.height}.jpg`;
+
+    const a = document.createElement('a');
+    a.href = wp.path;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+}
+
+function closeSlideshow() {
+    clearTimeout(slideshowTimer);
+    clearTimeout(slideshowIdleTimer);
+
+    if (document.fullscreenElement || document.webkitFullscreenElement) {
+        try {
+            if (document.exitFullscreen) {
+                document.exitFullscreen().catch(() => {});
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            }
+        } catch (e) {}
+    }
+
+    const overlay = document.getElementById('slideshowOverlay');
+    if (overlay) {
+        overlay.style.display = 'none';
+        overlay.classList.remove('active', 'controls-hidden');
+    }
+    document.body.style.overflow = '';
+}
+
+function handleSlideshowMouseMove() {
+    const overlay = document.getElementById('slideshowOverlay');
+    if (!overlay) return;
+
+    overlay.classList.remove('controls-hidden');
+    clearTimeout(slideshowIdleTimer);
+    if (slideshowIsPlaying) {
+        slideshowIdleTimer = setTimeout(() => {
+            if (slideshowIsPlaying && overlay.classList.contains('active')) {
+                overlay.classList.add('controls-hidden');
+            }
+        }, 2800);
+    }
+}
+
+// Global keyboard navigation for Slideshow
+window.addEventListener('keydown', (e) => {
+    const overlay = document.getElementById('slideshowOverlay');
+    if (!overlay || overlay.style.display === 'none') return;
+
+    if (e.key === 'Escape') {
+        closeSlideshow();
+    } else if (e.key === 'ArrowRight' || e.key === 'Right') {
+        navigateSlideshow(1);
+    } else if (e.key === 'ArrowLeft' || e.key === 'Left') {
+        navigateSlideshow(-1);
+    } else if (e.key === ' ' || e.code === 'Space') {
+        e.preventDefault();
+        toggleSlideshowPlayPause();
+    } else if (e.key === 'f' || e.key === 'F') {
+        toggleNativeFullscreen();
+    }
+});
