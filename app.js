@@ -550,52 +550,28 @@ function initFiltersAndEvents() {
 }
 
 // Modal 1: Video Player Lightbox
-let playerEngine = 'standard'; // 'standard' or 'adfree'
 let currentModalTitle = '';
 let currentModalStartSec = 0;
-
-function switchPlayerEngine(engine) {
-    playerEngine = engine;
-    const btnStd = document.getElementById('engineBtnStandard');
-    const btnAdFree = document.getElementById('engineBtnAdFree');
-    if (btnStd) btnStd.classList.toggle('active', engine === 'standard');
-    if (btnAdFree) btnAdFree.classList.toggle('active', engine === 'adfree');
-
-    loadPlayerIframe(currentModalVideoId, currentModalTitle, currentModalStartSec);
-}
 
 function loadPlayerIframe(videoId, title, startSec = 0) {
     const iframeWrapper = document.getElementById('playerFrameWrapper');
     if (!iframeWrapper || !videoId) return;
 
     const startParam = startSec > 0 ? `&start=${startSec}` : '';
+    const originParam = (window.location.protocol.startsWith('http') && window.location.origin && window.location.origin !== 'null')
+        ? `&origin=${encodeURIComponent(window.location.origin)}`
+        : '';
 
-    if (playerEngine === 'adfree') {
-        // Privacy stream frontend: bypasses commercial video advertisements
-        iframeWrapper.innerHTML = `
-            <iframe 
-                src="https://piped.video/embed/${videoId}?autoplay=1${startParam}" 
-                title="${escapeQuotes(title)} (Commercial-Free)" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen>
-            </iframe>
-        `;
-    } else {
-        const originParam = (window.location.protocol.startsWith('http') && window.location.origin && window.location.origin !== 'null')
-            ? `&origin=${encodeURIComponent(window.location.origin)}`
-            : '';
-
-        iframeWrapper.innerHTML = `
-            <iframe 
-                src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&iv_load_policy=3${startParam}${originParam}" 
-                title="${escapeQuotes(title)}" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen>
-            </iframe>
-        `;
-    }
+    // Standard Privacy-Enhanced Mode (youtube-nocookie.com, modestbranding, rel=0, no tracking cookies)
+    iframeWrapper.innerHTML = `
+        <iframe 
+            src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&iv_load_policy=3${startParam}${originParam}" 
+            title="${escapeQuotes(title)}" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+        </iframe>
+    `;
 }
 
 function openVideoModal(videoId, title, startSec = 0) {
