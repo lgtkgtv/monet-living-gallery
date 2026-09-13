@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeroStats();
     renderChannelCards();
     populateChannelFilter();
+    initSearchSuggestions();
     initFiltersAndEvents();
     buildAllWallpapersList();
 
@@ -341,24 +342,164 @@ function escapeQuotes(str) {
     return (str || '').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
+// Search Guidance & Pre-Curated Artist / Theme Suggestions
+const SEARCH_GUIDE = {
+    artists: [
+        { label: '🎨 Claude Monet (70)', query: 'Monet' },
+        { label: '🎨 Pierre-Auguste Renoir (7)', query: 'Renoir' },
+        { label: '🎨 Alfred Sisley', query: 'Sisley' },
+        { label: '🎨 Eugène Boudin', query: 'Boudin' },
+        { label: '🎨 Isaac Levitan', query: 'Levitan' },
+        { label: '🎨 Gustave Loiseau', query: 'Loiseau' },
+        { label: '🎨 Henri Rousseau', query: 'Rousseau' },
+        { label: '🎨 Charles Leickert', query: 'Leickert' }
+    ],
+    themes: [
+        { label: '❄️ Winter & Snow (6)', query: 'Winter' },
+        { label: '🪷 Water Lilies', query: 'Water Lilies' },
+        { label: '🌿 Garden Sanctuaries (11)', query: 'Garden' },
+        { label: '🗼 Paris Belle Époque (6)', query: 'Paris' },
+        { label: '🎭 Venice Canals (4)', query: 'Venice' },
+        { label: '🌊 Coastal & Étretat', query: 'Étretat' },
+        { label: '🌅 Sunrise & Sunlight', query: 'Sunrise' },
+        { label: '⛵ River Seine', query: 'Seine' },
+        { label: '🚂 Steam Trains', query: 'Train' },
+        { label: '🇫🇷 France Countryside', query: 'France' }
+    ]
+};
+
+function initSearchSuggestions() {
+    const container = document.getElementById('suggestionsScroll');
+    if (!container) return;
+    container.innerHTML = '';
+
+    SEARCH_GUIDE.artists.forEach(item => {
+        const chip = document.createElement('button');
+        chip.className = 'suggestion-chip chip-artist';
+        chip.textContent = item.label;
+        chip.dataset.query = item.query;
+        chip.setAttribute('type', 'button');
+        chip.setAttribute('title', `Filter by artist: ${item.query}`);
+        chip.onclick = () => applySearchChip(item.query);
+        container.appendChild(chip);
+    });
+
+    SEARCH_GUIDE.themes.forEach(item => {
+        const chip = document.createElement('button');
+        chip.className = 'suggestion-chip chip-theme';
+        chip.textContent = item.label;
+        chip.dataset.query = item.query;
+        chip.setAttribute('type', 'button');
+        chip.setAttribute('title', `Filter by theme: ${item.query}`);
+        chip.onclick = () => applySearchChip(item.query);
+        container.appendChild(chip);
+    });
+}
+
+function applySearchChip(query) {
+    const searchInput = document.getElementById('searchInput');
+    if (!searchInput) return;
+
+    const currentNorm = normalizeSearchText(searchInput.value);
+    const targetNorm = normalizeSearchText(query);
+
+    // Toggle off if already matching
+    if (currentNorm === targetNorm) {
+        searchInput.value = '';
+    } else {
+        searchInput.value = query;
+    }
+
+    updateActiveSearchChips(searchInput.value);
+    applyFilters();
+
+    const explorer = document.getElementById('explorerSection');
+    if (explorer) {
+        explorer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+function clearSearch() {
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+        searchInput.value = '';
+        searchInput.focus();
+    }
+    updateActiveSearchChips('');
+    applyFilters();
+}
+
+function updateActiveSearchChips(rawQuery) {
+    const norm = normalizeSearchText(rawQuery);
+    const clearBtn = document.getElementById('searchClearBtn');
+    if (clearBtn) {
+        clearBtn.style.display = norm ? 'flex' : 'none';
+    }
+
+    document.querySelectorAll('.suggestion-chip').forEach(chip => {
+        const chipQuery = normalizeSearchText(chip.dataset.query);
+        if (norm && (norm === chipQuery || chipQuery.includes(norm) || norm.includes(chipQuery))) {
+            chip.classList.add('active');
+        } else {
+            chip.classList.remove('active');
+        }
+    });
+}
+
+function normalizeSearchText(str) {
+    return (str || '')
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .trim();
+}
+
+function matchesSearch(title, channel, query) {
+    if (!query) return true;
+    const nTitle = normalizeSearchText(title);
+    const nChannel = normalizeSearchText(channel);
+    const nQuery = normalizeSearchText(query);
+
+    if (nTitle.includes(nQuery) || nChannel.includes(nQuery)) return true;
+
+    // Friendly semantic matching aliases
+    if (nQuery === 'water lilies' || nQuery === 'water lily') {
+        return nTitle.includes('water lil');
+    }
+    if (nQuery === 'sunrise' || nQuery === 'sunlight') {
+        return nTitle.includes('sun');
+    }
+    if (nQuery === 'train' || nQuery === 'trains') {
+        return nTitle.includes('train') || nTitle.includes('railway');
+    }
+    if (nQuery === 'etretat' || nQuery === 'coastal') {
+        return nTitle.includes('etretat') || nTitle.includes('cliffs');
+    }
+    if (nQuery === 'bridge') {
+        return nTitle.includes('bridge') || nTitle.includes('footbridge');
+    }
+
+    return false;
+}
+
 function applyFilters() {
     const searchEl = document.getElementById('searchInput');
     const channelEl = document.getElementById('channelSelect');
     const resEl = document.getElementById('resSelect');
     const sortEl = document.getElementById('sortSelect');
 
-    const query = searchEl ? searchEl.value.toLowerCase().trim() : '';
+    const rawQuery = searchEl ? searchEl.value.trim() : '';
     const selectedChannel = channelEl ? channelEl.value : 'ALL';
     const selectedRes = resEl ? resEl.value : '1080P_PLUS';
     const sortBy = sortEl ? sortEl.value : 'views_desc';
 
+    updateActiveSearchChips(rawQuery);
+
     if (currentViewMode === 'videos') {
         let filtered = ALL_VIDEOS.filter(v => {
-            const matchesQuery = !query || 
-                v.title.toLowerCase().includes(query) || 
-                v.channel.toLowerCase().includes(query);
+            const matchesQuery = matchesSearch(v.title, v.channel, rawQuery);
             const matchesChannel = (selectedChannel === 'ALL') || (v.channel === selectedChannel);
-            
+
             let matchesRes = true;
             if (selectedRes === '1080P_PLUS' || selectedRes === '1080P_OR_BETTER' || selectedRes === 'FHD_PLUS' || selectedRes === '1080P') {
                 matchesRes = (v.is4K || v.height >= 1080);
@@ -387,11 +528,9 @@ function applyFilters() {
     } else {
         let filteredWp = [];
         ALL_VIDEOS.forEach(v => {
-            const matchesQuery = !query || 
-                v.title.toLowerCase().includes(query) || 
-                v.channel.toLowerCase().includes(query);
+            const matchesQuery = matchesSearch(v.title, v.channel, rawQuery);
             const matchesChannel = (selectedChannel === 'ALL') || (v.channel === selectedChannel);
-            
+
             let matchesRes = true;
             if (selectedRes === '1080P_PLUS' || selectedRes === '1080P_OR_BETTER' || selectedRes === 'FHD_PLUS' || selectedRes === '1080P') {
                 matchesRes = (v.is4K || v.height >= 1080);
@@ -533,10 +672,18 @@ function initFiltersAndEvents() {
         });
     }
 
+    const contactModalOverlay = document.getElementById('contactModalOverlay');
+    if (contactModalOverlay) {
+        contactModalOverlay.addEventListener('click', (e) => {
+            if (e.target.id === 'contactModalOverlay') closeContactModal();
+        });
+    }
+
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             closeVideoModal();
             closeWallpaperModal();
+            closeContactModal();
         }
     });
 }
@@ -1236,3 +1383,66 @@ window.addEventListener('keydown', (e) => {
         toggleNativeFullscreen();
     }
 });
+
+// ==========================================================================
+// Modal 4: Contact Sachin Feedback System
+// ==========================================================================
+function openContactModal() {
+    const overlay = document.getElementById('contactModalOverlay');
+    if (overlay) {
+        overlay.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeContactModal() {
+    const overlay = document.getElementById('contactModalOverlay');
+    if (overlay) {
+        overlay.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+}
+
+function copyContactText(text, btnEl) {
+    if (!text) return;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+            showCopyFeedback(btnEl);
+        }).catch(() => {
+            fallbackCopyText(text, btnEl);
+        });
+    } else {
+        fallbackCopyText(text, btnEl);
+    }
+}
+
+function fallbackCopyText(text, btnEl) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try {
+        document.execCommand('copy');
+        showCopyFeedback(btnEl);
+    } catch (e) {
+        console.error('Copy failed:', e);
+    }
+    document.body.removeChild(ta);
+}
+
+function showCopyFeedback(btnEl) {
+    if (!btnEl) return;
+    const original = btnEl.innerHTML;
+    btnEl.innerHTML = '✅ Copied!';
+    btnEl.style.color = '#10b981';
+    btnEl.style.borderColor = '#10b981';
+    setTimeout(() => {
+        btnEl.innerHTML = original;
+        btnEl.style.color = '';
+        btnEl.style.borderColor = '';
+    }, 2000);
+}
+
