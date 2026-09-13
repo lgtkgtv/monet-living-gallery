@@ -82,66 +82,117 @@ a {
   z-index: 1;
 }
 
-.hero-header-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 16px;
-}
-
-.hero-badge-top {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.82rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #fef08a;
-  background: rgba(245, 158, 11, 0.18);
-  padding: 5px 14px;
-  border-radius: var(--radius-full);
-  border: 1px solid rgba(245, 158, 11, 0.35);
-}
-
-.hero-device-indicator {
-  font-size: 0.76rem;
-  color: #cbd5e1;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 4px 12px;
-  border-radius: var(--radius-full);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  font-weight: 500;
-}
-
 .hero-title {
   font-family: var(--font-serif);
   font-size: clamp(2.2rem, 4.8vw, 3.6rem);
   font-weight: 700;
   line-height: 1.18;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   letter-spacing: -0.5px;
   color: #ffffff;
 }
 
 .hero-tagline {
-  font-size: clamp(1.0rem, 2vw, 1.2rem);
+  font-size: clamp(0.98rem, 1.8vw, 1.18rem);
   color: #e2e8f0;
-  max-width: 840px;
+  max-width: 860px;
   font-weight: 300;
-  line-height: 1.6;
-  margin-bottom: 24px;
+  line-height: 1.5;
+  margin-bottom: 22px;
 }
 
-.hero-actions {
+/* --- Hero 3-Section Navigation Tabs --- */
+.hero-nav-tabs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15, 23, 42, 0.45);
+  padding: 6px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(12px);
+  margin-bottom: 18px;
+}
+
+.hero-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: var(--radius-full);
+  border: 1px solid transparent;
+  background: transparent;
+  color: #cbd5e1;
+  font-size: 0.94rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  min-height: 42px;
+  font-family: var(--font-sans);
+}
+
+.hero-tab-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hero-tab-btn.active {
+  background: var(--color-gold);
+  color: #0f172a;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(198, 146, 20, 0.35);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* --- Hero Compact Single-Line Curation Statistics --- */
+.hero-stats-strip {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 20px;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
 }
 
+.stat-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: #e2e8f0;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.stat-badge strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.stat-badge.stat-gold {
+  border-color: rgba(245, 158, 11, 0.4);
+  background: rgba(245, 158, 11, 0.15);
+}
+
+.stat-badge.stat-gold strong {
+  color: #fbbf24;
+}
+
+.stat-badge.stat-accent {
+  border-color: rgba(224, 169, 109, 0.4);
+  background: rgba(224, 169, 109, 0.15);
+}
+
+.stat-badge.stat-accent strong {
+  color: #fde68a;
+}
+
+/* Generic Button Base (used for Reset Filters, etc.) */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -167,94 +218,6 @@ a {
   background-color: #d8a426;
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(198, 146, 20, 0.45);
-}
-
-.btn-accent {
-  background-color: var(--color-accent);
-  color: #ffffff;
-  box-shadow: 0 4px 12px rgba(194, 89, 63, 0.35);
-}
-
-.btn-accent:hover {
-  background-color: #b04930;
-  transform: translateY(-2px);
-  color: #ffffff;
-}
-
-.btn-outline-white {
-  background: transparent;
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-}
-
-.btn-outline-white:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: #ffffff;
-}
-
-/* --- Hero Stats Collapsible Drawer --- */
-.hero-stats-wrapper {
-  margin-top: 10px;
-}
-
-.stats-toggle-btn {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  color: #e2e8f0;
-  padding: 6px 16px;
-  border-radius: var(--radius-full);
-  font-size: 0.84rem;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  transition: var(--transition);
-}
-
-.stats-toggle-btn:hover {
-  background: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
-}
-
-.stats-toggle-icon {
-  font-size: 0.72rem;
-  transition: transform 0.25s ease;
-}
-
-.hero-stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 14px;
-  transition: all 0.3s ease;
-}
-
-/* On mobile, stats drawer can toggle */
-@media (max-width: 768px) {
-  .hero-stats {
-    display: none;
-  }
-  .hero-stats.open {
-    display: flex;
-  }
-}
-
-.stat-pill {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 6px 14px;
-  border-radius: var(--radius-full);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.86rem;
-  color: #f1f5f9;
-}
-
-.stat-pill strong {
-  color: #ffffff;
-  font-weight: 700;
 }
 
 /* --- Main Layout Container --- */
@@ -1341,13 +1304,29 @@ a {
     padding: 0 14px;
   }
 
-  .hero-actions {
+  .hero-nav-tabs {
     flex-direction: column;
-    gap: 10px;
+    width: 100%;
+    border-radius: var(--radius-lg);
+    padding: 6px;
+    gap: 6px;
   }
 
-  .hero-actions .btn {
+  .hero-tab-btn {
     width: 100%;
+    justify-content: center;
+    font-size: 0.88rem;
+    padding: 9px 14px;
+    border-radius: var(--radius-md);
+  }
+
+  .hero-stats-strip {
+    gap: 6px;
+  }
+
+  .stat-badge {
+    font-size: 0.78rem;
+    padding: 4px 10px;
   }
 
   .section-header {
@@ -1355,15 +1334,6 @@ a {
     align-items: flex-start;
     gap: 14px;
     margin: 32px 0 16px;
-  }
-
-  .view-mode-toggle {
-    width: 100%;
-  }
-
-  .toggle-mode-btn {
-    flex: 1;
-    justify-content: center;
   }
 
   .controls-card {

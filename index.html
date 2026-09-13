@@ -17,62 +17,31 @@
     <!-- Hero Header -->
     <header class="hero">
         <div class="hero-container">
-            <div class="hero-header-top">
-                <span class="hero-badge-top">👑 4K UHD Art Gallery & Masterwork Archive</span>
-                <span class="hero-device-indicator" id="heroDeviceBadge">📱 Mobile Optimized View</span>
-            </div>
-            
             <h1 class="hero-title">L'Impressionnisme Vivant</h1>
             <p class="hero-tagline">
-                Step inside the canvases of Claude Monet and the Impressionist masters. Curated in native 4K Ultra-HD with peaceful classical pairings and high-definition wallpaper scene archives.
+                Step inside the living canvases of Claude Monet and the Impressionist masters.
             </p>
 
-            <!-- Quick Action Jump Buttons -->
-            <div class="hero-actions">
-                <a href="#explorerSection" class="btn btn-primary" onclick="switchViewMode('videos')">
-                    🎬 Explore 1080p HD or Better (<span id="hero1080pBtnCount">191</span>) ↓
-                </a>
-                <a href="#explorerSection" class="btn btn-accent" onclick="switchViewMode('wallpapers')">
-                    🖼️ 4K Wallpapers Archive (<span id="heroWpBtnCount">366+</span>) ↓
-                </a>
-                <a href="#channelsSection" class="btn btn-outline-white">
-                    🏛️ Curators & Channels
-                </a>
-            </div>
-
-            <!-- Compact Collapsible Developer / Gallery Statistics -->
-            <div class="hero-stats-wrapper">
-                <button class="stats-toggle-btn" id="statsToggleBtn" onclick="toggleHeroStats()" aria-expanded="false" title="Toggle detailed gallery catalog statistics">
-                    <span>📊 Curation Statistics: <strong>198 Works · 78h 8m · 39 Channels</strong></span>
-                    <span class="stats-toggle-icon" id="statsToggleIcon">▼</span>
+            <!-- 3 Section Navigation Tabs -->
+            <nav class="hero-nav-tabs" role="tablist" aria-label="Gallery Sections">
+                <button id="tabBtnVideos" class="hero-tab-btn active" role="tab" aria-selected="true" onclick="switchMainTab('videos')">
+                    🎨 The Impressionist Video Explorer
                 </button>
+                <button id="tabBtnWallpapers" class="hero-tab-btn" role="tab" aria-selected="false" onclick="switchMainTab('wallpapers')">
+                    🖼️ The Impressionist Wallpaper Gallery
+                </button>
+                <button id="tabBtnChannels" class="hero-tab-btn" role="tab" aria-selected="false" onclick="switchMainTab('channels')">
+                    🏛️ The Channel Guides & Aesthetic Profiles
+                </button>
+            </nav>
 
-                <div class="hero-stats" id="heroStatsDrawer">
-                    <div class="stat-pill">
-                        <span>Curated Works:</span>
-                        <strong id="statTotalVideos">198</strong>
-                    </div>
-                    <div class="stat-pill" style="border-color: rgba(245, 158, 11, 0.5); background: rgba(245, 158, 11, 0.18);">
-                        <span>👑 Native 4K UHD:</span>
-                        <strong id="stat4kCount" style="color: #fbbf24;">43 Works</strong>
-                    </div>
-                    <div class="stat-pill" style="border-color: rgba(224, 169, 109, 0.4); background: rgba(224, 169, 109, 0.15);">
-                        <span>🖼️ 4K Wallpapers:</span>
-                        <strong id="statWallpapersCount">366+</strong>
-                    </div>
-                    <div class="stat-pill">
-                        <span>Cumulative Views:</span>
-                        <strong id="statTotalViews">24.1M</strong>
-                    </div>
-                    <div class="stat-pill">
-                        <span>Total Gallery Time:</span>
-                        <strong id="statTotalRuntime">78h 8m</strong>
-                    </div>
-                    <div class="stat-pill">
-                        <span>Source Channels:</span>
-                        <strong id="statChannelCount">39</strong>
-                    </div>
-                </div>
+            <!-- Compact Single-Line Curation Statistics -->
+            <div class="hero-stats-strip" id="heroStatsStrip">
+                <span class="stat-badge">🎨 Curated Works: <strong id="statTotalVideos">198</strong></span>
+                <span class="stat-badge stat-gold">👑 Native 4K UHD: <strong id="stat4kCount">43 Works</strong></span>
+                <span class="stat-badge stat-accent">🖼️ Wallpapers: <strong id="statWallpapersCount">366+</strong></span>
+                <span class="stat-badge">👁️ Cumulative Views: <strong id="statTotalViews">24.1M</strong></span>
+                <span class="stat-badge">🏛️ Channels: <strong id="statChannelCount">39</strong></span>
             </div>
         </div>
     </header>
@@ -80,24 +49,14 @@
     <!-- Main Container -->
     <main class="container">
 
-        <!-- SECTION 1: Impressionist Video Explorer (Displayed First for immediate visual engagement) -->
+        <!-- SECTION 1: Impressionist Video Explorer & Wallpaper Gallery -->
         <section id="explorerSection">
             <div class="section-header">
                 <div>
                     <h2 class="section-title" id="sectionHeaderTitle">🎨 The Impressionist Video Explorer</h2>
                     <p class="section-desc" id="sectionHeaderDesc">
-                        Currently presenting <strong>1080p HD or better Masterworks</strong> (191 works). Experience high-definition brushwork, living canvas motion, and museum-grade reproductions.
+                        Explore high-definition Impressionist masterworks, living canvas motion, and museum-grade reproductions.
                     </p>
-                </div>
-
-                <!-- View Mode Toggle Control -->
-                <div class="view-mode-toggle">
-                    <button id="toggleBtnVideos" class="toggle-mode-btn active" onclick="switchViewMode('videos')">
-                        🎬 Video Catalog (<span id="toggleVideosCount">198</span>)
-                    </button>
-                    <button id="toggleBtnWallpapers" class="toggle-mode-btn" onclick="switchViewMode('wallpapers')">
-                        🖼️ 4K Wallpapers (<span id="toggleWallpapersCount">366</span>)
-                    </button>
                 </div>
             </div>
 
@@ -145,8 +104,8 @@
             </div>
         </section>
 
-        <!-- SECTION 2: Channel Guides & Aesthetic Profiles (Positioned after the video explorer) -->
-        <section id="channelsSection">
+        <!-- SECTION 2: Channel Guides & Aesthetic Profiles -->
+        <section id="channelsSection" style="display: none;">
             <div class="section-header">
                 <div>
                     <h2 class="section-title">🏛️ The Channel Guides & Aesthetic Profiles</h2>

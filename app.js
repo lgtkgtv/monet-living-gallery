@@ -32,36 +32,7 @@ function detectDeviceFormFactor() {
     document.documentElement.classList.toggle('is-mobile-device', isMobile);
     document.documentElement.classList.toggle('is-desktop-device', !isMobile);
 
-    const badge = document.getElementById('heroDeviceBadge');
-    if (badge) {
-        if (isMobile) {
-            badge.textContent = '📱 Mobile Optimized View';
-            badge.title = 'Layout adapted for one-hand browsing, quick audio-visual streaming, and touch interaction.';
-        } else {
-            badge.textContent = '🖥️ Desktop Gallery View';
-            badge.title = 'Full-width cinematic view with high-definition wallpaper inspection.';
-        }
-    }
-
     return isMobile;
-}
-
-function toggleHeroStats() {
-    const drawer = document.getElementById('heroStatsDrawer');
-    const icon = document.getElementById('statsToggleIcon');
-    const btn = document.getElementById('statsToggleBtn');
-    if (!drawer) return;
-
-    const isOpen = drawer.classList.contains('open');
-    if (isOpen) {
-        drawer.classList.remove('open');
-        if (icon) icon.textContent = '▼';
-        if (btn) btn.setAttribute('aria-expanded', 'false');
-    } else {
-        drawer.classList.add('open');
-        if (icon) icon.textContent = '▲';
-        if (btn) btn.setAttribute('aria-expanded', 'true');
-    }
 }
 
 function formatViews(num) {
@@ -88,32 +59,14 @@ function initHeroStats() {
     if (document.getElementById('statTotalViews')) {
         document.getElementById('statTotalViews').textContent = (meta.totalViews / 1000000).toFixed(1) + 'M';
     }
-    if (document.getElementById('statTotalRuntime')) {
-        document.getElementById('statTotalRuntime').textContent = formatHours(meta.totalDurationSec);
-    }
     if (document.getElementById('statChannelCount')) {
         document.getElementById('statChannelCount').textContent = meta.channelCount;
     }
     if (document.getElementById('stat4kCount')) {
         document.getElementById('stat4kCount').textContent = `${meta.count4K} Works`;
     }
-    if (document.getElementById('hero1080pBtnCount')) {
-        document.getElementById('hero1080pBtnCount').textContent = ALL_VIDEOS.filter(v => v.is4K || v.height >= 1080).length;
-    }
-    if (document.getElementById('hero4kBtnCount')) {
-        document.getElementById('hero4kBtnCount').textContent = meta.count4K;
-    }
     if (document.getElementById('statWallpapersCount')) {
         document.getElementById('statWallpapersCount').textContent = `${meta.totalWallpapers}+`;
-    }
-    if (document.getElementById('heroWpBtnCount')) {
-        document.getElementById('heroWpBtnCount').textContent = `${meta.totalWallpapers}+`;
-    }
-    if (document.getElementById('toggleVideosCount')) {
-        document.getElementById('toggleVideosCount').textContent = meta.totalVideos;
-    }
-    if (document.getElementById('toggleWallpapersCount')) {
-        document.getElementById('toggleWallpapersCount').textContent = meta.totalWallpapers;
     }
 }
 
@@ -207,32 +160,62 @@ function populateChannelFilter() {
     });
 }
 
-function switchViewMode(mode) {
-    currentViewMode = mode;
-    const btnVid = document.getElementById('toggleBtnVideos');
-    const btnWp = document.getElementById('toggleBtnWallpapers');
+function switchMainTab(tabKey) {
+    const tabVideos = document.getElementById('tabBtnVideos');
+    const tabWallpapers = document.getElementById('tabBtnWallpapers');
+    const tabChannels = document.getElementById('tabBtnChannels');
+
+    const explorerSection = document.getElementById('explorerSection');
+    const channelsSection = document.getElementById('channelsSection');
     const gridVid = document.getElementById('videosGrid');
     const gridWp = document.getElementById('wallpapersGrid');
     const headerTitle = document.getElementById('sectionHeaderTitle');
     const headerDesc = document.getElementById('sectionHeaderDesc');
 
-    if (mode === 'videos') {
-        if (btnVid) btnVid.classList.add('active');
-        if (btnWp) btnWp.classList.remove('active');
+    // Update tab button states
+    [
+        { key: 'videos', btn: tabVideos },
+        { key: 'wallpapers', btn: tabWallpapers },
+        { key: 'channels', btn: tabChannels }
+    ].forEach(({ key, btn }) => {
+        if (!btn) return;
+        const isActive = (key === tabKey);
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+
+    if (tabKey === 'channels') {
+        if (explorerSection) explorerSection.style.display = 'none';
+        if (channelsSection) {
+            channelsSection.style.display = 'block';
+            channelsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+        return;
+    }
+
+    // Tab is 'videos' or 'wallpapers'
+    if (channelsSection) channelsSection.style.display = 'none';
+    if (explorerSection) explorerSection.style.display = 'block';
+
+    currentViewMode = tabKey;
+
+    if (tabKey === 'videos') {
         if (gridVid) gridVid.style.display = 'grid';
         if (gridWp) gridWp.style.display = 'none';
         if (headerTitle) headerTitle.textContent = '🎨 The Impressionist Video Explorer';
-        if (headerDesc) headerDesc.innerHTML = 'Currently showcasing <strong>1080p Full HD & 4K Ultra-HD Masterworks</strong> (191 works). Native resolutions, verified links, and extracted scene snapshots.';
-    } else {
-        if (btnWp) btnWp.classList.add('active');
-        if (btnVid) btnVid.classList.remove('active');
+        if (headerDesc) headerDesc.innerHTML = 'Explore high-definition Impressionist masterworks, living canvas motion, and museum-grade reproductions.';
+    } else if (tabKey === 'wallpapers') {
         if (gridVid) gridVid.style.display = 'none';
         if (gridWp) gridWp.style.display = 'grid';
-        if (headerTitle) headerTitle.textContent = '🖼️ The 4K Impressionist Wallpaper Gallery';
-        if (headerDesc) headerDesc.innerHTML = 'High-definition 4K snapshots extracted from Impressionist masterworks. Completely ad-free, instant artwork previews.';
+        if (headerTitle) headerTitle.textContent = '🖼️ The Impressionist Wallpaper Gallery';
+        if (headerDesc) headerDesc.innerHTML = 'High-definition snapshots extracted from Impressionist masterworks. Instant artwork previews.';
     }
 
     applyFilters();
+}
+
+function switchViewMode(mode) {
+    switchMainTab(mode);
 }
 
 function renderCurrentView() {
@@ -437,6 +420,7 @@ function applyFilters() {
 }
 
 function filterByChannel(channelName) {
+    switchMainTab('videos');
     const channelSelect = document.getElementById('channelSelect');
     if (channelSelect) channelSelect.value = channelName;
     const searchInput = document.getElementById('searchInput');
