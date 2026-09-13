@@ -29,25 +29,25 @@ RES_FILE = "video_resolutions.json"
 def calculate_scenery_timestamps(duration_sec):
     """
     Generate diverse scenery timestamps across the video:
-    - Short (<4m): 5 scenes
-    - Medium (4-15m): 7 scenes
-    - Long (15-60m): 9 scenes
-    - Anthologies (>60m): 11 scenes
+    - Short (<4m): 7 scenes
+    - Medium (4-15m): 9 scenes
+    - Long (15-60m): 12 scenes
+    - Anthologies & Screensavers (>60m): 16 scenes
     """
     dur = int(duration_sec or 240)
     if dur <= 60:
         return [10, max(15, dur // 2), max(20, dur - 8)]
     if dur < 240:
-        num = 5
+        num = 7
         start, end = max(10, int(dur * 0.08)), min(dur - 8, int(dur * 0.92))
     elif dur < 900:
-        num = 7
+        num = 9
         start, end = max(15, int(dur * 0.06)), min(dur - 12, int(dur * 0.94))
     elif dur < 3600:
-        num = 9
+        num = 12
         start, end = max(30, int(dur * 0.04)), min(dur - 30, int(dur * 0.96))
     else:
-        num = 11
+        num = 16
         start, end = 45, min(dur - 60, int(dur * 0.95))
 
     step = (end - start) / max(1, num - 1)
@@ -88,13 +88,15 @@ def load_or_init_tracker(playlist, res_cache):
         if vid:
             existing_by_video.setdefault(vid, []).append(r)
 
+    MIN_REQUIRED_SCENES = 5
+
     # Check disk for actual image files
     disk_completed = set()
     for vid_entry in os.listdir(WALLPAPER_DIR):
         vdir = os.path.join(WALLPAPER_DIR, vid_entry)
         if os.path.isdir(vdir):
             jpgs = [f for f in os.listdir(vdir) if f.startswith("snapshot_") and f.endswith(".jpg")]
-            if len(jpgs) >= 3:
+            if len(jpgs) >= MIN_REQUIRED_SCENES:
                 disk_completed.add(vid_entry)
 
     tracker = {}
@@ -127,7 +129,7 @@ def load_or_init_tracker(playlist, res_cache):
             tier_rank = 3
 
         existing_records = existing_by_video.get(vid, [])
-        is_done = (len(existing_records) >= 3) or (vid in disk_completed)
+        is_done = (len(existing_records) >= MIN_REQUIRED_SCENES) and (vid in disk_completed)
 
         if vid not in videos_map:
             videos_map[vid] = {
@@ -152,7 +154,11 @@ def load_or_init_tracker(playlist, res_cache):
             videos_map[vid]["is_4k"] = is_4k
             videos_map[vid]["tier"] = tier
             videos_map[vid]["tier_rank"] = tier_rank
-            if is_done and videos_map[vid]["status"] != "completed":
+            if not is_done:
+                videos_map[vid]["status"] = "pending"
+                videos_map[vid]["retry_count"] = 0
+                videos_map[vid]["error"] = None
+            elif videos_map[vid]["status"] != "completed":
                 videos_map[vid]["status"] = "completed"
                 videos_map[vid]["extracted_count"] = max(videos_map[vid].get("extracted_count", 0), len(existing_records))
 
@@ -225,7 +231,7 @@ def extract_video_wallpapers(entry):
     yt_url = f"https://www.youtube.com/watch?v={vid}"
     cmd_stream = [
         "yt-dlp", "--no-warnings", "-g",
-        "-f", "bestvideo[height<=2160][ext=mp4]/bestvideo[height<=2160]/bestvideo/best",
+        "-f", "bestvideo[height<=2160][protocol=https]/bestvideo[height<=2160]/best",
         yt_url
     ]
     try:

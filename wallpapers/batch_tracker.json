@@ -186,11 +186,11 @@
       "is_4k": true,
       "height": 2160,
       "duration": 156,
-      "status": "failed",
-      "extracted_count": 0,
-      "last_attempt": "2026-09-13T19:41:36.746143",
-      "error": "no_snapshots_extracted",
-      "retry_count": 2
+      "status": "completed",
+      "extracted_count": 7,
+      "last_attempt": "2026-09-13T20:11:34.343405",
+      "error": null,
+      "retry_count": 0
     },
     "QPZgmv7slPc": {
       "id": "QPZgmv7slPc",
@@ -1258,11 +1258,11 @@
       "is_4k": true,
       "height": 2160,
       "duration": 128,
-      "status": "failed",
-      "extracted_count": 0,
-      "last_attempt": "2026-09-13T19:42:09.770128",
-      "error": "no_snapshots_extracted",
-      "retry_count": 2
+      "status": "completed",
+      "extracted_count": 7,
+      "last_attempt": "2026-09-13T20:11:56.163006",
+      "error": null,
+      "retry_count": 0
     },
     "y2qq6rdVTxg": {
       "id": "y2qq6rdVTxg",
@@ -1402,11 +1402,11 @@
       "is_4k": true,
       "height": 2160,
       "duration": 189,
-      "status": "failed",
-      "extracted_count": 0,
-      "last_attempt": "2026-09-13T19:42:42.420228",
-      "error": "no_snapshots_extracted",
-      "retry_count": 2
+      "status": "completed",
+      "extracted_count": 7,
+      "last_attempt": "2026-09-13T20:12:13.055021",
+      "error": null,
+      "retry_count": 0
     },
     "0ADdYoYZIqg": {
       "id": "0ADdYoYZIqg",
@@ -1770,11 +1770,11 @@
       "is_4k": true,
       "height": 2160,
       "duration": 194,
-      "status": "failed",
-      "extracted_count": 0,
-      "last_attempt": "2026-09-13T19:40:50.460677",
-      "error": "no_snapshots_extracted",
-      "retry_count": 2
+      "status": "completed",
+      "extracted_count": 7,
+      "last_attempt": "2026-09-13T20:11:18.006171",
+      "error": null,
+      "retry_count": 0
     },
     "wDbrDQO6c98": {
       "id": "wDbrDQO6c98",
@@ -1867,8 +1867,8 @@
       "height": 2160,
       "duration": 219,
       "status": "completed",
-      "extracted_count": 3,
-      "last_attempt": "2026-09-13T19:02:35.365302",
+      "extracted_count": 7,
+      "last_attempt": "2026-09-13T20:08:54.964574",
       "error": null,
       "retry_count": 0
     },
@@ -1914,11 +1914,11 @@
       "is_4k": true,
       "height": 2160,
       "duration": 126,
-      "status": "failed",
-      "extracted_count": 0,
-      "last_attempt": "2026-09-13T19:40:17.430578",
-      "error": "no_snapshots_extracted",
-      "retry_count": 2
+      "status": "completed",
+      "extracted_count": 7,
+      "last_attempt": "2026-09-13T20:10:58.779359",
+      "error": null,
+      "retry_count": 0
     },
     "8dPO3fDt5OE": {
       "id": "8dPO3fDt5OE",
@@ -2043,8 +2043,8 @@
       "height": 2160,
       "duration": 485,
       "status": "completed",
-      "extracted_count": 3,
-      "last_attempt": "2026-09-13T19:02:35.365318",
+      "extracted_count": 9,
+      "last_attempt": "2026-09-13T20:07:59.738408",
       "error": null,
       "retry_count": 0
     },
@@ -2091,8 +2091,8 @@
       "height": 2160,
       "duration": 167,
       "status": "completed",
-      "extracted_count": 3,
-      "last_attempt": "2026-09-13T19:02:35.365320",
+      "extracted_count": 7,
+      "last_attempt": "2026-09-13T20:09:16.129072",
       "error": null,
       "retry_count": 0
     },
@@ -2346,7 +2346,7 @@
       "is_4k": false,
       "height": 1080,
       "duration": 163,
-      "status": "completed",
+      "status": "pending",
       "extracted_count": 3,
       "last_attempt": "2026-09-13T19:02:35.365329",
       "error": null,
@@ -2378,11 +2378,11 @@
       "is_4k": true,
       "height": 2142,
       "duration": 1057,
-      "status": "failed",
-      "extracted_count": 0,
-      "last_attempt": "2026-09-13T19:34:43.335352",
-      "error": "no_snapshots_extracted",
-      "retry_count": 2
+      "status": "completed",
+      "extracted_count": 12,
+      "last_attempt": "2026-09-13T20:10:29.511254",
+      "error": null,
+      "retry_count": 0
     },
     "U6aYJHR-XsQ": {
       "id": "U6aYJHR-XsQ",
@@ -2459,8 +2459,8 @@
       "height": 2160,
       "duration": 177,
       "status": "completed",
-      "extracted_count": 3,
-      "last_attempt": "2026-09-13T19:02:35.365332",
+      "extracted_count": 7,
+      "last_attempt": "2026-09-13T20:08:27.093694",
       "error": null,
       "retry_count": 0
     },
@@ -2587,8 +2587,8 @@
       "height": 2160,
       "duration": 10801,
       "status": "completed",
-      "extracted_count": 3,
-      "last_attempt": "2026-09-13T19:02:35.365337",
+      "extracted_count": 16,
+      "last_attempt": "2026-09-13T20:09:33.600177",
       "error": null,
       "retry_count": 0
     },
@@ -2826,7 +2826,7 @@
       "is_4k": false,
       "height": 1080,
       "duration": 263,
-      "status": "completed",
+      "status": "pending",
       "extracted_count": 3,
       "last_attempt": "2026-09-13T19:02:35.365347",
       "error": null,
@@ -3002,7 +3002,7 @@
       "is_4k": false,
       "height": 1080,
       "duration": 2542,
-      "status": "completed",
+      "status": "pending",
       "extracted_count": 3,
       "last_attempt": "2026-09-13T19:02:35.365353",
       "error": null,
@@ -3034,7 +3034,7 @@
       "is_4k": false,
       "height": 1080,
       "duration": 7006,
-      "status": "completed",
+      "status": "pending",
       "extracted_count": 3,
       "last_attempt": "2026-09-13T19:02:35.365354",
       "error": null,
@@ -3114,7 +3114,7 @@
       "is_4k": false,
       "height": 720,
       "duration": 7702,
-      "status": "completed",
+      "status": "pending",
       "extracted_count": 3,
       "last_attempt": "2026-09-13T19:02:35.365358",
       "error": null,
@@ -3151,7 +3151,23 @@
       "last_attempt": null,
       "error": null,
       "retry_count": 0
+    },
+    "V0Nz7TQcGF0": {
+      "id": "V0Nz7TQcGF0",
+      "title": "Visual Poems | Rose Garden | Living Oil Paintings",
+      "channel": "Muse Visual Art",
+      "views": 128474,
+      "tier": "Tier 2: 1080p FHD",
+      "tier_rank": 2,
+      "is_4k": false,
+      "height": 1080,
+      "duration": 212,
+      "status": "pending",
+      "extracted_count": 0,
+      "last_attempt": null,
+      "error": null,
+      "retry_count": 0
     }
   },
-  "last_updated": "2026-09-13T19:43:26.021455"
+  "last_updated": "2026-09-13T20:12:26.633072"
 }
