@@ -169,6 +169,7 @@ function switchMainTab(tabKey) {
     const channelsSection = document.getElementById('channelsSection');
     const gridVid = document.getElementById('videosGrid');
     const gridWp = document.getElementById('wallpapersGrid');
+    const downloadBar = document.getElementById('wallpaperDownloadBar');
     const headerTitle = document.getElementById('sectionHeaderTitle');
     const headerDesc = document.getElementById('sectionHeaderDesc');
 
@@ -185,33 +186,33 @@ function switchMainTab(tabKey) {
     });
 
     if (tabKey === 'channels') {
-        if (explorerSection) explorerSection.style.display = 'none';
         if (channelsSection) {
-            channelsSection.style.display = 'block';
-            channelsSection.scrollIntoView({ behavior: 'smooth' });
+            channelsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
         return;
     }
-
-    // Tab is 'videos' or 'wallpapers'
-    if (channelsSection) channelsSection.style.display = 'none';
-    if (explorerSection) explorerSection.style.display = 'block';
 
     currentViewMode = tabKey;
 
     if (tabKey === 'videos') {
         if (gridVid) gridVid.style.display = 'grid';
         if (gridWp) gridWp.style.display = 'none';
+        if (downloadBar) downloadBar.style.display = 'none';
         if (headerTitle) headerTitle.textContent = '🎨 The Impressionist Video Explorer';
         if (headerDesc) headerDesc.innerHTML = 'Explore high-definition Impressionist masterworks, living canvas motion, and museum-grade reproductions.';
     } else if (tabKey === 'wallpapers') {
         if (gridVid) gridVid.style.display = 'none';
         if (gridWp) gridWp.style.display = 'grid';
+        if (downloadBar) downloadBar.style.display = 'flex';
         if (headerTitle) headerTitle.textContent = '🖼️ The Impressionist Wallpaper Gallery';
         if (headerDesc) headerDesc.innerHTML = 'High-definition snapshots extracted from Impressionist masterworks. Instant artwork previews.';
     }
 
     applyFilters();
+
+    if (explorerSection) {
+        explorerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 }
 
 function switchViewMode(mode) {
@@ -299,14 +300,14 @@ function renderWallpapers(wallpapers) {
     if (!grid) return;
 
     if (countSpan) {
-        countSpan.textContent = `Showing ${wallpapers.length} 4K wallpapers`;
+        countSpan.textContent = `Showing ${wallpapers.length} wallpapers`;
     }
 
     if (wallpapers.length === 0) {
         grid.innerHTML = `
             <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; color: var(--text-muted);">
                 <h3>No wallpapers match your criteria</h3>
-                <p>Try clearing your search or selecting a different channel.</p>
+                <p>Try clearing your search or selecting a different channel or resolution.</p>
                 <button class="btn btn-primary" style="margin-top: 16px;" onclick="resetFilters()">Reset All Filters</button>
             </div>
         `;
@@ -381,6 +382,8 @@ function applyFilters() {
 
         currentVideos = filtered;
         renderVideos(filtered);
+        const downloadBar = document.getElementById('wallpaperDownloadBar');
+        if (downloadBar) downloadBar.style.display = 'none';
     } else {
         let filteredWp = [];
         ALL_VIDEOS.forEach(v => {
@@ -416,6 +419,7 @@ function applyFilters() {
 
         currentWallpapers = filteredWp;
         renderWallpapers(filteredWp);
+        updateWallpaperDownloadBar(filteredWp);
     }
 }
 
@@ -848,4 +852,135 @@ function closeWallpaperModal() {
     const modal = document.getElementById('wallpaperModalOverlay');
     if (modal) modal.classList.remove('open');
     document.body.style.overflow = '';
+}
+
+function updateWallpaperDownloadBar(filteredWp) {
+    const downloadBar = document.getElementById('wallpaperDownloadBar');
+    const countSpan = document.getElementById('wpDownloadFilteredCount');
+    const titleEl = document.getElementById('wpDownloadFilterTitle');
+    const subtitleEl = document.getElementById('wpDownloadFilterSubtitle');
+    const btn = document.getElementById('wpDownloadFilteredBtn');
+
+    if (!downloadBar) return;
+
+    const channelEl = document.getElementById('channelSelect');
+    const resEl = document.getElementById('resSelect');
+    const channelText = (channelEl && channelEl.value !== 'ALL') ? channelEl.value : 'All Channels';
+    const resText = resEl ? resEl.options[resEl.selectedIndex].text.replace(/^[^\w]+/, '').trim() : 'All Resolutions';
+
+    const count = filteredWp ? filteredWp.length : 0;
+    if (countSpan) countSpan.textContent = count;
+
+    if (titleEl) {
+        titleEl.textContent = `Download Filtered Wallpapers (${count} items)`;
+    }
+    if (subtitleEl) {
+        subtitleEl.textContent = `Channel: ${channelText} · Resolution: ${resText} · Single ZIP Archive`;
+    }
+
+    if (btn) {
+        if (count === 0) {
+            btn.disabled = true;
+            btn.innerHTML = '⚠️ No Wallpapers for Current Filter';
+        } else {
+            btn.disabled = false;
+            btn.innerHTML = `📦 Download All (${count}) Wallpapers (ZIP)`;
+        }
+    }
+}
+
+let isDownloadingFiltered = false;
+async function downloadAllFilteredWallpapers() {
+    if (isDownloadingFiltered) return;
+    if (!currentWallpapers || currentWallpapers.length === 0) {
+        alert('No wallpapers match the current filter criteria.');
+        return;
+    }
+
+    const btn = document.getElementById('wpDownloadFilteredBtn');
+    const originalText = btn ? btn.innerHTML : '';
+
+    if (typeof JSZip === 'undefined') {
+        alert('ZIP packaging library is loading. Please try again in a moment.');
+        return;
+    }
+
+    const channelEl = document.getElementById('channelSelect');
+    const resEl = document.getElementById('resSelect');
+    const channelName = (channelEl && channelEl.value !== 'ALL') 
+        ? channelEl.value.replace(/[/\\?%*:|"<>]/g, '').replace(/\s+/g, '_') 
+        : 'All_Channels';
+    const resName = resEl ? resEl.value : 'Filtered';
+    const total = currentWallpapers.length;
+    const zipFilename = `Monet_Wallpapers_${channelName}_${resName}_(${total}_items).zip`;
+
+    isDownloadingFiltered = true;
+    if (btn) btn.disabled = true;
+
+    try {
+        const zip = new JSZip();
+        let completed = 0;
+        let successful = 0;
+
+        // Download in parallel batches of 6 for high speed
+        const batchSize = 6;
+        for (let i = 0; i < total; i += batchSize) {
+            const batch = currentWallpapers.slice(i, i + batchSize);
+            await Promise.all(batch.map(async (wp, bIdx) => {
+                const globalIdx = i + bIdx + 1;
+                const safeTitle = (wp.videoTitle || 'Impressionism').replace(/[/\\?%*:|"<>]/g, '').replace(/\s+/g, '_').substring(0, 30);
+                const safeChannel = (wp.channel || '').replace(/[/\\?%*:|"<>]/g, '').replace(/\s+/g, '_');
+                const timeClean = (wp.timestampFormatted || '').replace(/[^a-zA-Z0-9]/g, '');
+                const fileName = `${safeChannel}_${safeTitle}_scene${wp.snapshotIndex || globalIdx}_${timeClean}_${wp.width}x${wp.height}.jpg`;
+
+                try {
+                    const res = await fetch(wp.path);
+                    if (res.ok) {
+                        const blob = await res.blob();
+                        zip.file(fileName, blob);
+                        successful++;
+                    }
+                } catch (fetchErr) {
+                    console.warn(`Could not load wallpaper ${wp.path}:`, fetchErr);
+                }
+                completed++;
+            }));
+
+            if (btn) btn.innerHTML = `📦 Packaging ${completed}/${total}...`;
+        }
+
+        if (successful === 0) {
+            throw new Error('No wallpaper files could be loaded');
+        }
+
+        if (btn) btn.innerHTML = '📦 Compressing ZIP...';
+        const zipBlob = await zip.generateAsync({
+            type: 'blob',
+            compression: 'STORE'
+        });
+
+        triggerBlobDownload(zipBlob, zipFilename);
+
+        if (btn) btn.innerHTML = `✓ Downloaded ${successful} Wallpapers!`;
+        setTimeout(() => {
+            if (btn) {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }
+            isDownloadingFiltered = false;
+        }, 2500);
+    } catch (err) {
+        console.error('Error packaging filtered wallpapers:', err);
+        if (btn) {
+            btn.innerHTML = '⚠️ Download Error. Try Again';
+            btn.disabled = false;
+        }
+        setTimeout(() => {
+            if (btn) {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }
+            isDownloadingFiltered = false;
+        }, 3000);
+    }
 }

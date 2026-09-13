@@ -90,6 +90,20 @@
                     </select>
                 </div>
 
+                <!-- Wallpaper Batch Download Bar (Active in Wallpaper Gallery view) -->
+                <div class="wallpaper-download-bar" id="wallpaperDownloadBar" style="display: none;">
+                    <div class="wp-download-bar-info">
+                        <span class="wp-download-icon">📥</span>
+                        <div>
+                            <strong id="wpDownloadFilterTitle">Download Filtered Wallpapers</strong>
+                            <span id="wpDownloadFilterSubtitle" class="wp-download-subtitle">All wallpapers for selected channel and resolution packaged into a single ZIP archive</span>
+                        </div>
+                    </div>
+                    <button id="wpDownloadFilteredBtn" class="btn-download-filtered" onclick="downloadAllFilteredWallpapers()" title="Download all wallpapers matching current channel and resolution filters as a single ZIP archive">
+                        📦 Download All (<span id="wpDownloadFilteredCount">0</span>) Wallpapers (ZIP)
+                    </button>
+                </div>
+
                 <div class="results-info" id="resultsCount">Showing 191 1080p+ works</div>
             </div>
 
@@ -105,7 +119,7 @@
         </section>
 
         <!-- SECTION 2: Channel Guides & Aesthetic Profiles -->
-        <section id="channelsSection" style="display: none;">
+        <section id="channelsSection">
             <div class="section-header">
                 <div>
                     <h2 class="section-title">🏛️ The Channel Guides & Aesthetic Profiles</h2>
