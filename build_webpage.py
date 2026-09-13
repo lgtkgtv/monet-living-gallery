@@ -1,11 +1,20 @@
 import json
 import os
 import csv
-from collections import defaultdict
+from collections import defaultdict, Counter
 
 def main():
     with open('playlist_raw.json', 'r', encoding='utf-8') as f:
         entries = json.load(f)
+
+    # Load resolutions cache
+    res_cache = {}
+    if os.path.exists('video_resolutions.json'):
+        try:
+            with open('video_resolutions.json', 'r', encoding='utf-8') as f:
+                res_cache = json.load(f)
+        except:
+            res_cache = {}
 
     channels = defaultdict(list)
     for e in entries:
@@ -117,8 +126,15 @@ def main():
         except Exception as e:
             print('Error loading wallpapers metadata:', e)
 
-    # Build clean video objects
+    # Sort each video's wallpapers by snapshotIndex
+    for vid in wallpapers_map:
+        wallpapers_map[vid].sort(key=lambda x: x.get('snapshotIndex', 0))
+
+    # Build clean video objects with rich resolution attributes
     clean_videos = []
+    count_4k = 0
+    count_fhd = 0
+
     for idx, e in enumerate(entries, 1):
         vid = e.get('id')
         dur = e.get('duration') or 0
@@ -126,8 +142,32 @@ def main():
         h, m = divmod(m, 60)
         dur_str = f'{h:d}:{m:02d}:{s:02d}' if h else f'{m:02d}:{s:02d}'
         
-        # Associated wallpapers: local extractions + maxres fallback
+        # Get resolution details from cache
+        r_info = res_cache.get(vid, {
+            'width': 1920,
+            'height': 1080,
+            'resolution': '1920x1080',
+            'qualityLabel': '1080p FHD',
+            'is4K': False
+        })
+
+        # Overwrite if we have an extracted 4K snapshot
         video_wallpapers = wallpapers_map.get(vid, [])
+        if video_wallpapers:
+            max_w = max(wp.get('width', 1920) for wp in video_wallpapers)
+            max_h = max(wp.get('height', 1080) for wp in video_wallpapers)
+            if max_w >= 3840 or max_h >= 2160:
+                r_info['is4K'] = True
+                r_info['qualityLabel'] = '4K UHD'
+                r_info['width'] = max_w
+                r_info['height'] = max_h
+                r_info['resolution'] = f"{max_w}x{max_h}"
+
+        if r_info.get('is4K'):
+            count_4k += 1
+        elif r_info.get('height', 1080) >= 1080:
+            count_fhd += 1
+
         maxres_url = f"https://i.ytimg.com/vi/{vid}/maxresdefault.jpg"
 
         clean_videos.append({
@@ -141,6 +181,11 @@ def main():
             'url': e.get('url'),
             'thumb': f'https://i.ytimg.com/vi/{vid}/hqdefault.jpg',
             'maxresThumb': maxres_url,
+            'width': r_info.get('width', 1920),
+            'height': r_info.get('height', 1080),
+            'resolution': r_info.get('resolution', '1920x1080'),
+            'qualityLabel': r_info.get('qualityLabel', '1080p FHD'),
+            'is4K': r_info.get('is4K', False),
             'wallpapers': video_wallpapers,
             'wallpaperCount': len(video_wallpapers)
         })
@@ -148,7 +193,7 @@ def main():
     # Sort ALL_VIDEOS by views descending by default
     clean_videos.sort(key=lambda x: x['views'], reverse=True)
 
-    data_js = f"""// Generated Data for Monet Playlist Web Guide & Wallpaper Gallery
+    data_js = f"""// Generated Data for Monet Playlist Web Guide & 4K Wallpaper Archive
 const PLAYLIST_METADATA = {{
     title: "sh_Monet inspired Visual Arts",
     playlistUrl: "https://www.youtube.com/playlist?list=PLeqGkucOU6lA",
@@ -156,7 +201,9 @@ const PLAYLIST_METADATA = {{
     totalViews: {sum(v['views'] for v in clean_videos)},
     totalDurationSec: {sum(v['durationSec'] for v in clean_videos)},
     channelCount: {len(channels)},
-    totalWallpapers: {sum(v['wallpaperCount'] for v in clean_videos)}
+    totalWallpapers: {sum(v['wallpaperCount'] for v in clean_videos)},
+    count4K: {count_4k},
+    countFHD: {count_fhd}
 }};
 
 const CHANNEL_PROFILES = {json.dumps(channel_profiles, indent=2, ensure_ascii=False)};
@@ -166,14 +213,16 @@ const ALL_VIDEOS = {json.dumps(clean_videos, indent=2, ensure_ascii=False)};
 
     with open('data.js', 'w', encoding='utf-8') as f:
         f.write(data_js)
-    print('data.js updated with 199 videos and wallpaper links.')
+    print(f'data.js updated: {len(clean_videos)} videos, {count_4k} in 4K, {sum(v["wallpaperCount"] for v in clean_videos)} wallpapers.')
 
-    # Update CSV
+    # Update CSV with resolution columns
     with open('monet_playlist_by_channel.csv', 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
-        writer.writerow(['Channel Name', 'Channel Total Views', 'Video Rank within Channel', 'Video Title', 'View Count', 'Duration (formatted)', 'Video URL', 'Channel URL'])
+        writer.writerow(['Channel Name', 'Channel Total Views', 'Video Rank within Channel', 'Video Title', 'Resolution', 'Quality', 'View Count', 'Duration', 'Video URL', 'Channel URL'])
         for ch_item in channel_stats:
             for v_rank, v in enumerate(ch_item['videos'], 1):
+                vid = v.get('id')
+                r_info = res_cache.get(vid, {'resolution': '1920x1080', 'qualityLabel': '1080p FHD'})
                 dur = v.get('duration') or 0
                 m, s = divmod(int(dur), 60)
                 h, m = divmod(m, 60)
@@ -183,12 +232,14 @@ const ALL_VIDEOS = {json.dumps(clean_videos, indent=2, ensure_ascii=False)};
                     ch_item['total_views'],
                     v_rank,
                     v.get('title'),
+                    r_info.get('resolution', '1920x1080'),
+                    r_info.get('qualityLabel', '1080p FHD'),
                     v.get('view_count') or 0,
                     dur_str,
                     v.get('url'),
                     ch_item['channel_url']
                 ])
-    print('monet_playlist_by_channel.csv updated.')
+    print('monet_playlist_by_channel.csv updated with resolution columns.')
 
 if __name__ == '__main__':
     main()

@@ -1,4 +1,4 @@
-// L'Impressionnisme Vivant: App Logic & Wallpaper Gallery
+// L'Impressionnisme Vivant: App Logic, Resolutions & Wallpaper Gallery
 
 let currentViewMode = 'videos'; // 'videos' or 'wallpapers'
 let currentVideos = [...ALL_VIDEOS];
@@ -43,6 +43,9 @@ function initHeroStats() {
     document.getElementById('statTotalViews').textContent = (meta.totalViews / 1000000).toFixed(1) + 'M';
     document.getElementById('statTotalRuntime').textContent = formatHours(meta.totalDurationSec);
     document.getElementById('statChannelCount').textContent = meta.channelCount;
+    if (document.getElementById('stat4kCount')) {
+        document.getElementById('stat4kCount').textContent = `${meta.count4K} Works`;
+    }
     if (document.getElementById('statWallpapersCount')) {
         document.getElementById('statWallpapersCount').textContent = `${meta.totalWallpapers}+`;
     }
@@ -70,7 +73,6 @@ function buildAllWallpapersList() {
     });
 }
 
-// Render the 6 Curated Channel Archetype Cards
 function renderChannelCards() {
     const container = document.getElementById('channelsGrid');
     container.innerHTML = '';
@@ -161,7 +163,7 @@ function switchViewMode(mode) {
         gridVid.style.display = 'grid';
         gridWp.style.display = 'none';
         headerTitle.textContent = '🎨 The Impressionist Video Explorer';
-        headerDesc.textContent = 'Browse all 199 paintings and visual poems with verified YouTube links, high-res previews, and embedded playback.';
+        headerDesc.textContent = 'Browse all 199 paintings and visual poems with native resolution badges, verified YouTube links, and 4K wallpaper scene snapshots.';
     } else {
         btnWp.classList.add('active');
         btnVid.classList.remove('active');
@@ -191,7 +193,7 @@ function renderVideos(videos) {
         grid.innerHTML = `
             <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; color: var(--text-muted);">
                 <h3>No paintings or videos found</h3>
-                <p>Try adjusting your search query or channel filter.</p>
+                <p>Try adjusting your search query, resolution, or channel filter.</p>
                 <button class="btn btn-primary" style="margin-top: 16px;" onclick="resetFilters()">Reset All Filters</button>
             </div>
         `;
@@ -202,10 +204,13 @@ function renderVideos(videos) {
     videos.forEach(v => {
         const card = document.createElement('div');
         card.className = 'video-card';
+        const resBadgeClass = v.is4K ? 'badge-4k' : (v.height >= 1080 ? 'badge-fhd' : 'badge-sd');
+        
         card.innerHTML = `
             <div class="thumb-container" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}')">
                 <img class="thumb-img" src="${v.thumb}" alt="${escapeQuotes(v.title)}" loading="lazy" />
                 <span class="thumb-badge-views">${formatViews(v.views)}</span>
+                <span class="thumb-badge-res ${resBadgeClass}">${v.qualityLabel}</span>
                 <span class="thumb-badge-duration">${v.durationFormatted}</span>
                 <div class="play-overlay">
                     <div class="play-circle">▶</div>
@@ -216,11 +221,17 @@ function renderVideos(videos) {
                     ${v.channel}
                 </div>
                 <h4 class="video-title" title="${escapeQuotes(v.title)}">${v.title}</h4>
+                
+                <div class="video-meta-pills">
+                    <span class="pill-res-tag ${v.is4K ? 'tag-4k' : ''}">📐 ${v.resolution}</span>
+                    <span style="color: var(--text-muted); font-size: 0.74rem;">· ⏱️ ${v.durationFormatted}</span>
+                </div>
+
                 <div class="video-actions">
                     <a href="${v.url}" target="_blank" rel="noopener noreferrer" class="btn-card-yt" title="Watch full quality on YouTube">
                         Watch on YouTube ↗
                     </a>
-                    <button class="btn-card-wallpaper" onclick="openWallpaperModal('${v.id}')" title="View 4K wallpaper snapshots for this video">
+                    <button class="btn-card-wallpaper" onclick="openWallpaperModal('${v.id}')" title="View 4K wallpaper scene snapshots for this video">
                         🖼️ Wallpapers ${v.wallpaperCount > 0 ? `<span class="badge-count">${v.wallpaperCount}</span>` : ''}
                     </button>
                     <button class="btn-card-play" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}')" title="Preview in embedded modal player">
@@ -257,14 +268,14 @@ function renderWallpapers(wallpapers) {
         card.innerHTML = `
             <div class="wp-thumb-wrapper">
                 <img class="wp-thumb-img" src="${wp.path}" alt="${escapeQuotes(wp.videoTitle)}" loading="lazy" />
-                <span class="wp-pill-res">${wp.qualityLabel || '4K UHD'}</span>
-                <span class="wp-pill-time">${wp.timestampFormatted}</span>
+                <span class="wp-pill-res">${wp.qualityLabel || '4K UHD'} (${wp.width}×${wp.height})</span>
+                <span class="wp-pill-time">Scene at ${wp.timestampFormatted}</span>
             </div>
             <div class="wp-card-info">
                 <span class="wp-card-channel">${wp.channel}</span>
                 <h4 class="wp-card-title">${wp.videoTitle}</h4>
                 <div class="wp-card-actions">
-                    <button class="btn-wp-view">View & Download 4K</button>
+                    <button class="btn-wp-view">View & Download (${wp.width}×${wp.height})</button>
                 </div>
             </div>
         `;
@@ -279,6 +290,7 @@ function escapeQuotes(str) {
 function applyFilters() {
     const query = document.getElementById('searchInput').value.toLowerCase().trim();
     const selectedChannel = document.getElementById('channelSelect').value;
+    const selectedRes = document.getElementById('resSelect') ? document.getElementById('resSelect').value : 'ALL';
     const sortBy = document.getElementById('sortSelect').value;
 
     if (currentViewMode === 'videos') {
@@ -287,11 +299,18 @@ function applyFilters() {
                 v.title.toLowerCase().includes(query) || 
                 v.channel.toLowerCase().includes(query);
             const matchesChannel = (selectedChannel === 'ALL') || (v.channel === selectedChannel);
-            return matchesQuery && matchesChannel;
+            
+            let matchesRes = true;
+            if (selectedRes === '4K') matchesRes = v.is4K;
+            else if (selectedRes === 'FHD') matchesRes = (!v.is4K && v.height >= 1080);
+            else if (selectedRes === 'OTHER') matchesRes = (v.height < 1080 || v.height === 1440);
+
+            return matchesQuery && matchesChannel && matchesRes;
         });
 
         if (sortBy === 'views_desc') filtered.sort((a, b) => b.views - a.views);
         else if (sortBy === 'views_asc') filtered.sort((a, b) => a.views - b.views);
+        else if (sortBy === 'res_desc') filtered.sort((a, b) => (b.width * b.height) - (a.width * a.height));
         else if (sortBy === 'duration_desc') filtered.sort((a, b) => b.durationSec - a.durationSec);
         else if (sortBy === 'duration_asc') filtered.sort((a, b) => a.durationSec - b.durationSec);
         else if (sortBy === 'title_asc') filtered.sort((a, b) => a.title.localeCompare(b.title));
@@ -306,7 +325,12 @@ function applyFilters() {
                 v.channel.toLowerCase().includes(query);
             const matchesChannel = (selectedChannel === 'ALL') || (v.channel === selectedChannel);
             
-            if (matchesQuery && matchesChannel && v.wallpapers) {
+            let matchesRes = true;
+            if (selectedRes === '4K') matchesRes = v.is4K;
+            else if (selectedRes === 'FHD') matchesRes = (!v.is4K && v.height >= 1080);
+            else if (selectedRes === 'OTHER') matchesRes = (v.height < 1080 || v.height === 1440);
+
+            if (matchesQuery && matchesChannel && matchesRes && v.wallpapers) {
                 v.wallpapers.forEach(wp => {
                     filteredWp.push({
                         ...wp,
@@ -317,6 +341,8 @@ function applyFilters() {
                 });
             }
         });
+
+        if (sortBy === 'res_desc') filteredWp.sort((a, b) => (b.width * b.height) - (a.width * a.height));
 
         currentWallpapers = filteredWp;
         renderWallpapers(filteredWp);
@@ -336,10 +362,17 @@ function selectPathway(pathwayKey) {
 
     const searchInput = document.getElementById('searchInput');
     const channelSelect = document.getElementById('channelSelect');
+    const resSelect = document.getElementById('resSelect');
+
+    if (resSelect) resSelect.value = 'ALL';
 
     if (pathwayKey === 'all') {
         searchInput.value = '';
         channelSelect.value = 'ALL';
+    } else if (pathwayKey === '4k') {
+        searchInput.value = '';
+        channelSelect.value = 'ALL';
+        if (resSelect) resSelect.value = '4K';
     } else if (pathwayKey === 'archives') {
         searchInput.value = '';
         channelSelect.value = 'LearnFromMasters';
@@ -364,6 +397,7 @@ function selectPathway(pathwayKey) {
 function resetFilters() {
     document.getElementById('searchInput').value = '';
     document.getElementById('channelSelect').value = 'ALL';
+    if (document.getElementById('resSelect')) document.getElementById('resSelect').value = 'ALL';
     document.getElementById('sortSelect').value = 'views_desc';
     document.querySelectorAll('.pathway-chip').forEach(c => c.classList.remove('active'));
     document.querySelector('.pathway-chip').classList.add('active');
@@ -373,6 +407,9 @@ function resetFilters() {
 function initFiltersAndEvents() {
     document.getElementById('searchInput').addEventListener('input', applyFilters);
     document.getElementById('channelSelect').addEventListener('change', applyFilters);
+    if (document.getElementById('resSelect')) {
+        document.getElementById('resSelect').addEventListener('change', applyFilters);
+    }
     document.getElementById('sortSelect').addEventListener('change', applyFilters);
 
     // Modal listeners
@@ -394,14 +431,19 @@ function initFiltersAndEvents() {
 
 // Modal 1: Video Player
 function openVideoModal(videoId, title) {
+    const video = ALL_VIDEOS.find(v => v.id === videoId);
     const modal = document.getElementById('modalOverlay');
     const titleEl = document.getElementById('modalTitle');
+    const resEl = document.getElementById('modalVideoRes');
     const iframeWrapper = document.getElementById('playerFrameWrapper');
     const directBtn = document.getElementById('modalYtDirectBtn');
     const fallbackLink = document.getElementById('modalYtFallbackLink');
 
     const ytUrl = `https://www.youtube.com/watch?v=${videoId}`;
     titleEl.textContent = title;
+    if (resEl && video) {
+        resEl.textContent = `Native Quality: ${video.qualityLabel} (${video.resolution})`;
+    }
     if (directBtn) directBtn.href = ytUrl;
     if (fallbackLink) fallbackLink.href = ytUrl;
 
@@ -445,21 +487,20 @@ function openWallpaperModal(videoId, initialIdx = 0) {
     const trayEl = document.getElementById('wpCarouselTray');
 
     titleEl.textContent = video.title;
-    subTitleEl.textContent = `${video.channel} · 4K Wallpaper Gallery`;
+    subTitleEl.textContent = `${video.channel} · Native Quality: ${video.qualityLabel} (${video.resolution})`;
 
-    // Gather images: extracted snapshots, plus fallback maxresdefault
     activeWallpaperList = [];
     if (video.wallpapers && video.wallpapers.length > 0) {
         activeWallpaperList = [...video.wallpapers];
     } else {
-        // High-res YouTube thumbnail fallback if stream snapshots are pending
+        // High-definition YouTube master cover fallback if stream scenes are pending
         activeWallpaperList.push({
             path: video.maxresThumb,
-            qualityLabel: '1080p FHD Cover',
-            timestampFormatted: 'Cover Artwork',
+            qualityLabel: `${video.qualityLabel} Master Cover`,
+            timestampFormatted: 'Cover Masterwork',
             timestampSec: 0,
-            width: 1920,
-            height: 1080,
+            width: video.width || 1920,
+            height: video.height || 1080,
             videoId: video.id
         });
     }
@@ -471,7 +512,7 @@ function openWallpaperModal(videoId, initialIdx = 0) {
         const thumb = document.createElement('img');
         thumb.src = wp.path;
         thumb.className = `wp-tray-thumb ${idx === activeWallpaperIndex ? 'active' : ''}`;
-        thumb.title = `Scene at ${wp.timestampFormatted}`;
+        thumb.title = `Scene at ${wp.timestampFormatted} (${wp.width}×${wp.height})`;
         thumb.onclick = () => selectWallpaperSnapshot(idx);
         trayEl.appendChild(thumb);
     });
@@ -500,7 +541,9 @@ function displayActiveWallpaper() {
     const jumpBtn = document.getElementById('wpJumpVideoBtn');
 
     mainImg.src = wp.path;
-    badgeRes.textContent = `${wp.qualityLabel || '4K UHD'} (${wp.width || 3840}×${wp.height || 2160})`;
+    const resText = `${wp.qualityLabel || '4K UHD'} · ${wp.width || 3840}×${wp.height || 2160}`;
+    const timeText = wp.timestampFormatted ? ` · Scene at ${wp.timestampFormatted}` : '';
+    badgeRes.textContent = `${resText}${timeText}`;
     
     downloadBtn.href = wp.path;
     downloadBtn.download = `Impressionism_Wallpaper_${wp.videoId || 'artwork'}_${activeWallpaperIndex + 1}.jpg`;

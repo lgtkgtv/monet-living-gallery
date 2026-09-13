@@ -20,7 +20,7 @@
             <span class="hero-subtitle-top">Curated Digital Gallery & 4K Art Archive</span>
             <h1 class="hero-title">L'Impressionnisme Vivant</h1>
             <p class="hero-tagline">
-                The Impressionist Video Explorer: An art lover's interactive directory and 4K wallpaper archive celebrating Claude Monet and Impressionist visual arts. Explore 199 curated works arranged by channel identity, aesthetic philosophy, and popularity.
+                The Impressionist Video Explorer: An art lover's interactive directory and 4K wallpaper archive celebrating Claude Monet and Impressionist visual arts. Explore 199 curated works arranged by channel identity, aesthetic philosophy, native resolution, and popularity.
             </p>
 
             <div class="hero-stats">
@@ -40,9 +40,13 @@
                     <span>Source Channels:</span>
                     <strong id="statChannelCount">41</strong>
                 </div>
+                <div class="stat-pill" style="border-color: rgba(245, 158, 11, 0.5); background: rgba(245, 158, 11, 0.15);">
+                    <span>Native 4K UHD:</span>
+                    <strong id="stat4kCount" style="color: #fbbf24;">45 Works</strong>
+                </div>
                 <div class="stat-pill" style="border-color: rgba(224, 169, 109, 0.4); background: rgba(224, 169, 109, 0.15);">
-                    <span>4K Wallpapers:</span>
-                    <strong id="statWallpapersCount">27+</strong>
+                    <span>Wallpapers:</span>
+                    <strong id="statWallpapersCount">46+</strong>
                 </div>
             </div>
 
@@ -74,6 +78,7 @@
         <!-- Art Lover Curated Pathways Bar -->
         <div class="pathways-bar" style="margin-top: 24px;">
             <button class="pathway-chip active" onclick="selectPathway('all')">✨ All Curated Works (199)</button>
+            <button class="pathway-chip" onclick="selectPathway('4k')">👑 4K Ultra-HD Only (45)</button>
             <button class="pathway-chip" onclick="selectPathway('archives')">🏛️ Complete Museum Catalogues (LearnFromMasters)</button>
             <button class="pathway-chip" onclick="selectPathway('immersion')">🎬 Step Inside the Canvas (Living 4K)</button>
             <button class="pathway-chip" onclick="selectPathway('waterlilies')">🌿 Water Lilies & Garden Sanctuaries</button>
@@ -103,7 +108,7 @@
                 <div>
                     <h2 class="section-title" id="sectionHeaderTitle">🎨 The Impressionist Video Explorer</h2>
                     <p class="section-desc" id="sectionHeaderDesc">
-                        Browse all 199 paintings and visual poems with verified YouTube links, high-res previews, and embedded playback.
+                        Browse all 199 paintings and visual poems with native resolution badges, verified YouTube links, and 4K wallpaper scene snapshots.
                     </p>
                 </div>
 
@@ -113,7 +118,7 @@
                         🎬 Video Catalog (<span id="toggleVideosCount">199</span>)
                     </button>
                     <button id="toggleBtnWallpapers" class="toggle-mode-btn" onclick="switchViewMode('wallpapers')">
-                        🖼️ 4K Wallpaper Gallery (<span id="toggleWallpapersCount">27</span>)
+                        🖼️ 4K Wallpaper Gallery (<span id="toggleWallpapersCount">46</span>)
                     </button>
                 </div>
             </div>
@@ -130,9 +135,17 @@
                         <!-- Populated by JS -->
                     </select>
 
+                    <select id="resSelect" class="select-dropdown">
+                        <option value="ALL">All Resolutions</option>
+                        <option value="4K">4K UHD Only (45 works)</option>
+                        <option value="FHD">1080p Full HD (145 works)</option>
+                        <option value="OTHER">1440p / 720p HD</option>
+                    </select>
+
                     <select id="sortSelect" class="select-dropdown">
                         <option value="views_desc">Popularity: High to Low</option>
                         <option value="views_asc">Popularity: Low to High</option>
+                        <option value="res_desc">Resolution: Highest (4K first)</option>
                         <option value="duration_desc">Duration: Longest First</option>
                         <option value="duration_asc">Duration: Shortest First</option>
                         <option value="title_asc">Title: Alphabetical (A-Z)</option>
@@ -159,7 +172,10 @@
     <div id="modalOverlay" class="modal-overlay">
         <div class="modal-content">
             <div class="modal-header">
-                <div class="modal-title" id="modalTitle">Loading video...</div>
+                <div>
+                    <div class="modal-title" id="modalTitle">Loading video...</div>
+                    <div class="modal-res-tag" id="modalVideoRes" style="font-size: 0.75rem; color: #fbbf24; font-weight: 700; margin-top: 2px;">4K UHD (3840×2160)</div>
+                </div>
                 <div class="modal-header-actions">
                     <a id="modalYtDirectBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn-modal-yt">
                         Watch on YouTube ↗
@@ -187,7 +203,7 @@
                 </div>
                 <div class="modal-header-actions">
                     <a id="wpDownloadBtn" href="#" download class="btn-modal-download" target="_blank">
-                        ⬇ Download Full-Res
+                        ⬇ Download Full-Res Wallpaper
                     </a>
                     <a id="wpJumpVideoBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn-modal-yt">
                         Jump to Scene in Video ↗
@@ -198,7 +214,7 @@
 
             <div class="wp-main-view">
                 <img id="wpMainImage" class="wp-large-img" src="" alt="Wallpaper Preview" />
-                <div id="wpBadgeResolution" class="wp-badge-resolution">4K UHD</div>
+                <div id="wpBadgeResolution" class="wp-badge-resolution">4K UHD (3840×2160)</div>
             </div>
 
             <!-- Thumbnail Carousel of Available Snapshots -->
