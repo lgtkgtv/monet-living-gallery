@@ -30,10 +30,10 @@
             <!-- Quick Action Jump Buttons -->
             <div class="hero-actions">
                 <a href="#explorerSection" class="btn btn-primary" onclick="switchViewMode('videos')">
-                    🎬 Watch 4K Videos (<span id="hero4kBtnCount">45</span>) ↓
+                    🎬 Watch 4K Videos (<span id="hero4kBtnCount">43</span>) ↓
                 </a>
                 <a href="#explorerSection" class="btn btn-accent" onclick="switchViewMode('wallpapers')">
-                    🖼️ 4K Wallpapers Archive (<span id="heroWpBtnCount">258+</span>) ↓
+                    🖼️ 4K Wallpapers Archive (<span id="heroWpBtnCount">244+</span>) ↓
                 </a>
                 <a href="#channelsSection" class="btn btn-outline-white">
                     🏛️ Curators & Channels
@@ -46,34 +46,34 @@
             <!-- Compact Collapsible Developer / Gallery Statistics -->
             <div class="hero-stats-wrapper">
                 <button class="stats-toggle-btn" id="statsToggleBtn" onclick="toggleHeroStats()" aria-expanded="false" title="Toggle detailed gallery catalog statistics">
-                    <span>📊 Curation Statistics: <strong>199 Works · 78h 15m · 41 Channels</strong></span>
+                    <span>📊 Curation Statistics: <strong>198 Works · 78h 8m · 39 Channels</strong></span>
                     <span class="stats-toggle-icon" id="statsToggleIcon">▼</span>
                 </button>
 
                 <div class="hero-stats" id="heroStatsDrawer">
                     <div class="stat-pill">
                         <span>Curated Works:</span>
-                        <strong id="statTotalVideos">199</strong>
+                        <strong id="statTotalVideos">198</strong>
                     </div>
                     <div class="stat-pill" style="border-color: rgba(245, 158, 11, 0.5); background: rgba(245, 158, 11, 0.18);">
                         <span>👑 Native 4K UHD:</span>
-                        <strong id="stat4kCount" style="color: #fbbf24;">45 Works</strong>
+                        <strong id="stat4kCount" style="color: #fbbf24;">43 Works</strong>
                     </div>
                     <div class="stat-pill" style="border-color: rgba(224, 169, 109, 0.4); background: rgba(224, 169, 109, 0.15);">
                         <span>🖼️ 4K Wallpapers:</span>
-                        <strong id="statWallpapersCount">258+</strong>
+                        <strong id="statWallpapersCount">244+</strong>
                     </div>
                     <div class="stat-pill">
                         <span>Cumulative Views:</span>
-                        <strong id="statTotalViews">24.2M</strong>
+                        <strong id="statTotalViews">24.1M</strong>
                     </div>
                     <div class="stat-pill">
                         <span>Total Gallery Time:</span>
-                        <strong id="statTotalRuntime">78h 15m</strong>
+                        <strong id="statTotalRuntime">78h 8m</strong>
                     </div>
                     <div class="stat-pill">
                         <span>Source Channels:</span>
-                        <strong id="statChannelCount">41</strong>
+                        <strong id="statChannelCount">39</strong>
                     </div>
                 </div>
             </div>
@@ -85,8 +85,8 @@
 
         <!-- Art Lover Curated Pathways Bar (Defaulted to 4K Ultra-HD) -->
         <div class="pathways-bar" id="pathwaysBar">
-            <button class="pathway-chip active" onclick="selectPathway('4k')">👑 4K Ultra-HD Only (45)</button>
-            <button class="pathway-chip" onclick="selectPathway('all')">✨ All Curated Works (199)</button>
+            <button class="pathway-chip active" onclick="selectPathway('4k')">👑 4K Ultra-HD Only (43)</button>
+            <button class="pathway-chip" onclick="selectPathway('all')">✨ All Curated Works (198)</button>
             <button class="pathway-chip" onclick="selectPathway('immersion')">🎬 Step Inside the Canvas (Living 4K)</button>
             <button class="pathway-chip" onclick="selectPathway('waterlilies')">🌿 Water Lilies & Garden Sanctuaries</button>
             <button class="pathway-chip" onclick="selectPathway('archives')">🏛️ Museum Catalogues (LearnFromMasters)</button>
@@ -107,10 +107,10 @@
                 <!-- View Mode Toggle Control -->
                 <div class="view-mode-toggle">
                     <button id="toggleBtnVideos" class="toggle-mode-btn active" onclick="switchViewMode('videos')">
-                        🎬 Video Catalog (<span id="toggleVideosCount">199</span>)
+                        🎬 Video Catalog (<span id="toggleVideosCount">198</span>)
                     </button>
                     <button id="toggleBtnWallpapers" class="toggle-mode-btn" onclick="switchViewMode('wallpapers')">
-                        🖼️ 4K Wallpapers (<span id="toggleWallpapersCount">258</span>)
+                        🖼️ 4K Wallpapers (<span id="toggleWallpapersCount">244</span>)
                     </button>
                 </div>
             </div>
@@ -128,9 +128,9 @@
                     </select>
 
                     <select id="resSelect" class="select-dropdown">
-                        <option value="4K" selected>👑 4K UHD Only (45 works)</option>
-                        <option value="ALL">All Resolutions (199 works)</option>
-                        <option value="FHD">1080p Full HD (145 works)</option>
+                        <option value="4K" selected>👑 4K UHD Only (43 works)</option>
+                        <option value="ALL">All Resolutions (198 works)</option>
+                        <option value="FHD">1080p Full HD (148 works)</option>
                         <option value="OTHER">1440p / 720p HD</option>
                     </select>
 
@@ -144,7 +144,7 @@
                     </select>
                 </div>
 
-                <div class="results-info" id="resultsCount">Showing 45 4K works</div>
+                <div class="results-info" id="resultsCount">Showing 43 4K works</div>
             </div>
 
             <!-- View 1: Video Grid -->
@@ -168,7 +168,7 @@
                     </p>
                 </div>
                 <div class="channel-guides-badge">
-                    <span>6 Featured Curators · 41 Source Channels</span>
+                    <span>6 Featured Curators · 39 Source Channels</span>
                 </div>
             </div>
 

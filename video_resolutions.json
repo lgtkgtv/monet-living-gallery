@@ -90,13 +90,6 @@
     "qualityLabel": "1080p FHD",
     "is4K": false
   },
-  "jFfImjg0AQU": {
-    "width": 7680,
-    "height": 4320,
-    "resolution": "7680x4320",
-    "qualityLabel": "4K UHD",
-    "is4K": true
-  },
   "QPZgmv7slPc": {
     "width": 1920,
     "height": 1080,
@@ -1140,13 +1133,6 @@
     "qualityLabel": "4K UHD",
     "is4K": true
   },
-  "NVwstpSWVnw": {
-    "width": 3840,
-    "height": 2160,
-    "resolution": "3840x2160",
-    "qualityLabel": "4K UHD",
-    "is4K": true
-  },
   "idaaEXwbjLo": {
     "width": 1920,
     "height": 1080,
@@ -1386,6 +1372,13 @@
     "is4K": false
   },
   "vczWTya7ygg": {
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false
+  },
+  "V0Nz7TQcGF0": {
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",

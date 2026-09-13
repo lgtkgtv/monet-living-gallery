@@ -2,13 +2,13 @@
 const PLAYLIST_METADATA = {
     title: "sh_Monet inspired Visual Arts",
     playlistUrl: "https://www.youtube.com/playlist?list=PLeqGkucOU6lA",
-    totalVideos: 199,
-    totalViews: 24209944,
-    totalDurationSec: 281742,
-    channelCount: 41,
-    totalWallpapers: 258,
-    count4K: 45,
-    countFHD: 147
+    totalVideos: 198,
+    totalViews: 24146418,
+    totalDurationSec: 281302,
+    channelCount: 39,
+    totalWallpapers: 244,
+    count4K: 43,
+    countFHD: 148
 };
 
 const CHANNEL_PROFILES = {
@@ -904,510 +904,11 @@ const CHANNEL_STATS = [
     }
   },
   {
-    "channel": "Extraordinary Visual Art",
-    "channel_url": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
-    "count": 11,
-    "total_views": 1947700,
-    "avg_views": 177064,
-    "videos": [
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "MWRc13v-ZhA",
-        "url": "https://www.youtube.com/watch?v=MWRc13v-ZhA",
-        "title": "Visual Poems | Monet | Journey to the Water Lilies: A Day in the Garden | 4K",
-        "description": null,
-        "duration": 485,
-        "channel_id": "UCB5QogHzrLP7VlG_f0rK8hQ",
-        "channel": "Extraordinary Visual Art",
-        "channel_url": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
-        "uploader": "Extraordinary Visual Art",
-        "uploader_id": "@ExtraordinaryVisualArt",
-        "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/MWRc13v-ZhA/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAOpBVj4CUAIaRY3xFHBmrmTbkE5w",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/MWRc13v-ZhA/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBk4SwZHiSVTc3htGQaSd35xfsfnw",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/MWRc13v-ZhA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAvUjGEW3xQ7gNyyspmi8wi_uTi3g",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/MWRc13v-ZhA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBziqX0m50egMPEwdiggjRC6fPrZw",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 834000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "RX0kyBl-4Bk",
-        "url": "https://www.youtube.com/watch?v=RX0kyBl-4Bk",
-        "title": "Visual Poem | Claude Monet | Living Inside Monet's \"Woman with a Parasol\" | 4K",
-        "description": null,
-        "duration": 167,
-        "channel_id": "UCB5QogHzrLP7VlG_f0rK8hQ",
-        "channel": "Extraordinary Visual Art",
-        "channel_url": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
-        "uploader": "Extraordinary Visual Art",
-        "uploader_id": "@ExtraordinaryVisualArt",
-        "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/RX0kyBl-4Bk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBGhhWs2Sw0Qg_f9zCm8_hJJDhETA",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/RX0kyBl-4Bk/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDZHsa_XMC8N69GKhZfeTxzBUqEiw",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/RX0kyBl-4Bk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCceL_MWEiqIEdE7VftPxEyuYLSfA",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/RX0kyBl-4Bk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDdtpfbpPA6cS_ph_3QDv50-oWVwQ",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 441000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "x3fwY0Kh7uM",
-        "url": "https://www.youtube.com/watch?v=x3fwY0Kh7uM",
-        "title": "Visual Poems | Claude Monet | A Nostalgic Winter Journey by Steam Train | 4K",
-        "description": null,
-        "duration": 183,
-        "channel_id": "UCB5QogHzrLP7VlG_f0rK8hQ",
-        "channel": "Extraordinary Visual Art",
-        "channel_url": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
-        "uploader": "Extraordinary Visual Art",
-        "uploader_id": "@ExtraordinaryVisualArt",
-        "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/x3fwY0Kh7uM/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDZGi96deZv_F8ycIX_sKv7CONOoA",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/x3fwY0Kh7uM/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBrmBHOYWmO-bavfy8t_LajkU2LGw",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/x3fwY0Kh7uM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBlya9W0Cs1uPbBlV4Y4Xdjnj5qBw",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/x3fwY0Kh7uM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCLtoOimbP-zQsrZRH0_N-JrMqo6w",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 211000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "fjT4VO79B5U",
-        "url": "https://www.youtube.com/watch?v=fjT4VO79B5U",
-        "title": "Visual Poems | Renoir | Stepping into the World of \"Gathering Flowers\"",
-        "description": null,
-        "duration": 257,
-        "channel_id": "UCB5QogHzrLP7VlG_f0rK8hQ",
-        "channel": "Extraordinary Visual Art",
-        "channel_url": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
-        "uploader": "Extraordinary Visual Art",
-        "uploader_id": "@ExtraordinaryVisualArt",
-        "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/fjT4VO79B5U/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD84MN7G3uXg5n7tJPD-R83pAU3Iw",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/fjT4VO79B5U/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCWPuWBXcKaGAqXMDNI41rNFI9clQ",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/fjT4VO79B5U/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCbVDVS9W78e8WZ6tZJu7Hep9g1HA",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/fjT4VO79B5U/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC_uzNm58nFDyAUTz_khPA2FkslBA",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 175000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "RDhj8mOWXsg",
-        "url": "https://www.youtube.com/watch?v=RDhj8mOWXsg",
-        "title": "Visual Poems | Claude Monet | Living Inside Monet's \"Impression, Sunrise\" (4K Visual Story)",
-        "description": null,
-        "duration": 174,
-        "channel_id": "UCB5QogHzrLP7VlG_f0rK8hQ",
-        "channel": "Extraordinary Visual Art",
-        "channel_url": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
-        "uploader": "Extraordinary Visual Art",
-        "uploader_id": "@ExtraordinaryVisualArt",
-        "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/RDhj8mOWXsg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBE7Sy1xAD4wDOK50SkXbQmC-vnnQ",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/RDhj8mOWXsg/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCWhYGQw4jeE_aEa2Mb9VABTEnM7Q",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/RDhj8mOWXsg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBTz88vIHCkJeGw8-P6BJvuq1CKbg",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/RDhj8mOWXsg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBSydNVL9zxEa84Ncgv1-1u0rNOBA",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 79000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "AubPDZQPVEY",
-        "url": "https://www.youtube.com/watch?v=AubPDZQPVEY",
-        "title": "Visual Poems | Claude Monet | \"Whispers of the River Epte\": Flowing Light and a Green Healing Dream",
-        "description": null,
-        "duration": 290,
-        "channel_id": "UCB5QogHzrLP7VlG_f0rK8hQ",
-        "channel": "Extraordinary Visual Art",
-        "channel_url": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
-        "uploader": "Extraordinary Visual Art",
-        "uploader_id": "@ExtraordinaryVisualArt",
-        "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/AubPDZQPVEY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBr269Q8aay7xPibfq8RPxihekMrA",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/AubPDZQPVEY/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC4DsD9BxVj8adu17Hl9O670JLlhQ",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/AubPDZQPVEY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDGr253h4dvVEXoQ0tK9p6mQreAMA",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/AubPDZQPVEY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCvqPw3PJt7ne077jXCQYpR9tDD1w",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 68000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "Kv8qx-XkxJc",
-        "url": "https://www.youtube.com/watch?v=Kv8qx-XkxJc",
-        "title": "Visual Poems | Claude Monet | Living Inside \"The Water Lily Pond\" (4K Visual Story)",
-        "description": null,
-        "duration": 183,
-        "channel_id": "UCB5QogHzrLP7VlG_f0rK8hQ",
-        "channel": "Extraordinary Visual Art",
-        "channel_url": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
-        "uploader": "Extraordinary Visual Art",
-        "uploader_id": "@ExtraordinaryVisualArt",
-        "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/Kv8qx-XkxJc/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAcL26cDYroTqkom5PW7sWodHYy8w",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/Kv8qx-XkxJc/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBB_juUvpenQPi6gqkmgOsGuycSRw",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/Kv8qx-XkxJc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCTiN-3TqYAVOqmQhTWn8fTqVo_HQ",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/Kv8qx-XkxJc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAwZR9sLY-UbaAuU8EusN9DO1FXQg",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 60000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "y0NG1iXxuhY",
-        "url": "https://www.youtube.com/watch?v=y0NG1iXxuhY",
-        "title": "Visual Poems | Claude Monet \"The Cliffs at Étretat\": Storm, Reflection & Golden Sunset | 4K",
-        "description": null,
-        "duration": 584,
-        "channel_id": "UCB5QogHzrLP7VlG_f0rK8hQ",
-        "channel": "Extraordinary Visual Art",
-        "channel_url": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
-        "uploader": "Extraordinary Visual Art",
-        "uploader_id": "@ExtraordinaryVisualArt",
-        "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/y0NG1iXxuhY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBZ0-RuZvj0hMhFSIjp-6Eq6agO7Q",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/y0NG1iXxuhY/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAXVuedmjb1yuWXUa3Oo4INeD9gBA",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/y0NG1iXxuhY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACORaXfGLLDn-FBxvowUG9ND97zg",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/y0NG1iXxuhY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAp6VIjo9ooKM8dkI_vshixFeTcQw",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 43000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "ltdyuf1oK6I",
-        "url": "https://www.youtube.com/watch?v=ltdyuf1oK6I",
-        "title": "Visual Poems | Monet's Haystacks: Capturing Fleeting Light & Eternity | 4K Immersive",
-        "description": null,
-        "duration": 247,
-        "channel_id": "UCB5QogHzrLP7VlG_f0rK8hQ",
-        "channel": "Extraordinary Visual Art",
-        "channel_url": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
-        "uploader": "Extraordinary Visual Art",
-        "uploader_id": "@ExtraordinaryVisualArt",
-        "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/ltdyuf1oK6I/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBh89XM7QW314swx6S_8bWzf85VNw",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/ltdyuf1oK6I/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBHpqxugeLZG-NAKTCppoqFCmxFHg",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/ltdyuf1oK6I/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDQORzf9NnnkPMjDZQnjGeIjVGN9A",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/ltdyuf1oK6I/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBc-5cInVMXrvp8amTqyzb1EapsJQ",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 17000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "uLtTuYGEO_E",
-        "url": "https://www.youtube.com/watch?v=uLtTuYGEO_E",
-        "title": "Visual Poems | Vincent van Gogh | The Night Café: A Hallucination of Four Vincents | 4K",
-        "description": null,
-        "duration": 183,
-        "channel_id": "UCB5QogHzrLP7VlG_f0rK8hQ",
-        "channel": "Extraordinary Visual Art",
-        "channel_url": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
-        "uploader": "Extraordinary Visual Art",
-        "uploader_id": "@ExtraordinaryVisualArt",
-        "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/uLtTuYGEO_E/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAsLVrWyFpDq7f9EWEmvLN7k8EpBQ",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/uLtTuYGEO_E/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBdc2_Tw99Ib7d9tZoG8ieMz3tgsw",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/uLtTuYGEO_E/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDDvOIqWk5oeMlynzBBNgMD0nw33g",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/uLtTuYGEO_E/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDPafAUILR7UJTDsTa-NsSMbBguDg",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 11000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "eIBHyqwf_IU",
-        "url": "https://www.youtube.com/watch?v=eIBHyqwf_IU",
-        "title": "Monet’s River of Light: The Poplars on the Epte｜Impressionist Art Film",
-        "description": null,
-        "duration": 268,
-        "channel_id": "UCB5QogHzrLP7VlG_f0rK8hQ",
-        "channel": "Extraordinary Visual Art",
-        "channel_url": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
-        "uploader": "Extraordinary Visual Art",
-        "uploader_id": "@ExtraordinaryVisualArt",
-        "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/eIBHyqwf_IU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA6KSrunlOXpfykJRGpL_fNb-pgdQ",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/eIBHyqwf_IU/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBlFfuQQbhAPdUPwbgtFdFaqOEcYg",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/eIBHyqwf_IU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCCilO42cwJZewsgwU3xMkD8IA_dw",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/eIBHyqwf_IU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAaWeflZyrKar5YstM5QxcKWzNwtQ",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 8700,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      }
-    ],
-    "top_video": {
-      "id": "MWRc13v-ZhA",
-      "title": "Visual Poems | Monet | Journey to the Water Lilies: A Day in the Garden | 4K",
-      "views": 834000,
-      "url": "https://www.youtube.com/watch?v=MWRc13v-ZhA"
-    }
-  },
-  {
     "channel": "Muse Visual Art",
     "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "count": 75,
-    "total_views": 1907500,
-    "avg_views": 25433,
+    "count": 76,
+    "total_views": 2035974,
+    "avg_views": 26789,
     "videos": [
       {
         "_type": "url",
@@ -1495,6 +996,261 @@ const CHANNEL_STATS = [
         "view_count": 158000,
         "live_status": null,
         "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "V0Nz7TQcGF0",
+        "url": "https://www.youtube.com/watch?v=V0Nz7TQcGF0",
+        "title": "Visual Poems | Rose Garden | Living Oil Paintings",
+        "description": "Sonnet: To a Heart of Flame\n\nShall I compare thee to a heart of flame?\nAgainst the blue thy crimson petals gleam;\nThou art more ardent, wilder than the same,\nAnd sway with grace, a lover's waking dream.\n\nThe snail, with silver script and patient stride,\nAnd ladybugs, in scarlet livery,\nUpon thy shaded velvet leaf do glide,\nOr climb thy stalk to sip the dew from thee.\n\nThere where the sudden rain begins to weep,\nThe butterfly, a flame against the gloom,\nA bird beneath thy leaf hath crouched to sleep,\nWhile silken wings drift softly by thy bloom.\n\nSo long as night's dark waters hold thy spark,\nThou burnest like a beacon in the dark.\n\nWhere roses bloom, time begins to slow.Petals unfold like letters never sent, breathing softly in the light.\nThe wind drifts through the garden, carrying traces of fragrance,leaving behind hues of crimson, blush, and fading gold.\nSunlight rests on the edges of petals,while shadows move in quiet whispers.\nThere is no rush here—only a garden growing in silence,and moments gently kept in bloom.\n\nWorkflow:\nImages generated with Midjourney\nAnimation created using Veo 3\nMusic composed with Suno AI\n\n#visualpoem #impressionism  #livingpainting #oilpainting #relaxingmusic  #aestheticstatus",
+        "duration": 212,
+        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
+        "channel": "Muse Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+        "uploader": "Muse Visual Art",
+        "uploader_id": "@Muse_AI_Art",
+        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/3.jpg",
+            "preference": -37,
+            "id": "0"
+          },
+          {
+            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/3.webp",
+            "preference": -36,
+            "id": "1"
+          },
+          {
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/2.jpg",
+            "preference": -35,
+            "id": "2"
+          },
+          {
+            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/2.webp",
+            "preference": -34,
+            "id": "3"
+          },
+          {
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/1.jpg",
+            "preference": -33,
+            "id": "4"
+          },
+          {
+            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/1.webp",
+            "preference": -32,
+            "id": "5"
+          },
+          {
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/mq3.jpg",
+            "preference": -31,
+            "id": "6"
+          },
+          {
+            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/mq3.webp",
+            "preference": -30,
+            "id": "7"
+          },
+          {
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/mq2.jpg",
+            "preference": -29,
+            "id": "8"
+          },
+          {
+            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/mq2.webp",
+            "preference": -28,
+            "id": "9"
+          },
+          {
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/mq1.jpg",
+            "preference": -27,
+            "id": "10"
+          },
+          {
+            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/mq1.webp",
+            "preference": -26,
+            "id": "11"
+          },
+          {
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hq3.jpg",
+            "preference": -25,
+            "id": "12"
+          },
+          {
+            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/hq3.webp",
+            "preference": -24,
+            "id": "13"
+          },
+          {
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hq2.jpg",
+            "preference": -23,
+            "id": "14"
+          },
+          {
+            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/hq2.webp",
+            "preference": -22,
+            "id": "15"
+          },
+          {
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hq1.jpg",
+            "preference": -21,
+            "id": "16"
+          },
+          {
+            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/hq1.webp",
+            "preference": -20,
+            "id": "17"
+          },
+          {
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/sd3.jpg",
+            "preference": -19,
+            "id": "18"
+          },
+          {
+            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/sd3.webp",
+            "preference": -18,
+            "id": "19"
+          },
+          {
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/sd2.jpg",
+            "preference": -17,
+            "id": "20"
+          },
+          {
+            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/sd2.webp",
+            "preference": -16,
+            "id": "21"
+          },
+          {
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/sd1.jpg",
+            "preference": -15,
+            "id": "22"
+          },
+          {
+            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/sd1.webp",
+            "preference": -14,
+            "id": "23"
+          },
+          {
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/default.jpg",
+            "preference": -13,
+            "id": "24"
+          },
+          {
+            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/default.webp",
+            "preference": -12,
+            "id": "25"
+          },
+          {
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/mqdefault.jpg",
+            "height": 180,
+            "width": 320,
+            "preference": -11,
+            "id": "26",
+            "resolution": "320x180"
+          },
+          {
+            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/mqdefault.webp",
+            "preference": -10,
+            "id": "27"
+          },
+          {
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/0.jpg",
+            "preference": -9,
+            "id": "28"
+          },
+          {
+            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/0.webp",
+            "preference": -8,
+            "id": "29"
+          },
+          {
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hqdefault.jpg",
+            "preference": -7,
+            "id": "30"
+          },
+          {
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCInzunP8pSotAYciK-zWbUkYWwEg",
+            "height": 94,
+            "width": 168,
+            "preference": -7,
+            "id": "31",
+            "resolution": "168x94"
+          },
+          {
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDgpL0N7Qh9nPbtnn7puv1jvYfaSw",
+            "height": 110,
+            "width": 196,
+            "preference": -7,
+            "id": "32",
+            "resolution": "196x110"
+          },
+          {
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD1vf8vxDkRr2QKw_UFdN3GrAwfGw",
+            "height": 138,
+            "width": 246,
+            "preference": -7,
+            "id": "33",
+            "resolution": "246x138"
+          },
+          {
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLChB5Andj3xwS0GmHp3Ac6SAqu6xQ",
+            "height": 188,
+            "width": 336,
+            "preference": -7,
+            "id": "34",
+            "resolution": "336x188"
+          },
+          {
+            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/hqdefault.webp",
+            "preference": -6,
+            "id": "35"
+          },
+          {
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/sddefault.jpg",
+            "preference": -5,
+            "id": "36"
+          },
+          {
+            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/sddefault.webp",
+            "preference": -4,
+            "id": "37"
+          },
+          {
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hq720.jpg",
+            "height": 720,
+            "width": 1280,
+            "preference": -3,
+            "id": "38",
+            "resolution": "1280x720"
+          },
+          {
+            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/hq720.webp",
+            "preference": -2,
+            "id": "39"
+          },
+          {
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/maxresdefault.jpg",
+            "height": 1080,
+            "width": 1920,
+            "preference": -1,
+            "id": "40",
+            "resolution": "1920x1080"
+          },
+          {
+            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/maxresdefault.webp",
+            "preference": 0,
+            "id": "41"
+          }
+        ],
+        "timestamp": 1776916800,
+        "release_timestamp": null,
+        "availability": "public",
+        "view_count": 128474,
+        "live_status": "not_live",
+        "channel_is_verified": false,
         "__x_forwarded_for_ip": null
       },
       {
@@ -4718,6 +4474,505 @@ const CHANNEL_STATS = [
     }
   },
   {
+    "channel": "Extraordinary Visual Art",
+    "channel_url": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
+    "count": 11,
+    "total_views": 1947700,
+    "avg_views": 177064,
+    "videos": [
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "MWRc13v-ZhA",
+        "url": "https://www.youtube.com/watch?v=MWRc13v-ZhA",
+        "title": "Visual Poems | Monet | Journey to the Water Lilies: A Day in the Garden | 4K",
+        "description": null,
+        "duration": 485,
+        "channel_id": "UCB5QogHzrLP7VlG_f0rK8hQ",
+        "channel": "Extraordinary Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
+        "uploader": "Extraordinary Visual Art",
+        "uploader_id": "@ExtraordinaryVisualArt",
+        "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/MWRc13v-ZhA/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAOpBVj4CUAIaRY3xFHBmrmTbkE5w",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/MWRc13v-ZhA/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBk4SwZHiSVTc3htGQaSd35xfsfnw",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/MWRc13v-ZhA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAvUjGEW3xQ7gNyyspmi8wi_uTi3g",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/MWRc13v-ZhA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBziqX0m50egMPEwdiggjRC6fPrZw",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 834000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "RX0kyBl-4Bk",
+        "url": "https://www.youtube.com/watch?v=RX0kyBl-4Bk",
+        "title": "Visual Poem | Claude Monet | Living Inside Monet's \"Woman with a Parasol\" | 4K",
+        "description": null,
+        "duration": 167,
+        "channel_id": "UCB5QogHzrLP7VlG_f0rK8hQ",
+        "channel": "Extraordinary Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
+        "uploader": "Extraordinary Visual Art",
+        "uploader_id": "@ExtraordinaryVisualArt",
+        "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/RX0kyBl-4Bk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBGhhWs2Sw0Qg_f9zCm8_hJJDhETA",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/RX0kyBl-4Bk/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDZHsa_XMC8N69GKhZfeTxzBUqEiw",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/RX0kyBl-4Bk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCceL_MWEiqIEdE7VftPxEyuYLSfA",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/RX0kyBl-4Bk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDdtpfbpPA6cS_ph_3QDv50-oWVwQ",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 441000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "x3fwY0Kh7uM",
+        "url": "https://www.youtube.com/watch?v=x3fwY0Kh7uM",
+        "title": "Visual Poems | Claude Monet | A Nostalgic Winter Journey by Steam Train | 4K",
+        "description": null,
+        "duration": 183,
+        "channel_id": "UCB5QogHzrLP7VlG_f0rK8hQ",
+        "channel": "Extraordinary Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
+        "uploader": "Extraordinary Visual Art",
+        "uploader_id": "@ExtraordinaryVisualArt",
+        "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/x3fwY0Kh7uM/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDZGi96deZv_F8ycIX_sKv7CONOoA",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/x3fwY0Kh7uM/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBrmBHOYWmO-bavfy8t_LajkU2LGw",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/x3fwY0Kh7uM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBlya9W0Cs1uPbBlV4Y4Xdjnj5qBw",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/x3fwY0Kh7uM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCLtoOimbP-zQsrZRH0_N-JrMqo6w",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 211000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "fjT4VO79B5U",
+        "url": "https://www.youtube.com/watch?v=fjT4VO79B5U",
+        "title": "Visual Poems | Renoir | Stepping into the World of \"Gathering Flowers\"",
+        "description": null,
+        "duration": 257,
+        "channel_id": "UCB5QogHzrLP7VlG_f0rK8hQ",
+        "channel": "Extraordinary Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
+        "uploader": "Extraordinary Visual Art",
+        "uploader_id": "@ExtraordinaryVisualArt",
+        "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/fjT4VO79B5U/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD84MN7G3uXg5n7tJPD-R83pAU3Iw",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/fjT4VO79B5U/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCWPuWBXcKaGAqXMDNI41rNFI9clQ",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/fjT4VO79B5U/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCbVDVS9W78e8WZ6tZJu7Hep9g1HA",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/fjT4VO79B5U/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC_uzNm58nFDyAUTz_khPA2FkslBA",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 175000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "RDhj8mOWXsg",
+        "url": "https://www.youtube.com/watch?v=RDhj8mOWXsg",
+        "title": "Visual Poems | Claude Monet | Living Inside Monet's \"Impression, Sunrise\" (4K Visual Story)",
+        "description": null,
+        "duration": 174,
+        "channel_id": "UCB5QogHzrLP7VlG_f0rK8hQ",
+        "channel": "Extraordinary Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
+        "uploader": "Extraordinary Visual Art",
+        "uploader_id": "@ExtraordinaryVisualArt",
+        "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/RDhj8mOWXsg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBE7Sy1xAD4wDOK50SkXbQmC-vnnQ",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/RDhj8mOWXsg/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCWhYGQw4jeE_aEa2Mb9VABTEnM7Q",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/RDhj8mOWXsg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBTz88vIHCkJeGw8-P6BJvuq1CKbg",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/RDhj8mOWXsg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBSydNVL9zxEa84Ncgv1-1u0rNOBA",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 79000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "AubPDZQPVEY",
+        "url": "https://www.youtube.com/watch?v=AubPDZQPVEY",
+        "title": "Visual Poems | Claude Monet | \"Whispers of the River Epte\": Flowing Light and a Green Healing Dream",
+        "description": null,
+        "duration": 290,
+        "channel_id": "UCB5QogHzrLP7VlG_f0rK8hQ",
+        "channel": "Extraordinary Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
+        "uploader": "Extraordinary Visual Art",
+        "uploader_id": "@ExtraordinaryVisualArt",
+        "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/AubPDZQPVEY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBr269Q8aay7xPibfq8RPxihekMrA",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/AubPDZQPVEY/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC4DsD9BxVj8adu17Hl9O670JLlhQ",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/AubPDZQPVEY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDGr253h4dvVEXoQ0tK9p6mQreAMA",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/AubPDZQPVEY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCvqPw3PJt7ne077jXCQYpR9tDD1w",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 68000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "Kv8qx-XkxJc",
+        "url": "https://www.youtube.com/watch?v=Kv8qx-XkxJc",
+        "title": "Visual Poems | Claude Monet | Living Inside \"The Water Lily Pond\" (4K Visual Story)",
+        "description": null,
+        "duration": 183,
+        "channel_id": "UCB5QogHzrLP7VlG_f0rK8hQ",
+        "channel": "Extraordinary Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
+        "uploader": "Extraordinary Visual Art",
+        "uploader_id": "@ExtraordinaryVisualArt",
+        "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/Kv8qx-XkxJc/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAcL26cDYroTqkom5PW7sWodHYy8w",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/Kv8qx-XkxJc/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBB_juUvpenQPi6gqkmgOsGuycSRw",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/Kv8qx-XkxJc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCTiN-3TqYAVOqmQhTWn8fTqVo_HQ",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/Kv8qx-XkxJc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAwZR9sLY-UbaAuU8EusN9DO1FXQg",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 60000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "y0NG1iXxuhY",
+        "url": "https://www.youtube.com/watch?v=y0NG1iXxuhY",
+        "title": "Visual Poems | Claude Monet \"The Cliffs at Étretat\": Storm, Reflection & Golden Sunset | 4K",
+        "description": null,
+        "duration": 584,
+        "channel_id": "UCB5QogHzrLP7VlG_f0rK8hQ",
+        "channel": "Extraordinary Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
+        "uploader": "Extraordinary Visual Art",
+        "uploader_id": "@ExtraordinaryVisualArt",
+        "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/y0NG1iXxuhY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBZ0-RuZvj0hMhFSIjp-6Eq6agO7Q",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/y0NG1iXxuhY/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAXVuedmjb1yuWXUa3Oo4INeD9gBA",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/y0NG1iXxuhY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACORaXfGLLDn-FBxvowUG9ND97zg",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/y0NG1iXxuhY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAp6VIjo9ooKM8dkI_vshixFeTcQw",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 43000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "ltdyuf1oK6I",
+        "url": "https://www.youtube.com/watch?v=ltdyuf1oK6I",
+        "title": "Visual Poems | Monet's Haystacks: Capturing Fleeting Light & Eternity | 4K Immersive",
+        "description": null,
+        "duration": 247,
+        "channel_id": "UCB5QogHzrLP7VlG_f0rK8hQ",
+        "channel": "Extraordinary Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
+        "uploader": "Extraordinary Visual Art",
+        "uploader_id": "@ExtraordinaryVisualArt",
+        "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/ltdyuf1oK6I/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBh89XM7QW314swx6S_8bWzf85VNw",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/ltdyuf1oK6I/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBHpqxugeLZG-NAKTCppoqFCmxFHg",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/ltdyuf1oK6I/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDQORzf9NnnkPMjDZQnjGeIjVGN9A",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/ltdyuf1oK6I/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBc-5cInVMXrvp8amTqyzb1EapsJQ",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 17000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "uLtTuYGEO_E",
+        "url": "https://www.youtube.com/watch?v=uLtTuYGEO_E",
+        "title": "Visual Poems | Vincent van Gogh | The Night Café: A Hallucination of Four Vincents | 4K",
+        "description": null,
+        "duration": 183,
+        "channel_id": "UCB5QogHzrLP7VlG_f0rK8hQ",
+        "channel": "Extraordinary Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
+        "uploader": "Extraordinary Visual Art",
+        "uploader_id": "@ExtraordinaryVisualArt",
+        "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/uLtTuYGEO_E/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAsLVrWyFpDq7f9EWEmvLN7k8EpBQ",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/uLtTuYGEO_E/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBdc2_Tw99Ib7d9tZoG8ieMz3tgsw",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/uLtTuYGEO_E/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDDvOIqWk5oeMlynzBBNgMD0nw33g",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/uLtTuYGEO_E/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDPafAUILR7UJTDsTa-NsSMbBguDg",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 11000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "eIBHyqwf_IU",
+        "url": "https://www.youtube.com/watch?v=eIBHyqwf_IU",
+        "title": "Monet’s River of Light: The Poplars on the Epte｜Impressionist Art Film",
+        "description": null,
+        "duration": 268,
+        "channel_id": "UCB5QogHzrLP7VlG_f0rK8hQ",
+        "channel": "Extraordinary Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
+        "uploader": "Extraordinary Visual Art",
+        "uploader_id": "@ExtraordinaryVisualArt",
+        "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/eIBHyqwf_IU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA6KSrunlOXpfykJRGpL_fNb-pgdQ",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/eIBHyqwf_IU/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBlFfuQQbhAPdUPwbgtFdFaqOEcYg",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/eIBHyqwf_IU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCCilO42cwJZewsgwU3xMkD8IA_dw",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/eIBHyqwf_IU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAaWeflZyrKar5YstM5QxcKWzNwtQ",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 8700,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      }
+    ],
+    "top_video": {
+      "id": "MWRc13v-ZhA",
+      "title": "Visual Poems | Monet | Journey to the Water Lilies: A Day in the Garden | 4K",
+      "views": 834000,
+      "url": "https://www.youtube.com/watch?v=MWRc13v-ZhA"
+    }
+  },
+  {
     "channel": "K A R O L A",
     "channel_url": "https://www.youtube.com/channel/UCd67RarDaTRSpcZFW7O5fnQ",
     "count": 9,
@@ -7538,65 +7793,6 @@ const CHANNEL_STATS = [
     }
   },
   {
-    "channel": "8K Superhit Gaane",
-    "channel_url": "https://www.youtube.com/channel/UCIVmU-WUKzcUagCmu9-WxnQ",
-    "count": 1,
-    "total_views": 131000,
-    "avg_views": 131000,
-    "videos": [
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "jFfImjg0AQU",
-        "url": "https://www.youtube.com/watch?v=jFfImjg0AQU",
-        "title": "पुरानी यादों का खूबसूरत अफ़साना - Ek Tha Gul Aur Ek Thi Bulbul | Mohammed Rafi | Shashi Kapoor | 8K",
-        "description": null,
-        "duration": 392,
-        "channel_id": "UCIVmU-WUKzcUagCmu9-WxnQ",
-        "channel": "8K Superhit Gaane",
-        "channel_url": "https://www.youtube.com/channel/UCIVmU-WUKzcUagCmu9-WxnQ",
-        "uploader": "8K Superhit Gaane",
-        "uploader_id": "@8kSuperhitGaane",
-        "uploader_url": "https://www.youtube.com/@8kSuperhitGaane",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/jFfImjg0AQU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAjZYRWBx109QwVLUo7z9RqLaxbjg",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/jFfImjg0AQU/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA8TNrKplDNKKsSnsMBh9-wvo5FLw",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/jFfImjg0AQU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCLb5XPe9B3ms66_koeiumkqJ5U-Q",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/jFfImjg0AQU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBULS-KT4Z9crIQ0n03NX0QOSIe-A",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 131000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      }
-    ],
-    "top_video": {
-      "id": "jFfImjg0AQU",
-      "title": "पुरानी यादों का खूबसूरत अफ़साना - Ek Tha Gul Aur Ek Thi Bulbul | Mohammed Rafi | Shashi Kapoor | 8K",
-      "views": 131000,
-      "url": "https://www.youtube.com/watch?v=jFfImjg0AQU"
-    }
-  },
-  {
     "channel": "Visual Poems in Paintings",
     "channel_url": "https://www.youtube.com/channel/UCf9Lq9Y5ONa66jB31QTZSig",
     "count": 1,
@@ -7815,65 +8011,6 @@ const CHANNEL_STATS = [
       "title": "One Gentle Night in an English Village 🌙 Cozy Countryside Life I Visual Poem",
       "views": 91000,
       "url": "https://www.youtube.com/watch?v=tJjqAH1h8fk"
-    }
-  },
-  {
-    "channel": "Gaane 70s 80s",
-    "channel_url": "https://www.youtube.com/channel/UCz-3NGJmE45CwYs89dNz_cQ",
-    "count": 1,
-    "total_views": 61000,
-    "avg_views": 61000,
-    "videos": [
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "NVwstpSWVnw",
-        "url": "https://www.youtube.com/watch?v=NVwstpSWVnw",
-        "title": "Yeh Shaam Mastani ( ये शाम मस्तानी )  4K Song - Kati Patang | Kishore Kumar | Rajesh Khanna",
-        "description": null,
-        "duration": 260,
-        "channel_id": "UCz-3NGJmE45CwYs89dNz_cQ",
-        "channel": "Gaane 70s 80s",
-        "channel_url": "https://www.youtube.com/channel/UCz-3NGJmE45CwYs89dNz_cQ",
-        "uploader": "Gaane 70s 80s",
-        "uploader_id": "@Gaane70s80s",
-        "uploader_url": "https://www.youtube.com/@Gaane70s80s",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/NVwstpSWVnw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA_fL0eVgMRYVeJUGug1NMKQ-NbKQ",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/NVwstpSWVnw/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDZPpTQNDMdrLhSDmV4HvaxHrpUZw",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/NVwstpSWVnw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCvCnqCxOmisfYaWQR9jaVNRPwAVg",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/NVwstpSWVnw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDesJRfOqyOOWFYDkKK3YDh8a_56Q",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 61000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      }
-    ],
-    "top_video": {
-      "id": "NVwstpSWVnw",
-      "title": "Yeh Shaam Mastani ( ये शाम मस्तानी )  4K Song - Kati Patang | Kishore Kumar | Rajesh Khanna",
-      "views": 61000,
-      "url": "https://www.youtube.com/watch?v=NVwstpSWVnw"
     }
   },
   {
@@ -11454,145 +11591,6 @@ const ALL_VIDEOS = [
     "wallpaperCount": 11
   },
   {
-    "id": "jFfImjg0AQU",
-    "title": "पुरानी यादों का खूबसूरत अफ़साना - Ek Tha Gul Aur Ek Thi Bulbul | Mohammed Rafi | Shashi Kapoor | 8K",
-    "channel": "8K Superhit Gaane",
-    "channelUrl": "https://www.youtube.com/channel/UCIVmU-WUKzcUagCmu9-WxnQ",
-    "views": 131000,
-    "durationSec": 392,
-    "durationFormatted": "06:32",
-    "url": "https://www.youtube.com/watch?v=jFfImjg0AQU",
-    "thumb": "https://i.ytimg.com/vi/jFfImjg0AQU/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/jFfImjg0AQU/maxresdefault.jpg",
-    "width": 3840,
-    "height": 2160,
-    "resolution": "3840x2160",
-    "qualityLabel": "4K UHD",
-    "is4K": true,
-    "wallpapers": [
-      {
-        "id": "jFfImjg0AQU_1",
-        "videoId": "jFfImjg0AQU",
-        "videoTitle": "पुरानी यादों का खूबसूरत अफ़साना - Ek Tha Gul Aur Ek Thi Bulbul | Mohammed Rafi | Shashi Kapoor | 8K",
-        "channel": "8K Superhit Gaane",
-        "snapshotIndex": 1,
-        "timestampSec": 23,
-        "timestampFormatted": "00:23",
-        "path": "wallpapers/jFfImjg0AQU/snapshot_1.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 563.5,
-        "tags": [],
-        "primaryPalette": []
-      },
-      {
-        "id": "jFfImjg0AQU_2",
-        "videoId": "jFfImjg0AQU",
-        "videoTitle": "पुरानी यादों का खूबसूरत अफ़साना - Ek Tha Gul Aur Ek Thi Bulbul | Mohammed Rafi | Shashi Kapoor | 8K",
-        "channel": "8K Superhit Gaane",
-        "snapshotIndex": 2,
-        "timestampSec": 80,
-        "timestampFormatted": "01:20",
-        "path": "wallpapers/jFfImjg0AQU/snapshot_2.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 485.1,
-        "tags": [],
-        "primaryPalette": []
-      },
-      {
-        "id": "jFfImjg0AQU_3",
-        "videoId": "jFfImjg0AQU",
-        "videoTitle": "पुरानी यादों का खूबसूरत अफ़साना - Ek Tha Gul Aur Ek Thi Bulbul | Mohammed Rafi | Shashi Kapoor | 8K",
-        "channel": "8K Superhit Gaane",
-        "snapshotIndex": 3,
-        "timestampSec": 138,
-        "timestampFormatted": "02:18",
-        "path": "wallpapers/jFfImjg0AQU/snapshot_3.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 358.6,
-        "tags": [],
-        "primaryPalette": []
-      },
-      {
-        "id": "jFfImjg0AQU_4",
-        "videoId": "jFfImjg0AQU",
-        "videoTitle": "पुरानी यादों का खूबसूरत अफ़साना - Ek Tha Gul Aur Ek Thi Bulbul | Mohammed Rafi | Shashi Kapoor | 8K",
-        "channel": "8K Superhit Gaane",
-        "snapshotIndex": 4,
-        "timestampSec": 195,
-        "timestampFormatted": "03:15",
-        "path": "wallpapers/jFfImjg0AQU/snapshot_4.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 516.1,
-        "tags": [],
-        "primaryPalette": []
-      },
-      {
-        "id": "jFfImjg0AQU_5",
-        "videoId": "jFfImjg0AQU",
-        "videoTitle": "पुरानी यादों का खूबसूरत अफ़साना - Ek Tha Gul Aur Ek Thi Bulbul | Mohammed Rafi | Shashi Kapoor | 8K",
-        "channel": "8K Superhit Gaane",
-        "snapshotIndex": 5,
-        "timestampSec": 253,
-        "timestampFormatted": "04:13",
-        "path": "wallpapers/jFfImjg0AQU/snapshot_5.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 308.1,
-        "tags": [],
-        "primaryPalette": []
-      },
-      {
-        "id": "jFfImjg0AQU_6",
-        "videoId": "jFfImjg0AQU",
-        "videoTitle": "पुरानी यादों का खूबसूरत अफ़साना - Ek Tha Gul Aur Ek Thi Bulbul | Mohammed Rafi | Shashi Kapoor | 8K",
-        "channel": "8K Superhit Gaane",
-        "snapshotIndex": 6,
-        "timestampSec": 310,
-        "timestampFormatted": "05:10",
-        "path": "wallpapers/jFfImjg0AQU/snapshot_6.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 552.0,
-        "tags": [],
-        "primaryPalette": []
-      },
-      {
-        "id": "jFfImjg0AQU_7",
-        "videoId": "jFfImjg0AQU",
-        "videoTitle": "पुरानी यादों का खूबसूरत अफ़साना - Ek Tha Gul Aur Ek Thi Bulbul | Mohammed Rafi | Shashi Kapoor | 8K",
-        "channel": "8K Superhit Gaane",
-        "snapshotIndex": 7,
-        "timestampSec": 368,
-        "timestampFormatted": "06:08",
-        "path": "wallpapers/jFfImjg0AQU/snapshot_7.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 282.3,
-        "tags": [],
-        "primaryPalette": []
-      }
-    ],
-    "wallpaperCount": 7
-  },
-  {
     "id": "o2If95E4GLI",
     "title": "Edouard-Leon Cortes (1882-1969) ✽ Kinderszenen (Scenes of childhood), Op. 15: VII. Traumerei",
     "channel": "K A R O L A",
@@ -11607,6 +11605,25 @@ const ALL_VIDEOS = [
     "height": 720,
     "resolution": "1280x720",
     "qualityLabel": "720p",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "V0Nz7TQcGF0",
+    "title": "Visual Poems | Rose Garden | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 128474,
+    "durationSec": 212,
+    "durationFormatted": "03:32",
+    "url": "https://www.youtube.com/watch?v=V0Nz7TQcGF0",
+    "thumb": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/V0Nz7TQcGF0/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0
@@ -12669,145 +12686,6 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0
-  },
-  {
-    "id": "NVwstpSWVnw",
-    "title": "Yeh Shaam Mastani ( ये शाम मस्तानी )  4K Song - Kati Patang | Kishore Kumar | Rajesh Khanna",
-    "channel": "Gaane 70s 80s",
-    "channelUrl": "https://www.youtube.com/channel/UCz-3NGJmE45CwYs89dNz_cQ",
-    "views": 61000,
-    "durationSec": 260,
-    "durationFormatted": "04:20",
-    "url": "https://www.youtube.com/watch?v=NVwstpSWVnw",
-    "thumb": "https://i.ytimg.com/vi/NVwstpSWVnw/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/NVwstpSWVnw/maxresdefault.jpg",
-    "width": 3840,
-    "height": 2160,
-    "resolution": "3840x2160",
-    "qualityLabel": "4K UHD",
-    "is4K": true,
-    "wallpapers": [
-      {
-        "id": "NVwstpSWVnw_1",
-        "videoId": "NVwstpSWVnw",
-        "videoTitle": "Yeh Shaam Mastani ( ये शाम मस्तानी )  4K Song - Kati Patang | Kishore Kumar | Rajesh Khanna",
-        "channel": "Gaane 70s 80s",
-        "snapshotIndex": 1,
-        "timestampSec": 15,
-        "timestampFormatted": "00:15",
-        "path": "wallpapers/NVwstpSWVnw/snapshot_1.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 307.9,
-        "tags": [],
-        "primaryPalette": []
-      },
-      {
-        "id": "NVwstpSWVnw_2",
-        "videoId": "NVwstpSWVnw",
-        "videoTitle": "Yeh Shaam Mastani ( ये शाम मस्तानी )  4K Song - Kati Patang | Kishore Kumar | Rajesh Khanna",
-        "channel": "Gaane 70s 80s",
-        "snapshotIndex": 2,
-        "timestampSec": 53,
-        "timestampFormatted": "00:53",
-        "path": "wallpapers/NVwstpSWVnw/snapshot_2.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 323.0,
-        "tags": [],
-        "primaryPalette": []
-      },
-      {
-        "id": "NVwstpSWVnw_3",
-        "videoId": "NVwstpSWVnw",
-        "videoTitle": "Yeh Shaam Mastani ( ये शाम मस्तानी )  4K Song - Kati Patang | Kishore Kumar | Rajesh Khanna",
-        "channel": "Gaane 70s 80s",
-        "snapshotIndex": 3,
-        "timestampSec": 91,
-        "timestampFormatted": "01:31",
-        "path": "wallpapers/NVwstpSWVnw/snapshot_3.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 198.2,
-        "tags": [],
-        "primaryPalette": []
-      },
-      {
-        "id": "NVwstpSWVnw_4",
-        "videoId": "NVwstpSWVnw",
-        "videoTitle": "Yeh Shaam Mastani ( ये शाम मस्तानी )  4K Song - Kati Patang | Kishore Kumar | Rajesh Khanna",
-        "channel": "Gaane 70s 80s",
-        "snapshotIndex": 4,
-        "timestampSec": 129,
-        "timestampFormatted": "02:09",
-        "path": "wallpapers/NVwstpSWVnw/snapshot_4.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 309.5,
-        "tags": [],
-        "primaryPalette": []
-      },
-      {
-        "id": "NVwstpSWVnw_5",
-        "videoId": "NVwstpSWVnw",
-        "videoTitle": "Yeh Shaam Mastani ( ये शाम मस्तानी )  4K Song - Kati Patang | Kishore Kumar | Rajesh Khanna",
-        "channel": "Gaane 70s 80s",
-        "snapshotIndex": 5,
-        "timestampSec": 167,
-        "timestampFormatted": "02:47",
-        "path": "wallpapers/NVwstpSWVnw/snapshot_5.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 267.1,
-        "tags": [],
-        "primaryPalette": []
-      },
-      {
-        "id": "NVwstpSWVnw_6",
-        "videoId": "NVwstpSWVnw",
-        "videoTitle": "Yeh Shaam Mastani ( ये शाम मस्तानी )  4K Song - Kati Patang | Kishore Kumar | Rajesh Khanna",
-        "channel": "Gaane 70s 80s",
-        "snapshotIndex": 6,
-        "timestampSec": 205,
-        "timestampFormatted": "03:25",
-        "path": "wallpapers/NVwstpSWVnw/snapshot_6.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 291.8,
-        "tags": [],
-        "primaryPalette": []
-      },
-      {
-        "id": "NVwstpSWVnw_7",
-        "videoId": "NVwstpSWVnw",
-        "videoTitle": "Yeh Shaam Mastani ( ये शाम मस्तानी )  4K Song - Kati Patang | Kishore Kumar | Rajesh Khanna",
-        "channel": "Gaane 70s 80s",
-        "snapshotIndex": 7,
-        "timestampSec": 244,
-        "timestampFormatted": "04:04",
-        "path": "wallpapers/NVwstpSWVnw/snapshot_7.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 302.3,
-        "tags": [],
-        "primaryPalette": []
-      }
-    ],
-    "wallpaperCount": 7
   },
   {
     "id": "Kv8qx-XkxJc",

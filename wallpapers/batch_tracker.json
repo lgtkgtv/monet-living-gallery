@@ -192,22 +192,6 @@
       "error": "no_snapshots_extracted",
       "retry_count": 2
     },
-    "jFfImjg0AQU": {
-      "id": "jFfImjg0AQU",
-      "title": "पुरानी यादों का खूबसूरत अफ़साना - Ek Tha Gul Aur Ek Thi Bulbul | Mohammed Rafi | Shashi Kapoor | 8K",
-      "channel": "8K Superhit Gaane",
-      "views": 131000,
-      "tier": "Tier 1: 4K UHD",
-      "tier_rank": 1,
-      "is_4k": true,
-      "height": 4320,
-      "duration": 392,
-      "status": "completed",
-      "extracted_count": 7,
-      "last_attempt": "2026-09-13T19:04:49.951988",
-      "error": null,
-      "retry_count": 0
-    },
     "QPZgmv7slPc": {
       "id": "QPZgmv7slPc",
       "title": "Visual Poems | Streams Deep in Birch Valley | Living Oil Paintings",
@@ -2621,22 +2605,6 @@
       "status": "pending",
       "extracted_count": 0,
       "last_attempt": null,
-      "error": null,
-      "retry_count": 0
-    },
-    "NVwstpSWVnw": {
-      "id": "NVwstpSWVnw",
-      "title": "Yeh Shaam Mastani ( ये शाम मस्तानी )  4K Song - Kati Patang | Kishore Kumar | Rajesh Khanna",
-      "channel": "Gaane 70s 80s",
-      "views": 61000,
-      "tier": "Tier 1: 4K UHD",
-      "tier_rank": 1,
-      "is_4k": true,
-      "height": 2160,
-      "duration": 260,
-      "status": "completed",
-      "extracted_count": 7,
-      "last_attempt": "2026-09-13T19:13:32.982218",
       "error": null,
       "retry_count": 0
     },
