@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L'Impressionnisme Vivant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>L'Impressionnisme Vivant · 4K Digital Art Gallery & Video Explorer</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,46 +17,65 @@
     <!-- Hero Header -->
     <header class="hero">
         <div class="hero-container">
-            <span class="hero-subtitle-top">Curated Digital Gallery & 4K Art Archive</span>
+            <div class="hero-header-top">
+                <span class="hero-badge-top">👑 4K UHD Art Gallery & Masterwork Archive</span>
+                <span class="hero-device-indicator" id="heroDeviceBadge">📱 Mobile Optimized View</span>
+            </div>
+            
             <h1 class="hero-title">L'Impressionnisme Vivant</h1>
             <p class="hero-tagline">
-                The Impressionist Video Explorer: An art lover's interactive directory and 4K wallpaper archive celebrating Claude Monet and Impressionist visual arts. Explore 199 curated works arranged by channel identity, aesthetic philosophy, native resolution, and popularity.
+                Step inside the canvases of Claude Monet and the Impressionist masters. Curated in native 4K Ultra-HD with peaceful classical pairings and high-definition wallpaper scene archives.
             </p>
 
-            <div class="hero-stats">
-                <div class="stat-pill">
-                    <span>Curated Works:</span>
-                    <strong id="statTotalVideos">199</strong>
-                </div>
-                <div class="stat-pill">
-                    <span>Cumulative Views:</span>
-                    <strong id="statTotalViews">24.2M</strong>
-                </div>
-                <div class="stat-pill">
-                    <span>Total Gallery Time:</span>
-                    <strong id="statTotalRuntime">78h 15m</strong>
-                </div>
-                <div class="stat-pill">
-                    <span>Source Channels:</span>
-                    <strong id="statChannelCount">41</strong>
-                </div>
-                <div class="stat-pill" style="border-color: rgba(245, 158, 11, 0.5); background: rgba(245, 158, 11, 0.15);">
-                    <span>Native 4K UHD:</span>
-                    <strong id="stat4kCount" style="color: #fbbf24;">45 Works</strong>
-                </div>
-                <div class="stat-pill" style="border-color: rgba(224, 169, 109, 0.4); background: rgba(224, 169, 109, 0.15);">
-                    <span>Wallpapers:</span>
-                    <strong id="statWallpapersCount">46+</strong>
-                </div>
+            <!-- Quick Action Jump Buttons -->
+            <div class="hero-actions">
+                <a href="#explorerSection" class="btn btn-primary" onclick="switchViewMode('videos')">
+                    🎬 Watch 4K Videos (<span id="hero4kBtnCount">45</span>) ↓
+                </a>
+                <a href="#explorerSection" class="btn btn-accent" onclick="switchViewMode('wallpapers')">
+                    🖼️ 4K Wallpapers Archive (<span id="heroWpBtnCount">258+</span>) ↓
+                </a>
+                <a href="#channelsSection" class="btn btn-outline-white">
+                    🏛️ Curators & Channels
+                </a>
+                <a href="https://www.youtube.com/playlist?list=PLeqGkucOU6lA" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white">
+                    YouTube Playlist ↗
+                </a>
             </div>
 
-            <div class="hero-actions">
-                <a href="#explorerSection" class="btn btn-primary" onclick="switchViewMode('videos')">Explore Video Catalog ↓</a>
-                <a href="#explorerSection" class="btn btn-accent" onclick="switchViewMode('wallpapers')">🖼️ 4K Wallpaper Gallery ↓</a>
-                <a href="#channelsSection" class="btn btn-outline-white">Channel Guides 🏛️</a>
-                <a href="https://www.youtube.com/playlist?list=PLeqGkucOU6lA" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white">
-                    Open YouTube Playlist ↗
-                </a>
+            <!-- Compact Collapsible Developer / Gallery Statistics -->
+            <div class="hero-stats-wrapper">
+                <button class="stats-toggle-btn" id="statsToggleBtn" onclick="toggleHeroStats()" aria-expanded="false" title="Toggle detailed gallery catalog statistics">
+                    <span>📊 Curation Statistics: <strong>199 Works · 78h 15m · 41 Channels</strong></span>
+                    <span class="stats-toggle-icon" id="statsToggleIcon">▼</span>
+                </button>
+
+                <div class="hero-stats" id="heroStatsDrawer">
+                    <div class="stat-pill">
+                        <span>Curated Works:</span>
+                        <strong id="statTotalVideos">199</strong>
+                    </div>
+                    <div class="stat-pill" style="border-color: rgba(245, 158, 11, 0.5); background: rgba(245, 158, 11, 0.18);">
+                        <span>👑 Native 4K UHD:</span>
+                        <strong id="stat4kCount" style="color: #fbbf24;">45 Works</strong>
+                    </div>
+                    <div class="stat-pill" style="border-color: rgba(224, 169, 109, 0.4); background: rgba(224, 169, 109, 0.15);">
+                        <span>🖼️ 4K Wallpapers:</span>
+                        <strong id="statWallpapersCount">258+</strong>
+                    </div>
+                    <div class="stat-pill">
+                        <span>Cumulative Views:</span>
+                        <strong id="statTotalViews">24.2M</strong>
+                    </div>
+                    <div class="stat-pill">
+                        <span>Total Gallery Time:</span>
+                        <strong id="statTotalRuntime">78h 15m</strong>
+                    </div>
+                    <div class="stat-pill">
+                        <span>Source Channels:</span>
+                        <strong id="statChannelCount">41</strong>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -64,51 +83,24 @@
     <!-- Main Container -->
     <main class="container">
 
-        <!-- Local Protocol Notice (Shown only if loaded via file://) -->
-        <div id="protocolNotice" class="protocol-banner" style="display: none;">
-            <div class="protocol-content">
-                <span class="protocol-icon">💡</span>
-                <div class="protocol-text">
-                    <strong>Viewing via local file mode (<code>file://</code>):</strong>
-                    YouTube restricts embedded player playback on local file origins (which causes <em>Error 153</em>). You can watch any painting instantly by clicking the red <strong>"Watch on YouTube ↗"</strong> button, or launch the included local server with <code>python3 start_server.py</code> to enable the embedded player.
-                </div>
-            </div>
-        </div>
-
-        <!-- Art Lover Curated Pathways Bar -->
-        <div class="pathways-bar" style="margin-top: 24px;">
-            <button class="pathway-chip active" onclick="selectPathway('all')">✨ All Curated Works (199)</button>
-            <button class="pathway-chip" onclick="selectPathway('4k')">👑 4K Ultra-HD Only (45)</button>
-            <button class="pathway-chip" onclick="selectPathway('archives')">🏛️ Complete Museum Catalogues (LearnFromMasters)</button>
+        <!-- Art Lover Curated Pathways Bar (Defaulted to 4K Ultra-HD) -->
+        <div class="pathways-bar" id="pathwaysBar">
+            <button class="pathway-chip active" onclick="selectPathway('4k')">👑 4K Ultra-HD Only (45)</button>
+            <button class="pathway-chip" onclick="selectPathway('all')">✨ All Curated Works (199)</button>
             <button class="pathway-chip" onclick="selectPathway('immersion')">🎬 Step Inside the Canvas (Living 4K)</button>
             <button class="pathway-chip" onclick="selectPathway('waterlilies')">🌿 Water Lilies & Garden Sanctuaries</button>
-            <button class="pathway-chip" onclick="selectPathway('masters')">🎻 Neglected Masters & Classical Pairings (K A R O L A)</button>
-            <button class="pathway-chip" onclick="selectPathway('romance')">💌 Parisian Romance & Belle Époque (Cupid Studio)</button>
+            <button class="pathway-chip" onclick="selectPathway('archives')">🏛️ Museum Catalogues (LearnFromMasters)</button>
+            <button class="pathway-chip" onclick="selectPathway('masters')">🎻 Neglected Masters (K A R O L A)</button>
+            <button class="pathway-chip" onclick="selectPathway('romance')">💌 Belle Époque Romance (Cupid Studio)</button>
         </div>
 
-        <!-- Section: Channel Guide & Characterizations -->
-        <section id="channelsSection">
-            <div class="section-header">
-                <div>
-                    <h2 class="section-title">🏛️ The Channel Guides & Aesthetic Profiles</h2>
-                    <p class="section-desc">
-                        A critical analysis of the recurring titles, curation strategies, and artistic personalities that define each creator in this collection.
-                    </p>
-                </div>
-            </div>
-
-            <div class="channels-grid" id="channelsGrid">
-                <!-- Injected via app.js -->
-            </div>
-        </section>
-
-        <!-- Section: Gallery Explorer -->
+        <!-- SECTION 1: Impressionist Video Explorer (Displayed First for immediate visual engagement) -->
         <section id="explorerSection">
             <div class="section-header">
                 <div>
                     <h2 class="section-title" id="sectionHeaderTitle">🎨 The Impressionist Video Explorer</h2>
                     <p class="section-desc" id="sectionHeaderDesc">
-                        Browse all 199 paintings and visual poems with native resolution badges, verified YouTube links, and 4K wallpaper scene snapshots.
+                        Currently presenting <strong>4K Ultra-HD Masterworks</strong> first. Experience high-definition brushwork, living canvas motion, and museum-grade reproductions.
                     </p>
                 </div>
 
@@ -118,7 +110,7 @@
                         🎬 Video Catalog (<span id="toggleVideosCount">199</span>)
                     </button>
                     <button id="toggleBtnWallpapers" class="toggle-mode-btn" onclick="switchViewMode('wallpapers')">
-                        🖼️ 4K Wallpaper Gallery (<span id="toggleWallpapersCount">46</span>)
+                        🖼️ 4K Wallpapers (<span id="toggleWallpapersCount">258</span>)
                     </button>
                 </div>
             </div>
@@ -136,23 +128,23 @@
                     </select>
 
                     <select id="resSelect" class="select-dropdown">
-                        <option value="ALL">All Resolutions</option>
-                        <option value="4K">4K UHD Only (45 works)</option>
+                        <option value="4K" selected>👑 4K UHD Only (45 works)</option>
+                        <option value="ALL">All Resolutions (199 works)</option>
                         <option value="FHD">1080p Full HD (145 works)</option>
                         <option value="OTHER">1440p / 720p HD</option>
                     </select>
 
                     <select id="sortSelect" class="select-dropdown">
-                        <option value="views_desc">Popularity: High to Low</option>
+                        <option value="views_desc" selected>Popularity: High to Low</option>
                         <option value="views_asc">Popularity: Low to High</option>
-                        <option value="res_desc">Resolution: Highest (4K first)</option>
+                        <option value="res_desc">Resolution: Highest First</option>
                         <option value="duration_desc">Duration: Longest First</option>
                         <option value="duration_asc">Duration: Shortest First</option>
                         <option value="title_asc">Title: Alphabetical (A-Z)</option>
                     </select>
                 </div>
 
-                <div class="results-info" id="resultsCount">Showing 199 works</div>
+                <div class="results-info" id="resultsCount">Showing 45 4K works</div>
             </div>
 
             <!-- View 1: Video Grid -->
@@ -166,6 +158,25 @@
             </div>
         </section>
 
+        <!-- SECTION 2: Channel Guides & Aesthetic Profiles (Positioned after the video explorer) -->
+        <section id="channelsSection">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">🏛️ The Channel Guides & Aesthetic Profiles</h2>
+                    <p class="section-desc">
+                        A critical scholarly review of the curatorial strategies, recurring titles, and artistic philosophies defining each channel in this collection.
+                    </p>
+                </div>
+                <div class="channel-guides-badge">
+                    <span>6 Featured Curators · 41 Source Channels</span>
+                </div>
+            </div>
+
+            <div class="channels-grid" id="channelsGrid">
+                <!-- Injected via app.js -->
+            </div>
+        </section>
+
     </main>
 
     <!-- Modal 1: Video Player Lightbox -->
@@ -174,7 +185,7 @@
             <div class="modal-header">
                 <div>
                     <div class="modal-title" id="modalTitle">Loading video...</div>
-                    <div class="modal-res-tag" id="modalVideoRes" style="font-size: 0.75rem; color: #fbbf24; font-weight: 700; margin-top: 2px;">4K UHD (3840×2160)</div>
+                    <div class="modal-res-tag" id="modalVideoRes">4K UHD (3840×2160)</div>
                 </div>
                 <div class="modal-header-actions">
                     <a id="modalYtDirectBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn-modal-yt">
@@ -184,11 +195,24 @@
                 </div>
             </div>
             <div class="player-frame-wrapper" id="playerFrameWrapper">
-                <!-- iframe injected dynamically -->
+                <!-- iframe injected dynamically via youtube-nocookie.com -->
             </div>
-            <div class="modal-footer-notice">
-                <span>Encountering YouTube Error 153?</span> YouTube restricts embedded playback in local file environments.
-                <a id="modalYtFallbackLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-fallback-yt">Click here to watch directly on YouTube ↗</a>
+            
+            <!-- Clean, professional modal footer (Error 153 message safely removed) -->
+            <div class="modal-footer-toolbar">
+                <div class="modal-footer-info">
+                    <span id="modalFooterChannel" class="modal-footer-channel">Impressionist Masterwork</span>
+                    <span class="modal-footer-dot">·</span>
+                    <span id="modalFooterQuality" class="modal-footer-res">👑 4K UHD</span>
+                </div>
+                <div class="modal-footer-actions">
+                    <button id="modalViewWallpapersBtn" class="btn-modal-action-wp" onclick="openWallpaperFromModal()" title="View high-resolution wallpaper snapshots from this video">
+                        🖼️ View 4K Wallpapers
+                    </button>
+                    <a id="modalYtDirectBtn2" href="#" target="_blank" rel="noopener noreferrer" class="btn-modal-yt" title="Open directly in YouTube App or Web">
+                        Open in YouTube ↗
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -203,7 +227,7 @@
                 </div>
                 <div class="modal-header-actions">
                     <a id="wpDownloadBtn" href="#" download class="btn-modal-download" target="_blank">
-                        ⬇ Download Full-Res Wallpaper
+                        ⬇ Download Full Wallpaper
                     </a>
                     <a id="wpJumpVideoBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn-modal-yt">
                         Jump to Scene in Video ↗
