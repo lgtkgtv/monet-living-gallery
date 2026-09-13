@@ -29,8 +29,8 @@
 
             <!-- Quick Action Jump Buttons -->
             <div class="hero-actions">
-                <a href="#explorerSection" class="btn btn-primary" onclick="switchViewMode('videos'); selectPathway('1080p');">
-                    🎬 Explore 1080p & 4K (<span id="hero1080pBtnCount">191</span>) ↓
+                <a href="#explorerSection" class="btn btn-primary" onclick="switchViewMode('videos'); selectPathway('1080p_plus');">
+                    🎬 Explore 1080p HD or Better (<span id="hero1080pBtnCount">191</span>) ↓
                 </a>
                 <a href="#explorerSection" class="btn btn-accent" onclick="switchViewMode('wallpapers')">
                     🖼️ 4K Wallpapers Archive (<span id="heroWpBtnCount">366+</span>) ↓
@@ -58,7 +58,7 @@
                     </div>
                     <div class="stat-pill" style="border-color: rgba(224, 169, 109, 0.4); background: rgba(224, 169, 109, 0.15);">
                         <span>🖼️ 4K Wallpapers:</span>
-                        <strong id="statWallpapersCount">322+</strong>
+                        <strong id="statWallpapersCount">366+</strong>
                     </div>
                     <div class="stat-pill">
                         <span>Cumulative Views:</span>
@@ -80,9 +80,10 @@
     <!-- Main Container -->
     <main class="container">
 
-        <!-- Art Lover Curated Pathways Bar (Defaulted to 1080p Full HD & 4K) -->
+        <!-- Art Lover Curated Pathways Bar -->
         <div class="pathways-bar" id="pathwaysBar">
-            <button class="pathway-chip active" onclick="selectPathway('1080p')">💎 1080p Full HD & 4K (191)</button>
+            <button class="pathway-chip active" onclick="selectPathway('1080p_plus')">💎 1080p HD or better (191)</button>
+            <button class="pathway-chip" onclick="selectPathway('1080p_exact')">✨ 1080p Full HD (141)</button>
             <button class="pathway-chip" onclick="selectPathway('4k')">👑 4K Ultra-HD Only (43)</button>
             <button class="pathway-chip" onclick="selectPathway('all')">✨ All Curated Works (198)</button>
             <button class="pathway-chip" onclick="selectPathway('immersion')">🎬 Step Inside the Canvas (Living 4K)</button>
@@ -98,7 +99,7 @@
                 <div>
                     <h2 class="section-title" id="sectionHeaderTitle">🎨 The Impressionist Video Explorer</h2>
                     <p class="section-desc" id="sectionHeaderDesc">
-                        Currently presenting <strong>1080p Full HD & 4K Ultra-HD Masterworks</strong> (191 works). Experience high-definition brushwork, living canvas motion, and museum-grade reproductions.
+                        Currently presenting <strong>1080p HD or better Masterworks</strong> (191 works). Experience high-definition brushwork, living canvas motion, and museum-grade reproductions.
                     </p>
                 </div>
 
@@ -126,7 +127,8 @@
                     </select>
 
                     <select id="resSelect" class="select-dropdown">
-                        <option value="1080P" selected>💎 1080p Full HD or Better (191 works)</option>
+                        <option value="1080P_PLUS" selected>💎 1080p HD or better (191 works)</option>
+                        <option value="1080P_EXACT">✨ 1080p Full HD (141 works)</option>
                         <option value="4K">👑 4K UHD Only (43 works)</option>
                         <option value="ALL">All Resolutions (198 works)</option>
                         <option value="OTHER">Standard HD (720p / 7 works)</option>

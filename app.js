@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initFiltersAndEvents();
     buildAllWallpapersList();
 
-    // Default to 1080p Full HD or better (including 4K) as requested
+    // Default to 1080p HD or better (including 4K) as requested
     const resSelect = document.getElementById('resSelect');
     if (resSelect) {
-        resSelect.value = '1080P';
+        resSelect.value = '1080P_PLUS';
     }
 
     applyFilters();
@@ -365,7 +365,7 @@ function applyFilters() {
 
     const query = searchEl ? searchEl.value.toLowerCase().trim() : '';
     const selectedChannel = channelEl ? channelEl.value : 'ALL';
-    const selectedRes = resEl ? resEl.value : '1080P';
+    const selectedRes = resEl ? resEl.value : '1080P_PLUS';
     const sortBy = sortEl ? sortEl.value : 'views_desc';
 
     if (currentViewMode === 'videos') {
@@ -376,8 +376,10 @@ function applyFilters() {
             const matchesChannel = (selectedChannel === 'ALL') || (v.channel === selectedChannel);
             
             let matchesRes = true;
-            if (selectedRes === '1080P' || selectedRes === 'FHD' || selectedRes === 'FHD_PLUS') {
+            if (selectedRes === '1080P_PLUS' || selectedRes === '1080P_OR_BETTER' || selectedRes === 'FHD_PLUS' || selectedRes === '1080P') {
                 matchesRes = (v.is4K || v.height >= 1080);
+            } else if (selectedRes === '1080P_EXACT' || selectedRes === 'FHD_EXACT' || selectedRes === '1080P_FHD' || selectedRes === 'FHD') {
+                matchesRes = (!v.is4K && v.height === 1080);
             } else if (selectedRes === '4K') {
                 matchesRes = v.is4K;
             } else if (selectedRes === 'OTHER') {
@@ -405,8 +407,10 @@ function applyFilters() {
             const matchesChannel = (selectedChannel === 'ALL') || (v.channel === selectedChannel);
             
             let matchesRes = true;
-            if (selectedRes === '1080P' || selectedRes === 'FHD' || selectedRes === 'FHD_PLUS') {
+            if (selectedRes === '1080P_PLUS' || selectedRes === '1080P_OR_BETTER' || selectedRes === 'FHD_PLUS' || selectedRes === '1080P') {
                 matchesRes = (v.is4K || v.height >= 1080);
+            } else if (selectedRes === '1080P_EXACT' || selectedRes === 'FHD_EXACT' || selectedRes === '1080P_FHD' || selectedRes === 'FHD') {
+                matchesRes = (!v.is4K && v.height === 1080);
             } else if (selectedRes === '4K') {
                 matchesRes = v.is4K;
             } else if (selectedRes === 'OTHER') {
@@ -457,10 +461,14 @@ function selectPathway(pathwayKey) {
     const channelSelect = document.getElementById('channelSelect');
     const resSelect = document.getElementById('resSelect');
 
-    if (pathwayKey === '1080p') {
+    if (pathwayKey === '1080p_plus' || pathwayKey === '1080p') {
         if (searchInput) searchInput.value = '';
         if (channelSelect) channelSelect.value = 'ALL';
-        if (resSelect) resSelect.value = '1080P';
+        if (resSelect) resSelect.value = '1080P_PLUS';
+    } else if (pathwayKey === '1080p_exact' || pathwayKey === '1080p_fhd' || pathwayKey === 'fhd') {
+        if (searchInput) searchInput.value = '';
+        if (channelSelect) channelSelect.value = 'ALL';
+        if (resSelect) resSelect.value = '1080P_EXACT';
     } else if (pathwayKey === '4k') {
         if (searchInput) searchInput.value = '';
         if (channelSelect) channelSelect.value = 'ALL';
@@ -502,7 +510,7 @@ function resetFilters() {
     const channelSelect = document.getElementById('channelSelect');
     if (channelSelect) channelSelect.value = 'ALL';
     const resSelect = document.getElementById('resSelect');
-    if (resSelect) resSelect.value = '1080P';
+    if (resSelect) resSelect.value = '1080P_PLUS';
     const sortSelect = document.getElementById('sortSelect');
     if (sortSelect) sortSelect.value = 'views_desc';
 
