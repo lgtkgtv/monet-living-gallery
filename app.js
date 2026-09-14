@@ -447,14 +447,32 @@ function switchMainTab(tabKey) {
         btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
     });
 
+    currentViewMode = tabKey;
+
     if (tabKey === 'channels') {
-        if (channelsSection && typeof channelsSection.scrollIntoView === 'function') {
-            channelsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (explorerSection) explorerSection.style.display = 'none';
+        if (channelsSection) {
+            channelsSection.style.display = 'block';
+            channelsSection.classList.remove('tab-fade-in');
+            void channelsSection.offsetWidth;
+            channelsSection.classList.add('tab-fade-in');
+        }
+        // Smooth scroll to content top if visitor has scrolled down
+        const container = document.querySelector('main.container');
+        if (container && window.scrollY > container.offsetTop) {
+            window.scrollTo({ top: container.offsetTop - 20, behavior: 'smooth' });
         }
         return;
     }
 
-    currentViewMode = tabKey;
+    // For videos, wallpapers, and favorites: hide channels, show explorer section
+    if (channelsSection) channelsSection.style.display = 'none';
+    if (explorerSection) {
+        explorerSection.style.display = 'block';
+        explorerSection.classList.remove('tab-fade-in');
+        void explorerSection.offsetWidth;
+        explorerSection.classList.add('tab-fade-in');
+    }
 
     if (tabKey === 'videos') {
         if (gridVid) gridVid.style.display = 'grid';
@@ -489,8 +507,9 @@ function switchMainTab(tabKey) {
 
     applyFilters();
 
-    if (explorerSection && typeof explorerSection.scrollIntoView === 'function') {
-        explorerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const container = document.querySelector('main.container');
+    if (container && window.scrollY > container.offsetTop) {
+        window.scrollTo({ top: container.offsetTop - 20, behavior: 'smooth' });
     }
 }
 

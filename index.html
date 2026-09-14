@@ -92,7 +92,9 @@
                 <span class="stat-badge stat-gold">👑 Native 4K UHD: <strong id="stat4kCount">46 Works</strong></span>
                 <span class="stat-badge stat-accent">🖼️ Wallpapers: <strong id="statWallpapersCount">525</strong></span>
                 <span class="stat-badge">👁️ Cumulative Views: <strong id="statTotalViews">46.2M</strong></span>
-                <span class="stat-badge">🏛️ Channels: <strong id="statChannelCount">40</strong></span>
+                <button class="stat-badge stat-clickable" onclick="switchMainTab('channels')" title="Explore Channel Guides &amp; Aesthetic Profiles">
+                    🏛️ Channels: <strong id="statChannelCount">40</strong> ↗
+                </button>
             </div>
         </div>
     </header>
@@ -195,17 +197,23 @@
             </div>
         </section>
 
-        <!-- SECTION 2: Channel Guides & Aesthetic Profiles -->
-        <section id="channelsSection">
-            <div class="section-header">
-                <div>
-                    <h2 class="section-title">🏛️ The Channel Guides & Aesthetic Profiles</h2>
-                    <p class="section-desc">
-                        A critical scholarly review of the curatorial strategies, recurring titles, and artistic philosophies defining each channel in this collection.
-                    </p>
-                </div>
+        <!-- SECTION 2: Channel Guides & Aesthetic Profiles (Toggled as a dedicated Tab view) -->
+        <section id="channelsSection" style="display: none;">
+            <div class="channel-view-nav-strip">
+                <button class="btn-return-explorer" onclick="switchMainTab('videos')" title="Return to the Video Explorer">
+                    ← Return to Video Explorer
+                </button>
                 <div class="channel-guides-badge">
                     <span id="channelGuidesBadge">6 Featured Curators · 39 Source Channels</span>
+                </div>
+            </div>
+
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">🏛️ The Channel Guides &amp; Aesthetic Profiles</h2>
+                    <p class="section-desc">
+                        A critical scholarly review of the curatorial strategies, recurring titles, and artistic philosophies defining each channel in this collection. Click any curator to filter their masterworks.
+                    </p>
                 </div>
             </div>
 

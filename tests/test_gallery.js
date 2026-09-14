@@ -53,8 +53,31 @@ dom.window.switchMainTab('favorites');
 const favEmpty = dom.window.document.getElementById('favoritesEmptyState');
 console.log(`[PASS] Favorites empty state visible: ${favEmpty && favEmpty.style.display !== 'none'}`);
 
+// Verification 3b: Channels Tab Switch (Dedicated tab view replaces long page scroll)
+dom.window.switchMainTab('channels');
+const explorerSection = dom.window.document.getElementById('explorerSection');
+const channelsSection = dom.window.document.getElementById('channelsSection');
+const channelsActive = dom.window.document.getElementById('tabBtnChannels').classList.contains('active');
+if (explorerSection.style.display !== 'none') throw new Error('Expected explorerSection to be hidden when Channels tab is active');
+if (channelsSection.style.display !== 'block') throw new Error('Expected channelsSection to be visible when Channels tab is active');
+if (!channelsActive) throw new Error('Expected tabBtnChannels to have active class');
+console.log('[PASS] Channels tab switch: explorer hidden, channelsSection displayed as dedicated tab');
+
+// Verification 3c: Channel Card "Explore Works" Action
+dom.window.switchMainTab('channels');
+dom.window.filterByChannel('LearnFromMasters');
+if (explorerSection.style.display !== 'block') throw new Error('filterByChannel must return to explorerSection');
+if (channelsSection.style.display !== 'none') throw new Error('filterByChannel must hide channelsSection');
+const chSelect = dom.window.document.getElementById('channelSelect');
+if (chSelect.value !== 'LearnFromMasters') throw new Error('filterByChannel must set channel dropdown');
+console.log('[PASS] Channel card action: filterByChannel switches tab and sets filter correctly');
+
 // Verification 4: Switch Back to Videos
 dom.window.switchMainTab('videos');
+dom.window.document.getElementById('channelSelect').value = 'ALL';
+dom.window.applyFilters();
+if (explorerSection.style.display !== 'block') throw new Error('Expected explorerSection to be visible');
+if (channelsSection.style.display !== 'none') throw new Error('Expected channelsSection to be hidden');
 console.log(`[PASS] Videos grid restored: ${vGrid.style.display !== 'none'}`);
 
 // Verification 5: Video Player Lightbox
