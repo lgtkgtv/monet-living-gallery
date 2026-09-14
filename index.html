@@ -26,6 +26,13 @@
 
     <!-- Hero Header -->
     <header class="hero">
+        <!-- Discreet Top-Left Corner YouTube Playlist Access -->
+        <div class="hero-corner-playlist">
+            <a href="https://www.youtube.com/playlist?list=PLeqGkucOU6lA" target="_blank" rel="noopener noreferrer" class="corner-playlist-link" title="Open complete YouTube playlist: sh_Monet inspired Visual Arts">
+                ▶ YouTube Playlist (199 Videos) ↗
+            </a>
+        </div>
+
         <!-- Discreet Top-Right Corner Mention -->
         <div class="hero-corner-credit">
             <a href="mailto:lgtkgtv@gmail.com?subject=monet-living-gallery%20site%20feedback%3A%20" class="corner-credit-link" id="cornerCuratedBadge" onclick="handleCuratorBadgeClick(event)" title="curated by sachin g &lt;lgtkgtv@gmail.com&gt; — Click to copy email or open contact options">
@@ -54,11 +61,14 @@
 
             <!-- Compact Single-Line Curation Statistics -->
             <div class="hero-stats-strip" id="heroStatsStrip">
-                <span class="stat-badge">🎨 Curated Works: <strong id="statTotalVideos">198</strong></span>
-                <span class="stat-badge stat-gold">👑 Native 4K UHD: <strong id="stat4kCount">43 Works</strong></span>
-                <span class="stat-badge stat-accent">🖼️ Wallpapers: <strong id="statWallpapersCount">366+</strong></span>
-                <span class="stat-badge">👁️ Cumulative Views: <strong id="statTotalViews">24.1M</strong></span>
-                <span class="stat-badge">🏛️ Channels: <strong id="statChannelCount">39</strong></span>
+                <span class="stat-badge">🎨 Curated Works: <strong id="statTotalVideos">199</strong></span>
+                <span class="stat-badge stat-gold">👑 Native 4K UHD: <strong id="stat4kCount">44 Works</strong></span>
+                <span class="stat-badge stat-accent">🖼️ Wallpapers: <strong id="statWallpapersCount">455</strong></span>
+                <span class="stat-badge">👁️ Cumulative Views: <strong id="statTotalViews">24.2M</strong></span>
+                <span class="stat-badge">🏛️ Channels: <strong id="statChannelCount">40</strong></span>
+                <a href="https://www.youtube.com/playlist?list=PLeqGkucOU6lA" target="_blank" rel="noopener noreferrer" class="stat-badge stat-playlist-link" title="Open complete YouTube playlist: sh_Monet inspired Visual Arts">
+                    ▶ YouTube Playlist ↗
+                </a>
             </div>
         </div>
     </header>
@@ -74,6 +84,11 @@
                     <p class="section-desc" id="sectionHeaderDesc">
                         Explore high-definition Impressionist masterworks, living canvas motion, and museum-grade reproductions.
                     </p>
+                </div>
+                <div class="section-header-actions">
+                    <a href="https://www.youtube.com/playlist?list=PLeqGkucOU6lA" target="_blank" rel="noopener noreferrer" class="btn-playlist-header" title="Open complete playlist on YouTube">
+                        ▶ Open YouTube Playlist ↗
+                    </a>
                 </div>
             </div>
 
@@ -194,6 +209,9 @@
                     <span id="modalFooterQuality" class="modal-footer-res">👑 4K UHD</span>
                 </div>
                 <div class="modal-footer-actions">
+                    <a id="modalYtDirectLink" href="https://www.youtube.com/playlist?list=PLeqGkucOU6lA" target="_blank" rel="noopener noreferrer" class="btn-modal-action-yt" title="Watch in YouTube Playlist">
+                        ▶ YouTube Playlist ↗
+                    </a>
                     <button id="modalViewWallpapersBtn" class="btn-modal-action-wp" onclick="openWallpaperFromModal()" title="View high-resolution wallpaper snapshots from this video">
                         🖼️ View Wallpapers (<span id="modalWpCount">0</span>)
                     </button>
@@ -363,7 +381,12 @@
             “Color is my day-long obsession, joy, and torment.”
         </div>
         <p style="margin-bottom: 8px;">— Claude Monet</p>
-        <p>Curated for Art Lovers & Impressionism Admirers · Generated from YouTube Playlist <a href="https://www.youtube.com/playlist?list=PLeqGkucOU6lA" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; color: var(--color-primary);">sh_Monet inspired Visual Arts</a></p>
+        <p class="footer-playlist-row">
+            Curated for Art Lovers &amp; Impressionism Admirers · Generated from 
+            <a href="https://www.youtube.com/playlist?list=PLeqGkucOU6lA" target="_blank" rel="noopener noreferrer" class="footer-playlist-pill" title="Open complete YouTube playlist: sh_Monet inspired Visual Arts">
+                ▶ YouTube Playlist: sh_Monet inspired Visual Arts ↗
+            </a>
+        </p>
     </footer>
 
     <!-- Modal 4: Contact sachin Lightbox -->

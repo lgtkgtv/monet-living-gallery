@@ -75,6 +75,40 @@ a {
   pointer-events: none;
 }
 
+/* Discreet Top-Left Corner YouTube Playlist Access */
+.hero-corner-playlist {
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  z-index: 10;
+}
+
+.corner-playlist-link {
+  font-size: 0.76rem;
+  color: #fbbf24;
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(8px);
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-weight: 600;
+}
+
+.corner-playlist-link:hover {
+  color: #ffffff;
+  background: rgba(220, 38, 38, 0.75);
+  border-color: #ef4444;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 12px rgba(220, 38, 38, 0.35);
+  text-decoration: none;
+}
+
 /* Discreet Top-Right Corner Mention */
 .hero-corner-credit {
   position: absolute;
@@ -226,6 +260,25 @@ a {
   color: #fde68a;
 }
 
+.stat-badge.stat-playlist-link {
+  border-color: rgba(239, 68, 68, 0.5);
+  background: rgba(220, 38, 38, 0.22);
+  color: #fecaca;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.stat-badge.stat-playlist-link:hover {
+  background: rgba(220, 38, 38, 0.45);
+  border-color: #ef4444;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 10px rgba(220, 38, 38, 0.35);
+  text-decoration: none;
+}
+
 /* Generic Button Base (used for Reset Filters, etc.) */
 .btn {
   display: inline-flex;
@@ -296,6 +349,29 @@ a {
   border-radius: var(--radius-full);
   font-size: 0.82rem;
   font-weight: 600;
+}
+
+.btn-playlist-header {
+  background: #dc2626;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.25);
+  transition: var(--transition);
+}
+
+.btn-playlist-header:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+  color: #ffffff;
+  text-decoration: none;
 }
 
 /* --- View Mode Toggle Control --- */
@@ -1267,6 +1343,29 @@ a {
   transform: translateY(-1px);
 }
 
+.btn-modal-action-yt {
+  background: #dc2626;
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 700;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-modal-action-yt:hover {
+  background: #b91c1c;
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
 /* --- Wallpaper Gallery Lightbox Modal --- */
 .wallpaper-modal-content {
   background: #111827;
@@ -1455,6 +1554,38 @@ a {
   margin-bottom: 12px;
 }
 
+.footer-playlist-row {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.footer-playlist-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(220, 38, 38, 0.12);
+  color: #b91c1c;
+  border: 1px solid rgba(220, 38, 38, 0.35);
+  padding: 5px 16px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-playlist-pill:hover {
+  background: #dc2626;
+  color: #ffffff;
+  border-color: #dc2626;
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 12px rgba(220, 38, 38, 0.3);
+}
+
 /* ==========================================================================
    MOBILE & RESPONSIVE DEVICE OPTIMIZATIONS
    ========================================================================== */
@@ -1462,6 +1593,16 @@ a {
 @media (max-width: 768px) {
   .hero {
     padding: 36px 16px 28px;
+  }
+
+  .hero-corner-playlist {
+    top: 8px;
+    left: 12px;
+  }
+
+  .corner-playlist-link {
+    font-size: 0.68rem;
+    padding: 2px 7px;
   }
 
   .hero-corner-credit {
@@ -1676,9 +1817,11 @@ a {
     justify-content: center;
   }
 
-  .modal-footer-actions .btn-modal-action-wp {
+  .modal-footer-actions .btn-modal-action-wp,
+  .modal-footer-actions .btn-modal-action-yt {
     flex: 1;
     justify-content: center;
+    text-align: center;
   }
 
   .wallpaper-modal-header {

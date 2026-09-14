@@ -297,11 +297,14 @@ function createVideoCard(v) {
 
             <div class="video-actions">
                 <button class="btn-card-play" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}')" title="Watch in embedded gallery player">
-                    ▶ Play Video
+                    ▶ Play
                 </button>
-                <button class="btn-card-wallpaper" onclick="openWallpaperModal('${v.id}')" title="View 4K wallpaper scene snapshots for this video">
+                <button class="btn-card-wallpaper" onclick="openWallpaperModal('${v.id}')" title="View wallpaper scene snapshots for this video">
                     🖼️ Wallpapers ${v.wallpaperCount > 0 ? `<span class="badge-count">${v.wallpaperCount}</span>` : ''}
                 </button>
+                <a class="btn-card-yt" href="https://www.youtube.com/watch?v=${v.id}&list=PLeqGkucOU6lA" target="_blank" rel="noopener noreferrer" title="Watch in YouTube Playlist">
+                    📺 ↗
+                </a>
             </div>
         </div>
     `;
@@ -876,6 +879,11 @@ function openVideoModal(videoId, title, startSec = 0) {
     const wpCount = video ? (video.wallpaperCount || (video.wallpapers ? video.wallpapers.length : 0)) : 0;
     if (modalWpCount) modalWpCount.textContent = wpCount;
     if (wpBtn) wpBtn.style.display = wpCount > 0 ? 'inline-flex' : 'none';
+
+    const ytDirectLink = document.getElementById('modalYtDirectLink');
+    if (ytDirectLink) {
+        ytDirectLink.href = `https://www.youtube.com/watch?v=${videoId}&list=PLeqGkucOU6lA`;
+    }
 
     loadPlayerIframe(videoId, title, startSec);
 
