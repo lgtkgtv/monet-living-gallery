@@ -49,23 +49,19 @@
 
     <!-- Hero Header -->
     <header class="hero">
-        <!-- Top Toolbar: Ambient Music Player, Theme Toggle, and Curator Credit -->
+        <!-- Discrete Top-Right Utility Strip (Ambient Music & Theme Toggle) -->
         <div class="hero-top-toolbar">
             <div class="global-audio-pill" id="globalAudioPill" title="Ambient Classical Music (Debussy, Satie &amp; Ravel)">
-                <button id="globalAudioPlayBtn" class="global-audio-play-btn" onclick="toggleGlobalAudio()" aria-label="Toggle Ambient Music" title="Play / Pause Ambient Classical Music">
+                <button id="globalAudioPlayBtn" class="global-audio-play-btn" onclick="toggleGlobalAudio()" aria-label="Play or pause ambient classical music" title="Play / Pause Ambient Classical Music">
                     <span id="globalAudioPlayIcon">🎵</span> <span class="global-audio-label">Ambient Music</span>
                 </button>
                 <span id="globalAudioTrackTitle" class="global-audio-track" title="Current track">Debussy: Clair de Lune</span>
-                <button class="global-audio-next-btn" onclick="nextAmbientTrack(true)" aria-label="Next Classical Track" title="Next Track">⏭️</button>
+                <button class="global-audio-next-btn" onclick="nextAmbientTrack(true)" aria-label="Next ambient classical track" title="Next Track (N)">⏭️</button>
             </div>
 
-            <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle Dark Gallery / Light Mode" title="Toggle Dark Gallery Theme">
-                <span id="themeToggleIcon">🌙</span> <span id="themeToggleLabel">Dark Gallery</span>
+            <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle dark gallery and light parchment themes" title="Toggle Theme">
+                <span id="themeToggleIcon">☀️</span> <span id="themeToggleLabel">Light Mode</span>
             </button>
-
-            <a href="mailto:lgtkgtv@gmail.com?subject=monet-living-gallery%20site%20feedback%3A%20" class="corner-credit-link" id="cornerCuratedBadge" onclick="handleCuratorBadgeClick(event)" title="curated by sachin g &lt;lgtkgtv@gmail.com&gt; — Click to copy email or open contact options">
-                curated by sachin g
-            </a>
         </div>
 
         <div class="hero-container">
@@ -120,7 +116,7 @@
                 <div class="search-box">
                     <span class="search-icon">🔍</span>
                     <input type="text" id="searchInput" class="search-input" placeholder="Search artists (Monet, Renoir, Sisley, Boudin) or themes (Winter, Venice, Paris)..." />
-                    <button id="searchClearBtn" class="search-clear-btn" onclick="clearSearch()" title="Clear search query" style="display: none;">✕</button>
+                    <button id="searchClearBtn" class="search-clear-btn" onclick="clearSearch()" aria-label="Clear search input" title="Clear search query" style="display: none;">✕</button>
                 </div>
 
                 <!-- Guided Suggestions: Artists & Themes Quick-Filter Strip -->
@@ -221,67 +217,71 @@
     </main>
 
     <!-- Modal 1: Video Player Lightbox -->
-    <div id="modalOverlay" class="modal-overlay">
+    <div id="modalOverlay" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Video Player Lightbox">
         <div class="modal-content">
-            <div class="modal-header">
-                <div>
-                    <div class="modal-title" id="modalTitle">Loading video...</div>
+            <div class="modal-header compact-modal-header">
+                <div class="modal-header-tag-group">
                     <div class="modal-res-tag" id="modalVideoRes">4K UHD (3840×2160)</div>
                 </div>
                 <div class="modal-header-actions">
-                    <button class="btn-close-modal" onclick="closeVideoModal()" aria-label="Close Player">✕</button>
+                    <button class="btn-close-modal" onclick="closeVideoModal()" aria-label="Close video player dialog" title="Close Player (Esc)">✕</button>
                 </div>
             </div>
             <div class="player-frame-wrapper" id="playerFrameWrapper">
                 <!-- iframe injected dynamically via youtube-nocookie.com or privacy streaming -->
             </div>
             
-            <!-- Clean, professional modal footer -->
+            <!-- Clean, professional modal footer with clear hierarchy and attribution -->
             <div class="modal-footer-toolbar">
                 <div class="modal-footer-info">
-                    <span id="modalFooterChannel" class="modal-footer-channel">Impressionist Masterwork</span>
+                    <span class="static-pill" id="modalFooterChannel">Impressionist Masterwork</span>
                     <span class="modal-footer-dot">·</span>
-                    <span id="modalFooterQuality" class="modal-footer-res">👑 4K UHD</span>
+                    <span class="static-pill static-pill-res" id="modalFooterQuality">👑 4K UHD</span>
+                    <a id="modalFooterChannelLink" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="channel-attribution-link" title="Visit originating channel on YouTube">
+                        Channel Source ↗
+                    </a>
                 </div>
                 <div class="modal-footer-actions">
-                    <button id="modalFavBtn" class="btn-modal-action-fav" onclick="toggleFavoriteFromModal()" title="Save to My Collection">
+                    <button id="modalFavBtn" class="btn-modal-action-fav" onclick="toggleFavoriteFromModal()" aria-label="Save to personal collection" title="Save to My Collection">
                         🤍 Save to Collection
                     </button>
-                    <a id="modalYtDirectLink" href="https://www.youtube.com/playlist?list=PLeqGkucOU6lA" target="_blank" rel="noopener noreferrer" class="btn-modal-action-secondary" title="Watch this video on YouTube">
+                    <button id="modalViewWallpapersBtn" class="btn-modal-action-wp" onclick="openWallpaperFromModal()" aria-label="View wallpaper scene snapshots" title="View high-resolution wallpaper snapshots from this video">
+                        🖼️ View Wallpapers <span class="btn-count-pill" id="modalWpCount">0</span>
+                    </button>
+                    <a id="modalYtDirectLink" href="https://www.youtube.com/playlist?list=PLeqGkucOU6lA" target="_blank" rel="noopener noreferrer" class="btn-modal-action-secondary" aria-label="Watch video on YouTube" title="Watch this video on YouTube">
                         Watch on YouTube ↗
                     </a>
-                    <button id="modalViewWallpapersBtn" class="btn-modal-action-wp" onclick="openWallpaperFromModal()" title="View high-resolution wallpaper snapshots from this video">
-                        🖼️ View Wallpapers (<span id="modalWpCount">0</span>)
-                    </button>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Modal 2: Wallpaper Gallery Lightbox -->
-    <div id="wallpaperModalOverlay" class="modal-overlay">
+    <div id="wallpaperModalOverlay" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Wallpaper Preview">
         <div class="wallpaper-modal-content">
             <div class="wallpaper-modal-header">
-                <div>
-                    <h3 id="wpModalTitle" class="wp-modal-title">Wallpaper Preview</h3>
-                    <div id="wpModalSubtitle" class="wp-modal-subtitle">Claude Monet · 4K UHD</div>
+                <div class="wp-header-title-block">
+                    <h3 id="wpModalTitle" class="wp-modal-title" title="Wallpaper Title">Wallpaper Preview</h3>
+                    <div id="wpModalSubtitle" class="wp-modal-subtitle">Claude Monet</div>
                 </div>
-                <div class="modal-header-actions wp-header-actions">
-                    <div class="wp-download-btn-group">
-                        <button id="wpDownloadCurrentBtn" class="btn-modal-download" onclick="downloadCurrentWallpaper()" title="Download the currently viewed high-resolution wallpaper">
-                            ⬇ Current (<span id="wpCurrentSceneNum">Scene 1</span>)
-                        </button>
-                        <button id="wpDownloadAllBtn" class="btn-modal-download-all" onclick="downloadAllWallpapers()" title="Download all wallpapers for this title as a ZIP package">
-                            📦 Download All (<span id="wpAllCount">0</span>)
-                        </button>
-                    </div>
-                    <button id="wpJumpVideoBtn" class="btn-modal-jump-scene" onclick="jumpToSceneInPlayer()" title="Watch this scene right in the in-page player">
-                        🎬 Jump to Scene (<span id="wpJumpTimestamp">00:00</span>)
+                <button class="btn-close-modal" onclick="closeWallpaperModal()" aria-label="Close wallpaper gallery dialog" title="Close Gallery (Esc)">✕</button>
+            </div>
+
+            <!-- Dedicated full-width action toolbar below title row (P0 #1, P3 #4, P4 #6) -->
+            <div class="wp-modal-toolbar">
+                <button id="wpModalSlideshowBtn" class="btn-modal-slideshow-primary" onclick="startSlideshowFromCurrentModal()" aria-label="Play fullscreen wallpaper slideshow" title="Play these snapshots as an immersive fullscreen slideshow">
+                    ▶️ Fullscreen Slideshow
+                </button>
+                <div class="wp-toolbar-secondary-actions">
+                    <button id="wpDownloadCurrentBtn" class="btn-modal-action-secondary" onclick="downloadCurrentWallpaper()" aria-label="Download current scene wallpaper" title="Download the currently viewed high-resolution wallpaper">
+                        ⬇ Current Scene <span class="btn-count-pill" id="wpCurrentSceneNum">1</span>
                     </button>
-                    <button id="wpModalSlideshowBtn" class="btn-modal-slideshow" onclick="startSlideshowFromCurrentModal()" title="Play these snapshots as an immersive fullscreen slideshow">
-                        📽️ Slideshow
+                    <button id="wpDownloadAllBtn" class="btn-modal-action-secondary" onclick="downloadAllWallpapers()" aria-label="Download all wallpapers as ZIP package" title="Download all wallpapers for this title as a ZIP package">
+                        📦 Download All <span class="btn-count-pill" id="wpAllCount">0</span>
                     </button>
-                    <button class="btn-close-modal" onclick="closeWallpaperModal()" aria-label="Close Wallpaper Gallery">✕</button>
+                    <button id="wpJumpVideoBtn" class="btn-modal-action-secondary" onclick="jumpToSceneInPlayer()" aria-label="Jump to scene in video player" title="Watch this scene right in the in-page player">
+                        🎬 Jump to Video <span class="btn-count-pill" id="wpJumpTimestamp">00:00</span>
+                    </button>
                 </div>
             </div>
 
@@ -326,14 +326,14 @@
                 </div>
 
                 <div class="slideshow-audio-control" title="Ambient Classical Music (Debussy & Satie)">
-                    <button class="slideshow-btn-icon" id="slideshowAudioBtn" onclick="toggleSlideshowAudio()" title="Play/Mute Ambient Classical Music (M)">
+                    <button class="slideshow-btn-icon" id="slideshowAudioBtn" onclick="toggleSlideshowAudio()" aria-label="Play or mute ambient classical music" title="Play/Mute Ambient Classical Music (M)">
                         🎵
                     </button>
                     <span class="slideshow-audio-title" id="slideshowAudioTitle">Debussy: Clair de Lune</span>
-                    <button class="slideshow-btn-icon-subtle" onclick="nextAmbientTrack()" title="Next Track (N)">⏭️</button>
+                    <button class="slideshow-btn-icon-subtle" onclick="nextAmbientTrack()" aria-label="Next ambient classical track" title="Next Track (N)">⏭️</button>
                 </div>
 
-                <button class="slideshow-btn-icon" id="slideshowFitBtn" onclick="toggleSlideshowFit()" title="Toggle Fit / Fill Display Mode (C)">
+                <button class="slideshow-btn-icon" id="slideshowFitBtn" onclick="toggleSlideshowFit()" aria-label="Toggle fit or fill screen display mode" title="Toggle Fit / Fill Display Mode (C)">
                     🖼️
                 </button>
 
@@ -347,15 +347,15 @@
                     </select>
                 </div>
 
-                <button class="slideshow-btn-icon" onclick="downloadCurrentSlideshowImage()" title="Download this wallpaper snapshot">
+                <button class="slideshow-btn-icon" onclick="downloadCurrentSlideshowImage()" aria-label="Download current wallpaper snapshot" title="Download this wallpaper snapshot">
                     ⬇️
                 </button>
 
-                <button class="slideshow-btn-icon" id="slideshowFullscreenBtn" onclick="toggleNativeFullscreen()" title="Toggle Browser Fullscreen (F)">
+                <button class="slideshow-btn-icon" id="slideshowFullscreenBtn" onclick="toggleNativeFullscreen()" aria-label="Toggle browser fullscreen mode" title="Toggle Browser Fullscreen (F)">
                     ⛶
                 </button>
 
-                <button class="slideshow-btn-icon slideshow-close-btn" onclick="closeSlideshow()" title="Exit Slideshow (Esc)">
+                <button class="slideshow-btn-icon slideshow-close-btn" onclick="closeSlideshow()" aria-label="Exit fullscreen slideshow" title="Exit Slideshow (Esc)">
                     ✕
                 </button>
             </div>
@@ -405,7 +405,7 @@
                     I would love to hear from you! Reach out to <strong>sachin</strong> directly with suggestions, new artist requests, or questions.
                 </p>
                 <div class="footer-contact-actions">
-                    <button class="btn-contact-primary" onclick="openContactModal()">
+                    <button class="btn-contact-primary" onclick="openContactModal(this)">
                         ✉️ Contact sachin
                     </button>
                     <a class="btn-contact-secondary" href="mailto:lgtkgtv@gmail.com?subject=monet-living-gallery%20site%20feedback%3A%20" title="Send direct email">
@@ -420,7 +420,7 @@
         </div>
         <p style="margin-bottom: 8px;">— Claude Monet</p>
         <p class="footer-source-note">
-            Curated for Art Lovers &amp; Impressionism Admirers · Catalog source: 
+            Curated by sachin g for Art Lovers &amp; Impressionism Admirers · Catalog source: 
             <a href="https://www.youtube.com/playlist?list=PLeqGkucOU6lA" target="_blank" rel="noopener noreferrer" class="footer-source-link" title="Original YouTube playlist: sh_Monet inspired Visual Arts">
                 YouTube Playlist (sh_Monet inspired Visual Arts) ↗
             </a>
@@ -428,7 +428,7 @@
     </footer>
 
     <!-- Modal 4: Contact sachin Lightbox -->
-    <div id="contactModalOverlay" class="modal-overlay" style="display: none;">
+    <div id="contactModalOverlay" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Contact Curator Dialog" style="display: none;">
         <div class="contact-modal-content">
             <div class="modal-header">
                 <div>
@@ -448,7 +448,7 @@
                         <span class="contact-field-label">Recipient:</span>
                         <div class="contact-field-value-group">
                             <code class="contact-field-code" id="contactEmailVal">lgtkgtv@gmail.com</code>
-                            <button class="btn-copy-mini" onclick="copyContactText('lgtkgtv@gmail.com', this)" title="Copy email address">
+                            <button class="btn-copy-mini" onclick="copyContactText('lgtkgtv@gmail.com', this)" aria-label="Copy recipient email address" title="Copy email address">
                                 📋 Copy
                             </button>
                         </div>
@@ -457,7 +457,7 @@
                         <span class="contact-field-label">Subject:</span>
                         <div class="contact-field-value-group">
                             <code class="contact-field-code" id="contactSubjectVal">monet-living-gallery site feedback: </code>
-                            <button class="btn-copy-mini" onclick="copyContactText('monet-living-gallery site feedback: ', this)" title="Copy subject line">
+                            <button class="btn-copy-mini" onclick="copyContactText('monet-living-gallery site feedback: ', this)" aria-label="Copy email subject line" title="Copy subject line">
                                 📋 Copy
                             </button>
                         </div>

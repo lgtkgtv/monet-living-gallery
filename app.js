@@ -7,8 +7,8 @@ const THEME_STORAGE_KEY = 'monet_gallery_theme';
 
 function initTheme() {
     const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+    // Default to dark museum gallery mode unless visitor explicitly picked light
+    const initialTheme = savedTheme || 'dark';
     setTheme(initialTheme);
 }
 
@@ -41,8 +41,7 @@ function updateThemeUI(theme) {
 // Immediate theme execution to prevent flash of light theme
 try {
     const _savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
-    const _prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (_savedTheme === 'dark' || (!_savedTheme && _prefersDark)) {
+    if (_savedTheme !== 'light') {
         document.documentElement.setAttribute('data-theme', 'dark');
     }
 } catch (e) {}
@@ -484,17 +483,18 @@ function createVideoCard(v) {
         thumbSrc = v.wallpapers[0].path;
     }
     const isFav = isFavoriteVideo(v.id);
+    const videoDesc = `${escapeQuotes(v.title)} - ${v.qualityLabel} by ${escapeQuotes(v.channel)}`;
     
     card.innerHTML = `
         <div class="thumb-container">
-            <img class="thumb-img" src="${thumbSrc}" alt="${escapeQuotes(v.title)}" loading="lazy" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}')" />
+            <img class="thumb-img" src="${thumbSrc}" alt="${videoDesc}" loading="lazy" decoding="async" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}', 0, this)" />
             <span class="thumb-badge-views">${formatViews(v.views)}</span>
             <span class="thumb-badge-res ${resBadgeClass}">${v.qualityLabel}</span>
             <span class="thumb-badge-duration">${v.durationFormatted}</span>
-            <button class="thumb-badge-fav ${isFav ? 'active' : ''}" data-fav-video="${v.id}" onclick="toggleFavoriteVideo('${v.id}', event)" title="${isFav ? 'Remove from My Collection' : 'Save to My Collection'}" aria-label="Toggle Favorite">
+            <button class="thumb-badge-fav ${isFav ? 'active' : ''}" data-fav-video="${v.id}" onclick="toggleFavoriteVideo('${v.id}', event)" title="${isFav ? 'Remove from My Collection' : 'Save to My Collection'}" aria-label="${isFav ? 'Remove from My Collection' : 'Save to My Collection'}">
                 ${isFav ? '❤️' : '🤍'}
             </button>
-            <div class="play-overlay" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}')">
+            <div class="play-overlay" role="button" aria-label="Play video: ${escapeQuotes(v.title)}" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}', 0, this)">
                 <div class="play-circle">▶</div>
             </div>
         </div>
@@ -502,7 +502,7 @@ function createVideoCard(v) {
             <div class="video-channel" onclick="filterByChannel('${escapeQuotes(v.channel)}')" style="cursor: pointer;" title="Click to view all from this channel">
                 ${v.channel}
             </div>
-            <h4 class="video-title" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}')" style="cursor: pointer;" title="${escapeQuotes(v.title)}">
+            <h4 class="video-title" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}', 0, this)" style="cursor: pointer;" title="${escapeQuotes(v.title)}">
                 ${v.title}
             </h4>
             
@@ -512,10 +512,10 @@ function createVideoCard(v) {
             </div>
 
             <div class="video-actions">
-                <button class="btn-card-play" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}')" title="Watch in embedded gallery player">
+                <button class="btn-card-play" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}', 0, this)" aria-label="Play video ${escapeQuotes(v.title)}" title="Watch in embedded gallery player">
                     ▶ Play Video
                 </button>
-                <button class="btn-card-wallpaper" onclick="openWallpaperModal('${v.id}')" title="View wallpaper scene snapshots for this video">
+                <button class="btn-card-wallpaper" onclick="openWallpaperModal('${v.id}', 0, this)" aria-label="View wallpapers for ${escapeQuotes(v.title)}" title="View wallpaper scene snapshots for this video">
                     🖼️ Wallpapers ${v.wallpaperCount > 0 ? `<span class="badge-count">${v.wallpaperCount}</span>` : ''}
                 </button>
             </div>
@@ -527,10 +527,12 @@ function createVideoCard(v) {
 function createWallpaperCard(wp) {
     const card = document.createElement('div');
     card.className = 'wallpaper-card';
-    card.onclick = () => openWallpaperModal(wp.videoId, wp.snapshotIndex - 1);
+    card.onclick = () => openWallpaperModal(wp.videoId, wp.snapshotIndex - 1, card);
+    const wpAlt = `${escapeQuotes(wp.videoTitle)} - High-resolution Impressionist scene snapshot at ${wp.timestampFormatted} (${wp.width}×${wp.height})`;
+
     card.innerHTML = `
         <div class="wp-thumb-wrapper">
-            <img class="wp-thumb-img" src="${wp.path}" alt="${escapeQuotes(wp.videoTitle)}" loading="lazy" />
+            <img class="wp-thumb-img" src="${wp.path}" alt="${wpAlt}" loading="lazy" decoding="async" />
             <span class="wp-pill-res">${wp.qualityLabel || '4K UHD'} (${wp.width}×${wp.height})</span>
             <span class="wp-pill-time">Scene at ${wp.timestampFormatted}</span>
         </div>
@@ -538,7 +540,7 @@ function createWallpaperCard(wp) {
             <span class="wp-card-channel">${wp.channel}</span>
             <h4 class="wp-card-title">${wp.videoTitle}</h4>
             <div class="wp-card-actions">
-                <button class="btn-wp-view">View & Download (${wp.width}×${wp.height})</button>
+                <button class="btn-wp-view" aria-label="View and download wallpaper for ${escapeQuotes(wp.videoTitle)}">View & Download (${wp.width}×${wp.height})</button>
             </div>
         </div>
     `;
@@ -1082,11 +1084,80 @@ function initFiltersAndEvents() {
 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
-            closeVideoModal();
-            closeWallpaperModal();
-            closeContactModal();
+            const activeModal = getActiveOpenModal();
+            if (activeModal) {
+                if (activeModal.id === 'modalOverlay') closeVideoModal();
+                else if (activeModal.id === 'wallpaperModalOverlay') closeWallpaperModal();
+                else if (activeModal.id === 'contactModalOverlay') closeContactModal();
+                else if (activeModal.id === 'slideshowOverlay') closeSlideshow();
+            }
+        } else if (e.key === 'Tab') {
+            const activeModal = getActiveOpenModal();
+            if (activeModal) {
+                trapModalFocus(activeModal, e);
+            }
         }
     });
+}
+
+// ==========================================================================
+// ACCESSIBILITY & FOCUS MANAGEMENT (P5 #8)
+// ==========================================================================
+let lastFocusedElement = null;
+
+function restoreFocus() {
+    if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+        try {
+            lastFocusedElement.focus();
+        } catch (e) {}
+        lastFocusedElement = null;
+    }
+}
+
+function getFocusableElements(container) {
+    if (!container) return [];
+    return Array.from(container.querySelectorAll(
+        'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    )).filter(el => el.offsetWidth > 0 || el.offsetHeight > 0 || el.getClientRects().length > 0);
+}
+
+function getActiveOpenModal() {
+    const videoModal = document.getElementById('modalOverlay');
+    if (videoModal && videoModal.classList.contains('open')) return videoModal;
+
+    const wpModal = document.getElementById('wallpaperModalOverlay');
+    if (wpModal && wpModal.classList.contains('open')) return wpModal;
+
+    const contactModal = document.getElementById('contactModalOverlay');
+    if (contactModal && (contactModal.classList.contains('open') || contactModal.style.display === 'flex')) return contactModal;
+
+    const ssModal = document.getElementById('slideshowOverlay');
+    if (ssModal && (ssModal.classList.contains('active') || ssModal.style.display === 'flex')) return ssModal;
+
+    return null;
+}
+
+function trapModalFocus(modalEl, e) {
+    if (e.key !== 'Tab') return;
+    const focusables = getFocusableElements(modalEl);
+    if (focusables.length === 0) {
+        e.preventDefault();
+        return;
+    }
+    const firstEl = focusables[0];
+    const lastEl = focusables[focusables.length - 1];
+
+    if (e.shiftKey) {
+        if (document.activeElement === firstEl || !modalEl.contains(document.activeElement)) {
+            e.preventDefault();
+            lastEl.focus();
+        }
+    } else {
+        if (document.activeElement === lastEl || !modalEl.contains(document.activeElement)) {
+            e.preventDefault();
+            firstEl.focus();
+        }
+    }
 }
 
 // Modal 1: Video Player Lightbox
@@ -1114,10 +1185,19 @@ function loadPlayerIframe(videoId, title, startSec = 0) {
     `;
 }
 
-function openVideoModal(videoId, title, startSec = 0) {
+function openVideoModal(videoId, title, startSec = 0, triggerEl = null) {
     currentModalVideoId = videoId;
     currentModalTitle = title;
     currentModalStartSec = startSec;
+
+    if (triggerEl) {
+        lastFocusedElement = triggerEl;
+    } else if (document.activeElement && document.activeElement !== document.body) {
+        const insideModal = document.activeElement.closest('.modal-overlay');
+        if (!insideModal) {
+            lastFocusedElement = document.activeElement;
+        }
+    }
 
     // Gently pause ambient audio so it does not conflict with video soundtrack
     if (ambientAudio && isAudioPlaying) {
@@ -1131,6 +1211,7 @@ function openVideoModal(videoId, title, startSec = 0) {
     const titleEl = document.getElementById('modalTitle');
     const resEl = document.getElementById('modalVideoRes');
     const footerChannel = document.getElementById('modalFooterChannel');
+    const footerChannelLink = document.getElementById('modalFooterChannelLink');
     const footerQuality = document.getElementById('modalFooterQuality');
     const modalWpCount = document.getElementById('modalWpCount');
     const wpBtn = document.getElementById('modalViewWallpapersBtn');
@@ -1142,6 +1223,10 @@ function openVideoModal(videoId, title, startSec = 0) {
 
     if (footerChannel && video) {
         footerChannel.textContent = video.channel;
+    }
+    if (footerChannelLink && video) {
+        footerChannelLink.href = `https://www.youtube.com/results?search_query=${encodeURIComponent(video.channel)}`;
+        footerChannelLink.title = `Explore ${escapeQuotes(video.channel)} on YouTube`;
     }
     if (footerQuality && video) {
         footerQuality.textContent = video.is4K ? '👑 4K UHD Masterwork' : video.qualityLabel;
@@ -1167,21 +1252,32 @@ function openVideoModal(videoId, title, startSec = 0) {
 
     if (modal) modal.classList.add('open');
     document.body.style.overflow = 'hidden';
+
+    setTimeout(() => {
+        const closeBtn = modal ? modal.querySelector('.btn-close-modal') : null;
+        if (closeBtn) closeBtn.focus();
+    }, 50);
 }
 
 function openWallpaperFromModal() {
     if (!currentModalVideoId) return;
     const vid = currentModalVideoId;
-    closeVideoModal();
-    openWallpaperModal(vid);
+    const savedTrigger = lastFocusedElement;
+    closeVideoModalQuiet();
+    openWallpaperModal(vid, 0, savedTrigger);
 }
 
-function closeVideoModal() {
+function closeVideoModalQuiet() {
     const modal = document.getElementById('modalOverlay');
     const iframeWrapper = document.getElementById('playerFrameWrapper');
     if (iframeWrapper) iframeWrapper.innerHTML = '';
     if (modal) modal.classList.remove('open');
     document.body.style.overflow = '';
+}
+
+function closeVideoModal() {
+    closeVideoModalQuiet();
+    restoreFocus();
 }
 
 // Modal 2: Wallpaper Gallery Lightbox
@@ -1191,9 +1287,18 @@ let isDownloadingCurrent = false;
 let isDownloadingAll = false;
 const videoZipCache = new Map(); // Cache generated ZIP blobs per video to prevent duplicate downloads
 
-function openWallpaperModal(videoId, initialIdx = 0) {
+function openWallpaperModal(videoId, initialIdx = 0, triggerEl = null) {
     const video = ALL_VIDEOS.find(v => v.id === videoId);
     if (!video) return;
+
+    if (triggerEl) {
+        lastFocusedElement = triggerEl;
+    } else if (document.activeElement && document.activeElement !== document.body) {
+        const insideModal = document.activeElement.closest('.modal-overlay');
+        if (!insideModal) {
+            lastFocusedElement = document.activeElement;
+        }
+    }
 
     const modal = document.getElementById('wallpaperModalOverlay');
     const titleEl = document.getElementById('wpModalTitle');
@@ -1202,7 +1307,10 @@ function openWallpaperModal(videoId, initialIdx = 0) {
 
     if (titleEl) titleEl.textContent = video.title;
     if (subTitleEl) {
-        subTitleEl.textContent = `${video.channel} · Native Quality: ${video.qualityLabel} (${video.resolution})`;
+        // Drop resolution and scene timestamp from subtitle (already displayed directly on active image badge)
+        // Display originating artist/channel and direct channel link (P2 #3 & P7 #12)
+        const channelQuery = encodeURIComponent(video.channel);
+        subTitleEl.innerHTML = `<span>${escapeQuotes(video.channel)}</span> · <a href="https://www.youtube.com/results?search_query=${channelQuery}" target="_blank" rel="noopener noreferrer" class="wp-modal-channel-link" title="Explore ${escapeQuotes(video.channel)} on YouTube">Channel Source ↗</a>`;
     }
 
     activeWallpaperList = [];
@@ -1235,6 +1343,16 @@ function openWallpaperModal(videoId, initialIdx = 0) {
             thumb.src = wp.path;
             thumb.className = `wp-tray-thumb ${idx === activeWallpaperIndex ? 'active' : ''}`;
             thumb.title = `Scene at ${wp.timestampFormatted} (${wp.width}×${wp.height})`;
+            thumb.alt = `${escapeQuotes(wp.videoTitle)} thumbnail scene ${idx + 1}`;
+            thumb.setAttribute('tabindex', '0');
+            thumb.setAttribute('role', 'button');
+            thumb.setAttribute('aria-label', `Select scene ${idx + 1} at ${wp.timestampFormatted}`);
+            thumb.onkeydown = (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    selectWallpaperSnapshot(idx);
+                }
+            };
             thumb.onclick = () => selectWallpaperSnapshot(idx);
             trayEl.appendChild(thumb);
         });
@@ -1243,6 +1361,11 @@ function openWallpaperModal(videoId, initialIdx = 0) {
     displayActiveWallpaper();
     if (modal) modal.classList.add('open');
     document.body.style.overflow = 'hidden';
+
+    setTimeout(() => {
+        const closeBtn = modal ? modal.querySelector('.btn-close-modal') : null;
+        if (closeBtn) closeBtn.focus();
+    }, 50);
 }
 
 function selectWallpaperSnapshot(idx) {
@@ -1264,13 +1387,16 @@ function displayActiveWallpaper() {
     const allCountEl = document.getElementById('wpAllCount');
     const jumpTimeEl = document.getElementById('wpJumpTimestamp');
 
-    if (mainImg) mainImg.src = wp.path;
+    if (mainImg) {
+        mainImg.src = wp.path;
+        mainImg.alt = `${wp.videoTitle || 'Claude Monet Masterwork'} - High-resolution scene at ${wp.timestampFormatted || 'snapshot'}`;
+    }
     const resText = `${wp.qualityLabel || '4K UHD'} · ${wp.width || 3840}×${wp.height || 2160}`;
     const timeText = wp.timestampFormatted ? ` · Scene at ${wp.timestampFormatted}` : '';
     if (badgeRes) badgeRes.textContent = `${resText}${timeText}`;
 
     if (sceneNumEl) {
-        sceneNumEl.textContent = `Scene ${activeWallpaperIndex + 1}`;
+        sceneNumEl.textContent = activeWallpaperIndex + 1;
     }
     if (allCountEl) {
         allCountEl.textContent = activeWallpaperList.length;
@@ -1291,9 +1417,21 @@ function jumpToSceneInPlayer() {
     const video = ALL_VIDEOS.find(v => v.id === videoId);
     const title = video ? video.title : 'Claude Monet Masterwork';
     const startSec = wp.timestampSec || 0;
+    const savedTrigger = lastFocusedElement;
 
-    closeWallpaperModal();
-    openVideoModal(videoId, title, startSec);
+    closeWallpaperModalQuiet();
+    openVideoModal(videoId, title, startSec, savedTrigger);
+}
+
+function closeWallpaperModalQuiet() {
+    const modal = document.getElementById('wallpaperModalOverlay');
+    if (modal) modal.classList.remove('open');
+    document.body.style.overflow = '';
+}
+
+function closeWallpaperModal() {
+    closeWallpaperModalQuiet();
+    restoreFocus();
 }
 
 // Download currently viewed wallpaper snapshot with sanitized, descriptive title and timestamp
@@ -1371,6 +1509,7 @@ async function downloadAllWallpapers() {
         for (let i = 0; i < total; i++) {
             const item = activeWallpaperList[i];
             if (btn) btn.innerHTML = `📦 Packaging ${i + 1}/${total}...`;
+            await new Promise(r => setTimeout(r, 0)); // Yield to event loop to keep UI responsive
 
             const res = await fetch(item.path);
             if (!res.ok) throw new Error(`HTTP ${res.status} for ${item.path}`);
@@ -1416,12 +1555,6 @@ function triggerBlobDownload(blob, filename) {
     a.click();
     a.remove();
     setTimeout(() => URL.revokeObjectURL(url), 30000);
-}
-
-function closeWallpaperModal() {
-    const modal = document.getElementById('wallpaperModalOverlay');
-    if (modal) modal.classList.remove('open');
-    document.body.style.overflow = '';
 }
 
 function updateWallpaperDownloadBar(filteredWp) {
@@ -1513,6 +1646,7 @@ async function downloadAllFilteredWallpapers() {
         // Download in parallel batches of 6 for high speed
         const batchSize = 6;
         for (let i = 0; i < total; i += batchSize) {
+            await new Promise(r => setTimeout(r, 0)); // Yield to event loop to keep UI smooth and reactive
             const batch = currentWallpapers.slice(i, i + batchSize);
             await Promise.all(batch.map(async (wp, bIdx) => {
                 const globalIdx = i + bIdx + 1;
@@ -1594,7 +1728,16 @@ let slideshowIdleTimer = null;
 let slideshowFormFactorMode = 'desktop'; // 'desktop' | 'mobile' | 'all'
 let slideshowFitMode = 'contain'; // 'contain' | 'cover'
 
-function startSlideshow(startIndex = 0, customList = null, isSingleVideo = false) {
+function startSlideshow(startIndex = 0, customList = null, isSingleVideo = false, triggerEl = null) {
+    if (triggerEl) {
+        lastFocusedElement = triggerEl;
+    } else if (document.activeElement && document.activeElement !== document.body) {
+        const insideModal = document.activeElement.closest('.modal-overlay');
+        if (!insideModal) {
+            lastFocusedElement = document.activeElement;
+        }
+    }
+
     slideshowRawList = customList || currentWallpapers;
     if (!slideshowRawList || slideshowRawList.length === 0) {
         alert('No wallpapers available to display for the current filter selection.');
@@ -1793,8 +1936,9 @@ function startSlideshowFromCurrentModal() {
     if (!activeWallpaperList || activeWallpaperList.length === 0) return;
     const startIdx = activeWallpaperIndex || 0;
     const list = [...activeWallpaperList];
-    closeWallpaperModal();
-    startSlideshow(startIdx, list, true);
+    const savedTrigger = lastFocusedElement;
+    closeWallpaperModalQuiet();
+    startSlideshow(startIdx, list, true, savedTrigger);
 }
 
 function showSlide(index) {
@@ -1955,6 +2099,7 @@ function closeSlideshow() {
     document.body.style.overflow = '';
 
     // Ambient audio continues playing seamlessly across gallery and slideshow
+    restoreFocus();
 }
 
 function handleSlideshowMouseMove() {
@@ -2010,6 +2155,7 @@ function handleCuratorBadgeClick(event) {
     if (event) {
         event.preventDefault();
     }
+    const trigger = (event && event.currentTarget) ? event.currentTarget : document.activeElement;
     const email = 'lgtkgtv@gmail.com';
     const badge = document.getElementById('cornerCuratedBadge') || document.getElementById('statCuratedBadge');
 
@@ -2036,23 +2182,43 @@ function handleCuratorBadgeClick(event) {
     }
 
     // Open modal dialog with compose options (Gmail Web, Copy, Mail App)
-    openContactModal();
+    openContactModal(trigger);
 }
 
-function openContactModal() {
+function openContactModal(triggerEl = null) {
+    if (triggerEl) {
+        lastFocusedElement = triggerEl;
+    } else if (document.activeElement && document.activeElement !== document.body) {
+        const insideModal = document.activeElement.closest('.modal-overlay');
+        if (!insideModal) {
+            lastFocusedElement = document.activeElement;
+        }
+    }
+
     const overlay = document.getElementById('contactModalOverlay');
     if (overlay) {
         overlay.style.display = 'flex';
+        overlay.classList.add('open');
         document.body.style.overflow = 'hidden';
+        setTimeout(() => {
+            const closeBtn = overlay.querySelector('.btn-close-modal');
+            if (closeBtn) closeBtn.focus();
+        }, 50);
+    }
+}
+
+function closeContactModalQuiet() {
+    const overlay = document.getElementById('contactModalOverlay');
+    if (overlay) {
+        overlay.style.display = 'none';
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
     }
 }
 
 function closeContactModal() {
-    const overlay = document.getElementById('contactModalOverlay');
-    if (overlay) {
-        overlay.style.display = 'none';
-        document.body.style.overflow = '';
-    }
+    closeContactModalQuiet();
+    restoreFocus();
 }
 
 function copyContactText(text, btnEl) {
