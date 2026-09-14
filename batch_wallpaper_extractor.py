@@ -75,8 +75,14 @@ def detect_form_factor(image_path, width=None, height=None):
             left_sample = rgb.crop((int(w * 0.02), int(h * 0.2), int(w * 0.06), int(h * 0.8)))
             right_sample = rgb.crop((int(w * 0.94), int(h * 0.2), int(w * 0.98), int(h * 0.8)))
             
-            left_lums = [p[0] * 0.299 + p[1] * 0.587 + p[2] * 0.114 for p in left_sample.getdata()]
-            right_lums = [p[0] * 0.299 + p[1] * 0.587 + p[2] * 0.114 for p in right_sample.getdata()]
+            if hasattr(left_sample, 'get_flattened_data'):
+                left_raw = left_sample.get_flattened_data()
+                right_raw = right_sample.get_flattened_data()
+                left_lums = [left_raw[i] * 0.299 + left_raw[i+1] * 0.587 + left_raw[i+2] * 0.114 for i in range(0, len(left_raw), 3)]
+                right_lums = [right_raw[i] * 0.299 + right_raw[i+1] * 0.587 + right_raw[i+2] * 0.114 for i in range(0, len(right_raw), 3)]
+            else:
+                left_lums = [p[0] * 0.299 + p[1] * 0.587 + p[2] * 0.114 for p in left_sample.getdata()]
+                right_lums = [p[0] * 0.299 + p[1] * 0.587 + p[2] * 0.114 for p in right_sample.getdata()]
             avg_l = sum(left_lums) / max(len(left_lums), 1)
             avg_r = sum(right_lums) / max(len(right_lums), 1)
             if avg_l < 18 and avg_r < 18:
