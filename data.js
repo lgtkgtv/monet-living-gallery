@@ -107,6 +107,22 @@ const CHANNEL_PROFILES = {
     ],
     "musicalTone": "Romantic waltzes, French accordion, passionate strings, and gentle romantic melodies.",
     "targetAudience": "Romantics, travelers dreaming of vintage Paris and Venice, and fans of cozy nostalgic storytelling."
+  },
+  "Beautiful Living Art": {
+    "name": "Beautiful Living Art",
+    "archetype": "The Living Oil Painting & Visual Poet",
+    "icon": "🖼️",
+    "accent": "#117864",
+    "tagline": "Visual poetry and living Monet & Renoir canvas animations paired with relaxing music",
+    "characterization": "Characterized by poetic series titles: \"Visual Poems\", \"Enter an Impressionist Painting\", and \"Living Oil Paintings | Dreamy French Art Aesthetic\". Beautiful Living Art breathes gentle, atmospheric life into Claude Monet's water gardens and Pierre-Auguste Renoir's sunlit figures, accompanied by ambient meditative piano.",
+    "keyThemes": [
+      "Visual Poetry",
+      "Claude Monet & Renoir Canvas Living Art",
+      "Dreamy French Aesthetic",
+      "Atmospheric AI Motion"
+    ],
+    "musicalTone": "Warm, relaxing neoclassical and meditative piano solos.",
+    "targetAudience": "Viewers seeking gentle French Impressionist ambiance, living canvas wall art, and relaxing study accompaniment."
   }
 };
 const CHANNEL_STATS = [
@@ -9652,7 +9668,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 190.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "mobile"
       },
       {
         "id": "nCVYEqc_Hw4_2",
@@ -9669,7 +9686,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 137.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "mobile"
       },
       {
         "id": "nCVYEqc_Hw4_3",
@@ -9686,7 +9704,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 84.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "mobile"
       }
     ],
     "wallpaperCount": 3
@@ -9723,7 +9742,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 273.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "mobile"
       },
       {
         "id": "8XdHP_fQoB0_2",
@@ -9740,7 +9760,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 246.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "mobile"
       }
     ],
     "wallpaperCount": 2
@@ -9777,7 +9798,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 319.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "yGKyyaETZ2M_2",
@@ -9794,7 +9816,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 319.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 2
@@ -9831,7 +9854,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 221.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "mobile"
       },
       {
         "id": "TZUn8nU0CZI_2",
@@ -9848,7 +9872,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 221.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "mobile"
       },
       {
         "id": "TZUn8nU0CZI_3",
@@ -9865,7 +9890,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 357.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "mobile"
       }
     ],
     "wallpaperCount": 3
@@ -9902,7 +9928,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 515.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "mobile"
       },
       {
         "id": "h3-WUZi-0hU_2",
@@ -9919,7 +9946,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 213.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "mobile"
       }
     ],
     "wallpaperCount": 2
@@ -9956,7 +9984,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 739.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "MWRc13v-ZhA_2",
@@ -9973,7 +10002,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 750.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "MWRc13v-ZhA_3",
@@ -9990,7 +10020,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 551.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "MWRc13v-ZhA_4",
@@ -10007,7 +10038,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 897.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "MWRc13v-ZhA_5",
@@ -10024,7 +10056,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1162.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "MWRc13v-ZhA_6",
@@ -10041,7 +10074,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 696.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "MWRc13v-ZhA_7",
@@ -10058,7 +10092,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 508.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "MWRc13v-ZhA_8",
@@ -10075,7 +10110,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 557.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "MWRc13v-ZhA_9",
@@ -10092,7 +10128,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 643.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 9
@@ -10129,7 +10166,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 841.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "Sk8XKO668Ks_2",
@@ -10146,7 +10184,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 686.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "Sk8XKO668Ks_3",
@@ -10163,7 +10202,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 933.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "Sk8XKO668Ks_4",
@@ -10180,7 +10220,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1229.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "Sk8XKO668Ks_5",
@@ -10197,7 +10238,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1019.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "Sk8XKO668Ks_6",
@@ -10214,7 +10256,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1372.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "Sk8XKO668Ks_7",
@@ -10231,7 +10274,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1044.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 7
@@ -10268,7 +10312,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 426.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "FN16izlRi-8_2",
@@ -10285,7 +10330,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 426.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 2
@@ -10322,7 +10368,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 541.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "oWMDH9dPswg_2",
@@ -10339,7 +10386,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 596.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "oWMDH9dPswg_3",
@@ -10356,7 +10404,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 674.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "oWMDH9dPswg_4",
@@ -10373,7 +10422,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 395.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "oWMDH9dPswg_5",
@@ -10390,7 +10440,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 565.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "oWMDH9dPswg_6",
@@ -10407,7 +10458,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 520.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "oWMDH9dPswg_7",
@@ -10424,7 +10476,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 440.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 7
@@ -10461,7 +10514,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 657.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "RX0kyBl-4Bk_2",
@@ -10478,7 +10532,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 538.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "RX0kyBl-4Bk_3",
@@ -10495,7 +10550,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 728.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "RX0kyBl-4Bk_4",
@@ -10512,7 +10568,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 830.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "RX0kyBl-4Bk_5",
@@ -10529,7 +10586,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 694.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "RX0kyBl-4Bk_6",
@@ -10546,7 +10604,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 437.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "RX0kyBl-4Bk_7",
@@ -10563,7 +10622,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 490.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 7
@@ -10600,7 +10660,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 133.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "gAWrEV-3ahw_2",
@@ -10617,7 +10678,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 317.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "mobile"
       },
       {
         "id": "gAWrEV-3ahw_3",
@@ -10634,7 +10696,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 212.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "mobile"
       }
     ],
     "wallpaperCount": 3
@@ -10671,7 +10734,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 188.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "CBNoD-qbdss_2",
@@ -10688,7 +10752,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 609.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "CBNoD-qbdss_3",
@@ -10705,7 +10770,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 313.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 3
@@ -10742,7 +10808,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1694.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "AWcmN1W_jJI_2",
@@ -10759,7 +10826,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1685.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "AWcmN1W_jJI_3",
@@ -10776,7 +10844,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1868.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "AWcmN1W_jJI_4",
@@ -10793,7 +10862,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1056.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "AWcmN1W_jJI_5",
@@ -10810,7 +10880,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 2599.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "AWcmN1W_jJI_6",
@@ -10827,7 +10898,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1636.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "AWcmN1W_jJI_7",
@@ -10844,7 +10916,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1192.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "AWcmN1W_jJI_8",
@@ -10861,7 +10934,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 2841.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "AWcmN1W_jJI_9",
@@ -10878,7 +10952,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1290.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "AWcmN1W_jJI_10",
@@ -10895,7 +10970,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 2325.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "AWcmN1W_jJI_11",
@@ -10912,7 +10988,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 3043.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "AWcmN1W_jJI_12",
@@ -10929,7 +11006,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 3535.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "AWcmN1W_jJI_13",
@@ -10946,7 +11024,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 953.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "AWcmN1W_jJI_14",
@@ -10963,7 +11042,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1720.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "AWcmN1W_jJI_15",
@@ -10980,7 +11060,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 2312.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "AWcmN1W_jJI_16",
@@ -10997,7 +11078,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1468.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 16
@@ -11034,7 +11116,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 461.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "FTxh92VdZVw_2",
@@ -11051,7 +11134,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 379.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 2
@@ -11088,7 +11172,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 505.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "mobile"
       },
       {
         "id": "49gUho777mI_2",
@@ -11105,7 +11190,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 325.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "mobile"
       },
       {
         "id": "49gUho777mI_3",
@@ -11122,7 +11208,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 373.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "mobile"
       }
     ],
     "wallpaperCount": 3
@@ -11159,7 +11246,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 483.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "oIDKMOVf_RI_2",
@@ -11176,7 +11264,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 483.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 2
@@ -11213,7 +11302,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 603.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 1
@@ -11250,7 +11340,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 533.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "KMd8wH1bQsY_2",
@@ -11267,7 +11358,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 613.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "KMd8wH1bQsY_3",
@@ -11284,7 +11376,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 625.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "KMd8wH1bQsY_4",
@@ -11301,7 +11394,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 349.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "KMd8wH1bQsY_5",
@@ -11318,7 +11412,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 519.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "KMd8wH1bQsY_6",
@@ -11335,7 +11430,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 578.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "KMd8wH1bQsY_7",
@@ -11352,7 +11448,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 874.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 7
@@ -11389,7 +11486,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1023.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "x3fwY0Kh7uM_2",
@@ -11406,7 +11504,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1365.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "x3fwY0Kh7uM_3",
@@ -11423,7 +11522,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1370.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "x3fwY0Kh7uM_4",
@@ -11440,7 +11540,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1128.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "x3fwY0Kh7uM_5",
@@ -11457,7 +11558,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1467.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 5
@@ -11494,7 +11596,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 237.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "mobile"
       }
     ],
     "wallpaperCount": 1
@@ -11588,7 +11691,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 547.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "fjT4VO79B5U_2",
@@ -11605,7 +11709,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 845.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "fjT4VO79B5U_3",
@@ -11622,7 +11727,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 676.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "fjT4VO79B5U_4",
@@ -11639,7 +11745,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 484.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "fjT4VO79B5U_5",
@@ -11656,7 +11763,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 696.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "fjT4VO79B5U_6",
@@ -11673,7 +11781,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 722.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "fjT4VO79B5U_7",
@@ -11690,7 +11799,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 715.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 7
@@ -11746,7 +11856,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 664.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "Vls1Mq-oMdg_2",
@@ -11763,7 +11874,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 745.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "Vls1Mq-oMdg_3",
@@ -11780,7 +11892,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1225.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "Vls1Mq-oMdg_4",
@@ -11797,7 +11910,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 714.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "Vls1Mq-oMdg_5",
@@ -11814,7 +11928,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 842.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "Vls1Mq-oMdg_6",
@@ -11831,7 +11946,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1009.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "Vls1Mq-oMdg_7",
@@ -11848,7 +11964,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1245.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 7
@@ -11942,7 +12059,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1931.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "yYmuEB9XTnY_2",
@@ -11959,7 +12077,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1566.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "yYmuEB9XTnY_3",
@@ -11976,7 +12095,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1501.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "yYmuEB9XTnY_4",
@@ -11993,7 +12113,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1062.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "yYmuEB9XTnY_5",
@@ -12010,7 +12131,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1319.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "yYmuEB9XTnY_6",
@@ -12027,7 +12149,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1649.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "yYmuEB9XTnY_7",
@@ -12044,7 +12167,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1508.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "yYmuEB9XTnY_8",
@@ -12061,7 +12185,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 3125.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "yYmuEB9XTnY_9",
@@ -12078,7 +12203,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1113.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "yYmuEB9XTnY_10",
@@ -12095,7 +12221,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1301.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "yYmuEB9XTnY_11",
@@ -12112,7 +12239,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1498.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 11
@@ -12187,7 +12315,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 712.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "LuJGblxlTqs_2",
@@ -12204,7 +12333,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 546.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "LuJGblxlTqs_3",
@@ -12221,7 +12351,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 526.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "LuJGblxlTqs_4",
@@ -12238,7 +12369,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1047.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "LuJGblxlTqs_5",
@@ -12255,7 +12387,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1081.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 5
@@ -12368,7 +12501,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1576.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "tJjqAH1h8fk_2",
@@ -12385,7 +12519,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1344.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "tJjqAH1h8fk_3",
@@ -12402,7 +12537,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1551.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "tJjqAH1h8fk_4",
@@ -12419,7 +12555,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1188.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "tJjqAH1h8fk_5",
@@ -12436,7 +12573,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1387.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "tJjqAH1h8fk_6",
@@ -12453,7 +12591,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 673.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "tJjqAH1h8fk_7",
@@ -12470,7 +12609,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1190.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 7
@@ -12526,7 +12666,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 393.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "hjabL-72QdA_2",
@@ -12543,7 +12684,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 535.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "hjabL-72QdA_3",
@@ -12560,7 +12702,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 634.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "hjabL-72QdA_4",
@@ -12577,7 +12720,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 764.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "hjabL-72QdA_5",
@@ -12594,7 +12738,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 594.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 5
@@ -12650,7 +12795,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 585.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "RDhj8mOWXsg_2",
@@ -12667,7 +12813,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 794.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "RDhj8mOWXsg_3",
@@ -12684,7 +12831,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1021.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "RDhj8mOWXsg_4",
@@ -12701,7 +12849,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 786.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "RDhj8mOWXsg_5",
@@ -12718,7 +12867,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 739.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 5
@@ -12869,7 +13019,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 867.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "AubPDZQPVEY_2",
@@ -12886,7 +13037,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 583.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "AubPDZQPVEY_3",
@@ -12903,7 +13055,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 975.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "AubPDZQPVEY_4",
@@ -12920,7 +13073,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 852.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "AubPDZQPVEY_5",
@@ -12937,7 +13091,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 744.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "AubPDZQPVEY_6",
@@ -12954,7 +13109,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 967.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "AubPDZQPVEY_7",
@@ -12971,7 +13127,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 663.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 7
@@ -13103,7 +13260,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 842.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "kARsjqPKWtE_2",
@@ -13120,7 +13278,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 691.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "kARsjqPKWtE_3",
@@ -13137,7 +13296,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 766.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "kARsjqPKWtE_4",
@@ -13154,7 +13314,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 744.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "kARsjqPKWtE_5",
@@ -13171,7 +13332,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 721.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 5
@@ -13246,7 +13408,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 916.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "Kv8qx-XkxJc_2",
@@ -13263,7 +13426,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 449.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "Kv8qx-XkxJc_3",
@@ -13280,7 +13444,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1201.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "Kv8qx-XkxJc_4",
@@ -13297,7 +13462,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 873.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "Kv8qx-XkxJc_5",
@@ -13314,7 +13480,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 690.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 5
@@ -13408,7 +13575,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 543.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "kzeTKxRbciU_2",
@@ -13425,7 +13593,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 690.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "kzeTKxRbciU_3",
@@ -13442,7 +13611,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 772.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "kzeTKxRbciU_4",
@@ -13459,7 +13629,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 657.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "kzeTKxRbciU_5",
@@ -13476,7 +13647,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1011.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 5
@@ -13513,7 +13685,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 759.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "hhCbN53J4EU_2",
@@ -13530,7 +13703,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1620.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "hhCbN53J4EU_3",
@@ -13547,7 +13721,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 2488.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "hhCbN53J4EU_4",
@@ -13564,7 +13739,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1715.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "hhCbN53J4EU_5",
@@ -13581,7 +13757,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1889.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "hhCbN53J4EU_6",
@@ -13598,7 +13775,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1372.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "hhCbN53J4EU_7",
@@ -13615,7 +13793,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1831.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "hhCbN53J4EU_8",
@@ -13632,7 +13811,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1484.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "hhCbN53J4EU_9",
@@ -13649,7 +13829,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 834.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "hhCbN53J4EU_10",
@@ -13666,7 +13847,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1828.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "hhCbN53J4EU_11",
@@ -13683,7 +13865,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 738.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 11
@@ -13777,7 +13960,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 800.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "y0NG1iXxuhY_2",
@@ -13794,7 +13978,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 561.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "y0NG1iXxuhY_3",
@@ -13811,7 +13996,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 616.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "y0NG1iXxuhY_4",
@@ -13828,7 +14014,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 875.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "y0NG1iXxuhY_5",
@@ -13845,7 +14032,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 476.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "y0NG1iXxuhY_6",
@@ -13862,7 +14050,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 756.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "y0NG1iXxuhY_7",
@@ -13879,7 +14068,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 658.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 7
@@ -13992,7 +14182,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 795.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "NwxqzVKJeto_2",
@@ -14009,7 +14200,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 857.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "NwxqzVKJeto_3",
@@ -14026,7 +14218,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 460.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "NwxqzVKJeto_4",
@@ -14043,7 +14236,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1811.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "NwxqzVKJeto_5",
@@ -14060,7 +14254,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 562.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "NwxqzVKJeto_6",
@@ -14077,7 +14272,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 622.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "NwxqzVKJeto_7",
@@ -14094,7 +14290,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 728.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "NwxqzVKJeto_8",
@@ -14111,7 +14308,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 824.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "NwxqzVKJeto_9",
@@ -14128,7 +14326,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 858.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "NwxqzVKJeto_10",
@@ -14145,7 +14344,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 968.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "NwxqzVKJeto_11",
@@ -14162,7 +14362,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1656.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 11
@@ -14237,7 +14438,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 234.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "JwDUUz8BmBs_2",
@@ -14254,7 +14456,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 304.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "JwDUUz8BmBs_3",
@@ -14271,7 +14474,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 239.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "JwDUUz8BmBs_4",
@@ -14288,7 +14492,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 239.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "JwDUUz8BmBs_5",
@@ -14305,7 +14510,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 373.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "JwDUUz8BmBs_6",
@@ -14322,7 +14528,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 282.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "JwDUUz8BmBs_7",
@@ -14339,7 +14546,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 264.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 7
@@ -14528,7 +14736,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 213.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "O_hNR6G07Yk_2",
@@ -14545,7 +14754,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 273.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "O_hNR6G07Yk_3",
@@ -14562,7 +14772,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 237.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "O_hNR6G07Yk_4",
@@ -14579,7 +14790,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 241.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "O_hNR6G07Yk_5",
@@ -14596,7 +14808,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 241.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "O_hNR6G07Yk_6",
@@ -14613,7 +14826,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 253.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "O_hNR6G07Yk_7",
@@ -14630,7 +14844,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 263.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 7
@@ -14705,7 +14920,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 973.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "QJrKGGe6fok_2",
@@ -14722,7 +14938,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1166.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "QJrKGGe6fok_3",
@@ -14739,7 +14956,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 692.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "QJrKGGe6fok_4",
@@ -14756,7 +14974,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 453.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "QJrKGGe6fok_5",
@@ -14773,7 +14992,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1661.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "QJrKGGe6fok_6",
@@ -14790,7 +15010,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1436.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "QJrKGGe6fok_7",
@@ -14807,7 +15028,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 974.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 7
@@ -14863,7 +15085,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 354.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "XadRir6ctSE_2",
@@ -14880,7 +15103,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 252.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "XadRir6ctSE_3",
@@ -14897,7 +15121,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 251.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "XadRir6ctSE_4",
@@ -14914,7 +15139,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 337.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "XadRir6ctSE_5",
@@ -14931,7 +15157,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 232.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "XadRir6ctSE_6",
@@ -14948,7 +15175,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 271.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "XadRir6ctSE_7",
@@ -14965,7 +15193,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 242.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 7
@@ -15135,7 +15364,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 857.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "URu5GAL4FN8_2",
@@ -15152,7 +15382,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 590.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "URu5GAL4FN8_3",
@@ -15169,7 +15400,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 592.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "URu5GAL4FN8_4",
@@ -15186,7 +15418,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 702.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "URu5GAL4FN8_5",
@@ -15203,7 +15436,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 539.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 5
@@ -15373,7 +15607,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 533.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "DiSniTgZsLI_2",
@@ -15390,7 +15625,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 673.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "DiSniTgZsLI_3",
@@ -15407,7 +15643,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 438.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "DiSniTgZsLI_4",
@@ -15424,7 +15661,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 524.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "DiSniTgZsLI_5",
@@ -15441,7 +15679,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 619.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 5
@@ -15497,7 +15736,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 700.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "qEmmHWrxlno_2",
@@ -15514,7 +15754,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 584.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "qEmmHWrxlno_3",
@@ -15531,7 +15772,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 722.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "qEmmHWrxlno_4",
@@ -15548,7 +15790,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 487.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "qEmmHWrxlno_5",
@@ -15565,7 +15808,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 492.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 5
@@ -15602,7 +15846,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 633.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "ltdyuf1oK6I_2",
@@ -15619,7 +15864,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1008.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "ltdyuf1oK6I_3",
@@ -15636,7 +15882,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1152.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "ltdyuf1oK6I_4",
@@ -15653,7 +15900,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1106.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "ltdyuf1oK6I_5",
@@ -15670,7 +15918,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 909.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "ltdyuf1oK6I_6",
@@ -15687,7 +15936,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 611.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "ltdyuf1oK6I_7",
@@ -15704,7 +15954,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 668.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 7
@@ -15836,7 +16087,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1184.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "U6aYJHR-XsQ_2",
@@ -15853,7 +16105,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 888.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "U6aYJHR-XsQ_3",
@@ -15870,7 +16123,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 778.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "U6aYJHR-XsQ_4",
@@ -15887,7 +16141,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1008.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "U6aYJHR-XsQ_5",
@@ -15904,7 +16159,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 719.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "U6aYJHR-XsQ_6",
@@ -15921,7 +16177,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1161.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "U6aYJHR-XsQ_7",
@@ -15938,7 +16195,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 706.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "U6aYJHR-XsQ_8",
@@ -15955,7 +16213,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 871.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "U6aYJHR-XsQ_9",
@@ -15972,7 +16231,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 934.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "U6aYJHR-XsQ_10",
@@ -15989,7 +16249,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 804.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "U6aYJHR-XsQ_11",
@@ -16006,7 +16267,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1515.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 11
@@ -16081,7 +16343,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 504.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "WFL_3LUf7_U_2",
@@ -16098,7 +16361,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 577.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "WFL_3LUf7_U_3",
@@ -16115,7 +16379,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 346.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "WFL_3LUf7_U_4",
@@ -16132,7 +16397,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 631.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "WFL_3LUf7_U_5",
@@ -16149,7 +16415,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 634.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 5
@@ -16262,7 +16529,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 896.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "uLtTuYGEO_E_2",
@@ -16279,7 +16547,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1198.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "uLtTuYGEO_E_3",
@@ -16296,7 +16565,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 997.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "uLtTuYGEO_E_4",
@@ -16313,7 +16583,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1314.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "uLtTuYGEO_E_5",
@@ -16330,7 +16601,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 821.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 5
@@ -16367,7 +16639,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 227.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "5zj7MU2CyzY_2",
@@ -16384,7 +16657,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 299.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "5zj7MU2CyzY_3",
@@ -16401,7 +16675,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 219.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "5zj7MU2CyzY_4",
@@ -16418,7 +16693,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 190.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "5zj7MU2CyzY_5",
@@ -16435,7 +16711,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 233.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "5zj7MU2CyzY_6",
@@ -16452,7 +16729,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 219.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "5zj7MU2CyzY_7",
@@ -16469,7 +16747,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 206.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 7
@@ -16791,7 +17070,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 254.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "_gDOm7Jts04_2",
@@ -16808,7 +17088,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 390.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "_gDOm7Jts04_3",
@@ -16825,7 +17106,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 371.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "_gDOm7Jts04_4",
@@ -16842,7 +17124,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 431.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "_gDOm7Jts04_5",
@@ -16859,7 +17142,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 326.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "_gDOm7Jts04_6",
@@ -16876,7 +17160,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 495.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "_gDOm7Jts04_7",
@@ -16893,7 +17178,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 261.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 7
@@ -16968,7 +17254,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 556.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "uZtIuSjvwbE_2",
@@ -16985,7 +17272,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 730.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "uZtIuSjvwbE_3",
@@ -17002,7 +17290,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 838.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "uZtIuSjvwbE_4",
@@ -17019,7 +17308,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 872.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "uZtIuSjvwbE_5",
@@ -17036,7 +17326,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 652.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 5
@@ -17225,7 +17516,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 668.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "2hugXnfMJPw_2",
@@ -17242,7 +17534,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 828.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "2hugXnfMJPw_3",
@@ -17259,7 +17552,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 661.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "2hugXnfMJPw_4",
@@ -17276,7 +17570,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 650.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "2hugXnfMJPw_5",
@@ -17293,7 +17588,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 623.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 5
@@ -17330,7 +17626,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 598.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "jTfxxjwUwzI_2",
@@ -17347,7 +17644,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 743.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "jTfxxjwUwzI_3",
@@ -17364,7 +17662,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 815.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "jTfxxjwUwzI_4",
@@ -17381,7 +17680,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 627.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "jTfxxjwUwzI_5",
@@ -17398,7 +17698,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1046.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 5
@@ -17435,7 +17736,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 937.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "niIh8h8hAWo_2",
@@ -17452,7 +17754,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 804.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "niIh8h8hAWo_3",
@@ -17469,7 +17772,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 455.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "niIh8h8hAWo_4",
@@ -17486,7 +17790,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 618.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "niIh8h8hAWo_5",
@@ -17503,7 +17808,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 805.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 5
@@ -17806,7 +18112,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 786.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "55ZjmzmUoFc_2",
@@ -17823,7 +18130,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 741.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "55ZjmzmUoFc_3",
@@ -17840,7 +18148,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 948.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "55ZjmzmUoFc_4",
@@ -17857,7 +18166,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1039.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "55ZjmzmUoFc_5",
@@ -17874,7 +18184,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 633.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 5
@@ -17968,7 +18279,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 543.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "RE7ozAvuKjI_2",
@@ -17985,7 +18297,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 550.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "RE7ozAvuKjI_3",
@@ -18002,7 +18315,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 724.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "RE7ozAvuKjI_4",
@@ -18019,7 +18333,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 588.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "RE7ozAvuKjI_5",
@@ -18036,7 +18351,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 481.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 5
@@ -18073,7 +18389,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 823.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "AGoap1I0Fqg_2",
@@ -18090,7 +18407,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 609.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "AGoap1I0Fqg_3",
@@ -18107,7 +18425,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1046.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "AGoap1I0Fqg_4",
@@ -18124,7 +18443,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 638.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "AGoap1I0Fqg_5",
@@ -18141,7 +18461,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 549.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 5
@@ -18235,7 +18556,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1070.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "-UAZ9tHEU14_2",
@@ -18252,7 +18574,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 793.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "-UAZ9tHEU14_3",
@@ -18269,7 +18592,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 546.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "-UAZ9tHEU14_4",
@@ -18286,7 +18610,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 772.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "-UAZ9tHEU14_5",
@@ -18303,7 +18628,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 464.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 5
@@ -18435,7 +18761,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 347.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "wMEFlcQcn3I_2",
@@ -18452,7 +18779,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 437.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "wMEFlcQcn3I_3",
@@ -18469,7 +18797,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 389.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "wMEFlcQcn3I_4",
@@ -18486,7 +18815,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 397.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "wMEFlcQcn3I_5",
@@ -18503,7 +18833,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 313.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "wMEFlcQcn3I_6",
@@ -18520,7 +18851,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 336.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "wMEFlcQcn3I_7",
@@ -18537,7 +18869,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 456.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "wMEFlcQcn3I_8",
@@ -18554,7 +18887,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 474.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "wMEFlcQcn3I_9",
@@ -18571,7 +18905,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 310.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "wMEFlcQcn3I_10",
@@ -18588,7 +18923,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 508.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "wMEFlcQcn3I_11",
@@ -18605,7 +18941,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 605.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "wMEFlcQcn3I_12",
@@ -18622,7 +18959,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 384.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 12
@@ -18659,7 +18997,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 570.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "gj55gTwrllA_2",
@@ -18676,7 +19015,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 673.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "gj55gTwrllA_3",
@@ -18693,7 +19033,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 729.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "gj55gTwrllA_4",
@@ -18710,7 +19051,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 968.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "gj55gTwrllA_5",
@@ -18727,7 +19069,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 686.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "gj55gTwrllA_6",
@@ -18744,7 +19087,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 768.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "gj55gTwrllA_7",
@@ -18761,7 +19105,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1144.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 7
@@ -18798,7 +19143,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 243.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "B71LCjEtJXM_2",
@@ -18815,7 +19161,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 326.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "B71LCjEtJXM_3",
@@ -18832,7 +19179,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 255.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "B71LCjEtJXM_4",
@@ -18849,7 +19197,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 186.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "B71LCjEtJXM_5",
@@ -18866,7 +19215,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 351.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "B71LCjEtJXM_6",
@@ -18883,7 +19233,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 228.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "B71LCjEtJXM_7",
@@ -18900,7 +19251,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 210.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "B71LCjEtJXM_8",
@@ -18917,7 +19269,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 287.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "B71LCjEtJXM_9",
@@ -18934,7 +19287,8 @@ const ALL_VIDEOS = [
         "is4K": false,
         "fileSizeKB": 258.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 9
@@ -19009,7 +19363,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 562.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "8jD0pJLju3o_2",
@@ -19026,7 +19381,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 777.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "8jD0pJLju3o_3",
@@ -19043,7 +19399,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 530.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "8jD0pJLju3o_4",
@@ -19060,7 +19417,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 504.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "8jD0pJLju3o_5",
@@ -19077,7 +19435,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 533.4,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "8jD0pJLju3o_6",
@@ -19094,7 +19453,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 801.1,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "8jD0pJLju3o_7",
@@ -19111,7 +19471,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 716.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 7
@@ -19167,7 +19528,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 632.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "D_wR8L621Es_2",
@@ -19184,7 +19546,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 821.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "D_wR8L621Es_3",
@@ -19201,7 +19564,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 734.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "D_wR8L621Es_4",
@@ -19218,7 +19582,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 957.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "D_wR8L621Es_5",
@@ -19235,7 +19600,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 708.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "D_wR8L621Es_6",
@@ -19252,7 +19618,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 1001.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "D_wR8L621Es_7",
@@ -19269,7 +19636,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 751.6,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 7
@@ -19363,7 +19731,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 680.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "1oHJhkNDEKE_2",
@@ -19380,7 +19749,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 809.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "1oHJhkNDEKE_3",
@@ -19397,7 +19767,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 539.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "1oHJhkNDEKE_4",
@@ -19414,7 +19785,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 535.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "1oHJhkNDEKE_5",
@@ -19431,7 +19803,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 731.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "1oHJhkNDEKE_6",
@@ -19448,7 +19821,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 707.0,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "1oHJhkNDEKE_7",
@@ -19465,7 +19839,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 912.5,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 7
@@ -19540,7 +19915,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 742.7,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "WvuFp_ZphFY_2",
@@ -19557,7 +19933,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 622.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "WvuFp_ZphFY_3",
@@ -19574,7 +19951,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 465.8,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "WvuFp_ZphFY_4",
@@ -19591,7 +19969,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 754.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "WvuFp_ZphFY_5",
@@ -19608,7 +19987,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 595.3,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "WvuFp_ZphFY_6",
@@ -19625,7 +20005,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 482.2,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       },
       {
         "id": "WvuFp_ZphFY_7",
@@ -19642,7 +20023,8 @@ const ALL_VIDEOS = [
         "is4K": true,
         "fileSizeKB": 539.9,
         "tags": [],
-        "primaryPalette": []
+        "primaryPalette": [],
+        "formFactor": "desktop"
       }
     ],
     "wallpaperCount": 7

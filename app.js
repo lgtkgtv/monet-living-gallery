@@ -92,19 +92,42 @@ function renderChannelCards() {
     if (!container) return;
     container.innerHTML = '';
 
-    const priorityOrder = [
-        'LearnFromMasters',
-        'Extraordinary Visual Art',
-        'Muse Visual Art',
-        'K A R O L A',
-        'Painters Dream',
-        'Cupid Studio'
+    const profiledKeys = Object.keys(CHANNEL_PROFILES);
+    const sortedStats = [...CHANNEL_STATS].sort((a, b) => {
+        const aProfiled = profiledKeys.includes(a.channel) ? 1 : 0;
+        const bProfiled = profiledKeys.includes(b.channel) ? 1 : 0;
+        if (aProfiled !== bProfiled) return bProfiled - aProfiled;
+        return b.total_views - a.total_views;
+    });
+
+    // Render profiled channels plus any channels with >= 2 videos
+    const channelsToRender = sortedStats.filter(s => profiledKeys.includes(s.channel) || s.count >= 2);
+
+    const FALLBACK_PALETTES = [
+        { accent: '#2e4053', icon: '🏛️', archetype: 'Archival Masterwork Contributor' },
+        { accent: '#117864', icon: '🌿', archetype: 'Atmospheric Art Specialist' },
+        { accent: '#7d6608', icon: '🎨', archetype: 'Living Canvas Artisan' },
+        { accent: '#2874a6', icon: '🌊', archetype: 'Visual Landscape Pioneer' },
+        { accent: '#78281f', icon: '✨', archetype: 'Impressionist Motion Curator' },
+        { accent: '#6c3483', icon: '🎭', archetype: 'Classical & Aesthetic Curator' }
     ];
 
-    priorityOrder.forEach(key => {
-        const profile = CHANNEL_PROFILES[key];
-        const stats = CHANNEL_STATS.find(s => s.channel === key);
-        if (!profile || !stats) return;
+    channelsToRender.forEach((stats, idx) => {
+        let profile = CHANNEL_PROFILES[stats.channel];
+        if (!profile) {
+            const pal = FALLBACK_PALETTES[idx % FALLBACK_PALETTES.length];
+            profile = {
+                name: stats.channel,
+                archetype: stats.count >= 10 ? 'Major Archival Contributor' : (stats.count >= 4 ? 'Featured Impressionist Curator' : 'Independent Art Contributor'),
+                icon: pal.icon,
+                accent: pal.accent,
+                tagline: `Collection of ${stats.count} curated Impressionist masterwork presentations`,
+                characterization: `Contributing ${stats.count} presentations across this archive with ${formatViews(stats.total_views)} total views (averaging ${formatViews(stats.avg_views)} views per video).`,
+                keyThemes: ['Living Impressionism', 'Masterwork Motion', 'Art History'],
+                musicalTone: 'Classical and atmospheric ambient accompaniments.',
+                targetAudience: 'Art enthusiasts and landscape connoisseurs.'
+            };
+        }
 
         const card = document.createElement('div');
         card.className = 'channel-card';
@@ -120,7 +143,7 @@ function renderChannelCards() {
             <p class="channel-desc">${profile.characterization}</p>
             
             <div class="channel-theme-tags">
-                ${profile.keyThemes.map(t => `<span class="theme-tag">${t}</span>`).join('')}
+                ${(profile.keyThemes || []).map(t => `<span class="theme-tag">${t}</span>`).join('')}
             </div>
 
             <div class="channel-stats-row">
@@ -139,19 +162,25 @@ function renderChannelCards() {
             </div>
 
             <div class="channel-actions">
-                <button class="btn-filter-channel" onclick="filterByChannel('${profile.name}')" style="width: 100%;">
+                <button class="btn-filter-channel" onclick="filterByChannel('${escapeQuotes(profile.name)}')" style="width: 100%;">
                     🏛️ Explore ${stats.count} Curated Works
                 </button>
             </div>
         `;
         container.appendChild(card);
     });
+
+    // Update section badge dynamically
+    const badgeSpan = document.getElementById('channelGuidesBadge');
+    if (badgeSpan) {
+        badgeSpan.textContent = `${channelsToRender.length} Featured Curators · ${CHANNEL_STATS.length} Source Channels`;
+    }
 }
 
 function populateChannelFilter() {
     const select = document.getElementById('channelSelect');
     if (!select) return;
-    select.innerHTML = '<option value="ALL">All Source Channels (41)</option>';
+    select.innerHTML = `<option value="ALL">All Source Channels (${CHANNEL_STATS.length})</option>`;
 
     CHANNEL_STATS.forEach(s => {
         const opt = document.createElement('option');
@@ -228,114 +257,224 @@ function renderCurrentView() {
     }
 }
 
-function renderVideos(videos) {
+const PAGE_BATCH_SIZE = 24;
+let renderedVideoCount = 0;
+let renderedWallpaperCount = 0;
+let videoObserver = null;
+let wallpaperObserver = null;
+
+function createVideoCard(v) {
+    const card = document.createElement('div');
+    card.className = 'video-card';
+    const resBadgeClass = v.is4K ? 'badge-4k' : (v.height >= 1080 ? 'badge-fhd' : 'badge-sd');
+    let thumbSrc = v.thumb;
+    if (v.channel === 'Cupid Studio' && v.wallpapers && v.wallpapers.length > 0) {
+        thumbSrc = v.wallpapers[0].path;
+    }
+    
+    card.innerHTML = `
+        <div class="thumb-container" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}')">
+            <img class="thumb-img" src="${thumbSrc}" alt="${escapeQuotes(v.title)}" loading="lazy" />
+            <span class="thumb-badge-views">${formatViews(v.views)}</span>
+            <span class="thumb-badge-res ${resBadgeClass}">${v.qualityLabel}</span>
+            <span class="thumb-badge-duration">${v.durationFormatted}</span>
+            <div class="play-overlay">
+                <div class="play-circle">▶</div>
+            </div>
+        </div>
+        <div class="video-content">
+            <div class="video-channel" onclick="filterByChannel('${escapeQuotes(v.channel)}')" style="cursor: pointer;" title="Click to view all from this channel">
+                ${v.channel}
+            </div>
+            <h4 class="video-title" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}')" style="cursor: pointer;" title="${escapeQuotes(v.title)}">
+                ${v.title}
+            </h4>
+            
+            <div class="video-meta-pills">
+                <span class="pill-res-tag ${v.is4K ? 'tag-4k' : ''}">📐 ${v.resolution}</span>
+                <span style="color: var(--text-muted); font-size: 0.74rem;">· ⏱️ ${v.durationFormatted}</span>
+            </div>
+
+            <div class="video-actions">
+                <button class="btn-card-play" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}')" title="Watch in embedded gallery player">
+                    ▶ Play Video
+                </button>
+                <button class="btn-card-wallpaper" onclick="openWallpaperModal('${v.id}')" title="View 4K wallpaper scene snapshots for this video">
+                    🖼️ Wallpapers ${v.wallpaperCount > 0 ? `<span class="badge-count">${v.wallpaperCount}</span>` : ''}
+                </button>
+            </div>
+        </div>
+    `;
+    return card;
+}
+
+function createWallpaperCard(wp) {
+    const card = document.createElement('div');
+    card.className = 'wallpaper-card';
+    card.onclick = () => openWallpaperModal(wp.videoId, wp.snapshotIndex - 1);
+    card.innerHTML = `
+        <div class="wp-thumb-wrapper">
+            <img class="wp-thumb-img" src="${wp.path}" alt="${escapeQuotes(wp.videoTitle)}" loading="lazy" />
+            <span class="wp-pill-res">${wp.qualityLabel || '4K UHD'} (${wp.width}×${wp.height})</span>
+            <span class="wp-pill-time">Scene at ${wp.timestampFormatted}</span>
+        </div>
+        <div class="wp-card-info">
+            <span class="wp-card-channel">${wp.channel}</span>
+            <h4 class="wp-card-title">${wp.videoTitle}</h4>
+            <div class="wp-card-actions">
+                <button class="btn-wp-view">View & Download (${wp.width}×${wp.height})</button>
+            </div>
+        </div>
+    `;
+    return card;
+}
+
+function loadMoreVideos() {
+    if (renderedVideoCount >= currentVideos.length) return;
+    const sentinel = document.getElementById('videoSentinel');
+    if (sentinel) sentinel.remove();
+    renderVideos(currentVideos, true);
+}
+
+function loadMoreWallpapers() {
+    if (renderedWallpaperCount >= currentWallpapers.length) return;
+    const sentinel = document.getElementById('wallpaperSentinel');
+    if (sentinel) sentinel.remove();
+    renderWallpapers(currentWallpapers, true);
+}
+
+function renderVideos(videos, append = false) {
     const grid = document.getElementById('videosGrid');
     const countSpan = document.getElementById('resultsCount');
     if (!grid) return;
 
-    if (countSpan) {
-        countSpan.textContent = `Showing ${videos.length} of ${ALL_VIDEOS.length} works`;
-    }
-
-    if (videos.length === 0) {
-        grid.innerHTML = `
-            <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; color: var(--text-muted);">
-                <h3>No paintings or videos found</h3>
-                <p>Try adjusting your search query, resolution filter, or channel selection.</p>
-                <button class="btn btn-primary" style="margin-top: 16px;" onclick="resetFilters()">Reset All Filters</button>
-            </div>
-        `;
-        return;
-    }
-
-    grid.innerHTML = '';
-    videos.forEach(v => {
-        const card = document.createElement('div');
-        card.className = 'video-card';
-        const resBadgeClass = v.is4K ? 'badge-4k' : (v.height >= 1080 ? 'badge-fhd' : 'badge-sd');
-        let thumbSrc = v.thumb;
-        if (v.channel === 'Cupid Studio' && v.wallpapers && v.wallpapers.length > 0) {
-            thumbSrc = v.wallpapers[0].path;
+    if (!append) {
+        renderedVideoCount = 0;
+        if (videoObserver) {
+            videoObserver.disconnect();
+            videoObserver = null;
         }
-        
-        card.innerHTML = `
-            <div class="thumb-container" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}')">
-                <img class="thumb-img" src="${thumbSrc}" alt="${escapeQuotes(v.title)}" loading="lazy" />
-                <span class="thumb-badge-views">${formatViews(v.views)}</span>
-                <span class="thumb-badge-res ${resBadgeClass}">${v.qualityLabel}</span>
-                <span class="thumb-badge-duration">${v.durationFormatted}</span>
-                <div class="play-overlay">
-                    <div class="play-circle">▶</div>
-                </div>
-            </div>
-            <div class="video-content">
-                <div class="video-channel" onclick="filterByChannel('${escapeQuotes(v.channel)}')" style="cursor: pointer;" title="Click to view all from this channel">
-                    ${v.channel}
-                </div>
-                <h4 class="video-title" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}')" style="cursor: pointer;" title="${escapeQuotes(v.title)}">
-                    ${v.title}
-                </h4>
-                
-                <div class="video-meta-pills">
-                    <span class="pill-res-tag ${v.is4K ? 'tag-4k' : ''}">📐 ${v.resolution}</span>
-                    <span style="color: var(--text-muted); font-size: 0.74rem;">· ⏱️ ${v.durationFormatted}</span>
-                </div>
+        grid.innerHTML = '';
 
-                <div class="video-actions">
-                    <button class="btn-card-play" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}')" title="Watch in embedded gallery player">
-                        ▶ Play Video
-                    </button>
-                    <button class="btn-card-wallpaper" onclick="openWallpaperModal('${v.id}')" title="View 4K wallpaper scene snapshots for this video">
-                        🖼️ Wallpapers ${v.wallpaperCount > 0 ? `<span class="badge-count">${v.wallpaperCount}</span>` : ''}
-                    </button>
+        if (videos.length === 0) {
+            if (countSpan) countSpan.textContent = `Showing 0 of ${ALL_VIDEOS.length} works`;
+            grid.innerHTML = `
+                <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; color: var(--text-muted);">
+                    <h3>No paintings or videos found</h3>
+                    <p>Try adjusting your search query, resolution filter, or channel selection.</p>
+                    <button class="btn btn-primary" style="margin-top: 16px;" onclick="resetFilters()">Reset All Filters</button>
                 </div>
-            </div>
+            `;
+            return;
+        }
+    } else {
+        const oldSentinel = document.getElementById('videoSentinel');
+        if (oldSentinel) oldSentinel.remove();
+    }
+
+    const batch = videos.slice(renderedVideoCount, renderedVideoCount + PAGE_BATCH_SIZE);
+    const fragment = document.createDocumentFragment();
+    batch.forEach(v => fragment.appendChild(createVideoCard(v)));
+    grid.appendChild(fragment);
+    renderedVideoCount += batch.length;
+
+    if (countSpan) {
+        if (renderedVideoCount < videos.length) {
+            countSpan.textContent = `Showing ${renderedVideoCount} of ${videos.length} works (scroll for more)`;
+        } else {
+            countSpan.textContent = `Showing ${videos.length} of ${ALL_VIDEOS.length} works`;
+        }
+    }
+
+    if (renderedVideoCount < videos.length) {
+        const remaining = videos.length - renderedVideoCount;
+        const sentinel = document.createElement('div');
+        sentinel.id = 'videoSentinel';
+        sentinel.className = 'progressive-sentinel';
+        sentinel.innerHTML = `
+            <button type="button" class="btn-load-more" onclick="loadMoreVideos()">
+                <span>Load More Paintings (${remaining} remaining)</span> ↓
+            </button>
         `;
-        grid.appendChild(card);
-    });
+        grid.appendChild(sentinel);
+
+        if ('IntersectionObserver' in window) {
+            if (videoObserver) videoObserver.disconnect();
+            videoObserver = new IntersectionObserver((entries) => {
+                if (entries[0] && entries[0].isIntersecting) {
+                    loadMoreVideos();
+                }
+            }, { rootMargin: '400px' });
+            videoObserver.observe(sentinel);
+        }
+    }
 }
 
-function renderWallpapers(wallpapers) {
+function renderWallpapers(wallpapers, append = false) {
     const grid = document.getElementById('wallpapersGrid');
     const countSpan = document.getElementById('resultsCount');
     if (!grid) return;
 
-    if (countSpan) {
-        countSpan.textContent = `Showing ${wallpapers.length} wallpapers`;
-    }
+    if (!append) {
+        renderedWallpaperCount = 0;
+        if (wallpaperObserver) {
+            wallpaperObserver.disconnect();
+            wallpaperObserver = null;
+        }
+        grid.innerHTML = '';
 
-    if (wallpapers.length === 0) {
-        grid.innerHTML = `
-            <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; color: var(--text-muted);">
-                <h3>No wallpapers match your criteria</h3>
-                <p>Try clearing your search or selecting a different channel or resolution.</p>
-                <button class="btn btn-primary" style="margin-top: 16px;" onclick="resetFilters()">Reset All Filters</button>
-            </div>
-        `;
-        return;
-    }
-
-    grid.innerHTML = '';
-    wallpapers.forEach(wp => {
-        const card = document.createElement('div');
-        card.className = 'wallpaper-card';
-        card.onclick = () => openWallpaperModal(wp.videoId, wp.snapshotIndex - 1);
-        card.innerHTML = `
-            <div class="wp-thumb-wrapper">
-                <img class="wp-thumb-img" src="${wp.path}" alt="${escapeQuotes(wp.videoTitle)}" loading="lazy" />
-                <span class="wp-pill-res">${wp.qualityLabel || '4K UHD'} (${wp.width}×${wp.height})</span>
-                <span class="wp-pill-time">Scene at ${wp.timestampFormatted}</span>
-            </div>
-            <div class="wp-card-info">
-                <span class="wp-card-channel">${wp.channel}</span>
-                <h4 class="wp-card-title">${wp.videoTitle}</h4>
-                <div class="wp-card-actions">
-                    <button class="btn-wp-view">View & Download (${wp.width}×${wp.height})</button>
+        if (wallpapers.length === 0) {
+            if (countSpan) countSpan.textContent = `Showing 0 wallpapers`;
+            grid.innerHTML = `
+                <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; color: var(--text-muted);">
+                    <h3>No wallpapers match your criteria</h3>
+                    <p>Try clearing your search or selecting a different channel or resolution.</p>
+                    <button class="btn btn-primary" style="margin-top: 16px;" onclick="resetFilters()">Reset All Filters</button>
                 </div>
-            </div>
+            `;
+            return;
+        }
+    } else {
+        const oldSentinel = document.getElementById('wallpaperSentinel');
+        if (oldSentinel) oldSentinel.remove();
+    }
+
+    const batch = wallpapers.slice(renderedWallpaperCount, renderedWallpaperCount + PAGE_BATCH_SIZE);
+    const fragment = document.createDocumentFragment();
+    batch.forEach(wp => fragment.appendChild(createWallpaperCard(wp)));
+    grid.appendChild(fragment);
+    renderedWallpaperCount += batch.length;
+
+    if (countSpan) {
+        if (renderedWallpaperCount < wallpapers.length) {
+            countSpan.textContent = `Showing ${renderedWallpaperCount} of ${wallpapers.length} wallpapers (scroll for more)`;
+        } else {
+            countSpan.textContent = `Showing ${wallpapers.length} wallpapers`;
+        }
+    }
+
+    if (renderedWallpaperCount < wallpapers.length) {
+        const remaining = wallpapers.length - renderedWallpaperCount;
+        const sentinel = document.createElement('div');
+        sentinel.id = 'wallpaperSentinel';
+        sentinel.className = 'progressive-sentinel';
+        sentinel.innerHTML = `
+            <button type="button" class="btn-load-more" onclick="loadMoreWallpapers()">
+                <span>Load More Wallpapers (${remaining} remaining)</span> ↓
+            </button>
         `;
-        grid.appendChild(card);
-    });
+        grid.appendChild(sentinel);
+
+        if ('IntersectionObserver' in window) {
+            if (wallpaperObserver) wallpaperObserver.disconnect();
+            wallpaperObserver = new IntersectionObserver((entries) => {
+                if (entries[0] && entries[0].isIntersecting) {
+                    loadMoreWallpapers();
+                }
+            }, { rootMargin: '400px' });
+            wallpaperObserver.observe(sentinel);
+        }
+    }
 }
 
 function escapeQuotes(str) {
@@ -345,26 +484,28 @@ function escapeQuotes(str) {
 // Search Guidance & Pre-Curated Artist / Theme Suggestions
 const SEARCH_GUIDE = {
     artists: [
-        { label: '🎨 Claude Monet (70)', query: 'Monet' },
-        { label: '🎨 Pierre-Auguste Renoir (7)', query: 'Renoir' },
-        { label: '🎨 Alfred Sisley', query: 'Sisley' },
-        { label: '🎨 Eugène Boudin', query: 'Boudin' },
-        { label: '🎨 Isaac Levitan', query: 'Levitan' },
-        { label: '🎨 Gustave Loiseau', query: 'Loiseau' },
-        { label: '🎨 Henri Rousseau', query: 'Rousseau' },
-        { label: '🎨 Charles Leickert', query: 'Leickert' }
+        { name: 'Claude Monet', query: 'Monet', icon: '🎨' },
+        { name: 'Pierre-Auguste Renoir', query: 'Renoir', icon: '🎨' },
+        { name: 'Alfred Sisley', query: 'Sisley', icon: '🎨' },
+        { name: 'Eugène Boudin', query: 'Boudin', icon: '🎨' },
+        { name: 'Isaac Levitan', query: 'Levitan', icon: '🎨' },
+        { name: 'Gustave Loiseau', query: 'Loiseau', icon: '🎨' },
+        { name: 'Henri Rousseau', query: 'Rousseau', icon: '🎨' },
+        { name: 'Charles Leickert', query: 'Leickert', icon: '🎨' },
+        { name: 'Edouard-Léon Cortès', query: 'Cortès', icon: '🎨' },
+        { name: 'Antonio Parreiras', query: 'Parreiras', icon: '🎨' }
     ],
     themes: [
-        { label: '❄️ Winter & Snow (6)', query: 'Winter' },
-        { label: '🪷 Water Lilies', query: 'Water Lilies' },
-        { label: '🌿 Garden Sanctuaries (11)', query: 'Garden' },
-        { label: '🗼 Paris Belle Époque (6)', query: 'Paris' },
-        { label: '🎭 Venice Canals (4)', query: 'Venice' },
-        { label: '🌊 Coastal & Étretat', query: 'Étretat' },
-        { label: '🌅 Sunrise & Sunlight', query: 'Sunrise' },
-        { label: '⛵ River Seine', query: 'Seine' },
-        { label: '🚂 Steam Trains', query: 'Train' },
-        { label: '🇫🇷 France Countryside', query: 'France' }
+        { name: 'Winter & Snow', query: 'Winter', icon: '❄️' },
+        { name: 'Water Lilies', query: 'Water Lilies', icon: '🪷' },
+        { name: 'Garden Sanctuaries', query: 'Garden', icon: '🌿' },
+        { name: 'Paris Belle Époque', query: 'Paris', icon: '🗼' },
+        { name: 'Venice Canals', query: 'Venice', icon: '🎭' },
+        { name: 'Coastal & Étretat', query: 'Étretat', icon: '🌊' },
+        { name: 'Sunrise & Sunlight', query: 'Sunrise', icon: '🌅' },
+        { name: 'River Seine', query: 'Seine', icon: '⛵' },
+        { name: 'Steam Trains', query: 'Train', icon: '🚂' },
+        { name: 'France Countryside', query: 'France', icon: '🇫🇷' }
     ]
 };
 
@@ -373,27 +514,20 @@ function initSearchSuggestions() {
     if (!container) return;
     container.innerHTML = '';
 
-    SEARCH_GUIDE.artists.forEach(item => {
+    const createChip = (item, typeClass) => {
+        const count = ALL_VIDEOS.filter(v => matchesSearch(v.title, v.channel, item.query)).length;
         const chip = document.createElement('button');
-        chip.className = 'suggestion-chip chip-artist';
-        chip.textContent = item.label;
+        chip.className = `suggestion-chip ${typeClass}`;
+        chip.textContent = count > 0 ? `${item.icon} ${item.name} (${count})` : `${item.icon} ${item.name}`;
         chip.dataset.query = item.query;
         chip.setAttribute('type', 'button');
-        chip.setAttribute('title', `Filter by artist: ${item.query}`);
+        chip.setAttribute('title', `Filter by: ${item.name} (${count} works found)`);
         chip.onclick = () => applySearchChip(item.query);
         container.appendChild(chip);
-    });
+    };
 
-    SEARCH_GUIDE.themes.forEach(item => {
-        const chip = document.createElement('button');
-        chip.className = 'suggestion-chip chip-theme';
-        chip.textContent = item.label;
-        chip.dataset.query = item.query;
-        chip.setAttribute('type', 'button');
-        chip.setAttribute('title', `Filter by theme: ${item.query}`);
-        chip.onclick = () => applySearchChip(item.query);
-        container.appendChild(chip);
-    });
+    SEARCH_GUIDE.artists.forEach(item => createChip(item, 'chip-artist'));
+    SEARCH_GUIDE.themes.forEach(item => createChip(item, 'chip-theme'));
 }
 
 function applySearchChip(query) {
@@ -1143,29 +1277,11 @@ async function downloadAllFilteredWallpapers() {
 // FULLSCREEN WALLPAPER SLIDESHOW CONTROLLER
 // ==========================================================================
 
-// Known mobile / portrait pillarboxed wallpaper snapshots
-const MOBILE_WALLPAPER_PATHS = new Set([
-    'wallpapers/49gUho777mI/snapshot_1.jpg',
-    'wallpapers/49gUho777mI/snapshot_2.jpg',
-    'wallpapers/49gUho777mI/snapshot_3.jpg',
-    'wallpapers/4cdn4PvIjao/snapshot_1.jpg',
-    'wallpapers/8XdHP_fQoB0/snapshot_1.jpg',
-    'wallpapers/8XdHP_fQoB0/snapshot_2.jpg',
-    'wallpapers/TZUn8nU0CZI/snapshot_1.jpg',
-    'wallpapers/TZUn8nU0CZI/snapshot_2.jpg',
-    'wallpapers/TZUn8nU0CZI/snapshot_3.jpg',
-    'wallpapers/gAWrEV-3ahw/snapshot_2.jpg',
-    'wallpapers/gAWrEV-3ahw/snapshot_3.jpg',
-    'wallpapers/h3-WUZi-0hU/snapshot_1.jpg',
-    'wallpapers/h3-WUZi-0hU/snapshot_2.jpg',
-    'wallpapers/nCVYEqc_Hw4/snapshot_1.jpg',
-    'wallpapers/nCVYEqc_Hw4/snapshot_2.jpg',
-    'wallpapers/nCVYEqc_Hw4/snapshot_3.jpg'
-]);
-
 function isMobileFormFactor(wp) {
-    if (!wp || !wp.path) return false;
-    return MOBILE_WALLPAPER_PATHS.has(wp.path) || (wp.height > wp.width);
+    if (!wp) return false;
+    if (wp.formFactor === 'mobile') return true;
+    if (wp.formFactor === 'desktop') return false;
+    return (wp.height > wp.width);
 }
 
 let slideshowRawList = [];

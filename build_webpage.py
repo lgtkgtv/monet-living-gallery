@@ -112,6 +112,17 @@ def main():
             'keyThemes': ['Parisian Love Stories', 'Ballet, Opera & Belle Époque Elegance', 'Venice & Riviera Escapes', 'Cozy Romantic Nostalgia'],
             'musicalTone': 'Romantic waltzes, French accordion, passionate strings, and gentle romantic melodies.',
             'targetAudience': 'Romantics, travelers dreaming of vintage Paris and Venice, and fans of cozy nostalgic storytelling.'
+        },
+        'Beautiful Living Art': {
+            'name': 'Beautiful Living Art',
+            'archetype': 'The Living Oil Painting & Visual Poet',
+            'icon': '🖼️',
+            'accent': '#117864',
+            'tagline': 'Visual poetry and living Monet & Renoir canvas animations paired with relaxing music',
+            'characterization': 'Characterized by poetic series titles: "Visual Poems", "Enter an Impressionist Painting", and "Living Oil Paintings | Dreamy French Art Aesthetic". Beautiful Living Art breathes gentle, atmospheric life into Claude Monet\'s water gardens and Pierre-Auguste Renoir\'s sunlit figures, accompanied by ambient meditative piano.',
+            'keyThemes': ['Visual Poetry', 'Claude Monet & Renoir Canvas Living Art', 'Dreamy French Aesthetic', 'Atmospheric AI Motion'],
+            'musicalTone': 'Warm, relaxing neoclassical and meditative piano solos.',
+            'targetAudience': 'Viewers seeking gentle French Impressionist ambiance, living canvas wall art, and relaxing study accompaniment.'
         }
     }
 
@@ -122,6 +133,8 @@ def main():
             with open('wallpapers/metadata.json', 'r', encoding='utf-8') as f:
                 wp_list = json.load(f)
                 for wp in wp_list:
+                    if 'formFactor' not in wp:
+                        wp['formFactor'] = 'mobile' if wp.get('height', 1080) > wp.get('width', 1920) else 'desktop'
                     wallpapers_map[wp['videoId']].append(wp)
         except Exception as e:
             print('Error loading wallpapers metadata:', e)

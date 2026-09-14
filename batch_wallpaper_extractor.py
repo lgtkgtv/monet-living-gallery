@@ -58,6 +58,34 @@ def format_timestamp(seconds):
     h, m = divmod(m, 60)
     return f"{h:d}:{m:02d}:{s:02d}" if h else f"{m:02d}:{s:02d}"
 
+def detect_form_factor(image_path, width=None, height=None):
+    """
+    Detect whether an extracted wallpaper is desktop widescreen or mobile/pillarboxed portrait.
+    Returns 'mobile' if height > width or if black pillarbox bars are detected on left/right edges.
+    Otherwise returns 'desktop'.
+    """
+    try:
+        from PIL import Image
+        with Image.open(image_path) as img:
+            w, h = img.size
+            if h > w:
+                return "mobile"
+            # Sample left/right margins to check for black pillarbox bars
+            rgb = img.convert("RGB")
+            left_sample = rgb.crop((int(w * 0.02), int(h * 0.2), int(w * 0.06), int(h * 0.8)))
+            right_sample = rgb.crop((int(w * 0.94), int(h * 0.2), int(w * 0.98), int(h * 0.8)))
+            
+            left_lums = [p[0] * 0.299 + p[1] * 0.587 + p[2] * 0.114 for p in left_sample.getdata()]
+            right_lums = [p[0] * 0.299 + p[1] * 0.587 + p[2] * 0.114 for p in right_sample.getdata()]
+            avg_l = sum(left_lums) / max(len(left_lums), 1)
+            avg_r = sum(right_lums) / max(len(right_lums), 1)
+            if avg_l < 18 and avg_r < 18:
+                return "mobile"
+    except Exception:
+        if height and width and height > width:
+            return "mobile"
+    return "desktop"
+
 def load_playlist_and_resolutions():
     with open(PLAYLIST_FILE, "r", encoding="utf-8") as f:
         playlist = json.load(f)
@@ -286,6 +314,7 @@ def extract_video_wallpapers(entry):
                     "height": height,
                     "qualityLabel": quality_label,
                     "is4K": is_4k,
+                    "formFactor": detect_form_factor(out_path, width, height),
                     "fileSizeKB": file_size_kb,
                     "tags": [],
                     "primaryPalette": []
@@ -332,6 +361,7 @@ def extract_video_wallpapers(entry):
                     "height": height,
                     "qualityLabel": quality_label,
                     "is4K": is_4k,
+                    "formFactor": detect_form_factor(out_path, width, height),
                     "fileSizeKB": file_size_kb,
                     "tags": [],
                     "primaryPalette": []
