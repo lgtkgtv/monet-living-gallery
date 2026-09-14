@@ -1,12 +1,14 @@
 // Service Worker for L'Impressionnisme Vivant
-const CACHE_NAME = 'monet-gallery-v8';
+const CACHE_NAME = 'monet-gallery-v9';
 
 const CORE_PRECACHE_URLS = [
   './',
   'index.html',
   'styles.css',
+  'config.js',
   'app.js',
   'data.js',
+  'data.json',
   'jszip.min.js',
   'manifest.json',
   'icons/icon-192.png',

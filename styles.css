@@ -1755,6 +1755,25 @@ select:focus-visible {
   text-decoration-color: var(--color-gold);
 }
 
+.footer-legal-link {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  margin-left: 6px;
+  transition: var(--transition);
+}
+
+.footer-legal-link:hover {
+  color: var(--color-gold);
+  text-decoration-color: var(--color-gold);
+}
+
 /* ==========================================================================
    MOBILE & RESPONSIVE DEVICE OPTIMIZATIONS
    ========================================================================== */
@@ -3104,5 +3123,125 @@ select:focus-visible {
 [data-theme="dark"] .video-card:hover {
   border-color: rgba(229, 176, 53, 0.4);
 }
+
+/* ==========================================================================
+   CENTRAL CONFIGURATION FLAGS STYLES
+   ========================================================================== */
+.config-downloads-disabled .wp-card-actions .btn-card-action[data-wp-action="download"],
+.config-downloads-disabled #wpDownloadCurrentBtn,
+.config-downloads-disabled #wpDownloadAllBtn,
+.config-downloads-disabled #wpDownloadFilteredBtn,
+.config-downloads-disabled [data-config-action="download"] {
+  display: none !important;
+}
+
+/* ==========================================================================
+   LEGAL & COPYRIGHT NOTICE MODAL
+   ========================================================================== */
+.legal-modal-content {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  max-width: 680px;
+  width: 92%;
+  max-height: 86vh;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+  overflow-y: auto;
+  border: 1px solid var(--border-color);
+  animation: modalScaleIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.legal-modal-body {
+  padding: 24px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.legal-section {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 16px;
+}
+
+.legal-section:last-of-type {
+  border-bottom: none;
+  padding-bottom: 4px;
+}
+
+.legal-heading {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legal-text {
+  font-size: 0.90rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.legal-text strong {
+  color: var(--text-main);
+}
+
+.legal-text code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.84rem;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.legal-contact-link {
+  color: var(--color-gold);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.legal-contact-link:hover {
+  color: var(--color-accent);
+}
+
+.legal-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+}
+
+.btn-legal-close {
+  padding: 10px 22px;
+  background: var(--color-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-legal-close:hover {
+  background: var(--color-gold);
+  color: #0b1510;
+}
+
+[data-theme="dark"] .legal-modal-content {
+  background: #111d16;
+  border-color: #24382c;
+}
+
+[data-theme="dark"] .legal-text {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .legal-text code {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f1f5f9;
+}
+
 
 

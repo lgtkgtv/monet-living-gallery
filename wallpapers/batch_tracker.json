@@ -1066,9 +1066,9 @@
       "is_4k": false,
       "height": 1080,
       "duration": 199,
-      "status": "pending",
-      "extracted_count": 0,
-      "last_attempt": null,
+      "status": "completed",
+      "extracted_count": 7,
+      "last_attempt": "2026-09-14T16:33:01.882288",
       "error": null,
       "retry_count": 0
     },
@@ -1082,9 +1082,9 @@
       "is_4k": false,
       "height": 1080,
       "duration": 190,
-      "status": "pending",
-      "extracted_count": 0,
-      "last_attempt": null,
+      "status": "completed",
+      "extracted_count": 7,
+      "last_attempt": "2026-09-14T16:31:18.953826",
       "error": null,
       "retry_count": 0
     },
@@ -2570,9 +2570,9 @@
       "is_4k": false,
       "height": 1080,
       "duration": 43135,
-      "status": "pending",
-      "extracted_count": 0,
-      "last_attempt": null,
+      "status": "completed",
+      "extracted_count": 16,
+      "last_attempt": "2026-09-14T16:31:41.658752",
       "error": null,
       "retry_count": 0
     },
@@ -3393,5 +3393,5 @@
       "retry_count": 0
     }
   },
-  "last_updated": "2026-09-14T11:54:36.796841"
+  "last_updated": "2026-09-14T16:33:20.556155"
 }

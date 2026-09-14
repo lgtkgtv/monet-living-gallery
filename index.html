@@ -424,6 +424,7 @@
             <a href="https://www.youtube.com/playlist?list=PLeqGkucOU6lA" target="_blank" rel="noopener noreferrer" class="footer-source-link" title="Original YouTube playlist: sh_Monet inspired Visual Arts">
                 YouTube Playlist (sh_Monet inspired Visual Arts) ↗
             </a>
+            · <button class="footer-legal-link" onclick="openLegalModal()" title="View copyright, public domain, and fair use information">Legal &amp; Copyright Notice</button>
         </p>
     </footer>
 
@@ -476,12 +477,69 @@
         </div>
     </div>
 
+    <!-- Modal 5: Legal & Copyright Notice Lightbox -->
+    <div id="legalModalOverlay" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Legal & Copyright Notice" style="display: none;">
+        <div class="legal-modal-content">
+            <div class="modal-header">
+                <div>
+                    <h3 class="modal-title">⚖️ Legal, Copyright &amp; Fair Use Notice</h3>
+                    <div class="modal-res-tag">Educational Art Index &amp; Public Domain Archive</div>
+                </div>
+                <button class="btn-close-modal" onclick="closeLegalModal()" aria-label="Close Legal Notice Dialog">✕</button>
+            </div>
+
+            <div class="legal-modal-body">
+                <section class="legal-section">
+                    <h4 class="legal-heading">🎨 1. Public Domain Status of Artworks</h4>
+                    <p class="legal-text">
+                        The Impressionist masterworks featured across this application (including paintings by Claude Monet, Camille Pissarro, Pierre-Auguste Renoir, Alfred Sisley, Eugène Boudin, Paul Cézanne, Edgar Degas, and contemporaries) were created between the 1860s and 1920s. Under United States copyright law (17 U.S.C. § 304) and international treaties (Berne Convention), all original two-dimensional paintings whose authors passed away over 70–95 years ago are in the worldwide <strong>Public Domain</strong>. Furthermore, under established legal precedent (<em>Bridgeman Art Library v. Corel Corp.</em>, 36 F. Supp. 2d 191), faithful photographic reproductions of two-dimensional public domain paintings do not create new copyright protection.
+                    </p>
+                </section>
+
+                <section class="legal-section">
+                    <h4 class="legal-heading">📺 2. YouTube Video Presentation &amp; Direct Attribution</h4>
+                    <p class="legal-text">
+                        <em>L'Impressionnisme Vivant</em> does not host, re-encode, or redistribute full video files. All video playback is served through standard YouTube privacy-enhanced embedded players (<code>youtube-nocookie.com</code>). Video playback directly supports the originating creators—including LearnFromMasters, Muse Visual Art, Beautiful Living Art, and other channels—by routing official view counts, watch time, and advertising revenue directly to their YouTube accounts. Direct channel links and YouTube watch links are prominently attributed on every title card and modal.
+                    </p>
+                </section>
+
+                <section class="legal-section">
+                    <h4 class="legal-heading">🖼️ 3. Wallpaper Snapshots &amp; Personal Non-Commercial Use</h4>
+                    <p class="legal-text">
+                        High-definition scene snapshots are provided solely for non-commercial, personal desktop/mobile wallpaper use and educational study of Impressionist brushwork and color harmony. If a content creator prefers that snapshots from their channel not be showcased in the wallpaper explorer, they can notify the curator for immediate removal or exclusion via configuration flags.
+                    </p>
+                </section>
+
+                <section class="legal-section">
+                    <h4 class="legal-heading">🎵 4. Classical Audio Suite</h4>
+                    <p class="legal-text">
+                        The optional ambient classical audio works (Claude Debussy, Erik Satie, and Maurice Ravel) are historical compositions in the public domain. Ambient audio is automatically paused whenever any video is opened so that each creator's original video soundtrack plays exclusively.
+                    </p>
+                </section>
+
+                <section class="legal-section">
+                    <h4 class="legal-heading">📬 5. DMCA &amp; Curator Contact</h4>
+                    <p class="legal-text">
+                        If you are a copyright holder or YouTube channel creator and have questions, concerns, or takedown requests regarding any title or frame snapshot in this index, please contact curator <strong>sachin g</strong> directly at <a href="mailto:lgtkgtv@gmail.com?subject=monet-living-gallery%20Notice%3A%20" class="legal-contact-link">lgtkgtv@gmail.com</a>. All valid creator requests are honored promptly within 24–48 hours.
+                    </p>
+                </section>
+
+                <div class="legal-modal-footer">
+                    <button class="btn-legal-close" onclick="closeLegalModal()">
+                        Understood &amp; Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Floating Back to Top Button -->
     <button id="backToTopBtn" class="back-to-top-btn" onclick="scrollToTop()" title="Back to top of gallery" aria-label="Back to top">
         ↑
     </button>
 
     <!-- Scripts -->
+    <script src="./config.js"></script>
     <script src="./data.js"></script>
     <script src="./app.js"></script>
     

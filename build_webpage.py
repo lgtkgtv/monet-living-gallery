@@ -213,7 +213,7 @@ def main():
     clean_videos.sort(key=lambda x: x['views'], reverse=True)
 
     data_js = f"""// Generated Data for Monet Playlist Web Guide & 4K Wallpaper Archive
-const PLAYLIST_METADATA = {{
+var PLAYLIST_METADATA = {{
     title: "sh_Monet inspired Visual Arts",
     playlistUrl: "https://www.youtube.com/playlist?list=PLeqGkucOU6lA",
     totalVideos: {len(clean_videos)},
@@ -225,14 +225,35 @@ const PLAYLIST_METADATA = {{
     countFHD: {count_fhd}
 }};
 
-const CHANNEL_PROFILES = {json.dumps(channel_profiles, indent=2, ensure_ascii=False)};
-const CHANNEL_STATS = {json.dumps(channel_stats, indent=2, ensure_ascii=False)};
-const ALL_VIDEOS = {json.dumps(clean_videos, indent=2, ensure_ascii=False)};
+var CHANNEL_PROFILES = {json.dumps(channel_profiles, indent=2, ensure_ascii=False)};
+var CHANNEL_STATS = {json.dumps(channel_stats, indent=2, ensure_ascii=False)};
+var ALL_VIDEOS = {json.dumps(clean_videos, indent=2, ensure_ascii=False)};
 """
 
     with open('data.js', 'w', encoding='utf-8') as f:
         f.write(data_js)
-    print(f'data.js updated: {len(clean_videos)} videos, {count_4k} in 4K, {sum(v["wallpaperCount"] for v in clean_videos)} wallpapers.')
+
+    data_payload = {
+        'metadata': {
+            'title': "sh_Monet inspired Visual Arts",
+            'playlistUrl': "https://www.youtube.com/playlist?list=PLeqGkucOU6lA",
+            'totalVideos': len(clean_videos),
+            'totalViews': sum(v['views'] for v in clean_videos),
+            'totalDurationSec': sum(v['durationSec'] for v in clean_videos),
+            'channelCount': len(channels),
+            'totalWallpapers': sum(v['wallpaperCount'] for v in clean_videos),
+            'count4K': count_4k,
+            'countFHD': count_fhd
+        },
+        'channelProfiles': channel_profiles,
+        'channelStats': channel_stats,
+        'videos': clean_videos
+    }
+
+    with open('data.json', 'w', encoding='utf-8') as f:
+        json.dump(data_payload, f, separators=(',', ':'), ensure_ascii=False)
+
+    print(f'data.js and data.json updated: {len(clean_videos)} videos, {count_4k} in 4K, {sum(v["wallpaperCount"] for v in clean_videos)} wallpapers.')
 
     # Update CSV with resolution columns
     with open('monet_playlist_by_channel.csv', 'w', newline='', encoding='utf-8') as f:

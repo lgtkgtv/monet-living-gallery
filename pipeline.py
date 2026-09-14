@@ -122,27 +122,74 @@ def run_extract(batch_size=10, tier=None, delay=3.0):
     res = subprocess.run(cmd, capture_output=False)
     return res.returncode == 0
 
-def run_pull_playlist(playlist_url="https://www.youtube.com/playlist?list=PLeqGkucOU6lA"):
-    print(f"📥 Fetching playlist metadata from YouTube via yt-dlp: {playlist_url} ...")
-    cmd = ['yt-dlp', '--flat-playlist', '-J', playlist_url]
-    try:
-        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
-        if proc.returncode == 0 and proc.stdout:
-            data = json.loads(proc.stdout)
-            entries = data.get('entries', [])
-            if entries:
-                with open(PLAYLIST_FILE, 'w', encoding='utf-8') as f:
-                    json.dump(entries, f, indent=2, ensure_ascii=False)
-                print(f"✅ Successfully pulled {len(entries)} playlist items into {PLAYLIST_FILE}.")
-                return True
-        print(f"❌ yt-dlp failed: {proc.stderr[:300]}")
-    except Exception as e:
-        print(f"❌ Exception pulling playlist: {e}")
+PLAYLIST_REGISTRY = 'playlists.json'
+
+def get_configured_playlists():
+    if os.path.exists(PLAYLIST_REGISTRY):
+        try:
+            with open(PLAYLIST_REGISTRY, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                return [p['url'] for p in data if p.get('enabled', True) and p.get('url')]
+        except Exception as e:
+            print(f"⚠️ Could not read {PLAYLIST_REGISTRY}: {e}")
+    return ["https://www.youtube.com/playlist?list=PLeqGkucOU6lA"]
+
+def run_pull_playlist(playlist_urls=None):
+    if not playlist_urls:
+        playlist_urls = get_configured_playlists()
+    elif isinstance(playlist_urls, str):
+        if ',' in playlist_urls:
+            playlist_urls = [u.strip() for u in playlist_urls.split(',') if u.strip()]
+        else:
+            playlist_urls = [playlist_urls.strip()]
+
+    all_entries = []
+    seen_ids = set()
+
+    for p_url in playlist_urls:
+        print(f"📥 Fetching playlist metadata via yt-dlp: {p_url} ...")
+        cmd = ['yt-dlp', '--flat-playlist', '-J', p_url]
+        try:
+            proc = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+            if proc.returncode == 0 and proc.stdout:
+                data = json.loads(proc.stdout)
+                entries = data.get('entries', [])
+                new_added = 0
+                for item in entries:
+                    v_id = item.get('id')
+                    if v_id and v_id not in seen_ids:
+                        seen_ids.add(v_id)
+                        all_entries.append(item)
+                        new_added += 1
+                print(f"   ✓ Added {new_added} unique items ({len(entries)} total in this playlist).")
+            else:
+                print(f"   ❌ yt-dlp failed for {p_url}: {proc.stderr[:200]}")
+        except Exception as e:
+            print(f"   ❌ Exception pulling {p_url}: {e}")
+
+    if all_entries:
+        with open(PLAYLIST_FILE, 'w', encoding='utf-8') as f:
+            json.dump(all_entries, f, indent=2, ensure_ascii=False)
+        print(f"✅ Successfully written {len(all_entries)} combined catalog items to {PLAYLIST_FILE}.")
+        return True
     return False
 
 def run_serve(port=8000):
     print(f"🚀 Starting local gallery server on http://localhost:{port} ...")
     subprocess.run([sys.executable, '-m', 'http.server', str(port)])
+
+def run_refresh(playlist_urls=None):
+    print_banner("🔄 Refreshing Gallery from Source YouTube Playlist(s)")
+    print("\nStep 1/3: Pulling latest playlist entries from YouTube...")
+    success = run_pull_playlist(playlist_urls)
+    if not success:
+        print("⚠️ Could not pull fresh playlist. Retaining current catalog.")
+    print("\nStep 2/3: Checking and probing video resolutions cache...")
+    run_sync_resolutions()
+    print("\nStep 3/3: Rebuilding web application assets (data.js, data.json, CSV)...")
+    run_build()
+    print("\n✨ Gallery refreshed and rebuilt successfully.")
+    get_status()
 
 def run_full_sync():
     print_banner("🔄 Running Full End-to-End Pipeline Sync")
@@ -152,7 +199,7 @@ def run_full_sync():
     run_sync_resolutions()
     print("\nStep 3/4: Running wallpaper extraction batch...")
     run_extract(batch_size=5, tier='fhd', delay=2.0)
-    print("\nStep 4/4: Building web assets, data.js, CSV, and Markdown catalogs...")
+    print("\nStep 4/4: Building web assets, data.js, data.json, and CSV catalogs...")
     run_build()
     print("\n✅ Full pipeline sync completed.")
     get_status()
@@ -163,14 +210,15 @@ def main():
         formatter_class=argparse.RawTextHelpFormatter
     )
     parser.add_argument('--status', action='store_true', help="Display comprehensive pipeline & catalog dashboard")
-    parser.add_argument('--pull-playlist', nargs='?', const='https://www.youtube.com/playlist?list=PLeqGkucOU6lA', help="Fetch fresh playlist JSON from YouTube via yt-dlp")
-    parser.add_argument('--build', action='store_true', help="Rebuild data.js and catalog CSV")
+    parser.add_argument('--refresh', nargs='?', const='', help="One-command manual refresh: pull playlist(s), probe resolutions & rebuild site")
+    parser.add_argument('--pull-playlist', nargs='?', const='', help="Fetch fresh playlist JSON (accepts URL, comma-separated URLs, or reads playlists.json)")
+    parser.add_argument('--build', action='store_true', help="Rebuild data.js, data.json, and catalog CSV")
     parser.add_argument('--sync-resolutions', action='store_true', help="Probe missing resolutions from YouTube")
     parser.add_argument('--extract', action='store_true', help="Extract wallpaper scenes using batch_wallpaper_extractor.py")
     parser.add_argument('--batch-size', type=int, default=10, help="Batch size for wallpaper extraction (default: 10)")
     parser.add_argument('--tier', type=str.upper, choices=['4K', 'FHD', 'ALL'], default=None, help="Resolution tier filter for extraction")
     parser.add_argument('--delay', type=float, default=3.0, help="Anti-throttling delay in seconds between video extractions")
-    parser.add_argument('--sync', action='store_true', help="Perform full automated end-to-end sync")
+    parser.add_argument('--sync', action='store_true', help="Perform full automated end-to-end sync (with wallpaper extraction)")
     parser.add_argument('--serve', action='store_true', help="Start local preview web server")
     parser.add_argument('--port', type=int, default=8000, help="Port for local web server (default: 8000)")
 
@@ -184,8 +232,12 @@ def main():
 
     if args.status:
         get_status()
-    if args.pull_playlist:
-        if run_pull_playlist(args.pull_playlist):
+    if args.refresh is not None:
+        target = args.refresh if args.refresh else None
+        run_refresh(target)
+    if args.pull_playlist is not None:
+        target = args.pull_playlist if args.pull_playlist else None
+        if run_pull_playlist(target):
             run_sync_resolutions()
     if args.sync_resolutions:
         run_sync_resolutions()
