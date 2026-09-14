@@ -561,6 +561,91 @@ function loadMoreWallpapers() {
     renderWallpapers(currentWallpapers, true);
 }
 
+function buildEmptyStateHTML(type = 'paintings') {
+    const channelEl = document.getElementById('channelSelect');
+    const searchEl = document.getElementById('searchInput');
+    const resEl = document.getElementById('resSelect');
+
+    const selectedChannel = channelEl ? channelEl.value : 'ALL';
+    const rawQuery = searchEl ? searchEl.value.trim() : '';
+    const selectedRes = resEl ? resEl.value : '1080P_PLUS';
+
+    const title = type === 'paintings' ? 'No paintings or videos found' : 'No wallpapers match your criteria';
+    const subtitle = 'Try adjusting your search query, resolution filter, or channel selection.';
+    let conflictHTML = '';
+    let actionButtons = `
+        <button class="btn btn-primary" style="margin-top: 16px;" onclick="resetFilters()">Reset All Filters</button>
+    `;
+
+    // Smart cross-filter detection: check if query has matches in other channels or resolutions
+    if (rawQuery && selectedChannel !== 'ALL') {
+        const matchesInCatalog = ALL_VIDEOS.filter(v => matchesSearch(v.title, v.channel, rawQuery)).length;
+        if (matchesInCatalog > 0) {
+            conflictHTML = `
+                <div style="margin: 14px auto; max-width: 520px; padding: 12px 18px; background: rgba(229, 176, 53, 0.12); border: 1px solid rgba(229, 176, 53, 0.35); border-radius: 8px; color: var(--text-main); font-size: 0.92rem;">
+                    💡 <strong>Found ${matchesInCatalog} works</strong> matching "<em>${escapeQuotes(rawQuery)}</em>" in other channels.
+                </div>
+            `;
+            actionButtons = `
+                <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 14px;">
+                    <button class="btn btn-primary" onclick="searchAllChannelsForQuery('${escapeQuotes(rawQuery)}')">
+                        🔍 Search "${escapeQuotes(rawQuery)}" Across All Channels (${matchesInCatalog})
+                    </button>
+                    <button class="btn btn-outline-white" onclick="resetFilters()">
+                        Reset All Filters
+                    </button>
+                </div>
+            `;
+        }
+    } else if (rawQuery && selectedRes !== 'ALL') {
+        const matchesInCatalog = ALL_VIDEOS.filter(v => matchesSearch(v.title, v.channel, rawQuery)).length;
+        if (matchesInCatalog > 0) {
+            conflictHTML = `
+                <div style="margin: 14px auto; max-width: 520px; padding: 12px 18px; background: rgba(229, 176, 53, 0.12); border: 1px solid rgba(229, 176, 53, 0.35); border-radius: 8px; color: var(--text-main); font-size: 0.92rem;">
+                    💡 <strong>Found ${matchesInCatalog} works</strong> matching "<em>${escapeQuotes(rawQuery)}</em>" across all resolutions.
+                </div>
+            `;
+            actionButtons = `
+                <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 14px;">
+                    <button class="btn btn-primary" onclick="searchAllResolutionsForQuery('${escapeQuotes(rawQuery)}')">
+                        🎬 View in All Resolutions (${matchesInCatalog})
+                    </button>
+                    <button class="btn btn-outline-white" onclick="resetFilters()">
+                        Reset All Filters
+                    </button>
+                </div>
+            `;
+        }
+    }
+
+    return `
+        <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; color: var(--text-muted);">
+            <h3 style="color: var(--text-main); margin-bottom: 8px;">${title}</h3>
+            <p>${subtitle}</p>
+            ${conflictHTML}
+            ${actionButtons}
+        </div>
+    `;
+}
+
+function searchAllChannelsForQuery(query) {
+    const channelSelect = document.getElementById('channelSelect');
+    if (channelSelect) channelSelect.value = 'ALL';
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) searchInput.value = query;
+    updateActiveSearchChips(query);
+    applyFilters();
+}
+
+function searchAllResolutionsForQuery(query) {
+    const resSelect = document.getElementById('resSelect');
+    if (resSelect) resSelect.value = 'ALL';
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) searchInput.value = query;
+    updateActiveSearchChips(query);
+    applyFilters();
+}
+
 function renderVideos(videos, append = false) {
     const grid = document.getElementById('videosGrid');
     const countSpan = document.getElementById('resultsCount');
@@ -576,13 +661,7 @@ function renderVideos(videos, append = false) {
 
         if (videos.length === 0) {
             if (countSpan) countSpan.textContent = `Showing 0 of ${ALL_VIDEOS.length} works`;
-            grid.innerHTML = `
-                <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; color: var(--text-muted);">
-                    <h3>No paintings or videos found</h3>
-                    <p>Try adjusting your search query, resolution filter, or channel selection.</p>
-                    <button class="btn btn-primary" style="margin-top: 16px;" onclick="resetFilters()">Reset All Filters</button>
-                </div>
-            `;
+            grid.innerHTML = buildEmptyStateHTML('paintings');
             return;
         }
     } else {
@@ -643,13 +722,7 @@ function renderWallpapers(wallpapers, append = false) {
 
         if (wallpapers.length === 0) {
             if (countSpan) countSpan.textContent = `Showing 0 wallpapers`;
-            grid.innerHTML = `
-                <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; color: var(--text-muted);">
-                    <h3>No wallpapers match your criteria</h3>
-                    <p>Try clearing your search or selecting a different channel or resolution.</p>
-                    <button class="btn btn-primary" style="margin-top: 16px;" onclick="resetFilters()">Reset All Filters</button>
-                </div>
-            `;
+            grid.innerHTML = buildEmptyStateHTML('wallpapers');
             return;
         }
     } else {
@@ -750,6 +823,7 @@ function initSearchSuggestions() {
 
 function applySearchChip(query) {
     const searchInput = document.getElementById('searchInput');
+    const channelSelect = document.getElementById('channelSelect');
     if (!searchInput) return;
 
     const currentNorm = normalizeSearchText(searchInput.value);
@@ -760,6 +834,16 @@ function applySearchChip(query) {
         searchInput.value = '';
     } else {
         searchInput.value = query;
+
+        // Smart cross-filter: if current channel has no works matching this chip, auto-switch to ALL
+        if (channelSelect && channelSelect.value !== 'ALL') {
+            const hasMatchInChannel = ALL_VIDEOS.some(v => 
+                v.channel === channelSelect.value && matchesSearch(v.title, v.channel, query)
+            );
+            if (!hasMatchInChannel) {
+                channelSelect.value = 'ALL';
+            }
+        }
     }
 
     updateActiveSearchChips(searchInput.value);

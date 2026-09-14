@@ -4,7 +4,7 @@
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Gallery-brightgreen?logo=github)](https://lgtkgtv.github.io/monet-living-gallery/)
 [![4K UHD](https://img.shields.io/badge/Resolution-4K%20UHD%20(3840x2160)-gold)](https://lgtkgtv.github.io/monet-living-gallery/)
 [![Curated Works](https://img.shields.io/badge/Works-212%20Masterworks-blue)](https://lgtkgtv.github.io/monet-living-gallery/)
-[![Wallpapers](https://img.shields.io/badge/Wallpapers-485%20Snapshots-purple)](https://lgtkgtv.github.io/monet-living-gallery/)
+[![Wallpapers](https://img.shields.io/badge/Wallpapers-525%20Snapshots-purple)](https://lgtkgtv.github.io/monet-living-gallery/)
 [![Views](https://img.shields.io/badge/Views-46.2M%20Total-red)](https://lgtkgtv.github.io/monet-living-gallery/)
 [![Mobile First](https://img.shields.io/badge/Mobile-Optimized-success)](https://lgtkgtv.github.io/monet-living-gallery/)
 
@@ -47,6 +47,16 @@ An interactive, curated digital museum and high-definition visual archive celebr
 ### 7. 🤖 Automated Weekly Sync (GitHub Actions)
 - **Zero Maintenance Pipeline**: Scheduled `.github/workflows/sync_playlist.yml` workflow periodically polls YouTube for additions or title edits, probing missing resolutions and automatically updating the web gallery.
 
+### 8. 🏛️ Museum Dark Gallery Theme
+- **Immersive Art Viewing**: Defaults to deep gallery charcoal (`#0c140f`) with sunlight ochre accents, allowing vibrant Impressionist canvases to pop with authentic museum contrast.
+- **Persistent Toggle**: Seamless toggle between Dark Gallery and Classic Parchment modes, pre-rendered without theme flash.
+
+### 9. ♿ Full Accessibility & Keyboard Navigation
+- **Focus Management**: Modal dialogs enforce strict `Tab` / `Shift+Tab` focus trapping (`trapModalFocus`) with automatic restoration on exit (`restoreFocus`).
+- **High-Contrast Focus Indicators**: Accessible `:focus-visible` golden ring indicators across all interactive elements.
+- **Screen Reader Announcements**: Dynamic catalog filtering count updates announced via `aria-live="polite"`.
+- **Keyboard Traversal**: Wallpaper carousel thumbnails are keyboard-navigable (`tabindex="0"`, `role="button"`, `Enter`/`Space` activation).
+
 ---
 
 ## 🛠️ Unified Pipeline CLI (`pipeline.py`)
@@ -87,7 +97,7 @@ A single command-line interface orchestrates the entire archive, metadata extrac
 ├── pipeline.py                 # Unified CLI orchestrator (--status, --build, --extract, --sync)
 ├── batch_wallpaper_extractor.py # Anti-throttled wallpaper extractor with form factor detection
 ├── build_webpage.py            # Site data & CSV catalog compiler
-├── data.js                     # Static optimized dataset (198 videos, 366 wallpapers, profiles)
+├── data.js                     # Static optimized dataset (212 videos, 525 wallpapers, profiles)
 ├── video_resolutions.json      # Complete native resolution cache (100% indexed)
 ├── playlist_raw.json           # Raw playlist JSON dump
 ├── monet_playlist_by_channel.csv # Spreadsheet-ready catalog with resolution columns
