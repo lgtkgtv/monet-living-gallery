@@ -1384,5 +1384,12 @@
     "resolution": "1920x1080",
     "qualityLabel": "1080p FHD",
     "is4K": false
+  },
+  "NVwstpSWVnw": {
+    "width": 3840,
+    "height": 2160,
+    "resolution": "3840x2160",
+    "qualityLabel": "4K UHD",
+    "is4K": true
   }
 }

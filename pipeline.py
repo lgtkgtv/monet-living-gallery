@@ -115,7 +115,7 @@ def run_sync_resolutions():
 def run_extract(batch_size=10, tier=None, delay=3.0):
     cmd = [sys.executable, 'batch_wallpaper_extractor.py', '--batch-size', str(batch_size), '--delay', str(delay)]
     if tier:
-        cmd.extend(['--tier', tier])
+        cmd.extend(['--tier', tier.lower()])
     print(f"🖼️ Running wallpaper extraction: {' '.join(cmd)}...")
     res = subprocess.run(cmd, capture_output=False)
     return res.returncode == 0
@@ -164,7 +164,7 @@ def main():
     parser.add_argument('--sync-resolutions', action='store_true', help="Probe missing resolutions from YouTube")
     parser.add_argument('--extract', action='store_true', help="Extract wallpaper scenes using batch_wallpaper_extractor.py")
     parser.add_argument('--batch-size', type=int, default=10, help="Batch size for wallpaper extraction (default: 10)")
-    parser.add_argument('--tier', choices=['4K', 'FHD', 'ALL'], default=None, help="Resolution tier filter for extraction")
+    parser.add_argument('--tier', type=str.upper, choices=['4K', 'FHD', 'ALL'], default=None, help="Resolution tier filter for extraction")
     parser.add_argument('--delay', type=float, default=3.0, help="Anti-throttling delay in seconds between video extractions")
     parser.add_argument('--sync', action='store_true', help="Perform full automated end-to-end sync")
     parser.add_argument('--serve', action='store_true', help="Start local preview web server")

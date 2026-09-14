@@ -2,12 +2,12 @@
 const PLAYLIST_METADATA = {
     title: "sh_Monet inspired Visual Arts",
     playlistUrl: "https://www.youtube.com/playlist?list=PLeqGkucOU6lA",
-    totalVideos: 198,
-    totalViews: 24146418,
-    totalDurationSec: 281302,
-    channelCount: 39,
+    totalVideos: 199,
+    totalViews: 24246923,
+    totalDurationSec: 281562,
+    channelCount: 40,
     totalWallpapers: 418,
-    count4K: 43,
+    count4K: 44,
     countFHD: 148
 };
 
@@ -130,8 +130,8 @@ const CHANNEL_STATS = [
     "channel": "LearnFromMasters",
     "channel_url": "https://www.youtube.com/channel/UCWjLl5TDZqMZimHbHXk0Wpg",
     "count": 15,
-    "total_views": 6222000,
-    "avg_views": 414800,
+    "total_views": 6224000,
+    "avg_views": 414933,
     "videos": [
       {
         "_type": "url",
@@ -216,7 +216,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 926000,
+        "view_count": 927000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -348,7 +348,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 157000,
+        "view_count": 158000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -923,8 +923,8 @@ const CHANNEL_STATS = [
     "channel": "Muse Visual Art",
     "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
     "count": 76,
-    "total_views": 2035974,
-    "avg_views": 26789,
+    "total_views": 2056800,
+    "avg_views": 27063,
     "videos": [
       {
         "_type": "url",
@@ -965,7 +965,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 178000,
+        "view_count": 179000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -1009,7 +1009,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 158000,
+        "view_count": 159000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -1020,7 +1020,7 @@ const CHANNEL_STATS = [
         "id": "V0Nz7TQcGF0",
         "url": "https://www.youtube.com/watch?v=V0Nz7TQcGF0",
         "title": "Visual Poems | Rose Garden | Living Oil Paintings",
-        "description": "Sonnet: To a Heart of Flame\n\nShall I compare thee to a heart of flame?\nAgainst the blue thy crimson petals gleam;\nThou art more ardent, wilder than the same,\nAnd sway with grace, a lover's waking dream.\n\nThe snail, with silver script and patient stride,\nAnd ladybugs, in scarlet livery,\nUpon thy shaded velvet leaf do glide,\nOr climb thy stalk to sip the dew from thee.\n\nThere where the sudden rain begins to weep,\nThe butterfly, a flame against the gloom,\nA bird beneath thy leaf hath crouched to sleep,\nWhile silken wings drift softly by thy bloom.\n\nSo long as night's dark waters hold thy spark,\nThou burnest like a beacon in the dark.\n\nWhere roses bloom, time begins to slow.Petals unfold like letters never sent, breathing softly in the light.\nThe wind drifts through the garden, carrying traces of fragrance,leaving behind hues of crimson, blush, and fading gold.\nSunlight rests on the edges of petals,while shadows move in quiet whispers.\nThere is no rush here—only a garden growing in silence,and moments gently kept in bloom.\n\nWorkflow:\nImages generated with Midjourney\nAnimation created using Veo 3\nMusic composed with Suno AI\n\n#visualpoem #impressionism  #livingpainting #oilpainting #relaxingmusic  #aestheticstatus",
+        "description": null,
         "duration": 212,
         "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
         "channel": "Muse Visual Art",
@@ -1030,243 +1030,76 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/3.jpg",
-            "preference": -37,
-            "id": "0"
-          },
-          {
-            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/3.webp",
-            "preference": -36,
-            "id": "1"
-          },
-          {
-            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/2.jpg",
-            "preference": -35,
-            "id": "2"
-          },
-          {
-            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/2.webp",
-            "preference": -34,
-            "id": "3"
-          },
-          {
-            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/1.jpg",
-            "preference": -33,
-            "id": "4"
-          },
-          {
-            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/1.webp",
-            "preference": -32,
-            "id": "5"
-          },
-          {
-            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/mq3.jpg",
-            "preference": -31,
-            "id": "6"
-          },
-          {
-            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/mq3.webp",
-            "preference": -30,
-            "id": "7"
-          },
-          {
-            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/mq2.jpg",
-            "preference": -29,
-            "id": "8"
-          },
-          {
-            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/mq2.webp",
-            "preference": -28,
-            "id": "9"
-          },
-          {
-            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/mq1.jpg",
-            "preference": -27,
-            "id": "10"
-          },
-          {
-            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/mq1.webp",
-            "preference": -26,
-            "id": "11"
-          },
-          {
-            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hq3.jpg",
-            "preference": -25,
-            "id": "12"
-          },
-          {
-            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/hq3.webp",
-            "preference": -24,
-            "id": "13"
-          },
-          {
-            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hq2.jpg",
-            "preference": -23,
-            "id": "14"
-          },
-          {
-            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/hq2.webp",
-            "preference": -22,
-            "id": "15"
-          },
-          {
-            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hq1.jpg",
-            "preference": -21,
-            "id": "16"
-          },
-          {
-            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/hq1.webp",
-            "preference": -20,
-            "id": "17"
-          },
-          {
-            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/sd3.jpg",
-            "preference": -19,
-            "id": "18"
-          },
-          {
-            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/sd3.webp",
-            "preference": -18,
-            "id": "19"
-          },
-          {
-            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/sd2.jpg",
-            "preference": -17,
-            "id": "20"
-          },
-          {
-            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/sd2.webp",
-            "preference": -16,
-            "id": "21"
-          },
-          {
-            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/sd1.jpg",
-            "preference": -15,
-            "id": "22"
-          },
-          {
-            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/sd1.webp",
-            "preference": -14,
-            "id": "23"
-          },
-          {
-            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/default.jpg",
-            "preference": -13,
-            "id": "24"
-          },
-          {
-            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/default.webp",
-            "preference": -12,
-            "id": "25"
-          },
-          {
-            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/mqdefault.jpg",
-            "height": 180,
-            "width": 320,
-            "preference": -11,
-            "id": "26",
-            "resolution": "320x180"
-          },
-          {
-            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/mqdefault.webp",
-            "preference": -10,
-            "id": "27"
-          },
-          {
-            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/0.jpg",
-            "preference": -9,
-            "id": "28"
-          },
-          {
-            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/0.webp",
-            "preference": -8,
-            "id": "29"
-          },
-          {
-            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hqdefault.jpg",
-            "preference": -7,
-            "id": "30"
-          },
-          {
             "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCInzunP8pSotAYciK-zWbUkYWwEg",
             "height": 94,
-            "width": 168,
-            "preference": -7,
-            "id": "31",
-            "resolution": "168x94"
+            "width": 168
           },
           {
             "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDgpL0N7Qh9nPbtnn7puv1jvYfaSw",
             "height": 110,
-            "width": 196,
-            "preference": -7,
-            "id": "32",
-            "resolution": "196x110"
+            "width": 196
           },
           {
             "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD1vf8vxDkRr2QKw_UFdN3GrAwfGw",
             "height": 138,
-            "width": 246,
-            "preference": -7,
-            "id": "33",
-            "resolution": "246x138"
+            "width": 246
           },
           {
             "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLChB5Andj3xwS0GmHp3Ac6SAqu6xQ",
             "height": 188,
-            "width": 336,
-            "preference": -7,
-            "id": "34",
-            "resolution": "336x188"
-          },
-          {
-            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/hqdefault.webp",
-            "preference": -6,
-            "id": "35"
-          },
-          {
-            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/sddefault.jpg",
-            "preference": -5,
-            "id": "36"
-          },
-          {
-            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/sddefault.webp",
-            "preference": -4,
-            "id": "37"
-          },
-          {
-            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hq720.jpg",
-            "height": 720,
-            "width": 1280,
-            "preference": -3,
-            "id": "38",
-            "resolution": "1280x720"
-          },
-          {
-            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/hq720.webp",
-            "preference": -2,
-            "id": "39"
-          },
-          {
-            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/maxresdefault.jpg",
-            "height": 1080,
-            "width": 1920,
-            "preference": -1,
-            "id": "40",
-            "resolution": "1920x1080"
-          },
-          {
-            "url": "https://i.ytimg.com/vi_webp/V0Nz7TQcGF0/maxresdefault.webp",
-            "preference": 0,
-            "id": "41"
+            "width": 336
           }
         ],
-        "timestamp": 1776916800,
+        "timestamp": null,
         "release_timestamp": null,
-        "availability": "public",
-        "view_count": 128474,
-        "live_status": "not_live",
-        "channel_is_verified": false,
+        "availability": null,
+        "view_count": 128000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "qinshTPWa1o",
+        "url": "https://www.youtube.com/watch?v=qinshTPWa1o",
+        "title": "Visual Poems | Claude Monet | Beautiful Time on the Country Road",
+        "description": null,
+        "duration": 229,
+        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
+        "channel": "Muse Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+        "uploader": "Muse Visual Art",
+        "uploader_id": "@Muse_AI_Art",
+        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/qinshTPWa1o/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCCfBVLr9ST2_nW7aTdsnnmQyCXPA",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/qinshTPWa1o/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDDQEDuDRefZJjhlQs1tiLIGTY0kQ",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/qinshTPWa1o/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCbiNEF9o0qRoT9GhIyWwXvjK0rBg",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/qinshTPWa1o/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBtuq1aaLOIZG5CYzYEgDRU3pNoPQ",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 105000,
+        "live_status": null,
+        "channel_is_verified": null,
         "__x_forwarded_for_ip": null
       },
       {
@@ -1316,50 +1149,6 @@ const CHANNEL_STATS = [
       {
         "_type": "url",
         "ie_key": "Youtube",
-        "id": "qinshTPWa1o",
-        "url": "https://www.youtube.com/watch?v=qinshTPWa1o",
-        "title": "Visual Poems | Claude Monet | Beautiful Time on the Country Road",
-        "description": null,
-        "duration": 229,
-        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
-        "channel": "Muse Visual Art",
-        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-        "uploader": "Muse Visual Art",
-        "uploader_id": "@Muse_AI_Art",
-        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/qinshTPWa1o/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCCfBVLr9ST2_nW7aTdsnnmQyCXPA",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/qinshTPWa1o/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDDQEDuDRefZJjhlQs1tiLIGTY0kQ",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/qinshTPWa1o/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCbiNEF9o0qRoT9GhIyWwXvjK0rBg",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/qinshTPWa1o/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBtuq1aaLOIZG5CYzYEgDRU3pNoPQ",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 103000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
         "id": "3XPsYH7DwCg",
         "url": "https://www.youtube.com/watch?v=3XPsYH7DwCg",
         "title": "Visual Poems | Waterside Cabin, Blooming Shores | Living Oil Paintings",
@@ -1396,7 +1185,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 88000,
+        "view_count": 89000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -1528,7 +1317,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 65000,
+        "view_count": 66000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -1572,7 +1361,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 62000,
+        "view_count": 63000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -1616,7 +1405,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 57000,
+        "view_count": 59000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -1792,7 +1581,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 38000,
+        "view_count": 40000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -1880,7 +1669,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 34000,
+        "view_count": 36000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -2196,6 +1985,50 @@ const CHANNEL_STATS = [
       {
         "_type": "url",
         "ie_key": "Youtube",
+        "id": "r_ZaXKUuXMc",
+        "url": "https://www.youtube.com/watch?v=r_ZaXKUuXMc",
+        "title": "Visual Poems | Forest Edge and Wildflowers | Living Oil Paintings",
+        "description": null,
+        "duration": 245,
+        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
+        "channel": "Muse Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+        "uploader": "Muse Visual Art",
+        "uploader_id": "@Muse_AI_Art",
+        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/r_ZaXKUuXMc/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCaeQ8vgRKU6AYdjxZkJFjcmxUVjA",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/r_ZaXKUuXMc/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBkJhXp6390bPlTc-R3R5Ou2ILeBg",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/r_ZaXKUuXMc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBsbAtc9Ybbf4VGs5MpsfPc9VWlog",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/r_ZaXKUuXMc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDAMG62I0bs4_V8sRzK5XzSBuodJg",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 26000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
         "id": "srsiIWbB1sU",
         "url": "https://www.youtube.com/watch?v=srsiIWbB1sU",
         "title": "Visual Poems | Slow Life in a Courtyard | Living Oil Paintings",
@@ -2240,50 +2073,6 @@ const CHANNEL_STATS = [
       {
         "_type": "url",
         "ie_key": "Youtube",
-        "id": "r_ZaXKUuXMc",
-        "url": "https://www.youtube.com/watch?v=r_ZaXKUuXMc",
-        "title": "Visual Poems | Forest Edge and Wildflowers | Living Oil Paintings",
-        "description": null,
-        "duration": 245,
-        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
-        "channel": "Muse Visual Art",
-        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-        "uploader": "Muse Visual Art",
-        "uploader_id": "@Muse_AI_Art",
-        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/r_ZaXKUuXMc/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCaeQ8vgRKU6AYdjxZkJFjcmxUVjA",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/r_ZaXKUuXMc/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBkJhXp6390bPlTc-R3R5Ou2ILeBg",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/r_ZaXKUuXMc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBsbAtc9Ybbf4VGs5MpsfPc9VWlog",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/r_ZaXKUuXMc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDAMG62I0bs4_V8sRzK5XzSBuodJg",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 25000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
         "id": "smlzmKwRXBM",
         "url": "https://www.youtube.com/watch?v=smlzmKwRXBM",
         "title": "Visual Poems | A Reverie of a White Dress | Living Oil Paintings",
@@ -2320,7 +2109,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 21000,
+        "view_count": 22000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -2452,7 +2241,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 17000,
+        "view_count": 18000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -2540,7 +2329,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 15000,
+        "view_count": 16000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -2636,6 +2425,50 @@ const CHANNEL_STATS = [
       {
         "_type": "url",
         "ie_key": "Youtube",
+        "id": "WrkiT2xR8Gw",
+        "url": "https://www.youtube.com/watch?v=WrkiT2xR8Gw",
+        "title": "Visual Poems | A Lemon Yellow Afternoon | Living Oil Paintings",
+        "description": null,
+        "duration": 224,
+        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
+        "channel": "Muse Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+        "uploader": "Muse Visual Art",
+        "uploader_id": "@Muse_AI_Art",
+        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/WrkiT2xR8Gw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAy_VLY5em5KS73UkRNXmRPTz620A",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/WrkiT2xR8Gw/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA2t0hAtYzXCwLv-x9SxjgjMbysiw",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/WrkiT2xR8Gw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCAN7aur_f026fh57imChacAZuC0A",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/WrkiT2xR8Gw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCIW7pF-c7hDb9esNkGZJpRQpjJGw",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 11000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
         "id": "jWlxfU71NXI",
         "url": "https://www.youtube.com/watch?v=jWlxfU71NXI",
         "title": "Visual Poems | Between Bloom and Fade | Living Oil Paintings",
@@ -2665,6 +2498,50 @@ const CHANNEL_STATS = [
           },
           {
             "url": "https://i.ytimg.com/vi/jWlxfU71NXI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAe0wIL66w3pi4DwOR_Mdcjq9zKbw",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 11000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "FRHDbIlwNXo",
+        "url": "https://www.youtube.com/watch?v=FRHDbIlwNXo",
+        "title": "Visual Poems | Afterglow by the Lake | Living Oil Paintings",
+        "description": null,
+        "duration": 203,
+        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
+        "channel": "Muse Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+        "uploader": "Muse Visual Art",
+        "uploader_id": "@Muse_AI_Art",
+        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/FRHDbIlwNXo/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBBtxI6ts32lqMJkxuef2RWIvfMAQ",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/FRHDbIlwNXo/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBpQTYGuMLRZyRFi5W8QWP4T7C_6Q",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/FRHDbIlwNXo/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDT6ErfoajbTl2aTPqMTu45iJFqPA",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/FRHDbIlwNXo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCV_U9gbfwqBgVD158eA4tHdW6aBw",
             "height": 188,
             "width": 336
           }
@@ -2812,11 +2689,11 @@ const CHANNEL_STATS = [
       {
         "_type": "url",
         "ie_key": "Youtube",
-        "id": "WrkiT2xR8Gw",
-        "url": "https://www.youtube.com/watch?v=WrkiT2xR8Gw",
-        "title": "Visual Poems | A Lemon Yellow Afternoon | Living Oil Paintings",
+        "id": "sNLWtm_pGNc",
+        "url": "https://www.youtube.com/watch?v=sNLWtm_pGNc",
+        "title": "Visual Poems | Alpine Meadows and Streams | Living Oil Paintings",
         "description": null,
-        "duration": 224,
+        "duration": 202,
         "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
         "channel": "Muse Visual Art",
         "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
@@ -2825,22 +2702,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/WrkiT2xR8Gw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAy_VLY5em5KS73UkRNXmRPTz620A",
+            "url": "https://i.ytimg.com/vi/sNLWtm_pGNc/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC9OCUYTWynnSRpLBnyNkG-J431NQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/WrkiT2xR8Gw/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA2t0hAtYzXCwLv-x9SxjgjMbysiw",
+            "url": "https://i.ytimg.com/vi/sNLWtm_pGNc/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCr5elBSVlIJ502PONYzJWw2r2RMQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/WrkiT2xR8Gw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCAN7aur_f026fh57imChacAZuC0A",
+            "url": "https://i.ytimg.com/vi/sNLWtm_pGNc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCFIA-5lwfZ-7nuEcQeGyv-k4hBbA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/WrkiT2xR8Gw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCIW7pF-c7hDb9esNkGZJpRQpjJGw",
+            "url": "https://i.ytimg.com/vi/sNLWtm_pGNc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBf5WY40uQsMPKCJfwUN3vtOfSY4A",
             "height": 188,
             "width": 336
           }
@@ -2944,11 +2821,11 @@ const CHANNEL_STATS = [
       {
         "_type": "url",
         "ie_key": "Youtube",
-        "id": "FRHDbIlwNXo",
-        "url": "https://www.youtube.com/watch?v=FRHDbIlwNXo",
-        "title": "Visual Poems | Afterglow by the Lake | Living Oil Paintings",
+        "id": "-haidoSkGtg",
+        "url": "https://www.youtube.com/watch?v=-haidoSkGtg",
+        "title": "Visual Poems | Breeze and the Spring Garden | Living Oil Paintings",
         "description": null,
-        "duration": 203,
+        "duration": 223,
         "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
         "channel": "Muse Visual Art",
         "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
@@ -2957,22 +2834,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/FRHDbIlwNXo/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBBtxI6ts32lqMJkxuef2RWIvfMAQ",
+            "url": "https://i.ytimg.com/vi/-haidoSkGtg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD15z_Kk2EcmyiZwaME3KCWaOn6dQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/FRHDbIlwNXo/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBpQTYGuMLRZyRFi5W8QWP4T7C_6Q",
+            "url": "https://i.ytimg.com/vi/-haidoSkGtg/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAm98-6XTpmJsQkCxHTR437kW6GBA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/FRHDbIlwNXo/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDT6ErfoajbTl2aTPqMTu45iJFqPA",
+            "url": "https://i.ytimg.com/vi/-haidoSkGtg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDvYR15Z3AfTKydaIsyWjc8gHEF8g",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/FRHDbIlwNXo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCV_U9gbfwqBgVD158eA4tHdW6aBw",
+            "url": "https://i.ytimg.com/vi/-haidoSkGtg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDZmJBj-sEDnXtaUQXFk5iw-WNu8w",
             "height": 188,
             "width": 336
           }
@@ -3076,94 +2953,6 @@ const CHANNEL_STATS = [
       {
         "_type": "url",
         "ie_key": "Youtube",
-        "id": "sNLWtm_pGNc",
-        "url": "https://www.youtube.com/watch?v=sNLWtm_pGNc",
-        "title": "Visual Poems | Alpine Meadows and Streams | Living Oil Paintings",
-        "description": null,
-        "duration": 202,
-        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
-        "channel": "Muse Visual Art",
-        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-        "uploader": "Muse Visual Art",
-        "uploader_id": "@Muse_AI_Art",
-        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/sNLWtm_pGNc/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC9OCUYTWynnSRpLBnyNkG-J431NQ",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/sNLWtm_pGNc/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCr5elBSVlIJ502PONYzJWw2r2RMQ",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/sNLWtm_pGNc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCFIA-5lwfZ-7nuEcQeGyv-k4hBbA",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/sNLWtm_pGNc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBf5WY40uQsMPKCJfwUN3vtOfSY4A",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 9900,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "-haidoSkGtg",
-        "url": "https://www.youtube.com/watch?v=-haidoSkGtg",
-        "title": "Visual Poems | Breeze and the Spring Garden | Living Oil Paintings",
-        "description": null,
-        "duration": 223,
-        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
-        "channel": "Muse Visual Art",
-        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-        "uploader": "Muse Visual Art",
-        "uploader_id": "@Muse_AI_Art",
-        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/-haidoSkGtg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD15z_Kk2EcmyiZwaME3KCWaOn6dQ",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/-haidoSkGtg/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAm98-6XTpmJsQkCxHTR437kW6GBA",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/-haidoSkGtg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDvYR15Z3AfTKydaIsyWjc8gHEF8g",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/-haidoSkGtg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDZmJBj-sEDnXtaUQXFk5iw-WNu8w",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 9800,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
         "id": "ZqP1sJfO5Vg",
         "url": "https://www.youtube.com/watch?v=ZqP1sJfO5Vg",
         "title": "Visual Poems | Where Clouds and Flowers Compete in Beauty | Living Oil Paintings",
@@ -3200,7 +2989,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 9700,
+        "view_count": 9800,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -3332,7 +3121,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 8900,
+        "view_count": 9000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -3376,7 +3165,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 8900,
+        "view_count": 9000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -3464,7 +3253,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 8700,
+        "view_count": 8800,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -3508,7 +3297,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 8400,
+        "view_count": 8600,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -3596,51 +3385,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 7300,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "Oj-PJ16K-jE",
-        "url": "https://www.youtube.com/watch?v=Oj-PJ16K-jE",
-        "title": "Visual Poems | The Breeze and Flowers in the Garden | Living Oil Paintings",
-        "description": null,
-        "duration": 195,
-        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
-        "channel": "Muse Visual Art",
-        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-        "uploader": "Muse Visual Art",
-        "uploader_id": "@Muse_AI_Art",
-        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/Oj-PJ16K-jE/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAcwh_IjZPXlqck5F6d9Xr2LtVGvg",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/Oj-PJ16K-jE/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAR5pQza9wdDlnb2P7iHqCEx_RLzg",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/Oj-PJ16K-jE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCdMEEmi4fj7ynjJXHzSFMPsrIijQ",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/Oj-PJ16K-jE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBgSI7aCDGKHrhkYOHG9WQsLAfOYQ",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 7200,
+        "view_count": 7400,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -3677,6 +3422,94 @@ const CHANNEL_STATS = [
           },
           {
             "url": "https://i.ytimg.com/vi/TlT_YeXzw5E/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBaEHj5ih7hqkIjL7kChdCRPP1rzw",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 7300,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "KfeNumv1QtY",
+        "url": "https://www.youtube.com/watch?v=KfeNumv1QtY",
+        "title": "Visual Poems | Valley in Full Bloom and the Stream | Living Oil Paintings",
+        "description": null,
+        "duration": 184,
+        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
+        "channel": "Muse Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+        "uploader": "Muse Visual Art",
+        "uploader_id": "@Muse_AI_Art",
+        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/KfeNumv1QtY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCAsyhVQUnUxRXwLZ9b7w5nVrdZHg",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/KfeNumv1QtY/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCCdA2dawQL2FOktt5NMu_vKrDWRw",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/KfeNumv1QtY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD4Jpr1Gs6OvfyK0Ph37oQlyd4wsA",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/KfeNumv1QtY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLClbYjAEP2rlU7nV25iF6Yf0f8oaQ",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 7200,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "Oj-PJ16K-jE",
+        "url": "https://www.youtube.com/watch?v=Oj-PJ16K-jE",
+        "title": "Visual Poems | The Breeze and Flowers in the Garden | Living Oil Paintings",
+        "description": null,
+        "duration": 195,
+        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
+        "channel": "Muse Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+        "uploader": "Muse Visual Art",
+        "uploader_id": "@Muse_AI_Art",
+        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/Oj-PJ16K-jE/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAcwh_IjZPXlqck5F6d9Xr2LtVGvg",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/Oj-PJ16K-jE/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAR5pQza9wdDlnb2P7iHqCEx_RLzg",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/Oj-PJ16K-jE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCdMEEmi4fj7ynjJXHzSFMPsrIijQ",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/Oj-PJ16K-jE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBgSI7aCDGKHrhkYOHG9WQsLAfOYQ",
             "height": 188,
             "width": 336
           }
@@ -3736,50 +3569,6 @@ const CHANNEL_STATS = [
       {
         "_type": "url",
         "ie_key": "Youtube",
-        "id": "KfeNumv1QtY",
-        "url": "https://www.youtube.com/watch?v=KfeNumv1QtY",
-        "title": "Visual Poems | Valley in Full Bloom and the Stream | Living Oil Paintings",
-        "description": null,
-        "duration": 184,
-        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
-        "channel": "Muse Visual Art",
-        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-        "uploader": "Muse Visual Art",
-        "uploader_id": "@Muse_AI_Art",
-        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/KfeNumv1QtY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCAsyhVQUnUxRXwLZ9b7w5nVrdZHg",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/KfeNumv1QtY/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCCdA2dawQL2FOktt5NMu_vKrDWRw",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/KfeNumv1QtY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD4Jpr1Gs6OvfyK0Ph37oQlyd4wsA",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/KfeNumv1QtY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLClbYjAEP2rlU7nV25iF6Yf0f8oaQ",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 6900,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
         "id": "JxN6RTXENnM",
         "url": "https://www.youtube.com/watch?v=JxN6RTXENnM",
         "title": "Visual Poems | Dusk Blooms by the Sea | Living Oil Paintings",
@@ -3816,7 +3605,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 5700,
+        "view_count": 5800,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -3853,6 +3642,50 @@ const CHANNEL_STATS = [
           },
           {
             "url": "https://i.ytimg.com/vi/McwYz2CHc_4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC_mUBCxHBEYR-oJycZcpj73DmL2A",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 5700,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "dkDSwCTBv3I",
+        "url": "https://www.youtube.com/watch?v=dkDSwCTBv3I",
+        "title": "Visual Poems | Seasons of Poplars | Living Oil Paintings",
+        "description": null,
+        "duration": 214,
+        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
+        "channel": "Muse Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+        "uploader": "Muse Visual Art",
+        "uploader_id": "@Muse_AI_Art",
+        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/dkDSwCTBv3I/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDElWjkXymgElRIsAXO4qO1alwXiA",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/dkDSwCTBv3I/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAITCjotUFWNNuuUvG2exY3bWMXhQ",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/dkDSwCTBv3I/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDXs62Z2zVoulrvD9rxh6vzsLNyOA",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/dkDSwCTBv3I/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBmmGg6l1Q3ApOEgp7-kGRcTSeBPg",
             "height": 188,
             "width": 336
           }
@@ -3956,50 +3789,6 @@ const CHANNEL_STATS = [
       {
         "_type": "url",
         "ie_key": "Youtube",
-        "id": "dkDSwCTBv3I",
-        "url": "https://www.youtube.com/watch?v=dkDSwCTBv3I",
-        "title": "Visual Poems | Seasons of Poplars | Living Oil Paintings",
-        "description": null,
-        "duration": 214,
-        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
-        "channel": "Muse Visual Art",
-        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-        "uploader": "Muse Visual Art",
-        "uploader_id": "@Muse_AI_Art",
-        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/dkDSwCTBv3I/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDElWjkXymgElRIsAXO4qO1alwXiA",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/dkDSwCTBv3I/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAITCjotUFWNNuuUvG2exY3bWMXhQ",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/dkDSwCTBv3I/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDXs62Z2zVoulrvD9rxh6vzsLNyOA",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/dkDSwCTBv3I/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBmmGg6l1Q3ApOEgp7-kGRcTSeBPg",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 5500,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
         "id": "dIn45M5nraw",
         "url": "https://www.youtube.com/watch?v=dIn45M5nraw",
         "title": "Visual Poems | Streams, Floral Fences, Barefoot Dreams | Living Oil Paintings",
@@ -4036,7 +3825,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 4900,
+        "view_count": 5000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -4124,7 +3913,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 4300,
+        "view_count": 4400,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -4212,7 +4001,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 4100,
+        "view_count": 4200,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -4300,7 +4089,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 3800,
+        "view_count": 3900,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -4344,7 +4133,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 3600,
+        "view_count": 3700,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -4388,7 +4177,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 3600,
+        "view_count": 3700,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -4485,7 +4274,7 @@ const CHANNEL_STATS = [
     "top_video": {
       "id": "ZXjKmShmdUc",
       "title": "Visual Poems | Woodland Walk by Floral Scent | Living Oil Paintings",
-      "views": 178000,
+      "views": 179000,
       "url": "https://www.youtube.com/watch?v=ZXjKmShmdUc"
     }
   },
@@ -4493,8 +4282,8 @@ const CHANNEL_STATS = [
     "channel": "Extraordinary Visual Art",
     "channel_url": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
     "count": 11,
-    "total_views": 1947700,
-    "avg_views": 177064,
+    "total_views": 1952800,
+    "avg_views": 177527,
     "videos": [
       {
         "_type": "url",
@@ -4535,7 +4324,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 834000,
+        "view_count": 837000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -4623,7 +4412,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 211000,
+        "view_count": 212000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -4755,7 +4544,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 68000,
+        "view_count": 69000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -4975,7 +4764,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 8700,
+        "view_count": 8800,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -4984,7 +4773,7 @@ const CHANNEL_STATS = [
     "top_video": {
       "id": "MWRc13v-ZhA",
       "title": "Visual Poems | Monet | Journey to the Water Lilies: A Day in the Garden | 4K",
-      "views": 834000,
+      "views": 837000,
       "url": "https://www.youtube.com/watch?v=MWRc13v-ZhA"
     }
   },
@@ -4992,8 +4781,8 @@ const CHANNEL_STATS = [
     "channel": "K A R O L A",
     "channel_url": "https://www.youtube.com/channel/UCd67RarDaTRSpcZFW7O5fnQ",
     "count": 9,
-    "total_views": 1824300,
-    "avg_views": 202700,
+    "total_views": 1825300,
+    "avg_views": 202811,
     "videos": [
       {
         "_type": "url",
@@ -5298,7 +5087,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 34000,
+        "view_count": 35000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -5403,8 +5192,8 @@ const CHANNEL_STATS = [
     "channel": "Painters Dream",
     "channel_url": "https://www.youtube.com/channel/UCqCzEEy42I36ACXVFs2t15g",
     "count": 18,
-    "total_views": 969300,
-    "avg_views": 53850,
+    "total_views": 970400,
+    "avg_views": 53911,
     "videos": [
       {
         "_type": "url",
@@ -5665,7 +5454,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 67000,
+        "view_count": 68000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -6149,7 +5938,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 1200,
+        "view_count": 1300,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -6210,8 +5999,8 @@ const CHANNEL_STATS = [
     "channel": "Cupid Studio",
     "channel_url": "https://www.youtube.com/channel/UClWtMcqVrDo3039JTMAYE4w",
     "count": 18,
-    "total_views": 925600,
-    "avg_views": 51422,
+    "total_views": 926700,
+    "avg_views": 51483,
     "videos": [
       {
         "_type": "url",
@@ -6252,7 +6041,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 510000,
+        "view_count": 511000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -6956,7 +6745,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 3600,
+        "view_count": 3700,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -7009,7 +6798,7 @@ const CHANNEL_STATS = [
     "top_video": {
       "id": "oWMDH9dPswg",
       "title": "Claude Monet Painting | Winter Love in France",
-      "views": 510000,
+      "views": 511000,
       "url": "https://www.youtube.com/watch?v=oWMDH9dPswg"
     }
   },
@@ -7120,8 +6909,8 @@ const CHANNEL_STATS = [
     "channel": "Famous Paintings For TV A Window Into The Museum",
     "channel_url": "https://www.youtube.com/channel/UCeOcs9KHbcOZuibnR4xnMVg",
     "count": 3,
-    "total_views": 835000,
-    "avg_views": 278333,
+    "total_views": 837000,
+    "avg_views": 279000,
     "videos": [
       {
         "_type": "url",
@@ -7206,7 +6995,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 262000,
+        "view_count": 264000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -7370,8 +7159,8 @@ const CHANNEL_STATS = [
     "channel": "Artful TV - Beautiful Wallpapers and Screensavers",
     "channel_url": "https://www.youtube.com/channel/UC-L8sZPo_tF96-LE1ykvqsw",
     "count": 1,
-    "total_views": 364000,
-    "avg_views": 364000,
+    "total_views": 365000,
+    "avg_views": 365000,
     "videos": [
       {
         "_type": "url",
@@ -7412,7 +7201,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 364000,
+        "view_count": 365000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -7421,7 +7210,7 @@ const CHANNEL_STATS = [
     "top_video": {
       "id": "AWcmN1W_jJI",
       "title": "4K Claude Monet Screensaver | Monet Painting Wallpaper Slideshow | 3 Hours, No Music",
-      "views": 364000,
+      "views": 365000,
       "url": "https://www.youtube.com/watch?v=AWcmN1W_jJI"
     }
   },
@@ -7429,8 +7218,8 @@ const CHANNEL_STATS = [
     "channel": "Paintings I Love",
     "channel_url": "https://www.youtube.com/channel/UCSNkM642FT9v3tEfyE-rwTQ",
     "count": 1,
-    "total_views": 320000,
-    "avg_views": 320000,
+    "total_views": 322000,
+    "avg_views": 322000,
     "videos": [
       {
         "_type": "url",
@@ -7471,7 +7260,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 320000,
+        "view_count": 322000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -7480,7 +7269,7 @@ const CHANNEL_STATS = [
     "top_video": {
       "id": "FTxh92VdZVw",
       "title": "Russian Painting – The Best of Russian Landscape Painters / Пейзажи знаменитых русских художников",
-      "views": 320000,
+      "views": 322000,
       "url": "https://www.youtube.com/watch?v=FTxh92VdZVw"
     }
   },
@@ -7591,8 +7380,8 @@ const CHANNEL_STATS = [
     "channel": "Mind Travel 마인드 트래블",
     "channel_url": "https://www.youtube.com/channel/UCgfnBRJ7HBgmeVbPFMfnZRg",
     "count": 2,
-    "total_views": 226000,
-    "avg_views": 113000,
+    "total_views": 227000,
+    "avg_views": 113500,
     "videos": [
       {
         "_type": "url",
@@ -7677,7 +7466,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 62000,
+        "view_count": 63000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -7812,8 +7601,8 @@ const CHANNEL_STATS = [
     "channel": "Visual Poems in Paintings",
     "channel_url": "https://www.youtube.com/channel/UCf9Lq9Y5ONa66jB31QTZSig",
     "count": 1,
-    "total_views": 114000,
-    "avg_views": 114000,
+    "total_views": 115000,
+    "avg_views": 115000,
     "videos": [
       {
         "_type": "url",
@@ -7854,7 +7643,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 114000,
+        "view_count": 115000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -7863,7 +7652,7 @@ const CHANNEL_STATS = [
     "top_video": {
       "id": "ejXEYGBo2E0",
       "title": "A Rainy Day in the English Countryside | Victorian Visual Poem with Classical Music",
-      "views": 114000,
+      "views": 115000,
       "url": "https://www.youtube.com/watch?v=ejXEYGBo2E0"
     }
   },
@@ -8030,6 +7819,65 @@ const CHANNEL_STATS = [
     }
   },
   {
+    "channel": "Gaane 70s 80s",
+    "channel_url": "https://www.youtube.com/channel/UCz-3NGJmE45CwYs89dNz_cQ",
+    "count": 1,
+    "total_views": 61000,
+    "avg_views": 61000,
+    "videos": [
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "NVwstpSWVnw",
+        "url": "https://www.youtube.com/watch?v=NVwstpSWVnw",
+        "title": "Yeh Shaam Mastani ( ये शाम मस्तानी )  4K Song - Kati Patang | Kishore Kumar | Rajesh Khanna",
+        "description": null,
+        "duration": 260,
+        "channel_id": "UCz-3NGJmE45CwYs89dNz_cQ",
+        "channel": "Gaane 70s 80s",
+        "channel_url": "https://www.youtube.com/channel/UCz-3NGJmE45CwYs89dNz_cQ",
+        "uploader": "Gaane 70s 80s",
+        "uploader_id": "@Gaane70s80s",
+        "uploader_url": "https://www.youtube.com/@Gaane70s80s",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/NVwstpSWVnw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA_fL0eVgMRYVeJUGug1NMKQ-NbKQ",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/NVwstpSWVnw/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDZPpTQNDMdrLhSDmV4HvaxHrpUZw",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/NVwstpSWVnw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCvCnqCxOmisfYaWQR9jaVNRPwAVg",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/NVwstpSWVnw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDesJRfOqyOOWFYDkKK3YDh8a_56Q",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 61000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      }
+    ],
+    "top_video": {
+      "id": "NVwstpSWVnw",
+      "title": "Yeh Shaam Mastani ( ये शाम मस्तानी )  4K Song - Kati Patang | Kishore Kumar | Rajesh Khanna",
+      "views": 61000,
+      "url": "https://www.youtube.com/watch?v=NVwstpSWVnw"
+    }
+  },
+  {
     "channel": "Rollo Paterson - The Last Impressionist",
     "channel_url": "https://www.youtube.com/channel/UCvGk1qwSWEIsQzPiLc89e5w",
     "count": 2,
@@ -8130,6 +7978,65 @@ const CHANNEL_STATS = [
       "title": "Alexander Shevelev (1964) - A contemporary Russian painter, master of landscape and color.",
       "views": 20000,
       "url": "https://www.youtube.com/watch?v=Bxr5GYtwRnY"
+    }
+  },
+  {
+    "channel": "Around The World 4K",
+    "channel_url": "https://www.youtube.com/channel/UC4F-DMVCe-UbIsweL6kIEfg",
+    "count": 1,
+    "total_views": 31000,
+    "avg_views": 31000,
+    "videos": [
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "QJrKGGe6fok",
+        "url": "https://www.youtube.com/watch?v=QJrKGGe6fok",
+        "title": "Hallstatt in Autumn – The Most Beautiful Village in the World | 8K HDR 60p",
+        "description": null,
+        "duration": 264,
+        "channel_id": "UC4F-DMVCe-UbIsweL6kIEfg",
+        "channel": "Around The World 4K",
+        "channel_url": "https://www.youtube.com/channel/UC4F-DMVCe-UbIsweL6kIEfg",
+        "uploader": "Around The World 4K",
+        "uploader_id": "@aroundtheworld4k",
+        "uploader_url": "https://www.youtube.com/@aroundtheworld4k",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/QJrKGGe6fok/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD18X2ggVMX3ADU-4vuJJfDYcMUWA",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/QJrKGGe6fok/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAynJOLfrOb_hmICicbQ3tpFICV_A",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/QJrKGGe6fok/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAK4Jg1jpZrk2-iYhero56wTqMVdg",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/QJrKGGe6fok/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBOrbKLOXWHoTiHNeSRxn2lAKNtEg",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 31000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      }
+    ],
+    "top_video": {
+      "id": "QJrKGGe6fok",
+      "title": "Hallstatt in Autumn – The Most Beautiful Village in the World | 8K HDR 60p",
+      "views": 31000,
+      "url": "https://www.youtube.com/watch?v=QJrKGGe6fok"
     }
   },
   {
@@ -8248,65 +8155,6 @@ const CHANNEL_STATS = [
       "title": "Художник Божков Роман Александрович",
       "views": 31000,
       "url": "https://www.youtube.com/watch?v=26VEKoCFZcI"
-    }
-  },
-  {
-    "channel": "Around The World 4K",
-    "channel_url": "https://www.youtube.com/channel/UC4F-DMVCe-UbIsweL6kIEfg",
-    "count": 1,
-    "total_views": 30000,
-    "avg_views": 30000,
-    "videos": [
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "QJrKGGe6fok",
-        "url": "https://www.youtube.com/watch?v=QJrKGGe6fok",
-        "title": "Hallstatt in Autumn – The Most Beautiful Village in the World | 8K HDR 60p",
-        "description": null,
-        "duration": 264,
-        "channel_id": "UC4F-DMVCe-UbIsweL6kIEfg",
-        "channel": "Around The World 4K",
-        "channel_url": "https://www.youtube.com/channel/UC4F-DMVCe-UbIsweL6kIEfg",
-        "uploader": "Around The World 4K",
-        "uploader_id": "@aroundtheworld4k",
-        "uploader_url": "https://www.youtube.com/@aroundtheworld4k",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/QJrKGGe6fok/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD18X2ggVMX3ADU-4vuJJfDYcMUWA",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/QJrKGGe6fok/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAynJOLfrOb_hmICicbQ3tpFICV_A",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/QJrKGGe6fok/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAK4Jg1jpZrk2-iYhero56wTqMVdg",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/QJrKGGe6fok/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBOrbKLOXWHoTiHNeSRxn2lAKNtEg",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 30000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      }
-    ],
-    "top_video": {
-      "id": "QJrKGGe6fok",
-      "title": "Hallstatt in Autumn – The Most Beautiful Village in the World | 8K HDR 60p",
-      "views": 30000,
-      "url": "https://www.youtube.com/watch?v=QJrKGGe6fok"
     }
   },
   {
@@ -8608,8 +8456,8 @@ const CHANNEL_STATS = [
     "channel": "Nocturne Canvas",
     "channel_url": "https://www.youtube.com/channel/UCRf_tQc0cI0lJb0F848qxUQ",
     "count": 1,
-    "total_views": 8300,
-    "avg_views": 8300,
+    "total_views": 8400,
+    "avg_views": 8400,
     "videos": [
       {
         "_type": "url",
@@ -8650,7 +8498,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 8300,
+        "view_count": 8400,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -8659,7 +8507,7 @@ const CHANNEL_STATS = [
     "top_video": {
       "id": "sdquibgE3dU",
       "title": "Stay a Moment Longer Where the Footbridge Has Watched Every Season Turn 🍂 | Relaxing Classical Music",
-      "views": 8300,
+      "views": 8400,
       "url": "https://www.youtube.com/watch?v=sdquibgE3dU"
     }
   },
@@ -8667,8 +8515,8 @@ const CHANNEL_STATS = [
     "channel": "Living Visual Poems",
     "channel_url": "https://www.youtube.com/channel/UC8OJx6hpApmEcPIa-AEwueQ",
     "count": 2,
-    "total_views": 7500,
-    "avg_views": 3750,
+    "total_views": 7700,
+    "avg_views": 3850,
     "videos": [
       {
         "_type": "url",
@@ -8709,7 +8557,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 4000,
+        "view_count": 4100,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -8753,7 +8601,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 3500,
+        "view_count": 3600,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -8762,7 +8610,7 @@ const CHANNEL_STATS = [
     "top_video": {
       "id": "55ZjmzmUoFc",
       "title": "Visual Poems | Monet Blue Sea | Living Oil Painting",
-      "views": 4000,
+      "views": 4100,
       "url": "https://www.youtube.com/watch?v=55ZjmzmUoFc"
     }
   },
@@ -8829,8 +8677,8 @@ const CHANNEL_STATS = [
     "channel": "Beautiful Living Art",
     "channel_url": "https://www.youtube.com/channel/UCRHwLLdlYo0WZbeuQ1slnNA",
     "count": 10,
-    "total_views": 5949,
-    "avg_views": 595,
+    "total_views": 6027,
+    "avg_views": 603,
     "videos": [
       {
         "_type": "url",
@@ -8959,7 +8807,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 701,
+        "view_count": 706,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -9003,51 +8851,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 674,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "3VdQEHlFIe0",
-        "url": "https://www.youtube.com/watch?v=3VdQEHlFIe0",
-        "title": "Impressionist Art in Motion | Claude Monet | Relaxing Music 21",
-        "description": null,
-        "duration": 165,
-        "channel_id": "UCRHwLLdlYo0WZbeuQ1slnNA",
-        "channel": "Beautiful Living Art",
-        "channel_url": "https://www.youtube.com/channel/UCRHwLLdlYo0WZbeuQ1slnNA",
-        "uploader": "Beautiful Living Art",
-        "uploader_id": "@BeautifulLivingArt",
-        "uploader_url": "https://www.youtube.com/@BeautifulLivingArt",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/3VdQEHlFIe0/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGH8gTSgnMA8=&rs=AOn4CLBBT8wFboGTca9t8k-MDF6F6JSX0g",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/3VdQEHlFIe0/hqdefault.jpg?sqp=-oaymwE1CMQBEG5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGH8gTSgnMA8=&rs=AOn4CLBRih3pNwxqNPO9LyyMtZmDqaLt5g",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/3VdQEHlFIe0/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARh_IE0oJzAP&rs=AOn4CLCAT5SPw47OcKQNw7bI0yilt5f7hg",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/3VdQEHlFIe0/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARh_IE0oJzAP&rs=AOn4CLCLvwh8dlPnZzCa0exTnpW7PpYlOQ",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 385,
+        "view_count": 694,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -9091,7 +8895,51 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 383,
+        "view_count": 389,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "3VdQEHlFIe0",
+        "url": "https://www.youtube.com/watch?v=3VdQEHlFIe0",
+        "title": "Impressionist Art in Motion | Claude Monet | Relaxing Music 21",
+        "description": null,
+        "duration": 165,
+        "channel_id": "UCRHwLLdlYo0WZbeuQ1slnNA",
+        "channel": "Beautiful Living Art",
+        "channel_url": "https://www.youtube.com/channel/UCRHwLLdlYo0WZbeuQ1slnNA",
+        "uploader": "Beautiful Living Art",
+        "uploader_id": "@BeautifulLivingArt",
+        "uploader_url": "https://www.youtube.com/@BeautifulLivingArt",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/3VdQEHlFIe0/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGH8gTSgnMA8=&rs=AOn4CLBBT8wFboGTca9t8k-MDF6F6JSX0g",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/3VdQEHlFIe0/hqdefault.jpg?sqp=-oaymwE1CMQBEG5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGH8gTSgnMA8=&rs=AOn4CLBRih3pNwxqNPO9LyyMtZmDqaLt5g",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/3VdQEHlFIe0/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARh_IE0oJzAP&rs=AOn4CLCAT5SPw47OcKQNw7bI0yilt5f7hg",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/3VdQEHlFIe0/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARh_IE0oJzAP&rs=AOn4CLCLvwh8dlPnZzCa0exTnpW7PpYlOQ",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 386,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -9135,7 +8983,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 337,
+        "view_count": 339,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -9179,7 +9027,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 284,
+        "view_count": 285,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -9223,7 +9071,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 160,
+        "view_count": 203,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -9520,8 +9368,8 @@ const CHANNEL_STATS = [
     "channel": "Slow Frame",
     "channel_url": "https://www.youtube.com/channel/UCl-7VK_DVk6eDravqXpJw7Q",
     "count": 1,
-    "total_views": 195,
-    "avg_views": 195,
+    "total_views": 196,
+    "avg_views": 196,
     "videos": [
       {
         "_type": "url",
@@ -9562,7 +9410,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 195,
+        "view_count": 196,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -9571,7 +9419,7 @@ const CHANNEL_STATS = [
     "top_video": {
       "id": "OPKpzQXzHds",
       "title": "The Frame Art TV 4K | Lone Tree | Oil Painting Style | Soft Music",
-      "views": 195,
+      "views": 196,
       "url": "https://www.youtube.com/watch?v=OPKpzQXzHds"
     }
   },
@@ -9621,7 +9469,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "concurrent_view_count": 3,
+        "concurrent_view_count": 1,
         "live_status": "is_live",
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -10405,7 +10253,7 @@ const ALL_VIDEOS = [
     "title": "Isaac Levitan: A collection of 437 paintings (HD)",
     "channel": "LearnFromMasters",
     "channelUrl": "https://www.youtube.com/channel/UCWjLl5TDZqMZimHbHXk0Wpg",
-    "views": 926000,
+    "views": 927000,
     "durationSec": 2656,
     "durationFormatted": "44:16",
     "url": "https://www.youtube.com/watch?v=h3-WUZi-0hU",
@@ -10641,7 +10489,7 @@ const ALL_VIDEOS = [
     "title": "Visual Poems | Monet | Journey to the Water Lilies: A Day in the Garden | 4K",
     "channel": "Extraordinary Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
-    "views": 834000,
+    "views": 837000,
     "durationSec": 485,
     "durationFormatted": "08:05",
     "url": "https://www.youtube.com/watch?v=MWRc13v-ZhA",
@@ -11277,7 +11125,7 @@ const ALL_VIDEOS = [
     "title": "Claude Monet Painting | Winter Love in France",
     "channel": "Cupid Studio",
     "channelUrl": "https://www.youtube.com/channel/UClWtMcqVrDo3039JTMAYE4w",
-    "views": 510000,
+    "views": 511000,
     "durationSec": 219,
     "durationFormatted": "03:39",
     "url": "https://www.youtube.com/watch?v=oWMDH9dPswg",
@@ -11639,85 +11487,11 @@ const ALL_VIDEOS = [
     "wallpaperCount": 3
   },
   {
-    "id": "CBNoD-qbdss",
-    "title": "Visual Poems | Claude Monet | Arrival of the Normandy Train ",
-    "channel": "Painters Dream",
-    "channelUrl": "https://www.youtube.com/channel/UCqCzEEy42I36ACXVFs2t15g",
-    "views": 364000,
-    "durationSec": 163,
-    "durationFormatted": "02:43",
-    "url": "https://www.youtube.com/watch?v=CBNoD-qbdss",
-    "thumb": "https://i.ytimg.com/vi/CBNoD-qbdss/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/CBNoD-qbdss/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [
-      {
-        "id": "CBNoD-qbdss_1",
-        "videoId": "CBNoD-qbdss",
-        "videoTitle": "Visual Poems | Claude Monet | Arrival of the Normandy Train ",
-        "channel": "Painters Dream",
-        "snapshotIndex": 1,
-        "timestampSec": 20,
-        "timestampFormatted": "00:20",
-        "path": "wallpapers/CBNoD-qbdss/snapshot_1.jpg",
-        "width": 1920,
-        "height": 1080,
-        "qualityLabel": "1080p FHD",
-        "is4K": false,
-        "fileSizeKB": 188.8,
-        "tags": [],
-        "primaryPalette": [],
-        "formFactor": "desktop"
-      },
-      {
-        "id": "CBNoD-qbdss_2",
-        "videoId": "CBNoD-qbdss",
-        "videoTitle": "Visual Poems | Claude Monet | Arrival of the Normandy Train ",
-        "channel": "Painters Dream",
-        "snapshotIndex": 2,
-        "timestampSec": 60,
-        "timestampFormatted": "01:00",
-        "path": "wallpapers/CBNoD-qbdss/snapshot_2.jpg",
-        "width": 1920,
-        "height": 1080,
-        "qualityLabel": "1080p FHD",
-        "is4K": false,
-        "fileSizeKB": 609.6,
-        "tags": [],
-        "primaryPalette": [],
-        "formFactor": "desktop"
-      },
-      {
-        "id": "CBNoD-qbdss_3",
-        "videoId": "CBNoD-qbdss",
-        "videoTitle": "Visual Poems | Claude Monet | Arrival of the Normandy Train ",
-        "channel": "Painters Dream",
-        "snapshotIndex": 3,
-        "timestampSec": 110,
-        "timestampFormatted": "01:50",
-        "path": "wallpapers/CBNoD-qbdss/snapshot_3.jpg",
-        "width": 1920,
-        "height": 1080,
-        "qualityLabel": "1080p FHD",
-        "is4K": false,
-        "fileSizeKB": 313.3,
-        "tags": [],
-        "primaryPalette": [],
-        "formFactor": "desktop"
-      }
-    ],
-    "wallpaperCount": 3
-  },
-  {
     "id": "AWcmN1W_jJI",
     "title": "4K Claude Monet Screensaver | Monet Painting Wallpaper Slideshow | 3 Hours, No Music",
     "channel": "Artful TV - Beautiful Wallpapers and Screensavers",
     "channelUrl": "https://www.youtube.com/channel/UC-L8sZPo_tF96-LE1ykvqsw",
-    "views": 364000,
+    "views": 365000,
     "durationSec": 10801,
     "durationFormatted": "3:00:01",
     "url": "https://www.youtube.com/watch?v=AWcmN1W_jJI",
@@ -12021,11 +11795,85 @@ const ALL_VIDEOS = [
     "wallpaperCount": 16
   },
   {
+    "id": "CBNoD-qbdss",
+    "title": "Visual Poems | Claude Monet | Arrival of the Normandy Train ",
+    "channel": "Painters Dream",
+    "channelUrl": "https://www.youtube.com/channel/UCqCzEEy42I36ACXVFs2t15g",
+    "views": 364000,
+    "durationSec": 163,
+    "durationFormatted": "02:43",
+    "url": "https://www.youtube.com/watch?v=CBNoD-qbdss",
+    "thumb": "https://i.ytimg.com/vi/CBNoD-qbdss/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/CBNoD-qbdss/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [
+      {
+        "id": "CBNoD-qbdss_1",
+        "videoId": "CBNoD-qbdss",
+        "videoTitle": "Visual Poems | Claude Monet | Arrival of the Normandy Train ",
+        "channel": "Painters Dream",
+        "snapshotIndex": 1,
+        "timestampSec": 20,
+        "timestampFormatted": "00:20",
+        "path": "wallpapers/CBNoD-qbdss/snapshot_1.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "fileSizeKB": 188.8,
+        "tags": [],
+        "primaryPalette": [],
+        "formFactor": "desktop"
+      },
+      {
+        "id": "CBNoD-qbdss_2",
+        "videoId": "CBNoD-qbdss",
+        "videoTitle": "Visual Poems | Claude Monet | Arrival of the Normandy Train ",
+        "channel": "Painters Dream",
+        "snapshotIndex": 2,
+        "timestampSec": 60,
+        "timestampFormatted": "01:00",
+        "path": "wallpapers/CBNoD-qbdss/snapshot_2.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "fileSizeKB": 609.6,
+        "tags": [],
+        "primaryPalette": [],
+        "formFactor": "desktop"
+      },
+      {
+        "id": "CBNoD-qbdss_3",
+        "videoId": "CBNoD-qbdss",
+        "videoTitle": "Visual Poems | Claude Monet | Arrival of the Normandy Train ",
+        "channel": "Painters Dream",
+        "snapshotIndex": 3,
+        "timestampSec": 110,
+        "timestampFormatted": "01:50",
+        "path": "wallpapers/CBNoD-qbdss/snapshot_3.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "fileSizeKB": 313.3,
+        "tags": [],
+        "primaryPalette": [],
+        "formFactor": "desktop"
+      }
+    ],
+    "wallpaperCount": 3
+  },
+  {
     "id": "FTxh92VdZVw",
     "title": "Russian Painting – The Best of Russian Landscape Painters / Пейзажи знаменитых русских художников",
     "channel": "Paintings I Love",
     "channelUrl": "https://www.youtube.com/channel/UCSNkM642FT9v3tEfyE-rwTQ",
-    "views": 320000,
+    "views": 322000,
     "durationSec": 612,
     "durationFormatted": "10:12",
     "url": "https://www.youtube.com/watch?v=FTxh92VdZVw",
@@ -12155,7 +12003,7 @@ const ALL_VIDEOS = [
     "title": "Monet and the sea Fine art Classical Paintings Wallpaper screensaver background  HD 1080p",
     "channel": "Famous Paintings For TV A Window Into The Museum",
     "channelUrl": "https://www.youtube.com/channel/UCeOcs9KHbcOZuibnR4xnMVg",
-    "views": 262000,
+    "views": 264000,
     "durationSec": 9131,
     "durationFormatted": "2:32:11",
     "url": "https://www.youtube.com/watch?v=oIDKMOVf_RI",
@@ -12395,7 +12243,7 @@ const ALL_VIDEOS = [
     "title": "Visual Poems | Claude Monet | A Nostalgic Winter Journey by Steam Train | 4K",
     "channel": "Extraordinary Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
-    "views": 211000,
+    "views": 212000,
     "durationSec": 183,
     "durationFormatted": "03:03",
     "url": "https://www.youtube.com/watch?v=x3fwY0Kh7uM",
@@ -12581,7 +12429,7 @@ const ALL_VIDEOS = [
     "title": "Visual Poems | Woodland Walk by Floral Scent | Living Oil Paintings",
     "channel": "Muse Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 178000,
+    "views": 179000,
     "durationSec": 190,
     "durationFormatted": "03:10",
     "url": "https://www.youtube.com/watch?v=ZXjKmShmdUc",
@@ -12761,6 +12609,25 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
+    "id": "j8kxk_s1Iv8",
+    "title": "Visual Poems | Rain on Blossoms, Deep Greenery | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 159000,
+    "durationSec": 199,
+    "durationFormatted": "03:19",
+    "url": "https://www.youtube.com/watch?v=j8kxk_s1Iv8",
+    "thumb": "https://i.ytimg.com/vi/j8kxk_s1Iv8/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/j8kxk_s1Iv8/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
     "id": "Vls1Mq-oMdg",
     "title": "Visual Poems | Van Gogh Part II | The House of the Sun [AI Music Video]",
     "channel": "Mystic Video AI",
@@ -12907,30 +12774,11 @@ const ALL_VIDEOS = [
     "wallpaperCount": 7
   },
   {
-    "id": "j8kxk_s1Iv8",
-    "title": "Visual Poems | Rain on Blossoms, Deep Greenery | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 158000,
-    "durationSec": 199,
-    "durationFormatted": "03:19",
-    "url": "https://www.youtube.com/watch?v=j8kxk_s1Iv8",
-    "thumb": "https://i.ytimg.com/vi/j8kxk_s1Iv8/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/j8kxk_s1Iv8/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
     "id": "Xul5WT0ReYw",
     "title": "Guglielmo Ciardi: A collection of 54 paintings (HD)",
     "channel": "LearnFromMasters",
     "channelUrl": "https://www.youtube.com/channel/UCWjLl5TDZqMZimHbHXk0Wpg",
-    "views": 157000,
+    "views": 158000,
     "durationSec": 356,
     "durationFormatted": "05:56",
     "url": "https://www.youtube.com/watch?v=Xul5WT0ReYw",
@@ -13205,7 +13053,7 @@ const ALL_VIDEOS = [
     "title": "Visual Poems | Rose Garden | Living Oil Paintings",
     "channel": "Muse Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 128474,
+    "views": 128000,
     "durationSec": 212,
     "durationFormatted": "03:32",
     "url": "https://www.youtube.com/watch?v=V0Nz7TQcGF0",
@@ -13334,7 +13182,7 @@ const ALL_VIDEOS = [
     "title": "A Rainy Day in the English Countryside | Victorian Visual Poem with Classical Music",
     "channel": "Visual Poems in Paintings",
     "channelUrl": "https://www.youtube.com/channel/UCf9Lq9Y5ONa66jB31QTZSig",
-    "views": 114000,
+    "views": 115000,
     "durationSec": 506,
     "durationFormatted": "08:26",
     "url": "https://www.youtube.com/watch?v=ejXEYGBo2E0",
@@ -13368,6 +13216,25 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
+    "id": "qinshTPWa1o",
+    "title": "Visual Poems | Claude Monet | Beautiful Time on the Country Road",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 105000,
+    "durationSec": 229,
+    "durationFormatted": "03:49",
+    "url": "https://www.youtube.com/watch?v=qinshTPWa1o",
+    "thumb": "https://i.ytimg.com/vi/qinshTPWa1o/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/qinshTPWa1o/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
     "id": "2fqxjaNY-60",
     "title": "Visual Poems | The Quiet Language of Waves | Living Oil Paintings",
     "channel": "Muse Visual Art",
@@ -13378,25 +13245,6 @@ const ALL_VIDEOS = [
     "url": "https://www.youtube.com/watch?v=2fqxjaNY-60",
     "thumb": "https://i.ytimg.com/vi/2fqxjaNY-60/hqdefault.jpg",
     "maxresThumb": "https://i.ytimg.com/vi/2fqxjaNY-60/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
-    "id": "qinshTPWa1o",
-    "title": "Visual Poems | Claude Monet | Beautiful Time on the Country Road",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 103000,
-    "durationSec": 229,
-    "durationFormatted": "03:49",
-    "url": "https://www.youtube.com/watch?v=qinshTPWa1o",
-    "thumb": "https://i.ytimg.com/vi/qinshTPWa1o/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/qinshTPWa1o/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -13556,7 +13404,7 @@ const ALL_VIDEOS = [
     "title": "Visual Poems | Waterside Cabin, Blooming Shores | Living Oil Paintings",
     "channel": "Muse Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 88000,
+    "views": 89000,
     "durationSec": 235,
     "durationFormatted": "03:55",
     "url": "https://www.youtube.com/watch?v=3XPsYH7DwCg",
@@ -13928,7 +13776,7 @@ const ALL_VIDEOS = [
     "title": "Visual Poems | Claude Monet | \"Whispers of the River Epte\": Flowing Light and a Green Healing Dream",
     "channel": "Extraordinary Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
-    "views": 68000,
+    "views": 69000,
     "durationSec": 290,
     "durationFormatted": "04:50",
     "url": "https://www.youtube.com/watch?v=AubPDZQPVEY",
@@ -14070,6 +13918,25 @@ const ALL_VIDEOS = [
     "wallpaperCount": 7
   },
   {
+    "id": "vzlLI1B_91g",
+    "title": "Visual Poems | Claude Monet | Le Pavé de Chailly",
+    "channel": "Painters Dream",
+    "channelUrl": "https://www.youtube.com/channel/UCqCzEEy42I36ACXVFs2t15g",
+    "views": 68000,
+    "durationSec": 209,
+    "durationFormatted": "03:29",
+    "url": "https://www.youtube.com/watch?v=vzlLI1B_91g",
+    "thumb": "https://i.ytimg.com/vi/vzlLI1B_91g/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/vzlLI1B_91g/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
     "id": "j-i8EEgur_0",
     "title": "Visual Poems | Where Irises Bloom by the Water | Living Oil Paintings",
     "channel": "Muse Visual Art",
@@ -14080,25 +13947,6 @@ const ALL_VIDEOS = [
     "url": "https://www.youtube.com/watch?v=j-i8EEgur_0",
     "thumb": "https://i.ytimg.com/vi/j-i8EEgur_0/hqdefault.jpg",
     "maxresThumb": "https://i.ytimg.com/vi/j-i8EEgur_0/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
-    "id": "vzlLI1B_91g",
-    "title": "Visual Poems | Claude Monet | Le Pavé de Chailly",
-    "channel": "Painters Dream",
-    "channelUrl": "https://www.youtube.com/channel/UCqCzEEy42I36ACXVFs2t15g",
-    "views": 67000,
-    "durationSec": 209,
-    "durationFormatted": "03:29",
-    "url": "https://www.youtube.com/watch?v=vzlLI1B_91g",
-    "thumb": "https://i.ytimg.com/vi/vzlLI1B_91g/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/vzlLI1B_91g/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -14131,7 +13979,7 @@ const ALL_VIDEOS = [
     "title": "Visual Poems | Little Wonders by the Roadside | Living Oil Paintings",
     "channel": "Muse Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 65000,
+    "views": 66000,
     "durationSec": 225,
     "durationFormatted": "03:45",
     "url": "https://www.youtube.com/watch?v=xJhuOM71f2Q",
@@ -14279,7 +14127,7 @@ const ALL_VIDEOS = [
     "title": "Visual Poems | Autumn Sun in the Valley | Living Oil Paintings",
     "channel": "Muse Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 62000,
+    "views": 63000,
     "durationSec": 221,
     "durationFormatted": "03:41",
     "url": "https://www.youtube.com/watch?v=LCrG7Gm5riM",
@@ -14298,7 +14146,7 @@ const ALL_VIDEOS = [
     "title": "빈센트 반 고흐 명화 따뜻한 그림감상 힐링 음악 태교🎵 Van Gogh Art Slideshow🌞Famous Paintings Healing Music",
     "channel": "Mind Travel 마인드 트래블",
     "channelUrl": "https://www.youtube.com/channel/UCgfnBRJ7HBgmeVbPFMfnZRg",
-    "views": 62000,
+    "views": 63000,
     "durationSec": 43187,
     "durationFormatted": "11:59:47",
     "url": "https://www.youtube.com/watch?v=XtDnD1qmAX8",
@@ -14309,6 +14157,25 @@ const ALL_VIDEOS = [
     "resolution": "1920x1080",
     "qualityLabel": "1080p FHD",
     "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "NVwstpSWVnw",
+    "title": "Yeh Shaam Mastani ( ये शाम मस्तानी )  4K Song - Kati Patang | Kishore Kumar | Rajesh Khanna",
+    "channel": "Gaane 70s 80s",
+    "channelUrl": "https://www.youtube.com/channel/UCz-3NGJmE45CwYs89dNz_cQ",
+    "views": 61000,
+    "durationSec": 260,
+    "durationFormatted": "04:20",
+    "url": "https://www.youtube.com/watch?v=NVwstpSWVnw",
+    "thumb": "https://i.ytimg.com/vi/NVwstpSWVnw/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/NVwstpSWVnw/maxresdefault.jpg",
+    "width": 3840,
+    "height": 2160,
+    "resolution": "3840x2160",
+    "qualityLabel": "4K UHD",
+    "is4K": true,
     "wallpapers": [],
     "wallpaperCount": 0
   },
@@ -14423,6 +14290,25 @@ const ALL_VIDEOS = [
     "wallpaperCount": 5
   },
   {
+    "id": "kW_p6SuX7Zg",
+    "title": "Visual Poems | Wind Through Trees and Blooms | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 59000,
+    "durationSec": 229,
+    "durationFormatted": "03:49",
+    "url": "https://www.youtube.com/watch?v=kW_p6SuX7Zg",
+    "thumb": "https://i.ytimg.com/vi/kW_p6SuX7Zg/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/kW_p6SuX7Zg/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
     "id": "8z5XHjZwaEU",
     "title": "Gao Xingjian: A collection of 50 works (HD)",
     "channel": "LearnFromMasters",
@@ -14433,25 +14319,6 @@ const ALL_VIDEOS = [
     "url": "https://www.youtube.com/watch?v=8z5XHjZwaEU",
     "thumb": "https://i.ytimg.com/vi/8z5XHjZwaEU/hqdefault.jpg",
     "maxresThumb": "https://i.ytimg.com/vi/8z5XHjZwaEU/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
-    "id": "kW_p6SuX7Zg",
-    "title": "Visual Poems | Wind Through Trees and Blooms | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 57000,
-    "durationSec": 229,
-    "durationFormatted": "03:49",
-    "url": "https://www.youtube.com/watch?v=kW_p6SuX7Zg",
-    "thumb": "https://i.ytimg.com/vi/kW_p6SuX7Zg/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/kW_p6SuX7Zg/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -15309,7 +15176,7 @@ const ALL_VIDEOS = [
     "title": "Visual Poems | Claude Monet | The Fields and the Wind Through Seasons",
     "channel": "Muse Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 38000,
+    "views": 40000,
     "durationSec": 248,
     "durationFormatted": "04:08",
     "url": "https://www.youtube.com/watch?v=I2dt7XlcWHM",
@@ -15334,6 +15201,25 @@ const ALL_VIDEOS = [
     "url": "https://www.youtube.com/watch?v=fhKXyihwy24",
     "thumb": "https://i.ytimg.com/vi/fhKXyihwy24/hqdefault.jpg",
     "maxresThumb": "https://i.ytimg.com/vi/fhKXyihwy24/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "1jaEEos2Moc",
+    "title": "Visual Poems | Sunny Days | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 36000,
+    "durationSec": 204,
+    "durationFormatted": "03:24",
+    "url": "https://www.youtube.com/watch?v=1jaEEos2Moc",
+    "thumb": "https://i.ytimg.com/vi/1jaEEos2Moc/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/1jaEEos2Moc/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -15489,16 +15375,16 @@ const ALL_VIDEOS = [
     "wallpaperCount": 7
   },
   {
-    "id": "1jaEEos2Moc",
-    "title": "Visual Poems | Sunny Days | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 34000,
-    "durationSec": 204,
-    "durationFormatted": "03:24",
-    "url": "https://www.youtube.com/watch?v=1jaEEos2Moc",
-    "thumb": "https://i.ytimg.com/vi/1jaEEos2Moc/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/1jaEEos2Moc/maxresdefault.jpg",
+    "id": "phdjREhk2wg",
+    "title": "Johan Mari Henri ten Kate (Dutch, 1831 - 1910) ✽ Mozart / Wiegenlied",
+    "channel": "K A R O L A",
+    "channelUrl": "https://www.youtube.com/channel/UCd67RarDaTRSpcZFW7O5fnQ",
+    "views": 35000,
+    "durationSec": 165,
+    "durationFormatted": "02:45",
+    "url": "https://www.youtube.com/watch?v=phdjREhk2wg",
+    "thumb": "https://i.ytimg.com/vi/phdjREhk2wg/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/phdjREhk2wg/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -15518,25 +15404,6 @@ const ALL_VIDEOS = [
     "url": "https://www.youtube.com/watch?v=0wPmoFYmLyA",
     "thumb": "https://i.ytimg.com/vi/0wPmoFYmLyA/hqdefault.jpg",
     "maxresThumb": "https://i.ytimg.com/vi/0wPmoFYmLyA/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
-    "id": "phdjREhk2wg",
-    "title": "Johan Mari Henri ten Kate (Dutch, 1831 - 1910) ✽ Mozart / Wiegenlied",
-    "channel": "K A R O L A",
-    "channelUrl": "https://www.youtube.com/channel/UCd67RarDaTRSpcZFW7O5fnQ",
-    "views": 34000,
-    "durationSec": 165,
-    "durationFormatted": "02:45",
-    "url": "https://www.youtube.com/watch?v=phdjREhk2wg",
-    "thumb": "https://i.ytimg.com/vi/phdjREhk2wg/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/phdjREhk2wg/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -15787,49 +15654,11 @@ const ALL_VIDEOS = [
     "wallpaperCount": 7
   },
   {
-    "id": "A-le9yB8PYY",
-    "title": "Ivan Aivazovsky - 50 of his Best Paintings",
-    "channel": "LetsFallinArt",
-    "channelUrl": "https://www.youtube.com/channel/UCUVxLeCbJSEtHKelsG6uQDQ",
-    "views": 31000,
-    "durationSec": 352,
-    "durationFormatted": "05:52",
-    "url": "https://www.youtube.com/watch?v=A-le9yB8PYY",
-    "thumb": "https://i.ytimg.com/vi/A-le9yB8PYY/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/A-le9yB8PYY/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
-    "id": "26VEKoCFZcI",
-    "title": "Художник Божков Роман Александрович",
-    "channel": "Маргарита Полянская",
-    "channelUrl": "https://www.youtube.com/channel/UCbB-G6-8C6RXuGjrAOxrOpw",
-    "views": 31000,
-    "durationSec": 234,
-    "durationFormatted": "03:54",
-    "url": "https://www.youtube.com/watch?v=26VEKoCFZcI",
-    "thumb": "https://i.ytimg.com/vi/26VEKoCFZcI/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/26VEKoCFZcI/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
     "id": "QJrKGGe6fok",
     "title": "Hallstatt in Autumn – The Most Beautiful Village in the World | 8K HDR 60p",
     "channel": "Around The World 4K",
     "channelUrl": "https://www.youtube.com/channel/UC4F-DMVCe-UbIsweL6kIEfg",
-    "views": 30000,
+    "views": 31000,
     "durationSec": 264,
     "durationFormatted": "04:24",
     "url": "https://www.youtube.com/watch?v=QJrKGGe6fok",
@@ -15969,6 +15798,44 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7
+  },
+  {
+    "id": "A-le9yB8PYY",
+    "title": "Ivan Aivazovsky - 50 of his Best Paintings",
+    "channel": "LetsFallinArt",
+    "channelUrl": "https://www.youtube.com/channel/UCUVxLeCbJSEtHKelsG6uQDQ",
+    "views": 31000,
+    "durationSec": 352,
+    "durationFormatted": "05:52",
+    "url": "https://www.youtube.com/watch?v=A-le9yB8PYY",
+    "thumb": "https://i.ytimg.com/vi/A-le9yB8PYY/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/A-le9yB8PYY/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "26VEKoCFZcI",
+    "title": "Художник Божков Роман Александрович",
+    "channel": "Маргарита Полянская",
+    "channelUrl": "https://www.youtube.com/channel/UCbB-G6-8C6RXuGjrAOxrOpw",
+    "views": 31000,
+    "durationSec": 234,
+    "durationFormatted": "03:54",
+    "url": "https://www.youtube.com/watch?v=26VEKoCFZcI",
+    "thumb": "https://i.ytimg.com/vi/26VEKoCFZcI/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/26VEKoCFZcI/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
   },
   {
     "id": "uR1ljov-MRc",
@@ -16212,6 +16079,25 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
+    "id": "r_ZaXKUuXMc",
+    "title": "Visual Poems | Forest Edge and Wildflowers | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 26000,
+    "durationSec": 245,
+    "durationFormatted": "04:05",
+    "url": "https://www.youtube.com/watch?v=r_ZaXKUuXMc",
+    "thumb": "https://i.ytimg.com/vi/r_ZaXKUuXMc/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/r_ZaXKUuXMc/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
     "id": "srsiIWbB1sU",
     "title": "Visual Poems | Slow Life in a Courtyard | Living Oil Paintings",
     "channel": "Muse Visual Art",
@@ -16231,25 +16117,6 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "r_ZaXKUuXMc",
-    "title": "Visual Poems | Forest Edge and Wildflowers | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 25000,
-    "durationSec": 245,
-    "durationFormatted": "04:05",
-    "url": "https://www.youtube.com/watch?v=r_ZaXKUuXMc",
-    "thumb": "https://i.ytimg.com/vi/r_ZaXKUuXMc/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/r_ZaXKUuXMc/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
     "id": "U2WXMUa7BWo",
     "title": "Visual Poems | Claude Monet | The Bridge at Bougival",
     "channel": "Painters Dream",
@@ -16260,6 +16127,25 @@ const ALL_VIDEOS = [
     "url": "https://www.youtube.com/watch?v=U2WXMUa7BWo",
     "thumb": "https://i.ytimg.com/vi/U2WXMUa7BWo/hqdefault.jpg",
     "maxresThumb": "https://i.ytimg.com/vi/U2WXMUa7BWo/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "smlzmKwRXBM",
+    "title": "Visual Poems | A Reverie of a White Dress | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 22000,
+    "durationSec": 188,
+    "durationFormatted": "03:08",
+    "url": "https://www.youtube.com/watch?v=smlzmKwRXBM",
+    "thumb": "https://i.ytimg.com/vi/smlzmKwRXBM/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/smlzmKwRXBM/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -16417,25 +16303,6 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "smlzmKwRXBM",
-    "title": "Visual Poems | A Reverie of a White Dress | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 21000,
-    "durationSec": 188,
-    "durationFormatted": "03:08",
-    "url": "https://www.youtube.com/watch?v=smlzmKwRXBM",
-    "thumb": "https://i.ytimg.com/vi/smlzmKwRXBM/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/smlzmKwRXBM/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
     "id": "RyoWkJ2r314",
     "title": "Visual Poems | The Stone Path and Clear Greens After Rain | Living Oil Paintings",
     "channel": "Muse Visual Art",
@@ -16503,6 +16370,25 @@ const ALL_VIDEOS = [
     "url": "https://www.youtube.com/watch?v=QB1p9MKrf1M",
     "thumb": "https://i.ytimg.com/vi/QB1p9MKrf1M/hqdefault.jpg",
     "maxresThumb": "https://i.ytimg.com/vi/QB1p9MKrf1M/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "mTi-O-vmJYI",
+    "title": "Visual Poems | The Blossom River and Silent Time | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 18000,
+    "durationSec": 204,
+    "durationFormatted": "03:24",
+    "url": "https://www.youtube.com/watch?v=mTi-O-vmJYI",
+    "thumb": "https://i.ytimg.com/vi/mTi-O-vmJYI/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/mTi-O-vmJYI/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -16620,25 +16506,6 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 5
-  },
-  {
-    "id": "mTi-O-vmJYI",
-    "title": "Visual Poems | The Blossom River and Silent Time | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 17000,
-    "durationSec": 204,
-    "durationFormatted": "03:24",
-    "url": "https://www.youtube.com/watch?v=mTi-O-vmJYI",
-    "thumb": "https://i.ytimg.com/vi/mTi-O-vmJYI/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/mTi-O-vmJYI/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
   },
   {
     "id": "qEmmHWrxlno",
@@ -16916,6 +16783,25 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
+    "id": "DEBpPMu4w20",
+    "title": "Visual Poems | Whispers by the Riverside | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 16000,
+    "durationSec": 210,
+    "durationFormatted": "03:30",
+    "url": "https://www.youtube.com/watch?v=DEBpPMu4w20",
+    "thumb": "https://i.ytimg.com/vi/DEBpPMu4w20/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/DEBpPMu4w20/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
     "id": "idaaEXwbjLo",
     "title": "Hugo Mühlig (1854 – 1929) ✽ German Impressionist painter",
     "channel": "K A R O L A",
@@ -16949,25 +16835,6 @@ const ALL_VIDEOS = [
     "height": 720,
     "resolution": "1280x720",
     "qualityLabel": "720p",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
-    "id": "DEBpPMu4w20",
-    "title": "Visual Poems | Whispers by the Riverside | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 15000,
-    "durationSec": 210,
-    "durationFormatted": "03:30",
-    "url": "https://www.youtube.com/watch?v=DEBpPMu4w20",
-    "thumb": "https://i.ytimg.com/vi/DEBpPMu4w20/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/DEBpPMu4w20/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0
@@ -17358,6 +17225,25 @@ const ALL_VIDEOS = [
     "wallpaperCount": 5
   },
   {
+    "id": "WrkiT2xR8Gw",
+    "title": "Visual Poems | A Lemon Yellow Afternoon | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 11000,
+    "durationSec": 224,
+    "durationFormatted": "03:44",
+    "url": "https://www.youtube.com/watch?v=WrkiT2xR8Gw",
+    "thumb": "https://i.ytimg.com/vi/WrkiT2xR8Gw/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/WrkiT2xR8Gw/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
     "id": "jWlxfU71NXI",
     "title": "Visual Poems | Between Bloom and Fade | Living Oil Paintings",
     "channel": "Muse Visual Art",
@@ -17368,6 +17254,25 @@ const ALL_VIDEOS = [
     "url": "https://www.youtube.com/watch?v=jWlxfU71NXI",
     "thumb": "https://i.ytimg.com/vi/jWlxfU71NXI/hqdefault.jpg",
     "maxresThumb": "https://i.ytimg.com/vi/jWlxfU71NXI/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "FRHDbIlwNXo",
+    "title": "Visual Poems | Afterglow by the Lake | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 11000,
+    "durationSec": 203,
+    "durationFormatted": "03:23",
+    "url": "https://www.youtube.com/watch?v=FRHDbIlwNXo",
+    "thumb": "https://i.ytimg.com/vi/FRHDbIlwNXo/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/FRHDbIlwNXo/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -17690,16 +17595,16 @@ const ALL_VIDEOS = [
     "wallpaperCount": 7
   },
   {
-    "id": "WrkiT2xR8Gw",
-    "title": "Visual Poems | A Lemon Yellow Afternoon | Living Oil Paintings",
+    "id": "sNLWtm_pGNc",
+    "title": "Visual Poems | Alpine Meadows and Streams | Living Oil Paintings",
     "channel": "Muse Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
     "views": 10000,
-    "durationSec": 224,
-    "durationFormatted": "03:44",
-    "url": "https://www.youtube.com/watch?v=WrkiT2xR8Gw",
-    "thumb": "https://i.ytimg.com/vi/WrkiT2xR8Gw/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/WrkiT2xR8Gw/maxresdefault.jpg",
+    "durationSec": 202,
+    "durationFormatted": "03:22",
+    "url": "https://www.youtube.com/watch?v=sNLWtm_pGNc",
+    "thumb": "https://i.ytimg.com/vi/sNLWtm_pGNc/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/sNLWtm_pGNc/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -17747,16 +17652,16 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "FRHDbIlwNXo",
-    "title": "Visual Poems | Afterglow by the Lake | Living Oil Paintings",
+    "id": "-haidoSkGtg",
+    "title": "Visual Poems | Breeze and the Spring Garden | Living Oil Paintings",
     "channel": "Muse Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
     "views": 10000,
-    "durationSec": 203,
-    "durationFormatted": "03:23",
-    "url": "https://www.youtube.com/watch?v=FRHDbIlwNXo",
-    "thumb": "https://i.ytimg.com/vi/FRHDbIlwNXo/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/FRHDbIlwNXo/maxresdefault.jpg",
+    "durationSec": 223,
+    "durationFormatted": "03:43",
+    "url": "https://www.youtube.com/watch?v=-haidoSkGtg",
+    "thumb": "https://i.ytimg.com/vi/-haidoSkGtg/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/-haidoSkGtg/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -17823,49 +17728,11 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "sNLWtm_pGNc",
-    "title": "Visual Poems | Alpine Meadows and Streams | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 9900,
-    "durationSec": 202,
-    "durationFormatted": "03:22",
-    "url": "https://www.youtube.com/watch?v=sNLWtm_pGNc",
-    "thumb": "https://i.ytimg.com/vi/sNLWtm_pGNc/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/sNLWtm_pGNc/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
-    "id": "-haidoSkGtg",
-    "title": "Visual Poems | Breeze and the Spring Garden | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 9800,
-    "durationSec": 223,
-    "durationFormatted": "03:43",
-    "url": "https://www.youtube.com/watch?v=-haidoSkGtg",
-    "thumb": "https://i.ytimg.com/vi/-haidoSkGtg/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/-haidoSkGtg/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
     "id": "ZqP1sJfO5Vg",
     "title": "Visual Poems | Where Clouds and Flowers Compete in Beauty | Living Oil Paintings",
     "channel": "Muse Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 9700,
+    "views": 9800,
     "durationSec": 214,
     "durationFormatted": "03:34",
     "url": "https://www.youtube.com/watch?v=ZqP1sJfO5Vg",
@@ -17922,7 +17789,7 @@ const ALL_VIDEOS = [
     "title": "Visual Poems | Upon Sunlit Flower Fields | Living Oil Paintings",
     "channel": "Muse Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 8900,
+    "views": 9000,
     "durationSec": 215,
     "durationFormatted": "03:35",
     "url": "https://www.youtube.com/watch?v=LA2Aca2HFWE",
@@ -17941,7 +17808,7 @@ const ALL_VIDEOS = [
     "title": "Visual Poems | The Cliff Wildflower Path in Twilight | Living Oil Paintings",
     "channel": "Muse Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 8900,
+    "views": 9000,
     "durationSec": 192,
     "durationFormatted": "03:12",
     "url": "https://www.youtube.com/watch?v=rNtZNeeXNlw",
@@ -17966,6 +17833,44 @@ const ALL_VIDEOS = [
     "url": "https://www.youtube.com/watch?v=wJCFTm619jI",
     "thumb": "https://i.ytimg.com/vi/wJCFTm619jI/hqdefault.jpg",
     "maxresThumb": "https://i.ytimg.com/vi/wJCFTm619jI/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "9LTrHubvJ7c",
+    "title": "Visual Poems | Wind Through Sunflowers and Lavender | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 8800,
+    "durationSec": 183,
+    "durationFormatted": "03:03",
+    "url": "https://www.youtube.com/watch?v=9LTrHubvJ7c",
+    "thumb": "https://i.ytimg.com/vi/9LTrHubvJ7c/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/9LTrHubvJ7c/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "eIBHyqwf_IU",
+    "title": "Monet’s River of Light: The Poplars on the Epte｜Impressionist Art Film",
+    "channel": "Extraordinary Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
+    "views": 8800,
+    "durationSec": 268,
+    "durationFormatted": "04:28",
+    "url": "https://www.youtube.com/watch?v=eIBHyqwf_IU",
+    "thumb": "https://i.ytimg.com/vi/eIBHyqwf_IU/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/eIBHyqwf_IU/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -18121,35 +18026,16 @@ const ALL_VIDEOS = [
     "wallpaperCount": 7
   },
   {
-    "id": "9LTrHubvJ7c",
-    "title": "Visual Poems | Wind Through Sunflowers and Lavender | Living Oil Paintings",
+    "id": "O-pFK5rH5LM",
+    "title": "Visual Poems | Wildflowers, Birds and Wind | Living Oil Paintings",
     "channel": "Muse Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 8700,
-    "durationSec": 183,
-    "durationFormatted": "03:03",
-    "url": "https://www.youtube.com/watch?v=9LTrHubvJ7c",
-    "thumb": "https://i.ytimg.com/vi/9LTrHubvJ7c/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/9LTrHubvJ7c/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
-    "id": "eIBHyqwf_IU",
-    "title": "Monet’s River of Light: The Poplars on the Epte｜Impressionist Art Film",
-    "channel": "Extraordinary Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
-    "views": 8700,
-    "durationSec": 268,
-    "durationFormatted": "04:28",
-    "url": "https://www.youtube.com/watch?v=eIBHyqwf_IU",
-    "thumb": "https://i.ytimg.com/vi/eIBHyqwf_IU/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/eIBHyqwf_IU/maxresdefault.jpg",
+    "views": 8600,
+    "durationSec": 203,
+    "durationFormatted": "03:23",
+    "url": "https://www.youtube.com/watch?v=O-pFK5rH5LM",
+    "thumb": "https://i.ytimg.com/vi/O-pFK5rH5LM/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/O-pFK5rH5LM/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -18269,16 +18155,16 @@ const ALL_VIDEOS = [
     "wallpaperCount": 5
   },
   {
-    "id": "O-pFK5rH5LM",
-    "title": "Visual Poems | Wildflowers, Birds and Wind | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "id": "sdquibgE3dU",
+    "title": "Stay a Moment Longer Where the Footbridge Has Watched Every Season Turn 🍂 | Relaxing Classical Music",
+    "channel": "Nocturne Canvas",
+    "channelUrl": "https://www.youtube.com/channel/UCRf_tQc0cI0lJb0F848qxUQ",
     "views": 8400,
-    "durationSec": 203,
-    "durationFormatted": "03:23",
-    "url": "https://www.youtube.com/watch?v=O-pFK5rH5LM",
-    "thumb": "https://i.ytimg.com/vi/O-pFK5rH5LM/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/O-pFK5rH5LM/maxresdefault.jpg",
+    "durationSec": 253,
+    "durationFormatted": "04:13",
+    "url": "https://www.youtube.com/watch?v=sdquibgE3dU",
+    "thumb": "https://i.ytimg.com/vi/sdquibgE3dU/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/sdquibgE3dU/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -18307,16 +18193,16 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "sdquibgE3dU",
-    "title": "Stay a Moment Longer Where the Footbridge Has Watched Every Season Turn 🍂 | Relaxing Classical Music",
-    "channel": "Nocturne Canvas",
-    "channelUrl": "https://www.youtube.com/channel/UCRf_tQc0cI0lJb0F848qxUQ",
-    "views": 8300,
-    "durationSec": 253,
-    "durationFormatted": "04:13",
-    "url": "https://www.youtube.com/watch?v=sdquibgE3dU",
-    "thumb": "https://i.ytimg.com/vi/sdquibgE3dU/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/sdquibgE3dU/maxresdefault.jpg",
+    "id": "Be1abFztDXE",
+    "title": "Visual Poems | Winter Snow in Giverny | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 7400,
+    "durationSec": 190,
+    "durationFormatted": "03:10",
+    "url": "https://www.youtube.com/watch?v=Be1abFztDXE",
+    "thumb": "https://i.ytimg.com/vi/Be1abFztDXE/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/Be1abFztDXE/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -18326,16 +18212,35 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "Be1abFztDXE",
-    "title": "Visual Poems | Winter Snow in Giverny | Living Oil Paintings",
+    "id": "TlT_YeXzw5E",
+    "title": "Visual Poems | Poppy Meadow, Day and Night | Living Oil Paintings",
     "channel": "Muse Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
     "views": 7300,
-    "durationSec": 190,
-    "durationFormatted": "03:10",
-    "url": "https://www.youtube.com/watch?v=Be1abFztDXE",
-    "thumb": "https://i.ytimg.com/vi/Be1abFztDXE/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/Be1abFztDXE/maxresdefault.jpg",
+    "durationSec": 223,
+    "durationFormatted": "03:43",
+    "url": "https://www.youtube.com/watch?v=TlT_YeXzw5E",
+    "thumb": "https://i.ytimg.com/vi/TlT_YeXzw5E/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/TlT_YeXzw5E/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "KfeNumv1QtY",
+    "title": "Visual Poems | Valley in Full Bloom and the Stream | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 7200,
+    "durationSec": 184,
+    "durationFormatted": "03:04",
+    "url": "https://www.youtube.com/watch?v=KfeNumv1QtY",
+    "thumb": "https://i.ytimg.com/vi/KfeNumv1QtY/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/KfeNumv1QtY/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -18364,25 +18269,6 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "TlT_YeXzw5E",
-    "title": "Visual Poems | Poppy Meadow, Day and Night | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 7200,
-    "durationSec": 223,
-    "durationFormatted": "03:43",
-    "url": "https://www.youtube.com/watch?v=TlT_YeXzw5E",
-    "thumb": "https://i.ytimg.com/vi/TlT_YeXzw5E/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/TlT_YeXzw5E/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
     "id": "3L7EzPjFkoc",
     "title": "Visual Poems | Time Flows Between the Vines | Living Oil Paintings",
     "channel": "Muse Visual Art",
@@ -18393,25 +18279,6 @@ const ALL_VIDEOS = [
     "url": "https://www.youtube.com/watch?v=3L7EzPjFkoc",
     "thumb": "https://i.ytimg.com/vi/3L7EzPjFkoc/hqdefault.jpg",
     "maxresThumb": "https://i.ytimg.com/vi/3L7EzPjFkoc/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
-    "id": "KfeNumv1QtY",
-    "title": "Visual Poems | Valley in Full Bloom and the Stream | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 6900,
-    "durationSec": 184,
-    "durationFormatted": "03:04",
-    "url": "https://www.youtube.com/watch?v=KfeNumv1QtY",
-    "thumb": "https://i.ytimg.com/vi/KfeNumv1QtY/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/KfeNumv1QtY/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -18770,6 +18637,25 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
+    "id": "JxN6RTXENnM",
+    "title": "Visual Poems | Dusk Blooms by the Sea | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 5800,
+    "durationSec": 235,
+    "durationFormatted": "03:55",
+    "url": "https://www.youtube.com/watch?v=JxN6RTXENnM",
+    "thumb": "https://i.ytimg.com/vi/JxN6RTXENnM/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/JxN6RTXENnM/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
     "id": "UCuqpVlRHtE",
     "title": "Visual Poems | Inside Claude Monet's Japanese Footbridge",
     "channel": "Painters Dream",
@@ -18789,16 +18675,16 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "JxN6RTXENnM",
-    "title": "Visual Poems | Dusk Blooms by the Sea | Living Oil Paintings",
+    "id": "McwYz2CHc_4",
+    "title": "Visual Poems | Wind Over the Wildflower Hill | Living Oil Paintings",
     "channel": "Muse Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
     "views": 5700,
-    "durationSec": 235,
-    "durationFormatted": "03:55",
-    "url": "https://www.youtube.com/watch?v=JxN6RTXENnM",
-    "thumb": "https://i.ytimg.com/vi/JxN6RTXENnM/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/JxN6RTXENnM/maxresdefault.jpg",
+    "durationSec": 225,
+    "durationFormatted": "03:45",
+    "url": "https://www.youtube.com/watch?v=McwYz2CHc_4",
+    "thumb": "https://i.ytimg.com/vi/McwYz2CHc_4/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/McwYz2CHc_4/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -18808,16 +18694,16 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "McwYz2CHc_4",
-    "title": "Visual Poems | Wind Over the Wildflower Hill | Living Oil Paintings",
+    "id": "dkDSwCTBv3I",
+    "title": "Visual Poems | Seasons of Poplars | Living Oil Paintings",
     "channel": "Muse Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
     "views": 5600,
-    "durationSec": 225,
-    "durationFormatted": "03:45",
-    "url": "https://www.youtube.com/watch?v=McwYz2CHc_4",
-    "thumb": "https://i.ytimg.com/vi/McwYz2CHc_4/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/McwYz2CHc_4/maxresdefault.jpg",
+    "durationSec": 214,
+    "durationFormatted": "03:34",
+    "url": "https://www.youtube.com/watch?v=dkDSwCTBv3I",
+    "thumb": "https://i.ytimg.com/vi/dkDSwCTBv3I/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/dkDSwCTBv3I/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -18865,30 +18751,11 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "dkDSwCTBv3I",
-    "title": "Visual Poems | Seasons of Poplars | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 5500,
-    "durationSec": 214,
-    "durationFormatted": "03:34",
-    "url": "https://www.youtube.com/watch?v=dkDSwCTBv3I",
-    "thumb": "https://i.ytimg.com/vi/dkDSwCTBv3I/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/dkDSwCTBv3I/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
     "id": "dIn45M5nraw",
     "title": "Visual Poems | Streams, Floral Fences, Barefoot Dreams | Living Oil Paintings",
     "channel": "Muse Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 4900,
+    "views": 5000,
     "durationSec": 202,
     "durationFormatted": "03:22",
     "url": "https://www.youtube.com/watch?v=dIn45M5nraw",
@@ -18926,7 +18793,7 @@ const ALL_VIDEOS = [
     "title": "Visual Poems | Autumn Poplars by the River | Living Oil Paintings",
     "channel": "Muse Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 4300,
+    "views": 4400,
     "durationSec": 219,
     "durationFormatted": "03:39",
     "url": "https://www.youtube.com/watch?v=O2iB1rI-rYM",
@@ -18960,6 +18827,25 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
+    "id": "la54ByAq8kA",
+    "title": "Visual Poems | Walking in Summer Poppies | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 4200,
+    "durationSec": 197,
+    "durationFormatted": "03:17",
+    "url": "https://www.youtube.com/watch?v=la54ByAq8kA",
+    "thumb": "https://i.ytimg.com/vi/la54ByAq8kA/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/la54ByAq8kA/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
     "id": "-JSSbxoY4dM",
     "title": "Visual Poems | Claude Monet |The World's Oldest Railway Station – Liverpool Road 1830",
     "channel": "Painters Dream",
@@ -18979,49 +18865,11 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "la54ByAq8kA",
-    "title": "Visual Poems | Walking in Summer Poppies | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 4100,
-    "durationSec": 197,
-    "durationFormatted": "03:17",
-    "url": "https://www.youtube.com/watch?v=la54ByAq8kA",
-    "thumb": "https://i.ytimg.com/vi/la54ByAq8kA/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/la54ByAq8kA/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
-    "id": "CbkFGrBvyrs",
-    "title": "Visual Poems | Houses and Wind in Auvers | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 4100,
-    "durationSec": 186,
-    "durationFormatted": "03:06",
-    "url": "https://www.youtube.com/watch?v=CbkFGrBvyrs",
-    "thumb": "https://i.ytimg.com/vi/CbkFGrBvyrs/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/CbkFGrBvyrs/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
     "id": "55ZjmzmUoFc",
     "title": "Visual Poems | Monet Blue Sea | Living Oil Painting",
     "channel": "Living Visual Poems",
     "channelUrl": "https://www.youtube.com/channel/UC8OJx6hpApmEcPIa-AEwueQ",
-    "views": 4000,
+    "views": 4100,
     "durationSec": 149,
     "durationFormatted": "02:29",
     "url": "https://www.youtube.com/watch?v=55ZjmzmUoFc",
@@ -19127,11 +18975,30 @@ const ALL_VIDEOS = [
     "wallpaperCount": 5
   },
   {
+    "id": "CbkFGrBvyrs",
+    "title": "Visual Poems | Houses and Wind in Auvers | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 4100,
+    "durationSec": 186,
+    "durationFormatted": "03:06",
+    "url": "https://www.youtube.com/watch?v=CbkFGrBvyrs",
+    "thumb": "https://i.ytimg.com/vi/CbkFGrBvyrs/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/CbkFGrBvyrs/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
     "id": "dfQ8FYmq-J4",
     "title": "Visual Poems | Wind Across the Vineyard Seasons | Living Oil Paintings",
     "channel": "Muse Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 3800,
+    "views": 3900,
     "durationSec": 201,
     "durationFormatted": "03:21",
     "url": "https://www.youtube.com/watch?v=dfQ8FYmq-J4",
@@ -19150,7 +19017,7 @@ const ALL_VIDEOS = [
     "title": "Visual Poems | Spring Rain on High Mountain Meadows | Living Oil Paintings",
     "channel": "Muse Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 3600,
+    "views": 3700,
     "durationSec": 215,
     "durationFormatted": "03:35",
     "url": "https://www.youtube.com/watch?v=OZLaj_AKaSY",
@@ -19169,7 +19036,7 @@ const ALL_VIDEOS = [
     "title": "Visual Poems | Duckweed, Canal and Willows | Living Oil Paintings",
     "channel": "Muse Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 3600,
+    "views": 3700,
     "durationSec": 188,
     "durationFormatted": "03:08",
     "url": "https://www.youtube.com/watch?v=7Hsyg36ckdU",
@@ -19188,7 +19055,7 @@ const ALL_VIDEOS = [
     "title": "Renoir Painting | Paris Garden Party",
     "channel": "Cupid Studio",
     "channelUrl": "https://www.youtube.com/channel/UClWtMcqVrDo3039JTMAYE4w",
-    "views": 3600,
+    "views": 3700,
     "durationSec": 223,
     "durationFormatted": "03:43",
     "url": "https://www.youtube.com/watch?v=RE7ozAvuKjI",
@@ -19298,7 +19165,7 @@ const ALL_VIDEOS = [
     "title": "Visual Poems | Monet Peaceful Village | Living Oil Painting",
     "channel": "Living Visual Poems",
     "channelUrl": "https://www.youtube.com/channel/UC8OJx6hpApmEcPIa-AEwueQ",
-    "views": 3500,
+    "views": 3600,
     "durationSec": 170,
     "durationFormatted": "02:50",
     "url": "https://www.youtube.com/watch?v=AGoap1I0Fqg",
@@ -20234,7 +20101,7 @@ const ALL_VIDEOS = [
     "title": "Visual Poems | Still Life with Claude Monet",
     "channel": "Painters Dream",
     "channelUrl": "https://www.youtube.com/channel/UCqCzEEy42I36ACXVFs2t15g",
-    "views": 1200,
+    "views": 1300,
     "durationSec": 134,
     "durationFormatted": "02:14",
     "url": "https://www.youtube.com/watch?v=7Qm0mrqMvHk",
@@ -20418,7 +20285,7 @@ const ALL_VIDEOS = [
     "title": "Visual Poems | Claude Monet | Enter a Renoir Painting | Monet Living Art Piece 36",
     "channel": "Beautiful Living Art",
     "channelUrl": "https://www.youtube.com/channel/UCRHwLLdlYo0WZbeuQ1slnNA",
-    "views": 701,
+    "views": 706,
     "durationSec": 125,
     "durationFormatted": "02:05",
     "url": "https://www.youtube.com/watch?v=wsDbLAtIUIA",
@@ -20437,7 +20304,7 @@ const ALL_VIDEOS = [
     "title": "Living Oil Paintings | Dreamy French Art Aesthetic | Monet Inspired) | Living Art 32",
     "channel": "Beautiful Living Art",
     "channelUrl": "https://www.youtube.com/channel/UCRHwLLdlYo0WZbeuQ1slnNA",
-    "views": 674,
+    "views": 694,
     "durationSec": 156,
     "durationFormatted": "02:36",
     "url": "https://www.youtube.com/watch?v=D_wR8L621Es",
@@ -20579,30 +20446,11 @@ const ALL_VIDEOS = [
     "wallpaperCount": 7
   },
   {
-    "id": "3VdQEHlFIe0",
-    "title": "Impressionist Art in Motion | Claude Monet | Relaxing Music 21",
-    "channel": "Beautiful Living Art",
-    "channelUrl": "https://www.youtube.com/channel/UCRHwLLdlYo0WZbeuQ1slnNA",
-    "views": 385,
-    "durationSec": 165,
-    "durationFormatted": "02:45",
-    "url": "https://www.youtube.com/watch?v=3VdQEHlFIe0",
-    "thumb": "https://i.ytimg.com/vi/3VdQEHlFIe0/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/3VdQEHlFIe0/maxresdefault.jpg",
-    "width": 1914,
-    "height": 1080,
-    "resolution": "1914x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
     "id": "YOpeCXH6bs0",
     "title": "Visual Poems | Claude Monet | Enter an Impressionist Painting | AI Living Art Piece 37",
     "channel": "Beautiful Living Art",
     "channelUrl": "https://www.youtube.com/channel/UCRHwLLdlYo0WZbeuQ1slnNA",
-    "views": 383,
+    "views": 389,
     "durationSec": 124,
     "durationFormatted": "02:04",
     "url": "https://www.youtube.com/watch?v=YOpeCXH6bs0",
@@ -20617,11 +20465,30 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
+    "id": "3VdQEHlFIe0",
+    "title": "Impressionist Art in Motion | Claude Monet | Relaxing Music 21",
+    "channel": "Beautiful Living Art",
+    "channelUrl": "https://www.youtube.com/channel/UCRHwLLdlYo0WZbeuQ1slnNA",
+    "views": 386,
+    "durationSec": 165,
+    "durationFormatted": "02:45",
+    "url": "https://www.youtube.com/watch?v=3VdQEHlFIe0",
+    "thumb": "https://i.ytimg.com/vi/3VdQEHlFIe0/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/3VdQEHlFIe0/maxresdefault.jpg",
+    "width": 1914,
+    "height": 1080,
+    "resolution": "1914x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
     "id": "Fpp-ZBkfo28",
     "title": "Visual Poems | Claude Monet | Enter a Renoir Painting | Monet Living Art Piece 38",
     "channel": "Beautiful Living Art",
     "channelUrl": "https://www.youtube.com/channel/UCRHwLLdlYo0WZbeuQ1slnNA",
-    "views": 337,
+    "views": 339,
     "durationSec": 209,
     "durationFormatted": "03:29",
     "url": "https://www.youtube.com/watch?v=Fpp-ZBkfo28",
@@ -20640,7 +20507,7 @@ const ALL_VIDEOS = [
     "title": "Living Monet Art in Motion | Impressionist AI Art and Relaxing Music in 4K 5",
     "channel": "Beautiful Living Art",
     "channelUrl": "https://www.youtube.com/channel/UCRHwLLdlYo0WZbeuQ1slnNA",
-    "views": 284,
+    "views": 285,
     "durationSec": 128,
     "durationFormatted": "02:08",
     "url": "https://www.youtube.com/watch?v=1oHJhkNDEKE",
@@ -20782,30 +20649,11 @@ const ALL_VIDEOS = [
     "wallpaperCount": 7
   },
   {
-    "id": "OPKpzQXzHds",
-    "title": "The Frame Art TV 4K | Lone Tree | Oil Painting Style | Soft Music",
-    "channel": "Slow Frame",
-    "channelUrl": "https://www.youtube.com/channel/UCl-7VK_DVk6eDravqXpJw7Q",
-    "views": 195,
-    "durationSec": 10829,
-    "durationFormatted": "3:00:29",
-    "url": "https://www.youtube.com/watch?v=OPKpzQXzHds",
-    "thumb": "https://i.ytimg.com/vi/OPKpzQXzHds/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/OPKpzQXzHds/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
     "id": "fV5IalilQpc",
     "title": "Visual Poems | Monet Inspired Living Art Film | Relaxing Music 7",
     "channel": "Beautiful Living Art",
     "channelUrl": "https://www.youtube.com/channel/UCRHwLLdlYo0WZbeuQ1slnNA",
-    "views": 160,
+    "views": 203,
     "durationSec": 96,
     "durationFormatted": "01:36",
     "url": "https://www.youtube.com/watch?v=fV5IalilQpc",
@@ -20814,6 +20662,25 @@ const ALL_VIDEOS = [
     "width": 1914,
     "height": 1080,
     "resolution": "1914x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "OPKpzQXzHds",
+    "title": "The Frame Art TV 4K | Lone Tree | Oil Painting Style | Soft Music",
+    "channel": "Slow Frame",
+    "channelUrl": "https://www.youtube.com/channel/UCl-7VK_DVk6eDravqXpJw7Q",
+    "views": 196,
+    "durationSec": 10829,
+    "durationFormatted": "3:00:29",
+    "url": "https://www.youtube.com/watch?v=OPKpzQXzHds",
+    "thumb": "https://i.ytimg.com/vi/OPKpzQXzHds/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/OPKpzQXzHds/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
     "qualityLabel": "1080p FHD",
     "is4K": false,
     "wallpapers": [],

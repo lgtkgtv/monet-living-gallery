@@ -116,7 +116,7 @@ def load_or_init_tracker(playlist, res_cache):
         if vid:
             existing_by_video.setdefault(vid, []).append(r)
 
-    MIN_REQUIRED_SCENES = 5
+    MIN_REQUIRED_SCENES = 3
 
     # Check disk for actual image files
     disk_completed = set()
