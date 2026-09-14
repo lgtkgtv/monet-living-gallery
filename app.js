@@ -1385,8 +1385,41 @@ window.addEventListener('keydown', (e) => {
 });
 
 // ==========================================================================
-// Modal 4: Contact Sachin Feedback System
+// Modal 4: Contact sachin Feedback System
 // ==========================================================================
+function handleCuratorBadgeClick(event) {
+    if (event) {
+        event.preventDefault();
+    }
+    const email = 'lgtkgtv@gmail.com';
+    const badge = document.getElementById('statCuratedBadge');
+
+    // Copy to clipboard immediately
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).catch(() => {
+            fallbackCopyText(email);
+        });
+    } else {
+        fallbackCopyText(email);
+    }
+
+    // Instant visual confirmation directly on the badge
+    if (badge) {
+        const originalHtml = badge.innerHTML;
+        badge.innerHTML = '✅ copied lgtkgtv@gmail.com!';
+        badge.style.borderColor = '#34d399';
+        badge.style.color = '#ffffff';
+        setTimeout(() => {
+            badge.innerHTML = originalHtml;
+            badge.style.borderColor = '';
+            badge.style.color = '';
+        }, 2500);
+    }
+
+    // Open modal dialog with compose options (Gmail Web, Copy, Mail App)
+    openContactModal();
+}
+
 function openContactModal() {
     const overlay = document.getElementById('contactModalOverlay');
     if (overlay) {
@@ -1426,7 +1459,7 @@ function fallbackCopyText(text, btnEl) {
     ta.select();
     try {
         document.execCommand('copy');
-        showCopyFeedback(btnEl);
+        if (btnEl) showCopyFeedback(btnEl);
     } catch (e) {
         console.error('Copy failed:', e);
     }

@@ -42,9 +42,9 @@
                 <span class="stat-badge stat-accent">🖼️ Wallpapers: <strong id="statWallpapersCount">366+</strong></span>
                 <span class="stat-badge">👁️ Cumulative Views: <strong id="statTotalViews">24.1M</strong></span>
                 <span class="stat-badge">🏛️ Channels: <strong id="statChannelCount">39</strong></span>
-                <button class="stat-badge stat-contact-badge" onclick="openContactModal()" title="Send site feedback or feature requests directly to Sachin">
-                    💬 Contact Sachin
-                </button>
+                <a class="stat-badge stat-contact-badge" id="statCuratedBadge" href="mailto:lgtkgtv@gmail.com?subject=monet-living-gallery%20site%20feedback%3A%20" onclick="handleCuratorBadgeClick(event)" title="curated by sachin g &lt;lgtkgtv@gmail.com&gt; — Click to copy email or open contact options">
+                    curated by sachin g &lt;lgtkgtv@gmail.com&gt;
+                </a>
             </div>
         </div>
     </header>
@@ -304,17 +304,17 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-        <!-- Direct Contact Card for Sachin -->
+        <!-- Direct Contact Card for sachin -->
         <div class="footer-contact-card">
             <div class="footer-contact-icon">💬</div>
             <div class="footer-contact-body">
                 <h3 class="footer-contact-title">Have Site Feedback or Feature Requests?</h3>
                 <p class="footer-contact-desc">
-                    I would love to hear from you! Reach out to <strong>Sachin</strong> directly with suggestions, new artist requests, or questions.
+                    I would love to hear from you! Reach out to <strong>sachin</strong> directly with suggestions, new artist requests, or questions.
                 </p>
                 <div class="footer-contact-actions">
                     <button class="btn-contact-primary" onclick="openContactModal()">
-                        ✉️ Contact Sachin
+                        ✉️ Contact sachin
                     </button>
                     <a class="btn-contact-secondary" href="mailto:lgtkgtv@gmail.com?subject=monet-living-gallery%20site%20feedback%3A%20" title="Send direct email">
                         lgtkgtv@gmail.com
@@ -330,13 +330,13 @@
         <p>Curated for Art Lovers & Impressionism Admirers · Generated from YouTube Playlist <a href="https://www.youtube.com/playlist?list=PLeqGkucOU6lA" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; color: var(--color-primary);">sh_Monet inspired Visual Arts</a></p>
     </footer>
 
-    <!-- Modal 4: Contact Sachin Lightbox -->
+    <!-- Modal 4: Contact sachin Lightbox -->
     <div id="contactModalOverlay" class="modal-overlay" style="display: none;">
         <div class="contact-modal-content">
             <div class="modal-header">
                 <div>
-                    <h3 class="modal-title">💬 Contact Sachin</h3>
-                    <div class="modal-res-tag">Site Feedback & Feature Requests</div>
+                    <h3 class="modal-title">💬 Contact sachin</h3>
+                    <div class="modal-res-tag">curated by sachin g &lt;lgtkgtv@gmail.com&gt;</div>
                 </div>
                 <button class="btn-close-modal" onclick="closeContactModal()" aria-label="Close Contact Dialog">✕</button>
             </div>

@@ -2139,7 +2139,7 @@ a {
 
 .stat-contact-badge {
   background: rgba(16, 185, 129, 0.18);
-  border-color: rgba(16, 185, 129, 0.4);
+  border: 1px solid rgba(16, 185, 129, 0.4);
   color: #a7f3d0;
   cursor: pointer;
   transition: var(--transition);
@@ -2149,6 +2149,7 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  text-decoration: none;
 }
 
 .stat-contact-badge:hover {
@@ -2157,6 +2158,7 @@ a {
   color: #ffffff;
   transform: translateY(-1px);
   box-shadow: 0 2px 8px rgba(16, 185, 129, 0.25);
+  text-decoration: none;
 }
 
 .footer-contact-card {
