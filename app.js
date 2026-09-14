@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeroStats();
     renderChannelCards();
     populateChannelFilter();
+    populateResolutionFilter();
     initSearchSuggestions();
     initFiltersAndEvents();
     buildAllWallpapersList();
@@ -188,6 +189,26 @@ function populateChannelFilter() {
         opt.textContent = `${s.channel} (${s.count} videos · ${formatViews(s.total_views)})`;
         select.appendChild(opt);
     });
+}
+
+function populateResolutionFilter() {
+    const select = document.getElementById('resSelect');
+    if (!select) return;
+    const currentVal = select.value || '4K';
+    const count4K = ALL_VIDEOS.filter(v => v.is4K).length;
+    const count1080Plus = ALL_VIDEOS.filter(v => v.height >= 1080).length;
+    const count1080Exact = ALL_VIDEOS.filter(v => v.height === 1080).length;
+    const countTotal = ALL_VIDEOS.length;
+    const countOther = ALL_VIDEOS.filter(v => v.height < 1080).length;
+
+    select.innerHTML = `
+        <option value="4K">👑 4K UHD Only (${count4K} works)</option>
+        <option value="1080P_PLUS">💎 1080p HD or better (${count1080Plus} works)</option>
+        <option value="1080P_EXACT">✨ 1080p Full HD (${count1080Exact} works)</option>
+        <option value="ALL">All Resolutions (${countTotal} works)</option>
+        <option value="OTHER">Standard HD (720p / ${countOther} works)</option>
+    `;
+    select.value = currentVal;
 }
 
 function switchMainTab(tabKey) {
