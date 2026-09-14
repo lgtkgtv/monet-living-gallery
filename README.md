@@ -4,11 +4,11 @@
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Gallery-brightgreen?logo=github)](https://lgtkgtv.github.io/monet-living-gallery/)
 [![4K UHD](https://img.shields.io/badge/Resolution-4K%20UHD%20(3840x2160)-gold)](https://lgtkgtv.github.io/monet-living-gallery/)
 [![Curated Works](https://img.shields.io/badge/Works-212%20Masterworks-blue)](https://lgtkgtv.github.io/monet-living-gallery/)
-[![Wallpapers](https://img.shields.io/badge/Wallpapers-455%20Snapshots-purple)](https://lgtkgtv.github.io/monet-living-gallery/)
+[![Wallpapers](https://img.shields.io/badge/Wallpapers-485%20Snapshots-purple)](https://lgtkgtv.github.io/monet-living-gallery/)
 [![Views](https://img.shields.io/badge/Views-46.2M%20Total-red)](https://lgtkgtv.github.io/monet-living-gallery/)
 [![Mobile First](https://img.shields.io/badge/Mobile-Optimized-success)](https://lgtkgtv.github.io/monet-living-gallery/)
 
-An interactive, curated digital museum and high-definition visual archive celebrating **Claude Monet** and the **Impressionist art movement**. Derived from the YouTube playlist **[sh_Monet inspired Visual Arts](https://www.youtube.com/playlist?list=PLeqGkucOU6lA)**, this project catalogs 212 masterworks across 40 distinct YouTube channels, featuring native resolution tags, dynamic channel aesthetic characterizations, verified links, instant bulk zip downloads, and a device-appropriate fullscreen wallpaper slideshow.
+An interactive, curated digital museum and high-definition visual archive celebrating **Claude Monet** and the **Impressionist art movement**. Derived from the YouTube playlist **[sh_Monet inspired Visual Arts](https://www.youtube.com/playlist?list=PLeqGkucOU6lA)**, this project catalogs 212 masterworks across 40 distinct YouTube channels, featuring native resolution tags, dynamic channel aesthetic characterizations, verified links, instant bulk zip downloads, 100% 4K UHD wallpaper extraction coverage, a device-appropriate fullscreen wallpaper slideshow, and personal collection bookmarks.
 
 🌐 **Live Web Application**: **[https://lgtkgtv.github.io/monet-living-gallery/](https://lgtkgtv.github.io/monet-living-gallery/)**
 
@@ -27,21 +27,25 @@ An interactive, curated digital museum and high-definition visual archive celebr
 - **Infinite Scrolling Sentinel**: Uses an `IntersectionObserver` sentinel (with 400px margin) to smoothly append subsequent batches of 24 as the user scrolls, paired with a styled manual "Load More" trigger.
 - **Ultra-Low Memory Footprint**: Scalable to thousands of titles without lag or browser freezing.
 
-### 3. 📦 Instant Bulk Wallpaper Downloader
+### 3. 📦 Instant Bulk Wallpaper Downloader & 100% 4K Coverage
+- **100% 4K UHD Wallpaper Extraction**: Every single native 4K UHD title in the catalog (46 of 46 titles) has high-resolution wallpaper snapshots (485 total snapshots in gallery).
 - **In-Browser Zip Packaging**: Uses `JSZip` to bundle filtered wallpapers directly in the browser with no server load.
-- **Contextual Selection**: Users can filter by artist, channel, or resolution tier (e.g. "Download all 293 4K wallpapers for LearnFromMasters") with a single click.
+- **Contextual Selection**: Users can filter by artist, channel, or resolution tier with a single click.
 
 ### 4. 🎨 Dynamic Curatorial Grid & Automated Channel Profiles
-- **Dynamic Extensibility**: Channels are dynamically profiled from catalog metrics. Hand-curated channels (e.g. *LearnFromMasters*, *Extraordinary Visual Art*, *Muse Visual Art*, *Cupid Studio*, *Beautiful Living Art*) are highlighted, while newly discovered channels receive automatic archetypes and metrics.
+- **Dynamic Extensibility**: Channels are dynamically profiled from catalog metrics. Hand-curated channels (*LearnFromMasters*, *Extraordinary Visual Art*, *Muse Visual Art*, *Cupid Studio*, *Beautiful Living Art*) are highlighted, while newly discovered channels receive automatic archetypes and metrics.
 - **Live Search Guide Chips**: Pre-curated artist chips (*Claude Monet*, *Renoir*, *Sisley*, *Boudin*, *Levitan*) and theme chips (*Water Lilies*, *Garden Sanctuaries*, *Winter & Snow*, *Venice*, *Paris*) dynamically compute and display current matching catalog counts.
 
-### 5. 📲 Progressive Web App (PWA) & Offline Caching
+### 5. ❤️ Personal Collection / "My Favorites" Bookmarking
+- **Client-Side Persistence**: Bookmark favorite paintings and wallpapers with a 1-click heart toggle stored in `localStorage`.
+- **Dedicated Collection View**: Instant "❤️ My Collection" tab to revisit saved masterworks even offline.
+
+### 6. 📲 Progressive Web App (PWA) & Offline Caching
 - **Installable on All Devices**: Complete `manifest.json` and custom golden Impressionist palette icons (`icons/icon-192.png`, `icons/icon-512.png`, `icons/icon.svg`) allow installing the gallery directly to home screens on iOS, Android, macOS, and Windows.
 - **Service Worker (`sw.js`)**: Intelligent hybrid caching strategy (Cache-First for wallpapers, audio, and styles; Network-First with offline fallback for HTML and app data).
 
-### 6. 🎬 Streamlined Ad-Free Previews & Playback
-- **Privacy-Enhanced Embeds (`youtube-nocookie.com`)**: Eliminates third-party tracking cookies to minimize ad pre-rolls.
-- **Ad-Free Wallpaper Previews**: Full resolution 4K wallpapers enable uncompressed contemplation without streaming buffering or commercials.
+### 7. 🤖 Automated Weekly Sync (GitHub Actions)
+- **Zero Maintenance Pipeline**: Scheduled `.github/workflows/sync_playlist.yml` workflow periodically polls YouTube for additions or title edits, probing missing resolutions and automatically updating the web gallery.
 
 ---
 

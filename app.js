@@ -1,14 +1,93 @@
 // L'Impressionnisme Vivant: App Logic, Resolutions, Device Adaptation & 4K Wallpaper Gallery
 
-let currentViewMode = 'videos'; // 'videos' or 'wallpapers'
+let currentViewMode = 'videos'; // 'videos', 'wallpapers', or 'favorites'
 let currentVideos = [];
 let currentWallpapers = [];
 let currentModalVideoId = null;
+
+// Favorites / Personal Collection State
+const FAVORITES_STORAGE_KEY = 'monet_gallery_favorites_v1';
+let favoriteVideoIds = new Set();
+
+function loadFavorites() {
+    try {
+        const raw = localStorage.getItem(FAVORITES_STORAGE_KEY);
+        if (raw) {
+            const parsed = JSON.parse(raw);
+            if (Array.isArray(parsed)) {
+                favoriteVideoIds = new Set(parsed);
+            }
+        }
+    } catch (e) {
+        console.warn('Failed to load favorites from localStorage', e);
+    }
+    updateFavoritesCount();
+}
+
+function saveFavorites() {
+    try {
+        localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify([...favoriteVideoIds]));
+    } catch (e) {
+        console.warn('Failed to save favorites to localStorage', e);
+    }
+    updateFavoritesCount();
+}
+
+function updateFavoritesCount() {
+    const countEl = document.getElementById('favTabCount');
+    if (countEl) countEl.textContent = favoriteVideoIds.size;
+}
+
+function isFavoriteVideo(videoId) {
+    return favoriteVideoIds.has(videoId);
+}
+
+function toggleFavoriteVideo(videoId, event) {
+    if (event) {
+        event.stopPropagation();
+        event.preventDefault();
+    }
+    if (favoriteVideoIds.has(videoId)) {
+        favoriteVideoIds.delete(videoId);
+    } else {
+        favoriteVideoIds.add(videoId);
+    }
+    saveFavorites();
+
+    // Update heart buttons across page
+    document.querySelectorAll(`[data-fav-video="${videoId}"]`).forEach(btn => {
+        const isFav = favoriteVideoIds.has(videoId);
+        btn.classList.toggle('active', isFav);
+        btn.setAttribute('title', isFav ? 'Remove from My Collection' : 'Save to My Collection');
+        btn.innerHTML = isFav ? '❤️' : '🤍';
+    });
+
+    // Update modal favorite button if open
+    if (currentModalVideoId === videoId) {
+        const modalFav = document.getElementById('modalFavBtn');
+        if (modalFav) {
+            const isFav = favoriteVideoIds.has(videoId);
+            modalFav.classList.toggle('active', isFav);
+            modalFav.innerHTML = isFav ? '❤️ Saved in Collection' : '🤍 Save to Collection';
+        }
+    }
+
+    // If currently viewing favorites, refresh grid view
+    if (currentViewMode === 'favorites') {
+        applyFilters();
+    }
+}
+
+function toggleFavoriteFromModal() {
+    if (!currentModalVideoId) return;
+    toggleFavoriteVideo(currentModalVideoId);
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     detectDeviceFormFactor();
     window.addEventListener('resize', detectDeviceFormFactor);
 
+    loadFavorites();
     initHeroStats();
     renderChannelCards();
     populateChannelFilter();
@@ -215,6 +294,7 @@ function switchMainTab(tabKey) {
     const tabVideos = document.getElementById('tabBtnVideos');
     const tabWallpapers = document.getElementById('tabBtnWallpapers');
     const tabChannels = document.getElementById('tabBtnChannels');
+    const tabFavorites = document.getElementById('tabBtnFavorites');
 
     const explorerSection = document.getElementById('explorerSection');
     const channelsSection = document.getElementById('channelsSection');
@@ -228,7 +308,8 @@ function switchMainTab(tabKey) {
     [
         { key: 'videos', btn: tabVideos },
         { key: 'wallpapers', btn: tabWallpapers },
-        { key: 'channels', btn: tabChannels }
+        { key: 'channels', btn: tabChannels },
+        { key: 'favorites', btn: tabFavorites }
     ].forEach(({ key, btn }) => {
         if (!btn) return;
         const isActive = (key === tabKey);
@@ -257,6 +338,12 @@ function switchMainTab(tabKey) {
         if (downloadBar) downloadBar.style.display = 'flex';
         if (headerTitle) headerTitle.textContent = '🖼️ The Impressionist Wallpaper Gallery';
         if (headerDesc) headerDesc.innerHTML = 'High-definition snapshots extracted from Impressionist masterworks. Instant artwork previews.';
+    } else if (tabKey === 'favorites') {
+        if (gridVid) gridVid.style.display = 'grid';
+        if (gridWp) gridWp.style.display = 'none';
+        if (downloadBar) downloadBar.style.display = 'none';
+        if (headerTitle) headerTitle.textContent = '❤️ My Saved Collection';
+        if (headerDesc) headerDesc.innerHTML = 'Your personal gallery of bookmarked Impressionist masterworks. Saved in your browser for contemplation anytime.';
     }
 
     applyFilters();
@@ -292,14 +379,18 @@ function createVideoCard(v) {
     if (v.channel === 'Cupid Studio' && v.wallpapers && v.wallpapers.length > 0) {
         thumbSrc = v.wallpapers[0].path;
     }
+    const isFav = isFavoriteVideo(v.id);
     
     card.innerHTML = `
-        <div class="thumb-container" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}')">
-            <img class="thumb-img" src="${thumbSrc}" alt="${escapeQuotes(v.title)}" loading="lazy" />
+        <div class="thumb-container">
+            <img class="thumb-img" src="${thumbSrc}" alt="${escapeQuotes(v.title)}" loading="lazy" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}')" />
             <span class="thumb-badge-views">${formatViews(v.views)}</span>
             <span class="thumb-badge-res ${resBadgeClass}">${v.qualityLabel}</span>
             <span class="thumb-badge-duration">${v.durationFormatted}</span>
-            <div class="play-overlay">
+            <button class="thumb-badge-fav ${isFav ? 'active' : ''}" data-fav-video="${v.id}" onclick="toggleFavoriteVideo('${v.id}', event)" title="${isFav ? 'Remove from My Collection' : 'Save to My Collection'}" aria-label="Toggle Favorite">
+                ${isFav ? '❤️' : '🤍'}
+            </button>
+            <div class="play-overlay" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}')">
                 <div class="play-circle">▶</div>
             </div>
         </div>
@@ -642,6 +733,10 @@ function applyFilters() {
     const channelEl = document.getElementById('channelSelect');
     const resEl = document.getElementById('resSelect');
     const sortEl = document.getElementById('sortSelect');
+    const emptyState = document.getElementById('favoritesEmptyState');
+    const gridVid = document.getElementById('videosGrid');
+    const gridWp = document.getElementById('wallpapersGrid');
+    const resultsCountEl = document.getElementById('resultsCount');
 
     const rawQuery = searchEl ? searchEl.value.trim() : '';
     const selectedChannel = channelEl ? channelEl.value : 'ALL';
@@ -649,6 +744,53 @@ function applyFilters() {
     const sortBy = sortEl ? sortEl.value : 'views_desc';
 
     updateActiveSearchChips(rawQuery);
+
+    if (currentViewMode === 'favorites') {
+        let filtered = ALL_VIDEOS.filter(v => {
+            if (!isFavoriteVideo(v.id)) return false;
+            const matchesQuery = matchesSearch(v.title, v.channel, rawQuery);
+            const matchesChannel = (selectedChannel === 'ALL') || (v.channel === selectedChannel);
+
+            let matchesRes = true;
+            if (selectedRes === '1080P_PLUS' || selectedRes === '1080P_OR_BETTER' || selectedRes === 'FHD_PLUS' || selectedRes === '1080P') {
+                matchesRes = (v.is4K || v.height >= 1080);
+            } else if (selectedRes === '1080P_EXACT' || selectedRes === 'FHD_EXACT' || selectedRes === '1080P_FHD' || selectedRes === 'FHD') {
+                matchesRes = (!v.is4K && v.height === 1080);
+            } else if (selectedRes === '4K') {
+                matchesRes = v.is4K;
+            } else if (selectedRes === 'OTHER') {
+                matchesRes = (!v.is4K && v.height < 1080);
+            }
+
+            return matchesQuery && matchesChannel && matchesRes;
+        });
+
+        if (sortBy === 'views_desc') filtered.sort((a, b) => b.views - a.views);
+        else if (sortBy === 'views_asc') filtered.sort((a, b) => a.views - b.views);
+        else if (sortBy === 'res_desc') filtered.sort((a, b) => (b.width * b.height) - (a.width * a.height));
+        else if (sortBy === 'duration_desc') filtered.sort((a, b) => b.durationSec - a.durationSec);
+        else if (sortBy === 'duration_asc') filtered.sort((a, b) => a.durationSec - b.durationSec);
+        else if (sortBy === 'title_asc') filtered.sort((a, b) => a.title.localeCompare(b.title));
+
+        currentVideos = filtered;
+        if (filtered.length === 0) {
+            if (gridVid) gridVid.style.display = 'none';
+            if (gridWp) gridWp.style.display = 'none';
+            if (emptyState) emptyState.style.display = 'block';
+            if (resultsCountEl) resultsCountEl.textContent = 'No saved masterworks match the current criteria';
+        } else {
+            if (emptyState) emptyState.style.display = 'none';
+            if (gridWp) gridWp.style.display = 'none';
+            if (gridVid) gridVid.style.display = 'grid';
+            renderVideos(filtered);
+            if (resultsCountEl) resultsCountEl.textContent = `Showing ${filtered.length} saved works in your collection`;
+        }
+        const downloadBar = document.getElementById('wallpaperDownloadBar');
+        if (downloadBar) downloadBar.style.display = 'none';
+        return;
+    }
+
+    if (emptyState) emptyState.style.display = 'none';
 
     if (currentViewMode === 'videos') {
         let filtered = ALL_VIDEOS.filter(v => {
@@ -897,6 +1039,13 @@ function openVideoModal(videoId, title, startSec = 0) {
     const wpCount = video ? (video.wallpaperCount || (video.wallpapers ? video.wallpapers.length : 0)) : 0;
     if (modalWpCount) modalWpCount.textContent = wpCount;
     if (wpBtn) wpBtn.style.display = wpCount > 0 ? 'inline-flex' : 'none';
+
+    const favBtn = document.getElementById('modalFavBtn');
+    if (favBtn) {
+        const isFav = isFavoriteVideo(videoId);
+        favBtn.classList.toggle('active', isFav);
+        favBtn.innerHTML = isFav ? '❤️ Saved in Collection' : '🤍 Save to Collection';
+    }
 
     const ytDirectLink = document.getElementById('modalYtDirectLink');
     if (ytDirectLink) {

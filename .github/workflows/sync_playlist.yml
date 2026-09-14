@@ -1,0 +1,48 @@
+name: Automated YouTube Playlist Sync
+
+on:
+  schedule:
+    # Run every Monday at 06:00 UTC
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+    # Allows manual trigger from the GitHub Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install System & Python Dependencies
+        run: |
+          sudo apt-get update && sudo apt-get install -y ffmpeg
+          pip install yt-dlp pillow
+
+      - name: Synchronize Playlist & Rebuild Catalog
+        run: |
+          chmod +x pipeline.py
+          ./pipeline.py --pull-playlist --update-resolutions --build
+
+      - name: Commit & Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "Changes detected, committing updates..."
+            git add -A
+            git commit -m "🤖 Automated sync with YouTube playlist [skip ci]"
+            git push origin main
+          else
+            echo "No changes detected. Catalog is already up to date."
+          fi

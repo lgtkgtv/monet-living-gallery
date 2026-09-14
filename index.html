@@ -50,13 +50,16 @@
                 <button id="tabBtnChannels" class="hero-tab-btn" role="tab" aria-selected="false" onclick="switchMainTab('channels')">
                     🏛️ The Channel Guides &amp; Aesthetic Profiles
                 </button>
+                <button id="tabBtnFavorites" class="hero-tab-btn" role="tab" aria-selected="false" onclick="switchMainTab('favorites')">
+                    ❤️ My Collection (<span id="favTabCount">0</span>)
+                </button>
             </nav>
 
             <!-- Compact Single-Line Curation Statistics -->
             <div class="hero-stats-strip" id="heroStatsStrip">
                 <span class="stat-badge">🎨 Curated Works: <strong id="statTotalVideos">212</strong></span>
                 <span class="stat-badge stat-gold">👑 Native 4K UHD: <strong id="stat4kCount">46 Works</strong></span>
-                <span class="stat-badge stat-accent">🖼️ Wallpapers: <strong id="statWallpapersCount">455</strong></span>
+                <span class="stat-badge stat-accent">🖼️ Wallpapers: <strong id="statWallpapersCount">485</strong></span>
                 <span class="stat-badge">👁️ Cumulative Views: <strong id="statTotalViews">46.2M</strong></span>
                 <span class="stat-badge">🏛️ Channels: <strong id="statChannelCount">40</strong></span>
             </div>
@@ -147,6 +150,18 @@
             <div class="wallpapers-grid" id="wallpapersGrid" style="display: none;">
                 <!-- Wallpapers rendered by app.js -->
             </div>
+
+            <!-- View 3: Empty State for Favorites -->
+            <div id="favoritesEmptyState" class="favorites-empty-state" style="display: none;">
+                <div class="empty-state-icon">🏛️</div>
+                <h3 class="empty-state-title">Your Impressionist Collection is Empty</h3>
+                <p class="empty-state-desc">
+                    Curate your personal digital salon. Click the 🤍 heart on any painting or wallpaper to save it here for instant access.
+                </p>
+                <button class="btn-empty-explore" onclick="switchMainTab('videos')">
+                    🎨 Explore Masterworks
+                </button>
+            </div>
         </section>
 
         <!-- SECTION 2: Channel Guides & Aesthetic Profiles -->
@@ -194,6 +209,9 @@
                     <span id="modalFooterQuality" class="modal-footer-res">👑 4K UHD</span>
                 </div>
                 <div class="modal-footer-actions">
+                    <button id="modalFavBtn" class="btn-modal-action-fav" onclick="toggleFavoriteFromModal()" title="Save to My Collection">
+                        🤍 Save to Collection
+                    </button>
                     <a id="modalYtDirectLink" href="https://www.youtube.com/playlist?list=PLeqGkucOU6lA" target="_blank" rel="noopener noreferrer" class="btn-modal-action-secondary" title="Watch this video on YouTube">
                         Watch on YouTube ↗
                     </a>

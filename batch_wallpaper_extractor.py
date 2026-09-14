@@ -196,6 +196,9 @@ def load_or_init_tracker(playlist, res_cache):
                 videos_map[vid]["status"] = "completed"
                 videos_map[vid]["extracted_count"] = max(videos_map[vid].get("extracted_count", 0), len(existing_records))
 
+    playlist_ids = {item["id"] for item in playlist}
+    videos_map = {vid: v for vid, v in videos_map.items() if vid in playlist_ids}
+
     tracker["videos"] = videos_map
     tracker["last_updated"] = datetime.now().isoformat()
     save_tracker(tracker)
