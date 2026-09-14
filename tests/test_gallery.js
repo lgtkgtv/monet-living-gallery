@@ -163,10 +163,44 @@ const resValue = dom.window.document.getElementById('resSelect').value;
 if (resValue !== '4K') throw new Error(`Expected resolution to be 4K, got ${resValue}`);
 console.log(`[PASS] Default 4K resolution filter verified: "${resValue}"`);
 
+// Verification 17: Favorites Action Bar visibility
+dom.window.toggleFavoriteVideo(testVideoId);
+dom.window.switchMainTab('favorites');
+const favActionBar = dom.window.document.getElementById('favoritesActionBar');
+if (!favActionBar || favActionBar.style.display !== 'flex') {
+    throw new Error('Expected favoritesActionBar to be visible (flex) when favorites exist');
+}
+dom.window.switchMainTab('videos');
+if (favActionBar.style.display !== 'none') {
+    throw new Error('Expected favoritesActionBar to be hidden in videos view');
+}
+console.log('[PASS] Favorites action bar toggles visibility correctly across views');
+
+// Verification 18: Cross-device collection sharing import
+dom.window.clearAllFavorites();
+const testSharedId = dom.window.ALL_VIDEOS[1].id;
+dom.window.history.pushState({}, '', `/?fav=${testVideoId},${testSharedId}`);
+dom.window.checkSharedFavoritesUrl();
+const sharedImportCount = parseInt(dom.window.document.getElementById('favTabCount').textContent, 10);
+if (sharedImportCount !== 2) throw new Error(`Expected 2 imported favorites, got ${sharedImportCount}`);
+console.log(`[PASS] Cross-device collection sharing imported ${sharedImportCount} works seamlessly`);
+
+// Verification 19: Ken Burns cinematic motion toggle
+const kenBurnsBtn = dom.window.document.getElementById('slideshowKenBurnsBtn');
+const slideshowImg = dom.window.document.getElementById('slideshowImage');
+if (!kenBurnsBtn) throw new Error('Expected slideshowKenBurnsBtn to exist in DOM');
+dom.window.toggleSlideshowKenBurns();
+if (!kenBurnsBtn.classList.contains('active')) throw new Error('Expected Ken Burns button to have active class');
+if (!slideshowImg.classList.contains('ken-burns')) throw new Error('Expected slideshow image to have ken-burns class');
+dom.window.toggleSlideshowKenBurns();
+if (kenBurnsBtn.classList.contains('active')) throw new Error('Expected Ken Burns button to be deactivated');
+if (slideshowImg.classList.contains('ken-burns')) throw new Error('Expected ken-burns class to be removed');
+console.log('[PASS] Ken Burns cinematic motion toggle verified');
+
 if (errors.length > 0) {
     console.error('❌ Uncaught runtime errors:', errors);
     process.exit(1);
 }
 
-console.log('\n🎉 ALL 16 VERIFICATION TESTS PASSED SUCCESSFULLY WITH 0 ERRORS!\n');
+console.log('\n🎉 ALL 19 VERIFICATION TESTS PASSED SUCCESSFULLY WITH 0 ERRORS!\n');
 

@@ -183,6 +183,89 @@ function toggleFavoriteVideo(videoId, event) {
     }
 }
 
+// ==========================================================================
+// Cross-Device Collection Sharing & In-App Toast Feedback
+// ==========================================================================
+let toastTimeoutId = null;
+
+function showNotificationToast(message, durationMs = 3500) {
+    let toast = document.getElementById('monetToast');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'monetToast';
+        toast.className = 'monet-toast';
+        document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.classList.add('visible');
+    if (toastTimeoutId) clearTimeout(toastTimeoutId);
+    toastTimeoutId = setTimeout(() => {
+        toast.classList.remove('visible');
+    }, durationMs);
+}
+
+function sharePersonalCollection() {
+    if (favoriteVideoIds.size === 0) {
+        showNotificationToast('Your collection is currently empty. Heart some artworks first!');
+        return;
+    }
+    const ids = Array.from(favoriteVideoIds).join(',');
+    const shareUrl = new URL(window.location.href);
+    shareUrl.searchParams.set('fav', ids);
+    const fullUrl = shareUrl.toString();
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(fullUrl).then(() => {
+            showNotificationToast(`🔗 Share link copied to clipboard! (${favoriteVideoIds.size} works)`);
+        }).catch(() => {
+            prompt('Copy this share link to open your collection on another device:', fullUrl);
+        });
+    } else {
+        prompt('Copy this share link to open your collection on another device:', fullUrl);
+    }
+}
+
+function confirmClearCollection() {
+    if (favoriteVideoIds.size === 0) return;
+    if (confirm(`Are you sure you want to remove all ${favoriteVideoIds.size} works from your personal collection?`)) {
+        clearAllFavorites();
+        showNotificationToast('🗑️ Personal collection cleared');
+    }
+}
+
+function checkSharedFavoritesUrl() {
+    try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const sharedFavs = urlParams.get('fav') || urlParams.get('favorites');
+        if (sharedFavs) {
+            const rawIds = sharedFavs.split(',').map(s => s.trim()).filter(Boolean);
+            if (rawIds.length > 0 && typeof ALL_VIDEOS !== 'undefined' && Array.isArray(ALL_VIDEOS)) {
+                let addedCount = 0;
+                rawIds.forEach(id => {
+                    if (ALL_VIDEOS.some(v => v.id === id)) {
+                        if (!favoriteVideoIds.has(id)) {
+                            favoriteVideoIds.add(id);
+                            addedCount++;
+                        }
+                    }
+                });
+                if (addedCount > 0) {
+                    saveFavorites();
+                    showNotificationToast(`🎉 Imported ${addedCount} shared work${addedCount === 1 ? '' : 's'} into your collection!`);
+                } else if (favoriteVideoIds.size > 0) {
+                    showNotificationToast(`✨ Loaded shared collection (${favoriteVideoIds.size} works)`);
+                }
+                switchMainTab('favorites');
+                // Clean URL parameters smoothly without full page refresh
+                const cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+                window.history.replaceState({ path: cleanUrl }, '', cleanUrl);
+            }
+        }
+    } catch (e) {
+        console.warn('Failed to parse shared favorites from URL', e);
+    }
+}
+
 function toggleFavoriteFromModal() {
     if (!currentModalVideoId) return;
     toggleFavoriteVideo(currentModalVideoId);
@@ -216,6 +299,9 @@ document.addEventListener('DOMContentLoaded', () => {
     initBackToTop();
 
     applyFilters();
+
+    // Check if user opened a shared collection link (?fav=id1,id2,...)
+    checkSharedFavoritesUrl();
 });
 
 // Floating Back to Top Functionality
@@ -437,6 +523,7 @@ function switchMainTab(tabKey) {
     const gridVid = document.getElementById('videosGrid');
     const gridWp = document.getElementById('wallpapersGrid');
     const downloadBar = document.getElementById('wallpaperDownloadBar');
+    const favoritesBar = document.getElementById('favoritesActionBar');
     const headerTitle = document.getElementById('sectionHeaderTitle');
     const headerDesc = document.getElementById('sectionHeaderDesc');
 
@@ -484,18 +571,21 @@ function switchMainTab(tabKey) {
         if (gridVid) gridVid.style.display = 'grid';
         if (gridWp) gridWp.style.display = 'none';
         if (downloadBar) downloadBar.style.display = 'none';
+        if (favoritesBar) favoritesBar.style.display = 'none';
         if (headerTitle) headerTitle.textContent = '🎨 The Impressionist Video Explorer';
         if (headerDesc) headerDesc.innerHTML = 'Explore high-definition Impressionist masterworks, living canvas motion, and museum-grade reproductions.';
     } else if (tabKey === 'wallpapers') {
         if (gridVid) gridVid.style.display = 'none';
         if (gridWp) gridWp.style.display = 'grid';
         if (downloadBar) downloadBar.style.display = 'flex';
+        if (favoritesBar) favoritesBar.style.display = 'none';
         if (headerTitle) headerTitle.textContent = '🖼️ The Impressionist Wallpaper Gallery';
         if (headerDesc) headerDesc.innerHTML = 'High-definition snapshots extracted from Impressionist masterworks. Instant artwork previews.';
     } else if (tabKey === 'favorites') {
         if (gridVid) gridVid.style.display = 'grid';
         if (gridWp) gridWp.style.display = 'none';
         if (downloadBar) downloadBar.style.display = 'none';
+        if (favoritesBar) favoritesBar.style.display = (favoriteVideoIds.size > 0) ? 'flex' : 'none';
         if (headerTitle) headerTitle.textContent = '❤️ My Saved Collection';
         if (headerDesc) headerDesc.innerHTML = 'Your personal gallery of bookmarked Impressionist masterworks. Saved in your browser for contemplation anytime.';
 
@@ -1009,6 +1099,7 @@ function applyFilters() {
     updateActiveSearchChips(rawQuery);
 
     if (currentViewMode === 'favorites') {
+        const favBar = document.getElementById('favoritesActionBar');
         if (favoriteVideoIds.size === 0) {
             if (gridVid) gridVid.style.display = 'none';
             if (gridWp) gridWp.style.display = 'none';
@@ -1016,8 +1107,11 @@ function applyFilters() {
             if (resultsCountEl) resultsCountEl.textContent = 'Your personal collection is currently empty';
             const downloadBar = document.getElementById('wallpaperDownloadBar');
             if (downloadBar) downloadBar.style.display = 'none';
+            if (favBar) favBar.style.display = 'none';
             return;
         }
+
+        if (favBar) favBar.style.display = 'flex';
 
         let filtered = ALL_VIDEOS.filter(v => {
             if (!isFavoriteVideo(v.id)) return false;
@@ -1078,6 +1172,9 @@ function applyFilters() {
         if (downloadBar) downloadBar.style.display = 'none';
         return;
     }
+
+    const favBar = document.getElementById('favoritesActionBar');
+    if (favBar) favBar.style.display = 'none';
 
     if (emptyState) emptyState.style.display = 'none';
 
@@ -2209,6 +2306,8 @@ function toggleGlobalAudio() {
     toggleSlideshowAudio();
 }
 
+let slideshowKenBurnsEnabled = false;
+
 function toggleSlideshowFit() {
     slideshowFitMode = (slideshowFitMode === 'contain') ? 'cover' : 'contain';
     const img = document.getElementById('slideshowImage');
@@ -2221,6 +2320,27 @@ function toggleSlideshowFit() {
         fitBtn.title = (slideshowFitMode === 'cover') 
             ? 'Fill Mode active (Image fills screen) — Click for Fit' 
             : 'Fit Mode active (Entire painting visible) — Click for Fill';
+    }
+}
+
+function toggleSlideshowKenBurns() {
+    slideshowKenBurnsEnabled = !slideshowKenBurnsEnabled;
+    const btn = document.getElementById('slideshowKenBurnsBtn');
+    const img = document.getElementById('slideshowImage');
+    if (btn) {
+        btn.classList.toggle('active', slideshowKenBurnsEnabled);
+        btn.title = slideshowKenBurnsEnabled 
+            ? 'Ken Burns Cinematic Motion active — Click to disable (K)' 
+            : 'Ken Burns Motion disabled — Click to enable slow pan & zoom (K)';
+    }
+    if (img) {
+        if (slideshowKenBurnsEnabled) {
+            img.classList.remove('ken-burns');
+            void img.offsetWidth;
+            img.classList.add('ken-burns');
+        } else {
+            img.classList.remove('ken-burns');
+        }
     }
 }
 
@@ -2262,6 +2382,13 @@ function showSlide(index) {
         img.src = wp.path;
         img.onload = () => {
             img.style.opacity = '1';
+            if (slideshowKenBurnsEnabled) {
+                img.classList.remove('ken-burns');
+                void img.offsetWidth; // Force layout reflow to smoothly restart keyframe animation
+                img.classList.add('ken-burns');
+            } else {
+                img.classList.remove('ken-burns');
+            }
         };
     }
 
@@ -2388,6 +2515,10 @@ function closeSlideshow() {
         overlay.style.display = 'none';
         overlay.classList.remove('active', 'controls-hidden');
     }
+    const img = document.getElementById('slideshowImage');
+    if (img) {
+        img.classList.remove('ken-burns');
+    }
     document.body.style.overflow = '';
 
     // Ambient audio continues playing seamlessly across gallery and slideshow
@@ -2427,6 +2558,8 @@ window.addEventListener('keydown', (e) => {
         toggleNativeFullscreen();
     } else if (e.key === 'c' || e.key === 'C') {
         toggleSlideshowFit();
+    } else if (e.key === 'k' || e.key === 'K') {
+        toggleSlideshowKenBurns();
     } else if (e.key === 'a' || e.key === 'A') {
         toggleSlideshowAudio();
     } else if (e.key === 'n' || e.key === 'N') {

@@ -92,7 +92,7 @@
                 <button class="stat-badge stat-gold stat-clickable" onclick="filterTo4K()" title="Filter to Native 4K UHD Masterworks">
                     👑 Native 4K UHD: <strong id="stat4kCount">47 Works</strong>
                 </button>
-                <span class="stat-badge stat-accent">🖼️ Wallpapers: <strong id="statWallpapersCount">449</strong></span>
+                <span class="stat-badge stat-accent">🖼️ Wallpapers: <strong id="statWallpapersCount">562+</strong></span>
                 <span class="stat-badge">👁️ Cumulative Views: <strong id="statTotalViews">46.5M</strong></span>
                 <button class="stat-badge stat-clickable" onclick="switchMainTab('channels')" title="Explore Channel Guides &amp; Aesthetic Profiles">
                     🏛️ Channels: <strong id="statChannelCount">41</strong> ↗
@@ -169,6 +169,25 @@
                         </button>
                         <button id="wpDownloadFilteredBtn" class="btn-download-filtered" onclick="downloadAllFilteredWallpapers()" title="Download all wallpapers matching current channel and resolution filters as a single ZIP archive">
                             📦 Download All (<span id="wpDownloadFilteredCount">0</span>) (ZIP)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Favorites Action Bar (Active in My Collection view) -->
+                <div class="wallpaper-download-bar favorites-action-bar" id="favoritesActionBar" style="display: none;">
+                    <div class="wp-download-bar-info">
+                        <span class="wp-download-icon">❤️</span>
+                        <div>
+                            <strong id="favBarTitle">Personal Curated Salon</strong>
+                            <span id="favBarSubtitle" class="wp-download-subtitle">Preserved locally on your device across sessions</span>
+                        </div>
+                    </div>
+                    <div class="wallpaper-bar-actions">
+                        <button id="favShareBtn" class="btn-share-collection" onclick="sharePersonalCollection()" title="Generate a shareable link to open your saved collection on any device or send to friends">
+                            🔗 Share Collection
+                        </button>
+                        <button id="favClearBtn" class="btn-clear-collection" onclick="confirmClearCollection()" title="Remove all saved works from your collection">
+                            🗑️ Clear All
                         </button>
                     </div>
                 </div>
@@ -345,6 +364,10 @@
 
                 <button class="slideshow-btn-icon" id="slideshowFitBtn" onclick="toggleSlideshowFit()" aria-label="Toggle fit or fill screen display mode" title="Toggle Fit / Fill Display Mode (C)">
                     🖼️
+                </button>
+
+                <button class="slideshow-btn-icon" id="slideshowKenBurnsBtn" onclick="toggleSlideshowKenBurns()" aria-label="Toggle Ken Burns cinematic pan and zoom motion" title="Toggle Ken Burns Cinematic Motion (K)">
+                    🎬
                 </button>
 
                 <div class="slideshow-speed-control" title="Slideshow Interval">
