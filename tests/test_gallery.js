@@ -102,12 +102,12 @@ console.log(`[PASS] Legal modal open: ${legalModal.classList.contains('open')}`)
 dom.window.closeLegalModal();
 console.log(`[PASS] Legal modal closed`);
 
-// Verification 8: Contact Curator Modal
-dom.window.openContactModal();
-const contactModal = dom.window.document.getElementById('contactModalOverlay');
-console.log(`[PASS] Contact modal open: ${contactModal.classList.contains('open')}`);
-dom.window.closeContactModal();
-console.log(`[PASS] Contact modal closed`);
+// Verification 8: Simplified Contact & Direct Email Link
+const contactLine = dom.window.document.querySelector('.footer-contact-line');
+const emailLink = dom.window.document.querySelector('.footer-email-link');
+if (!contactLine || !contactLine.textContent.includes('sachin')) throw new Error('Expected simplified contact for sachin');
+if (!emailLink || emailLink.href !== 'mailto:lgtkgtv@gmail.com') throw new Error('Expected email link to lgtkgtv@gmail.com');
+console.log(`[PASS] Simplified contact line: "${contactLine.textContent.trim()}"`);
 
 // Verification 9: Search Filter Execution
 const searchInput = dom.window.document.getElementById('searchInput');
@@ -149,10 +149,24 @@ if (clearedCount !== 0) throw new Error('Expected 0 favorites after clear');
 const favEmptyAfter = dom.window.document.getElementById('favoritesEmptyState');
 console.log(`[PASS] Empty state displayed after clear: ${favEmptyAfter.style.display !== 'none'}`);
 
+// Verification 15: Copyright & Prohibited Downloads Tracking
+const isLivingArtMomentsProhibited = dom.window.isChannelDownloadProhibited('Living Art Moments');
+const isLearnFromMastersProhibited = dom.window.isChannelDownloadProhibited('LearnFromMasters');
+if (!isLivingArtMomentsProhibited) throw new Error('Living Art Moments should be prohibited from downloads');
+if (isLearnFromMastersProhibited) throw new Error('LearnFromMasters should be permitted for downloads');
+console.log('[PASS] Channel copyright tracking: prohibited downloads correctly enforced');
+
+// Verification 16: Default 4K Resolution Filter
+dom.window.switchMainTab('videos');
+dom.window.filterTo4K();
+const resValue = dom.window.document.getElementById('resSelect').value;
+if (resValue !== '4K') throw new Error(`Expected resolution to be 4K, got ${resValue}`);
+console.log(`[PASS] Default 4K resolution filter verified: "${resValue}"`);
+
 if (errors.length > 0) {
     console.error('❌ Uncaught runtime errors:', errors);
     process.exit(1);
 }
 
-console.log('\n🎉 ALL 14 VERIFICATION TESTS PASSED SUCCESSFULLY WITH 0 ERRORS!\n');
+console.log('\n🎉 ALL 16 VERIFICATION TESTS PASSED SUCCESSFULLY WITH 0 ERRORS!\n');
 

@@ -356,6 +356,12 @@ function renderChannelCards() {
                 ${(profile.keyThemes || []).map(t => `<span class="theme-tag">${t}</span>`).join('')}
             </div>
 
+            <div class="channel-copyright-row">
+                <span class="channel-copyright-pill ${(typeof isChannelDownloadProhibited === 'function' ? isChannelDownloadProhibited(profile.name) : !!profile.downloadProhibited) ? 'pill-prohibited' : 'pill-permitted'}">
+                    ${(typeof isChannelDownloadProhibited === 'function' ? isChannelDownloadProhibited(profile.name) : !!profile.downloadProhibited) ? '🔒 Copyright Reserved · View Only' : (profile.copyrightStatus || '🛡️ Public Domain / Free Wallpapers')}
+                </span>
+            </div>
+
             <div class="channel-stats-row">
                 <div>
                     <span>Playlist Videos</span>
@@ -586,18 +592,28 @@ function createWallpaperCard(wp) {
     card.className = 'wallpaper-card';
     card.onclick = () => openWallpaperModal(wp.videoId, wp.snapshotIndex - 1, card);
     const wpAlt = `${escapeQuotes(wp.videoTitle)} - High-resolution Impressionist scene snapshot at ${wp.timestampFormatted} (${wp.width}×${wp.height})`;
+    const isProhibited = (typeof isChannelDownloadProhibited === 'function')
+        ? isChannelDownloadProhibited(wp.channel)
+        : false;
+
+    const actionBtnLabel = isProhibited 
+        ? `View Artwork (${wp.width}×${wp.height}) 🔒` 
+        : `View & Download (${wp.width}×${wp.height})`;
+    const actionBtnTitle = isProhibited
+        ? `Downloads prohibited by channel copyright; available for contemplation in gallery`
+        : `View and download wallpaper for ${escapeQuotes(wp.videoTitle)}`;
 
     card.innerHTML = `
         <div class="wp-thumb-wrapper">
             <img class="wp-thumb-img" src="${wp.path}" alt="${wpAlt}" loading="lazy" decoding="async" />
             <span class="wp-pill-res">${wp.qualityLabel || '4K UHD'} (${wp.width}×${wp.height})</span>
-            <span class="wp-pill-time">Scene at ${wp.timestampFormatted}</span>
+            <span class="wp-pill-time">${isProhibited ? '🔒 View Only · ' : ''}Scene at ${wp.timestampFormatted}</span>
         </div>
         <div class="wp-card-info">
-            <span class="wp-card-channel">${wp.channel}</span>
+            <span class="wp-card-channel">${wp.channel}${isProhibited ? ' · 🔒 Copyright' : ''}</span>
             <h4 class="wp-card-title">${wp.videoTitle}</h4>
             <div class="wp-card-actions">
-                <button class="btn-wp-view" aria-label="View and download wallpaper for ${escapeQuotes(wp.videoTitle)}">View & Download (${wp.width}×${wp.height})</button>
+                <button class="btn-wp-view" aria-label="${actionBtnTitle}" title="${actionBtnTitle}">${actionBtnLabel}</button>
             </div>
         </div>
     `;
@@ -1132,6 +1148,22 @@ function applyFilters() {
     }
 }
 
+function filterTo4K() {
+    switchMainTab('videos');
+    const resSelect = document.getElementById('resSelect');
+    if (resSelect) resSelect.value = '4K';
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) searchInput.value = '';
+    const channelSelect = document.getElementById('channelSelect');
+    if (channelSelect) channelSelect.value = 'ALL';
+    updateActiveSearchChips('');
+    applyFilters();
+    const container = document.querySelector('main.container');
+    if (container && window.scrollY > container.offsetTop) {
+        window.scrollTo({ top: container.offsetTop - 20, behavior: 'smooth' });
+    }
+}
+
 function filterByChannel(channelName) {
     switchMainTab('videos');
     const channelSelect = document.getElementById('channelSelect');
@@ -1612,6 +1644,41 @@ function displayActiveWallpaper() {
     if (jumpTimeEl) {
         jumpTimeEl.textContent = wp.timestampFormatted || '00:00';
     }
+
+    const isProhibited = (typeof isChannelDownloadProhibited === 'function') 
+        ? isChannelDownloadProhibited(wp.channel)
+        : false;
+
+    const dlCurBtn = document.getElementById('wpDownloadCurrentBtn');
+    const dlAllBtn = document.getElementById('wpDownloadAllBtn');
+
+    if (isProhibited) {
+        if (dlCurBtn) {
+            dlCurBtn.disabled = true;
+            dlCurBtn.title = "Downloads prohibited due to channel copyright / licensing policies";
+            dlCurBtn.innerHTML = "🔒 Downloads Prohibited";
+            dlCurBtn.classList.add('btn-disabled-prohibited');
+        }
+        if (dlAllBtn) {
+            dlAllBtn.disabled = true;
+            dlAllBtn.title = "Downloads prohibited due to channel copyright / licensing policies";
+            dlAllBtn.innerHTML = "🔒 Downloads Prohibited";
+            dlAllBtn.classList.add('btn-disabled-prohibited');
+        }
+    } else {
+        if (dlCurBtn) {
+            dlCurBtn.disabled = false;
+            dlCurBtn.title = "Download current scene wallpaper";
+            dlCurBtn.innerHTML = `⬇ Current Scene <span class="btn-count-pill" id="wpCurrentSceneNum">${activeWallpaperIndex + 1}</span>`;
+            dlCurBtn.classList.remove('btn-disabled-prohibited');
+        }
+        if (dlAllBtn) {
+            dlAllBtn.disabled = false;
+            dlAllBtn.title = "Download all wallpapers as ZIP package";
+            dlAllBtn.innerHTML = `📦 Download All <span class="btn-count-pill" id="wpAllCount">${activeWallpaperList.length}</span>`;
+            dlAllBtn.classList.remove('btn-disabled-prohibited');
+        }
+    }
 }
 
 // In-Page Scene Jump: seamlessly launches the in-page video player modal at exact scene timestamp
@@ -1648,6 +1715,10 @@ function downloadCurrentWallpaper() {
     if (!wp || isDownloadingCurrent) return;
 
     const video = ALL_VIDEOS.find(v => v.id === wp.videoId) || {};
+    if (typeof isChannelDownloadProhibited === 'function' && isChannelDownloadProhibited(wp.channel || video.channel)) {
+        alert('Wallpaper downloads are prohibited for this title due to channel copyright / licensing policies. Fullscreen viewing and slideshow remain available for personal contemplation.');
+        return;
+    }
     const rawTitle = wp.videoTitle || video.title || 'Monet_Impressionism';
     const safeTitle = rawTitle.replace(/[/\\?%*:|"<>]/g, '').replace(/\s+/g, '_').substring(0, 45);
     const sceneIdx = String(activeWallpaperIndex + 1).padStart(2, '0');
@@ -1684,6 +1755,10 @@ async function downloadAllWallpapers() {
     const firstWp = activeWallpaperList[0];
     const videoId = firstWp.videoId || currentModalVideoId;
     const video = ALL_VIDEOS.find(v => v.id === videoId) || {};
+    if (typeof isChannelDownloadProhibited === 'function' && isChannelDownloadProhibited(firstWp.channel || video.channel)) {
+        alert('Wallpaper downloads are prohibited for this title due to channel copyright / licensing policies. Fullscreen viewing and slideshow remain available for personal contemplation.');
+        return;
+    }
     const rawTitle = firstWp.videoTitle || video.title || 'Monet_Impressionism';
     const safeTitle = rawTitle.replace(/[/\\?%*:|"<>]/g, '').replace(/\s+/g, '_').substring(0, 45);
     const zipFilename = `Monet_${safeTitle}_All_${activeWallpaperList.length}_Wallpapers.zip`;

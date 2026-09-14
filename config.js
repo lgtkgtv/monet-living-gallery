@@ -11,6 +11,11 @@ const GALLERY_CONFIG = {
     // Set to false to instantly disable all wallpaper downloading functionality
     ENABLE_WALLPAPER_DOWNLOADS: true,
 
+    // Channels with strict proprietary copyright where wallpaper downloads are prohibited
+    PROHIBITED_CHANNELS_DOWNLOADS: [
+        "Living Art Moments"
+    ],
+
     // Set to false to disable bulk ZIP packaging (e.g. to save client CPU/bandwidth or ToS compliance)
     ENABLE_BULK_ZIP_DOWNLOADS: true,
 
@@ -84,9 +89,17 @@ function applyConfigFlags() {
     }
 }
 
+function isChannelDownloadProhibited(channelName) {
+    if (!GALLERY_CONFIG.ENABLE_WALLPAPER_DOWNLOADS) return true;
+    if (!channelName) return false;
+    const prohibited = GALLERY_CONFIG.PROHIBITED_CHANNELS_DOWNLOADS || [];
+    return prohibited.some(ch => ch.toLowerCase() === channelName.toLowerCase());
+}
+
 if (typeof window !== 'undefined') {
     window.GALLERY_CONFIG = GALLERY_CONFIG;
     window.applyConfigFlags = applyConfigFlags;
+    window.isChannelDownloadProhibited = isChannelDownloadProhibited;
 }
 
 if (typeof module !== 'undefined' && module.exports) {

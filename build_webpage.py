@@ -122,7 +122,35 @@ def main():
             'characterization': 'Characterized by poetic series titles: "Visual Poems", "Enter an Impressionist Painting", and "Living Oil Paintings | Dreamy French Art Aesthetic". Beautiful Living Art breathes gentle, atmospheric life into Claude Monet\'s water gardens and Pierre-Auguste Renoir\'s sunlit figures, accompanied by ambient meditative piano.',
             'keyThemes': ['Visual Poetry', 'Claude Monet & Renoir Canvas Living Art', 'Dreamy French Aesthetic', 'Atmospheric AI Motion'],
             'musicalTone': 'Warm, relaxing neoclassical and meditative piano solos.',
-            'targetAudience': 'Viewers seeking gentle French Impressionist ambiance, living canvas wall art, and relaxing study accompaniment.'
+            'targetAudience': 'Viewers seeking gentle French Impressionist ambiance, living canvas wall art, and relaxing study accompaniment.',
+            'copyrightStatus': 'Educational / Public Domain Impressionism',
+            'downloadProhibited': False
+        },
+        'Art Revived': {
+            'name': 'Art Revived',
+            'archetype': 'The French Countryside & Coastal Animator',
+            'icon': '🌸',
+            'accent': '#d97706',
+            'tagline': 'Breathtaking 4K living Impressionist journeys across Normandy, Giverny, and the Riviera',
+            'characterization': 'Characterized by luminous French journeys: "A Summer in Belle Époque France", "Monet\'s South of France", "Secrets of the Seine", and "French Countryside Summer". Art Revived crafts nostalgic, deeply atmospheric living animations that bring Monet\'s cliffs of Étretat, Parisian bookstalls, and lavender fields into delicate 4K motion.',
+            'keyThemes': ['Normandy & Étretat Coasts', 'Belle Époque Summer', 'Lavender & Village Landscapes', 'High-Fidelity 4K Motion'],
+            'musicalTone': 'Delicate, nostalgic acoustic arrangements and serene classical melodies.',
+            'targetAudience': 'Lovers of French countryside scenery, tranquil coastal motion, and Monet\'s plein-air landscapes.',
+            'copyrightStatus': 'Creative Commons & Public Domain Art',
+            'downloadProhibited': False
+        },
+        'Living Art Moments': {
+            'name': 'Living Art Moments',
+            'archetype': 'The 24/7 Living Stream Broadcast',
+            'icon': '🐱',
+            'accent': '#8b5cf6',
+            'tagline': 'Continuous visual poems and living art broadcasts',
+            'characterization': 'Features continuous live streaming and monet-styled visual poems with original music arrangements.',
+            'keyThemes': ['Live Art Stream', 'Ambient Music Broadcast', 'Continuous Visual Poems'],
+            'musicalTone': 'Continuous original ambient piano and string arrangements.',
+            'targetAudience': 'Lovers of 24/7 background ambient relaxation streams.',
+            'copyrightStatus': 'Copyright Reserved (View-Only)',
+            'downloadProhibited': True
         }
     }
 
@@ -206,7 +234,9 @@ def main():
             'qualityLabel': r_info.get('qualityLabel', '1080p FHD'),
             'is4K': r_info.get('is4K', False),
             'wallpapers': video_wallpapers,
-            'wallpaperCount': len(video_wallpapers)
+            'wallpaperCount': len(video_wallpapers),
+            'downloadProhibited': channel_name in {'Living Art Moments'},
+            'copyrightStatus': 'Copyright Reserved (View-Only)' if channel_name in {'Living Art Moments'} else 'Public Domain Masterworks'
         })
 
     # Sort ALL_VIDEOS by views descending by default
