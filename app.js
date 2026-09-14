@@ -1143,16 +1143,44 @@ async function downloadAllFilteredWallpapers() {
 // FULLSCREEN WALLPAPER SLIDESHOW CONTROLLER
 // ==========================================================================
 
+// Known mobile / portrait pillarboxed wallpaper snapshots
+const MOBILE_WALLPAPER_PATHS = new Set([
+    'wallpapers/49gUho777mI/snapshot_1.jpg',
+    'wallpapers/49gUho777mI/snapshot_2.jpg',
+    'wallpapers/49gUho777mI/snapshot_3.jpg',
+    'wallpapers/4cdn4PvIjao/snapshot_1.jpg',
+    'wallpapers/8XdHP_fQoB0/snapshot_1.jpg',
+    'wallpapers/8XdHP_fQoB0/snapshot_2.jpg',
+    'wallpapers/TZUn8nU0CZI/snapshot_1.jpg',
+    'wallpapers/TZUn8nU0CZI/snapshot_2.jpg',
+    'wallpapers/TZUn8nU0CZI/snapshot_3.jpg',
+    'wallpapers/gAWrEV-3ahw/snapshot_2.jpg',
+    'wallpapers/gAWrEV-3ahw/snapshot_3.jpg',
+    'wallpapers/h3-WUZi-0hU/snapshot_1.jpg',
+    'wallpapers/h3-WUZi-0hU/snapshot_2.jpg',
+    'wallpapers/nCVYEqc_Hw4/snapshot_1.jpg',
+    'wallpapers/nCVYEqc_Hw4/snapshot_2.jpg',
+    'wallpapers/nCVYEqc_Hw4/snapshot_3.jpg'
+]);
+
+function isMobileFormFactor(wp) {
+    if (!wp || !wp.path) return false;
+    return MOBILE_WALLPAPER_PATHS.has(wp.path) || (wp.height > wp.width);
+}
+
+let slideshowRawList = [];
 let slideshowList = [];
 let slideshowCurrentIndex = 0;
 let slideshowIsPlaying = true;
 let slideshowIntervalMs = 5000;
 let slideshowTimer = null;
 let slideshowIdleTimer = null;
+let slideshowFormFactorMode = 'desktop'; // 'desktop' | 'mobile' | 'all'
+let slideshowFitMode = 'contain'; // 'contain' | 'cover'
 
-function startSlideshow(startIndex = 0, customList = null) {
-    slideshowList = customList || currentWallpapers;
-    if (!slideshowList || slideshowList.length === 0) {
+function startSlideshow(startIndex = 0, customList = null, isSingleVideo = false) {
+    slideshowRawList = customList || currentWallpapers;
+    if (!slideshowRawList || slideshowRawList.length === 0) {
         alert('No wallpapers available to display for the current filter selection.');
         return;
     }
@@ -1165,13 +1193,24 @@ function startSlideshow(startIndex = 0, customList = null) {
     overlay.classList.remove('controls-hidden');
     document.body.style.overflow = 'hidden';
 
-    slideshowCurrentIndex = Math.min(Math.max(0, startIndex), slideshowList.length - 1);
-    slideshowIsPlaying = true;
+    // Auto-detect device form factor: on desktop screen, default to desktop widescreen
+    const isDesktopDevice = window.innerWidth > 768 && (window.innerWidth >= window.innerHeight);
+    if (isSingleVideo) {
+        slideshowFormFactorMode = 'all';
+    } else {
+        slideshowFormFactorMode = isDesktopDevice ? 'desktop' : 'all';
+    }
 
+    const formFactorSelect = document.getElementById('slideshowFormFactorSelect');
+    if (formFactorSelect) {
+        formFactorSelect.value = slideshowFormFactorMode;
+    }
+
+    slideshowIsPlaying = true;
     const playBtn = document.getElementById('slideshowPlayBtn');
     if (playBtn) playBtn.innerHTML = '⏸️ Pause';
 
-    showSlide(slideshowCurrentIndex);
+    filterSlideshowByFormFactor(startIndex);
     startSlideshowTimer();
 
     // Request native browser fullscreen if supported
@@ -1190,12 +1229,52 @@ function startSlideshow(startIndex = 0, customList = null) {
     overlay.addEventListener('touchstart', handleSlideshowMouseMove);
 }
 
+function filterSlideshowByFormFactor(requestedIndex = 0) {
+    if (!slideshowRawList || slideshowRawList.length === 0) return;
+
+    if (slideshowFormFactorMode === 'desktop') {
+        slideshowList = slideshowRawList.filter(wp => !isMobileFormFactor(wp));
+        if (slideshowList.length === 0) slideshowList = slideshowRawList;
+    } else if (slideshowFormFactorMode === 'mobile') {
+        slideshowList = slideshowRawList.filter(wp => isMobileFormFactor(wp));
+        if (slideshowList.length === 0) slideshowList = slideshowRawList;
+    } else {
+        slideshowList = [...slideshowRawList];
+    }
+
+    slideshowCurrentIndex = Math.min(Math.max(0, requestedIndex), slideshowList.length - 1);
+    showSlide(slideshowCurrentIndex);
+}
+
+function changeSlideshowFormFactor(val) {
+    slideshowFormFactorMode = val;
+    filterSlideshowByFormFactor(0);
+    if (slideshowIsPlaying) {
+        startSlideshowTimer();
+    }
+}
+
+function toggleSlideshowFit() {
+    slideshowFitMode = (slideshowFitMode === 'contain') ? 'cover' : 'contain';
+    const img = document.getElementById('slideshowImage');
+    const fitBtn = document.getElementById('slideshowFitBtn');
+    if (img) {
+        img.style.objectFit = slideshowFitMode;
+    }
+    if (fitBtn) {
+        fitBtn.innerHTML = (slideshowFitMode === 'cover') ? '🔍' : '🖼️';
+        fitBtn.title = (slideshowFitMode === 'cover') 
+            ? 'Fill Mode active (Image fills screen) — Click for Fit' 
+            : 'Fit Mode active (Entire painting visible) — Click for Fill';
+    }
+}
+
 function startSlideshowFromCurrentModal() {
     if (!activeWallpaperList || activeWallpaperList.length === 0) return;
     const startIdx = activeWallpaperIndex || 0;
     const list = [...activeWallpaperList];
     closeWallpaperModal();
-    startSlideshow(startIdx, list);
+    startSlideshow(startIdx, list, true);
 }
 
 function showSlide(index) {
@@ -1204,6 +1283,7 @@ function showSlide(index) {
     const wp = slideshowList[slideshowCurrentIndex];
 
     const img = document.getElementById('slideshowImage');
+    const ambientBg = document.getElementById('slideshowAmbientBg');
     const counter = document.getElementById('slideshowCounter');
     const title = document.getElementById('slideshowTitle');
     const channel = document.getElementById('slideshowChannel');
@@ -1216,8 +1296,13 @@ function showSlide(index) {
     if (res) res.textContent = wp.qualityLabel || `${wp.width}×${wp.height}`;
     if (time) time.textContent = wp.timestampFormatted ? `Scene at ${wp.timestampFormatted}` : '';
 
+    if (ambientBg) {
+        ambientBg.style.backgroundImage = `url("${wp.path}")`;
+    }
+
     if (img) {
         img.style.opacity = '0.35';
+        img.style.objectFit = slideshowFitMode;
         img.src = wp.path;
         img.onload = () => {
             img.style.opacity = '1';
@@ -1381,6 +1466,14 @@ window.addEventListener('keydown', (e) => {
         toggleSlideshowPlayPause();
     } else if (e.key === 'f' || e.key === 'F') {
         toggleNativeFullscreen();
+    } else if (e.key === 'c' || e.key === 'C') {
+        toggleSlideshowFit();
+    } else if (e.key === 'm' || e.key === 'M') {
+        const modes = ['desktop', 'mobile', 'all'];
+        const nextMode = modes[(modes.indexOf(slideshowFormFactorMode) + 1) % modes.length];
+        const formFactorSelect = document.getElementById('slideshowFormFactorSelect');
+        if (formFactorSelect) formFactorSelect.value = nextMode;
+        changeSlideshowFormFactor(nextMode);
     }
 });
 
@@ -1392,7 +1485,7 @@ function handleCuratorBadgeClick(event) {
         event.preventDefault();
     }
     const email = 'lgtkgtv@gmail.com';
-    const badge = document.getElementById('statCuratedBadge');
+    const badge = document.getElementById('cornerCuratedBadge') || document.getElementById('statCuratedBadge');
 
     // Copy to clipboard immediately
     if (navigator.clipboard && navigator.clipboard.writeText) {

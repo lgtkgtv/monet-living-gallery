@@ -16,6 +16,13 @@
 
     <!-- Hero Header -->
     <header class="hero">
+        <!-- Discreet Top-Right Corner Mention -->
+        <div class="hero-corner-credit">
+            <a href="mailto:lgtkgtv@gmail.com?subject=monet-living-gallery%20site%20feedback%3A%20" class="corner-credit-link" id="cornerCuratedBadge" onclick="handleCuratorBadgeClick(event)" title="curated by sachin g &lt;lgtkgtv@gmail.com&gt; — Click to copy email or open contact options">
+                curated by sachin g &lt;lgtkgtv@gmail.com&gt;
+            </a>
+        </div>
+
         <div class="hero-container">
             <h1 class="hero-title">L'Impressionnisme Vivant</h1>
             <p class="hero-tagline">
@@ -42,9 +49,6 @@
                 <span class="stat-badge stat-accent">🖼️ Wallpapers: <strong id="statWallpapersCount">366+</strong></span>
                 <span class="stat-badge">👁️ Cumulative Views: <strong id="statTotalViews">24.1M</strong></span>
                 <span class="stat-badge">🏛️ Channels: <strong id="statChannelCount">39</strong></span>
-                <a class="stat-badge stat-contact-badge" id="statCuratedBadge" href="mailto:lgtkgtv@gmail.com?subject=monet-living-gallery%20site%20feedback%3A%20" onclick="handleCuratorBadgeClick(event)" title="curated by sachin g &lt;lgtkgtv@gmail.com&gt; — Click to copy email or open contact options">
-                    curated by sachin g &lt;lgtkgtv@gmail.com&gt;
-                </a>
             </div>
         </div>
     </header>
@@ -246,6 +250,19 @@
             </div>
 
             <div class="slideshow-top-actions">
+                <div class="slideshow-formfactor-control" title="Filter Slideshow by Device Display Form Factor">
+                    <label for="slideshowFormFactorSelect">📐 Display:</label>
+                    <select id="slideshowFormFactorSelect" onchange="changeSlideshowFormFactor(this.value)">
+                        <option value="desktop" selected>🖥️ Desktop (Widescreen)</option>
+                        <option value="mobile">📱 Mobile (Portrait)</option>
+                        <option value="all">✨ All Form Factors</option>
+                    </select>
+                </div>
+
+                <button class="slideshow-btn-icon" id="slideshowFitBtn" onclick="toggleSlideshowFit()" title="Toggle Fit / Fill Display Mode (C)">
+                    🖼️
+                </button>
+
                 <div class="slideshow-speed-control" title="Slideshow Interval">
                     <label for="slideshowSpeedSelect">⏱️ Interval:</label>
                     <select id="slideshowSpeedSelect" onchange="changeSlideshowSpeed(this.value)">
@@ -272,6 +289,7 @@
 
         <!-- Main Slide Display Area -->
         <div class="slideshow-stage" id="slideshowStage" onclick="toggleSlideshowPlayPause()">
+            <div class="slideshow-ambient-bg" id="slideshowAmbientBg"></div>
             <img id="slideshowImage" class="slideshow-img" src="" alt="Slideshow Wallpaper" />
             
             <!-- Progress Bar at bottom of stage -->
