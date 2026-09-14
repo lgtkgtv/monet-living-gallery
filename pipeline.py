@@ -213,7 +213,7 @@ def main():
     parser.add_argument('--refresh', nargs='?', const='', help="One-command manual refresh: pull playlist(s), probe resolutions & rebuild site")
     parser.add_argument('--pull-playlist', nargs='?', const='', help="Fetch fresh playlist JSON (accepts URL, comma-separated URLs, or reads playlists.json)")
     parser.add_argument('--build', action='store_true', help="Rebuild data.js, data.json, and catalog CSV")
-    parser.add_argument('--sync-resolutions', action='store_true', help="Probe missing resolutions from YouTube")
+    parser.add_argument('--sync-resolutions', '--update-resolutions', dest='sync_resolutions', action='store_true', help="Probe missing resolutions from YouTube")
     parser.add_argument('--extract', action='store_true', help="Extract wallpaper scenes using batch_wallpaper_extractor.py")
     parser.add_argument('--batch-size', type=int, default=10, help="Batch size for wallpaper extraction (default: 10)")
     parser.add_argument('--tier', type=str.upper, choices=['4K', 'FHD', 'ALL'], default=None, help="Resolution tier filter for extraction")
