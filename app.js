@@ -96,11 +96,26 @@ function loadFavorites() {
         if (raw) {
             const parsed = JSON.parse(raw);
             if (Array.isArray(parsed)) {
-                favoriteVideoIds = new Set(parsed);
+                // Ensure only non-empty strings corresponding to actual catalog videos are retained
+                const validIds = parsed.filter(id => {
+                    if (!id || typeof id !== 'string' || id.trim() === '' || id === 'undefined' || id === 'null') {
+                        return false;
+                    }
+                    if (typeof ALL_VIDEOS !== 'undefined' && Array.isArray(ALL_VIDEOS) && ALL_VIDEOS.length > 0) {
+                        return ALL_VIDEOS.some(v => v.id === id);
+                    }
+                    return true;
+                });
+                favoriteVideoIds = new Set(validIds);
+                // Purge stale or corrupted IDs from localStorage immediately
+                if (validIds.length !== parsed.length) {
+                    saveFavorites();
+                }
             }
         }
     } catch (e) {
         console.warn('Failed to load favorites from localStorage', e);
+        favoriteVideoIds = new Set();
     }
     updateFavoritesCount();
 }
@@ -120,6 +135,7 @@ function updateFavoritesCount() {
 }
 
 function isFavoriteVideo(videoId) {
+    if (!videoId) return false;
     return favoriteVideoIds.has(videoId);
 }
 
@@ -128,6 +144,14 @@ function toggleFavoriteVideo(videoId, event) {
         event.stopPropagation();
         event.preventDefault();
     }
+    if (!videoId || typeof videoId !== 'string' || videoId.trim() === '' || videoId === 'undefined' || videoId === 'null') {
+        return;
+    }
+    if (typeof ALL_VIDEOS !== 'undefined' && Array.isArray(ALL_VIDEOS) && ALL_VIDEOS.length > 0) {
+        const exists = ALL_VIDEOS.some(v => v.id === videoId);
+        if (!exists) return;
+    }
+
     if (favoriteVideoIds.has(videoId)) {
         favoriteVideoIds.delete(videoId);
     } else {
@@ -450,6 +474,17 @@ function switchMainTab(tabKey) {
         if (downloadBar) downloadBar.style.display = 'none';
         if (headerTitle) headerTitle.textContent = '❤️ My Saved Collection';
         if (headerDesc) headerDesc.innerHTML = 'Your personal gallery of bookmarked Impressionist masterworks. Saved in your browser for contemplation anytime.';
+
+        // Auto-reset search, channel, and resolution filters so saved works are never hidden by lingering filters
+        const searchInput = document.getElementById('searchInput');
+        const channelSelect = document.getElementById('channelSelect');
+        const resSelect = document.getElementById('resSelect');
+        if (searchInput && searchInput.value !== '') {
+            searchInput.value = '';
+            updateActiveSearchChips('');
+        }
+        if (channelSelect && channelSelect.value !== 'ALL') channelSelect.value = 'ALL';
+        if (resSelect && resSelect.value !== 'ALL') resSelect.value = 'ALL';
     }
 
     applyFilters();
@@ -939,6 +974,16 @@ function applyFilters() {
     updateActiveSearchChips(rawQuery);
 
     if (currentViewMode === 'favorites') {
+        if (favoriteVideoIds.size === 0) {
+            if (gridVid) gridVid.style.display = 'none';
+            if (gridWp) gridWp.style.display = 'none';
+            if (emptyState) emptyState.style.display = 'block';
+            if (resultsCountEl) resultsCountEl.textContent = 'Your personal collection is currently empty';
+            const downloadBar = document.getElementById('wallpaperDownloadBar');
+            if (downloadBar) downloadBar.style.display = 'none';
+            return;
+        }
+
         let filtered = ALL_VIDEOS.filter(v => {
             if (!isFavoriteVideo(v.id)) return false;
             const matchesQuery = matchesSearch(v.title, v.channel, rawQuery);
@@ -966,17 +1011,33 @@ function applyFilters() {
         else if (sortBy === 'title_asc') filtered.sort((a, b) => a.title.localeCompare(b.title));
 
         currentVideos = filtered;
+        if (emptyState) emptyState.style.display = 'none';
+
         if (filtered.length === 0) {
-            if (gridVid) gridVid.style.display = 'none';
             if (gridWp) gridWp.style.display = 'none';
-            if (emptyState) emptyState.style.display = 'block';
-            if (resultsCountEl) resultsCountEl.textContent = 'No saved masterworks match the current criteria';
+            if (gridVid) {
+                gridVid.style.display = 'grid';
+                gridVid.innerHTML = `
+                    <div style="grid-column: 1 / -1; text-align: center; padding: 48px 20px; color: var(--text-muted);">
+                        <h3 style="color: var(--text-main); margin-bottom: 8px;">No matching saved works</h3>
+                        <p>You have ${favoriteVideoIds.size} saved work(s) in your collection, but none match the active filters.</p>
+                        <button class="btn btn-primary" style="margin-top: 16px;" onclick="resetFavoritesFilters()">
+                            Show All Saved Works (${favoriteVideoIds.size})
+                        </button>
+                    </div>
+                `;
+            }
+            if (resultsCountEl) resultsCountEl.textContent = `0 of ${favoriteVideoIds.size} saved works match active filters`;
         } else {
             if (emptyState) emptyState.style.display = 'none';
             if (gridWp) gridWp.style.display = 'none';
             if (gridVid) gridVid.style.display = 'grid';
             renderVideos(filtered);
-            if (resultsCountEl) resultsCountEl.textContent = `Showing ${filtered.length} saved works in your collection`;
+            if (resultsCountEl) {
+                resultsCountEl.textContent = (filtered.length === favoriteVideoIds.size)
+                    ? `Showing ${filtered.length} saved work${filtered.length === 1 ? '' : 's'} in your collection`
+                    : `Showing ${filtered.length} of ${favoriteVideoIds.size} saved work${favoriteVideoIds.size === 1 ? '' : 's'}`;
+            }
         }
         const downloadBar = document.getElementById('wallpaperDownloadBar');
         if (downloadBar) downloadBar.style.display = 'none';
@@ -1132,6 +1193,35 @@ function resetFilters() {
     if (sortSelect) sortSelect.value = 'views_desc';
 
     applyFilters();
+}
+
+function resetFavoritesFilters() {
+    const channelSelect = document.getElementById('channelSelect');
+    if (channelSelect) channelSelect.value = 'ALL';
+    const resSelect = document.getElementById('resSelect');
+    if (resSelect) resSelect.value = 'ALL';
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) searchInput.value = '';
+    applyFilters();
+}
+
+function clearAllFavorites() {
+    if (favoriteVideoIds.size === 0) return;
+    favoriteVideoIds.clear();
+    saveFavorites();
+    document.querySelectorAll('[data-fav-video]').forEach(btn => {
+        btn.classList.remove('active');
+        btn.setAttribute('title', 'Save to My Collection');
+        btn.innerHTML = '🤍';
+    });
+    const modalFav = document.getElementById('modalFavBtn');
+    if (modalFav) {
+        modalFav.classList.remove('active');
+        modalFav.innerHTML = '🤍 Save to Collection';
+    }
+    if (currentViewMode === 'favorites') {
+        applyFilters();
+    }
 }
 
 function initFiltersAndEvents() {

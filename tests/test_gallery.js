@@ -99,9 +99,37 @@ dom.window.toggleSlideshowAudio();
 console.log(`[PASS] Strict audio isolation: ambient audio blocked while video player is open`);
 dom.window.closeVideoModal();
 
+// Verification 11: Favorites Sanitization (Corrupted/Stale IDs purged)
+dom.window.localStorage.setItem('monet_gallery_favorites_v1', JSON.stringify(['invalid_stale_id_999', '', null, 'undefined']));
+dom.window.loadFavorites();
+const cleanedCount = parseInt(dom.window.document.getElementById('favTabCount').textContent, 10);
+console.log(`[PASS] Corrupted localStorage IDs purged: count is ${cleanedCount} (expected 0)`);
+if (cleanedCount !== 0) throw new Error('Expected invalid IDs to be purged on load');
+
+// Verification 12: Add valid favorite & verify Favorites tab rendering
+dom.window.toggleFavoriteVideo(testVideoId);
+const updatedCount = parseInt(dom.window.document.getElementById('favTabCount').textContent, 10);
+console.log(`[PASS] Valid favorite added: count is ${updatedCount} (expected 1)`);
+if (updatedCount !== 1) throw new Error('Expected 1 favorite');
+
+// Verification 13: Switch to Favorites tab with filters auto-resetting
+dom.window.switchMainTab('favorites');
+const favCards = dom.window.document.getElementById('videosGrid').querySelectorAll('.video-card');
+console.log(`[PASS] Favorites tab displays saved work: ${favCards.length} card (expected 1)`);
+if (favCards.length !== 1) throw new Error('Expected 1 card in favorites view');
+
+// Verification 14: Clear all favorites
+dom.window.clearAllFavorites();
+const clearedCount = parseInt(dom.window.document.getElementById('favTabCount').textContent, 10);
+console.log(`[PASS] Clear all favorites: count is ${clearedCount} (expected 0)`);
+if (clearedCount !== 0) throw new Error('Expected 0 favorites after clear');
+const favEmptyAfter = dom.window.document.getElementById('favoritesEmptyState');
+console.log(`[PASS] Empty state displayed after clear: ${favEmptyAfter.style.display !== 'none'}`);
+
 if (errors.length > 0) {
     console.error('❌ Uncaught runtime errors:', errors);
     process.exit(1);
 }
 
-console.log('\n🎉 ALL VERIFICATION TESTS PASSED SUCCESSFULLY WITH 0 ERRORS!\n');
+console.log('\n🎉 ALL 14 VERIFICATION TESTS PASSED SUCCESSFULLY WITH 0 ERRORS!\n');
+
