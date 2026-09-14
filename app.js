@@ -1,5 +1,87 @@
 // L'Impressionnisme Vivant: App Logic, Resolutions, Device Adaptation & 4K Wallpaper Gallery
 
+// ==========================================================================
+// THEME ENGINE (Light / Dark Gallery Mode)
+// ==========================================================================
+const THEME_STORAGE_KEY = 'monet_gallery_theme';
+
+function initTheme() {
+    const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+    setTheme(initialTheme);
+}
+
+function setTheme(theme) {
+    if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem(THEME_STORAGE_KEY, 'dark');
+    } else {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem(THEME_STORAGE_KEY, 'light');
+    }
+    updateThemeUI(theme);
+}
+
+function toggleTheme() {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    setTheme(isDark ? 'light' : 'dark');
+}
+
+function updateThemeUI(theme) {
+    const icon = document.getElementById('themeToggleIcon');
+    const label = document.getElementById('themeToggleLabel');
+    const btn = document.getElementById('themeToggleBtn');
+    const isDark = theme === 'dark';
+    if (icon) icon.textContent = isDark ? '☀️' : '🌙';
+    if (label) label.textContent = isDark ? 'Light Mode' : 'Dark Gallery';
+    if (btn) btn.setAttribute('title', isDark ? 'Switch to Light Parchment Gallery' : 'Switch to Dark Museum Gallery');
+}
+
+// Immediate theme execution to prevent flash of light theme
+try {
+    const _savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+    const _prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (_savedTheme === 'dark' || (!_savedTheme && _prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+} catch (e) {}
+
+// ==========================================================================
+// DYNAMIC SCRIPT LOADER (Lazy-load JSZip on demand)
+// ==========================================================================
+let jszipLoadPromise = null;
+function ensureJSZipLoaded() {
+    if (typeof JSZip !== 'undefined') {
+        return Promise.resolve(window.JSZip);
+    }
+    if (jszipLoadPromise) {
+        return jszipLoadPromise;
+    }
+    jszipLoadPromise = new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = './jszip.min.js';
+        script.onload = () => resolve(window.JSZip);
+        script.onerror = () => {
+            jszipLoadPromise = null;
+            reject(new Error('Failed to load JSZip library'));
+        };
+        document.head.appendChild(script);
+    });
+    return jszipLoadPromise;
+}
+
+// ==========================================================================
+// DEBOUNCE UTILITY FOR RESPONSIVE SEARCH
+// ==========================================================================
+function debounce(func, wait = 150) {
+    let timeout;
+    return function(...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}
+
 let currentViewMode = 'videos'; // 'videos', 'wallpapers', or 'favorites'
 let currentVideos = [];
 let currentWallpapers = [];
@@ -84,6 +166,9 @@ function toggleFavoriteFromModal() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    initTheme();
+    updateAudioUI(false);
+
     detectDeviceFormFactor();
     window.addEventListener('resize', detectDeviceFormFactor);
 
@@ -423,7 +508,7 @@ function createVideoCard(v) {
             
             <div class="video-meta-pills">
                 <span class="pill-res-tag ${v.is4K ? 'tag-4k' : ''}">📐 ${v.resolution}</span>
-                <span style="color: var(--text-muted); font-size: 0.74rem;">· ⏱️ ${v.durationFormatted}</span>
+                <span class="pill-res-tag">${v.qualityLabel}</span>
             </div>
 
             <div class="video-actions">
@@ -962,7 +1047,7 @@ function resetFilters() {
 
 function initFiltersAndEvents() {
     const searchInput = document.getElementById('searchInput');
-    if (searchInput) searchInput.addEventListener('input', applyFilters);
+    if (searchInput) searchInput.addEventListener('input', debounce(applyFilters, 150));
 
     const channelSelect = document.getElementById('channelSelect');
     if (channelSelect) channelSelect.addEventListener('change', applyFilters);
@@ -1033,6 +1118,13 @@ function openVideoModal(videoId, title, startSec = 0) {
     currentModalVideoId = videoId;
     currentModalTitle = title;
     currentModalStartSec = startSec;
+
+    // Gently pause ambient audio so it does not conflict with video soundtrack
+    if (ambientAudio && isAudioPlaying) {
+        ambientAudio.pause();
+        isAudioPlaying = false;
+        updateAudioUI(false);
+    }
 
     const video = ALL_VIDEOS.find(v => v.id === videoId);
     const modal = document.getElementById('modalOverlay');
@@ -1261,9 +1353,12 @@ async function downloadAllWallpapers() {
         return;
     }
 
-    // 2. Check if JSZip library is available
-    if (typeof JSZip === 'undefined') {
-        alert('ZIP packaging library is loading. Downloading current wallpaper snapshot.');
+    // 2. Ensure JSZip library is loaded dynamically
+    try {
+        if (btn) btn.innerHTML = '⏳ Loading ZIP engine...';
+        await ensureJSZipLoaded();
+    } catch (e) {
+        alert('ZIP packaging library could not be loaded. Downloading current wallpaper snapshot instead.');
         downloadCurrentWallpaper();
         return;
     }
@@ -1382,8 +1477,19 @@ async function downloadAllFilteredWallpapers() {
     const btn = document.getElementById('wpDownloadFilteredBtn');
     const originalText = btn ? btn.innerHTML : '';
 
-    if (typeof JSZip === 'undefined') {
-        alert('ZIP packaging library is loading. Please try again in a moment.');
+    // Ensure JSZip library is loaded dynamically
+    try {
+        if (btn) {
+            btn.disabled = true;
+            btn.innerHTML = '⏳ Loading ZIP engine...';
+        }
+        await ensureJSZipLoaded();
+    } catch (e) {
+        alert('ZIP packaging library could not be loaded. Please try again.');
+        if (btn) {
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+        }
         return;
     }
 
@@ -1632,9 +1738,11 @@ function nextAmbientTrack(autoPlay = true) {
 }
 
 function updateAudioUI(playing) {
+    const currentTrack = AMBIENT_TRACKS[currentAudioTrackIndex];
+
+    // 1. Fullscreen Slideshow controls
     const btn = document.getElementById('slideshowAudioBtn');
     const title = document.getElementById('slideshowAudioTitle');
-    const currentTrack = AMBIENT_TRACKS[currentAudioTrackIndex];
     if (btn) {
         btn.innerHTML = playing ? '🔊' : '🎵';
         btn.classList.toggle('audio-active', playing);
@@ -1644,6 +1752,26 @@ function updateAudioUI(playing) {
         title.textContent = playing ? currentTrack.title : `${currentTrack.title} (Paused)`;
         title.classList.toggle('playing', playing);
     }
+
+    // 2. Global header toolbar controls
+    const globalPlayIcon = document.getElementById('globalAudioPlayIcon');
+    const globalPlayBtn = document.getElementById('globalAudioPlayBtn');
+    const globalTrackTitle = document.getElementById('globalAudioTrackTitle');
+    if (globalPlayIcon) {
+        globalPlayIcon.textContent = playing ? '🔊' : '🎵';
+    }
+    if (globalPlayBtn) {
+        globalPlayBtn.classList.toggle('playing', playing);
+        globalPlayBtn.setAttribute('title', playing ? 'Pause Ambient Music' : 'Play Ambient Music (Debussy, Satie & Ravel)');
+    }
+    if (globalTrackTitle) {
+        globalTrackTitle.textContent = playing ? currentTrack.title : `${currentTrack.title} (Paused)`;
+        globalTrackTitle.classList.toggle('playing', playing);
+    }
+}
+
+function toggleGlobalAudio() {
+    toggleSlideshowAudio();
 }
 
 function toggleSlideshowFit() {
@@ -1826,12 +1954,7 @@ function closeSlideshow() {
     }
     document.body.style.overflow = '';
 
-    // Gently pause ambient audio when exiting slideshow
-    if (ambientAudio && isAudioPlaying) {
-        ambientAudio.pause();
-        isAudioPlaying = false;
-        updateAudioUI(false);
-    }
+    // Ambient audio continues playing seamlessly across gallery and slideshow
 }
 
 function handleSlideshowMouseMove() {

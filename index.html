@@ -49,10 +49,22 @@
 
     <!-- Hero Header -->
     <header class="hero">
-        <!-- Discreet Top-Right Corner Mention -->
-        <div class="hero-corner-credit">
+        <!-- Top Toolbar: Ambient Music Player, Theme Toggle, and Curator Credit -->
+        <div class="hero-top-toolbar">
+            <div class="global-audio-pill" id="globalAudioPill" title="Ambient Classical Music (Debussy, Satie &amp; Ravel)">
+                <button id="globalAudioPlayBtn" class="global-audio-play-btn" onclick="toggleGlobalAudio()" aria-label="Toggle Ambient Music" title="Play / Pause Ambient Classical Music">
+                    <span id="globalAudioPlayIcon">🎵</span> <span class="global-audio-label">Ambient Music</span>
+                </button>
+                <span id="globalAudioTrackTitle" class="global-audio-track" title="Current track">Debussy: Clair de Lune</span>
+                <button class="global-audio-next-btn" onclick="nextAmbientTrack(true)" aria-label="Next Classical Track" title="Next Track">⏭️</button>
+            </div>
+
+            <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle Dark Gallery / Light Mode" title="Toggle Dark Gallery Theme">
+                <span id="themeToggleIcon">🌙</span> <span id="themeToggleLabel">Dark Gallery</span>
+            </button>
+
             <a href="mailto:lgtkgtv@gmail.com?subject=monet-living-gallery%20site%20feedback%3A%20" class="corner-credit-link" id="cornerCuratedBadge" onclick="handleCuratorBadgeClick(event)" title="curated by sachin g &lt;lgtkgtv@gmail.com&gt; — Click to copy email or open contact options">
-                curated by sachin g &lt;lgtkgtv@gmail.com&gt;
+                curated by sachin g
             </a>
         </div>
 
@@ -470,7 +482,6 @@
     </button>
 
     <!-- Scripts -->
-    <script src="./jszip.min.js"></script>
     <script src="./data.js"></script>
     <script src="./app.js"></script>
     
