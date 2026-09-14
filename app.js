@@ -1383,7 +1383,7 @@ function loadPlayerIframe(videoId, title, startSec = 0) {
     // Standard Privacy-Enhanced Mode (youtube-nocookie.com, modestbranding, rel=0, no tracking cookies)
     iframeWrapper.innerHTML = `
         <iframe 
-            src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&iv_load_policy=3${startParam}${originParam}" 
+            src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1${startParam}${originParam}" 
             title="${escapeQuotes(title)}" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             referrerpolicy="strict-origin-when-cross-origin"
@@ -1452,7 +1452,8 @@ function openVideoModal(videoId, title, startSec = 0, triggerEl = null) {
 
     const ytDirectLink = document.getElementById('modalYtDirectLink');
     if (ytDirectLink) {
-        ytDirectLink.href = `https://www.youtube.com/watch?v=${videoId}&list=PLeqGkucOU6lA`;
+        const startParam = startSec > 0 ? `&t=${startSec}s` : '';
+        ytDirectLink.href = `https://www.youtube.com/watch?v=${videoId}${startParam}`;
     }
 
     loadPlayerIframe(videoId, title, startSec);
