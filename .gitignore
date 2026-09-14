@@ -14,3 +14,7 @@ ENV/
 # Antigravity task logs & cache
 .system_generated/
 *.log
+
+# Node
+node_modules/
+package*.json

@@ -86,44 +86,6 @@ let currentVideos = [];
 let currentWallpapers = [];
 let currentModalVideoId = null;
 
-// Dynamic Data Loading (Async data.json with synchronous data.js fallback)
-let ALL_VIDEOS = window.ALL_VIDEOS || [];
-let PLAYLIST_METADATA = window.PLAYLIST_METADATA || {};
-let CHANNEL_PROFILES = window.CHANNEL_PROFILES || {};
-let CHANNEL_STATS = window.CHANNEL_STATS || {};
-
-async function loadCatalogData() {
-    if (window.GALLERY_CONFIG && window.GALLERY_CONFIG.PREFER_ASYNC_JSON && typeof fetch === 'function') {
-        try {
-            const resp = await fetch('./data.json');
-            if (resp.ok) {
-                const data = await resp.json();
-                if (data && data.videos && data.videos.length > 0) {
-                    window.PLAYLIST_METADATA = data.metadata;
-                    window.CHANNEL_PROFILES = data.channelProfiles;
-                    window.CHANNEL_STATS = data.channelStats;
-                    window.ALL_VIDEOS = data.videos;
-                    PLAYLIST_METADATA = data.metadata;
-                    CHANNEL_PROFILES = data.channelProfiles;
-                    CHANNEL_STATS = data.channelStats;
-                    ALL_VIDEOS = data.videos;
-                    return true;
-                }
-            }
-        } catch (e) {
-            console.info('Async data.json load bypassed; using data.js payload', e);
-        }
-    }
-    if (window.ALL_VIDEOS && window.ALL_VIDEOS.length > 0) {
-        ALL_VIDEOS = window.ALL_VIDEOS;
-        PLAYLIST_METADATA = window.PLAYLIST_METADATA || {};
-        CHANNEL_PROFILES = window.CHANNEL_PROFILES || {};
-        CHANNEL_STATS = window.CHANNEL_STATS || {};
-        return true;
-    }
-    return false;
-}
-
 // Favorites / Personal Collection State
 const FAVORITES_STORAGE_KEY = 'monet_gallery_favorites_v1';
 let favoriteVideoIds = new Set();
@@ -202,12 +164,11 @@ function toggleFavoriteFromModal() {
     toggleFavoriteVideo(currentModalVideoId);
 }
 
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     if (typeof applyConfigFlags === 'function') {
         applyConfigFlags();
     }
-    await loadCatalogData();
     updateAudioUI(false);
 
     detectDeviceFormFactor();
@@ -463,7 +424,7 @@ function switchMainTab(tabKey) {
     });
 
     if (tabKey === 'channels') {
-        if (channelsSection) {
+        if (channelsSection && typeof channelsSection.scrollIntoView === 'function') {
             channelsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
         return;
@@ -493,7 +454,7 @@ function switchMainTab(tabKey) {
 
     applyFilters();
 
-    if (explorerSection) {
+    if (explorerSection && typeof explorerSection.scrollIntoView === 'function') {
         explorerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 }
@@ -892,7 +853,7 @@ function applySearchChip(query) {
     applyFilters();
 
     const explorer = document.getElementById('explorerSection');
-    if (explorer) {
+    if (explorer && typeof explorer.scrollIntoView === 'function') {
         explorer.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 }
@@ -1103,7 +1064,7 @@ function filterByChannel(channelName) {
     if (resSelect) resSelect.value = 'ALL';
 
     const explorer = document.getElementById('explorerSection');
-    if (explorer) explorer.scrollIntoView({ behavior: 'smooth' });
+    if (explorer && typeof explorer.scrollIntoView === 'function') explorer.scrollIntoView({ behavior: 'smooth' });
     applyFilters();
 }
 
@@ -1156,7 +1117,7 @@ function selectPathway(pathwayKey) {
     }
 
     const explorer = document.getElementById('explorerSection');
-    if (explorer) explorer.scrollIntoView({ behavior: 'smooth' });
+    if (explorer && typeof explorer.scrollIntoView === 'function') explorer.scrollIntoView({ behavior: 'smooth' });
     applyFilters();
 }
 

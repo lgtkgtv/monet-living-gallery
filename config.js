@@ -84,6 +84,11 @@ function applyConfigFlags() {
     }
 }
 
+if (typeof window !== 'undefined') {
+    window.GALLERY_CONFIG = GALLERY_CONFIG;
+    window.applyConfigFlags = applyConfigFlags;
+}
+
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { GALLERY_CONFIG, applyConfigFlags };
 }

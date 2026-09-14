@@ -213,7 +213,7 @@ def main():
     clean_videos.sort(key=lambda x: x['views'], reverse=True)
 
     data_js = f"""// Generated Data for Monet Playlist Web Guide & 4K Wallpaper Archive
-var PLAYLIST_METADATA = {{
+const PLAYLIST_METADATA = {{
     title: "sh_Monet inspired Visual Arts",
     playlistUrl: "https://www.youtube.com/playlist?list=PLeqGkucOU6lA",
     totalVideos: {len(clean_videos)},
@@ -225,9 +225,17 @@ var PLAYLIST_METADATA = {{
     countFHD: {count_fhd}
 }};
 
-var CHANNEL_PROFILES = {json.dumps(channel_profiles, indent=2, ensure_ascii=False)};
-var CHANNEL_STATS = {json.dumps(channel_stats, indent=2, ensure_ascii=False)};
-var ALL_VIDEOS = {json.dumps(clean_videos, indent=2, ensure_ascii=False)};
+const CHANNEL_PROFILES = {json.dumps(channel_profiles, indent=2, ensure_ascii=False)};
+const CHANNEL_STATS = {json.dumps(channel_stats, indent=2, ensure_ascii=False)};
+const ALL_VIDEOS = {json.dumps(clean_videos, indent=2, ensure_ascii=False)};
+
+// Also attach to window for resilient cross-module and global access
+if (typeof window !== 'undefined') {{
+    window.PLAYLIST_METADATA = PLAYLIST_METADATA;
+    window.CHANNEL_PROFILES = CHANNEL_PROFILES;
+    window.CHANNEL_STATS = CHANNEL_STATS;
+    window.ALL_VIDEOS = ALL_VIDEOS;
+}}
 """
 
     with open('data.js', 'w', encoding='utf-8') as f:

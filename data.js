@@ -1,5 +1,5 @@
 // Generated Data for Monet Playlist Web Guide & 4K Wallpaper Archive
-var PLAYLIST_METADATA = {
+const PLAYLIST_METADATA = {
     title: "sh_Monet inspired Visual Arts",
     playlistUrl: "https://www.youtube.com/playlist?list=PLeqGkucOU6lA",
     totalVideos: 212,
@@ -11,7 +11,7 @@ var PLAYLIST_METADATA = {
     countFHD: 159
 };
 
-var CHANNEL_PROFILES = {
+const CHANNEL_PROFILES = {
   "LearnFromMasters": {
     "name": "LearnFromMasters",
     "archetype": "The Academic & Museum Archivist",
@@ -125,7 +125,7 @@ var CHANNEL_PROFILES = {
     "targetAudience": "Viewers seeking gentle French Impressionist ambiance, living canvas wall art, and relaxing study accompaniment."
   }
 };
-var CHANNEL_STATS = [
+const CHANNEL_STATS = [
   {
     "channel": "Lifting Dreams",
     "channel_url": "https://www.youtube.com/channel/UCux51cdq0SlyEl29eYPpnkg",
@@ -10055,7 +10055,7 @@ var CHANNEL_STATS = [
     }
   }
 ];
-var ALL_VIDEOS = [
+const ALL_VIDEOS = [
   {
     "id": "cKkDMiGUbUw",
     "title": "Strauss ~ The Blue Danube Waltz",
@@ -24147,3 +24147,11 @@ var ALL_VIDEOS = [
     "wallpaperCount": 0
   }
 ];
+
+// Also attach to window for resilient cross-module and global access
+if (typeof window !== 'undefined') {
+    window.PLAYLIST_METADATA = PLAYLIST_METADATA;
+    window.CHANNEL_PROFILES = CHANNEL_PROFILES;
+    window.CHANNEL_STATS = CHANNEL_STATS;
+    window.ALL_VIDEOS = ALL_VIDEOS;
+}
