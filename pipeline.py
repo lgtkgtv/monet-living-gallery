@@ -96,8 +96,10 @@ def get_status():
 def run_build():
     print("🔨 Running build_webpage.py...")
     res = subprocess.run([sys.executable, 'build_webpage.py'], capture_output=False)
+    if os.path.exists('generate_report.py'):
+        subprocess.run([sys.executable, 'generate_report.py'], capture_output=False)
     if res.returncode == 0:
-        print("✅ Webpage assets (data.js and catalog CSV) built successfully.")
+        print("✅ Webpage assets (data.js and catalog CSV/Markdown) built successfully.")
     else:
         print("❌ build_webpage.py failed.")
     return res.returncode == 0
