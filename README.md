@@ -28,7 +28,7 @@ An interactive, curated digital museum and high-definition visual archive celebr
 - **Ultra-Low Memory Footprint**: Scalable to thousands of titles without lag or browser freezing.
 
 ### 3. 📦 Instant Bulk Wallpaper Downloader & 100% 4K Coverage
-- **100% 4K UHD Wallpaper Extraction**: Every single native 4K UHD title in the catalog (46 of 46 titles) has high-resolution wallpaper snapshots (485 total snapshots in gallery).
+- **100% 4K UHD Wallpaper Extraction**: Every single native 4K UHD title in the catalog (46 of 46 titles) has high-resolution wallpaper snapshots (525 total snapshots in gallery).
 - **In-Browser Zip Packaging**: Uses `JSZip` to bundle filtered wallpapers directly in the browser with no server load.
 - **Contextual Selection**: Users can filter by artist, channel, or resolution tier with a single click.
 
