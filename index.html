@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>L'Impressionnisme Vivant · 4K Digital Art Gallery & Video Explorer</title>
     
+    <!-- PWA & Mobile Web App Meta -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#0b0f19">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Monet Gallery">
+    <link rel="apple-touch-icon" href="./icons/icon-192.png">
+    <link rel="icon" type="image/svg+xml" href="./icons/icon.svg">
+    <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -259,6 +269,14 @@
                     </select>
                 </div>
 
+                <div class="slideshow-audio-control" title="Ambient Classical Music (Debussy & Satie)">
+                    <button class="slideshow-btn-icon" id="slideshowAudioBtn" onclick="toggleSlideshowAudio()" title="Play/Mute Ambient Classical Music (M)">
+                        🎵
+                    </button>
+                    <span class="slideshow-audio-title" id="slideshowAudioTitle">Debussy: Clair de Lune</span>
+                    <button class="slideshow-btn-icon-subtle" onclick="nextAmbientTrack()" title="Next Track (N)">⏭️</button>
+                </div>
+
                 <button class="slideshow-btn-icon" id="slideshowFitBtn" onclick="toggleSlideshowFit()" title="Toggle Fit / Fill Display Mode (C)">
                     🖼️
                 </button>
@@ -401,5 +419,20 @@
     <script src="./jszip.min.js"></script>
     <script src="./data.js"></script>
     <script src="./app.js"></script>
+    
+    <!-- PWA Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then((reg) => {
+                        console.log('✨ Monet Gallery ServiceWorker registered with scope:', reg.scope);
+                    })
+                    .catch((err) => {
+                        console.warn('⚠️ ServiceWorker registration failed:', err);
+                    });
+            });
+        }
+    </script>
 </body>
 </html>

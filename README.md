@@ -19,7 +19,8 @@ An interactive, curated digital museum and high-definition visual archive celebr
 ### 1. 📱 Device-Appropriate Fullscreen Wallpaper Slideshow
 - **Automatic Form Factor Adaptation**: Automatically categorizes extracted snapshots into desktop widescreen (16:9) vs mobile/pillarboxed portrait using luminosity margin sampling.
 - **Smart Aspect Ratio Filtering**: When launching the fullscreen slideshow, desktop users automatically view widescreen-optimized masterworks, while mobile users receive portrait scenes (or toggle between Desktop, Mobile, and All formats).
-- **Presentation Controls**: Fullscreen mode, automatic looping with play/pause, selectable transition delays (3s, 5s, 8s, 12s), fit vs cover mode, and keyboard navigation (`Space`, `ArrowLeft`, `ArrowRight`, `Esc`).
+- **Ambient Classical Audio**: Integrated background audio player featuring Claude Debussy (*Clair de Lune*) and Erik Satie (*Gymnopédie No. 1*), with track switching (`N`), mute/play toggle (`A`), and graceful pause on exit.
+- **Presentation Controls**: Fullscreen mode, automatic looping with play/pause, selectable transition delays (3s, 5s, 8s, 12s), fit vs cover mode, and keyboard navigation (`Space`, `ArrowLeft`, `ArrowRight`, `A` for Audio, `N` for Next track, `D` for Display mode, `Esc`).
 
 ### 2. ⚡ Progressive Batch DOM Rendering
 - **Instant Paint**: Initial grid render loads the first 24 cards in milliseconds using `DocumentFragment`.
@@ -34,7 +35,11 @@ An interactive, curated digital museum and high-definition visual archive celebr
 - **Dynamic Extensibility**: Channels are dynamically profiled from catalog metrics. Hand-curated channels (e.g. *LearnFromMasters*, *Extraordinary Visual Art*, *Muse Visual Art*, *Cupid Studio*, *Beautiful Living Art*) are highlighted, while newly discovered channels receive automatic archetypes and metrics.
 - **Live Search Guide Chips**: Pre-curated artist chips (*Claude Monet*, *Renoir*, *Sisley*, *Boudin*, *Levitan*) and theme chips (*Water Lilies*, *Garden Sanctuaries*, *Winter & Snow*, *Venice*, *Paris*) dynamically compute and display current matching catalog counts.
 
-### 5. 🎬 Streamlined Ad-Free Previews & Playback
+### 5. 📲 Progressive Web App (PWA) & Offline Caching
+- **Installable on All Devices**: Complete `manifest.json` and custom golden Impressionist palette icons (`icons/icon-192.png`, `icons/icon-512.png`, `icons/icon.svg`) allow installing the gallery directly to home screens on iOS, Android, macOS, and Windows.
+- **Service Worker (`sw.js`)**: Intelligent hybrid caching strategy (Cache-First for wallpapers, audio, and styles; Network-First with offline fallback for HTML and app data).
+
+### 6. 🎬 Streamlined Ad-Free Previews & Playback
 - **Privacy-Enhanced Embeds (`youtube-nocookie.com`)**: Eliminates third-party tracking cookies to minimize ad pre-rolls.
 - **Ad-Free Wallpaper Previews**: Full resolution 4K wallpapers enable uncompressed contemplation without streaming buffering or commercials.
 

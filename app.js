@@ -1370,6 +1370,86 @@ function changeSlideshowFormFactor(val) {
     }
 }
 
+// ==========================================================================
+// AMBIENT CLASSICAL AUDIO CONTROLLER (Debussy & Satie)
+// ==========================================================================
+const AMBIENT_TRACKS = [
+    { title: 'Debussy: Clair de Lune', src: 'audio/clair_de_lune.mp3' },
+    { title: 'Satie: Gymnopédie No. 1', src: 'audio/gymnopedie_no1.mp3' }
+];
+let currentAudioTrackIndex = 0;
+let ambientAudio = null;
+let isAudioPlaying = false;
+
+function initAmbientAudio() {
+    if (!ambientAudio) {
+        ambientAudio = new Audio();
+        ambientAudio.volume = 0.45;
+        ambientAudio.preload = 'metadata';
+        ambientAudio.addEventListener('ended', () => {
+            nextAmbientTrack(true);
+        });
+        ambientAudio.addEventListener('error', (e) => {
+            console.warn('Audio playback error:', e);
+            isAudioPlaying = false;
+            updateAudioUI(false);
+        });
+    }
+}
+
+function toggleSlideshowAudio() {
+    initAmbientAudio();
+    if (isAudioPlaying) {
+        ambientAudio.pause();
+        isAudioPlaying = false;
+        updateAudioUI(false);
+    } else {
+        if (!ambientAudio.src || !ambientAudio.src.includes('.mp3')) {
+            ambientAudio.src = AMBIENT_TRACKS[currentAudioTrackIndex].src;
+        }
+        ambientAudio.play().then(() => {
+            isAudioPlaying = true;
+            updateAudioUI(true);
+        }).catch(err => {
+            console.log('Audio playback prevented or waiting for gesture:', err);
+            isAudioPlaying = false;
+            updateAudioUI(false);
+        });
+    }
+}
+
+function nextAmbientTrack(autoPlay = true) {
+    currentAudioTrackIndex = (currentAudioTrackIndex + 1) % AMBIENT_TRACKS.length;
+    initAmbientAudio();
+    ambientAudio.src = AMBIENT_TRACKS[currentAudioTrackIndex].src;
+    if (autoPlay || isAudioPlaying) {
+        ambientAudio.play().then(() => {
+            isAudioPlaying = true;
+            updateAudioUI(true);
+        }).catch(() => {
+            isAudioPlaying = false;
+            updateAudioUI(false);
+        });
+    } else {
+        updateAudioUI(false);
+    }
+}
+
+function updateAudioUI(playing) {
+    const btn = document.getElementById('slideshowAudioBtn');
+    const title = document.getElementById('slideshowAudioTitle');
+    const currentTrack = AMBIENT_TRACKS[currentAudioTrackIndex];
+    if (btn) {
+        btn.innerHTML = playing ? '🔊' : '🎵';
+        btn.classList.toggle('audio-active', playing);
+        btn.setAttribute('title', playing ? 'Pause Ambient Music (A)' : 'Play Ambient Music (A)');
+    }
+    if (title) {
+        title.textContent = playing ? currentTrack.title : `${currentTrack.title} (Paused)`;
+        title.classList.toggle('playing', playing);
+    }
+}
+
 function toggleSlideshowFit() {
     slideshowFitMode = (slideshowFitMode === 'contain') ? 'cover' : 'contain';
     const img = document.getElementById('slideshowImage');
@@ -1549,6 +1629,13 @@ function closeSlideshow() {
         overlay.classList.remove('active', 'controls-hidden');
     }
     document.body.style.overflow = '';
+
+    // Gently pause ambient audio when exiting slideshow
+    if (ambientAudio && isAudioPlaying) {
+        ambientAudio.pause();
+        isAudioPlaying = false;
+        updateAudioUI(false);
+    }
 }
 
 function handleSlideshowMouseMove() {
@@ -1584,7 +1671,11 @@ window.addEventListener('keydown', (e) => {
         toggleNativeFullscreen();
     } else if (e.key === 'c' || e.key === 'C') {
         toggleSlideshowFit();
-    } else if (e.key === 'm' || e.key === 'M') {
+    } else if (e.key === 'a' || e.key === 'A') {
+        toggleSlideshowAudio();
+    } else if (e.key === 'n' || e.key === 'N') {
+        nextAmbientTrack();
+    } else if (e.key === 'd' || e.key === 'D' || e.key === 'm' || e.key === 'M') {
         const modes = ['desktop', 'mobile', 'all'];
         const nextMode = modes[(modes.indexOf(slideshowFormFactorMode) + 1) % modes.length];
         const formFactorSelect = document.getElementById('slideshowFormFactorSelect');

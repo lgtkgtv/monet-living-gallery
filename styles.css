@@ -2522,3 +2522,69 @@ a {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Slideshow Ambient Classical Audio Controls */
+.slideshow-audio-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  padding: 2px 10px 2px 4px;
+  color: #fff;
+  font-size: 0.78rem;
+  transition: all 0.25s ease;
+}
+
+.slideshow-audio-control:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--accent-gold);
+}
+
+.slideshow-audio-title {
+  max-width: 160px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.74rem;
+}
+
+.slideshow-audio-title.playing {
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+.slideshow-btn-icon-subtle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0.82rem;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+  line-height: 1;
+}
+
+.slideshow-btn-icon-subtle:hover {
+  transform: scale(1.2);
+}
+
+.slideshow-btn-icon.audio-active {
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+@media (max-width: 768px) {
+  .slideshow-audio-title {
+    display: none;
+  }
+  .slideshow-audio-control {
+    padding: 2px 4px;
+  }
+}
+
+
