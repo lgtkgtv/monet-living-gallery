@@ -297,14 +297,11 @@ function createVideoCard(v) {
 
             <div class="video-actions">
                 <button class="btn-card-play" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}')" title="Watch in embedded gallery player">
-                    ▶ Play
+                    ▶ Play Video
                 </button>
                 <button class="btn-card-wallpaper" onclick="openWallpaperModal('${v.id}')" title="View wallpaper scene snapshots for this video">
                     🖼️ Wallpapers ${v.wallpaperCount > 0 ? `<span class="badge-count">${v.wallpaperCount}</span>` : ''}
                 </button>
-                <a class="btn-card-yt" href="https://www.youtube.com/watch?v=${v.id}&list=PLeqGkucOU6lA" target="_blank" rel="noopener noreferrer" title="Watch in YouTube Playlist">
-                    📺 ↗
-                </a>
             </div>
         </div>
     `;

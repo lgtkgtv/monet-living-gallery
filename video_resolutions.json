@@ -1391,5 +1391,103 @@
     "resolution": "3840x2160",
     "qualityLabel": "4K UHD",
     "is4K": true
+  },
+  "bgwokHmFTLQ": {
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false
+  },
+  "ZGuimqw_tpo": {
+    "width": 3840,
+    "height": 2160,
+    "resolution": "3840x2160",
+    "qualityLabel": "4K UHD",
+    "is4K": true
+  },
+  "XUEzojRuVhw": {
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false
+  },
+  "40xg3sB2PEc": {
+    "width": 3840,
+    "height": 2160,
+    "resolution": "3840x2160",
+    "qualityLabel": "4K UHD",
+    "is4K": true
+  },
+  "52Sg9uFRx4s": {
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false
+  },
+  "Et2jSjaNy7M": {
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false
+  },
+  "cKkDMiGUbUw": {
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false
+  },
+  "8DoY7OKZ_eA": {
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false
+  },
+  "k3Ls4Bjx-ZY": {
+    "width": 3840,
+    "height": 2160,
+    "resolution": "3840x2160",
+    "qualityLabel": "4K UHD",
+    "is4K": true
+  },
+  "jr38oRbEutQ": {
+    "width": 1914,
+    "height": 1080,
+    "resolution": "1914x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false
+  },
+  "8SWvmB2_AN8": {
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false
+  },
+  "mU3u9f43XVg": {
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false
+  },
+  "rxz8CSFGKRY": {
+    "width": 1914,
+    "height": 1080,
+    "resolution": "1914x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false
+  },
+  "qedoqPz7oic": {
+    "width": 1914,
+    "height": 1080,
+    "resolution": "1914x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false
   }
 }

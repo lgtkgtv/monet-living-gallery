@@ -2,13 +2,13 @@
 const PLAYLIST_METADATA = {
     title: "sh_Monet inspired Visual Arts",
     playlistUrl: "https://www.youtube.com/playlist?list=PLeqGkucOU6lA",
-    totalVideos: 199,
-    totalViews: 24246923,
-    totalDurationSec: 281562,
+    totalVideos: 212,
+    totalViews: 46188192,
+    totalDurationSec: 301598,
     channelCount: 40,
     totalWallpapers: 455,
-    count4K: 44,
-    countFHD: 148
+    count4K: 46,
+    countFHD: 159
 };
 
 const CHANNEL_PROFILES = {
@@ -127,11 +127,114 @@ const CHANNEL_PROFILES = {
 };
 const CHANNEL_STATS = [
   {
+    "channel": "Lifting Dreams",
+    "channel_url": "https://www.youtube.com/channel/UCux51cdq0SlyEl29eYPpnkg",
+    "count": 2,
+    "total_views": 24600000,
+    "avg_views": 12300000,
+    "videos": [
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "cKkDMiGUbUw",
+        "url": "https://www.youtube.com/watch?v=cKkDMiGUbUw",
+        "title": "Strauss ~ The Blue Danube Waltz",
+        "description": null,
+        "duration": 564,
+        "channel_id": "UCux51cdq0SlyEl29eYPpnkg",
+        "channel": "Lifting Dreams",
+        "channel_url": "https://www.youtube.com/channel/UCux51cdq0SlyEl29eYPpnkg",
+        "uploader": "Lifting Dreams",
+        "uploader_id": "@GreenSounds",
+        "uploader_url": "https://www.youtube.com/@GreenSounds",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/cKkDMiGUbUw/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCQc5PWGNoKuYqm6Zzzwxrrjd2DAQ",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/cKkDMiGUbUw/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDCLiS_pxvMLcE9HRWr9BWt1cnIaw",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/cKkDMiGUbUw/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBDc6pddf1WhgSI_JoEzp15W7sGvQ",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/cKkDMiGUbUw/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDRa83LcpDgQdwN6cKPBNXvKNDLMw",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 21000000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "8XdHP_fQoB0",
+        "url": "https://www.youtube.com/watch?v=8XdHP_fQoB0",
+        "title": "Beautiful Paintings + Beautiful Classical Music",
+        "description": null,
+        "duration": 11857,
+        "channel_id": "UCux51cdq0SlyEl29eYPpnkg",
+        "channel": "Lifting Dreams",
+        "channel_url": "https://www.youtube.com/channel/UCux51cdq0SlyEl29eYPpnkg",
+        "uploader": "Lifting Dreams",
+        "uploader_id": "@GreenSounds",
+        "uploader_url": "https://www.youtube.com/@GreenSounds",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/8XdHP_fQoB0/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAl8tVIHE5ISzSx9ARnNhc-O5eUMw",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/8XdHP_fQoB0/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBZsSaDmqValuPkt9ypMals7UTbQw",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/8XdHP_fQoB0/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLC5Pae8wbrsG8fy1pENqG25qlPeGA",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/8XdHP_fQoB0/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBXmcHwGz1vvkTKcetIqqIaLxMQvg",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 3600000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      }
+    ],
+    "top_video": {
+      "id": "cKkDMiGUbUw",
+      "title": "Strauss ~ The Blue Danube Waltz",
+      "views": 21000000,
+      "url": "https://www.youtube.com/watch?v=cKkDMiGUbUw"
+    }
+  },
+  {
     "channel": "LearnFromMasters",
     "channel_url": "https://www.youtube.com/channel/UCWjLl5TDZqMZimHbHXk0Wpg",
-    "count": 15,
-    "total_views": 6224000,
-    "avg_views": 414933,
+    "count": 17,
+    "total_views": 6867000,
+    "avg_views": 403941,
     "videos": [
       {
         "_type": "url",
@@ -149,22 +252,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@LearnFromMasters",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/nCVYEqc_Hw4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCxxPFylbsT5n84CETjjpAjWTC2yQ",
+            "url": "https://i.ytimg.com/vi/nCVYEqc_Hw4/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBfu7aktosP2SkWF8Ig6wk1VkUrvA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/nCVYEqc_Hw4/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAgk0UuaFJCQd04Vz-RU4XlbWVmsQ",
+            "url": "https://i.ytimg.com/vi/nCVYEqc_Hw4/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBzHgxTvAtP-3RpVLksQSYWH_CovA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/nCVYEqc_Hw4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC03mF_1ThJsZDK3Fds4SD3UAVFgA",
+            "url": "https://i.ytimg.com/vi/nCVYEqc_Hw4/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDeYj2M92ChE8AbDLzqBzEBHqp4ng",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/nCVYEqc_Hw4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDZ3gf9mKOWSa1MRooXQswMrPFc9w",
+            "url": "https://i.ytimg.com/vi/nCVYEqc_Hw4/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCtOllenVvfBKWQjhVxALTqUE1KKg",
             "height": 188,
             "width": 336
           }
@@ -193,22 +296,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@LearnFromMasters",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/h3-WUZi-0hU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDeoTvZjouPv5TQwk5LknLPgoryBA",
+            "url": "https://i.ytimg.com/vi/h3-WUZi-0hU/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBjqmhO4-h8WW-Ys1ySK_GfD8ZbgQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/h3-WUZi-0hU/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAPZDWhVr_t_u4spXnVewzQv4de5w",
+            "url": "https://i.ytimg.com/vi/h3-WUZi-0hU/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCtTgL7zkJqcGj8QXkLFOGZKYagFQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/h3-WUZi-0hU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAUTU-Zbut5CYG5nklpYPoIsHF7PQ",
+            "url": "https://i.ytimg.com/vi/h3-WUZi-0hU/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLA-tUnwtrSC3EiFVx9CmmgJ4sRGtA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/h3-WUZi-0hU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDVaFD6ghQVv8vxEkhntTkQ9UpUvg",
+            "url": "https://i.ytimg.com/vi/h3-WUZi-0hU/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLD6Zcbxaq32wLJBVvIAaMRy_9dIsg",
             "height": 188,
             "width": 336
           }
@@ -217,6 +320,50 @@ const CHANNEL_STATS = [
         "release_timestamp": null,
         "availability": null,
         "view_count": 927000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "52Sg9uFRx4s",
+        "url": "https://www.youtube.com/watch?v=52Sg9uFRx4s",
+        "title": "Peder Mørk Mønsted: A collection of 284 paintings (HD)",
+        "description": null,
+        "duration": 1731,
+        "channel_id": "UCWjLl5TDZqMZimHbHXk0Wpg",
+        "channel": "LearnFromMasters",
+        "channel_url": "https://www.youtube.com/channel/UCWjLl5TDZqMZimHbHXk0Wpg",
+        "uploader": "LearnFromMasters",
+        "uploader_id": "@LearnFromMasters",
+        "uploader_url": "https://www.youtube.com/@LearnFromMasters",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/52Sg9uFRx4s/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAQyACdlJTYhBb-_QDZVLbf8JMSsA",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/52Sg9uFRx4s/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLB6pgxEv9pFX9DVGey_JQfUxyL54Q",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/52Sg9uFRx4s/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCOHeCHp0VUOVSHWO-TW29h5MYiLA",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/52Sg9uFRx4s/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAOYr4SLFr2X7-Nyrm1Zt03wYIT0w",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 410000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -237,22 +384,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@LearnFromMasters",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/gAWrEV-3ahw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBwhfX09VNJIPocNHnEbx_nZWQohA",
+            "url": "https://i.ytimg.com/vi/gAWrEV-3ahw/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAy8iUDX4X280neclsJRVExrc9aYQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/gAWrEV-3ahw/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB3vcG_itVk7XW8jGAgFtYWePCDZg",
+            "url": "https://i.ytimg.com/vi/gAWrEV-3ahw/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBX659s3JBxCmdrln0v8s7KXpJcsw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/gAWrEV-3ahw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCWaDp4ftHIexS2mI5TkmRPfv1Y7Q",
+            "url": "https://i.ytimg.com/vi/gAWrEV-3ahw/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBOgWJ5TFw9hWahYyxFZ_UyI_P04A",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/gAWrEV-3ahw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCwe6TQlRg4MP6sOaaEhAB3bFLidA",
+            "url": "https://i.ytimg.com/vi/gAWrEV-3ahw/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBl25yORSXE6wn5Rmh7ZQzey1b3xw",
             "height": 188,
             "width": 336
           }
@@ -281,22 +428,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@LearnFromMasters",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/49gUho777mI/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCl_D7GZZGsMl68NXFg-fY6EmHVJQ",
+            "url": "https://i.ytimg.com/vi/49gUho777mI/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBpiqDvckCJwWFmdKmW_1-YhNuPeg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/49gUho777mI/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAZa51QZHTZaNn72V_gb6CteEf-CQ",
+            "url": "https://i.ytimg.com/vi/49gUho777mI/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCnsFqgiAC0KTAYTPxjkNLY29nzOA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/49gUho777mI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB9XaWodjNETU9l1Kq_SNIh_iDqTQ",
+            "url": "https://i.ytimg.com/vi/49gUho777mI/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBi2SPRs-MHqPaclsqWF_yp3BW3eg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/49gUho777mI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLASyr2q7JklM2HdxCAEn1k9HDznEw",
+            "url": "https://i.ytimg.com/vi/49gUho777mI/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDJzJ17McPk5RmBpIF0NahKAn81Kg",
             "height": 188,
             "width": 336
           }
@@ -305,6 +452,50 @@ const CHANNEL_STATS = [
         "release_timestamp": null,
         "availability": null,
         "view_count": 292000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "XUEzojRuVhw",
+        "url": "https://www.youtube.com/watch?v=XUEzojRuVhw",
+        "title": "Fritz Thaulow: A collection of 178 works (HD) *UPDATE",
+        "description": null,
+        "duration": 1101,
+        "channel_id": "UCWjLl5TDZqMZimHbHXk0Wpg",
+        "channel": "LearnFromMasters",
+        "channel_url": "https://www.youtube.com/channel/UCWjLl5TDZqMZimHbHXk0Wpg",
+        "uploader": "LearnFromMasters",
+        "uploader_id": "@LearnFromMasters",
+        "uploader_url": "https://www.youtube.com/@LearnFromMasters",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/XUEzojRuVhw/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLD1YVg0qpz2DXdi4jhgKDlemXlTdw",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/XUEzojRuVhw/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDpIqiClUUCBv46VbRAcEdgx-i7MQ",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/XUEzojRuVhw/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAu_luj_00CquBnbyq5ss-NMWE1rA",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/XUEzojRuVhw/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBFtU1RoiZFQtZjPMBUMO2BheStwg",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 233000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -325,22 +516,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@LearnFromMasters",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/Xul5WT0ReYw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDzuuffF0jQ3_JGxNKitXmg9QxnDw",
+            "url": "https://i.ytimg.com/vi/Xul5WT0ReYw/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAHKPozHnT70KB4A7Y-VXf4-rFJeg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/Xul5WT0ReYw/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBDBl62GPup6hItTVeLfvl4Iua90w",
+            "url": "https://i.ytimg.com/vi/Xul5WT0ReYw/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAFWYskHRwKwMuzGQreocf8M3QeGw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/Xul5WT0ReYw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC03a9wxY-QWLokCmu_unHM7JRL8w",
+            "url": "https://i.ytimg.com/vi/Xul5WT0ReYw/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB6VDU74F_HeHIaJFztSaK96tKsDg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/Xul5WT0ReYw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDdYleEZgrAmYc0frADcaAR0IUlIA",
+            "url": "https://i.ytimg.com/vi/Xul5WT0ReYw/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBc4GsyrQCUZgis5zw5VHlbQ2VzJw",
             "height": 188,
             "width": 336
           }
@@ -369,22 +560,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@LearnFromMasters",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/8tt3XV_OIlc/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCHB5ErbN21ZCaZuqNVl1WzvybZXA",
+            "url": "https://i.ytimg.com/vi/8tt3XV_OIlc/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBf5KMtAbNAHGZ2yKfVxEKsGYf2mw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/8tt3XV_OIlc/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDihqSXM2Yn5qB8HkGuqAVlJ35vEw",
+            "url": "https://i.ytimg.com/vi/8tt3XV_OIlc/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCFX5drOmfZfElDrzjsCAZNSs2uJA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/8tt3XV_OIlc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCc7YNMDlvayJgZZV3p9ix1og55fA",
+            "url": "https://i.ytimg.com/vi/8tt3XV_OIlc/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAc_4lCW2PJRePcbmvYZMUdbtLBUA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/8tt3XV_OIlc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAfAb6fu_MYPo1Ybk4Bag3cmS12ug",
+            "url": "https://i.ytimg.com/vi/8tt3XV_OIlc/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBP-KLhYX4_ChhDqfJ5kxWDe4GX0Q",
             "height": 188,
             "width": 336
           }
@@ -393,50 +584,6 @@ const CHANNEL_STATS = [
         "release_timestamp": null,
         "availability": null,
         "view_count": 152000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "MyM-rQ5ZvGk",
-        "url": "https://www.youtube.com/watch?v=MyM-rQ5ZvGk",
-        "title": "Vladimir Orlovsky: A collection of 60 paintings (HD)",
-        "description": null,
-        "duration": 393,
-        "channel_id": "UCWjLl5TDZqMZimHbHXk0Wpg",
-        "channel": "LearnFromMasters",
-        "channel_url": "https://www.youtube.com/channel/UCWjLl5TDZqMZimHbHXk0Wpg",
-        "uploader": "LearnFromMasters",
-        "uploader_id": "@LearnFromMasters",
-        "uploader_url": "https://www.youtube.com/@LearnFromMasters",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/MyM-rQ5ZvGk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB7C5y5yFHJXEm9XxD_9EGSEv5qRg",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/MyM-rQ5ZvGk/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLApgxDc8n-f7mHNiQwRmu52UKnxdA",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/MyM-rQ5ZvGk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAQCzT7PP5yLNxpvA1ky3RzV7sGxA",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/MyM-rQ5ZvGk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLASfcKaM41OMOwvBbCOxpm5C4RvlQ",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 70000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -457,22 +604,66 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@LearnFromMasters",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/jVQ_mmOomvY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDMketSRFgv_gVeINrCWC0WRZQhlw",
+            "url": "https://i.ytimg.com/vi/jVQ_mmOomvY/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBSYab9PX4L1d5xym4W3E-GkkMqzg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/jVQ_mmOomvY/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBXr8R9zlRRsJwPV590KJ0yVgmQNA",
+            "url": "https://i.ytimg.com/vi/jVQ_mmOomvY/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA6VLEZRRHtJ3pmrrKHiwvRI5IQpQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/jVQ_mmOomvY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDVynnJGAB49CBGNpNH52THpl1ARQ",
+            "url": "https://i.ytimg.com/vi/jVQ_mmOomvY/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCSGa2LTuJGr521ci-dHrfZF-PWEw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/jVQ_mmOomvY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAco3iNNHGRoQ3HzPHnnthHTsiT8w",
+            "url": "https://i.ytimg.com/vi/jVQ_mmOomvY/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB_HWAlSjzkKNrEBSAx_fs_aVYEJg",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 70000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "MyM-rQ5ZvGk",
+        "url": "https://www.youtube.com/watch?v=MyM-rQ5ZvGk",
+        "title": "Vladimir Orlovsky: A collection of 60 paintings (HD)",
+        "description": null,
+        "duration": 393,
+        "channel_id": "UCWjLl5TDZqMZimHbHXk0Wpg",
+        "channel": "LearnFromMasters",
+        "channel_url": "https://www.youtube.com/channel/UCWjLl5TDZqMZimHbHXk0Wpg",
+        "uploader": "LearnFromMasters",
+        "uploader_id": "@LearnFromMasters",
+        "uploader_url": "https://www.youtube.com/@LearnFromMasters",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/MyM-rQ5ZvGk/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA-SsRhXHugbyBIaBq1ZtJD1wUMuw",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/MyM-rQ5ZvGk/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBXCcAUmEz-Y47_hcfrlYfk0UxxSg",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/MyM-rQ5ZvGk/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBqLWJ6IyLSYoJrqFUuBjog1ImHmw",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/MyM-rQ5ZvGk/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAGgyOWQ_K3983bUSWcJpq4tguSpA",
             "height": 188,
             "width": 336
           }
@@ -501,22 +692,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@LearnFromMasters",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/6rfKrNplN04/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLByPx9w_Swv-01nyc7hKPBGQgP0VA",
+            "url": "https://i.ytimg.com/vi/6rfKrNplN04/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA7rH6tRmygqnsSqT1_hnCiSymPUQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/6rfKrNplN04/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBiM-fPihDWMQV8brTJK4KzqEW5HA",
+            "url": "https://i.ytimg.com/vi/6rfKrNplN04/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLARY_a1fArhyRCEam-okAb4qJd4iQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/6rfKrNplN04/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD3sdv--2KQq4XXaavVSa3kyjZ79g",
+            "url": "https://i.ytimg.com/vi/6rfKrNplN04/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCfZY8efn3WmxbEEgDaRTOmZ0fVXg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/6rfKrNplN04/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDD6uXT5mjB18lI3c_sDzF5LmGvGw",
+            "url": "https://i.ytimg.com/vi/6rfKrNplN04/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBnY8_o8HsXwZUDOpwTQIyapOBzhA",
             "height": 188,
             "width": 336
           }
@@ -545,22 +736,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@LearnFromMasters",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/_OSQz1PzQn8/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCj5HU8Qipf-APN1naneSv2qmCPkg",
+            "url": "https://i.ytimg.com/vi/_OSQz1PzQn8/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA9D8rk8ioXnciEBSRKG6jXLOENYA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/_OSQz1PzQn8/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCQFhvoAfASYanHHr-kbDXdGFfkgQ",
+            "url": "https://i.ytimg.com/vi/_OSQz1PzQn8/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBPxCt_5iGn09Ddz2hdsloWx2WNPw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/_OSQz1PzQn8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDfRGuk3JM82XELsQDrhwQqDZ_mwg",
+            "url": "https://i.ytimg.com/vi/_OSQz1PzQn8/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB5YPc1IdTo8krgpXYIzJeWf9sQmQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/_OSQz1PzQn8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAgx5pD4_kPQAj0v-jbLQqKaUYtyw",
+            "url": "https://i.ytimg.com/vi/_OSQz1PzQn8/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAoQ1GRj1i2tX4r8mc41nSRvglUDg",
             "height": 188,
             "width": 336
           }
@@ -589,22 +780,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@LearnFromMasters",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/8z5XHjZwaEU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAhz3xCy5TYZItIil87gxPq1FQzBg",
+            "url": "https://i.ytimg.com/vi/8z5XHjZwaEU/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDdF74kxXK82qxK5RIweN-LOOFp8A",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/8z5XHjZwaEU/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBlByZpAeX2WnmdrFL0wAVEMNJiBw",
+            "url": "https://i.ytimg.com/vi/8z5XHjZwaEU/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBeMJ5L8cirsKN6NRBMKJ5RSjFWQw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/8z5XHjZwaEU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAbdi8CsphqMsv48VWkSWDVx0ooWA",
+            "url": "https://i.ytimg.com/vi/8z5XHjZwaEU/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLC_z5xcie60kM5MgUQM6vyAulc2Ag",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/8z5XHjZwaEU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCVIwawZ4Emjm0OSj9JGRIGx88Kww",
+            "url": "https://i.ytimg.com/vi/8z5XHjZwaEU/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAuk07RqJy6zT5ER-QHSD-iHzAibw",
             "height": 188,
             "width": 336
           }
@@ -633,22 +824,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@LearnFromMasters",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/Xbfis3bqJ7M/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBodEMwAM-Oktm8tbhCZaY2Z4lgzA",
+            "url": "https://i.ytimg.com/vi/Xbfis3bqJ7M/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDB9vi5qMy-rngNoOCKuq0MlO9oEg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/Xbfis3bqJ7M/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAXtnf9i0xb58C3LgYuokFz_edp8g",
+            "url": "https://i.ytimg.com/vi/Xbfis3bqJ7M/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCwA78IPIbl00XlgukGzlaiUP8wzg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/Xbfis3bqJ7M/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD7UO_HI7wmDWw_ynf_QfAQpNpofA",
+            "url": "https://i.ytimg.com/vi/Xbfis3bqJ7M/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBcnMDe0a09ct3YMGrKthv-wqjhOg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/Xbfis3bqJ7M/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDtgS23lpgObr_zDXbDFZDLuTw-hw",
+            "url": "https://i.ytimg.com/vi/Xbfis3bqJ7M/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBgO69PyZCuO5hL8fHNvowBrzuRyA",
             "height": 188,
             "width": 336
           }
@@ -677,22 +868,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@LearnFromMasters",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/y_V8_qF9i-s/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBW10nrzlGB88meSytLPeaThEvxIg",
+            "url": "https://i.ytimg.com/vi/y_V8_qF9i-s/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBcLNZuE0s_fz1f47o6MD7TdqUUHA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/y_V8_qF9i-s/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCTsJXUa_ebCoQc4Fvc8D4mv_tujw",
+            "url": "https://i.ytimg.com/vi/y_V8_qF9i-s/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDy7MyPebX8v_T3KEPlaaykU8oXOw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/y_V8_qF9i-s/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCvMo6F9rahjycndtWxSsIIowRfAA",
+            "url": "https://i.ytimg.com/vi/y_V8_qF9i-s/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCI7y7sC1SnNys1NC1Isx_CtwM0Yg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/y_V8_qF9i-s/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD07ocN2Qj9dM-hiHnKeDb7XbJfFA",
+            "url": "https://i.ytimg.com/vi/y_V8_qF9i-s/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBYVNfQzi0oCjKqAzC8qize97hXVA",
             "height": 188,
             "width": 336
           }
@@ -721,22 +912,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@LearnFromMasters",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/S2diglp47fo/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC6Fr_DlHhhLjTNUg3HkYyDvE9B3w",
+            "url": "https://i.ytimg.com/vi/S2diglp47fo/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA1p8iM_rgbswQ10ERe5e6zAAqqnQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/S2diglp47fo/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC7UANT-rFtv3Pru6iFZ0k5X1nfCA",
+            "url": "https://i.ytimg.com/vi/S2diglp47fo/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLC9RsKwOFeCXBIUScQpZ0i0FlsBIw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/S2diglp47fo/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBaXnz2zMQ_1ZSQxrloqe-bSVBqAw",
+            "url": "https://i.ytimg.com/vi/S2diglp47fo/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBhW39J1b4XdqZi_LGq67eKDyCBGg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/S2diglp47fo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBZR-ZpPWdnDLKmjO8ba85OS7Uryg",
+            "url": "https://i.ytimg.com/vi/S2diglp47fo/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAfscp6a7rLAtNBSANr6Bwv31vEZA",
             "height": 188,
             "width": 336
           }
@@ -765,22 +956,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@LearnFromMasters",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/Ht3cSOCueJc/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAsCwPVO43GFXYbtZD9ZY84sDefVw",
+            "url": "https://i.ytimg.com/vi/Ht3cSOCueJc/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCrLZAl1fyKTGHo-3c6LYw3Epf4Yg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/Ht3cSOCueJc/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDqvchlFztkEGJ0-zNOSBxlWiHcOQ",
+            "url": "https://i.ytimg.com/vi/Ht3cSOCueJc/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLD0WpAN1QTP2TMnuHrYBkL0VYjHwQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/Ht3cSOCueJc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDGTLcQrElDKoX6hIURnOg2kdEMzw",
+            "url": "https://i.ytimg.com/vi/Ht3cSOCueJc/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDtnCx9cNOu6LTUlLSkaqfk-UpL3w",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/Ht3cSOCueJc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAbWy9KwIupfthlzt9Vbp3lPsyOxQ",
+            "url": "https://i.ytimg.com/vi/Ht3cSOCueJc/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBvnOB9sc7PU0joaBzL02sy58cwpw",
             "height": 188,
             "width": 336
           }
@@ -799,65 +990,6 @@ const CHANNEL_STATS = [
       "title": "Claude Monet: A collection of 1540 paintings (HD)",
       "views": 3800000,
       "url": "https://www.youtube.com/watch?v=nCVYEqc_Hw4"
-    }
-  },
-  {
-    "channel": "Lifting Dreams",
-    "channel_url": "https://www.youtube.com/channel/UCux51cdq0SlyEl29eYPpnkg",
-    "count": 1,
-    "total_views": 3600000,
-    "avg_views": 3600000,
-    "videos": [
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "8XdHP_fQoB0",
-        "url": "https://www.youtube.com/watch?v=8XdHP_fQoB0",
-        "title": "Beautiful Paintings + Beautiful Classical Music",
-        "description": null,
-        "duration": 11857,
-        "channel_id": "UCux51cdq0SlyEl29eYPpnkg",
-        "channel": "Lifting Dreams",
-        "channel_url": "https://www.youtube.com/channel/UCux51cdq0SlyEl29eYPpnkg",
-        "uploader": "Lifting Dreams",
-        "uploader_id": "@GreenSounds",
-        "uploader_url": "https://www.youtube.com/@GreenSounds",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/8XdHP_fQoB0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBH-nQaiqKWszdNaFqPKUoLYWJLhg",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/8XdHP_fQoB0/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBnoCSDhcWlODYOt5qvY34i292W_w",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/8XdHP_fQoB0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCMAZSydagkZNVXQC_6nOZoDGdInA",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/8XdHP_fQoB0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBdRRjmZjx88fJuODjruIzXcQZq0Q",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 3600000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      }
-    ],
-    "top_video": {
-      "id": "8XdHP_fQoB0",
-      "title": "Beautiful Paintings + Beautiful Classical Music",
-      "views": 3600000,
-      "url": "https://www.youtube.com/watch?v=8XdHP_fQoB0"
     }
   },
   {
@@ -883,22 +1015,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@XanderCorvers",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/yGKyyaETZ2M/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDfL109Me4zMuTSJvBg5dWccn3KUA",
+            "url": "https://i.ytimg.com/vi/yGKyyaETZ2M/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA9ERs2ym20EYAP7Cb2Xk0sZxK7cw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/yGKyyaETZ2M/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCX-zDCZnoCDK_KxIV5dE2ZgXxrQw",
+            "url": "https://i.ytimg.com/vi/yGKyyaETZ2M/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDCwRFLQ3MpgxsqKgBCUvcIQEY_lw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/yGKyyaETZ2M/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC7NiD2hD-2JE-c6FncMf7WDijp1w",
+            "url": "https://i.ytimg.com/vi/yGKyyaETZ2M/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLA2DuEaRc8ZlPtAULj3dnBQ11UnCw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/yGKyyaETZ2M/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAbTX6Nr8pIwQcuMPE93a8TQ_rHMg",
+            "url": "https://i.ytimg.com/vi/yGKyyaETZ2M/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLApHsNyO4EdPAp39iPBPdlehMxHGA",
             "height": 188,
             "width": 336
           }
@@ -922,9 +1054,9 @@ const CHANNEL_STATS = [
   {
     "channel": "Muse Visual Art",
     "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "count": 76,
-    "total_views": 2056800,
-    "avg_views": 27063,
+    "count": 80,
+    "total_views": 2203900,
+    "avg_views": 27549,
     "videos": [
       {
         "_type": "url",
@@ -942,22 +1074,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/ZXjKmShmdUc/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAGnW-cd_jMh8vpKBBK6vIZKuVXkA",
+            "url": "https://i.ytimg.com/vi/ZXjKmShmdUc/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAcxKKwuyGtYXPpbF3dS9vIWnl5_A",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/ZXjKmShmdUc/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC_Vxh4aYXNYUak1T2jfuF58Rnvyw",
+            "url": "https://i.ytimg.com/vi/ZXjKmShmdUc/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCi3D7rDX5I3X5jlWIhPUd8QjXhiQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/ZXjKmShmdUc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCsfvpJiH0lDzyZ4oq5GymIRTOIiA",
+            "url": "https://i.ytimg.com/vi/ZXjKmShmdUc/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAgLzfM8D49N5ZOgqk6HhkhgFd88A",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/ZXjKmShmdUc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC-UcOGGdgvSbzHrCxTpKD-Tq3o0g",
+            "url": "https://i.ytimg.com/vi/ZXjKmShmdUc/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDxo6Vpj1uA17I6BIFeu3A3jOiVRw",
             "height": 188,
             "width": 336
           }
@@ -986,22 +1118,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/j8kxk_s1Iv8/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDCNbd7wotTumLETl5w6L1vcjYO8A",
+            "url": "https://i.ytimg.com/vi/j8kxk_s1Iv8/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDtq-ITEz7jEXLNlcdsD7s4ZylRCw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/j8kxk_s1Iv8/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC9hjtq8mr9PWxKfGsEB3ZfB4HXVQ",
+            "url": "https://i.ytimg.com/vi/j8kxk_s1Iv8/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAUuzcCoW2y4b83Ge5XOZfdiNsAzg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/j8kxk_s1Iv8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDZKD8w1ElaQichk_5sgst0qjaEeA",
+            "url": "https://i.ytimg.com/vi/j8kxk_s1Iv8/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBCn51mCr1iibSDptIprh0-F91bQQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/j8kxk_s1Iv8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCXZpmDuMX7h4FMlfoowi6XJQ46tQ",
+            "url": "https://i.ytimg.com/vi/j8kxk_s1Iv8/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBc_iXRDPS6ZUU-em_XnAOsLuh4Aw",
             "height": 188,
             "width": 336
           }
@@ -1030,22 +1162,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCInzunP8pSotAYciK-zWbUkYWwEg",
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLArS9jfN1hGCA3QQgYQooh9ciajiw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDgpL0N7Qh9nPbtnn7puv1jvYfaSw",
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCR7OkrtAg9AQu2EgwwlikA4gWYnw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD1vf8vxDkRr2QKw_UFdN3GrAwfGw",
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB3qPcIrVOTkZhfX8lltbrGOfPxNg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLChB5Andj3xwS0GmHp3Ac6SAqu6xQ",
+            "url": "https://i.ytimg.com/vi/V0Nz7TQcGF0/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLC8rBEQLFZBzIweO62RlyuXTR8nMA",
             "height": 188,
             "width": 336
           }
@@ -1074,22 +1206,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/qinshTPWa1o/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCCfBVLr9ST2_nW7aTdsnnmQyCXPA",
+            "url": "https://i.ytimg.com/vi/qinshTPWa1o/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCVD6rkPL_TnIwZoAKCdz9CHPs3Cg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/qinshTPWa1o/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDDQEDuDRefZJjhlQs1tiLIGTY0kQ",
+            "url": "https://i.ytimg.com/vi/qinshTPWa1o/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLD0KMhZce66s9Jm2CfB7ricwnukVA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/qinshTPWa1o/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCbiNEF9o0qRoT9GhIyWwXvjK0rBg",
+            "url": "https://i.ytimg.com/vi/qinshTPWa1o/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCmG7tcPHxMIyAKxY9hSydGJSGVDQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/qinshTPWa1o/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBtuq1aaLOIZG5CYzYEgDRU3pNoPQ",
+            "url": "https://i.ytimg.com/vi/qinshTPWa1o/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCKq8hyxnx8RFkNEVEAzt_si0bCPA",
             "height": 188,
             "width": 336
           }
@@ -1118,22 +1250,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/2fqxjaNY-60/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLASMuPiI2gTmwwTyVOo3l07Yb7M2Q",
+            "url": "https://i.ytimg.com/vi/2fqxjaNY-60/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLD0aUOxtnTWSPjMhfouvG38w8sVGQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/2fqxjaNY-60/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDgMHzLtheBcriba1fKX6SzKSH4fw",
+            "url": "https://i.ytimg.com/vi/2fqxjaNY-60/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDTq23wLF-bM4TURtuEV9y_XxSIcQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/2fqxjaNY-60/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCS6ZLO4KjUACj9F1r85f4gnDsfmQ",
+            "url": "https://i.ytimg.com/vi/2fqxjaNY-60/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBfVsGgV6QQNwfUwn9fOb4qUk-12Q",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/2fqxjaNY-60/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBqjhwBpDq3a9X0pz0jRDg3PcA1Gw",
+            "url": "https://i.ytimg.com/vi/2fqxjaNY-60/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB7XgRAIANMVX4KyMsnLj7hP398Bg",
             "height": 188,
             "width": 336
           }
@@ -1162,22 +1294,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/3XPsYH7DwCg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDjNu1SZgB2572stzl726Q9YzaXVw",
+            "url": "https://i.ytimg.com/vi/3XPsYH7DwCg/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBlptBXN_dxdIXyuQ9jGD7uxll9JQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/3XPsYH7DwCg/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBcr0dzOo0nRJpMnRw27xEbXUnJRw",
+            "url": "https://i.ytimg.com/vi/3XPsYH7DwCg/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBCD978w4qQqpK6gbZuo7dtjt4qAg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/3XPsYH7DwCg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCFi4fv33gpjQ2lyvZuIgLiyWi7sg",
+            "url": "https://i.ytimg.com/vi/3XPsYH7DwCg/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAHCtcV5TRL6D5hLYZGFDXmeYsGcg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/3XPsYH7DwCg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD3c5HpgHtBemQWu3zfMFEQDPB7rA",
+            "url": "https://i.ytimg.com/vi/3XPsYH7DwCg/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAKY4YWsqvVpY7a_1ub4-6o8qfcCg",
             "height": 188,
             "width": 336
           }
@@ -1186,6 +1318,50 @@ const CHANNEL_STATS = [
         "release_timestamp": null,
         "availability": null,
         "view_count": 89000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "bgwokHmFTLQ",
+        "url": "https://www.youtube.com/watch?v=bgwokHmFTLQ",
+        "title": "Visual Poems | Whispers of Blooms and Water | Living Oil Paintings",
+        "description": null,
+        "duration": 218,
+        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
+        "channel": "Muse Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+        "uploader": "Muse Visual Art",
+        "uploader_id": "@Muse_AI_Art",
+        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/bgwokHmFTLQ/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA97yT9GH6UY7RLC698CHjEgkffxw",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/bgwokHmFTLQ/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDjgpVL4dVoQmFs5YCrDTGV7bF6nA",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/bgwokHmFTLQ/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBOboUFathIvF9NaytJqJqGUKC6Bg",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/bgwokHmFTLQ/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDyN1eODz-8SVxUgnG0ITwdKAcsXQ",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 79000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -1206,22 +1382,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/6b59b123wDg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC-3y0tS3Bjn4t6LhhNS2iGKsWb6g",
+            "url": "https://i.ytimg.com/vi/6b59b123wDg/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA_vy6kKwlJIJFoGknXD5FMDqM0Ng",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/6b59b123wDg/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAvcmhCf9wsbdpAdG2fDv38jGGwtw",
+            "url": "https://i.ytimg.com/vi/6b59b123wDg/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAhN0BP044mL5-u7DbXORsoDBHtWg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/6b59b123wDg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDF8cA4NKi6IGIT3sYjdmfFuc-2kw",
+            "url": "https://i.ytimg.com/vi/6b59b123wDg/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDAlNealzaDBKnPRlmF27NIv08esw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/6b59b123wDg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBwz3gCnvqjq_O56xXVlz8oRwRy7w",
+            "url": "https://i.ytimg.com/vi/6b59b123wDg/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLC1PN7sMvEiW1jFSZY2vB-2OSMZ0A",
             "height": 188,
             "width": 336
           }
@@ -1250,22 +1426,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/j-i8EEgur_0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCHSmj9KWaeOts23OvE0jsolDXfYQ",
+            "url": "https://i.ytimg.com/vi/j-i8EEgur_0/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLC_Ci22SV6GRWRshdf02DFGvD0Gbg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/j-i8EEgur_0/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAziTQ3GcYViS8qTbMx5SlLFpYBsw",
+            "url": "https://i.ytimg.com/vi/j-i8EEgur_0/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCJsrF8U4pngg-MsJBMl-SOb5PFGA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/j-i8EEgur_0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCjUJfbQIWeafgIQnEUrkiCc3gl0Q",
+            "url": "https://i.ytimg.com/vi/j-i8EEgur_0/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBguxLDsgEflCGdtT744wbApAjqYA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/j-i8EEgur_0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBeWpgBv8Wd-dD1PFl7VCYDxwMkcQ",
+            "url": "https://i.ytimg.com/vi/j-i8EEgur_0/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDDU70MSXZ1QnmxIDvO1P-AshufEQ",
             "height": 188,
             "width": 336
           }
@@ -1294,22 +1470,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/xJhuOM71f2Q/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLByiCifAMjTD6cWMkU_Bk2DcMx59w",
+            "url": "https://i.ytimg.com/vi/xJhuOM71f2Q/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLC7kY71PILNw-pHx5oX1yUdSwIGpQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/xJhuOM71f2Q/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCveWYAUmmL91Z7LQ1JS1PP-b0e7Q",
+            "url": "https://i.ytimg.com/vi/xJhuOM71f2Q/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLC4rohS452JekG71WEpqoVv5F9m6g",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/xJhuOM71f2Q/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDZOVHSt7Lc9JKip7Ty7xA7XUmF1g",
+            "url": "https://i.ytimg.com/vi/xJhuOM71f2Q/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDyVIV9S23EeRBUmKUIv5Ya4UpRDw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/xJhuOM71f2Q/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCa50wsaJjz5s1aGMk-ZnSoCkYQeg",
+            "url": "https://i.ytimg.com/vi/xJhuOM71f2Q/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBFBHGxU4r-kQaZf5D2JqvUR60IHg",
             "height": 188,
             "width": 336
           }
@@ -1338,22 +1514,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/LCrG7Gm5riM/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDVpuyRuvXFn14fvdK8IG_hWBFBWQ",
+            "url": "https://i.ytimg.com/vi/LCrG7Gm5riM/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA7ci4gr_Rld8OLG8Y9d5t4_AE5LA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/LCrG7Gm5riM/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDG64l8FDFHUwAr3bhHCT8gy4RRZw",
+            "url": "https://i.ytimg.com/vi/LCrG7Gm5riM/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLB0Sf9kk6-5_5i-fRkVODE06pl7YA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/LCrG7Gm5riM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDk9cuKzpUtC5g36eeq-BdHoci6uw",
+            "url": "https://i.ytimg.com/vi/LCrG7Gm5riM/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBn97uOIBZDEnURlnlQIvIaLIN7Fw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/LCrG7Gm5riM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB-nWSs446iwbuveGbWI7AqPrM8YQ",
+            "url": "https://i.ytimg.com/vi/LCrG7Gm5riM/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLApZnZhgVOwA-NSUruusWIugtRqhA",
             "height": 188,
             "width": 336
           }
@@ -1382,22 +1558,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/kW_p6SuX7Zg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAnvZ-rdSjQvFRymHXBP6xNmoXHJA",
+            "url": "https://i.ytimg.com/vi/kW_p6SuX7Zg/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBoiOOpz6cSwS70f4ZSRmshWJs_RA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/kW_p6SuX7Zg/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDxH4JlUEM2uQpK-c3CJXV6xsbV9Q",
+            "url": "https://i.ytimg.com/vi/kW_p6SuX7Zg/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAxBYM9O_khQPlWUX7p-BJz-RYldg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/kW_p6SuX7Zg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDX650Vp8dhIBT3VR0CR0fIYveg7w",
+            "url": "https://i.ytimg.com/vi/kW_p6SuX7Zg/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDA-LTjY9NkUaU9lP2bEaJgNwaaUg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/kW_p6SuX7Zg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBTY2BwCByY5ELanFB0DrjDx8jSYQ",
+            "url": "https://i.ytimg.com/vi/kW_p6SuX7Zg/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLADJazXp-HC_gF2RMKnhktQomD5Qg",
             "height": 188,
             "width": 336
           }
@@ -1405,7 +1581,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 59000,
+        "view_count": 60000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -1426,22 +1602,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/UUp97AwbYl8/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCdA5YwYenTPnWkpIWKqT6g1OsH6A",
+            "url": "https://i.ytimg.com/vi/UUp97AwbYl8/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAMfsPNZVXH8WzV5ai8h9PBsccT8g",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/UUp97AwbYl8/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBfr5A15PU96co0T9VJEPMGVp12ng",
+            "url": "https://i.ytimg.com/vi/UUp97AwbYl8/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBFYg7Ka90TB9u8aFOONIzAQCtMrA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/UUp97AwbYl8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDnoNGpgU5tLVAJTsgJGPkzJkqeNQ",
+            "url": "https://i.ytimg.com/vi/UUp97AwbYl8/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAMiMSP5UzpiiWWdHwOgcH-3W-eyA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/UUp97AwbYl8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA5WQhLS6WoYYuUN-UaYNxAa72KCQ",
+            "url": "https://i.ytimg.com/vi/UUp97AwbYl8/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCUhrCiSoorzoj_Th_hvHPKeha_xw",
             "height": 188,
             "width": 336
           }
@@ -1450,50 +1626,6 @@ const CHANNEL_STATS = [
         "release_timestamp": null,
         "availability": null,
         "view_count": 48000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "tP37hSs10Io",
-        "url": "https://www.youtube.com/watch?v=tP37hSs10Io",
-        "title": "Visual Poems | The Stream Carries Away the Summer Heat | Living Oil Paintings",
-        "description": null,
-        "duration": 210,
-        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
-        "channel": "Muse Visual Art",
-        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-        "uploader": "Muse Visual Art",
-        "uploader_id": "@Muse_AI_Art",
-        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/tP37hSs10Io/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDAT45NDh6EbiId9ASbklDrmPkJKQ",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/tP37hSs10Io/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCmEKh9Mv1ZYDC1Xb-0-7UrZGoHmA",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/tP37hSs10Io/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCtbbxZ2CrGH5aggCXdboJxZZ98fA",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/tP37hSs10Io/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCKJwZG2VZuZ5Zgsslsqe9yXdbVfA",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 41000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -1514,22 +1646,66 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/0ADdYoYZIqg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB4DrvaLto7taxfAIpzXwCs8tDSOg",
+            "url": "https://i.ytimg.com/vi/0ADdYoYZIqg/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDurj0MzgQcaGRAZUWEWXr2_cnOYw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/0ADdYoYZIqg/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAvdullXR3naJMs0iW8Rzxbhns94A",
+            "url": "https://i.ytimg.com/vi/0ADdYoYZIqg/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCxC7GdVgTBnfJZJtADcA85T3uAMw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/0ADdYoYZIqg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC2nnWuEJN16iPvqHOXmxwBsY__rg",
+            "url": "https://i.ytimg.com/vi/0ADdYoYZIqg/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBpsmgHS3Hot-LUC6rm1qAY_PjyZQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/0ADdYoYZIqg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAkglNIm8oqqJJhyt3aTQmYPU4tIQ",
+            "url": "https://i.ytimg.com/vi/0ADdYoYZIqg/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBrtfz_WDUXnFdVFGaNcYnOzUZb4g",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 41000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "tP37hSs10Io",
+        "url": "https://www.youtube.com/watch?v=tP37hSs10Io",
+        "title": "Visual Poems | The Stream Carries Away the Summer Heat | Living Oil Paintings",
+        "description": null,
+        "duration": 210,
+        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
+        "channel": "Muse Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+        "uploader": "Muse Visual Art",
+        "uploader_id": "@Muse_AI_Art",
+        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/tP37hSs10Io/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDnFHcF2Vi6PDj73PA5brypJpbQlQ",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/tP37hSs10Io/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBxruwan3vFPzwZqfXg7rUySqku9g",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/tP37hSs10Io/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB0-o2wqKk41bjDz688l5tgf1c1vg",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/tP37hSs10Io/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDWiiW_TtuoMvmyPGv9Ykn09E5Kdg",
             "height": 188,
             "width": 336
           }
@@ -1558,22 +1734,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/I2dt7XlcWHM/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAKbuB1GzjHivE_m6nl5YoRYyWJog",
+            "url": "https://i.ytimg.com/vi/I2dt7XlcWHM/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBQGsPQf_HeIHiZghk1i3-m5XckZA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/I2dt7XlcWHM/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC04RP-Czf_gti8k7zMCgHmnpDJew",
+            "url": "https://i.ytimg.com/vi/I2dt7XlcWHM/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCypjP16Oi9oCJ_TchK3f9yLIPFtg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/I2dt7XlcWHM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA4iKuaFmq3q_YwNRkgjnIzjkggGw",
+            "url": "https://i.ytimg.com/vi/I2dt7XlcWHM/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBXuUMxccRZ58O9q_Kq8TrWIeEJcg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/I2dt7XlcWHM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAk0sozREd5VeRnk_yr7MylMngwMw",
+            "url": "https://i.ytimg.com/vi/I2dt7XlcWHM/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBnbN2kKfST1x_5erR54ZqbVkgVJQ",
             "height": 188,
             "width": 336
           }
@@ -1602,22 +1778,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/fhKXyihwy24/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDuA2xM76gwam6xUV96djuhUP54Qw",
+            "url": "https://i.ytimg.com/vi/fhKXyihwy24/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBSMCLfSBFbr3G9Gf60dxpEJbuhFQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/fhKXyihwy24/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBLEvXnePfeYDBelUbBnLVpNODjow",
+            "url": "https://i.ytimg.com/vi/fhKXyihwy24/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAMV-BNyAexsrHS8Z98rbJArTzhDw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/fhKXyihwy24/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD8ILZ-4CfM4GdJKT2rha5Cd7as7w",
+            "url": "https://i.ytimg.com/vi/fhKXyihwy24/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBn5sFCqh4WpBFgmnw22svIT4JqOg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/fhKXyihwy24/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCZfNkkleQAZrzSG_XbYoAMG8HXvw",
+            "url": "https://i.ytimg.com/vi/fhKXyihwy24/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBa7gq8RVN59lJODVGe03jNYPhz4Q",
             "height": 188,
             "width": 336
           }
@@ -1646,22 +1822,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/1jaEEos2Moc/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCCIt_0DuJjiZro-eeOpBH7o0XqMA",
+            "url": "https://i.ytimg.com/vi/1jaEEos2Moc/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLATMzcmYKVZAzjtnlm4TuJapbw_MA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/1jaEEos2Moc/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBJBWjI1DQOfvC9bcK_hUGvmZ6QSQ",
+            "url": "https://i.ytimg.com/vi/1jaEEos2Moc/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBgaAnHnpJCmKtHmoFfMn8tZcyE2w",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/1jaEEos2Moc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDnCeAFiLbS9qdbAnTeJNrl4jaFVQ",
+            "url": "https://i.ytimg.com/vi/1jaEEos2Moc/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB9cbpKZ8moOIkBko9xzvzNKJShUw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/1jaEEos2Moc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA2bWsO0qGuvAQZD9HFiNWkAh_tMw",
+            "url": "https://i.ytimg.com/vi/1jaEEos2Moc/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBe_l1Wu4-nqYw3oFhiS6Zl9SXCpQ",
             "height": 188,
             "width": 336
           }
@@ -1690,22 +1866,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/0wPmoFYmLyA/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB9Kvwzz0AClAAZMgytg9rF89EAvA",
+            "url": "https://i.ytimg.com/vi/0wPmoFYmLyA/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCGpieXNxJNcWGBMnPP-CrSPydbAA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/0wPmoFYmLyA/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC8t87hjnJCAY2PUZQ7FQHN3j_B2Q",
+            "url": "https://i.ytimg.com/vi/0wPmoFYmLyA/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDzJIqHRj3PrUG6eI2JYY1OJoXlEA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/0wPmoFYmLyA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCp7CjSdggz_-ExyNyVu0Nx4CvKCQ",
+            "url": "https://i.ytimg.com/vi/0wPmoFYmLyA/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDEJ9AUg2QUF1NcnTtWkbCd6hl51Q",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/0wPmoFYmLyA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBlOGoGR9oG9SFGZImrYwb1FV9z2Q",
+            "url": "https://i.ytimg.com/vi/0wPmoFYmLyA/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDjse7XHazbr30Q3V80913kMvcTjQ",
             "height": 188,
             "width": 336
           }
@@ -1734,22 +1910,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/y2qq6rdVTxg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCvTMUCI-koKrpUDFoGCiSYie3H-w",
+            "url": "https://i.ytimg.com/vi/y2qq6rdVTxg/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLB_u7Qgq-dJptPtB6DwhkGKOMJTxg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/y2qq6rdVTxg/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDUSgk7v_yCSPA9inw6kY4kfl0m1w",
+            "url": "https://i.ytimg.com/vi/y2qq6rdVTxg/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA3UJvpNzTZd54hSpKUduHc8suAbw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/y2qq6rdVTxg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBKGxlWaDsizolyvAFOiZ7DCNMi7g",
+            "url": "https://i.ytimg.com/vi/y2qq6rdVTxg/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBgJ-rEjoy1ibX074ttxV0Ka14IcA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/y2qq6rdVTxg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBd8qQ6xpEKw7brgAarxjvC_3HJZw",
+            "url": "https://i.ytimg.com/vi/y2qq6rdVTxg/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLA0j_-XwS1TRdCxeB2yYQMEzZkl4Q",
             "height": 188,
             "width": 336
           }
@@ -1778,22 +1954,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/FAnpNHcWxAw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAoDvOJ5CHNwc8M0dUNWMZ8W96F2w",
+            "url": "https://i.ytimg.com/vi/FAnpNHcWxAw/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBe-ch5f5ivdicj1AsTwqzXdkQqJw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/FAnpNHcWxAw/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDmDRiMXanryT_1IXqxIx636ZuoLA",
+            "url": "https://i.ytimg.com/vi/FAnpNHcWxAw/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDAE34EVQlG0NItr3jTo8GXKeBK3Q",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/FAnpNHcWxAw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBHSdTkWvkO1wOgGQb0VyRrK2TkVw",
+            "url": "https://i.ytimg.com/vi/FAnpNHcWxAw/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB9T2wfARdGCYHyV-TspJZYBeb6sA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/FAnpNHcWxAw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC1cJOKaWykeov-nvQFpJVM2ix4Ig",
+            "url": "https://i.ytimg.com/vi/FAnpNHcWxAw/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDa2VYpOuc7yfPm_PZsr1n866sIVA",
             "height": 188,
             "width": 336
           }
@@ -1802,6 +1978,50 @@ const CHANNEL_STATS = [
         "release_timestamp": null,
         "availability": null,
         "view_count": 32000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "8DoY7OKZ_eA",
+        "url": "https://www.youtube.com/watch?v=8DoY7OKZ_eA",
+        "title": "Visual Poems | Floating Shadows in the Reeds | Living Oil Paintings",
+        "description": null,
+        "duration": 260,
+        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
+        "channel": "Muse Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+        "uploader": "Muse Visual Art",
+        "uploader_id": "@Muse_AI_Art",
+        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/8DoY7OKZ_eA/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCZVyLVWG8SZJkCX_oKXozBmX3I4w",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/8DoY7OKZ_eA/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAHlXKyEvzUJWEOW_Yt6Qh6Y0W2vA",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/8DoY7OKZ_eA/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBkx-g51Qs1iNwVcDouISgNj-TkXQ",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/8DoY7OKZ_eA/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCbClIdVtDPzQZHwV82Oe3j84lYUg",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 31000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -1822,22 +2042,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/gwrPKwZ01fc/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCIv8EOi7IVb9ekZCOkg8KNXAayAQ",
+            "url": "https://i.ytimg.com/vi/gwrPKwZ01fc/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBQ7FpompyAMr6ghhOPDde5Q1w66Q",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/gwrPKwZ01fc/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDa_lmMiLrEPmXVTv7V3BkChH_eKw",
+            "url": "https://i.ytimg.com/vi/gwrPKwZ01fc/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA7SLcRob1CABSNxN2hz6o3wJ_wAw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/gwrPKwZ01fc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLARB6JB5QpYW6_dDdybptD4Yb_Z7w",
+            "url": "https://i.ytimg.com/vi/gwrPKwZ01fc/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAaysgmT9VwEEgDeIVpeWb-dkarog",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/gwrPKwZ01fc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBa8JoMp0S_Vxy7o1muqDnA4v4NeA",
+            "url": "https://i.ytimg.com/vi/gwrPKwZ01fc/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCFemXv_8pCukj7R7Wd_7oVXoxERg",
             "height": 188,
             "width": 336
           }
@@ -1846,50 +2066,6 @@ const CHANNEL_STATS = [
         "release_timestamp": null,
         "availability": null,
         "view_count": 31000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "_HUYiFugH4A",
-        "url": "https://www.youtube.com/watch?v=_HUYiFugH4A",
-        "title": "Visual Poems | Claude Monet | Four seasons of the Japanese Bridge",
-        "description": null,
-        "duration": 222,
-        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
-        "channel": "Muse Visual Art",
-        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-        "uploader": "Muse Visual Art",
-        "uploader_id": "@Muse_AI_Art",
-        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/_HUYiFugH4A/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCF30TO9YAs0yssrq9jQciqJf8b4g",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/_HUYiFugH4A/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCpsGkLRkm_BCS-0Wg5Moa5M_Avww",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/_HUYiFugH4A/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDv0s83Zxr1UHTwQ7CEmMuKkM1zMQ",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/_HUYiFugH4A/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDt7nu910DZifBQZiNc5tf2fSnGzw",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 28000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -1910,22 +2086,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/uSNByH7eer8/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCq4-hIlUukMKxJb2UiFyAs5RNwUg",
+            "url": "https://i.ytimg.com/vi/uSNByH7eer8/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDN8LMw6txoOI_HloZp3d2ZFPWfUQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/uSNByH7eer8/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAHWRrAMpkmC4UHJW0c4mqBgObGWA",
+            "url": "https://i.ytimg.com/vi/uSNByH7eer8/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAqVEgsSwvCPLco1-Z1SdUvT0ZggQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/uSNByH7eer8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBszgc-PxnLJCf1JoEcC4wiLEXrvg",
+            "url": "https://i.ytimg.com/vi/uSNByH7eer8/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLALVYuV9YwphKyXOo-pWPsHRiXuZw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/uSNByH7eer8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD5q48RQSBY9eeQcWBQpMZnJXIKhg",
+            "url": "https://i.ytimg.com/vi/uSNByH7eer8/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDGFw2oqXOAWP38WzFKmlHnGQoLVw",
             "height": 188,
             "width": 336
           }
@@ -1954,22 +2130,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/Qp-nsEID1Mg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBcVF4bwIjP_pAjFXAU6YYpXLUkGw",
+            "url": "https://i.ytimg.com/vi/Qp-nsEID1Mg/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLB1sjQYw0exxJqyBwvYYqiyAEtKdg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/Qp-nsEID1Mg/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDZs96O4s5ZEDLUsk7LgICpzZqqbg",
+            "url": "https://i.ytimg.com/vi/Qp-nsEID1Mg/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDu4dOulNx2-p6gw7SEz-zbSLhPAQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/Qp-nsEID1Mg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDEgevOU5-DGJwkcFTBaOP400KJbA",
+            "url": "https://i.ytimg.com/vi/Qp-nsEID1Mg/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBcBed4owBo2I-JHcL66kfjq5r7kA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/Qp-nsEID1Mg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD7nv6wITU_Vy9cQycW9v0JsBer-g",
+            "url": "https://i.ytimg.com/vi/Qp-nsEID1Mg/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAePZFkeM1pkltqg6KboXLJw04Nqw",
             "height": 188,
             "width": 336
           }
@@ -1978,6 +2154,94 @@ const CHANNEL_STATS = [
         "release_timestamp": null,
         "availability": null,
         "view_count": 28000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "_HUYiFugH4A",
+        "url": "https://www.youtube.com/watch?v=_HUYiFugH4A",
+        "title": "Visual Poems | Claude Monet | Four seasons of the Japanese Bridge",
+        "description": null,
+        "duration": 222,
+        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
+        "channel": "Muse Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+        "uploader": "Muse Visual Art",
+        "uploader_id": "@Muse_AI_Art",
+        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/_HUYiFugH4A/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA5L0BX3iYix6huRqXl3f5crs-JfA",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/_HUYiFugH4A/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBpXv_9WOLhhURlpeuWCSJevURkrw",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/_HUYiFugH4A/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCPvq-jl-yATEwdX7lJep9gkQ-1aQ",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/_HUYiFugH4A/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAuLph0qQ2_pyQQXBgVpOGlxhqRIg",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 28000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "Et2jSjaNy7M",
+        "url": "https://www.youtube.com/watch?v=Et2jSjaNy7M",
+        "title": "Visual Poems | A Quiet Village After the Rain | Living Oil Paintings",
+        "description": null,
+        "duration": 202,
+        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
+        "channel": "Muse Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+        "uploader": "Muse Visual Art",
+        "uploader_id": "@Muse_AI_Art",
+        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/Et2jSjaNy7M/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAHHtNp0E0kAq6syNbMWicK_U4Dzw",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/Et2jSjaNy7M/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCSduh5crTXodA0WbA9MYXk-fAxLQ",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/Et2jSjaNy7M/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAt8OnNwizB_FFGk21jD0x0U2T1Vg",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/Et2jSjaNy7M/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCCCzXGTBTUzBpyk_rJhvGPmP--Dw",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 26000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -1998,22 +2262,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/r_ZaXKUuXMc/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCaeQ8vgRKU6AYdjxZkJFjcmxUVjA",
+            "url": "https://i.ytimg.com/vi/r_ZaXKUuXMc/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDFeR7GT_oJT5O6mQHb1yiGG-wMYw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/r_ZaXKUuXMc/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBkJhXp6390bPlTc-R3R5Ou2ILeBg",
+            "url": "https://i.ytimg.com/vi/r_ZaXKUuXMc/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLC-i77CsJR2eXIYLhlHN1G_OZP13A",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/r_ZaXKUuXMc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBsbAtc9Ybbf4VGs5MpsfPc9VWlog",
+            "url": "https://i.ytimg.com/vi/r_ZaXKUuXMc/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCNips5Nm5k3nHkoIAvsoe03VAv2A",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/r_ZaXKUuXMc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDAMG62I0bs4_V8sRzK5XzSBuodJg",
+            "url": "https://i.ytimg.com/vi/r_ZaXKUuXMc/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDoRSfh4k0t8oZHI5LkZaR6MjGQ-Q",
             "height": 188,
             "width": 336
           }
@@ -2042,22 +2306,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/srsiIWbB1sU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDXH_ZCfM-3KSgQJZhTZ-Y22vE2sg",
+            "url": "https://i.ytimg.com/vi/srsiIWbB1sU/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCQVxIT3aGjE4t7BdLO5hDVlENf0Q",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/srsiIWbB1sU/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBIT5RJuobU6rrwAgQqyZFpAhsg1Q",
+            "url": "https://i.ytimg.com/vi/srsiIWbB1sU/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA-RaoINmrKCRJS5VoOXrVUNZXtFw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/srsiIWbB1sU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC23Bdj8j0OLff_oTJrxijsGEFfQA",
+            "url": "https://i.ytimg.com/vi/srsiIWbB1sU/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBREACa_0Ph9VvIhqi3uUd4yBpfRw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/srsiIWbB1sU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD5JrKOlUr2OGiikA4-ULX9A57SzA",
+            "url": "https://i.ytimg.com/vi/srsiIWbB1sU/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLA1X7zpvm9ieIjxc8mA5b2qTmYUzA",
             "height": 188,
             "width": 336
           }
@@ -2086,22 +2350,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/smlzmKwRXBM/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBk_XiqKq0IHvfSMfoy8iA1PgDGZQ",
+            "url": "https://i.ytimg.com/vi/smlzmKwRXBM/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBSlcgbC9GDwOTh_e3qewKc4zWlBQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/smlzmKwRXBM/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCkivnfyU_hvuZ-MIZijj4Fd43XvA",
+            "url": "https://i.ytimg.com/vi/smlzmKwRXBM/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBz6f7NFQMG7NNaYJVog1gRVMl1qw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/smlzmKwRXBM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC1F84KgMdu41dzR5sAG0rOj7etQA",
+            "url": "https://i.ytimg.com/vi/smlzmKwRXBM/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBnCPPzwsaSfpqtIbeOMmgkYs7cKQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/smlzmKwRXBM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCqPBR22X6-lYxYxY3JSshci8MgvQ",
+            "url": "https://i.ytimg.com/vi/smlzmKwRXBM/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLACF7Q8PSnGL9fBJhoA9Mt51H2w4w",
             "height": 188,
             "width": 336
           }
@@ -2130,22 +2394,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/RyoWkJ2r314/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAms4Z9-Qg_lAEesAJPwlC3gK1vWg",
+            "url": "https://i.ytimg.com/vi/RyoWkJ2r314/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCE-6OpXQ2FBvlJFm_wZCNgKvFzsA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/RyoWkJ2r314/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBspm8D2aA2ntNXuk0Lb_Y2-Jirsg",
+            "url": "https://i.ytimg.com/vi/RyoWkJ2r314/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCtglKhoIJbYy417cz6NZI8lno6og",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/RyoWkJ2r314/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBSbqfZXTcSO-bkKG72SfHUGUiWAA",
+            "url": "https://i.ytimg.com/vi/RyoWkJ2r314/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB-Dj5xGIlTaFLRFHgX5oXYg6TAog",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/RyoWkJ2r314/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCkC7zX4sJa3Di13v3JXWYD_2qncw",
+            "url": "https://i.ytimg.com/vi/RyoWkJ2r314/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCrFviGn2VynduqKs-rPfHmX3eXeA",
             "height": 188,
             "width": 336
           }
@@ -2174,22 +2438,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/LTfNIXenqjY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAndwkbdGe9UsqAXX_e37qD649Yew",
+            "url": "https://i.ytimg.com/vi/LTfNIXenqjY/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAVBjkIDveDPCoe7cg-GZNyAZwalA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/LTfNIXenqjY/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDlKmpjVI-dFMyDuvWg_rZhBrOq5Q",
+            "url": "https://i.ytimg.com/vi/LTfNIXenqjY/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCyvR1ULVtkIgFGwOJ9cqoyXhqIqA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/LTfNIXenqjY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDO_IOha1zlmLtCf1vO92iT4LlL7Q",
+            "url": "https://i.ytimg.com/vi/LTfNIXenqjY/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBmVmrqwXGa2IyrcLT_ggeh30Y7EQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/LTfNIXenqjY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB50cq2c69cL-vwf9pjWm0O8diZKA",
+            "url": "https://i.ytimg.com/vi/LTfNIXenqjY/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLA7ct1N7ojdwydfEAkNDSO--ZaygQ",
             "height": 188,
             "width": 336
           }
@@ -2218,22 +2482,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/mTi-O-vmJYI/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBgY9JGp-evVrewtYPJR3ohFhhVaQ",
+            "url": "https://i.ytimg.com/vi/mTi-O-vmJYI/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAgcxHQICxa2rtp4NQJPKk74_M6yA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/mTi-O-vmJYI/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC2aeYwlD2lAUFbhICw6xTdDhGWRQ",
+            "url": "https://i.ytimg.com/vi/mTi-O-vmJYI/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDGs2ZKE4A0L5U-D7B54w8VjZd7DQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/mTi-O-vmJYI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD_y2MVXCJRpKYy0n6fg9Q5nCwq2Q",
+            "url": "https://i.ytimg.com/vi/mTi-O-vmJYI/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB9Tk8g8Ds0I-XDB_u1xBRKin7k4g",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/mTi-O-vmJYI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBE2SxJGShmy_-6wlGQtoLl2OR9ow",
+            "url": "https://i.ytimg.com/vi/mTi-O-vmJYI/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCzRIq0plYd5oeuA8nazGmMqnMVXA",
             "height": 188,
             "width": 336
           }
@@ -2242,50 +2506,6 @@ const CHANNEL_STATS = [
         "release_timestamp": null,
         "availability": null,
         "view_count": 18000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "JWrfLhlSfzA",
-        "url": "https://www.youtube.com/watch?v=JWrfLhlSfzA",
-        "title": "Visual Poems | Whispers of the Forget-Me-Not by the Brook | Living Oil Paintings",
-        "description": null,
-        "duration": 239,
-        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
-        "channel": "Muse Visual Art",
-        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-        "uploader": "Muse Visual Art",
-        "uploader_id": "@Muse_AI_Art",
-        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/JWrfLhlSfzA/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDQW2M1vycvOYygmcLQ1Zcu5GA7qQ",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/JWrfLhlSfzA/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLADoMbLdCTwwT5cL1J2F6mBYPRnTw",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/JWrfLhlSfzA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCQfDNzf1JqbEIHmBFgSxSxFIwSgA",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/JWrfLhlSfzA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD0A8x8pt_l8wCP79Rh5ZXtxZv_ww",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 16000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -2306,22 +2526,66 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/DEBpPMu4w20/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDqC70vlyLGOCIwmAUNzxBQ3g7T9A",
+            "url": "https://i.ytimg.com/vi/DEBpPMu4w20/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLChxShqzi6Wjmsz_OCKGSfhFxtJdA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/DEBpPMu4w20/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLByPka4gH-KTAnZYjuF_UdcNK-b6A",
+            "url": "https://i.ytimg.com/vi/DEBpPMu4w20/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDEJ1opYjpSupiz2w2OhUGrMstIRA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/DEBpPMu4w20/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBO8_OIbrsY9u1SwOwvFNQtW5OeiQ",
+            "url": "https://i.ytimg.com/vi/DEBpPMu4w20/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDCG20wjSw2jeLfrg72B_QjD0wTfg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/DEBpPMu4w20/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAvAn91mMwoslB2JdQ0wA5vAtxASA",
+            "url": "https://i.ytimg.com/vi/DEBpPMu4w20/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCZXaElXNaAQ-GOL8xjG-QS4GT45w",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 16000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "JWrfLhlSfzA",
+        "url": "https://www.youtube.com/watch?v=JWrfLhlSfzA",
+        "title": "Visual Poems | Whispers of the Forget-Me-Not by the Brook | Living Oil Paintings",
+        "description": null,
+        "duration": 239,
+        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
+        "channel": "Muse Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+        "uploader": "Muse Visual Art",
+        "uploader_id": "@Muse_AI_Art",
+        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/JWrfLhlSfzA/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLC5l-nNGJA-X4IdOiCapY_RWUi4NQ",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/JWrfLhlSfzA/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAKhLOYgZEGT0Mkd3178fBOLqTupg",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/JWrfLhlSfzA/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDZ0vitriJ1cZjRY_JfdWRPjBa5LQ",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/JWrfLhlSfzA/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAEkdIklYBbwNUo32WqzNFNHOTn_Q",
             "height": 188,
             "width": 336
           }
@@ -2350,22 +2614,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/a4KibWHOOww/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDu86DdOj6UGReASwPXBEFAwrd53w",
+            "url": "https://i.ytimg.com/vi/a4KibWHOOww/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAqupo18t6YCIH--1b6iOKslLg3GA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/a4KibWHOOww/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDbHGsoRFGNhHNPQzvtjnuWbfTVag",
+            "url": "https://i.ytimg.com/vi/a4KibWHOOww/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDlRDAdotog0GYjgBXeC1IgeqApBA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/a4KibWHOOww/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCgEf8JBNVGO1Qg0e7AeuLFKLxOlA",
+            "url": "https://i.ytimg.com/vi/a4KibWHOOww/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAFh52oPwsjWcI1iZrhT_I3PgrnnQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/a4KibWHOOww/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCduu7mN7mJzKsB_htL03xPLYOMaQ",
+            "url": "https://i.ytimg.com/vi/a4KibWHOOww/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCRW-JjQYeT67Ga92W6LAaZqsfZHQ",
             "height": 188,
             "width": 336
           }
@@ -2394,22 +2658,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/QaDuXmZMXWc/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBjFwct_pnzDuU429EEmCnbMjQdEw",
+            "url": "https://i.ytimg.com/vi/QaDuXmZMXWc/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCYbXGplEYzj1r436y1XbMeTFINOw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/QaDuXmZMXWc/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAjVrPvkthul7SVhdPkutvsvoPGyw",
+            "url": "https://i.ytimg.com/vi/QaDuXmZMXWc/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCG5_L-L-PwIsJy5Q7Gcjt_3SAm_Q",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/QaDuXmZMXWc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD6zhnJ4Tj0KdLmW3LNfo1EbrlkDQ",
+            "url": "https://i.ytimg.com/vi/QaDuXmZMXWc/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLD48B8n9naB2HGDWzEbPsKDc5nszw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/QaDuXmZMXWc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB6uY3ZWcgG_qW1qioP00ZmITW82A",
+            "url": "https://i.ytimg.com/vi/QaDuXmZMXWc/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDJlkQrZb_Mf3cCPgGraalNJFEOGA",
             "height": 188,
             "width": 336
           }
@@ -2438,198 +2702,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/WrkiT2xR8Gw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAy_VLY5em5KS73UkRNXmRPTz620A",
+            "url": "https://i.ytimg.com/vi/WrkiT2xR8Gw/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLD3gH4igNvrp0rggauD0VQGK3gf4w",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/WrkiT2xR8Gw/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA2t0hAtYzXCwLv-x9SxjgjMbysiw",
+            "url": "https://i.ytimg.com/vi/WrkiT2xR8Gw/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBVCJgQ0dqUy4De4puC__0NNSPz0Q",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/WrkiT2xR8Gw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCAN7aur_f026fh57imChacAZuC0A",
+            "url": "https://i.ytimg.com/vi/WrkiT2xR8Gw/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDt1g6bK2Gxs32-229__vbLC26Yhg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/WrkiT2xR8Gw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCIW7pF-c7hDb9esNkGZJpRQpjJGw",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 11000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "jWlxfU71NXI",
-        "url": "https://www.youtube.com/watch?v=jWlxfU71NXI",
-        "title": "Visual Poems | Between Bloom and Fade | Living Oil Paintings",
-        "description": null,
-        "duration": 210,
-        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
-        "channel": "Muse Visual Art",
-        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-        "uploader": "Muse Visual Art",
-        "uploader_id": "@Muse_AI_Art",
-        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/jWlxfU71NXI/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCnEnA_ST_QKClwi3P0tF31RzlJuQ",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/jWlxfU71NXI/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCgswEsJ-a89TmBkexkw2OZ38-ZqA",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/jWlxfU71NXI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAA1CYA_Lv4LXtjkJ4A9WzJqH1pGA",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/jWlxfU71NXI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAe0wIL66w3pi4DwOR_Mdcjq9zKbw",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 11000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "FRHDbIlwNXo",
-        "url": "https://www.youtube.com/watch?v=FRHDbIlwNXo",
-        "title": "Visual Poems | Afterglow by the Lake | Living Oil Paintings",
-        "description": null,
-        "duration": 203,
-        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
-        "channel": "Muse Visual Art",
-        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-        "uploader": "Muse Visual Art",
-        "uploader_id": "@Muse_AI_Art",
-        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/FRHDbIlwNXo/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBBtxI6ts32lqMJkxuef2RWIvfMAQ",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/FRHDbIlwNXo/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBpQTYGuMLRZyRFi5W8QWP4T7C_6Q",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/FRHDbIlwNXo/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDT6ErfoajbTl2aTPqMTu45iJFqPA",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/FRHDbIlwNXo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCV_U9gbfwqBgVD158eA4tHdW6aBw",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 11000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "Gxziid-_SvA",
-        "url": "https://www.youtube.com/watch?v=Gxziid-_SvA",
-        "title": "Visual Poems | The Farm Deep in the Blossoms | Living Oil Paintings",
-        "description": null,
-        "duration": 208,
-        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
-        "channel": "Muse Visual Art",
-        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-        "uploader": "Muse Visual Art",
-        "uploader_id": "@Muse_AI_Art",
-        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/Gxziid-_SvA/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDXu0T5e7eHLuCXPNUVWNkLkJ4ZhQ",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/Gxziid-_SvA/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAR5AJzp3aA0ynDVcGlZzB43fcg_g",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/Gxziid-_SvA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDXH3KmwzqXhgHba875fScyNNanZQ",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/Gxziid-_SvA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD1hQphX61LoX0EzFU-f_clZc_nxA",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 11000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "mojInAa9s8o",
-        "url": "https://www.youtube.com/watch?v=mojInAa9s8o",
-        "title": "Visual Poems | The Impressionist Countryside | Living Oil Paintings",
-        "description": null,
-        "duration": 200,
-        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
-        "channel": "Muse Visual Art",
-        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-        "uploader": "Muse Visual Art",
-        "uploader_id": "@Muse_AI_Art",
-        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/mojInAa9s8o/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDYbx3vmnLNCK8gfETR73hX8ahGYA",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/mojInAa9s8o/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCp-CZNDPQHdMflz2P1l_jDzuOfGQ",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/mojInAa9s8o/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBjJjWfKKzkbsl0ccbcym1GRX9qVQ",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/mojInAa9s8o/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCkKDAO2ihIv_vWLiS57UIoFJghqg",
+            "url": "https://i.ytimg.com/vi/WrkiT2xR8Gw/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCtmbdCYBTYMFBS2riVZZQyprd3Ug",
             "height": 188,
             "width": 336
           }
@@ -2658,22 +2746,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/3jIhJIeCC70/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDkkVZewMboXAmltvr9_dezjvIUQQ",
+            "url": "https://i.ytimg.com/vi/3jIhJIeCC70/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAcMt7MoxJcmyjUMFGdIYOvqpNsaw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/3jIhJIeCC70/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCKe6FljGB4dlmIGM-qkAbSot5E-A",
+            "url": "https://i.ytimg.com/vi/3jIhJIeCC70/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDQ4nq964qinEGdTN8REKlNPl-raw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/3jIhJIeCC70/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCiY3tySlg3auTqwHRZGjYdWkn4Kw",
+            "url": "https://i.ytimg.com/vi/3jIhJIeCC70/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDc-Cjf-0VvwZbhliubnx4ddeJxQg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/3jIhJIeCC70/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBRmHKPhjJPFTbSJ_Jm-poy6xysug",
+            "url": "https://i.ytimg.com/vi/3jIhJIeCC70/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAZ60_sEVAMFfw0hc0S0WE3a2bzXA",
             "height": 188,
             "width": 336
           }
@@ -2682,6 +2770,226 @@ const CHANNEL_STATS = [
         "release_timestamp": null,
         "availability": null,
         "view_count": 11000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "mojInAa9s8o",
+        "url": "https://www.youtube.com/watch?v=mojInAa9s8o",
+        "title": "Visual Poems | The Impressionist Countryside | Living Oil Paintings",
+        "description": null,
+        "duration": 200,
+        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
+        "channel": "Muse Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+        "uploader": "Muse Visual Art",
+        "uploader_id": "@Muse_AI_Art",
+        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/mojInAa9s8o/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA9hfKEQDTpCVlHAvFrchPUC-FCsg",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/mojInAa9s8o/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBKAMiBBkdJD9zdxsn5bDmwY5gZkw",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/mojInAa9s8o/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLD3ivdpykS8a9xh-KEIqkjLItxIYA",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/mojInAa9s8o/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB-rlG6XJ26b4wsuZ1hU2GgS8q1yA",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 11000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "Gxziid-_SvA",
+        "url": "https://www.youtube.com/watch?v=Gxziid-_SvA",
+        "title": "Visual Poems | The Farm Deep in the Blossoms | Living Oil Paintings",
+        "description": null,
+        "duration": 208,
+        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
+        "channel": "Muse Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+        "uploader": "Muse Visual Art",
+        "uploader_id": "@Muse_AI_Art",
+        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/Gxziid-_SvA/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBg_v1NVax217zEOei3xiPuBWKRvg",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/Gxziid-_SvA/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLC5YKI4nLE_oQF0FX2mmKRURopiiQ",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/Gxziid-_SvA/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAbHgxrRjPgeFhBq94MjIm3VfW-GQ",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/Gxziid-_SvA/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDPV2VQGBB-DHvujwWtZHJTg4EzUw",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 11000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "FRHDbIlwNXo",
+        "url": "https://www.youtube.com/watch?v=FRHDbIlwNXo",
+        "title": "Visual Poems | Afterglow by the Lake | Living Oil Paintings",
+        "description": null,
+        "duration": 203,
+        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
+        "channel": "Muse Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+        "uploader": "Muse Visual Art",
+        "uploader_id": "@Muse_AI_Art",
+        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/FRHDbIlwNXo/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCH12GUEAlKV--Zny71WyzO3AMFhw",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/FRHDbIlwNXo/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCwL8jHQVrJRujgxRAxLPI-gikQTg",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/FRHDbIlwNXo/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB8jlT383KsKerUYkqo88f_JONDvg",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/FRHDbIlwNXo/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB_Ktjszd5gJN_qmNHUSlM5sEoXcQ",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 11000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "jWlxfU71NXI",
+        "url": "https://www.youtube.com/watch?v=jWlxfU71NXI",
+        "title": "Visual Poems | Between Bloom and Fade | Living Oil Paintings",
+        "description": null,
+        "duration": 210,
+        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
+        "channel": "Muse Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+        "uploader": "Muse Visual Art",
+        "uploader_id": "@Muse_AI_Art",
+        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/jWlxfU71NXI/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBQQSO6XuoqBMWaYzviH3SuEh0iBg",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/jWlxfU71NXI/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLB0cRmJNjySD_5LPEBgQlthh07s5A",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/jWlxfU71NXI/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAhE6CZzf-Ptve3Z_fxyAcxdJeYUg",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/jWlxfU71NXI/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBpMn3uBDZ0mRf3BbXngz-CRaKD-g",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 11000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "8SWvmB2_AN8",
+        "url": "https://www.youtube.com/watch?v=8SWvmB2_AN8",
+        "title": "Visual Poems | Chamomile Fields in Summer | Living Oil Paintings",
+        "description": null,
+        "duration": 200,
+        "channel_id": "UC0OfM-PGrJgi_cSBwI0-nGg",
+        "channel": "Muse Visual Art",
+        "channel_url": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+        "uploader": "Muse Visual Art",
+        "uploader_id": "@Muse_AI_Art",
+        "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/8SWvmB2_AN8/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLD16Lm6kh03J2zD8EDBgGyoGsgRMg",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/8SWvmB2_AN8/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLD-2OzsryUm0Kw1SkdoaksbJGiGMg",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/8SWvmB2_AN8/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCzpEcgxlRQRouxGUL-IbHMnTllvg",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/8SWvmB2_AN8/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAVYefQxBM5Iqf5mpVqmS3IudnLWQ",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 10000,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -2702,22 +3010,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/sNLWtm_pGNc/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC9OCUYTWynnSRpLBnyNkG-J431NQ",
+            "url": "https://i.ytimg.com/vi/sNLWtm_pGNc/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDTByc-z6_rH7UeDwtmqPn-1uKTcw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/sNLWtm_pGNc/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCr5elBSVlIJ502PONYzJWw2r2RMQ",
+            "url": "https://i.ytimg.com/vi/sNLWtm_pGNc/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCm_4wwBPJD4y-avsUN-dt7b54gaQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/sNLWtm_pGNc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCFIA-5lwfZ-7nuEcQeGyv-k4hBbA",
+            "url": "https://i.ytimg.com/vi/sNLWtm_pGNc/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCDbpkZjreGBpkf-y47rNXiFIFQNg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/sNLWtm_pGNc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBf5WY40uQsMPKCJfwUN3vtOfSY4A",
+            "url": "https://i.ytimg.com/vi/sNLWtm_pGNc/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDGKomkyIsUZoeiE5utIsqzEve9Xw",
             "height": 188,
             "width": 336
           }
@@ -2746,22 +3054,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/cvBgRP6N-fE/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGGUgZChDMA8=&rs=AOn4CLD9yTUpRt_dIKeXWdnYZs70j7HjHA",
+            "url": "https://i.ytimg.com/vi/cvBgRP6N-fE/hqdefault.jpg?sqp=-oaymwE5CKgBEF5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGGUgZChDMA-4AvcY&rs=AOn4CLBi3zgalppv6YcmYag_3JhbhRIhGw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/cvBgRP6N-fE/hqdefault.jpg?sqp=-oaymwE1CMQBEG5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGGUgZChDMA8=&rs=AOn4CLBSQMiUUYyP9RmQKlSZTtIzaJWtFw",
+            "url": "https://i.ytimg.com/vi/cvBgRP6N-fE/hqdefault.jpg?sqp=-oaymwE5CMQBEG5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGGUgZChDMA-4AvcY&rs=AOn4CLAOqhEXrZkJOP-rZN-fjKzA163GQw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/cvBgRP6N-fE/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhlIGQoQzAP&rs=AOn4CLBeX2zB1oEpSbsnDPIsGmWJpsI72w",
+            "url": "https://i.ytimg.com/vi/cvBgRP6N-fE/hqdefault.jpg?sqp=-oaymwE6CPYBEIoBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhlIGQoQzAPuAL3GA==&rs=AOn4CLB05Lrvm4G0a51GgJwxrBURjEVd5w",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/cvBgRP6N-fE/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhlIGQoQzAP&rs=AOn4CLCJT9Ay0hTK-K8Obzk46UNdPBmMUA",
+            "url": "https://i.ytimg.com/vi/cvBgRP6N-fE/hqdefault.jpg?sqp=-oaymwE6CNACELwBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhlIGQoQzAPuAL3GA==&rs=AOn4CLDkg6TJZGbW0qPUilvyX9ke7pWXcw",
             "height": 188,
             "width": 336
           }
@@ -2790,22 +3098,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/9bJ1zs1mU5U/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDx7AMisR71BnqbrjaOAB6UVrRj-Q",
+            "url": "https://i.ytimg.com/vi/9bJ1zs1mU5U/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLACXq7GPCS2WLZUj4kGI0Z3Gcsx6w",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/9bJ1zs1mU5U/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCGDuD7nDG90XEdHBQy00Nbvyh9AA",
+            "url": "https://i.ytimg.com/vi/9bJ1zs1mU5U/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCd2OSGwIYgSBLDAxdjLQSKUhslhA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/9bJ1zs1mU5U/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAWOI-lzx94EdhKgt8iSIJNIS2PMA",
+            "url": "https://i.ytimg.com/vi/9bJ1zs1mU5U/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDL_AywwE4HpXHQ5bHTZmx5NyTPYw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/9bJ1zs1mU5U/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAew1HDpQO-NjJ8AqhHleXAjgCFkw",
+            "url": "https://i.ytimg.com/vi/9bJ1zs1mU5U/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCuJPZQikDorbybn1oA0OZj-d8D_A",
             "height": 188,
             "width": 336
           }
@@ -2834,22 +3142,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/-haidoSkGtg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD15z_Kk2EcmyiZwaME3KCWaOn6dQ",
+            "url": "https://i.ytimg.com/vi/-haidoSkGtg/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDldPDOkb-d1C2WTbGEKWtqV8BxSw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/-haidoSkGtg/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAm98-6XTpmJsQkCxHTR437kW6GBA",
+            "url": "https://i.ytimg.com/vi/-haidoSkGtg/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBzHoNqzJk1men71uGHQAOeMEqe_A",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/-haidoSkGtg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDvYR15Z3AfTKydaIsyWjc8gHEF8g",
+            "url": "https://i.ytimg.com/vi/-haidoSkGtg/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB-X3tIBleU-BDL-W3RbNVnWxQI9A",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/-haidoSkGtg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDZmJBj-sEDnXtaUQXFk5iw-WNu8w",
+            "url": "https://i.ytimg.com/vi/-haidoSkGtg/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLC4EPSi8IyqX7Ny-ZHrzlyhvMIqzA",
             "height": 188,
             "width": 336
           }
@@ -2878,22 +3186,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/RKq496jXEn0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBCqXjW64HrizUgySRJsjoAiB-r1Q",
+            "url": "https://i.ytimg.com/vi/RKq496jXEn0/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA6b7LyY09bXmC69hQD3Pjsc7AdKQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/RKq496jXEn0/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAhLORmG3isbOkUlquMFohe_LWrMQ",
+            "url": "https://i.ytimg.com/vi/RKq496jXEn0/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLC-K-JqusUhT4ptVfW4dY4-SagKpA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/RKq496jXEn0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBFQ0VccIQlg3lVdL5goCY5eTS7zQ",
+            "url": "https://i.ytimg.com/vi/RKq496jXEn0/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDaBscwgI9kacl2hktJl8PZv1wMug",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/RKq496jXEn0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCvJQH1vae5WFj8dJCzLxX_1wyNqg",
+            "url": "https://i.ytimg.com/vi/RKq496jXEn0/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLA9zCQuiLahzqi53cs_x8xPoHnBAw",
             "height": 188,
             "width": 336
           }
@@ -2922,22 +3230,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/Nc8RnymSkXs/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAhF5gHkMtq7V1CH6cPjKmxYrMUeA",
+            "url": "https://i.ytimg.com/vi/Nc8RnymSkXs/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBGwa6pIxpbKb-sGQDFFY6HHoipmw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/Nc8RnymSkXs/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD5r3fLxV6KhTcXTehuTFnc694x7g",
+            "url": "https://i.ytimg.com/vi/Nc8RnymSkXs/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBV3bhMtAEaEy4WLEqyAs0sB0kOaQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/Nc8RnymSkXs/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLABv2AHFoucAX35bP5dQ4f1xheUoQ",
+            "url": "https://i.ytimg.com/vi/Nc8RnymSkXs/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLC75lmTC1cXw-gDV8NYuy_6um6xrg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/Nc8RnymSkXs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBdxDL1vEa7-VIm2V-S5kV31UhNng",
+            "url": "https://i.ytimg.com/vi/Nc8RnymSkXs/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAxVWFR9GmeY1AdZ7MGZ7haUm9kjQ",
             "height": 188,
             "width": 336
           }
@@ -2966,22 +3274,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/ZqP1sJfO5Vg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA92MZ-p0CyxCbw5SQiwmusTKQ4-A",
+            "url": "https://i.ytimg.com/vi/ZqP1sJfO5Vg/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDGF7wSSiPEv-F9hEuMav2_dEvOxg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/ZqP1sJfO5Vg/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAg0ZZhxzT9hOkXn4LT-jsee3fqzQ",
+            "url": "https://i.ytimg.com/vi/ZqP1sJfO5Vg/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBub5rllIAJd-CKmQ-eZrYUDNm37Q",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/ZqP1sJfO5Vg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDkIqeQAd9drYYvcnLYFOgQ3M1kJA",
+            "url": "https://i.ytimg.com/vi/ZqP1sJfO5Vg/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLD9_yRkkcTIk-2SIWEDxxN9XWuNNg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/ZqP1sJfO5Vg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDPKUYBsV_craDscNQ1ZXVsEGWgiw",
+            "url": "https://i.ytimg.com/vi/ZqP1sJfO5Vg/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLByfpRPhUXcZ0tzOcF_RFnLulRVAg",
             "height": 188,
             "width": 336
           }
@@ -3010,22 +3318,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/NzREQZY9S0w/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBFGmKnjPrDTJnBHY_8Yk4Mr4N_Rg",
+            "url": "https://i.ytimg.com/vi/NzREQZY9S0w/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAKNjHGY3IxCgXEsZTr4pijY-Ed1w",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/NzREQZY9S0w/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDD8b9MPN57vPhdIsaphxSgOzaTXQ",
+            "url": "https://i.ytimg.com/vi/NzREQZY9S0w/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDaPVdlAfRuSchue5k-gqTSTx_P1w",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/NzREQZY9S0w/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBcCEnMq9azbDiJaYISqpCsmWOBmg",
+            "url": "https://i.ytimg.com/vi/NzREQZY9S0w/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLD4N-P4dBVr3XC8HuZDHpide1TABQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/NzREQZY9S0w/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCfGDGlfVXYYCA32Gbus97M-DvHdw",
+            "url": "https://i.ytimg.com/vi/NzREQZY9S0w/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAqwYBRHlnXpYtVqQVzf_KAIUVZwg",
             "height": 188,
             "width": 336
           }
@@ -3054,22 +3362,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/gMY8kML1UVA/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGHIgXyg5MA8=&rs=AOn4CLBCfJHYJeeIkc7SoTrttScAnxF7Mg",
+            "url": "https://i.ytimg.com/vi/gMY8kML1UVA/hqdefault.jpg?sqp=-oaymwE5CKgBEF5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGHIgXyg5MA-4AvcY&rs=AOn4CLDFtS9l2Y80KXnJsUffPNePR7w2bQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/gMY8kML1UVA/hqdefault.jpg?sqp=-oaymwE1CMQBEG5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGHIgXyg5MA8=&rs=AOn4CLA5z3_o6DmmN4GOW9ruAv0IZYYdnw",
+            "url": "https://i.ytimg.com/vi/gMY8kML1UVA/hqdefault.jpg?sqp=-oaymwE5CMQBEG5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGHIgXyg5MA-4AvcY&rs=AOn4CLDQWxBkojr3-wb60aO8JQYVWujbeg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/gMY8kML1UVA/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhyIF8oOTAP&rs=AOn4CLAfCiZtFnKlqjc-tGfzr7XhHT4TKw",
+            "url": "https://i.ytimg.com/vi/gMY8kML1UVA/hqdefault.jpg?sqp=-oaymwE6CPYBEIoBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhyIF8oOTAPuAL3GA==&rs=AOn4CLB3yQqWB0w-424JCP4IJY3O093zbw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/gMY8kML1UVA/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhyIF8oOTAP&rs=AOn4CLDsUfcsEbRwqMLylG9J8lVfyWCwew",
+            "url": "https://i.ytimg.com/vi/gMY8kML1UVA/hqdefault.jpg?sqp=-oaymwE6CNACELwBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhyIF8oOTAPuAL3GA==&rs=AOn4CLCj0My3wqTnHSH_WOGFMzGwLXoUDg",
             "height": 188,
             "width": 336
           }
@@ -3098,22 +3406,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/LA2Aca2HFWE/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBKXInr1T5eWf6lXg8gdwKp2y2IqQ",
+            "url": "https://i.ytimg.com/vi/LA2Aca2HFWE/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAI7ExRFx8gYSfhcFTkgnHYqPAQrg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/LA2Aca2HFWE/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBpAkf6Y12oGc_WXXXdpzNqm35vIA",
+            "url": "https://i.ytimg.com/vi/LA2Aca2HFWE/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCaeozN_4SUwv0vTmi3SwKNfl1nWw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/LA2Aca2HFWE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDYZJ0hcphvpbgKN7QMQ5MJFwSNxA",
+            "url": "https://i.ytimg.com/vi/LA2Aca2HFWE/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAy9WsHW3CWguXenVrbi0gveO-kGQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/LA2Aca2HFWE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBBK1nYYM1XSostPvperVkZt0x3tw",
+            "url": "https://i.ytimg.com/vi/LA2Aca2HFWE/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAHDLi31QTPre0BkdF2wKnjwQzaXA",
             "height": 188,
             "width": 336
           }
@@ -3142,22 +3450,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/rNtZNeeXNlw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDrl5MzZ1z3CLbvS8O6G8Z5n_92hw",
+            "url": "https://i.ytimg.com/vi/rNtZNeeXNlw/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBwmBKPe2PUdKwPk3fe4AxyZUjyhw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/rNtZNeeXNlw/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDLSnaCiGa9x2GwKF5aNxdpHGEzKQ",
+            "url": "https://i.ytimg.com/vi/rNtZNeeXNlw/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAu5qagdDfRl6YiBAa36rQpzrntaA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/rNtZNeeXNlw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDDZBUnP27el6sboMXIY_KGDV6hbA",
+            "url": "https://i.ytimg.com/vi/rNtZNeeXNlw/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAEztyK2BFuXQ0ngI9YHGz9JTWOQQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/rNtZNeeXNlw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLARU0TDTht1W6nLm8EgNVN_XZr03g",
+            "url": "https://i.ytimg.com/vi/rNtZNeeXNlw/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBBicQQc-EVVe3s-h1c4CxEbQTmhw",
             "height": 188,
             "width": 336
           }
@@ -3186,22 +3494,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/wJCFTm619jI/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBhqCvgO_FXt_ealU5o-ftjEwiniQ",
+            "url": "https://i.ytimg.com/vi/wJCFTm619jI/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCv4ttQTkpz_edaAjpr6K9z63y7qg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/wJCFTm619jI/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDT5xjKGwsHqE81MypRzXzcYvRyew",
+            "url": "https://i.ytimg.com/vi/wJCFTm619jI/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCTwE1sTjHN_AtPlYefIph_8B_i8A",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/wJCFTm619jI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCiFz1VtW6wsG5Vx7kE0-hzEDKsLg",
+            "url": "https://i.ytimg.com/vi/wJCFTm619jI/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLD25aph58YQDMjbhdDNe-z5Awl2cA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/wJCFTm619jI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCof_EK9L8i9Ksd4_pBYklj15MHnw",
+            "url": "https://i.ytimg.com/vi/wJCFTm619jI/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCKwtI1RjnmdmJ5HXzYeh-P9OCGcQ",
             "height": 188,
             "width": 336
           }
@@ -3209,7 +3517,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 8800,
+        "view_count": 8900,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -3230,22 +3538,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/9LTrHubvJ7c/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAarQt4Q0okNYx0NNi5Ux1MgCETqg",
+            "url": "https://i.ytimg.com/vi/9LTrHubvJ7c/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAsuC4t0mxv5nFLJ5X7ikK1ro4M1w",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/9LTrHubvJ7c/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAebKZLdqUx99SSiuJMkPzxMrN8OQ",
+            "url": "https://i.ytimg.com/vi/9LTrHubvJ7c/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLD823bv5oZIduFptEKhr7wliRSmvg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/9LTrHubvJ7c/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCKroOpQYcAo-C_t_3Aie48rHNHjA",
+            "url": "https://i.ytimg.com/vi/9LTrHubvJ7c/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB5NI3cw40T7J4QET15FN3dBCf7vg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/9LTrHubvJ7c/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDHgLJ3CxcVe705Z4i40DTfv5-X6g",
+            "url": "https://i.ytimg.com/vi/9LTrHubvJ7c/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAmjGMEWpKMQFvuWUnNCkwN7we4PQ",
             "height": 188,
             "width": 336
           }
@@ -3274,22 +3582,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/O-pFK5rH5LM/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDXUtsAwBj4jlKIR36o44yy-VSB9g",
+            "url": "https://i.ytimg.com/vi/O-pFK5rH5LM/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCFILSd3L-iZ9y8iyNZcuwbJUXGZA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/O-pFK5rH5LM/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBb2Yb5ejsz9sxpmDdzu-ZP6LaWyw",
+            "url": "https://i.ytimg.com/vi/O-pFK5rH5LM/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCwMlmRYh5ohhAN1WpCqlyI6wCVUQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/O-pFK5rH5LM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLALICA2FAEooy2Ql_iTYQvW_cGk8Q",
+            "url": "https://i.ytimg.com/vi/O-pFK5rH5LM/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAwx3HedZ2EADOIFmVVhARxWLq8ig",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/O-pFK5rH5LM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCsdzEBxvWkGypMPHwkMjyTS02D-w",
+            "url": "https://i.ytimg.com/vi/O-pFK5rH5LM/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLA9j82mWZR2WOx9c6E9MFF3r5HGPg",
             "height": 188,
             "width": 336
           }
@@ -3318,22 +3626,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/h97dWKu2d1k/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAz-28EzktxX0kprcBlrJrlKG5Fyw",
+            "url": "https://i.ytimg.com/vi/h97dWKu2d1k/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBkpdZJjk4WrNLVG2RRquKF5xfaUQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/h97dWKu2d1k/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC2_pVphBTmnki28DVff8AKFsBnAA",
+            "url": "https://i.ytimg.com/vi/h97dWKu2d1k/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAzV3kc_LH4qnElRXJAO54Wx0HcXg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/h97dWKu2d1k/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBLIK6mK17yvDOQ-6KIqpuya8rV_g",
+            "url": "https://i.ytimg.com/vi/h97dWKu2d1k/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBUYy0j8NRmSOvUgVhiF8A_aGCG3Q",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/h97dWKu2d1k/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD_KtRepTeDOKg9yeDIf4PrjBRH9Q",
+            "url": "https://i.ytimg.com/vi/h97dWKu2d1k/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCA_UuN43qPlS_XtW-6ws1DJ6-vtA",
             "height": 188,
             "width": 336
           }
@@ -3362,22 +3670,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/Be1abFztDXE/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC2jvbkI4aCZHqjLKS6kxLN5Vz5Lg",
+            "url": "https://i.ytimg.com/vi/Be1abFztDXE/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCh14DcLVTtQqwWJoJMr3TW3dVkag",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/Be1abFztDXE/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDjPhfhHDGghXh3UkRcmP7ZcQyktA",
+            "url": "https://i.ytimg.com/vi/Be1abFztDXE/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCl8MyhYCtoVO3LTwXrbHKAV_Dc7A",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/Be1abFztDXE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDJWL18mlnLtpiwW-kym9DPTiIgGA",
+            "url": "https://i.ytimg.com/vi/Be1abFztDXE/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCzv1j8ZY4LV7y9YFP6lHLcts3Hug",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/Be1abFztDXE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAPsuOQnsa66Gwh7qE1L3xZDbtxzQ",
+            "url": "https://i.ytimg.com/vi/Be1abFztDXE/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAPBqz0B7CCAT5h4Grn15nxpa2vIw",
             "height": 188,
             "width": 336
           }
@@ -3406,22 +3714,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/TlT_YeXzw5E/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBv6YnibXV1nTD02xuzDqVdPUoAMw",
+            "url": "https://i.ytimg.com/vi/TlT_YeXzw5E/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCQk-p5R5yZl0x-zxg0w2Icf7_Y5Q",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/TlT_YeXzw5E/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLACBQhVr1HG8DYQ7Fe398AESDK4Lw",
+            "url": "https://i.ytimg.com/vi/TlT_YeXzw5E/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDPnzfEIQng3oo8PQ5uEe5IPB6trQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/TlT_YeXzw5E/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDtjlAfZXqUnhgjI7QJbUX5eApk0w",
+            "url": "https://i.ytimg.com/vi/TlT_YeXzw5E/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBSqOliddm8s9QreJlgVEaZwsIuXw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/TlT_YeXzw5E/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBaEHj5ih7hqkIjL7kChdCRPP1rzw",
+            "url": "https://i.ytimg.com/vi/TlT_YeXzw5E/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLA6n4HCIk3-rMzPSGDzFGhp-9fLkg",
             "height": 188,
             "width": 336
           }
@@ -3450,22 +3758,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/KfeNumv1QtY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCAsyhVQUnUxRXwLZ9b7w5nVrdZHg",
+            "url": "https://i.ytimg.com/vi/KfeNumv1QtY/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCpPCF-yYdwmxMYC-zA73x2gk3zrQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/KfeNumv1QtY/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCCdA2dawQL2FOktt5NMu_vKrDWRw",
+            "url": "https://i.ytimg.com/vi/KfeNumv1QtY/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBmGkJPl5U4pfpt1d-GzZ71zRNjNw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/KfeNumv1QtY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD4Jpr1Gs6OvfyK0Ph37oQlyd4wsA",
+            "url": "https://i.ytimg.com/vi/KfeNumv1QtY/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLArfGL7DQ3ZPuUM7V556RQdikljjA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/KfeNumv1QtY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLClbYjAEP2rlU7nV25iF6Yf0f8oaQ",
+            "url": "https://i.ytimg.com/vi/KfeNumv1QtY/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDh_Mgh5FD6vaQylcy_zmTqFuHrgA",
             "height": 188,
             "width": 336
           }
@@ -3494,22 +3802,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/Oj-PJ16K-jE/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAcwh_IjZPXlqck5F6d9Xr2LtVGvg",
+            "url": "https://i.ytimg.com/vi/Oj-PJ16K-jE/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLD_xlnaN32Rcy7uSsZq3mB3RgugJg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/Oj-PJ16K-jE/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAR5pQza9wdDlnb2P7iHqCEx_RLzg",
+            "url": "https://i.ytimg.com/vi/Oj-PJ16K-jE/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAZKJnJ2pGQnWA9KTyfMfDXb9bnjA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/Oj-PJ16K-jE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCdMEEmi4fj7ynjJXHzSFMPsrIijQ",
+            "url": "https://i.ytimg.com/vi/Oj-PJ16K-jE/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBNvWFArwczR-DE3YR0jcRxhb2uIQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/Oj-PJ16K-jE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBgSI7aCDGKHrhkYOHG9WQsLAfOYQ",
+            "url": "https://i.ytimg.com/vi/Oj-PJ16K-jE/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDmse9DKs2VGKKji5vzi1Zj10HFuA",
             "height": 188,
             "width": 336
           }
@@ -3538,22 +3846,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/3L7EzPjFkoc/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBAre1rzxLxQ-AVk4osS7VJlSadBQ",
+            "url": "https://i.ytimg.com/vi/3L7EzPjFkoc/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLChQ9HGTa4YgOnUzuCJdIMr_Gk8dQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/3L7EzPjFkoc/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBLS1osZAIMsz4OPf9jwXHXcBSxWA",
+            "url": "https://i.ytimg.com/vi/3L7EzPjFkoc/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCo6ajZwBVLXpe9qqFfgSYrrmBqTg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/3L7EzPjFkoc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAIZzwQqe3gJ1E2HF00HM1wDRkOlg",
+            "url": "https://i.ytimg.com/vi/3L7EzPjFkoc/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAjfTvjqp5g_DzxJoh1FeR3s_bplQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/3L7EzPjFkoc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBEvjbi-d6oAREonNQ9conulnJJgg",
+            "url": "https://i.ytimg.com/vi/3L7EzPjFkoc/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDhrNJKyja0Y95txYlbzGSMMujlKA",
             "height": 188,
             "width": 336
           }
@@ -3582,22 +3890,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/JxN6RTXENnM/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCAMsiTKTOE7RC_qOHF3d-2h9LUiA",
+            "url": "https://i.ytimg.com/vi/JxN6RTXENnM/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLArv_4vPd-_VVL2vBwOfxJBJB2sWg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/JxN6RTXENnM/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCfacUNV33Uf7mDGPbNcH-fhIpiCw",
+            "url": "https://i.ytimg.com/vi/JxN6RTXENnM/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDrj8ohnU203PVqzbI5Omgaj0tFww",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/JxN6RTXENnM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAALGZohxDAwyfpZ_bayEEE396OuA",
+            "url": "https://i.ytimg.com/vi/JxN6RTXENnM/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAxsUdTHwwuPbfMsCWHBpGkg825Ag",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/JxN6RTXENnM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDad4kx-jO6QGTnuaYlWzH1LWAv0A",
+            "url": "https://i.ytimg.com/vi/JxN6RTXENnM/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCdaEF09gG4MO1o8T79dFHV2FbaUw",
             "height": 188,
             "width": 336
           }
@@ -3626,22 +3934,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/McwYz2CHc_4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBQiCN-IC7Eu0leh9gXuantWptW0Q",
+            "url": "https://i.ytimg.com/vi/McwYz2CHc_4/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDa55FkGTTS5aRhnb5W5uL5ogN4Vw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/McwYz2CHc_4/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD0hWhUf5_vkR_6UyjZPpkgin3vgA",
+            "url": "https://i.ytimg.com/vi/McwYz2CHc_4/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAKDfDhojlR_m3xLZd0oSO492xuqQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/McwYz2CHc_4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAi9blc3mZut957vCtwhidImtsSPg",
+            "url": "https://i.ytimg.com/vi/McwYz2CHc_4/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDTTF7jVUSBDE6CN7tI-Jc9O3gJKw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/McwYz2CHc_4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC_mUBCxHBEYR-oJycZcpj73DmL2A",
+            "url": "https://i.ytimg.com/vi/McwYz2CHc_4/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCdlzpH0oQj0fzv8RRA_ouCUNJCVg",
             "height": 188,
             "width": 336
           }
@@ -3670,22 +3978,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/dkDSwCTBv3I/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDElWjkXymgElRIsAXO4qO1alwXiA",
+            "url": "https://i.ytimg.com/vi/dkDSwCTBv3I/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCpy7JQ-JSWTgFcmXxogtttK6AOnA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/dkDSwCTBv3I/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAITCjotUFWNNuuUvG2exY3bWMXhQ",
+            "url": "https://i.ytimg.com/vi/dkDSwCTBv3I/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAYp8XFZF5miyt5UIKfaCMIqJNaXQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/dkDSwCTBv3I/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDXs62Z2zVoulrvD9rxh6vzsLNyOA",
+            "url": "https://i.ytimg.com/vi/dkDSwCTBv3I/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDTpXbXfX1fCj6kvpZiFL_5-Utssg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/dkDSwCTBv3I/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBmmGg6l1Q3ApOEgp7-kGRcTSeBPg",
+            "url": "https://i.ytimg.com/vi/dkDSwCTBv3I/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDxFfeV98swQl6ceuCx2yMnI5W_9A",
             "height": 188,
             "width": 336
           }
@@ -3714,22 +4022,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/K7K6fT5URv0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBCwK0_6iw1NsHf2sLIb5bHa7RWww",
+            "url": "https://i.ytimg.com/vi/K7K6fT5URv0/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCY52m8KIg6JLuQN8Cyvb7kIaJ6-Q",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/K7K6fT5URv0/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAxvpt24kUf_Ay2QvA7ssjx-pHwBA",
+            "url": "https://i.ytimg.com/vi/K7K6fT5URv0/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBzpqQ206gz1mzN8O8NyFKdm5rIkA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/K7K6fT5URv0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDoupf2fxNWhmBk2fR97vQd6kCpkg",
+            "url": "https://i.ytimg.com/vi/K7K6fT5URv0/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBRluXZmit82fDCTs_HLMGaV4n7Iw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/K7K6fT5URv0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDpiodvU-AsrLczooowj29mvP4QUg",
+            "url": "https://i.ytimg.com/vi/K7K6fT5URv0/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLADbRhmXcIWK7aVjZ-SJuEenUJukg",
             "height": 188,
             "width": 336
           }
@@ -3758,22 +4066,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/SwW9Y_ZLlDM/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDIQYK-sqFRvw5uAapRuysfktWkQQ",
+            "url": "https://i.ytimg.com/vi/SwW9Y_ZLlDM/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAkwDDTH6i_6Fj_Um4QrAhV5Mayhg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/SwW9Y_ZLlDM/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAcWRHulzvhjzWL7TUZcW59jr8Vcg",
+            "url": "https://i.ytimg.com/vi/SwW9Y_ZLlDM/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCc6MZIkFmeDYTefpH6EZoUbSMS7A",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/SwW9Y_ZLlDM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAATH_59_T43-9k9P05aG6eTsgg5g",
+            "url": "https://i.ytimg.com/vi/SwW9Y_ZLlDM/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAB3W13Rfd01kpsdmEdPcoL9X4m7A",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/SwW9Y_ZLlDM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAHxe8ZTUHO9t1QjgQfwozRKEsf4Q",
+            "url": "https://i.ytimg.com/vi/SwW9Y_ZLlDM/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAYYgluB11YywKEG746gvXyu0AYyQ",
             "height": 188,
             "width": 336
           }
@@ -3802,22 +4110,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/dIn45M5nraw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB5ehuyah8Cd1FqrkUK4zscjh4iXw",
+            "url": "https://i.ytimg.com/vi/dIn45M5nraw/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAnNRWotY2eadgjnzVMtII885p-RQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/dIn45M5nraw/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBWOO728Sy5rJ0sncGXfCLvJhv0Zw",
+            "url": "https://i.ytimg.com/vi/dIn45M5nraw/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBxZFrRYTFha6tJjxyRG6qmV8HkRw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/dIn45M5nraw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAiLTB4XRJ4VxMSMkpkj1MTCkJN2A",
+            "url": "https://i.ytimg.com/vi/dIn45M5nraw/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAKdgysfKO5UfIxFMu7BLpgqwlzRQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/dIn45M5nraw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCP7QRzlSnfx7D0zAt1v_XZwoJqKQ",
+            "url": "https://i.ytimg.com/vi/dIn45M5nraw/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB8dWe1NMV5s495XNb6GCvpI9zzWw",
             "height": 188,
             "width": 336
           }
@@ -3846,22 +4154,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/n6ctSn-KhPE/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDGShR38pItwG3UYZD_2qcOPAsd3A",
+            "url": "https://i.ytimg.com/vi/n6ctSn-KhPE/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCLp4trdCRjPXtqt0QLN2R3jdu0mQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/n6ctSn-KhPE/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAySzB0A4tTO9r09Bmzw40aKgl_dg",
+            "url": "https://i.ytimg.com/vi/n6ctSn-KhPE/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLD8RH7Z1GSY7gjxDPjxq0pWtooE2Q",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/n6ctSn-KhPE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAIPhj9H0S6E-ciVCzO3-twtkK41g",
+            "url": "https://i.ytimg.com/vi/n6ctSn-KhPE/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBY_9jbfQ7h03dMmkZOuqDZ5RD58Q",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/n6ctSn-KhPE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDN-3M7Xatq2gBa-r0oj97IGdm6DA",
+            "url": "https://i.ytimg.com/vi/n6ctSn-KhPE/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDCgsfc06OYtsFxi9KzgE8HFQK24A",
             "height": 188,
             "width": 336
           }
@@ -3890,22 +4198,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/O2iB1rI-rYM/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLARB6eiBQrXjpGDgxC_THTXbCTGLQ",
+            "url": "https://i.ytimg.com/vi/O2iB1rI-rYM/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAAbVUK_gMab3D05x2m1LKUyVDaHQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/O2iB1rI-rYM/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCVNQbUsbiy4Oqssn8C4PBZXTDKtg",
+            "url": "https://i.ytimg.com/vi/O2iB1rI-rYM/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLB1V3dMzlwWtw4psrhlos0F7q_F2A",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/O2iB1rI-rYM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDXapnusIoXoQtcU5Q4-dDsr3ySCg",
+            "url": "https://i.ytimg.com/vi/O2iB1rI-rYM/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB1K8jiCB2xCLeCM_E9yaSnhiv-BQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/O2iB1rI-rYM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCqQwNZaqxHXtBo923ozsy_o1atVg",
+            "url": "https://i.ytimg.com/vi/O2iB1rI-rYM/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAB_U8U7ND7F65YkonIZMNNAXD3FA",
             "height": 188,
             "width": 336
           }
@@ -3934,22 +4242,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/feM9_E9kz8k/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD7iyV6qyygYO-RHFlCIGXyG8l20Q",
+            "url": "https://i.ytimg.com/vi/feM9_E9kz8k/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBdwnWLni6Hiuwz_TiocXnOc0FObw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/feM9_E9kz8k/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDXET9eCwZZV_8yUdRYHXcMNpa0YA",
+            "url": "https://i.ytimg.com/vi/feM9_E9kz8k/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAh3LXngBRoqXYZrWqF4mDVg9xsvA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/feM9_E9kz8k/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB836-qInQFdNcjt4juy3HxjdrUHA",
+            "url": "https://i.ytimg.com/vi/feM9_E9kz8k/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBfaCdfQbFwetSn9-kVyD2MDorT0w",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/feM9_E9kz8k/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCdFaVTrz09vQ-2EfvRX30Ag-VrwQ",
+            "url": "https://i.ytimg.com/vi/feM9_E9kz8k/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBu9yykKoIQkmY7K9Es5y5JXUZxZA",
             "height": 188,
             "width": 336
           }
@@ -3978,22 +4286,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/la54ByAq8kA/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAo7umnfxm7hhMGgJu_xjibXoboHA",
+            "url": "https://i.ytimg.com/vi/la54ByAq8kA/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAAHF2bTMduwFben3H9oeiDQ0gA8Q",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/la54ByAq8kA/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCtq52DTTciCdpN0j2Y-fx_CK-pqg",
+            "url": "https://i.ytimg.com/vi/la54ByAq8kA/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA125Yryt0wpTZd18BcyXB_h-P-iA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/la54ByAq8kA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBCjMAQbm3dSA62W9qTL9bFwIpdlQ",
+            "url": "https://i.ytimg.com/vi/la54ByAq8kA/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCDXs4CfvRkknqJZjzFIFYjJ1bc2g",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/la54ByAq8kA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAIHU3eGDEOim_i8NFwZxKN3Wwc-w",
+            "url": "https://i.ytimg.com/vi/la54ByAq8kA/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLC7oLGaqJH8ucy6cI47oO4pQwpuQQ",
             "height": 188,
             "width": 336
           }
@@ -4022,22 +4330,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/CbkFGrBvyrs/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDyhqAEwkVcBZBT5pO2dH_RToHclQ",
+            "url": "https://i.ytimg.com/vi/CbkFGrBvyrs/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCeIrdbJ0J0qf1Z1pHhMT5vGQjDtg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/CbkFGrBvyrs/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAjKZ0FgGqwUzrfJdjgBorR7xmNyA",
+            "url": "https://i.ytimg.com/vi/CbkFGrBvyrs/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAZsSoW2eb4yIwJSuTU-y0BE9l0YQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/CbkFGrBvyrs/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDKrw-04L5O4OYGwS2c6pqsSLp7MQ",
+            "url": "https://i.ytimg.com/vi/CbkFGrBvyrs/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLD_ecGNCa7_jxNVJE8etQsJtuIiKw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/CbkFGrBvyrs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCD4BRWSWAiZx8_rqNjnkkzwkD_kg",
+            "url": "https://i.ytimg.com/vi/CbkFGrBvyrs/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBc4w-_OBFNm87u8oJKLIWoyu3rNg",
             "height": 188,
             "width": 336
           }
@@ -4066,22 +4374,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/dfQ8FYmq-J4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD8KrgXrVwTodzZ5ly2OBwx8wf9LQ",
+            "url": "https://i.ytimg.com/vi/dfQ8FYmq-J4/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAvHhFwG9SCuPOQzUcTR7WxpZM6SQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/dfQ8FYmq-J4/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDaZkX53-aft1c10b5Ul04t_Md5xw",
+            "url": "https://i.ytimg.com/vi/dfQ8FYmq-J4/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCXQyXvBbI_Od5VPr4Eu5OvfRaOhA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/dfQ8FYmq-J4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCK7W9Btq8O3xiDwLDzlNGpbwe8mQ",
+            "url": "https://i.ytimg.com/vi/dfQ8FYmq-J4/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAXxHruyv-tj9l7s3bxFpB6TG90Kw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/dfQ8FYmq-J4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCcYP3kW1eb4srcsjN60P3dnOiGFA",
+            "url": "https://i.ytimg.com/vi/dfQ8FYmq-J4/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAo91zaUB43x36_4rGY7r5quFzVTg",
             "height": 188,
             "width": 336
           }
@@ -4110,22 +4418,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/OZLaj_AKaSY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCe-tpR-idmXceeWTlyS3jHCvkaJw",
+            "url": "https://i.ytimg.com/vi/OZLaj_AKaSY/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA5c1EG9ZQn6utOLgwR15zQAcj57g",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/OZLaj_AKaSY/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB5Q7m3DBLOkUmXmTAzNvTwr0G4UQ",
+            "url": "https://i.ytimg.com/vi/OZLaj_AKaSY/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDEhQoyhitOZtUu7FybdjYOa1JMlw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/OZLaj_AKaSY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAWFFRmsbGzNeWmy-GWqZPHWYoz2w",
+            "url": "https://i.ytimg.com/vi/OZLaj_AKaSY/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBQW6A7iqJxyg_GTSyYqGl7byepjA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/OZLaj_AKaSY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLATDKcEW2pi7MWbsia7Cpt2BcuKTA",
+            "url": "https://i.ytimg.com/vi/OZLaj_AKaSY/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCjv1VmHnqQriOX-5tQPk2356vb7A",
             "height": 188,
             "width": 336
           }
@@ -4154,22 +4462,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/7Hsyg36ckdU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC2CZtwdPIYMPcej3uWhAffiU7p4g",
+            "url": "https://i.ytimg.com/vi/7Hsyg36ckdU/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA9LB6zgZ4FKSnlqvBf8PH3_XkPFw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/7Hsyg36ckdU/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD1DiELdD-EXcy1g6c8DSj5qVgssw",
+            "url": "https://i.ytimg.com/vi/7Hsyg36ckdU/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLB12Wcep6VZqXLSC4p-nr6ebre4bA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/7Hsyg36ckdU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBPQPYWGjXXtxVvv1FoE47YMAMXXQ",
+            "url": "https://i.ytimg.com/vi/7Hsyg36ckdU/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDOU2NuHLIu_EfPgcLtnY0PnyR7Rw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/7Hsyg36ckdU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAy9OXybyD-d9szY4idva4BfNFo7Q",
+            "url": "https://i.ytimg.com/vi/7Hsyg36ckdU/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDgGoXdpfsYoY2fWqZ5gNq3nuLZyg",
             "height": 188,
             "width": 336
           }
@@ -4198,22 +4506,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/QPZgmv7slPc/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDGJ2Q35J11ihEdTYRfCmIYFpv6Ig",
+            "url": "https://i.ytimg.com/vi/QPZgmv7slPc/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAyQO88yWTwGeRYA_E-DdpJWrAmQQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/QPZgmv7slPc/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDvEEbRNw4tEOKfiOSpAjCb3ep6Lg",
+            "url": "https://i.ytimg.com/vi/QPZgmv7slPc/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLC4CmZayn2CfJ-wpqDmC72CWwfYtg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/QPZgmv7slPc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAgDd0eOUFLRPfovbdjBoAMl1aGzQ",
+            "url": "https://i.ytimg.com/vi/QPZgmv7slPc/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLC-XxnKqMmnVKX2OLOyZQOr9Gq3zA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/QPZgmv7slPc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCLhe9nTM4JsvwcmK87k4McdVyCGA",
+            "url": "https://i.ytimg.com/vi/QPZgmv7slPc/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAzKQZKNiQaaWQou_zSR2Ke7M2pEg",
             "height": 188,
             "width": 336
           }
@@ -4242,22 +4550,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Muse_AI_Art",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/Ahek_O5ZTAQ/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBzw1i3VrPZBoT9sjrNK_GtgkmNoQ",
+            "url": "https://i.ytimg.com/vi/Ahek_O5ZTAQ/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDcNXZPyTaW4CX2ex1ybXpsThuBeg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/Ahek_O5ZTAQ/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCtYhMHOIH7cyJSow8IhosPyfdKxw",
+            "url": "https://i.ytimg.com/vi/Ahek_O5ZTAQ/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBwP40LePGWkGvGjXNkfqSkKO4Z6A",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/Ahek_O5ZTAQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCoZRw0PD8D5h0WVKgL_W5PFqm-3Q",
+            "url": "https://i.ytimg.com/vi/Ahek_O5ZTAQ/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDcHJ1_6Byd7NXtn2gGZaEfj1YnLg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/Ahek_O5ZTAQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDfk14WcEfzpQQpIA2kWLIvXOqEWQ",
+            "url": "https://i.ytimg.com/vi/Ahek_O5ZTAQ/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDC8MdvOl6j06gBsSza7rzyw2Lx6g",
             "height": 188,
             "width": 336
           }
@@ -4301,22 +4609,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/MWRc13v-ZhA/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAOpBVj4CUAIaRY3xFHBmrmTbkE5w",
+            "url": "https://i.ytimg.com/vi/MWRc13v-ZhA/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLB_T-oMv2MnP3C1gs3tNUZ1FhXIGw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/MWRc13v-ZhA/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBk4SwZHiSVTc3htGQaSd35xfsfnw",
+            "url": "https://i.ytimg.com/vi/MWRc13v-ZhA/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAHUkyaQWQ31nFqtlVXZlQoIc6SSA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/MWRc13v-ZhA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAvUjGEW3xQ7gNyyspmi8wi_uTi3g",
+            "url": "https://i.ytimg.com/vi/MWRc13v-ZhA/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCofICmnid98GGKstlC-Fg2aI6XLA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/MWRc13v-ZhA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBziqX0m50egMPEwdiggjRC6fPrZw",
+            "url": "https://i.ytimg.com/vi/MWRc13v-ZhA/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCQnmle8skkZY2TG2_89JSq39vCfw",
             "height": 188,
             "width": 336
           }
@@ -4345,22 +4653,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/RX0kyBl-4Bk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBGhhWs2Sw0Qg_f9zCm8_hJJDhETA",
+            "url": "https://i.ytimg.com/vi/RX0kyBl-4Bk/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDlrmLm_KUpr_FyVkvUaU1M_eL86Q",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/RX0kyBl-4Bk/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDZHsa_XMC8N69GKhZfeTxzBUqEiw",
+            "url": "https://i.ytimg.com/vi/RX0kyBl-4Bk/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBkt0hEPDs0Sbbh7a77hx9OZcnylA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/RX0kyBl-4Bk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCceL_MWEiqIEdE7VftPxEyuYLSfA",
+            "url": "https://i.ytimg.com/vi/RX0kyBl-4Bk/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDzTuSZu0DfX9pP-szFNmb8QnsDBw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/RX0kyBl-4Bk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDdtpfbpPA6cS_ph_3QDv50-oWVwQ",
+            "url": "https://i.ytimg.com/vi/RX0kyBl-4Bk/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCw6r3XvJAGXmY18PuiFhZbsl8B2w",
             "height": 188,
             "width": 336
           }
@@ -4389,22 +4697,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/x3fwY0Kh7uM/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDZGi96deZv_F8ycIX_sKv7CONOoA",
+            "url": "https://i.ytimg.com/vi/x3fwY0Kh7uM/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDQCmVp3dCacQVf5A0_DGWYTZuUxw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/x3fwY0Kh7uM/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBrmBHOYWmO-bavfy8t_LajkU2LGw",
+            "url": "https://i.ytimg.com/vi/x3fwY0Kh7uM/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAvi4z6NtEkb2FAAU1aO3bvrbl4qQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/x3fwY0Kh7uM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBlya9W0Cs1uPbBlV4Y4Xdjnj5qBw",
+            "url": "https://i.ytimg.com/vi/x3fwY0Kh7uM/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAC6bC6SioInv8YjHqsqG5KI3vWiQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/x3fwY0Kh7uM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCLtoOimbP-zQsrZRH0_N-JrMqo6w",
+            "url": "https://i.ytimg.com/vi/x3fwY0Kh7uM/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLA9lA3yUKpD3PbK-k7o6SCJM0a2ew",
             "height": 188,
             "width": 336
           }
@@ -4433,22 +4741,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/fjT4VO79B5U/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD84MN7G3uXg5n7tJPD-R83pAU3Iw",
+            "url": "https://i.ytimg.com/vi/fjT4VO79B5U/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBd6rNuUBHusuqPkT7JZxTKNS8ysw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/fjT4VO79B5U/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCWPuWBXcKaGAqXMDNI41rNFI9clQ",
+            "url": "https://i.ytimg.com/vi/fjT4VO79B5U/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLC231-oviq9bW9Fny0E5StFJWbPfg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/fjT4VO79B5U/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCbVDVS9W78e8WZ6tZJu7Hep9g1HA",
+            "url": "https://i.ytimg.com/vi/fjT4VO79B5U/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBDFjoqeyC1MxiHJsG6WhDbu3IAcw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/fjT4VO79B5U/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC_uzNm58nFDyAUTz_khPA2FkslBA",
+            "url": "https://i.ytimg.com/vi/fjT4VO79B5U/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDqYRKna0qGmKfhWmcvGL8Fgtgc5g",
             "height": 188,
             "width": 336
           }
@@ -4477,22 +4785,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/RDhj8mOWXsg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBE7Sy1xAD4wDOK50SkXbQmC-vnnQ",
+            "url": "https://i.ytimg.com/vi/RDhj8mOWXsg/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBzhUELU33J9LlE7Kt6VQaDkQmOBw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/RDhj8mOWXsg/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCWhYGQw4jeE_aEa2Mb9VABTEnM7Q",
+            "url": "https://i.ytimg.com/vi/RDhj8mOWXsg/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCQoXD1wM_au5iLvC1O1wPFCLk4Nw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/RDhj8mOWXsg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBTz88vIHCkJeGw8-P6BJvuq1CKbg",
+            "url": "https://i.ytimg.com/vi/RDhj8mOWXsg/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLD2zKCfag7H6xafEu33y6QyuL8QUA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/RDhj8mOWXsg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBSydNVL9zxEa84Ncgv1-1u0rNOBA",
+            "url": "https://i.ytimg.com/vi/RDhj8mOWXsg/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCKxgn-sLYnkxLEK6B_dlpxJ-Xfpg",
             "height": 188,
             "width": 336
           }
@@ -4521,22 +4829,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/AubPDZQPVEY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBr269Q8aay7xPibfq8RPxihekMrA",
+            "url": "https://i.ytimg.com/vi/AubPDZQPVEY/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLC32_a6TrLq7OSCfd_u4h1Lkqd7jA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/AubPDZQPVEY/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC4DsD9BxVj8adu17Hl9O670JLlhQ",
+            "url": "https://i.ytimg.com/vi/AubPDZQPVEY/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCtg2RpxeFdRfXJPDyyDwwcFgYTkQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/AubPDZQPVEY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDGr253h4dvVEXoQ0tK9p6mQreAMA",
+            "url": "https://i.ytimg.com/vi/AubPDZQPVEY/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBWkmLNBFRuUQ3ATZNUG_82Bna1NA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/AubPDZQPVEY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCvqPw3PJt7ne077jXCQYpR9tDD1w",
+            "url": "https://i.ytimg.com/vi/AubPDZQPVEY/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBBQt2Z19-TcgBLGyY5Yye2BTuVsw",
             "height": 188,
             "width": 336
           }
@@ -4565,22 +4873,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/Kv8qx-XkxJc/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAcL26cDYroTqkom5PW7sWodHYy8w",
+            "url": "https://i.ytimg.com/vi/Kv8qx-XkxJc/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDcZx4xqX9B4MXN4UfHDQOmZLPZ-A",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/Kv8qx-XkxJc/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBB_juUvpenQPi6gqkmgOsGuycSRw",
+            "url": "https://i.ytimg.com/vi/Kv8qx-XkxJc/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA57GywBsdV6dytfMe3JLXdR8j_EQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/Kv8qx-XkxJc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCTiN-3TqYAVOqmQhTWn8fTqVo_HQ",
+            "url": "https://i.ytimg.com/vi/Kv8qx-XkxJc/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBaTHiGRu6ldhfL-CTVESCj77nIgQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/Kv8qx-XkxJc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAwZR9sLY-UbaAuU8EusN9DO1FXQg",
+            "url": "https://i.ytimg.com/vi/Kv8qx-XkxJc/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDYgKblUO_Yfb3qM3-Ln6dwsPZpIQ",
             "height": 188,
             "width": 336
           }
@@ -4609,22 +4917,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/y0NG1iXxuhY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBZ0-RuZvj0hMhFSIjp-6Eq6agO7Q",
+            "url": "https://i.ytimg.com/vi/y0NG1iXxuhY/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAUAeQubeQqY0UIxT0KaFG_67XhqA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/y0NG1iXxuhY/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAXVuedmjb1yuWXUa3Oo4INeD9gBA",
+            "url": "https://i.ytimg.com/vi/y0NG1iXxuhY/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBRlSZ3q_rPGAYA2LT-N6jUbhTHzA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/y0NG1iXxuhY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACORaXfGLLDn-FBxvowUG9ND97zg",
+            "url": "https://i.ytimg.com/vi/y0NG1iXxuhY/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLD7XJPNUiBTqVDhrcajDhpQAd1tQQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/y0NG1iXxuhY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAp6VIjo9ooKM8dkI_vshixFeTcQw",
+            "url": "https://i.ytimg.com/vi/y0NG1iXxuhY/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAXx7Ay8Uuny5W1jwG5B_P2mX9GlQ",
             "height": 188,
             "width": 336
           }
@@ -4653,22 +4961,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/ltdyuf1oK6I/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBh89XM7QW314swx6S_8bWzf85VNw",
+            "url": "https://i.ytimg.com/vi/ltdyuf1oK6I/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLB711VgFiQQ4U58n9DX3AK1ye1NZA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/ltdyuf1oK6I/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBHpqxugeLZG-NAKTCppoqFCmxFHg",
+            "url": "https://i.ytimg.com/vi/ltdyuf1oK6I/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBvLF9nzi80B7UzivjL0yWn_qB7Rw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/ltdyuf1oK6I/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDQORzf9NnnkPMjDZQnjGeIjVGN9A",
+            "url": "https://i.ytimg.com/vi/ltdyuf1oK6I/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLA-1wIRyLPI_MIQnOjo6z-yooB4CA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/ltdyuf1oK6I/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBc-5cInVMXrvp8amTqyzb1EapsJQ",
+            "url": "https://i.ytimg.com/vi/ltdyuf1oK6I/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLACWBn5GHOpzXeGdjX_FkcsAjpqhg",
             "height": 188,
             "width": 336
           }
@@ -4697,22 +5005,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/uLtTuYGEO_E/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAsLVrWyFpDq7f9EWEmvLN7k8EpBQ",
+            "url": "https://i.ytimg.com/vi/uLtTuYGEO_E/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBo82MCkcuk9jjThoG7a2n0Zo6XuQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/uLtTuYGEO_E/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBdc2_Tw99Ib7d9tZoG8ieMz3tgsw",
+            "url": "https://i.ytimg.com/vi/uLtTuYGEO_E/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCHLA9zCMe-MO7d5KU7LXMOM_asLA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/uLtTuYGEO_E/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDDvOIqWk5oeMlynzBBNgMD0nw33g",
+            "url": "https://i.ytimg.com/vi/uLtTuYGEO_E/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCkxUFw3zKMU5aj7iDnZE9MWR3p6g",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/uLtTuYGEO_E/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDPafAUILR7UJTDsTa-NsSMbBguDg",
+            "url": "https://i.ytimg.com/vi/uLtTuYGEO_E/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBbxAweAczFWRWkaHKrn9dtoA2zYg",
             "height": 188,
             "width": 336
           }
@@ -4741,22 +5049,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@ExtraordinaryVisualArt",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/eIBHyqwf_IU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA6KSrunlOXpfykJRGpL_fNb-pgdQ",
+            "url": "https://i.ytimg.com/vi/eIBHyqwf_IU/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDUvZMmXE_W5F2g1_3tk7PVxYvbeg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/eIBHyqwf_IU/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBlFfuQQbhAPdUPwbgtFdFaqOEcYg",
+            "url": "https://i.ytimg.com/vi/eIBHyqwf_IU/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDmga0QZGlOGNgSRMCg8AGGgqu7Zg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/eIBHyqwf_IU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCCilO42cwJZewsgwU3xMkD8IA_dw",
+            "url": "https://i.ytimg.com/vi/eIBHyqwf_IU/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDg4SL3jiKL-7sD_bQSHfxTDT8Ptg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/eIBHyqwf_IU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAaWeflZyrKar5YstM5QxcKWzNwtQ",
+            "url": "https://i.ytimg.com/vi/eIBHyqwf_IU/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCt1WYLJAX5ao9slNgrBHdQiJZaqg",
             "height": 188,
             "width": 336
           }
@@ -4800,22 +5108,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@KarolArtChannel",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/TZUn8nU0CZI/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA9ojf531V3kRxO0Kf78drLZ9U08Q",
+            "url": "https://i.ytimg.com/vi/TZUn8nU0CZI/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAJuY8w6DnR-QnNF2B4jlgEqrMCHQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/TZUn8nU0CZI/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAJWitpN1bXEgFQMn6fM17l7RZyLQ",
+            "url": "https://i.ytimg.com/vi/TZUn8nU0CZI/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDmwhsey0D4Gv_mg9wsUwgIV4FGaQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/TZUn8nU0CZI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAPIUvdx_cFSZGvXyuDASWRpL_xrQ",
+            "url": "https://i.ytimg.com/vi/TZUn8nU0CZI/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBIlQPAndUVe5zug5B0W4_DvRML8w",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/TZUn8nU0CZI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDOwx-G7aD5svsu_MU9qcCUFA-_WA",
+            "url": "https://i.ytimg.com/vi/TZUn8nU0CZI/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBozwdbVPjjECKx-Vhzue0QrZ_UBQ",
             "height": 188,
             "width": 336
           }
@@ -4844,22 +5152,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@KarolArtChannel",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/4cdn4PvIjao/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBEuDs4fFBT8b0QGi3d96QdYLFsnQ",
+            "url": "https://i.ytimg.com/vi/4cdn4PvIjao/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLC0sGLmEn-zsoW4Ny4TpwL77o9W6A",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/4cdn4PvIjao/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB97bzSRgRKZxoIQJq5f6HsJQj0dQ",
+            "url": "https://i.ytimg.com/vi/4cdn4PvIjao/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA_WRNOntxRzHwqjs0CaUnfcW32TQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/4cdn4PvIjao/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDwc004ngr2hFNcuG5cj7Fk0ObvhQ",
+            "url": "https://i.ytimg.com/vi/4cdn4PvIjao/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBK95Ydl7QiFkbxHv7Oe2wZt3euPA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/4cdn4PvIjao/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDmcE6xxMuKqfU5NNFKoj80xBVQhw",
+            "url": "https://i.ytimg.com/vi/4cdn4PvIjao/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBf-img85A47VcFsM0f3xCj7Ur1DQ",
             "height": 188,
             "width": 336
           }
@@ -4888,22 +5196,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@KarolArtChannel",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/o2If95E4GLI/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDUfWlTKIn2E0bKyaeVspKJOogcIA",
+            "url": "https://i.ytimg.com/vi/o2If95E4GLI/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDebhqTkC84MkEU4dHUfTWFmzzzZg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/o2If95E4GLI/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBhpESb9WSHZ1yvlPcwPVh-jNHcig",
+            "url": "https://i.ytimg.com/vi/o2If95E4GLI/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBaT--Ft2p3W4jhgIrRlxYjagAXag",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/o2If95E4GLI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAj1oFC54ISgWLftDoJA0RSW9FCAA",
+            "url": "https://i.ytimg.com/vi/o2If95E4GLI/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLD22fTcSlgyXpJU87Q7ey5YfqzGAA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/o2If95E4GLI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDDbOHUvq4_P8bg4imzvCJDr_xCIw",
+            "url": "https://i.ytimg.com/vi/o2If95E4GLI/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLD0A7zoqPK1v-GcpWU5y0pnzsxdCA",
             "height": 188,
             "width": 336
           }
@@ -4932,22 +5240,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@KarolArtChannel",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/0Y6vdxhuSD8/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAG6ieFuMpCsi9ZQU0GkwAYJzXqOg",
+            "url": "https://i.ytimg.com/vi/0Y6vdxhuSD8/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDqBlcV0qXHsWY9aYgyFWgcNc0BBw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/0Y6vdxhuSD8/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBHJg6w5d6ol8XTrVVM3gexOuq5IQ",
+            "url": "https://i.ytimg.com/vi/0Y6vdxhuSD8/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCVfSI3psU5CkiMh12wQIsnpBrqVg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/0Y6vdxhuSD8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD6WnQWX274gfePWYktJmJdoURAPA",
+            "url": "https://i.ytimg.com/vi/0Y6vdxhuSD8/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB6MYcd0-cxhDsBFj3cUqcetuEtcg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/0Y6vdxhuSD8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAlXiizoa4ms9Frv2Vx9Md77XlHnw",
+            "url": "https://i.ytimg.com/vi/0Y6vdxhuSD8/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCM8a8ayKR96wShpRjNGzrYet2FNQ",
             "height": 188,
             "width": 336
           }
@@ -4976,22 +5284,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@KarolArtChannel",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/vczWTya7ygg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBu1-wNoCmKmKS2D4VQWNB9eJcYJg",
+            "url": "https://i.ytimg.com/vi/vczWTya7ygg/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDUIOT4qHO7llxSClb1A5elJ7MaMQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/vczWTya7ygg/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDJqgFBgcN21g7RYThgkGTavRuwcA",
+            "url": "https://i.ytimg.com/vi/vczWTya7ygg/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDkvbLwHlmGfbB5J5o7GXll8zu89w",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/vczWTya7ygg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCfXiISmTyDB499HIGLXQy_RVBqEw",
+            "url": "https://i.ytimg.com/vi/vczWTya7ygg/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLA9SY7VyyCMq4rZtS5kwKHFu7YDQg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/vczWTya7ygg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDAf3FnS0zahYyoI0xqGadIdY9mpw",
+            "url": "https://i.ytimg.com/vi/vczWTya7ygg/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDbMYKNmXT_kWgoR4UKX9nHVYqX0w",
             "height": 188,
             "width": 336
           }
@@ -5020,22 +5328,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@KarolArtChannel",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/ZB0ky7lNrq8/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCbqSInUEO5MhbCirZVI_gNTp4BEQ",
+            "url": "https://i.ytimg.com/vi/ZB0ky7lNrq8/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCmdPPZgclA43PLfEaULQcXVyQSnw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/ZB0ky7lNrq8/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC6EhHgOLQboFaKfTqnm5dupl6gKA",
+            "url": "https://i.ytimg.com/vi/ZB0ky7lNrq8/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDeQqki7_vkbCFgRmCTmGjOkTJCeQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/ZB0ky7lNrq8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC8fZo0ABJMT97oIBvSELqRdl3Wag",
+            "url": "https://i.ytimg.com/vi/ZB0ky7lNrq8/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCpGjKeGLWin4oOgWbityriZumTaA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/ZB0ky7lNrq8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDG6_vzx-0z0h1IIeVHlipcYzZFBg",
+            "url": "https://i.ytimg.com/vi/ZB0ky7lNrq8/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAufTALhXcdQK9H4d2uRRsxhMM-ww",
             "height": 188,
             "width": 336
           }
@@ -5064,22 +5372,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@KarolArtChannel",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/phdjREhk2wg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC2grgMdvLBzqe1uCmz-gi3yTU0iA",
+            "url": "https://i.ytimg.com/vi/phdjREhk2wg/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA_bJg_06yp2BcW0v6QH2RLa0aTNg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/phdjREhk2wg/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLALV2hy10T0dw-e74D7ZdXdHzbCUg",
+            "url": "https://i.ytimg.com/vi/phdjREhk2wg/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCYC_hGtSVFgcxyi_437eLnUDMgzQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/phdjREhk2wg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBWmk4OuVM9HV4ycKip03a-Gkgzsg",
+            "url": "https://i.ytimg.com/vi/phdjREhk2wg/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBK07pSkzJyjc7MKHAzIg6IVPx4BA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/phdjREhk2wg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDZCWeGzLlaxG70imRQXNfJOxQDng",
+            "url": "https://i.ytimg.com/vi/phdjREhk2wg/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAMJaIlMXIh9ujac7mJTI7f_fxdDQ",
             "height": 188,
             "width": 336
           }
@@ -5108,22 +5416,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@KarolArtChannel",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/idaaEXwbjLo/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAoRdVmnuYraVmnJvNY4AolmXrI7Q",
+            "url": "https://i.ytimg.com/vi/idaaEXwbjLo/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAeTlRMK56miO1XdwoIOADBqSwaGQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/idaaEXwbjLo/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBXYK8i6s010kFnG67YDIzEoohXRA",
+            "url": "https://i.ytimg.com/vi/idaaEXwbjLo/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBvFRFdHSG0I21thngAqksL_ZwrvA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/idaaEXwbjLo/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA01NCJkF1F5QTiqkLMqcEbUwHIZw",
+            "url": "https://i.ytimg.com/vi/idaaEXwbjLo/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLA1tvLLJjOny86uJp9jcXpBUWQbnw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/idaaEXwbjLo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAGRsXdonvs7KpIbd3rnfj-3tNTYQ",
+            "url": "https://i.ytimg.com/vi/idaaEXwbjLo/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBk6xzYiAm37jMKUurqh8sKTxS8pA",
             "height": 188,
             "width": 336
           }
@@ -5152,22 +5460,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@KarolArtChannel",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/0RTg3a-IvtQ/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDBParUO9FAJQUO1kk_6Y-N_kJFDw",
+            "url": "https://i.ytimg.com/vi/0RTg3a-IvtQ/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDu8aKJupyPZV5m0iEsd-azAFu2iQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/0RTg3a-IvtQ/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDXegaWLuQgHbCTPHIbXPXYJ4PRUg",
+            "url": "https://i.ytimg.com/vi/0RTg3a-IvtQ/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAYC3NmXSiGCxSGH210EWbPwPckBw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/0RTg3a-IvtQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCWhNt_UMn3HnK6dwklSPqdDvRT0A",
+            "url": "https://i.ytimg.com/vi/0RTg3a-IvtQ/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDBCL7Z5CmDBhwr8u9r4i5rfm9K7w",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/0RTg3a-IvtQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBFCllNJLUbXxVSRwDfMDMo-xrRnA",
+            "url": "https://i.ytimg.com/vi/0RTg3a-IvtQ/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLC9xBClDOb2jZ5GCrK6oYuK95vnuw",
             "height": 188,
             "width": 336
           }
@@ -5211,22 +5519,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Painters_Dream",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/CBNoD-qbdss/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD8VTBKFH2GtbPhtq1JHj7kuWSfgA",
+            "url": "https://i.ytimg.com/vi/CBNoD-qbdss/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBemA6cx0EPbRNA1xDkcz9St-czPA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/CBNoD-qbdss/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBshdbMMj6cmuWskc9l0iInY7Lhpg",
+            "url": "https://i.ytimg.com/vi/CBNoD-qbdss/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCo4nkIfI3um5ad3Ip_smCsGoklLw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/CBNoD-qbdss/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDnkoAeeAlQ10IF9eFuJWbKpV1A3Q",
+            "url": "https://i.ytimg.com/vi/CBNoD-qbdss/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCCLw8x9XFr-a4_qGGpnuYGm0_1FA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/CBNoD-qbdss/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA28WyA_jbJlCKyqSO8atqH3Xrqew",
+            "url": "https://i.ytimg.com/vi/CBNoD-qbdss/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB8DEkshaNLRJFZireV7yxeV1qtzA",
             "height": 188,
             "width": 336
           }
@@ -5255,22 +5563,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Painters_Dream",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/CgCYYSY3AQs/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAjsb1iFgG3oDVDu6fSrbqD4u88yg",
+            "url": "https://i.ytimg.com/vi/CgCYYSY3AQs/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCvDcYI_6LRCGAqf5KU53HskwMLLA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/CgCYYSY3AQs/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBU-8l8eLbDO5KC5Nmm0X_CXZvJ4A",
+            "url": "https://i.ytimg.com/vi/CgCYYSY3AQs/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLB-6RdYfEhzItFnzwYpK0mmIjAQbQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/CgCYYSY3AQs/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBtl3PSDqxqtu1NVmqXPfrNI-KPuw",
+            "url": "https://i.ytimg.com/vi/CgCYYSY3AQs/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAfMYBOQfJnd-DzXaODlXEgZey-rQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/CgCYYSY3AQs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB6T9CYg6JSe8EV2QVTr0yGXbntMA",
+            "url": "https://i.ytimg.com/vi/CgCYYSY3AQs/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBzLWn35rw0NuDe3_RJ9nhcZEN1ug",
             "height": 188,
             "width": 336
           }
@@ -5299,22 +5607,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Painters_Dream",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/EWTdrp3vvKU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAuSQsYcXJapGWpwytlJeKPD6lFQQ",
+            "url": "https://i.ytimg.com/vi/EWTdrp3vvKU/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBmBNOku898_hkHb2MB0fvjZhveJg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/EWTdrp3vvKU/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAGeLIImI-20FKW_4LfyLyslqRvnQ",
+            "url": "https://i.ytimg.com/vi/EWTdrp3vvKU/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCt3Pcht6kfJ0xxdqfDJFB3lKLTgg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/EWTdrp3vvKU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAWzxiqbOM_U4nJBWgfewi9p5BJIg",
+            "url": "https://i.ytimg.com/vi/EWTdrp3vvKU/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAB4Oo5-fUvc-H7RIEJkBOwEBOtMw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/EWTdrp3vvKU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCaiY2vLIRtPpagprpfLx6t06YH6g",
+            "url": "https://i.ytimg.com/vi/EWTdrp3vvKU/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAZpIBqNItNt6VDyfgbjeJHkADsyw",
             "height": 188,
             "width": 336
           }
@@ -5343,22 +5651,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Painters_Dream",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/LcjME5OeHk8/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD8SBhYtBAF5nk0hAdDYNBuWYcP3Q",
+            "url": "https://i.ytimg.com/vi/LcjME5OeHk8/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDsxG-UNvTQ4ylEY_mI7WS7P1sAjw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/LcjME5OeHk8/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDNYgGS2DLS357J7cO2dDpOuoPxKQ",
+            "url": "https://i.ytimg.com/vi/LcjME5OeHk8/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDNNBmG2h3XfF7dg7gf-mi9ZfBoxg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/LcjME5OeHk8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBzrzKze1n9X5S0nAbiADWV6W2Y0w",
+            "url": "https://i.ytimg.com/vi/LcjME5OeHk8/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAWrUKFlgMLpo33IczxNNyOOTldUA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/LcjME5OeHk8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBnc5RS0sQj7ZUa99LbFnq0WyQ3KA",
+            "url": "https://i.ytimg.com/vi/LcjME5OeHk8/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBiSCtVwF2OhIaXHVztcQWqAkb4KA",
             "height": 188,
             "width": 336
           }
@@ -5387,22 +5695,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Painters_Dream",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/GdVkaMfxfts/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLABpnh0FQjtJiHWp07iXVUE-FbFgQ",
+            "url": "https://i.ytimg.com/vi/GdVkaMfxfts/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDNBOj1DEFXKo_4OOUY6p22XWbBzQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/GdVkaMfxfts/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC-a0_IM-7s9ojz-kAeM3UijBtwPw",
+            "url": "https://i.ytimg.com/vi/GdVkaMfxfts/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCQ0oLKq4tX4K78YR_p2jasJlTPow",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/GdVkaMfxfts/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB1w_aAeAjvLgPfnyZtVJyJx6PWDQ",
+            "url": "https://i.ytimg.com/vi/GdVkaMfxfts/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDznMCcYCVYa17ts2t2N-Sr75tlpQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/GdVkaMfxfts/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAmfIXRqf2TSuO99BtL8Xb6f0w1cA",
+            "url": "https://i.ytimg.com/vi/GdVkaMfxfts/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBwG5hK1uTG7Si4oY4swJI4r_bXeA",
             "height": 188,
             "width": 336
           }
@@ -5431,22 +5739,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Painters_Dream",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/vzlLI1B_91g/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDQ5CP1m37e9WrxujyopN_225aiqA",
+            "url": "https://i.ytimg.com/vi/vzlLI1B_91g/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCLH_NvcVcGItqbotMNLrOBytA0PA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/vzlLI1B_91g/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCLmWQyA_eeAWMVx4QcZCqTc5FqyQ",
+            "url": "https://i.ytimg.com/vi/vzlLI1B_91g/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLACtm8ZIV6xeE3RiuFnLnxaUxhMWA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/vzlLI1B_91g/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDQ_mt0e8jF2qreTBygogc3aa9Glg",
+            "url": "https://i.ytimg.com/vi/vzlLI1B_91g/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDiA1a3zu1DsgzQ_ITTG7daErpquw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/vzlLI1B_91g/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCkCm8YYfgbXSI1QLFEztTtXg7q1A",
+            "url": "https://i.ytimg.com/vi/vzlLI1B_91g/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCe2F30fdrHFPgWe5dA4hEIGP7hyw",
             "height": 188,
             "width": 336
           }
@@ -5475,22 +5783,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Painters_Dream",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/AyjhVXeIhKU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDiqAsBVQ2i1rtbZJMOG66YrhzqGA",
+            "url": "https://i.ytimg.com/vi/AyjhVXeIhKU/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBMSpV6l3SXHL21olkjltl4tK9qOA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/AyjhVXeIhKU/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC9Eq2XbfNeZw4hHvB0TerNRy2ofw",
+            "url": "https://i.ytimg.com/vi/AyjhVXeIhKU/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCOUtr0aYFbwArcB5saOzx5Thkg7Q",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/AyjhVXeIhKU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAXnd_v64WWLVmpscbVIFlywxEIcg",
+            "url": "https://i.ytimg.com/vi/AyjhVXeIhKU/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDcA1ugV9gIIcUQEC0sPUcPeIq32A",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/AyjhVXeIhKU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC_XV9vHR6l5NUSvheJm26AJlIEXg",
+            "url": "https://i.ytimg.com/vi/AyjhVXeIhKU/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDGrCI099xXYoCx72Qoggpk0MXsug",
             "height": 188,
             "width": 336
           }
@@ -5519,22 +5827,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Painters_Dream",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/U2WXMUa7BWo/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDvLW8ffTBaHqKpZoHRL07dj1iT5A",
+            "url": "https://i.ytimg.com/vi/U2WXMUa7BWo/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCT7L0UJjLJuoLFGivI2ajPUiheNw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/U2WXMUa7BWo/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAh3uUtAodCNN8BXyrRXh_K1fcPGg",
+            "url": "https://i.ytimg.com/vi/U2WXMUa7BWo/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDEt_PKFwq19Kl03N4CsAW6A7BuNg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/U2WXMUa7BWo/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA_UlEALI_nLgYxi-TRKs27kgM6vw",
+            "url": "https://i.ytimg.com/vi/U2WXMUa7BWo/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCxbO0yOXrM663ZDTqgvW3vcfNeNQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/U2WXMUa7BWo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCverdiaeJJcZ4_F036EefeydFyrw",
+            "url": "https://i.ytimg.com/vi/U2WXMUa7BWo/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBKRQlgseoFPEZKg1jYcaZeX5dzLw",
             "height": 188,
             "width": 336
           }
@@ -5563,22 +5871,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Painters_Dream",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/kKK_l6IQnUk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDwk87iNxOsz-V7BjotY_bhoVbN1A",
+            "url": "https://i.ytimg.com/vi/kKK_l6IQnUk/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBXjwBsW_Xj4X3QmWnRFlyh2kllLg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/kKK_l6IQnUk/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAFgtEGYe8C5PCh7McO2Kv9HU47CQ",
+            "url": "https://i.ytimg.com/vi/kKK_l6IQnUk/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCQXvM0vVRiD1jSsKOAOrL_99ddlQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/kKK_l6IQnUk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCxH0Eb5yaWfTJpNas6NjgcFr7oIQ",
+            "url": "https://i.ytimg.com/vi/kKK_l6IQnUk/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDd0C_sWBt266fKAeIINdgka1ox3g",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/kKK_l6IQnUk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBxS5EpgjjCU8GH_431smkIb0EPaQ",
+            "url": "https://i.ytimg.com/vi/kKK_l6IQnUk/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB8Jet5LDfWeDfSfpzNMJOq-q0qag",
             "height": 188,
             "width": 336
           }
@@ -5607,22 +5915,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Painters_Dream",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/8dPO3fDt5OE/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAwaF6YUODHOWhDkWe9JicjV0vEPw",
+            "url": "https://i.ytimg.com/vi/8dPO3fDt5OE/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLD6ooZ_bmvpFrwHWknZq0kj1d_jbQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/8dPO3fDt5OE/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDSC4bzB5QA0DK5qsLZyZO9-xiHZA",
+            "url": "https://i.ytimg.com/vi/8dPO3fDt5OE/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDwHqWeYLk2M-HImw_ioMw9wCqCzg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/8dPO3fDt5OE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCixJ5cP547xwb7mM-LDUcjBzgCWA",
+            "url": "https://i.ytimg.com/vi/8dPO3fDt5OE/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCjWYpo-jPngbYTWmk6_4QPp6bK4g",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/8dPO3fDt5OE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBTZbBbRsagWRJA_Cbz-1IgWuu4ZA",
+            "url": "https://i.ytimg.com/vi/8dPO3fDt5OE/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCjENuMa4PTaOc0XlX6nOLzKy1JjQ",
             "height": 188,
             "width": 336
           }
@@ -5651,22 +5959,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Painters_Dream",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/wDbrDQO6c98/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAkbn7aQAFg6_zz94x2ERub1CqZsA",
+            "url": "https://i.ytimg.com/vi/wDbrDQO6c98/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDxI95sE-Qpn5PE0hN5Cf3qijgOZA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/wDbrDQO6c98/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBsiXns2u9jf2BSwQlOC4-rFbGTBQ",
+            "url": "https://i.ytimg.com/vi/wDbrDQO6c98/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCCybNJ8SukBo54Bnw8qHpOGtWP9g",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/wDbrDQO6c98/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAF5lrOzl3iC9cT62pokjziEcGWWg",
+            "url": "https://i.ytimg.com/vi/wDbrDQO6c98/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAxfKiAj1bi-2hP-XS2Pc1FnCy9fQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/wDbrDQO6c98/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCMW7-BrWKyskQk6nUoVvE1EV435A",
+            "url": "https://i.ytimg.com/vi/wDbrDQO6c98/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBN8Mwzn91K_nnnaEoisok_gfBmcw",
             "height": 188,
             "width": 336
           }
@@ -5695,22 +6003,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Painters_Dream",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/UCuqpVlRHtE/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCsmUgf7ZgAjU9arHYTxNIx4mEw9Q",
+            "url": "https://i.ytimg.com/vi/UCuqpVlRHtE/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA4VepjPZINjOOlk9j5Vslt81_hlQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/UCuqpVlRHtE/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCEPnmDGxJ_Wdow2L6PB3aWbOLPpQ",
+            "url": "https://i.ytimg.com/vi/UCuqpVlRHtE/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLB_BhF3fgHeCaB-lScZrsPMIhHq5Q",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/UCuqpVlRHtE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBLN44-MVt64q0x5VVQEshiFhgI0A",
+            "url": "https://i.ytimg.com/vi/UCuqpVlRHtE/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCSvJhKLlCbfd-qhMqvojOHWjr8-A",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/UCuqpVlRHtE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBW9M0_G1P6eZ94EAYxZFZxqyLi3Q",
+            "url": "https://i.ytimg.com/vi/UCuqpVlRHtE/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAc3xGuZCV7eGecHADrsx3keE81Kw",
             "height": 188,
             "width": 336
           }
@@ -5739,22 +6047,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Painters_Dream",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/-JSSbxoY4dM/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAH7XLnC8QgVr6JfSN08RxagkjnJQ",
+            "url": "https://i.ytimg.com/vi/-JSSbxoY4dM/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLC2Fmak0P0e9V2ZqDIFX_6z7M5Stw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/-JSSbxoY4dM/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAciLzQ0jifhf3Kptj2q7r11MqDMw",
+            "url": "https://i.ytimg.com/vi/-JSSbxoY4dM/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDFogWx83kCMTHC9LCBJuzQTGqCtA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/-JSSbxoY4dM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLADebFc_yruMwK2wm8DL2oHvneWnA",
+            "url": "https://i.ytimg.com/vi/-JSSbxoY4dM/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDkgfCjUVquOiHgmhBQ5xaHZb8ffA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/-JSSbxoY4dM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBj7nzgtLb8NtznUTv0jfOFad66uA",
+            "url": "https://i.ytimg.com/vi/-JSSbxoY4dM/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBb7BYh16-ywRNZf7b7eWyHLCyavw",
             "height": 188,
             "width": 336
           }
@@ -5783,22 +6091,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Painters_Dream",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/wRUS2Or6LP4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAL4YZ38lFOYJmgYnCnNJnjNKjFhg",
+            "url": "https://i.ytimg.com/vi/wRUS2Or6LP4/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBhcK_KxAOEhga6hoenkfIJse8FSA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/wRUS2Or6LP4/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAZnBhv_jIdg6RAb10yVhlKp6KDcw",
+            "url": "https://i.ytimg.com/vi/wRUS2Or6LP4/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLD2QEfw0Os-Qpd6O4QeStXewnVeRA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/wRUS2Or6LP4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBoQYMqW6-IfSpwqYPz3sx4q8hmLA",
+            "url": "https://i.ytimg.com/vi/wRUS2Or6LP4/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCu6kFv6mQ90Ibe43QTy7OWP9jLwQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/wRUS2Or6LP4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAESavs_YuZnGih4Km3e1-QsqqReg",
+            "url": "https://i.ytimg.com/vi/wRUS2Or6LP4/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBRdaHoOtxxVs7YvfiyJUV0c9L83w",
             "height": 188,
             "width": 336
           }
@@ -5827,22 +6135,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Painters_Dream",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/J13ctlmXosw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDhOIAiN6fV9WvM2E5aVViTHBH-0g",
+            "url": "https://i.ytimg.com/vi/J13ctlmXosw/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBEh-BCCTpqtImTZCzDlQ_6ZoLKwA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/J13ctlmXosw/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBdy3cdUs9FG0sNFwBzPzkeRf_VsQ",
+            "url": "https://i.ytimg.com/vi/J13ctlmXosw/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBeGORyIL-C4GDLUmc3qdEkIA36CQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/J13ctlmXosw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBy-siYB9d4-D3uMqgG3RLJJ60-WA",
+            "url": "https://i.ytimg.com/vi/J13ctlmXosw/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCXKxpln0VmZ9-fpAHDxnyNafbrpw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/J13ctlmXosw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDmsD02FFwOpeKDEODoY_LbQE5-hw",
+            "url": "https://i.ytimg.com/vi/J13ctlmXosw/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCllb9jW722SrU8NghKaZZp---TRQ",
             "height": 188,
             "width": 336
           }
@@ -5871,22 +6179,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Painters_Dream",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/s19-pdfCt-M/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDtfF6XvAvLb1wSreb6YeUme4VV6Q",
+            "url": "https://i.ytimg.com/vi/s19-pdfCt-M/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCZkwqMwfqfvEtzYC70W0zhVD8LCQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/s19-pdfCt-M/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAuFAKighFq9ycHxZ2ipdgcSZsO5Q",
+            "url": "https://i.ytimg.com/vi/s19-pdfCt-M/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDAQ2qAkwgoUZFlZMJIp-P32KOvKQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/s19-pdfCt-M/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAMVY8L3U9RMzkOe_U61WjU-r6JJw",
+            "url": "https://i.ytimg.com/vi/s19-pdfCt-M/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBRpPVi_lI4wABsBfA8TUG8FjYN4A",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/s19-pdfCt-M/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCKs8t4dRsb2Wyy5y1xWbXgemloxw",
+            "url": "https://i.ytimg.com/vi/s19-pdfCt-M/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCxZ1Vkhc21PPSuqBHZ_m_GoCS0fA",
             "height": 188,
             "width": 336
           }
@@ -5915,22 +6223,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Painters_Dream",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/7Qm0mrqMvHk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBrPMN3pyXmkIgYmKw1SRQZDQWTEw",
+            "url": "https://i.ytimg.com/vi/7Qm0mrqMvHk/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDNyiT5_hv7sfZhiKDfBjGY9UKn2g",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/7Qm0mrqMvHk/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAIC89lVk0K0Pn9lfqmgAbbGXY7tQ",
+            "url": "https://i.ytimg.com/vi/7Qm0mrqMvHk/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBiTbpLfQKBpThBZ7vwqCJBz5-ZcA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/7Qm0mrqMvHk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCE9MzVC_Ea-jTBq9AX1ndXbvzmxQ",
+            "url": "https://i.ytimg.com/vi/7Qm0mrqMvHk/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDtearcirxpac4YvXicNuj8ww4eFQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/7Qm0mrqMvHk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAwPlH6dP9qWC7edKTHXYOFtqyVHg",
+            "url": "https://i.ytimg.com/vi/7Qm0mrqMvHk/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDpuOvQhUl_zS8bXVoO2pRbfgzB3A",
             "height": 188,
             "width": 336
           }
@@ -5959,22 +6267,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@Painters_Dream",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/tYqFa62raXE/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA6bM1gpioIvqkSvCqFyhp_buiGYA",
+            "url": "https://i.ytimg.com/vi/tYqFa62raXE/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDveF7i05Z33VkVITK4z7WF6wPYOA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/tYqFa62raXE/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCXIqgaDiBCiWY81BCM-0I4Ei2dtw",
+            "url": "https://i.ytimg.com/vi/tYqFa62raXE/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBqhiZUQqRImLDauixmAOhWS4o54A",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/tYqFa62raXE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAENMKLYlNqk_iwej4VakV-dCHbUA",
+            "url": "https://i.ytimg.com/vi/tYqFa62raXE/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAw8YMLWt5b3ol89jEcF5NUwSSstA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/tYqFa62raXE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD1HJceZKL2DhaSU_hxMDE8bKGc1A",
+            "url": "https://i.ytimg.com/vi/tYqFa62raXE/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBMihIo4NZ1bMiPZ9PQh0p1p9hCCw",
             "height": 188,
             "width": 336
           }
@@ -6018,22 +6326,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@cupid-studio",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/oWMDH9dPswg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBQFGBjjhHLEza9irqxy2EJqbCe9g",
+            "url": "https://i.ytimg.com/vi/oWMDH9dPswg/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDWB0LjV-kFKomVWySFV4vJa0VwaA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/oWMDH9dPswg/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAk2samYC7j8xO53xf1UPKVfTNpKQ",
+            "url": "https://i.ytimg.com/vi/oWMDH9dPswg/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA-EDe3HtdHNnGddMEgvbmno7ykSA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/oWMDH9dPswg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBsJKQI64CIsf_VdV_x3ab-IIwpNA",
+            "url": "https://i.ytimg.com/vi/oWMDH9dPswg/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBibVRdcw9mlPG6xR_MM_NCJqVqSQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/oWMDH9dPswg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC81SoQW0RpU8nXsRxdKiRbi_dpRg",
+            "url": "https://i.ytimg.com/vi/oWMDH9dPswg/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDNvESPHP-3u-dEIX-7l5xE-4YTLQ",
             "height": 188,
             "width": 336
           }
@@ -6062,22 +6370,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@cupid-studio",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/hjabL-72QdA/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC1hrUClI53Jo6ZiCN7DWYaY0z--A",
+            "url": "https://i.ytimg.com/vi/hjabL-72QdA/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBnsW6kquzvrOLQqLweM_4qQhi5zw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/hjabL-72QdA/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDN8Y9SP0yXp0uv4v9NK7SlFbwApA",
+            "url": "https://i.ytimg.com/vi/hjabL-72QdA/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCScE9bSkiZAu7d18WJ567KHNr2KQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/hjabL-72QdA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCJU4eT1prnDI9qdSv0HbzGSu19BA",
+            "url": "https://i.ytimg.com/vi/hjabL-72QdA/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBJCXdog41H7jNWO9SIN-XG4ETdvA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/hjabL-72QdA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCmjVryWVUV0s6X0LaVMmJbUUXzeQ",
+            "url": "https://i.ytimg.com/vi/hjabL-72QdA/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDHQgOPvyc__OB4Feyrqf4Pe1mUYg",
             "height": 188,
             "width": 336
           }
@@ -6106,22 +6414,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@cupid-studio",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/kARsjqPKWtE/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAYQDQqcdbPQmRAKZ9ypkY1c_kIPw",
+            "url": "https://i.ytimg.com/vi/kARsjqPKWtE/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLD8hfepe04Lo0mUAiyVRIGRkNHC-A",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/kARsjqPKWtE/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCx-36_Ig_qWQHxZ3EVBu5NAPF7qg",
+            "url": "https://i.ytimg.com/vi/kARsjqPKWtE/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCOJW5X-Yrfd7Zaomwu2rRSNmYBBQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/kARsjqPKWtE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD_wcirGl-tyBxjfq9ZO81_ZGAZXA",
+            "url": "https://i.ytimg.com/vi/kARsjqPKWtE/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAmYcXWYlcwSZftzaPSeDaHQilgzw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/kARsjqPKWtE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAwYnM4r6n69yHETgqQsgE7raVH9A",
+            "url": "https://i.ytimg.com/vi/kARsjqPKWtE/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDazUJasA1I3ygistav_HwG2-izQA",
             "height": 188,
             "width": 336
           }
@@ -6150,22 +6458,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@cupid-studio",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/kzeTKxRbciU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLByJ6NkNS45Le4mUFFvU7KL0VIHfA",
+            "url": "https://i.ytimg.com/vi/kzeTKxRbciU/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCV0dQ2QGaGTjG2nml7rsLWJcnBHw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/kzeTKxRbciU/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC8WbETfEm6u7-v5cug5AxpwiNN0A",
+            "url": "https://i.ytimg.com/vi/kzeTKxRbciU/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBGHDdLPxtiA-MhhAEBIvlTLwBzlQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/kzeTKxRbciU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDwMhiNijIFMfR_ILPd7W3ifEd0Sw",
+            "url": "https://i.ytimg.com/vi/kzeTKxRbciU/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBxkdFTq_83L8fQ9MPNVm8h8x3dgA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/kzeTKxRbciU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA8R-kh9dnDKmjaTW2uZZUX4QJunw",
+            "url": "https://i.ytimg.com/vi/kzeTKxRbciU/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLC3_8Wc0X8OVwPSwMWQRAfiScJDOg",
             "height": 188,
             "width": 336
           }
@@ -6194,22 +6502,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@cupid-studio",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/JwDUUz8BmBs/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBbuRq3RNEJmrf3tfpEIguhffH8ZA",
+            "url": "https://i.ytimg.com/vi/JwDUUz8BmBs/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLC_l_9UN7uU8xzlBa9Y6OYLUIHBOw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/JwDUUz8BmBs/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBNKlkEnwIoEkl6PTqyNR-tc9bhXA",
+            "url": "https://i.ytimg.com/vi/JwDUUz8BmBs/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLB1MMu9lfftYC_LAmDM8n5J2WOMAg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/JwDUUz8BmBs/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB5kc0XE7g6P1wVRdktBnyo0wFxgA",
+            "url": "https://i.ytimg.com/vi/JwDUUz8BmBs/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAXzZcVOIFtfNldnPeCcjEcJymcvw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/JwDUUz8BmBs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCsRmAhq39pcsup3G9LngGHw1Pt6Q",
+            "url": "https://i.ytimg.com/vi/JwDUUz8BmBs/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCxDT4ZEVvK7UO7xR2KHwEVH8orpQ",
             "height": 188,
             "width": 336
           }
@@ -6238,22 +6546,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@cupid-studio",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/O_hNR6G07Yk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBemNylZm8SxL4gmNFES795AzyWNg",
+            "url": "https://i.ytimg.com/vi/O_hNR6G07Yk/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBNb3a8mSJFH47vXDOQJMWH9kdqIw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/O_hNR6G07Yk/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC1sbX6j-Gzq_k7ENEudQ4L_mTm7w",
+            "url": "https://i.ytimg.com/vi/O_hNR6G07Yk/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDXhPM445KwmzEid1l82jIOuOKHFA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/O_hNR6G07Yk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCk_nPi_UNTEcArCI9aBNYuMqv1bA",
+            "url": "https://i.ytimg.com/vi/O_hNR6G07Yk/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCzlrnfL-gnFT3pObwgHKPOB24LbA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/O_hNR6G07Yk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB-PafrhZDt35UAtNfcdekyr1mIgA",
+            "url": "https://i.ytimg.com/vi/O_hNR6G07Yk/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBzvPbmMGxHLSLyhHyn9LGRVZ-4sg",
             "height": 188,
             "width": 336
           }
@@ -6282,22 +6590,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@cupid-studio",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/XadRir6ctSE/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC9EqIlihJHM24Di0xi1AJFm84f0A",
+            "url": "https://i.ytimg.com/vi/XadRir6ctSE/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLC-Fs1Om2DCBC-CYvET-WBYpUHR-g",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/XadRir6ctSE/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAEK79Txci9__muibGwSIfGdPm2QQ",
+            "url": "https://i.ytimg.com/vi/XadRir6ctSE/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLD979C64VhLpd3R-hQ1NZRIMIEJzg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/XadRir6ctSE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA_VFjdxO5PUQvPCejwKQpC9__-lA",
+            "url": "https://i.ytimg.com/vi/XadRir6ctSE/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB0aOw2MZnYpdAtcFD0cTGt9teKoA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/XadRir6ctSE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC7zwFR6_rRz3TzcprgK9v28zLtnA",
+            "url": "https://i.ytimg.com/vi/XadRir6ctSE/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLApYlKH8B_119Vq1VKevhbiWCn9wA",
             "height": 188,
             "width": 336
           }
@@ -6326,22 +6634,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@cupid-studio",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/URu5GAL4FN8/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDgw_x8CZuoeGnK7l2zh8LB4RqYsQ",
+            "url": "https://i.ytimg.com/vi/URu5GAL4FN8/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLC8ASK7U8xpqVB5aQK8iYjN6x5DZA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/URu5GAL4FN8/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCicWcGGRczYd6xXVYZ2kdO5zS24w",
+            "url": "https://i.ytimg.com/vi/URu5GAL4FN8/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAu6k0oKXt3YZsE_EkxJYSMKoH-Cg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/URu5GAL4FN8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBC1uI3sgKInoFuVyg0a5af0MnM3Q",
+            "url": "https://i.ytimg.com/vi/URu5GAL4FN8/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAcUIZxuQz8mv6Cs6TDZFHDqAQFlA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/URu5GAL4FN8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCzhrNc1HVcWyYUCKkebxjG6ArdYg",
+            "url": "https://i.ytimg.com/vi/URu5GAL4FN8/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCte-zue5xW2f_p0wfOF8-TVJGRcw",
             "height": 188,
             "width": 336
           }
@@ -6370,22 +6678,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@cupid-studio",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/DiSniTgZsLI/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAEuuoHG7FikypJ1b_Dq8Tfz9M9eg",
+            "url": "https://i.ytimg.com/vi/DiSniTgZsLI/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDh5J78cHwHOOq_KFfKAeZuSchxhQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/DiSniTgZsLI/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBlJ9eC_pRBVf-jfqmqUmxF68JQiQ",
+            "url": "https://i.ytimg.com/vi/DiSniTgZsLI/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBwQAVWei6lCxzEyhhRaV9KR5kvzw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/DiSniTgZsLI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDaqI9XT4_nsgQ1kZ8YJasP7U3I1Q",
+            "url": "https://i.ytimg.com/vi/DiSniTgZsLI/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAMNZgGgsGiaOBAw5sHekc8q8LPuw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/DiSniTgZsLI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBiJy0g241M3Q4OfjVwSx5laR4CBg",
+            "url": "https://i.ytimg.com/vi/DiSniTgZsLI/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBtng0czQsQwAfa-KkuNavoAoUxdQ",
             "height": 188,
             "width": 336
           }
@@ -6414,22 +6722,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@cupid-studio",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/qEmmHWrxlno/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB6roP7kcI0iH5sEgOEsukeQ1oXoQ",
+            "url": "https://i.ytimg.com/vi/qEmmHWrxlno/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDy9FxnDiEMZGgGveL8G8O-iPmBwA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/qEmmHWrxlno/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB0dMq-qwSs_EFzMV36mGs8zYC3TQ",
+            "url": "https://i.ytimg.com/vi/qEmmHWrxlno/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCaxH6Tw2jKj2J-5dV5mHA4JGR0Cw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/qEmmHWrxlno/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDaDQyBM83MLxQdvdiU5v8lRAx6Ig",
+            "url": "https://i.ytimg.com/vi/qEmmHWrxlno/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDGM9RLSBbGA8E8j93h9vG3mWnwJQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/qEmmHWrxlno/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDucjR256ZI6Iq3B3uKjkTOh3Raeg",
+            "url": "https://i.ytimg.com/vi/qEmmHWrxlno/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLC47_Iuoowxqd3pOGueWU-ePYXLsg",
             "height": 188,
             "width": 336
           }
@@ -6458,22 +6766,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@cupid-studio",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/WFL_3LUf7_U/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAq4Hn-l-zsKlOMuGzDuKA9rj6_-w",
+            "url": "https://i.ytimg.com/vi/WFL_3LUf7_U/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCKBauFyPk1IdhrGwzwsLGlZwDkbQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/WFL_3LUf7_U/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCEaVcyfSe90qhLnTDi6Ynp_9gHkA",
+            "url": "https://i.ytimg.com/vi/WFL_3LUf7_U/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCo285b7s7_rHUvmmhpa8VfL51reg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/WFL_3LUf7_U/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDxWo6wA9pBtCdJzTTPKxLgP00BBg",
+            "url": "https://i.ytimg.com/vi/WFL_3LUf7_U/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBs47qzPtyZ2ElRfSQs_TsPUESYyQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/WFL_3LUf7_U/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDf4EYk_CSFiPxmaR7lfyDwrfPzrA",
+            "url": "https://i.ytimg.com/vi/WFL_3LUf7_U/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLApfd6nZDnX5Ymr4-cyPgBGg3YGTw",
             "height": 188,
             "width": 336
           }
@@ -6502,22 +6810,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@cupid-studio",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/5zj7MU2CyzY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDWUHOpzFjFOFilbbCwZ2XCW_ESkg",
+            "url": "https://i.ytimg.com/vi/5zj7MU2CyzY/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAhh1VGcmUVjgFRzx3dhYf_rdO7BA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/5zj7MU2CyzY/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCRzXL2Qj5mH_8bCjrLWkbtlqFUEw",
+            "url": "https://i.ytimg.com/vi/5zj7MU2CyzY/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBMDnmKnes4DKwuG7nc_uVk1MTSww",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/5zj7MU2CyzY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCezn-B1v9uqkpbHAIuE92h814SUQ",
+            "url": "https://i.ytimg.com/vi/5zj7MU2CyzY/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCu3kVH2S__H2f86ii13PBK4amQ1g",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/5zj7MU2CyzY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCZZgKHmnGJJvOeLrh6M3tQUfvjzA",
+            "url": "https://i.ytimg.com/vi/5zj7MU2CyzY/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBm1lBdUScai44_w47pe0ZcVSt-Mw",
             "height": 188,
             "width": 336
           }
@@ -6546,22 +6854,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@cupid-studio",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/_gDOm7Jts04/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB8KY2OtdbWOsFyT2Hq_rPmYAJsgQ",
+            "url": "https://i.ytimg.com/vi/_gDOm7Jts04/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCVJF_p2lPAHuu_U2j2eTovAQVz4Q",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/_gDOm7Jts04/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDY4ST-zFIbbMg17F9pUlC3EKwyIg",
+            "url": "https://i.ytimg.com/vi/_gDOm7Jts04/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDAM8UktxoiQRhzD_UZlZtYLxylmw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/_gDOm7Jts04/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBGbKN34W_zTnTaitAIvRDJB416AA",
+            "url": "https://i.ytimg.com/vi/_gDOm7Jts04/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCJl2pqmUBXCi09ey1theDB-25YBA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/_gDOm7Jts04/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDst93BazbQ23Tfp2y0XLuAJu7_0A",
+            "url": "https://i.ytimg.com/vi/_gDOm7Jts04/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAU-9VVLEFSUSRIEiY3KzhPssGVuA",
             "height": 188,
             "width": 336
           }
@@ -6590,22 +6898,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@cupid-studio",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/uZtIuSjvwbE/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA9m96OwtBvYA3P3rJJGtLduUMFJA",
+            "url": "https://i.ytimg.com/vi/uZtIuSjvwbE/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLALTAvfsdGcr6PDeHEvVxuvUDJRaw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/uZtIuSjvwbE/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCuyKhJQnX16R1kXNRrsXKukbiLig",
+            "url": "https://i.ytimg.com/vi/uZtIuSjvwbE/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAcuCPZLBVZedV-JVWCFW2s8hBWOQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/uZtIuSjvwbE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBcd1QcQam6pKEKeGttiA6hV7bYrA",
+            "url": "https://i.ytimg.com/vi/uZtIuSjvwbE/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDx5Qm5bRlsPACYa-SfoJiK05gT7A",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/uZtIuSjvwbE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDiKqeFcLa7UNvmA0U9-ZONGpB00A",
+            "url": "https://i.ytimg.com/vi/uZtIuSjvwbE/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBESisAoXji5wv2AUT4BjxkspB2Dg",
             "height": 188,
             "width": 336
           }
@@ -6614,50 +6922,6 @@ const CHANNEL_STATS = [
         "release_timestamp": null,
         "availability": null,
         "view_count": 8600,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "2hugXnfMJPw",
-        "url": "https://www.youtube.com/watch?v=2hugXnfMJPw",
-        "title": "Claude Monet Painting | Parisian Romance",
-        "description": null,
-        "duration": 196,
-        "channel_id": "UClWtMcqVrDo3039JTMAYE4w",
-        "channel": "Cupid Studio",
-        "channel_url": "https://www.youtube.com/channel/UClWtMcqVrDo3039JTMAYE4w",
-        "uploader": "Cupid Studio",
-        "uploader_id": "@cupid-studio",
-        "uploader_url": "https://www.youtube.com/@cupid-studio",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/2hugXnfMJPw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCuK14hbBVAUY2kItLzR3rppd4TRQ",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/2hugXnfMJPw/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB05_DCbpg16qISplnADVjy0mjBMQ",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/2hugXnfMJPw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA6cminwbNw8O8yr2yHb77rdvF7VA",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/2hugXnfMJPw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD4EophWTpRVVb8Qup7_TPqkrulJg",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 6500,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -6678,22 +6942,66 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@cupid-studio",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/jTfxxjwUwzI/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAcoDV1h9tiqAcoc-0NC8uO4fF6sQ",
+            "url": "https://i.ytimg.com/vi/jTfxxjwUwzI/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCONxHlOOZXIUdTPMjNPn0nf4RUVA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/jTfxxjwUwzI/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDsRx39WtTrJ3bl--Ml_cyXI-ATdA",
+            "url": "https://i.ytimg.com/vi/jTfxxjwUwzI/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLC1pjpPvMY4FXM02PQbd15wKHDZNA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/jTfxxjwUwzI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCdg4ZBiRvCcTOxGZr0ON21OwtlLA",
+            "url": "https://i.ytimg.com/vi/jTfxxjwUwzI/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB9OtuyOr8RdBd4dRDjjoKVmRNKDw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/jTfxxjwUwzI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDpxnepFGOEIo-OIBalXbwuHKwnGg",
+            "url": "https://i.ytimg.com/vi/jTfxxjwUwzI/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCuY701BNkTXGaN1JiAjkeOZKeNEw",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 6500,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "2hugXnfMJPw",
+        "url": "https://www.youtube.com/watch?v=2hugXnfMJPw",
+        "title": "Claude Monet Painting | Parisian Romance",
+        "description": null,
+        "duration": 196,
+        "channel_id": "UClWtMcqVrDo3039JTMAYE4w",
+        "channel": "Cupid Studio",
+        "channel_url": "https://www.youtube.com/channel/UClWtMcqVrDo3039JTMAYE4w",
+        "uploader": "Cupid Studio",
+        "uploader_id": "@cupid-studio",
+        "uploader_url": "https://www.youtube.com/@cupid-studio",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/2hugXnfMJPw/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBYo-9Y8aPXe0xTYUUdQEFhKnG6-A",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/2hugXnfMJPw/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA6zfuorVX79hPmFbD9UQjSdtUODA",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/2hugXnfMJPw/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB2OpzaLhp2UW0EBiIhfpnhJvULog",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/2hugXnfMJPw/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDyQ4_eEFK7wbK6nneuHRfvSly01A",
             "height": 188,
             "width": 336
           }
@@ -6722,22 +7030,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@cupid-studio",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/RE7ozAvuKjI/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAzqeLPiCMBo7v4UpmLJXa7YSyYKA",
+            "url": "https://i.ytimg.com/vi/RE7ozAvuKjI/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLB0wq7SJwF3e4d-Vj4_I7juHLXAhg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/RE7ozAvuKjI/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAXnM-3uzp6BD2-DrkowsMvVwukdw",
+            "url": "https://i.ytimg.com/vi/RE7ozAvuKjI/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDmc3FAuy_kNv1OdhMmGUfXYwByWw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/RE7ozAvuKjI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDkvuePe0PYINFM2gE6oVPkhOwf9w",
+            "url": "https://i.ytimg.com/vi/RE7ozAvuKjI/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAqYWSfmQLiAuB_3lw0i39h0Swy5g",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/RE7ozAvuKjI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBbH7WyagxJ8CRocx4Rstd0qcCLRA",
+            "url": "https://i.ytimg.com/vi/RE7ozAvuKjI/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDs8p3wrYC8m62b_Yd9-z7dh5XGaA",
             "height": 188,
             "width": 336
           }
@@ -6766,22 +7074,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@cupid-studio",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/B71LCjEtJXM/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCjBOoYmRvKEsommN58CAdyRGVm9g",
+            "url": "https://i.ytimg.com/vi/B71LCjEtJXM/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBFZ69Bh1VaTVF_TTWDrprj06Ey9A",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/B71LCjEtJXM/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBuAzp-y9MnCzl9AaVABVpEDJmCww",
+            "url": "https://i.ytimg.com/vi/B71LCjEtJXM/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBA4nZyIWAWijf3DyVWdy1Elk10dA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/B71LCjEtJXM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAHgAU0KgCrjv30QMXjtMWaVnE2Xg",
+            "url": "https://i.ytimg.com/vi/B71LCjEtJXM/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCgLySa2AVgJQI0Coe4eyRpjFte_g",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/B71LCjEtJXM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBmW4Uadmd2WXmesha3PfgXJUZmyQ",
+            "url": "https://i.ytimg.com/vi/B71LCjEtJXM/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBInAZv50I-TFlgQNC501_4AU7eTw",
             "height": 188,
             "width": 336
           }
@@ -6825,22 +7133,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@CreatorsofCuriosity",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/Sk8XKO668Ks/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB3oBisYo1O5zve9aPLDQTMrN3KHA",
+            "url": "https://i.ytimg.com/vi/Sk8XKO668Ks/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA5nq2MHzRAcHmvo_nz9JHmJaie-A",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/Sk8XKO668Ks/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAyYTlTsl5Kgb8XGUb-0mnGH-NPvg",
+            "url": "https://i.ytimg.com/vi/Sk8XKO668Ks/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDQOWt_IND4dnEnnxQQHd_vTBv1lA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/Sk8XKO668Ks/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBpy0jCTErRRsZ1CRwV-l0zyzq1hA",
+            "url": "https://i.ytimg.com/vi/Sk8XKO668Ks/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLD-MsHTh7WJKbF6p3eYkBkPh7BUsQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/Sk8XKO668Ks/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDLkF5HYyINCo1W_x4nDLFBhuFrfg",
+            "url": "https://i.ytimg.com/vi/Sk8XKO668Ks/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBbemYXMOaCM6nz7GpRjx2QzGD2sg",
             "height": 188,
             "width": 336
           }
@@ -6869,22 +7177,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@CreatorsofCuriosity",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/LuJGblxlTqs/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC4RGiUYXpv70n1jUYL7PDN2PuNTA",
+            "url": "https://i.ytimg.com/vi/LuJGblxlTqs/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCeSChoIx78mpP9DT9QwYnb8jsouw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/LuJGblxlTqs/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCzPRRS0wR3ZSBcUzAT1nf3mv3AhA",
+            "url": "https://i.ytimg.com/vi/LuJGblxlTqs/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCAeafFJip-PPySPqkEiiST9agPKA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/LuJGblxlTqs/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBd0bSuqcRCGGyngoT6cpuzPfBMOg",
+            "url": "https://i.ytimg.com/vi/LuJGblxlTqs/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAQ1JQ7QN-blBJek1M_Avv4x4Ld-Q",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/LuJGblxlTqs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB78FAW0cIYqgoYImxubXQjWFqAeg",
+            "url": "https://i.ytimg.com/vi/LuJGblxlTqs/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLD2_loKau7vdwv86Wg9r1bdO-jt-Q",
             "height": 188,
             "width": 336
           }
@@ -6928,22 +7236,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@awindowintothemuseum",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/FN16izlRi-8/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDEfyElXM4EydEgq1bhyWY_SzMJAA",
+            "url": "https://i.ytimg.com/vi/FN16izlRi-8/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCxCXTrjgGgyY4bgkzwavdAgxPypg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/FN16izlRi-8/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDi5-puvGuXovNnwKlqCe2aRCujQg",
+            "url": "https://i.ytimg.com/vi/FN16izlRi-8/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDLt4aYdzeTpoVb9xtpQaolnaY6vQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/FN16izlRi-8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAxMYuprBCjpsTN2IRHqJAEdsykLw",
+            "url": "https://i.ytimg.com/vi/FN16izlRi-8/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCoWt_sdfyaX8Zq5ROOom4P56ihWw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/FN16izlRi-8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB0-XSJ__Jy1y2NX9MgWjegl0XCTA",
+            "url": "https://i.ytimg.com/vi/FN16izlRi-8/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDr0gJyw52Zz50PiGvjvsKnDo4lkw",
             "height": 188,
             "width": 336
           }
@@ -6972,22 +7280,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@awindowintothemuseum",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/oIDKMOVf_RI/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDzXhyMUWtho02IO3OAMRkiuf1oRQ",
+            "url": "https://i.ytimg.com/vi/oIDKMOVf_RI/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBYIsJO7jJmWr23dpsoDGdbdpB2OA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/oIDKMOVf_RI/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAswnS0Tsx7dqSm62_CTRh2T1T53A",
+            "url": "https://i.ytimg.com/vi/oIDKMOVf_RI/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBon_7iH-xNATKcciSNcAB1zHKboA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/oIDKMOVf_RI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCMYfl4CSrpKnE3H9IHbasMHthutQ",
+            "url": "https://i.ytimg.com/vi/oIDKMOVf_RI/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLC21trns_Y4EF-YD6hJvAT2cSZRSA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/oIDKMOVf_RI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAOZ8WDp-p0mXtVSLpClMkuuUk8NA",
+            "url": "https://i.ytimg.com/vi/oIDKMOVf_RI/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBy4igqkF2QCAkiavKqNxgjteG9Dw",
             "height": 188,
             "width": 336
           }
@@ -7016,22 +7324,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@awindowintothemuseum",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/XTzuOtPSodI/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD4SHzE13BJSioMmQoS6BvRP37Ixw",
+            "url": "https://i.ytimg.com/vi/XTzuOtPSodI/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLB1Z6KSx9FXSQMBjyz-ApXZhzgAFQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/XTzuOtPSodI/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB_voTtuqSEF0ibdPljfYNsnwPhiw",
+            "url": "https://i.ytimg.com/vi/XTzuOtPSodI/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLC3RdJgGH6GGcdxTSESPa1U6hAzEQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/XTzuOtPSodI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAA5MINu7FEh237Kbo8wUsCr_7PDQ",
+            "url": "https://i.ytimg.com/vi/XTzuOtPSodI/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDwpgTH5S4UoQsTBR-WAh-aPF--4w",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/XTzuOtPSodI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDh60UkYwbZ0UNehOwxn6NKUu0RUw",
+            "url": "https://i.ytimg.com/vi/XTzuOtPSodI/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDuoWE05wvpK_bjaOfTZACtiACAGg",
             "height": 188,
             "width": 336
           }
@@ -7075,22 +7383,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@mysticvideoai",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/KMd8wH1bQsY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC_xtAaR7hp5LtHfcmhzOa5xKa0DA",
+            "url": "https://i.ytimg.com/vi/KMd8wH1bQsY/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCwrD3HEZmuuiFRmjdAqe_v85RLiQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/KMd8wH1bQsY/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAl6AKKxQHplTYX0tDmuh33alETaQ",
+            "url": "https://i.ytimg.com/vi/KMd8wH1bQsY/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDKGwPZOqKAUg_lszacK1GNWEc48g",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/KMd8wH1bQsY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAYS76Oia15MijR6YIJtxXP2hJ0DA",
+            "url": "https://i.ytimg.com/vi/KMd8wH1bQsY/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDG6nvVH79VyezokvY8siwhkLTIQQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/KMd8wH1bQsY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLADrZpttYsNDprfe19ugRabfM3SxQ",
+            "url": "https://i.ytimg.com/vi/KMd8wH1bQsY/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDC0caw6buYyuPr9D-gqL-QVa1ZHw",
             "height": 188,
             "width": 336
           }
@@ -7119,22 +7427,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@mysticvideoai",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/Vls1Mq-oMdg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAtP22BSsWTMHOH5xaXxjAkwdiRPA",
+            "url": "https://i.ytimg.com/vi/Vls1Mq-oMdg/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLD6hGgovTRiyF4zHdIbchsdDfgMKg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/Vls1Mq-oMdg/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBvLTUIwM72sPs-9P4_wFpE5opMqA",
+            "url": "https://i.ytimg.com/vi/Vls1Mq-oMdg/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCyUgqkNsqh-8241vf6oxNcSGOtDA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/Vls1Mq-oMdg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAwcenwjkj0polGNf1UMEeeT_BitQ",
+            "url": "https://i.ytimg.com/vi/Vls1Mq-oMdg/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLC0XjjKkSBt5zJyqxzq6xrdHkVBGw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/Vls1Mq-oMdg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAnrqFYekF2y2yP2rcRlSbnCT3Byw",
+            "url": "https://i.ytimg.com/vi/Vls1Mq-oMdg/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCRF47u7hPVkIcKG5r4wPdk8LAh1w",
             "height": 188,
             "width": 336
           }
@@ -7178,22 +7486,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@artful-tv",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/AWcmN1W_jJI/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD7GMy6ZSCEO5Um2xT74TZss9aKxA",
+            "url": "https://i.ytimg.com/vi/AWcmN1W_jJI/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDaYxhECnXmWJsQsvbv-xq1TstJCw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/AWcmN1W_jJI/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD7BY3N0WWL38uI7j7OF4T_i6kNcQ",
+            "url": "https://i.ytimg.com/vi/AWcmN1W_jJI/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLB_CA4Q3Z35sZiWT6j9V8UzOhuMdg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/AWcmN1W_jJI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBunMEwIffOVBDtCfdzCXDUBbEPtw",
+            "url": "https://i.ytimg.com/vi/AWcmN1W_jJI/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB_-BoCZTuN5287MPJGe_0ucZUdxg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/AWcmN1W_jJI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCx6oWDccthcigUsCLaSUHdM331TA",
+            "url": "https://i.ytimg.com/vi/AWcmN1W_jJI/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBr2pqp2gqCbK4j2CpLB3k6JhdU-w",
             "height": 188,
             "width": 336
           }
@@ -7237,22 +7545,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@paintingsilove3592",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/FTxh92VdZVw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLARUzNBlY-ZtgQ0FWByjAiugVpTqQ",
+            "url": "https://i.ytimg.com/vi/FTxh92VdZVw/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBTRRBI3TQvZRxeIUfTQpDzeF8M9A",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/FTxh92VdZVw/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCCqLAMyRxFEQ2tkGoTd2EA6O-IwA",
+            "url": "https://i.ytimg.com/vi/FTxh92VdZVw/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAnEFciOapac00ZH1cgTkqsxo6w1w",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/FTxh92VdZVw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCPuPb6qvMpggqbdIDY0KceYr6Bsg",
+            "url": "https://i.ytimg.com/vi/FTxh92VdZVw/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBgnh7K3F6_DIRDC3SLVHrvVv2GHA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/FTxh92VdZVw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBVxBDVEKSTf2jhlFFu7CMqW4xA4g",
+            "url": "https://i.ytimg.com/vi/FTxh92VdZVw/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLA0x1I9bxCP5OFxEwy1zJkMMn9B2w",
             "height": 188,
             "width": 336
           }
@@ -7271,6 +7579,153 @@ const CHANNEL_STATS = [
       "title": "Russian Painting – The Best of Russian Landscape Painters / Пейзажи знаменитых русских художников",
       "views": 322000,
       "url": "https://www.youtube.com/watch?v=FTxh92VdZVw"
+    }
+  },
+  {
+    "channel": "Living Motion Paintings",
+    "channel_url": "https://www.youtube.com/channel/UCldFnZSd7OFcqIO1gcBSb4g",
+    "count": 3,
+    "total_views": 302000,
+    "avg_views": 100667,
+    "videos": [
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "40xg3sB2PEc",
+        "url": "https://www.youtube.com/watch?v=40xg3sB2PEc",
+        "title": "Ivan Shishkin: The Master of Russian Landscape Painting | 4K Slideshow with Relaxing Music",
+        "description": null,
+        "duration": 4781,
+        "channel_id": "UCldFnZSd7OFcqIO1gcBSb4g",
+        "channel": "Living Motion Paintings",
+        "channel_url": "https://www.youtube.com/channel/UCldFnZSd7OFcqIO1gcBSb4g",
+        "uploader": "Living Motion Paintings",
+        "uploader_id": "@LivingMotionPaintings",
+        "uploader_url": "https://www.youtube.com/@LivingMotionPaintings",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/40xg3sB2PEc/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCblj5PncCF4YiCH46YcvT4ssTjRA",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/40xg3sB2PEc/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCv88fofYbm5g-wxNEnBYi4yrQA0g",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/40xg3sB2PEc/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAGYtvk3dNV86SaV97APfNnyheXpw",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/40xg3sB2PEc/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCrXVT0M6GiXd6f2Pn3mutyYRZlaw",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 207000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "hhCbN53J4EU",
+        "url": "https://www.youtube.com/watch?v=hhCbN53J4EU",
+        "title": "Russian Landscapes Reimagined: Savrasov's Artistry in Stunning 4K",
+        "description": null,
+        "duration": 3978,
+        "channel_id": "UCldFnZSd7OFcqIO1gcBSb4g",
+        "channel": "Living Motion Paintings",
+        "channel_url": "https://www.youtube.com/channel/UCldFnZSd7OFcqIO1gcBSb4g",
+        "uploader": "Living Motion Paintings",
+        "uploader_id": "@LivingMotionPaintings",
+        "uploader_url": "https://www.youtube.com/@LivingMotionPaintings",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/hhCbN53J4EU/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA8-znmtgd-_LdzvuD6qZCmEOl9cw",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/hhCbN53J4EU/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAZOUcDJHtniT7mUyOGR8iqWw54iQ",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/hhCbN53J4EU/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBQVV7WgWAjj1FuMu-42zbPForqxg",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/hhCbN53J4EU/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLC6MZZwt9wtJ7uP1rJid_m3rJbl5w",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 54000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "NwxqzVKJeto",
+        "url": "https://www.youtube.com/watch?v=NwxqzVKJeto",
+        "title": "Albert Bierstadt in 4K: Harmonies of Art and Music",
+        "description": null,
+        "duration": 4581,
+        "channel_id": "UCldFnZSd7OFcqIO1gcBSb4g",
+        "channel": "Living Motion Paintings",
+        "channel_url": "https://www.youtube.com/channel/UCldFnZSd7OFcqIO1gcBSb4g",
+        "uploader": "Living Motion Paintings",
+        "uploader_id": "@LivingMotionPaintings",
+        "uploader_url": "https://www.youtube.com/@LivingMotionPaintings",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/NwxqzVKJeto/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLD_4TQTWGwG0gCO2wczKqBGwJuA_g",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/NwxqzVKJeto/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBWBbjRoV13V-7xMsLq8panyp_3qw",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/NwxqzVKJeto/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAGKtWN_wUnHzTz09_-3xtR-MYNNA",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/NwxqzVKJeto/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDZPhjzs1MayjG06ugsWFmjTtnegg",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 41000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      }
+    ],
+    "top_video": {
+      "id": "40xg3sB2PEc",
+      "title": "Ivan Shishkin: The Master of Russian Landscape Painting | 4K Slideshow with Relaxing Music",
+      "views": 207000,
+      "url": "https://www.youtube.com/watch?v=40xg3sB2PEc"
     }
   },
   {
@@ -7296,22 +7751,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@LivingCanvasDreams",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/qykGjhk80Sw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCBLXZHHkMa-D0W1doKnN4_ukU9oQ",
+            "url": "https://i.ytimg.com/vi/qykGjhk80Sw/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCgU3t-VRr-vKhM_lL_QQ-yfw3DvQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/qykGjhk80Sw/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB6gHntXsjN7eppE5L1i2CWa70L7Q",
+            "url": "https://i.ytimg.com/vi/qykGjhk80Sw/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBavZiKOhyGi9gCAh4lvkAjcb5WXg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/qykGjhk80Sw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDz5vDkjFHkdkXUQhBXu2Bk-moSPw",
+            "url": "https://i.ytimg.com/vi/qykGjhk80Sw/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCAxiUkyyE7MeWD7b39_qy4nbBxcg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/qykGjhk80Sw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBPmZpHHAzx0FYufrXGOrUaJEQE1g",
+            "url": "https://i.ytimg.com/vi/qykGjhk80Sw/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCZPVWV4xLIXZAEcEwJfdITDf6hEQ",
             "height": 188,
             "width": 336
           }
@@ -7340,22 +7795,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@LivingCanvasDreams",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/SfJFnwW-m3M/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAM3PdfWjb4cavqy_k97vTts3p_6w",
+            "url": "https://i.ytimg.com/vi/SfJFnwW-m3M/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCqVP2a16ox32Dn4cILcFfvZ5ZpeQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/SfJFnwW-m3M/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDZEMTAMgne4NyWzTBWt8EWz5HnDQ",
+            "url": "https://i.ytimg.com/vi/SfJFnwW-m3M/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAtQ7QEhTJDBfk_1BE3C5RmdPoFJw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/SfJFnwW-m3M/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAzHW_VfpnD2GtomjOVqQyvJ-HmAA",
+            "url": "https://i.ytimg.com/vi/SfJFnwW-m3M/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDRe9IEtngRY7mm5oMEO9gARz7q2g",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/SfJFnwW-m3M/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCV_779xQ9cB5jVU7nQI0yeNKE7nw",
+            "url": "https://i.ytimg.com/vi/SfJFnwW-m3M/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLC-E4b_Mdnnn2vfDvxklEwO2N5SqQ",
             "height": 188,
             "width": 336
           }
@@ -7399,22 +7854,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@mind-travel",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/CnaWoKQRCnI/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCbCs-hcvbdE7VJFLgLrP_in1Yp7Q",
+            "url": "https://i.ytimg.com/vi/CnaWoKQRCnI/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAOD0WlidVdQlSwqzHDPT5DBbETmg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/CnaWoKQRCnI/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDStCZ76rcTY5lv-A_4FJ9xXxuQzg",
+            "url": "https://i.ytimg.com/vi/CnaWoKQRCnI/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDTk65Z00-zq3JOwSynpfuXgn7IVA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/CnaWoKQRCnI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAsLBwOCyfK-K1CTKNpD8IGAWE1IA",
+            "url": "https://i.ytimg.com/vi/CnaWoKQRCnI/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBA5pMJOZ6jFkr11uaj5yXV6AUjGQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/CnaWoKQRCnI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAMtfoVA8gTP3RN6AAvBTzuLS4RcA",
+            "url": "https://i.ytimg.com/vi/CnaWoKQRCnI/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBNGGm4r1nxaxpCkzug_a_KhTpLRg",
             "height": 188,
             "width": 336
           }
@@ -7443,22 +7898,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@mind-travel",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/XtDnD1qmAX8/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBbAzng_KJz3aytZnh0WEX85Hn-pA",
+            "url": "https://i.ytimg.com/vi/XtDnD1qmAX8/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLD0IrqC01qePK0pdL9VtSDAM2Cw0Q",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/XtDnD1qmAX8/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC6qBsRkoZV1xI8N-WYRpXDzggS1Q",
+            "url": "https://i.ytimg.com/vi/XtDnD1qmAX8/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAo128EKS7BBmWpYU5VuwGRDVemjQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/XtDnD1qmAX8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBMxM8KHV0QCPlniqRTUQuTzgw1LA",
+            "url": "https://i.ytimg.com/vi/XtDnD1qmAX8/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBmAPilDh1OOe7tpVd1VF6DFgMOsQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/XtDnD1qmAX8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBEaJE5wLNoBnEC488denwSei86eQ",
+            "url": "https://i.ytimg.com/vi/XtDnD1qmAX8/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCIQYZcYaud1bYe78F6ERRZhJ-mIA",
             "height": 188,
             "width": 336
           }
@@ -7502,22 +7957,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@ТатьянаЧ-к7щ",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/DwSmbvERJtk/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH-BIAC4AOKAgwIABABGGUgVihZMA8=&rs=AOn4CLD2HwyHcgVIYKrcGmVP1KBFZYVT5Q",
+            "url": "https://i.ytimg.com/vi/DwSmbvERJtk/hqdefault.jpg?sqp=-oaymwE5CKgBEF5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH-BIAC4AOKAgwIABABGGUgVihZMA-4AvcY&rs=AOn4CLDpyWzPdliomnAN8Y_ps71UqWbpxA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/DwSmbvERJtk/hqdefault.jpg?sqp=-oaymwE1CMQBEG5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH-BIAC4AOKAgwIABABGGUgVihZMA8=&rs=AOn4CLDX2XoUNhWGVVHvYmsFm0YUhxcvhw",
+            "url": "https://i.ytimg.com/vi/DwSmbvERJtk/hqdefault.jpg?sqp=-oaymwE5CMQBEG5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH-BIAC4AOKAgwIABABGGUgVihZMA-4AvcY&rs=AOn4CLA8I28unEVJvyy9tr2wsQaVLwoEXQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/DwSmbvERJtk/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gSAAuADigIMCAAQARhlIFYoWTAP&rs=AOn4CLCB3MYQ4EwlozKMm3XSdnJQxwo3Mw",
+            "url": "https://i.ytimg.com/vi/DwSmbvERJtk/hqdefault.jpg?sqp=-oaymwE6CPYBEIoBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB_gSAAuADigIMCAAQARhlIFYoWTAPuAL3GA==&rs=AOn4CLB_6qZzm09uXeJVkk13y3Zuqqj8EA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/DwSmbvERJtk/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gSAAuADigIMCAAQARhlIFYoWTAP&rs=AOn4CLANz2eYv7jokeH0fPcs_kGymMH4xw",
+            "url": "https://i.ytimg.com/vi/DwSmbvERJtk/hqdefault.jpg?sqp=-oaymwE6CNACELwBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB_gSAAuADigIMCAAQARhlIFYoWTAPuAL3GA==&rs=AOn4CLCV4Az70zxtvVq1UNXBdXwiE38iqw",
             "height": 188,
             "width": 336
           }
@@ -7561,22 +8016,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@YourHomeGallery",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/yYmuEB9XTnY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAdK2lTQzFb3w-7v06MYSE8zOKnPA",
+            "url": "https://i.ytimg.com/vi/yYmuEB9XTnY/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDyRoxngxHA8bXgAo9KFwLJpGo4PQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/yYmuEB9XTnY/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCJVWlg0A2kMIV53Boo1JR0WDQcpA",
+            "url": "https://i.ytimg.com/vi/yYmuEB9XTnY/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBjg_3UNeUqc0IcGINK5jD8hA1LFA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/yYmuEB9XTnY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAG9byOSRcoI7-lZs_iZVP0VNmyHA",
+            "url": "https://i.ytimg.com/vi/yYmuEB9XTnY/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDjUJQTbuw9FGUwETPBqVtBj-1M1g",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/yYmuEB9XTnY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDqUYWO3qqT52UcOT-VRrIIoQjtaw",
+            "url": "https://i.ytimg.com/vi/yYmuEB9XTnY/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCJcJb73AhCm_5HRS-UF2gksGNFWw",
             "height": 188,
             "width": 336
           }
@@ -7620,22 +8075,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@VisualPoemsinPaintings",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/ejXEYGBo2E0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCFb4HFSEs7ODn9xBNFIrNuxCzPAw",
+            "url": "https://i.ytimg.com/vi/ejXEYGBo2E0/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCTiznd-LzoH9lBVtLYfopHdzzQlw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/ejXEYGBo2E0/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAcvRfrucaAVKXbPQm27TbwZJfHfQ",
+            "url": "https://i.ytimg.com/vi/ejXEYGBo2E0/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLD1QehwQ_jrD2yxEHnNMwsGw2J6Tg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/ejXEYGBo2E0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBjNFangOVop2yDz0qmozBDUJZgAg",
+            "url": "https://i.ytimg.com/vi/ejXEYGBo2E0/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDwxE3NxckXn-Sj11KamOxTgMwU3A",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/ejXEYGBo2E0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCtqZxpGfkICSOXLHm7iG7x-vWUyQ",
+            "url": "https://i.ytimg.com/vi/ejXEYGBo2E0/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCmtd2Q4sUDM78EHehjvdSGUwNffQ",
             "height": 188,
             "width": 336
           }
@@ -7654,109 +8109,6 @@ const CHANNEL_STATS = [
       "title": "A Rainy Day in the English Countryside | Victorian Visual Poem with Classical Music",
       "views": 115000,
       "url": "https://www.youtube.com/watch?v=ejXEYGBo2E0"
-    }
-  },
-  {
-    "channel": "Living Motion Paintings",
-    "channel_url": "https://www.youtube.com/channel/UCldFnZSd7OFcqIO1gcBSb4g",
-    "count": 2,
-    "total_views": 95000,
-    "avg_views": 47500,
-    "videos": [
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "hhCbN53J4EU",
-        "url": "https://www.youtube.com/watch?v=hhCbN53J4EU",
-        "title": "Russian Landscapes Reimagined: Savrasov's Artistry in Stunning 4K",
-        "description": null,
-        "duration": 3978,
-        "channel_id": "UCldFnZSd7OFcqIO1gcBSb4g",
-        "channel": "Living Motion Paintings",
-        "channel_url": "https://www.youtube.com/channel/UCldFnZSd7OFcqIO1gcBSb4g",
-        "uploader": "Living Motion Paintings",
-        "uploader_id": "@LivingMotionPaintings",
-        "uploader_url": "https://www.youtube.com/@LivingMotionPaintings",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/hhCbN53J4EU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAe4hd-ThPZ2we4fOfFE80CjmdoRA",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/hhCbN53J4EU/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBKkrv1FNxnb2iHG1r3zLffyzCz9w",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/hhCbN53J4EU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCJCoOU8T1_qk85tHuJSDsPFAEwnA",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/hhCbN53J4EU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDJOafIGKWBqnZ3OairFY62Joun3w",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 54000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      },
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "NwxqzVKJeto",
-        "url": "https://www.youtube.com/watch?v=NwxqzVKJeto",
-        "title": "Albert Bierstadt in 4K: Harmonies of Art and Music",
-        "description": null,
-        "duration": 4581,
-        "channel_id": "UCldFnZSd7OFcqIO1gcBSb4g",
-        "channel": "Living Motion Paintings",
-        "channel_url": "https://www.youtube.com/channel/UCldFnZSd7OFcqIO1gcBSb4g",
-        "uploader": "Living Motion Paintings",
-        "uploader_id": "@LivingMotionPaintings",
-        "uploader_url": "https://www.youtube.com/@LivingMotionPaintings",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/NwxqzVKJeto/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAZkgGWp8yhR1RtlwyUq0kdDFe0yw",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/NwxqzVKJeto/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCg3eic3Lqfk2CCOq9E6PYFb0qALg",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/NwxqzVKJeto/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLClZnhTpEIqaOZnmy4xN5pst883Fg",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/NwxqzVKJeto/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA2QAsPW94mXTZhbgenHi5Lmk2v0g",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 41000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      }
-    ],
-    "top_video": {
-      "id": "hhCbN53J4EU",
-      "title": "Russian Landscapes Reimagined: Savrasov's Artistry in Stunning 4K",
-      "views": 54000,
-      "url": "https://www.youtube.com/watch?v=hhCbN53J4EU"
     }
   },
   {
@@ -7782,22 +8134,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@art.tale29",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/tJjqAH1h8fk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBhJfIGfguSokdP-5TfZ8EfrfXDvg",
+            "url": "https://i.ytimg.com/vi/tJjqAH1h8fk/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAT8msGKsuvvloEoHmjkqfMnd7odg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/tJjqAH1h8fk/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA-4DWZRsPpmiWyq1AwXycX0QENKg",
+            "url": "https://i.ytimg.com/vi/tJjqAH1h8fk/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDdyW7KzbLi-GQsbB9HyIyfTOrR9g",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/tJjqAH1h8fk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDjoiWVD9kl9mMSENsoTidCZekfiA",
+            "url": "https://i.ytimg.com/vi/tJjqAH1h8fk/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCv89zm7DY9YkU1aQma5d8x2lI5IA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/tJjqAH1h8fk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDHapUdHpu9mcq86BO5y_tr0vJ6xg",
+            "url": "https://i.ytimg.com/vi/tJjqAH1h8fk/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAfRL-hgXX1kfkLJ9j3Y7hA4RJphw",
             "height": 188,
             "width": 336
           }
@@ -7816,65 +8168,6 @@ const CHANNEL_STATS = [
       "title": "One Gentle Night in an English Village 🌙 Cozy Countryside Life I Visual Poem",
       "views": 91000,
       "url": "https://www.youtube.com/watch?v=tJjqAH1h8fk"
-    }
-  },
-  {
-    "channel": "Gaane 70s 80s",
-    "channel_url": "https://www.youtube.com/channel/UCz-3NGJmE45CwYs89dNz_cQ",
-    "count": 1,
-    "total_views": 61000,
-    "avg_views": 61000,
-    "videos": [
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "NVwstpSWVnw",
-        "url": "https://www.youtube.com/watch?v=NVwstpSWVnw",
-        "title": "Yeh Shaam Mastani ( ये शाम मस्तानी )  4K Song - Kati Patang | Kishore Kumar | Rajesh Khanna",
-        "description": null,
-        "duration": 260,
-        "channel_id": "UCz-3NGJmE45CwYs89dNz_cQ",
-        "channel": "Gaane 70s 80s",
-        "channel_url": "https://www.youtube.com/channel/UCz-3NGJmE45CwYs89dNz_cQ",
-        "uploader": "Gaane 70s 80s",
-        "uploader_id": "@Gaane70s80s",
-        "uploader_url": "https://www.youtube.com/@Gaane70s80s",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/NVwstpSWVnw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA_fL0eVgMRYVeJUGug1NMKQ-NbKQ",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/NVwstpSWVnw/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDZPpTQNDMdrLhSDmV4HvaxHrpUZw",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/NVwstpSWVnw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCvCnqCxOmisfYaWQR9jaVNRPwAVg",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/NVwstpSWVnw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDesJRfOqyOOWFYDkKK3YDh8a_56Q",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 61000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      }
-    ],
-    "top_video": {
-      "id": "NVwstpSWVnw",
-      "title": "Yeh Shaam Mastani ( ये शाम मस्तानी )  4K Song - Kati Patang | Kishore Kumar | Rajesh Khanna",
-      "views": 61000,
-      "url": "https://www.youtube.com/watch?v=NVwstpSWVnw"
     }
   },
   {
@@ -7900,22 +8193,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@rollopaterson-thelastimpre5572",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/Bxr5GYtwRnY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDymlLNfN8DrS5XMFBZd8f_256YbQ",
+            "url": "https://i.ytimg.com/vi/Bxr5GYtwRnY/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDQx6wODAXoB1XoPx07SbPD7uKZMQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/Bxr5GYtwRnY/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBC5kTm86kV-sH-th9yIOxql-vdtA",
+            "url": "https://i.ytimg.com/vi/Bxr5GYtwRnY/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCzuuhIe5HkgrzyJ-oC1_-pywRsKQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/Bxr5GYtwRnY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBe2MqL_AyaYIWzgfOZGFzCyyZq8A",
+            "url": "https://i.ytimg.com/vi/Bxr5GYtwRnY/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAuLQOjoF95wolE9mMU79eT74GNBw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/Bxr5GYtwRnY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCqD93WjzQoFRQBXOvEWjA8OsOfIQ",
+            "url": "https://i.ytimg.com/vi/Bxr5GYtwRnY/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLC_xFe9UCk_0-nMJV9POG0Vhy9sMg",
             "height": 188,
             "width": 336
           }
@@ -7944,22 +8237,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@rollopaterson-thelastimpre5572",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/QB1p9MKrf1M/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBkzInRYp8EMF6ozAdAKqEQP9XsLw",
+            "url": "https://i.ytimg.com/vi/QB1p9MKrf1M/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCK9FjNM_FtNttscTjCWTkFbVU5Fg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/QB1p9MKrf1M/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCQYaFOSyU_lHk_HIiKa32cgsJImA",
+            "url": "https://i.ytimg.com/vi/QB1p9MKrf1M/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLB2YFCtfHHvLW6uSjT2xXkBRN6dwA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/QB1p9MKrf1M/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDtcFHqRDq4maIYiVEALQb5F3NOKw",
+            "url": "https://i.ytimg.com/vi/QB1p9MKrf1M/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLByN2EUpivrNMZ2pylLpyh3zSPGUA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/QB1p9MKrf1M/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDZIxYbB-r1vJNBiQokLjEu5CVcGw",
+            "url": "https://i.ytimg.com/vi/QB1p9MKrf1M/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCbzvUx2cliH1XBG_oWmJlUaONC9A",
             "height": 188,
             "width": 336
           }
@@ -8003,22 +8296,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@aroundtheworld4k",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/QJrKGGe6fok/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD18X2ggVMX3ADU-4vuJJfDYcMUWA",
+            "url": "https://i.ytimg.com/vi/QJrKGGe6fok/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA-lroNKocrqP681EP0PnlX-PFYPg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/QJrKGGe6fok/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAynJOLfrOb_hmICicbQ3tpFICV_A",
+            "url": "https://i.ytimg.com/vi/QJrKGGe6fok/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCPP5n3zaPP5sH_vGkuBca_Jo676w",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/QJrKGGe6fok/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAK4Jg1jpZrk2-iYhero56wTqMVdg",
+            "url": "https://i.ytimg.com/vi/QJrKGGe6fok/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBf9WYnPTIgBEXKjT70EZ2tED8hAA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/QJrKGGe6fok/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBOrbKLOXWHoTiHNeSRxn2lAKNtEg",
+            "url": "https://i.ytimg.com/vi/QJrKGGe6fok/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCNPOaBsaXdxp5ELjdvbHwzeoKScQ",
             "height": 188,
             "width": 336
           }
@@ -8037,65 +8330,6 @@ const CHANNEL_STATS = [
       "title": "Hallstatt in Autumn – The Most Beautiful Village in the World | 8K HDR 60p",
       "views": 31000,
       "url": "https://www.youtube.com/watch?v=QJrKGGe6fok"
-    }
-  },
-  {
-    "channel": "LetsFallinArt",
-    "channel_url": "https://www.youtube.com/channel/UCUVxLeCbJSEtHKelsG6uQDQ",
-    "count": 1,
-    "total_views": 31000,
-    "avg_views": 31000,
-    "videos": [
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "A-le9yB8PYY",
-        "url": "https://www.youtube.com/watch?v=A-le9yB8PYY",
-        "title": "Ivan Aivazovsky - 50 of his Best Paintings",
-        "description": null,
-        "duration": 352,
-        "channel_id": "UCUVxLeCbJSEtHKelsG6uQDQ",
-        "channel": "LetsFallinArt",
-        "channel_url": "https://www.youtube.com/channel/UCUVxLeCbJSEtHKelsG6uQDQ",
-        "uploader": "LetsFallinArt",
-        "uploader_id": "@letsfallinart",
-        "uploader_url": "https://www.youtube.com/@letsfallinart",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/A-le9yB8PYY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBRVv-vUYoNrFy43bGvA99le6N6_A",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/A-le9yB8PYY/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDnk7jEI-uCpxoQfg-d1-D6M8u5NA",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/A-le9yB8PYY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBw4YqmjSPce7qDCEu5LDURS1F1bQ",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/A-le9yB8PYY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC7Wlhyvvt_D4GWwp7Z7vPPoNwxqA",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 31000,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      }
-    ],
-    "top_video": {
-      "id": "A-le9yB8PYY",
-      "title": "Ivan Aivazovsky - 50 of his Best Paintings",
-      "views": 31000,
-      "url": "https://www.youtube.com/watch?v=A-le9yB8PYY"
     }
   },
   {
@@ -8121,22 +8355,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@МаргаритаПолянская-ь3ю",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/26VEKoCFZcI/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBlFY5n6KIqq3EtrMUfmPYNAV3sNg",
+            "url": "https://i.ytimg.com/vi/26VEKoCFZcI/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCfPBwJzXs7mLRlATLqPBbCELPFYA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/26VEKoCFZcI/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD1WvFY7IIiK4nnGqqF2UmLJgGnCg",
+            "url": "https://i.ytimg.com/vi/26VEKoCFZcI/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLApwUcCXosDddmjG8VafPSS8QJjdg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/26VEKoCFZcI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLApIuzsYGd_xlOfz8Znk6zXI0wcrQ",
+            "url": "https://i.ytimg.com/vi/26VEKoCFZcI/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLD1W68xwuCU_w6eLenoXP-T4x9IPw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/26VEKoCFZcI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC9M45saFm3sqZdjzQZCKtl6Iqs6A",
+            "url": "https://i.ytimg.com/vi/26VEKoCFZcI/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLA1QXgvvILV7fe5NiDT1K5Nvf2l-g",
             "height": 188,
             "width": 336
           }
@@ -8155,6 +8389,65 @@ const CHANNEL_STATS = [
       "title": "Художник Божков Роман Александрович",
       "views": 31000,
       "url": "https://www.youtube.com/watch?v=26VEKoCFZcI"
+    }
+  },
+  {
+    "channel": "LetsFallinArt",
+    "channel_url": "https://www.youtube.com/channel/UCUVxLeCbJSEtHKelsG6uQDQ",
+    "count": 1,
+    "total_views": 31000,
+    "avg_views": 31000,
+    "videos": [
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "A-le9yB8PYY",
+        "url": "https://www.youtube.com/watch?v=A-le9yB8PYY",
+        "title": "Ivan Aivazovsky - 50 of his Best Paintings",
+        "description": null,
+        "duration": 352,
+        "channel_id": "UCUVxLeCbJSEtHKelsG6uQDQ",
+        "channel": "LetsFallinArt",
+        "channel_url": "https://www.youtube.com/channel/UCUVxLeCbJSEtHKelsG6uQDQ",
+        "uploader": "LetsFallinArt",
+        "uploader_id": "@letsfallinart",
+        "uploader_url": "https://www.youtube.com/@letsfallinart",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/A-le9yB8PYY/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCP1Ns-bprMMO6GjM7duHzYE8GVnw",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/A-le9yB8PYY/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBrC2DZwvT76jd2WqDiRpIO17Mc0Q",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/A-le9yB8PYY/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCFZpFt2CXoOZsodjdICGug6JFK9A",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/A-le9yB8PYY/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLC9mGLtawC17iYHMhypwV2mUMkNyg",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 31000,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      }
+    ],
+    "top_video": {
+      "id": "A-le9yB8PYY",
+      "title": "Ivan Aivazovsky - 50 of his Best Paintings",
+      "views": 31000,
+      "url": "https://www.youtube.com/watch?v=A-le9yB8PYY"
     }
   },
   {
@@ -8180,22 +8473,22 @@ const CHANNEL_STATS = [
         "uploader_url": null,
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/uR1ljov-MRc/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGFkgZSgxMA8=&rs=AOn4CLAbM2BVhw39kWJ-klVs0qnbvQwOUw",
+            "url": "https://i.ytimg.com/vi/uR1ljov-MRc/hqdefault.jpg?sqp=-oaymwE5CKgBEF5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGFkgZSgxMA-4AvcY&rs=AOn4CLA3ucD4gSwzeAcqDLY6LEldR-PnDg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/uR1ljov-MRc/hqdefault.jpg?sqp=-oaymwE1CMQBEG5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGFkgZSgxMA8=&rs=AOn4CLCCXLdO_a6e7wSeT1I5f9ik4xH7UQ",
+            "url": "https://i.ytimg.com/vi/uR1ljov-MRc/hqdefault.jpg?sqp=-oaymwE5CMQBEG5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGFkgZSgxMA-4AvcY&rs=AOn4CLDjuc1vteMGmpwJaBEz2eEzc2ensA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/uR1ljov-MRc/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhZIGUoMTAP&rs=AOn4CLBuxPx2FUNau7gCz631I0kgrH3Egw",
+            "url": "https://i.ytimg.com/vi/uR1ljov-MRc/hqdefault.jpg?sqp=-oaymwE6CPYBEIoBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhZIGUoMTAPuAL3GA==&rs=AOn4CLCdwMWnpmnLr8_iv6XBJRiFGIybAA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/uR1ljov-MRc/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhZIGUoMTAP&rs=AOn4CLDWhL0iioJUZbPc5TKISCZysdCIFw",
+            "url": "https://i.ytimg.com/vi/uR1ljov-MRc/hqdefault.jpg?sqp=-oaymwE6CNACELwBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhZIGUoMTAPuAL3GA==&rs=AOn4CLByWLXX5Kmm3nslXkHXdVRljoOdtQ",
             "height": 188,
             "width": 336
           }
@@ -8239,22 +8532,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@OilMemory",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/ZGW5FS7vkEg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBSvlmE5ggyKSdPF3YdIS6ECwtYjg",
+            "url": "https://i.ytimg.com/vi/ZGW5FS7vkEg/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLC7vFm1zMRvlDfDajDGb_6c2_OJog",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/ZGW5FS7vkEg/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBOlf6vEGOFFvIaFIpJ9rihKoPh8g",
+            "url": "https://i.ytimg.com/vi/ZGW5FS7vkEg/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCtNaNKqAxMDYL9BExaHo6yQYZ23Q",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/ZGW5FS7vkEg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDbRfa4lOZzoEbXixaSUZ4UIPI1UA",
+            "url": "https://i.ytimg.com/vi/ZGW5FS7vkEg/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB1XT6WTFfiaYaFX2_4rh7aklJjig",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/ZGW5FS7vkEg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD4El5tNH6-GDAlXsG7BsH9klqGXw",
+            "url": "https://i.ytimg.com/vi/ZGW5FS7vkEg/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBm1OTG1F38OVygWGQ7DmWb1pZIsA",
             "height": 188,
             "width": 336
           }
@@ -8298,22 +8591,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@vlarit",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/xC3BeK35fPw/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGGUgYShQMA8=&rs=AOn4CLBq_aiDBlOX-ogLtEzIuz9bEy-DrA",
+            "url": "https://i.ytimg.com/vi/xC3BeK35fPw/hqdefault.jpg?sqp=-oaymwE5CKgBEF5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGGUgYShQMA-4AvcY&rs=AOn4CLD27k0p3tkXByCHuQhVfi6wwinqXg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/xC3BeK35fPw/hqdefault.jpg?sqp=-oaymwE1CMQBEG5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGGUgYShQMA8=&rs=AOn4CLDL0OJz3InCYo8cpMWS_cIvU7xXqQ",
+            "url": "https://i.ytimg.com/vi/xC3BeK35fPw/hqdefault.jpg?sqp=-oaymwE5CMQBEG5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGGUgYShQMA-4AvcY&rs=AOn4CLAfQLX1tXcGfUv-SJYSRBW6v4Uhrw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/xC3BeK35fPw/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhlIGEoUDAP&rs=AOn4CLCQvQU-YmhLrF1b71ypDt1Fw5DXeA",
+            "url": "https://i.ytimg.com/vi/xC3BeK35fPw/hqdefault.jpg?sqp=-oaymwE6CPYBEIoBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhlIGEoUDAPuAL3GA==&rs=AOn4CLDmymb4y_OjVK3h4mvsbkQbIzUnbA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/xC3BeK35fPw/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhlIGEoUDAP&rs=AOn4CLAkcn-mP7SolDY7M8d_8dVnbDPNuw",
+            "url": "https://i.ytimg.com/vi/xC3BeK35fPw/hqdefault.jpg?sqp=-oaymwE6CNACELwBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhlIGEoUDAPuAL3GA==&rs=AOn4CLBbVgfejhETyXPViYNskRT9f3LsVw",
             "height": 188,
             "width": 336
           }
@@ -8357,22 +8650,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@FacesofAncientEurope",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/6fwRmi1dCwg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBuACUSRl3bKV6bxOWbFxiwkAOLgw",
+            "url": "https://i.ytimg.com/vi/6fwRmi1dCwg/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBhm6tjkU9BIXnTLW0W1N69nNqThA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/6fwRmi1dCwg/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDRGNVSFOkK7AOWazVYUPqIidzYEA",
+            "url": "https://i.ytimg.com/vi/6fwRmi1dCwg/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDiv1IisImdlAbkZwQ8XUHn8TwWyg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/6fwRmi1dCwg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDRn0yzwEwtXflDKOgwhXKgtGrSuQ",
+            "url": "https://i.ytimg.com/vi/6fwRmi1dCwg/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBPpYP28oAw50SnsRd9OvRzyEjBXA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/6fwRmi1dCwg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDqc2-sli9oppm1EpPHnlVf5mnivw",
+            "url": "https://i.ytimg.com/vi/6fwRmi1dCwg/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLD2erL-o5J3lj7pXHa9ubl-pjpx1Q",
             "height": 188,
             "width": 336
           }
@@ -8416,22 +8709,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@VisualPoemsAI",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/U6aYJHR-XsQ/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBDGj_eensBLONC72eRtGYQWzhJww",
+            "url": "https://i.ytimg.com/vi/U6aYJHR-XsQ/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCuXg4e8Q8RXoWnXmWlxCiMEp1ZeQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/U6aYJHR-XsQ/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDYFY8TjE3URFykkNBKdkgSj_cUyA",
+            "url": "https://i.ytimg.com/vi/U6aYJHR-XsQ/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCNFmZuMXwN32fMXl40JUy4XrrGmg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/U6aYJHR-XsQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAW00yM51akqede4HRhFi1_H0zE3A",
+            "url": "https://i.ytimg.com/vi/U6aYJHR-XsQ/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAnf8_bwXk9d-WQtt3ijBi5YgXedg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/U6aYJHR-XsQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBLtwFvxClo8-dObz0pAfI6zZt_hQ",
+            "url": "https://i.ytimg.com/vi/U6aYJHR-XsQ/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBmU5sHPN2O59PjXjn-DNyEINZe0w",
             "height": 188,
             "width": 336
           }
@@ -8453,70 +8746,11 @@ const CHANNEL_STATS = [
     }
   },
   {
-    "channel": "Nocturne Canvas",
-    "channel_url": "https://www.youtube.com/channel/UCRf_tQc0cI0lJb0F848qxUQ",
-    "count": 1,
-    "total_views": 8400,
-    "avg_views": 8400,
-    "videos": [
-      {
-        "_type": "url",
-        "ie_key": "Youtube",
-        "id": "sdquibgE3dU",
-        "url": "https://www.youtube.com/watch?v=sdquibgE3dU",
-        "title": "Stay a Moment Longer Where the Footbridge Has Watched Every Season Turn 🍂 | Relaxing Classical Music",
-        "description": null,
-        "duration": 253,
-        "channel_id": "UCRf_tQc0cI0lJb0F848qxUQ",
-        "channel": "Nocturne Canvas",
-        "channel_url": "https://www.youtube.com/channel/UCRf_tQc0cI0lJb0F848qxUQ",
-        "uploader": "Nocturne Canvas",
-        "uploader_id": "@nocturnecanvas9",
-        "uploader_url": "https://www.youtube.com/@nocturnecanvas9",
-        "thumbnails": [
-          {
-            "url": "https://i.ytimg.com/vi/sdquibgE3dU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBPKX_4tpi801aalmFUzbey5ir-Aw",
-            "height": 94,
-            "width": 168
-          },
-          {
-            "url": "https://i.ytimg.com/vi/sdquibgE3dU/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAy29_SkJbquVYRAXaiX5gKELEp3w",
-            "height": 110,
-            "width": 196
-          },
-          {
-            "url": "https://i.ytimg.com/vi/sdquibgE3dU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCpFjqb2XOHV9eorYztNknc1TGFrQ",
-            "height": 138,
-            "width": 246
-          },
-          {
-            "url": "https://i.ytimg.com/vi/sdquibgE3dU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBiNbhOxKoJVHW_ZuOlvvqq8SYYSA",
-            "height": 188,
-            "width": 336
-          }
-        ],
-        "timestamp": null,
-        "release_timestamp": null,
-        "availability": null,
-        "view_count": 8400,
-        "live_status": null,
-        "channel_is_verified": null,
-        "__x_forwarded_for_ip": null
-      }
-    ],
-    "top_video": {
-      "id": "sdquibgE3dU",
-      "title": "Stay a Moment Longer Where the Footbridge Has Watched Every Season Turn 🍂 | Relaxing Classical Music",
-      "views": 8400,
-      "url": "https://www.youtube.com/watch?v=sdquibgE3dU"
-    }
-  },
-  {
     "channel": "Living Visual Poems",
     "channel_url": "https://www.youtube.com/channel/UC8OJx6hpApmEcPIa-AEwueQ",
-    "count": 2,
-    "total_views": 7700,
-    "avg_views": 3850,
+    "count": 4,
+    "total_views": 11249,
+    "avg_views": 2812,
     "videos": [
       {
         "_type": "url",
@@ -8534,22 +8768,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@LivingVisualPoems",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/55ZjmzmUoFc/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC8OmK-16ii2Sycp3SUwPNF-6eVwA",
+            "url": "https://i.ytimg.com/vi/55ZjmzmUoFc/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLA-OP6GuNlbpRva10fG2Pa0LfIxag",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/55ZjmzmUoFc/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB-D1fCqiFL6qHl9hodCdJAemsgjA",
+            "url": "https://i.ytimg.com/vi/55ZjmzmUoFc/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCcc0TmEwOGSM6bXxfzVVp_euvJgQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/55ZjmzmUoFc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBEWr4N52EtsFa-KWuNJ5TyYeV8Sw",
+            "url": "https://i.ytimg.com/vi/55ZjmzmUoFc/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBVtqsHNnUWAasQhuHPDoZn-1EQsw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/55ZjmzmUoFc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBmZtve2pdnDWRWvlYOOCYqdmOWGQ",
+            "url": "https://i.ytimg.com/vi/55ZjmzmUoFc/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB_hYWiS2V0c3M_YOilFKhUFCZWqg",
             "height": 188,
             "width": 336
           }
@@ -8578,22 +8812,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@LivingVisualPoems",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/AGoap1I0Fqg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA_7Ki_4N6J7HPsMRE-HHPuSLAihw",
+            "url": "https://i.ytimg.com/vi/AGoap1I0Fqg/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLC4A3o9V_Lx0CVQdPlUZhog8Sy24g",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/AGoap1I0Fqg/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBzfDhhkhyn-5FgSFhURdgAw3qVpA",
+            "url": "https://i.ytimg.com/vi/AGoap1I0Fqg/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCuxUuGXOupqo_bmUGPuYX3iB3CPA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/AGoap1I0Fqg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBmauTfMiXQxSwR05OIFhGOL4QLtA",
+            "url": "https://i.ytimg.com/vi/AGoap1I0Fqg/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBoFEePHdYxOXWb2P3fGj5-sxUI_g",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/AGoap1I0Fqg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCmIlIwswRMRrS4jdN1iNcPIbj86w",
+            "url": "https://i.ytimg.com/vi/AGoap1I0Fqg/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDEF76aAObF-kQcVb2r5TdglRW6PQ",
             "height": 188,
             "width": 336
           }
@@ -8602,6 +8836,94 @@ const CHANNEL_STATS = [
         "release_timestamp": null,
         "availability": null,
         "view_count": 3600,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "ZGuimqw_tpo",
+        "url": "https://www.youtube.com/watch?v=ZGuimqw_tpo",
+        "title": "Visual Poems｜Monet Peaceful Summer｜Living Oil Painting",
+        "description": null,
+        "duration": 181,
+        "channel_id": "UC8OJx6hpApmEcPIa-AEwueQ",
+        "channel": "Living Visual Poems",
+        "channel_url": "https://www.youtube.com/channel/UC8OJx6hpApmEcPIa-AEwueQ",
+        "uploader": "Living Visual Poems",
+        "uploader_id": "@LivingVisualPoems",
+        "uploader_url": "https://www.youtube.com/@LivingVisualPoems",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/ZGuimqw_tpo/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCHur1c9P2GkFW7rfAKAHtm5A_GXw",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/ZGuimqw_tpo/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLABEOiXvkPXu6VW9qBMiyL1uLQ2Ww",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/ZGuimqw_tpo/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLC-9kLhGAjrpoxKkR-zD3crtnOcbA",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/ZGuimqw_tpo/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBZ9DmCYseXs1OlWZHpWmFyjsYxAw",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 2900,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "k3Ls4Bjx-ZY",
+        "url": "https://www.youtube.com/watch?v=k3Ls4Bjx-ZY",
+        "title": "Visual Poems | Beautiful Red Poppy | Living Oil Painting",
+        "description": null,
+        "duration": 170,
+        "channel_id": "UC8OJx6hpApmEcPIa-AEwueQ",
+        "channel": "Living Visual Poems",
+        "channel_url": "https://www.youtube.com/channel/UC8OJx6hpApmEcPIa-AEwueQ",
+        "uploader": "Living Visual Poems",
+        "uploader_id": "@LivingVisualPoems",
+        "uploader_url": "https://www.youtube.com/@LivingVisualPoems",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/k3Ls4Bjx-ZY/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAmNJsdSiZ0BnOZTIG9r9YZPqSL4g",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/k3Ls4Bjx-ZY/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLBd_1VBGNAZ6rxgRB9NQC4nGRUivw",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/k3Ls4Bjx-ZY/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDdPOHoXXAB6d0pTAu04N-zYWZ23A",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/k3Ls4Bjx-ZY/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAa-kMyYj7KzpRF2imARDUpg0WQhQ",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 649,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -8615,44 +8937,44 @@ const CHANNEL_STATS = [
     }
   },
   {
-    "channel": "Visual Classic",
-    "channel_url": "https://www.youtube.com/channel/UCt4wEgd1ozlhkwy1iQ-9rlw",
+    "channel": "Nocturne Canvas",
+    "channel_url": "https://www.youtube.com/channel/UCRf_tQc0cI0lJb0F848qxUQ",
     "count": 1,
-    "total_views": 6400,
-    "avg_views": 6400,
+    "total_views": 8400,
+    "avg_views": 8400,
     "videos": [
       {
         "_type": "url",
         "ie_key": "Youtube",
-        "id": "niIh8h8hAWo",
-        "url": "https://www.youtube.com/watch?v=niIh8h8hAWo",
-        "title": "🌌 Visual Poems / Van Gogh Part I / Light Beneath the Night (Music Video)",
+        "id": "sdquibgE3dU",
+        "url": "https://www.youtube.com/watch?v=sdquibgE3dU",
+        "title": "Stay a Moment Longer Where the Footbridge Has Watched Every Season Turn 🍂 | Relaxing Classical Music",
         "description": null,
-        "duration": 161,
-        "channel_id": "UCt4wEgd1ozlhkwy1iQ-9rlw",
-        "channel": "Visual Classic",
-        "channel_url": "https://www.youtube.com/channel/UCt4wEgd1ozlhkwy1iQ-9rlw",
-        "uploader": "Visual Classic",
-        "uploader_id": "@VisualClassic",
-        "uploader_url": "https://www.youtube.com/@VisualClassic",
+        "duration": 253,
+        "channel_id": "UCRf_tQc0cI0lJb0F848qxUQ",
+        "channel": "Nocturne Canvas",
+        "channel_url": "https://www.youtube.com/channel/UCRf_tQc0cI0lJb0F848qxUQ",
+        "uploader": "Nocturne Canvas",
+        "uploader_id": "@nocturnecanvas9",
+        "uploader_url": "https://www.youtube.com/@nocturnecanvas9",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/niIh8h8hAWo/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC8PJ0CtHvwJs0zcZh8WC4JW_whYA",
+            "url": "https://i.ytimg.com/vi/sdquibgE3dU/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLApwsaQBV7s1E1vm4zP8EIu6ocYVQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/niIh8h8hAWo/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBLAmn183a47XqN5JeG2FC5znz-AA",
+            "url": "https://i.ytimg.com/vi/sdquibgE3dU/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDuHIouGdSAYkfMr8jCeBCNc-DROg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/niIh8h8hAWo/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDPQHXOGW8NFPYrW41EJfEQn0-VFg",
+            "url": "https://i.ytimg.com/vi/sdquibgE3dU/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDBfU4mEws0AkShhVgYASlbiZ2k-A",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/niIh8h8hAWo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAzGXD_nniCAsaKsIgdhMbVOvzKmw",
+            "url": "https://i.ytimg.com/vi/sdquibgE3dU/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLC8zzZ_EfUY5Rtynk40gTBiCPQ6WQ",
             "height": 188,
             "width": 336
           }
@@ -8660,25 +8982,25 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 6400,
+        "view_count": 8400,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
       }
     ],
     "top_video": {
-      "id": "niIh8h8hAWo",
-      "title": "🌌 Visual Poems / Van Gogh Part I / Light Beneath the Night (Music Video)",
-      "views": 6400,
-      "url": "https://www.youtube.com/watch?v=niIh8h8hAWo"
+      "id": "sdquibgE3dU",
+      "title": "Stay a Moment Longer Where the Footbridge Has Watched Every Season Turn 🍂 | Relaxing Classical Music",
+      "views": 8400,
+      "url": "https://www.youtube.com/watch?v=sdquibgE3dU"
     }
   },
   {
     "channel": "Beautiful Living Art",
     "channel_url": "https://www.youtube.com/channel/UCRHwLLdlYo0WZbeuQ1slnNA",
-    "count": 10,
-    "total_views": 6027,
-    "avg_views": 603,
+    "count": 13,
+    "total_views": 6896,
+    "avg_views": 530,
     "videos": [
       {
         "_type": "url",
@@ -8696,22 +9018,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@BeautifulLivingArt",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/gj55gTwrllA/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBA6i0Yw2RiVKmOpkS2tTUAhja15g",
+            "url": "https://i.ytimg.com/vi/gj55gTwrllA/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAx3RtQ-TVUBFZ_NI57PjNAFNhOww",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/gj55gTwrllA/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBrb0Kn19IrS5jTjM7ZKzIBbjo6XQ",
+            "url": "https://i.ytimg.com/vi/gj55gTwrllA/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCSO9ubBOqCcjH27jpHaJk7WWolPw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/gj55gTwrllA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCNT1b3xDdaGQNZFL8MFUohjlL29A",
+            "url": "https://i.ytimg.com/vi/gj55gTwrllA/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAj6nmZhcqIrcQ_V1cWj5A6-GA9HQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/gj55gTwrllA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAJmpEGbsy0cVo1bIGSHBr1XXWoRw",
+            "url": "https://i.ytimg.com/vi/gj55gTwrllA/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAoArDVD5T5J6EXtHx2FldUNyP2sw",
             "height": 188,
             "width": 336
           }
@@ -8740,22 +9062,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@BeautifulLivingArt",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/8jD0pJLju3o/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBBHMkKHevHGqusBM5FE40LkqCmFA",
+            "url": "https://i.ytimg.com/vi/8jD0pJLju3o/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDvwQ4t_mb2TR63EL2tOmGpDgFLFg",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/8jD0pJLju3o/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDlxNKVDUJKVmgedBm033LmgQ-e0g",
+            "url": "https://i.ytimg.com/vi/8jD0pJLju3o/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAXQeaLXT8PSxlJ3RLDqdCnbt4PhA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/8jD0pJLju3o/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAuGkRM-L1CVwB5693NdOJgjsmIkQ",
+            "url": "https://i.ytimg.com/vi/8jD0pJLju3o/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBIGE6Ra2MLaRon67eM6tGWIns_KA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/8jD0pJLju3o/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC3hnretJLQA4VX_WliFC7Bv6KoTw",
+            "url": "https://i.ytimg.com/vi/8jD0pJLju3o/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDr3a6WPAL-aBARa2CPaU1M_lv8Ww",
             "height": 188,
             "width": 336
           }
@@ -8784,22 +9106,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@BeautifulLivingArt",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/wsDbLAtIUIA/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGGUgWyg9MA8=&rs=AOn4CLD1YDzPF4f5NJ6WQATnbV15D6b_hw",
+            "url": "https://i.ytimg.com/vi/wsDbLAtIUIA/hqdefault.jpg?sqp=-oaymwE5CKgBEF5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGGUgWyg9MA-4AvcY&rs=AOn4CLAghgRwWBMscvyIm2KwRHcp7gCngw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/wsDbLAtIUIA/hqdefault.jpg?sqp=-oaymwE1CMQBEG5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGGUgWyg9MA8=&rs=AOn4CLC0dMa3vzuX5CLNrtRt53Kfj-SgXg",
+            "url": "https://i.ytimg.com/vi/wsDbLAtIUIA/hqdefault.jpg?sqp=-oaymwE5CMQBEG5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGGUgWyg9MA-4AvcY&rs=AOn4CLDYw--VperTjw-1PvTkF8dAhsNF9Q",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/wsDbLAtIUIA/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARhlIFsoPTAP&rs=AOn4CLArrrAiX6JNCoi85iA3FneLvqn6AQ",
+            "url": "https://i.ytimg.com/vi/wsDbLAtIUIA/hqdefault.jpg?sqp=-oaymwE6CPYBEIoBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARhlIFsoPTAPuAL3GA==&rs=AOn4CLAY-bauRwiyIRbbIClpD35M2r52OQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/wsDbLAtIUIA/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARhlIFsoPTAP&rs=AOn4CLDiIRcSovrIizDUMJWOaZqEWB-hhg",
+            "url": "https://i.ytimg.com/vi/wsDbLAtIUIA/hqdefault.jpg?sqp=-oaymwE6CNACELwBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARhlIFsoPTAPuAL3GA==&rs=AOn4CLDQpG3EapjPyPVhyLARVWMzg8NSjg",
             "height": 188,
             "width": 336
           }
@@ -8828,22 +9150,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@BeautifulLivingArt",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/D_wR8L621Es/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGH8gXCglMA8=&rs=AOn4CLD057wJJnjZvTc1ZJ7HTnGtgVDVsA",
+            "url": "https://i.ytimg.com/vi/D_wR8L621Es/hqdefault.jpg?sqp=-oaymwE5CKgBEF5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGH8gXCglMA-4AvcY&rs=AOn4CLCmp2stXcuMAENYN09J4dj-4tH4IA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/D_wR8L621Es/hqdefault.jpg?sqp=-oaymwE1CMQBEG5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGH8gXCglMA8=&rs=AOn4CLCyWb8J8tSSxDrE10BT8uHPWibJxw",
+            "url": "https://i.ytimg.com/vi/D_wR8L621Es/hqdefault.jpg?sqp=-oaymwE5CMQBEG5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGH8gXCglMA-4AvcY&rs=AOn4CLATUMOBxMJm0nOxKStviB-YbJ6gng",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/D_wR8L621Es/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARh_IFwoJTAP&rs=AOn4CLB7n012HJio3Bf_tiv1hwSY54-AmA",
+            "url": "https://i.ytimg.com/vi/D_wR8L621Es/hqdefault.jpg?sqp=-oaymwE6CPYBEIoBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARh_IFwoJTAPuAL3GA==&rs=AOn4CLBK1zGbnUksP_8SpNFiSrpRnAN5mw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/D_wR8L621Es/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARh_IFwoJTAP&rs=AOn4CLDadHbDqXLF_C9mz4E22FMOiRLhVQ",
+            "url": "https://i.ytimg.com/vi/D_wR8L621Es/hqdefault.jpg?sqp=-oaymwE6CNACELwBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARh_IFwoJTAPuAL3GA==&rs=AOn4CLC10b5uzW-PrvvCdE-_bM6KHEXFug",
             "height": 188,
             "width": 336
           }
@@ -8852,6 +9174,50 @@ const CHANNEL_STATS = [
         "release_timestamp": null,
         "availability": null,
         "view_count": 694,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "rxz8CSFGKRY",
+        "url": "https://www.youtube.com/watch?v=rxz8CSFGKRY",
+        "title": "Visual Poems | Claude Monet | Enter a Renoir Painting | Monet Living Art Piece 17",
+        "description": null,
+        "duration": 209,
+        "channel_id": "UCRHwLLdlYo0WZbeuQ1slnNA",
+        "channel": "Beautiful Living Art",
+        "channel_url": "https://www.youtube.com/channel/UCRHwLLdlYo0WZbeuQ1slnNA",
+        "uploader": "Beautiful Living Art",
+        "uploader_id": "@BeautifulLivingArt",
+        "uploader_url": "https://www.youtube.com/@BeautifulLivingArt",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/rxz8CSFGKRY/hqdefault.jpg?sqp=-oaymwE5CKgBEF5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGHIgVSgoMA-4AvcY&rs=AOn4CLALACwIQTwmP0IeKYd76rhpeMrlIQ",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/rxz8CSFGKRY/hqdefault.jpg?sqp=-oaymwE5CMQBEG5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGHIgVSgoMA-4AvcY&rs=AOn4CLBHgmCwhEKyBXWOYpo1MGVUkjGznA",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/rxz8CSFGKRY/hqdefault.jpg?sqp=-oaymwE6CPYBEIoBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARhyIFUoKDAPuAL3GA==&rs=AOn4CLD_xYI5DXE2UNynsaqgEtzYq4xTPg",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/rxz8CSFGKRY/hqdefault.jpg?sqp=-oaymwE6CNACELwBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARhyIFUoKDAPuAL3GA==&rs=AOn4CLAtAsWCUYX3wm6y6J4XqKhPDleWtg",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 494,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -8872,22 +9238,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@BeautifulLivingArt",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/YOpeCXH6bs0/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGH8gWignMA8=&rs=AOn4CLBTixMTEoyQEkjJWKIit3jytXepoQ",
+            "url": "https://i.ytimg.com/vi/YOpeCXH6bs0/hqdefault.jpg?sqp=-oaymwE5CKgBEF5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGH8gWignMA-4AvcY&rs=AOn4CLDLwnnCHjQ2-1BHquvJWGSiyoIIsA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/YOpeCXH6bs0/hqdefault.jpg?sqp=-oaymwE1CMQBEG5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGH8gWignMA8=&rs=AOn4CLBrQPavKHq8B_WMH_qz3zCUpPQ5CQ",
+            "url": "https://i.ytimg.com/vi/YOpeCXH6bs0/hqdefault.jpg?sqp=-oaymwE5CMQBEG5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGH8gWignMA-4AvcY&rs=AOn4CLCaMr2FU5vNN-S4kMujcyH2o7sGug",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/YOpeCXH6bs0/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARh_IFooJzAP&rs=AOn4CLCDd9N_Y5DoKnV56OTRWGWS-erZEw",
+            "url": "https://i.ytimg.com/vi/YOpeCXH6bs0/hqdefault.jpg?sqp=-oaymwE6CPYBEIoBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARh_IFooJzAPuAL3GA==&rs=AOn4CLC3kg7CjojlnBibBZy6PyoaYRbtAg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/YOpeCXH6bs0/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARh_IFooJzAP&rs=AOn4CLCqi_57ihREnv8uNJ2V0DdQ8Tg3NA",
+            "url": "https://i.ytimg.com/vi/YOpeCXH6bs0/hqdefault.jpg?sqp=-oaymwE6CNACELwBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARh_IFooJzAPuAL3GA==&rs=AOn4CLCpn9ZvQyAE8xzIcLmCgn8Vssk3Sw",
             "height": 188,
             "width": 336
           }
@@ -8916,22 +9282,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@BeautifulLivingArt",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/3VdQEHlFIe0/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGH8gTSgnMA8=&rs=AOn4CLBBT8wFboGTca9t8k-MDF6F6JSX0g",
+            "url": "https://i.ytimg.com/vi/3VdQEHlFIe0/hqdefault.jpg?sqp=-oaymwE5CKgBEF5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGH8gTSgnMA-4AvcY&rs=AOn4CLAfuhbybLTYfm9uSzeU0oAngARnQQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/3VdQEHlFIe0/hqdefault.jpg?sqp=-oaymwE1CMQBEG5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGH8gTSgnMA8=&rs=AOn4CLBRih3pNwxqNPO9LyyMtZmDqaLt5g",
+            "url": "https://i.ytimg.com/vi/3VdQEHlFIe0/hqdefault.jpg?sqp=-oaymwE5CMQBEG5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGH8gTSgnMA-4AvcY&rs=AOn4CLD-2A3lHqxdCAXbFzhp0a05IIVLnw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/3VdQEHlFIe0/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARh_IE0oJzAP&rs=AOn4CLCAT5SPw47OcKQNw7bI0yilt5f7hg",
+            "url": "https://i.ytimg.com/vi/3VdQEHlFIe0/hqdefault.jpg?sqp=-oaymwE6CPYBEIoBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARh_IE0oJzAPuAL3GA==&rs=AOn4CLAGCN05lwI5Q4FgaG0F3WtMR6EFbQ",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/3VdQEHlFIe0/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARh_IE0oJzAP&rs=AOn4CLCLvwh8dlPnZzCa0exTnpW7PpYlOQ",
+            "url": "https://i.ytimg.com/vi/3VdQEHlFIe0/hqdefault.jpg?sqp=-oaymwE6CNACELwBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARh_IE0oJzAPuAL3GA==&rs=AOn4CLB8PJqDHNwtE51xFaZasw1D6qRlsA",
             "height": 188,
             "width": 336
           }
@@ -8960,22 +9326,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@BeautifulLivingArt",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/Fpp-ZBkfo28/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGH8gWigqMA8=&rs=AOn4CLBkrpN-cKLq_dYXmTvUOq-amZ_G_w",
+            "url": "https://i.ytimg.com/vi/Fpp-ZBkfo28/hqdefault.jpg?sqp=-oaymwE5CKgBEF5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGH8gWigqMA-4AvcY&rs=AOn4CLDCj7z6LB0zYqOdIyCFtW8UUrZxEw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/Fpp-ZBkfo28/hqdefault.jpg?sqp=-oaymwE1CMQBEG5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGH8gWigqMA8=&rs=AOn4CLDQDbbGuLDVV618Y1-dQigjKH5Pfw",
+            "url": "https://i.ytimg.com/vi/Fpp-ZBkfo28/hqdefault.jpg?sqp=-oaymwE5CMQBEG5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGH8gWigqMA-4AvcY&rs=AOn4CLD_qDWis8-5NpfpmtaDvOhuFhdpjQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/Fpp-ZBkfo28/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARh_IFooKjAP&rs=AOn4CLBk3ZdRptVAP3JIRw64E0xxNR5lKg",
+            "url": "https://i.ytimg.com/vi/Fpp-ZBkfo28/hqdefault.jpg?sqp=-oaymwE6CPYBEIoBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARh_IFooKjAPuAL3GA==&rs=AOn4CLDyoJkruClJyTzTe8lSjW_V5N1txg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/Fpp-ZBkfo28/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARh_IFooKjAP&rs=AOn4CLDcTpsFPbUG3M79YELuQXlQKHxVvA",
+            "url": "https://i.ytimg.com/vi/Fpp-ZBkfo28/hqdefault.jpg?sqp=-oaymwE6CNACELwBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARh_IFooKjAPuAL3GA==&rs=AOn4CLDyMc1U1XhbWMbYFba6x7Xk_4_q_Q",
             "height": 188,
             "width": 336
           }
@@ -8984,6 +9350,50 @@ const CHANNEL_STATS = [
         "release_timestamp": null,
         "availability": null,
         "view_count": 339,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "jr38oRbEutQ",
+        "url": "https://www.youtube.com/watch?v=jr38oRbEutQ",
+        "title": "Visual Poems | Claude Monet | Enter an Impressionist Painting | Living Art and Music 8",
+        "description": null,
+        "duration": 130,
+        "channel_id": "UCRHwLLdlYo0WZbeuQ1slnNA",
+        "channel": "Beautiful Living Art",
+        "channel_url": "https://www.youtube.com/channel/UCRHwLLdlYo0WZbeuQ1slnNA",
+        "uploader": "Beautiful Living Art",
+        "uploader_id": "@BeautifulLivingArt",
+        "uploader_url": "https://www.youtube.com/@BeautifulLivingArt",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/jr38oRbEutQ/hqdefault.jpg?sqp=-oaymwE5CKgBEF5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGGUgXihPMA-4AvcY&rs=AOn4CLBvD0ldLrTd13KI03j_YZHi3nGFAw",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/jr38oRbEutQ/hqdefault.jpg?sqp=-oaymwE5CMQBEG5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGGUgXihPMA-4AvcY&rs=AOn4CLD2L1EYLLhzYRw9CA8uF-UnNCVxNg",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/jr38oRbEutQ/hqdefault.jpg?sqp=-oaymwE6CPYBEIoBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARhlIF4oTzAPuAL3GA==&rs=AOn4CLDzp1GtZsKhgi3b7oPqwaCd2q0Qyw",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/jr38oRbEutQ/hqdefault.jpg?sqp=-oaymwE6CNACELwBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARhlIF4oTzAPuAL3GA==&rs=AOn4CLBUraUFJuZHLi2cRDq_78vg90Ezsw",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 330,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -9004,22 +9414,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@BeautifulLivingArt",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/1oHJhkNDEKE/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGHIgTyg0MA8=&rs=AOn4CLAxPDO968EPfKeY43CZ91dmq4y4BA",
+            "url": "https://i.ytimg.com/vi/1oHJhkNDEKE/hqdefault.jpg?sqp=-oaymwE5CKgBEF5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGHIgTyg0MA-4AvcY&rs=AOn4CLB5mL8zs_EsiGMfubFWAff5bt_PfA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/1oHJhkNDEKE/hqdefault.jpg?sqp=-oaymwE1CMQBEG5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGHIgTyg0MA8=&rs=AOn4CLC4laERDBBYcmtF7pV4_koVIjOrgg",
+            "url": "https://i.ytimg.com/vi/1oHJhkNDEKE/hqdefault.jpg?sqp=-oaymwE5CMQBEG5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGHIgTyg0MA-4AvcY&rs=AOn4CLDHPw2AUsMwKyZQQGwrhBTxrx3fdA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/1oHJhkNDEKE/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARhyIE8oNDAP&rs=AOn4CLANl0ETMctWCTewg_uObc9BpSfg_A",
+            "url": "https://i.ytimg.com/vi/1oHJhkNDEKE/hqdefault.jpg?sqp=-oaymwE6CPYBEIoBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARhyIE8oNDAPuAL3GA==&rs=AOn4CLCbuzwlqM4_7ZlnxqWHiI9rXlBysg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/1oHJhkNDEKE/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARhyIE8oNDAP&rs=AOn4CLDfXh7bSo6Oeo54E9VvFeOqt2NArA",
+            "url": "https://i.ytimg.com/vi/1oHJhkNDEKE/hqdefault.jpg?sqp=-oaymwE6CNACELwBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARhyIE8oNDAPuAL3GA==&rs=AOn4CLC1mOhUgrKPkg2ZRs9FU_RbDFr-hw",
             "height": 188,
             "width": 336
           }
@@ -9048,22 +9458,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@BeautifulLivingArt",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/fV5IalilQpc/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGHIgVig2MA8=&rs=AOn4CLCf_YAC8yv2R0t36hSIbl3Gwa6Ujw",
+            "url": "https://i.ytimg.com/vi/fV5IalilQpc/hqdefault.jpg?sqp=-oaymwE5CKgBEF5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGHIgVig2MA-4AvcY&rs=AOn4CLC8ckT3G097TpcwwiOmKLLsmE1z8Q",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/fV5IalilQpc/hqdefault.jpg?sqp=-oaymwE1CMQBEG5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGHIgVig2MA8=&rs=AOn4CLB-yaIvBR5KXKN-Cs0lrDgqiZ3UgA",
+            "url": "https://i.ytimg.com/vi/fV5IalilQpc/hqdefault.jpg?sqp=-oaymwE5CMQBEG5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGHIgVig2MA-4AvcY&rs=AOn4CLDC8hcz3VW7KjxbEKy_ElaaBbqcmA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/fV5IalilQpc/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARhyIFYoNjAP&rs=AOn4CLDkBOG7fRtc-KRPVkS6Ati0kc2qTQ",
+            "url": "https://i.ytimg.com/vi/fV5IalilQpc/hqdefault.jpg?sqp=-oaymwE6CPYBEIoBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARhyIFYoNjAPuAL3GA==&rs=AOn4CLBriW8FXa9L_hXsUqUXKXop-mGi_w",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/fV5IalilQpc/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARhyIFYoNjAP&rs=AOn4CLAUlyp3ZUcTtsvzzFx5pVCP9NFUNw",
+            "url": "https://i.ytimg.com/vi/fV5IalilQpc/hqdefault.jpg?sqp=-oaymwE6CNACELwBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARhyIFYoNjAPuAL3GA==&rs=AOn4CLBIcfUdBA_uF1k_QRlqEzR1_oLJhA",
             "height": 188,
             "width": 336
           }
@@ -9071,7 +9481,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 203,
+        "view_count": 204,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -9092,22 +9502,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@BeautifulLivingArt",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/WvuFp_ZphFY/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGFIgXShlMA8=&rs=AOn4CLCT-Nv3ZKAw9N93BYuPd0LQYy0HzA",
+            "url": "https://i.ytimg.com/vi/WvuFp_ZphFY/hqdefault.jpg?sqp=-oaymwE5CKgBEF5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGFIgXShlMA-4AvcY&rs=AOn4CLARrs4oGuUAAl7H7Yf51gUU60_CxA",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/WvuFp_ZphFY/hqdefault.jpg?sqp=-oaymwE1CMQBEG5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGFIgXShlMA8=&rs=AOn4CLD3dtYA6XJUROmlTNnyT430qR0_bA",
+            "url": "https://i.ytimg.com/vi/WvuFp_ZphFY/hqdefault.jpg?sqp=-oaymwE5CMQBEG5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGFIgXShlMA-4AvcY&rs=AOn4CLA_haTVyshgbd0jRaJd_t43ZlZYzg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/WvuFp_ZphFY/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARhSIF0oZTAP&rs=AOn4CLCBfVC_6XsEV0mOSaJtQRuNK4UDqw",
+            "url": "https://i.ytimg.com/vi/WvuFp_ZphFY/hqdefault.jpg?sqp=-oaymwE6CPYBEIoBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARhSIF0oZTAPuAL3GA==&rs=AOn4CLBva8jTPaWB5ipJkBBPCBN34AYZvw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/WvuFp_ZphFY/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARhSIF0oZTAP&rs=AOn4CLBhbZOyIXw6XS987r1pPIq4zPQDNA",
+            "url": "https://i.ytimg.com/vi/WvuFp_ZphFY/hqdefault.jpg?sqp=-oaymwE6CNACELwBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARhSIF0oZTAPuAL3GA==&rs=AOn4CLAFbfzrSakn_5isXGfdc3FJKBd22A",
             "height": 188,
             "width": 336
           }
@@ -9116,6 +9526,50 @@ const CHANNEL_STATS = [
         "release_timestamp": null,
         "availability": null,
         "view_count": 125,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      },
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "qedoqPz7oic",
+        "url": "https://www.youtube.com/watch?v=qedoqPz7oic",
+        "title": "Visual Poems | AI Impressionism in Motion | Dreamy Living Art and Music 9",
+        "description": null,
+        "duration": 179,
+        "channel_id": "UCRHwLLdlYo0WZbeuQ1slnNA",
+        "channel": "Beautiful Living Art",
+        "channel_url": "https://www.youtube.com/channel/UCRHwLLdlYo0WZbeuQ1slnNA",
+        "uploader": "Beautiful Living Art",
+        "uploader_id": "@BeautifulLivingArt",
+        "uploader_url": "https://www.youtube.com/@BeautifulLivingArt",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/qedoqPz7oic/hqdefault.jpg?sqp=-oaymwE5CKgBEF5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGGUgZShlMA-4AvcY&rs=AOn4CLCO_kqaGoV-C5uuPSQQjBoib_nukA",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/qedoqPz7oic/hqdefault.jpg?sqp=-oaymwE5CMQBEG5IVfKriqkDLAgBFQAAiEIYAXABwAEG8AEB-AH6CYAC0AWKAgwIABABGGUgZShlMA-4AvcY&rs=AOn4CLBpmtS7v8WWbMArXnYkV3nbzeHX9A",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/qedoqPz7oic/hqdefault.jpg?sqp=-oaymwE6CPYBEIoBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARhlIGUoZTAPuAL3GA==&rs=AOn4CLDOcLNDdq4SW-OM5PerjDyoy9UcqQ",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/qedoqPz7oic/hqdefault.jpg?sqp=-oaymwE6CNACELwBSFXyq4qpAywIARUAAIhCGAFwAcABBvABAfgB-gmAAtAFigIMCAAQARhlIGUoZTAPuAL3GA==&rs=AOn4CLBQfr9ASshZSSof95SG6ATcax-1EQ",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 44,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -9129,44 +9583,44 @@ const CHANNEL_STATS = [
     }
   },
   {
-    "channel": "Luminaris Muse",
-    "channel_url": "https://www.youtube.com/channel/UCGxfAYU8ya7H15nZMLIsydw",
+    "channel": "Visual Classic",
+    "channel_url": "https://www.youtube.com/channel/UCt4wEgd1ozlhkwy1iQ-9rlw",
     "count": 1,
-    "total_views": 3300,
-    "avg_views": 3300,
+    "total_views": 6400,
+    "avg_views": 6400,
     "videos": [
       {
         "_type": "url",
         "ie_key": "Youtube",
-        "id": "j5EPNKdBb4Q",
-        "url": "https://www.youtube.com/watch?v=j5EPNKdBb4Q",
-        "title": "Visual Poems | Monet | Whisper of Light [Soothing & Healing Art]",
+        "id": "niIh8h8hAWo",
+        "url": "https://www.youtube.com/watch?v=niIh8h8hAWo",
+        "title": "🌌 Visual Poems / Van Gogh Part I / Light Beneath the Night (Music Video)",
         "description": null,
-        "duration": 567,
-        "channel_id": "UCGxfAYU8ya7H15nZMLIsydw",
-        "channel": "Luminaris Muse",
-        "channel_url": "https://www.youtube.com/channel/UCGxfAYU8ya7H15nZMLIsydw",
-        "uploader": "Luminaris Muse",
-        "uploader_id": "@LUMINARISMUSE",
-        "uploader_url": "https://www.youtube.com/@LUMINARISMUSE",
+        "duration": 161,
+        "channel_id": "UCt4wEgd1ozlhkwy1iQ-9rlw",
+        "channel": "Visual Classic",
+        "channel_url": "https://www.youtube.com/channel/UCt4wEgd1ozlhkwy1iQ-9rlw",
+        "uploader": "Visual Classic",
+        "uploader_id": "@VisualClassic",
+        "uploader_url": "https://www.youtube.com/@VisualClassic",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/j5EPNKdBb4Q/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBdLZ-lzH9Lrqhq84vbBOFm4iMX6Q",
+            "url": "https://i.ytimg.com/vi/niIh8h8hAWo/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDQQpGydgZM_mkKfFHlGDsgaVNmpw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/j5EPNKdBb4Q/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAKVwHFoctfXtnl6VHxsL4tOSPJLA",
+            "url": "https://i.ytimg.com/vi/niIh8h8hAWo/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCHpEF-fnFBq24oLbAwN0DITLfyFg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/j5EPNKdBb4Q/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC5vvsqgtjORxuQbOXkqVSpxHhV1w",
+            "url": "https://i.ytimg.com/vi/niIh8h8hAWo/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAOSIY_sa_N_ERwAJjKPtv7VZjHmw",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/j5EPNKdBb4Q/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBRnsztdLSqTB8Jc-6xKfC0xWBScA",
+            "url": "https://i.ytimg.com/vi/niIh8h8hAWo/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDGKDirAcjrLE8nT3RcJWT2A2UvsQ",
             "height": 188,
             "width": 336
           }
@@ -9174,17 +9628,17 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "view_count": 3300,
+        "view_count": 6400,
         "live_status": null,
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
       }
     ],
     "top_video": {
-      "id": "j5EPNKdBb4Q",
-      "title": "Visual Poems | Monet | Whisper of Light [Soothing & Healing Art]",
-      "views": 3300,
-      "url": "https://www.youtube.com/watch?v=j5EPNKdBb4Q"
+      "id": "niIh8h8hAWo",
+      "title": "🌌 Visual Poems / Van Gogh Part I / Light Beneath the Night (Music Video)",
+      "views": 6400,
+      "url": "https://www.youtube.com/watch?v=niIh8h8hAWo"
     }
   },
   {
@@ -9210,22 +9664,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@CozyCalmCanvas",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/-UAZ9tHEU14/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDLPjH7--7VK4Yj5nEQ4I35Xafnpg",
+            "url": "https://i.ytimg.com/vi/-UAZ9tHEU14/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDcoyfb18NqvZDKFzt3zBdsFpULzQ",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/-UAZ9tHEU14/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBS845tztywjNJ80uK2xvdRU_C0gQ",
+            "url": "https://i.ytimg.com/vi/-UAZ9tHEU14/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDHpQUWuArLe_dFOr1NVp3x0Ecr5A",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/-UAZ9tHEU14/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDPGYU_SGo1M3ukTkLnBhhsebEj6A",
+            "url": "https://i.ytimg.com/vi/-UAZ9tHEU14/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAPhhnTYqADid0wUQB5GoT8COlN_Q",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/-UAZ9tHEU14/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCTLm2Z2fvVb5LHvEdJhXrZYV31LA",
+            "url": "https://i.ytimg.com/vi/-UAZ9tHEU14/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAQahyehO6JdFhDmfISyI0Fik3t-Q",
             "height": 188,
             "width": 336
           }
@@ -9244,6 +9698,65 @@ const CHANNEL_STATS = [
       "title": "Visual Poem |Monet-style Girl & Nature🎨✨",
       "views": 3300,
       "url": "https://www.youtube.com/watch?v=-UAZ9tHEU14"
+    }
+  },
+  {
+    "channel": "Luminaris Muse",
+    "channel_url": "https://www.youtube.com/channel/UCGxfAYU8ya7H15nZMLIsydw",
+    "count": 1,
+    "total_views": 3300,
+    "avg_views": 3300,
+    "videos": [
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "j5EPNKdBb4Q",
+        "url": "https://www.youtube.com/watch?v=j5EPNKdBb4Q",
+        "title": "Visual Poems | Monet | Whisper of Light [Soothing & Healing Art]",
+        "description": null,
+        "duration": 567,
+        "channel_id": "UCGxfAYU8ya7H15nZMLIsydw",
+        "channel": "Luminaris Muse",
+        "channel_url": "https://www.youtube.com/channel/UCGxfAYU8ya7H15nZMLIsydw",
+        "uploader": "Luminaris Muse",
+        "uploader_id": "@LUMINARISMUSE",
+        "uploader_url": "https://www.youtube.com/@LUMINARISMUSE",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/j5EPNKdBb4Q/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLC8Lwv7IQ7lelGLsh4w0o90MO_Z4Q",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/j5EPNKdBb4Q/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAyHPy5dSWB-XWCxrJaBmWwA2FhHQ",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/j5EPNKdBb4Q/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAqLvT62Dp1VSiNsNC5ufDyanLTuA",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/j5EPNKdBb4Q/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBjJMUNhf4fbE1KXI42Ua388VPGSw",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 3300,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      }
+    ],
+    "top_video": {
+      "id": "j5EPNKdBb4Q",
+      "title": "Visual Poems | Monet | Whisper of Light [Soothing & Healing Art]",
+      "views": 3300,
+      "url": "https://www.youtube.com/watch?v=j5EPNKdBb4Q"
     }
   },
   {
@@ -9269,22 +9782,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@VeloraClassical",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/81njIoQoAOQ/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLClAiTw_mXnk18ICVoX_twvrwO_fw",
+            "url": "https://i.ytimg.com/vi/81njIoQoAOQ/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAIE-qdEOkpvl5NLIr39n9vOlZK5Q",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/81njIoQoAOQ/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAD5cTDw3O4hgbm9W0LDuMrun4aOA",
+            "url": "https://i.ytimg.com/vi/81njIoQoAOQ/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAbDO_cXGbGJPnTH7lRl3jEr1e-bg",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/81njIoQoAOQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACA2r5urEKcDBpKRPWNJNpXbS2dQ",
+            "url": "https://i.ytimg.com/vi/81njIoQoAOQ/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAd-q0l5PZarT20a2JMj2O0nfeS4A",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/81njIoQoAOQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCBa1_5s0OZvPUUFijtogB3E0SVbg",
+            "url": "https://i.ytimg.com/vi/81njIoQoAOQ/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAfGG5teUIj0NTWItQ_DKZ7s7XI5w",
             "height": 188,
             "width": 336
           }
@@ -9328,22 +9841,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@visualiapro",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/wMEFlcQcn3I/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC8aLD2x4uAVl4WavagPjJ71elASA",
+            "url": "https://i.ytimg.com/vi/wMEFlcQcn3I/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDoRh24I5UNXPbtEgO0p625Yvbyig",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/wMEFlcQcn3I/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAGp7MdFPPr0sdszfZ-xWlhhuQFSQ",
+            "url": "https://i.ytimg.com/vi/wMEFlcQcn3I/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLB00NbNQpv_8E3PSH3wA1ilPc_YCQ",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/wMEFlcQcn3I/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAmsZ-83XdKaxmo3fkV3mzUBguwtQ",
+            "url": "https://i.ytimg.com/vi/wMEFlcQcn3I/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLA1pIuX_ZUSUlMHD321YWhVi34eIA",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/wMEFlcQcn3I/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAn17zwXSL91rKS1tFJcGdG-_J9-Q",
+            "url": "https://i.ytimg.com/vi/wMEFlcQcn3I/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLD1Ce1ITqcbZBvKZsrG8atbu-ppbw",
             "height": 188,
             "width": 336
           }
@@ -9362,6 +9875,65 @@ const CHANNEL_STATS = [
       "title": "Monet: The Last Colors of Memory | A Visual Poem by Visualiapro [AI Art Film 4K]",
       "views": 2000,
       "url": "https://www.youtube.com/watch?v=wMEFlcQcn3I"
+    }
+  },
+  {
+    "channel": "Mellostring",
+    "channel_url": "https://www.youtube.com/channel/UCShfhQGVL-gmEcw_t-iEGRQ",
+    "count": 1,
+    "total_views": 751,
+    "avg_views": 751,
+    "videos": [
+      {
+        "_type": "url",
+        "ie_key": "Youtube",
+        "id": "mU3u9f43XVg",
+        "url": "https://www.youtube.com/watch?v=mU3u9f43XVg",
+        "title": "[𝗽𝗹𝗮𝘆𝗹𝗶𝘀𝘁] A Lazy Stroll in a Green Garden 🍃 Classical Melodies for Pleasant Focus Mellostring",
+        "description": null,
+        "duration": 10370,
+        "channel_id": "UCShfhQGVL-gmEcw_t-iEGRQ",
+        "channel": "Mellostring",
+        "channel_url": "https://www.youtube.com/channel/UCShfhQGVL-gmEcw_t-iEGRQ",
+        "uploader": "Mellostring",
+        "uploader_id": "@mellostring_classic",
+        "uploader_url": "https://www.youtube.com/@mellostring_classic",
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/mU3u9f43XVg/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCkBFkaToMxWazfYKG2ifyC-xqUZg",
+            "height": 94,
+            "width": 168
+          },
+          {
+            "url": "https://i.ytimg.com/vi/mU3u9f43XVg/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDUhdMZgwSHVsZx83gkFZUniprR8w",
+            "height": 110,
+            "width": 196
+          },
+          {
+            "url": "https://i.ytimg.com/vi/mU3u9f43XVg/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBYvuTPv8k_a74rOJ1HB4iH7pemMg",
+            "height": 138,
+            "width": 246
+          },
+          {
+            "url": "https://i.ytimg.com/vi/mU3u9f43XVg/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAp44nVrmrDOEDsk9injiF9ntTA_w",
+            "height": 188,
+            "width": 336
+          }
+        ],
+        "timestamp": null,
+        "release_timestamp": null,
+        "availability": null,
+        "view_count": 751,
+        "live_status": null,
+        "channel_is_verified": null,
+        "__x_forwarded_for_ip": null
+      }
+    ],
+    "top_video": {
+      "id": "mU3u9f43XVg",
+      "title": "[𝗽𝗹𝗮𝘆𝗹𝗶𝘀𝘁] A Lazy Stroll in a Green Garden 🍃 Classical Melodies for Pleasant Focus Mellostring",
+      "views": 751,
+      "url": "https://www.youtube.com/watch?v=mU3u9f43XVg"
     }
   },
   {
@@ -9387,22 +9959,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@SlowFrameTv",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/OPKpzQXzHds/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB3by1q-EZ1bGyTsShymdsL2F2n4g",
+            "url": "https://i.ytimg.com/vi/OPKpzQXzHds/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLCzUYUSDOKmFl1MyBbCQk8w6HU4fw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/OPKpzQXzHds/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCorhJFk2JOclrBl43M6INKx8Vz4Q",
+            "url": "https://i.ytimg.com/vi/OPKpzQXzHds/hqdefault.jpg?sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLAoUG10RO_7n39S5N45V20oBb7zIw",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/OPKpzQXzHds/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLALLvGA9kXcZ6ZuWfKS_JcPdXOZvQ",
+            "url": "https://i.ytimg.com/vi/OPKpzQXzHds/hqdefault.jpg?sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCFZFvJPBC95jyrnxdcRPRoQtzmLg",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/OPKpzQXzHds/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCG2ioDnDoVtQllfquVJjjv-7nx_g",
+            "url": "https://i.ytimg.com/vi/OPKpzQXzHds/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB3KgKcK9lyKu3L0OaHIorbbJFGnQ",
             "height": 188,
             "width": 336
           }
@@ -9446,22 +10018,22 @@ const CHANNEL_STATS = [
         "uploader_url": "https://www.youtube.com/@LivingArtMoments",
         "thumbnails": [
           {
-            "url": "https://i.ytimg.com/vi/lz0wa2hDis0/hqdefault.jpg?v=6990b0e0&sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCPoB_5Q-ywa1B0xGiLnqAMs6TgSQ",
+            "url": "https://i.ytimg.com/vi/lz0wa2hDis0/hqdefault.jpg?v=6990b0e0&sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLB8ic-39q1494JKXDAzPi7ic979rw",
             "height": 94,
             "width": 168
           },
           {
-            "url": "https://i.ytimg.com/vi/lz0wa2hDis0/hqdefault.jpg?v=6990b0e0&sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBNwHkv2Sf10jA-sAlDrMatYgtHoA",
+            "url": "https://i.ytimg.com/vi/lz0wa2hDis0/hqdefault.jpg?v=6990b0e0&sqp=-oaymwEfCMQBEG5IVfKriqkDEggBFQAAiEIYAXABwAEGuAL3GA==&rs=AOn4CLDDMnTknxKVt4TJyPxlb6Lg4TB3IA",
             "height": 110,
             "width": 196
           },
           {
-            "url": "https://i.ytimg.com/vi/lz0wa2hDis0/hqdefault.jpg?v=6990b0e0&sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDwgjcFcPh_uGu64H1xMc3FiQPVPA",
+            "url": "https://i.ytimg.com/vi/lz0wa2hDis0/hqdefault.jpg?v=6990b0e0&sqp=-oaymwEgCPYBEIoBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB71FSg6nsrVZNu1jaiOlVkcsdeug",
             "height": 138,
             "width": 246
           },
           {
-            "url": "https://i.ytimg.com/vi/lz0wa2hDis0/hqdefault.jpg?v=6990b0e0&sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCqkkmlAxJbrt6nXki2VlDXga4PUA",
+            "url": "https://i.ytimg.com/vi/lz0wa2hDis0/hqdefault.jpg?v=6990b0e0&sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBqIkgZ4ZSXQBA1h0SGjAolN14kCQ",
             "height": 188,
             "width": 336
           }
@@ -9469,7 +10041,7 @@ const CHANNEL_STATS = [
         "timestamp": null,
         "release_timestamp": null,
         "availability": null,
-        "concurrent_view_count": 1,
+        "concurrent_view_count": 2,
         "live_status": "is_live",
         "channel_is_verified": null,
         "__x_forwarded_for_ip": null
@@ -9484,6 +10056,25 @@ const CHANNEL_STATS = [
   }
 ];
 const ALL_VIDEOS = [
+  {
+    "id": "cKkDMiGUbUw",
+    "title": "Strauss ~ The Blue Danube Waltz",
+    "channel": "Lifting Dreams",
+    "channelUrl": "https://www.youtube.com/channel/UCux51cdq0SlyEl29eYPpnkg",
+    "views": 21000000,
+    "durationSec": 564,
+    "durationFormatted": "09:24",
+    "url": "https://www.youtube.com/watch?v=cKkDMiGUbUw",
+    "thumb": "https://i.ytimg.com/vi/cKkDMiGUbUw/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/cKkDMiGUbUw/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
   {
     "id": "nCVYEqc_Hw4",
     "title": "Claude Monet: A collection of 1540 paintings (HD)",
@@ -11413,6 +12004,25 @@ const ALL_VIDEOS = [
     "wallpaperCount": 7
   },
   {
+    "id": "52Sg9uFRx4s",
+    "title": "Peder Mørk Mønsted: A collection of 284 paintings (HD)",
+    "channel": "LearnFromMasters",
+    "channelUrl": "https://www.youtube.com/channel/UCWjLl5TDZqMZimHbHXk0Wpg",
+    "views": 410000,
+    "durationSec": 1731,
+    "durationFormatted": "28:51",
+    "url": "https://www.youtube.com/watch?v=52Sg9uFRx4s",
+    "thumb": "https://i.ytimg.com/vi/52Sg9uFRx4s/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/52Sg9uFRx4s/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
     "id": "gAWrEV-3ahw",
     "title": "Eugene Boudin: A collection of 1163 works (HD)",
     "channel": "LearnFromMasters",
@@ -12615,6 +13225,25 @@ const ALL_VIDEOS = [
     "wallpaperCount": 9
   },
   {
+    "id": "XUEzojRuVhw",
+    "title": "Fritz Thaulow: A collection of 178 works (HD) *UPDATE",
+    "channel": "LearnFromMasters",
+    "channelUrl": "https://www.youtube.com/channel/UCWjLl5TDZqMZimHbHXk0Wpg",
+    "views": 233000,
+    "durationSec": 1101,
+    "durationFormatted": "18:21",
+    "url": "https://www.youtube.com/watch?v=XUEzojRuVhw",
+    "thumb": "https://i.ytimg.com/vi/XUEzojRuVhw/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/XUEzojRuVhw/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
     "id": "KMd8wH1bQsY",
     "title": "Visual Poems | Van Gogh Part I | From Shadows to Light [AI Music Video]",
     "channel": "Mystic Video AI",
@@ -12869,6 +13498,25 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 5
+  },
+  {
+    "id": "40xg3sB2PEc",
+    "title": "Ivan Shishkin: The Master of Russian Landscape Painting | 4K Slideshow with Relaxing Music",
+    "channel": "Living Motion Paintings",
+    "channelUrl": "https://www.youtube.com/channel/UCldFnZSd7OFcqIO1gcBSb4g",
+    "views": 207000,
+    "durationSec": 4781,
+    "durationFormatted": "1:19:41",
+    "url": "https://www.youtube.com/watch?v=40xg3sB2PEc",
+    "thumb": "https://i.ytimg.com/vi/40xg3sB2PEc/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/40xg3sB2PEc/maxresdefault.jpg",
+    "width": 3840,
+    "height": 2160,
+    "resolution": "3840x2160",
+    "qualityLabel": "4K UHD",
+    "is4K": true,
+    "wallpapers": [],
+    "wallpaperCount": 0
   },
   {
     "id": "4cdn4PvIjao",
@@ -13275,25 +13923,6 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "j8kxk_s1Iv8",
-    "title": "Visual Poems | Rain on Blossoms, Deep Greenery | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 159000,
-    "durationSec": 199,
-    "durationFormatted": "03:19",
-    "url": "https://www.youtube.com/watch?v=j8kxk_s1Iv8",
-    "thumb": "https://i.ytimg.com/vi/j8kxk_s1Iv8/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/j8kxk_s1Iv8/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
     "id": "Vls1Mq-oMdg",
     "title": "Visual Poems | Van Gogh Part II | The House of the Sun [AI Music Video]",
     "channel": "Mystic Video AI",
@@ -13438,6 +14067,25 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7
+  },
+  {
+    "id": "j8kxk_s1Iv8",
+    "title": "Visual Poems | Rain on Blossoms, Deep Greenery | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 159000,
+    "durationSec": 199,
+    "durationFormatted": "03:19",
+    "url": "https://www.youtube.com/watch?v=j8kxk_s1Iv8",
+    "thumb": "https://i.ytimg.com/vi/j8kxk_s1Iv8/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/j8kxk_s1Iv8/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
   },
   {
     "id": "Xul5WT0ReYw",
@@ -14214,6 +14862,44 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
+    "id": "bgwokHmFTLQ",
+    "title": "Visual Poems | Whispers of Blooms and Water | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 79000,
+    "durationSec": 218,
+    "durationFormatted": "03:38",
+    "url": "https://www.youtube.com/watch?v=bgwokHmFTLQ",
+    "thumb": "https://i.ytimg.com/vi/bgwokHmFTLQ/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/bgwokHmFTLQ/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "vczWTya7ygg",
+    "title": "CARL SPITZWEG (1808-1885) German artist ✽ Elizabethan Serenade",
+    "channel": "K A R O L A",
+    "channelUrl": "https://www.youtube.com/channel/UCd67RarDaTRSpcZFW7O5fnQ",
+    "views": 79000,
+    "durationSec": 213,
+    "durationFormatted": "03:33",
+    "url": "https://www.youtube.com/watch?v=vczWTya7ygg",
+    "thumb": "https://i.ytimg.com/vi/vczWTya7ygg/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/vczWTya7ygg/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
     "id": "RDhj8mOWXsg",
     "title": "Visual Poems | Claude Monet | Living Inside Monet's \"Impression, Sunrise\" (4K Visual Story)",
     "channel": "Extraordinary Visual Art",
@@ -14343,25 +15029,6 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "vczWTya7ygg",
-    "title": "CARL SPITZWEG (1808-1885) German artist ✽ Elizabethan Serenade",
-    "channel": "K A R O L A",
-    "channelUrl": "https://www.youtube.com/channel/UCd67RarDaTRSpcZFW7O5fnQ",
-    "views": 79000,
-    "durationSec": 213,
-    "durationFormatted": "03:33",
-    "url": "https://www.youtube.com/watch?v=vczWTya7ygg",
-    "thumb": "https://i.ytimg.com/vi/vczWTya7ygg/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/vczWTya7ygg/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
     "id": "GdVkaMfxfts",
     "title": "Visual Poems | Claude Monet | Woman with a Parasol",
     "channel": "Painters Dream",
@@ -14400,25 +15067,6 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "MyM-rQ5ZvGk",
-    "title": "Vladimir Orlovsky: A collection of 60 paintings (HD)",
-    "channel": "LearnFromMasters",
-    "channelUrl": "https://www.youtube.com/channel/UCWjLl5TDZqMZimHbHXk0Wpg",
-    "views": 70000,
-    "durationSec": 393,
-    "durationFormatted": "06:33",
-    "url": "https://www.youtube.com/watch?v=MyM-rQ5ZvGk",
-    "thumb": "https://i.ytimg.com/vi/MyM-rQ5ZvGk/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/MyM-rQ5ZvGk/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
     "id": "jVQ_mmOomvY",
     "title": "Johan Hendrik Weissenbruch: A collection of 92 paintings (HD)",
     "channel": "LearnFromMasters",
@@ -14429,6 +15077,25 @@ const ALL_VIDEOS = [
     "url": "https://www.youtube.com/watch?v=jVQ_mmOomvY",
     "thumb": "https://i.ytimg.com/vi/jVQ_mmOomvY/hqdefault.jpg",
     "maxresThumb": "https://i.ytimg.com/vi/jVQ_mmOomvY/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "MyM-rQ5ZvGk",
+    "title": "Vladimir Orlovsky: A collection of 60 paintings (HD)",
+    "channel": "LearnFromMasters",
+    "channelUrl": "https://www.youtube.com/channel/UCWjLl5TDZqMZimHbHXk0Wpg",
+    "views": 70000,
+    "durationSec": 393,
+    "durationFormatted": "06:33",
+    "url": "https://www.youtube.com/watch?v=MyM-rQ5ZvGk",
+    "thumb": "https://i.ytimg.com/vi/MyM-rQ5ZvGk/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/MyM-rQ5ZvGk/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -14603,25 +15270,6 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "j-i8EEgur_0",
-    "title": "Visual Poems | Where Irises Bloom by the Water | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 67000,
-    "durationSec": 181,
-    "durationFormatted": "03:01",
-    "url": "https://www.youtube.com/watch?v=j-i8EEgur_0",
-    "thumb": "https://i.ytimg.com/vi/j-i8EEgur_0/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/j-i8EEgur_0/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
     "id": "6rfKrNplN04",
     "title": "Charles Leickert: A collection of 116 paintings (HD)",
     "channel": "LearnFromMasters",
@@ -14632,6 +15280,25 @@ const ALL_VIDEOS = [
     "url": "https://www.youtube.com/watch?v=6rfKrNplN04",
     "thumb": "https://i.ytimg.com/vi/6rfKrNplN04/hqdefault.jpg",
     "maxresThumb": "https://i.ytimg.com/vi/6rfKrNplN04/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "j-i8EEgur_0",
+    "title": "Visual Poems | Where Irises Bloom by the Water | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 67000,
+    "durationSec": 181,
+    "durationFormatted": "03:01",
+    "url": "https://www.youtube.com/watch?v=j-i8EEgur_0",
+    "thumb": "https://i.ytimg.com/vi/j-i8EEgur_0/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/j-i8EEgur_0/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -14789,25 +15456,6 @@ const ALL_VIDEOS = [
     "wallpaperCount": 5
   },
   {
-    "id": "LCrG7Gm5riM",
-    "title": "Visual Poems | Autumn Sun in the Valley | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 63000,
-    "durationSec": 221,
-    "durationFormatted": "03:41",
-    "url": "https://www.youtube.com/watch?v=LCrG7Gm5riM",
-    "thumb": "https://i.ytimg.com/vi/LCrG7Gm5riM/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/LCrG7Gm5riM/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
     "id": "XtDnD1qmAX8",
     "title": "빈센트 반 고흐 명화 따뜻한 그림감상 힐링 음악 태교🎵 Van Gogh Art Slideshow🌞Famous Paintings Healing Music",
     "channel": "Mind Travel 마인드 트래블",
@@ -14827,21 +15475,40 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "NVwstpSWVnw",
-    "title": "Yeh Shaam Mastani ( ये शाम मस्तानी )  4K Song - Kati Patang | Kishore Kumar | Rajesh Khanna",
-    "channel": "Gaane 70s 80s",
-    "channelUrl": "https://www.youtube.com/channel/UCz-3NGJmE45CwYs89dNz_cQ",
-    "views": 61000,
-    "durationSec": 260,
-    "durationFormatted": "04:20",
-    "url": "https://www.youtube.com/watch?v=NVwstpSWVnw",
-    "thumb": "https://i.ytimg.com/vi/NVwstpSWVnw/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/NVwstpSWVnw/maxresdefault.jpg",
-    "width": 3840,
-    "height": 2160,
-    "resolution": "3840x2160",
-    "qualityLabel": "4K UHD",
-    "is4K": true,
+    "id": "LCrG7Gm5riM",
+    "title": "Visual Poems | Autumn Sun in the Valley | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 63000,
+    "durationSec": 221,
+    "durationFormatted": "03:41",
+    "url": "https://www.youtube.com/watch?v=LCrG7Gm5riM",
+    "thumb": "https://i.ytimg.com/vi/LCrG7Gm5riM/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/LCrG7Gm5riM/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "kW_p6SuX7Zg",
+    "title": "Visual Poems | Wind Through Trees and Blooms | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 60000,
+    "durationSec": 229,
+    "durationFormatted": "03:49",
+    "url": "https://www.youtube.com/watch?v=kW_p6SuX7Zg",
+    "thumb": "https://i.ytimg.com/vi/kW_p6SuX7Zg/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/kW_p6SuX7Zg/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0
   },
@@ -14954,25 +15621,6 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 5
-  },
-  {
-    "id": "kW_p6SuX7Zg",
-    "title": "Visual Poems | Wind Through Trees and Blooms | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 59000,
-    "durationSec": 229,
-    "durationFormatted": "03:49",
-    "url": "https://www.youtube.com/watch?v=kW_p6SuX7Zg",
-    "thumb": "https://i.ytimg.com/vi/kW_p6SuX7Zg/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/kW_p6SuX7Zg/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
   },
   {
     "id": "8z5XHjZwaEU",
@@ -15398,6 +16046,25 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
+    "id": "ZB0ky7lNrq8",
+    "title": "Hermann Seeger (1857-1945) German painter ✽ Francis Goya / Romantic guitar",
+    "channel": "K A R O L A",
+    "channelUrl": "https://www.youtube.com/channel/UCd67RarDaTRSpcZFW7O5fnQ",
+    "views": 43000,
+    "durationSec": 202,
+    "durationFormatted": "03:22",
+    "url": "https://www.youtube.com/watch?v=ZB0ky7lNrq8",
+    "thumb": "https://i.ytimg.com/vi/ZB0ky7lNrq8/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/ZB0ky7lNrq8/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
     "id": "y0NG1iXxuhY",
     "title": "Visual Poems | Claude Monet \"The Cliffs at Étretat\": Storm, Reflection & Golden Sunset | 4K",
     "channel": "Extraordinary Visual Art",
@@ -15542,82 +16209,6 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7
-  },
-  {
-    "id": "ZB0ky7lNrq8",
-    "title": "Hermann Seeger (1857-1945) German painter ✽ Francis Goya / Romantic guitar",
-    "channel": "K A R O L A",
-    "channelUrl": "https://www.youtube.com/channel/UCd67RarDaTRSpcZFW7O5fnQ",
-    "views": 43000,
-    "durationSec": 202,
-    "durationFormatted": "03:22",
-    "url": "https://www.youtube.com/watch?v=ZB0ky7lNrq8",
-    "thumb": "https://i.ytimg.com/vi/ZB0ky7lNrq8/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/ZB0ky7lNrq8/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
-    "id": "tP37hSs10Io",
-    "title": "Visual Poems | The Stream Carries Away the Summer Heat | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 41000,
-    "durationSec": 210,
-    "durationFormatted": "03:30",
-    "url": "https://www.youtube.com/watch?v=tP37hSs10Io",
-    "thumb": "https://i.ytimg.com/vi/tP37hSs10Io/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/tP37hSs10Io/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
-    "id": "0ADdYoYZIqg",
-    "title": "Visual Poems | Spring Waters Across a Flowering Floodplain | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 41000,
-    "durationSec": 222,
-    "durationFormatted": "03:42",
-    "url": "https://www.youtube.com/watch?v=0ADdYoYZIqg",
-    "thumb": "https://i.ytimg.com/vi/0ADdYoYZIqg/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/0ADdYoYZIqg/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
-    "id": "AyjhVXeIhKU",
-    "title": "Visual Poems | Claude Monet | The Red Boats at Argenteuil",
-    "channel": "Painters Dream",
-    "channelUrl": "https://www.youtube.com/channel/UCqCzEEy42I36ACXVFs2t15g",
-    "views": 41000,
-    "durationSec": 181,
-    "durationFormatted": "03:01",
-    "url": "https://www.youtube.com/watch?v=AyjhVXeIhKU",
-    "thumb": "https://i.ytimg.com/vi/AyjhVXeIhKU/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/AyjhVXeIhKU/maxresdefault.jpg",
-    "width": 1906,
-    "height": 1080,
-    "resolution": "1906x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
   },
   {
     "id": "NwxqzVKJeto",
@@ -15838,6 +16429,63 @@ const ALL_VIDEOS = [
     "wallpaperCount": 11
   },
   {
+    "id": "AyjhVXeIhKU",
+    "title": "Visual Poems | Claude Monet | The Red Boats at Argenteuil",
+    "channel": "Painters Dream",
+    "channelUrl": "https://www.youtube.com/channel/UCqCzEEy42I36ACXVFs2t15g",
+    "views": 41000,
+    "durationSec": 181,
+    "durationFormatted": "03:01",
+    "url": "https://www.youtube.com/watch?v=AyjhVXeIhKU",
+    "thumb": "https://i.ytimg.com/vi/AyjhVXeIhKU/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/AyjhVXeIhKU/maxresdefault.jpg",
+    "width": 1906,
+    "height": 1080,
+    "resolution": "1906x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "0ADdYoYZIqg",
+    "title": "Visual Poems | Spring Waters Across a Flowering Floodplain | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 41000,
+    "durationSec": 222,
+    "durationFormatted": "03:42",
+    "url": "https://www.youtube.com/watch?v=0ADdYoYZIqg",
+    "thumb": "https://i.ytimg.com/vi/0ADdYoYZIqg/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/0ADdYoYZIqg/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "tP37hSs10Io",
+    "title": "Visual Poems | The Stream Carries Away the Summer Heat | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 41000,
+    "durationSec": 210,
+    "durationFormatted": "03:30",
+    "url": "https://www.youtube.com/watch?v=tP37hSs10Io",
+    "thumb": "https://i.ytimg.com/vi/tP37hSs10Io/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/tP37hSs10Io/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
     "id": "I2dt7XlcWHM",
     "title": "Visual Poems | Claude Monet | The Fields and the Wind Through Seasons",
     "channel": "Muse Visual Art",
@@ -15886,6 +16534,25 @@ const ALL_VIDEOS = [
     "url": "https://www.youtube.com/watch?v=1jaEEos2Moc",
     "thumb": "https://i.ytimg.com/vi/1jaEEos2Moc/hqdefault.jpg",
     "maxresThumb": "https://i.ytimg.com/vi/1jaEEos2Moc/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "phdjREhk2wg",
+    "title": "Johan Mari Henri ten Kate (Dutch, 1831 - 1910) ✽ Mozart / Wiegenlied",
+    "channel": "K A R O L A",
+    "channelUrl": "https://www.youtube.com/channel/UCd67RarDaTRSpcZFW7O5fnQ",
+    "views": 35000,
+    "durationSec": 165,
+    "durationFormatted": "02:45",
+    "url": "https://www.youtube.com/watch?v=phdjREhk2wg",
+    "thumb": "https://i.ytimg.com/vi/phdjREhk2wg/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/phdjREhk2wg/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -16041,25 +16708,6 @@ const ALL_VIDEOS = [
     "wallpaperCount": 7
   },
   {
-    "id": "phdjREhk2wg",
-    "title": "Johan Mari Henri ten Kate (Dutch, 1831 - 1910) ✽ Mozart / Wiegenlied",
-    "channel": "K A R O L A",
-    "channelUrl": "https://www.youtube.com/channel/UCd67RarDaTRSpcZFW7O5fnQ",
-    "views": 35000,
-    "durationSec": 165,
-    "durationFormatted": "02:45",
-    "url": "https://www.youtube.com/watch?v=phdjREhk2wg",
-    "thumb": "https://i.ytimg.com/vi/phdjREhk2wg/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/phdjREhk2wg/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
     "id": "0wPmoFYmLyA",
     "title": "Visual Poems | Witness of Trees | Living Oil Paintings",
     "channel": "Muse Visual Art",
@@ -16089,6 +16737,25 @@ const ALL_VIDEOS = [
     "url": "https://www.youtube.com/watch?v=y2qq6rdVTxg",
     "thumb": "https://i.ytimg.com/vi/y2qq6rdVTxg/hqdefault.jpg",
     "maxresThumb": "https://i.ytimg.com/vi/y2qq6rdVTxg/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "S2diglp47fo",
+    "title": "Nils Kreuger: A collection of 85 paintings (HD)",
+    "channel": "LearnFromMasters",
+    "channelUrl": "https://www.youtube.com/channel/UCWjLl5TDZqMZimHbHXk0Wpg",
+    "views": 32000,
+    "durationSec": 542,
+    "durationFormatted": "09:02",
+    "url": "https://www.youtube.com/watch?v=S2diglp47fo",
+    "thumb": "https://i.ytimg.com/vi/S2diglp47fo/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/S2diglp47fo/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -16136,16 +16803,16 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "S2diglp47fo",
-    "title": "Nils Kreuger: A collection of 85 paintings (HD)",
-    "channel": "LearnFromMasters",
-    "channelUrl": "https://www.youtube.com/channel/UCWjLl5TDZqMZimHbHXk0Wpg",
-    "views": 32000,
-    "durationSec": 542,
-    "durationFormatted": "09:02",
-    "url": "https://www.youtube.com/watch?v=S2diglp47fo",
-    "thumb": "https://i.ytimg.com/vi/S2diglp47fo/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/S2diglp47fo/maxresdefault.jpg",
+    "id": "8DoY7OKZ_eA",
+    "title": "Visual Poems | Floating Shadows in the Reeds | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 31000,
+    "durationSec": 260,
+    "durationFormatted": "04:20",
+    "url": "https://www.youtube.com/watch?v=8DoY7OKZ_eA",
+    "thumb": "https://i.ytimg.com/vi/8DoY7OKZ_eA/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/8DoY7OKZ_eA/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -16155,16 +16822,181 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "gwrPKwZ01fc",
-    "title": "Visual Poems | Behind the Gate, Summer Blooms | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "id": "QJrKGGe6fok",
+    "title": "Hallstatt in Autumn – The Most Beautiful Village in the World | 8K HDR 60p",
+    "channel": "Around The World 4K",
+    "channelUrl": "https://www.youtube.com/channel/UC4F-DMVCe-UbIsweL6kIEfg",
     "views": 31000,
-    "durationSec": 208,
-    "durationFormatted": "03:28",
-    "url": "https://www.youtube.com/watch?v=gwrPKwZ01fc",
-    "thumb": "https://i.ytimg.com/vi/gwrPKwZ01fc/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/gwrPKwZ01fc/maxresdefault.jpg",
+    "durationSec": 264,
+    "durationFormatted": "04:24",
+    "url": "https://www.youtube.com/watch?v=QJrKGGe6fok",
+    "thumb": "https://i.ytimg.com/vi/QJrKGGe6fok/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/QJrKGGe6fok/maxresdefault.jpg",
+    "width": 3840,
+    "height": 2160,
+    "resolution": "3840x2160",
+    "qualityLabel": "4K UHD",
+    "is4K": true,
+    "wallpapers": [
+      {
+        "id": "QJrKGGe6fok_1",
+        "videoId": "QJrKGGe6fok",
+        "videoTitle": "Hallstatt in Autumn – The Most Beautiful Village in the World | 8K HDR 60p",
+        "channel": "Around The World 4K",
+        "snapshotIndex": 1,
+        "timestampSec": 15,
+        "timestampFormatted": "00:15",
+        "path": "wallpapers/QJrKGGe6fok/snapshot_1.jpg",
+        "width": 3840,
+        "height": 2160,
+        "qualityLabel": "4K UHD",
+        "is4K": true,
+        "fileSizeKB": 973.8,
+        "tags": [],
+        "primaryPalette": [],
+        "formFactor": "desktop"
+      },
+      {
+        "id": "QJrKGGe6fok_2",
+        "videoId": "QJrKGGe6fok",
+        "videoTitle": "Hallstatt in Autumn – The Most Beautiful Village in the World | 8K HDR 60p",
+        "channel": "Around The World 4K",
+        "snapshotIndex": 2,
+        "timestampSec": 53,
+        "timestampFormatted": "00:53",
+        "path": "wallpapers/QJrKGGe6fok/snapshot_2.jpg",
+        "width": 3840,
+        "height": 2160,
+        "qualityLabel": "4K UHD",
+        "is4K": true,
+        "fileSizeKB": 1166.8,
+        "tags": [],
+        "primaryPalette": [],
+        "formFactor": "desktop"
+      },
+      {
+        "id": "QJrKGGe6fok_3",
+        "videoId": "QJrKGGe6fok",
+        "videoTitle": "Hallstatt in Autumn – The Most Beautiful Village in the World | 8K HDR 60p",
+        "channel": "Around The World 4K",
+        "snapshotIndex": 3,
+        "timestampSec": 92,
+        "timestampFormatted": "01:32",
+        "path": "wallpapers/QJrKGGe6fok/snapshot_3.jpg",
+        "width": 3840,
+        "height": 2160,
+        "qualityLabel": "4K UHD",
+        "is4K": true,
+        "fileSizeKB": 692.4,
+        "tags": [],
+        "primaryPalette": [],
+        "formFactor": "desktop"
+      },
+      {
+        "id": "QJrKGGe6fok_4",
+        "videoId": "QJrKGGe6fok",
+        "videoTitle": "Hallstatt in Autumn – The Most Beautiful Village in the World | 8K HDR 60p",
+        "channel": "Around The World 4K",
+        "snapshotIndex": 4,
+        "timestampSec": 131,
+        "timestampFormatted": "02:11",
+        "path": "wallpapers/QJrKGGe6fok/snapshot_4.jpg",
+        "width": 3840,
+        "height": 2160,
+        "qualityLabel": "4K UHD",
+        "is4K": true,
+        "fileSizeKB": 453.8,
+        "tags": [],
+        "primaryPalette": [],
+        "formFactor": "desktop"
+      },
+      {
+        "id": "QJrKGGe6fok_5",
+        "videoId": "QJrKGGe6fok",
+        "videoTitle": "Hallstatt in Autumn – The Most Beautiful Village in the World | 8K HDR 60p",
+        "channel": "Around The World 4K",
+        "snapshotIndex": 5,
+        "timestampSec": 170,
+        "timestampFormatted": "02:50",
+        "path": "wallpapers/QJrKGGe6fok/snapshot_5.jpg",
+        "width": 3840,
+        "height": 2160,
+        "qualityLabel": "4K UHD",
+        "is4K": true,
+        "fileSizeKB": 1661.4,
+        "tags": [],
+        "primaryPalette": [],
+        "formFactor": "desktop"
+      },
+      {
+        "id": "QJrKGGe6fok_6",
+        "videoId": "QJrKGGe6fok",
+        "videoTitle": "Hallstatt in Autumn – The Most Beautiful Village in the World | 8K HDR 60p",
+        "channel": "Around The World 4K",
+        "snapshotIndex": 6,
+        "timestampSec": 209,
+        "timestampFormatted": "03:29",
+        "path": "wallpapers/QJrKGGe6fok/snapshot_6.jpg",
+        "width": 3840,
+        "height": 2160,
+        "qualityLabel": "4K UHD",
+        "is4K": true,
+        "fileSizeKB": 1436.7,
+        "tags": [],
+        "primaryPalette": [],
+        "formFactor": "desktop"
+      },
+      {
+        "id": "QJrKGGe6fok_7",
+        "videoId": "QJrKGGe6fok",
+        "videoTitle": "Hallstatt in Autumn – The Most Beautiful Village in the World | 8K HDR 60p",
+        "channel": "Around The World 4K",
+        "snapshotIndex": 7,
+        "timestampSec": 248,
+        "timestampFormatted": "04:08",
+        "path": "wallpapers/QJrKGGe6fok/snapshot_7.jpg",
+        "width": 3840,
+        "height": 2160,
+        "qualityLabel": "4K UHD",
+        "is4K": true,
+        "fileSizeKB": 974.1,
+        "tags": [],
+        "primaryPalette": [],
+        "formFactor": "desktop"
+      }
+    ],
+    "wallpaperCount": 7
+  },
+  {
+    "id": "26VEKoCFZcI",
+    "title": "Художник Божков Роман Александрович",
+    "channel": "Маргарита Полянская",
+    "channelUrl": "https://www.youtube.com/channel/UCbB-G6-8C6RXuGjrAOxrOpw",
+    "views": 31000,
+    "durationSec": 234,
+    "durationFormatted": "03:54",
+    "url": "https://www.youtube.com/watch?v=26VEKoCFZcI",
+    "thumb": "https://i.ytimg.com/vi/26VEKoCFZcI/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/26VEKoCFZcI/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "A-le9yB8PYY",
+    "title": "Ivan Aivazovsky - 50 of his Best Paintings",
+    "channel": "LetsFallinArt",
+    "channelUrl": "https://www.youtube.com/channel/UCUVxLeCbJSEtHKelsG6uQDQ",
+    "views": 31000,
+    "durationSec": 352,
+    "durationFormatted": "05:52",
+    "url": "https://www.youtube.com/watch?v=A-le9yB8PYY",
+    "thumb": "https://i.ytimg.com/vi/A-le9yB8PYY/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/A-le9yB8PYY/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -16320,181 +17152,16 @@ const ALL_VIDEOS = [
     "wallpaperCount": 7
   },
   {
-    "id": "QJrKGGe6fok",
-    "title": "Hallstatt in Autumn – The Most Beautiful Village in the World | 8K HDR 60p",
-    "channel": "Around The World 4K",
-    "channelUrl": "https://www.youtube.com/channel/UC4F-DMVCe-UbIsweL6kIEfg",
+    "id": "gwrPKwZ01fc",
+    "title": "Visual Poems | Behind the Gate, Summer Blooms | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
     "views": 31000,
-    "durationSec": 264,
-    "durationFormatted": "04:24",
-    "url": "https://www.youtube.com/watch?v=QJrKGGe6fok",
-    "thumb": "https://i.ytimg.com/vi/QJrKGGe6fok/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/QJrKGGe6fok/maxresdefault.jpg",
-    "width": 3840,
-    "height": 2160,
-    "resolution": "3840x2160",
-    "qualityLabel": "4K UHD",
-    "is4K": true,
-    "wallpapers": [
-      {
-        "id": "QJrKGGe6fok_1",
-        "videoId": "QJrKGGe6fok",
-        "videoTitle": "Hallstatt in Autumn – The Most Beautiful Village in the World | 8K HDR 60p",
-        "channel": "Around The World 4K",
-        "snapshotIndex": 1,
-        "timestampSec": 15,
-        "timestampFormatted": "00:15",
-        "path": "wallpapers/QJrKGGe6fok/snapshot_1.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 973.8,
-        "tags": [],
-        "primaryPalette": [],
-        "formFactor": "desktop"
-      },
-      {
-        "id": "QJrKGGe6fok_2",
-        "videoId": "QJrKGGe6fok",
-        "videoTitle": "Hallstatt in Autumn – The Most Beautiful Village in the World | 8K HDR 60p",
-        "channel": "Around The World 4K",
-        "snapshotIndex": 2,
-        "timestampSec": 53,
-        "timestampFormatted": "00:53",
-        "path": "wallpapers/QJrKGGe6fok/snapshot_2.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 1166.8,
-        "tags": [],
-        "primaryPalette": [],
-        "formFactor": "desktop"
-      },
-      {
-        "id": "QJrKGGe6fok_3",
-        "videoId": "QJrKGGe6fok",
-        "videoTitle": "Hallstatt in Autumn – The Most Beautiful Village in the World | 8K HDR 60p",
-        "channel": "Around The World 4K",
-        "snapshotIndex": 3,
-        "timestampSec": 92,
-        "timestampFormatted": "01:32",
-        "path": "wallpapers/QJrKGGe6fok/snapshot_3.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 692.4,
-        "tags": [],
-        "primaryPalette": [],
-        "formFactor": "desktop"
-      },
-      {
-        "id": "QJrKGGe6fok_4",
-        "videoId": "QJrKGGe6fok",
-        "videoTitle": "Hallstatt in Autumn – The Most Beautiful Village in the World | 8K HDR 60p",
-        "channel": "Around The World 4K",
-        "snapshotIndex": 4,
-        "timestampSec": 131,
-        "timestampFormatted": "02:11",
-        "path": "wallpapers/QJrKGGe6fok/snapshot_4.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 453.8,
-        "tags": [],
-        "primaryPalette": [],
-        "formFactor": "desktop"
-      },
-      {
-        "id": "QJrKGGe6fok_5",
-        "videoId": "QJrKGGe6fok",
-        "videoTitle": "Hallstatt in Autumn – The Most Beautiful Village in the World | 8K HDR 60p",
-        "channel": "Around The World 4K",
-        "snapshotIndex": 5,
-        "timestampSec": 170,
-        "timestampFormatted": "02:50",
-        "path": "wallpapers/QJrKGGe6fok/snapshot_5.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 1661.4,
-        "tags": [],
-        "primaryPalette": [],
-        "formFactor": "desktop"
-      },
-      {
-        "id": "QJrKGGe6fok_6",
-        "videoId": "QJrKGGe6fok",
-        "videoTitle": "Hallstatt in Autumn – The Most Beautiful Village in the World | 8K HDR 60p",
-        "channel": "Around The World 4K",
-        "snapshotIndex": 6,
-        "timestampSec": 209,
-        "timestampFormatted": "03:29",
-        "path": "wallpapers/QJrKGGe6fok/snapshot_6.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 1436.7,
-        "tags": [],
-        "primaryPalette": [],
-        "formFactor": "desktop"
-      },
-      {
-        "id": "QJrKGGe6fok_7",
-        "videoId": "QJrKGGe6fok",
-        "videoTitle": "Hallstatt in Autumn – The Most Beautiful Village in the World | 8K HDR 60p",
-        "channel": "Around The World 4K",
-        "snapshotIndex": 7,
-        "timestampSec": 248,
-        "timestampFormatted": "04:08",
-        "path": "wallpapers/QJrKGGe6fok/snapshot_7.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 974.1,
-        "tags": [],
-        "primaryPalette": [],
-        "formFactor": "desktop"
-      }
-    ],
-    "wallpaperCount": 7
-  },
-  {
-    "id": "A-le9yB8PYY",
-    "title": "Ivan Aivazovsky - 50 of his Best Paintings",
-    "channel": "LetsFallinArt",
-    "channelUrl": "https://www.youtube.com/channel/UCUVxLeCbJSEtHKelsG6uQDQ",
-    "views": 31000,
-    "durationSec": 352,
-    "durationFormatted": "05:52",
-    "url": "https://www.youtube.com/watch?v=A-le9yB8PYY",
-    "thumb": "https://i.ytimg.com/vi/A-le9yB8PYY/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/A-le9yB8PYY/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
-    "id": "26VEKoCFZcI",
-    "title": "Художник Божков Роман Александрович",
-    "channel": "Маргарита Полянская",
-    "channelUrl": "https://www.youtube.com/channel/UCbB-G6-8C6RXuGjrAOxrOpw",
-    "views": 31000,
-    "durationSec": 234,
-    "durationFormatted": "03:54",
-    "url": "https://www.youtube.com/watch?v=26VEKoCFZcI",
-    "thumb": "https://i.ytimg.com/vi/26VEKoCFZcI/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/26VEKoCFZcI/maxresdefault.jpg",
+    "durationSec": 208,
+    "durationFormatted": "03:28",
+    "url": "https://www.youtube.com/watch?v=gwrPKwZ01fc",
+    "thumb": "https://i.ytimg.com/vi/gwrPKwZ01fc/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/gwrPKwZ01fc/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -16669,25 +17336,6 @@ const ALL_VIDEOS = [
     "wallpaperCount": 7
   },
   {
-    "id": "_HUYiFugH4A",
-    "title": "Visual Poems | Claude Monet | Four seasons of the Japanese Bridge",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 28000,
-    "durationSec": 222,
-    "durationFormatted": "03:42",
-    "url": "https://www.youtube.com/watch?v=_HUYiFugH4A",
-    "thumb": "https://i.ytimg.com/vi/_HUYiFugH4A/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/_HUYiFugH4A/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
     "id": "uSNByH7eer8",
     "title": "Visual Poems | Whispers of Red and Green | Living Oil Paintings",
     "channel": "Muse Visual Art",
@@ -16726,6 +17374,25 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
+    "id": "_HUYiFugH4A",
+    "title": "Visual Poems | Claude Monet | Four seasons of the Japanese Bridge",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 28000,
+    "durationSec": 222,
+    "durationFormatted": "03:42",
+    "url": "https://www.youtube.com/watch?v=_HUYiFugH4A",
+    "thumb": "https://i.ytimg.com/vi/_HUYiFugH4A/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/_HUYiFugH4A/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
     "id": "ZGW5FS7vkEg",
     "title": "Back to Grimaud Village | With My Grandmother | Visual Poems | Relaxing Music",
     "channel": "Oil Memory",
@@ -16736,6 +17403,25 @@ const ALL_VIDEOS = [
     "url": "https://www.youtube.com/watch?v=ZGW5FS7vkEg",
     "thumb": "https://i.ytimg.com/vi/ZGW5FS7vkEg/hqdefault.jpg",
     "maxresThumb": "https://i.ytimg.com/vi/ZGW5FS7vkEg/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "Et2jSjaNy7M",
+    "title": "Visual Poems | A Quiet Village After the Rain | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 26000,
+    "durationSec": 202,
+    "durationFormatted": "03:22",
+    "url": "https://www.youtube.com/watch?v=Et2jSjaNy7M",
+    "thumb": "https://i.ytimg.com/vi/Et2jSjaNy7M/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/Et2jSjaNy7M/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -16802,16 +17488,35 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "smlzmKwRXBM",
-    "title": "Visual Poems | A Reverie of a White Dress | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "id": "Ht3cSOCueJc",
+    "title": "Rose Maynard Barton: A collection of 40 paintings (HD)",
+    "channel": "LearnFromMasters",
+    "channelUrl": "https://www.youtube.com/channel/UCWjLl5TDZqMZimHbHXk0Wpg",
     "views": 22000,
-    "durationSec": 188,
-    "durationFormatted": "03:08",
-    "url": "https://www.youtube.com/watch?v=smlzmKwRXBM",
-    "thumb": "https://i.ytimg.com/vi/smlzmKwRXBM/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/smlzmKwRXBM/maxresdefault.jpg",
+    "durationSec": 272,
+    "durationFormatted": "04:32",
+    "url": "https://www.youtube.com/watch?v=Ht3cSOCueJc",
+    "thumb": "https://i.ytimg.com/vi/Ht3cSOCueJc/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/Ht3cSOCueJc/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "xC3BeK35fPw",
+    "title": "Magnus Munsterhjelm/Магнус  Мунстеръелм",
+    "channel": "Art for us",
+    "channelUrl": "https://www.youtube.com/channel/UCQAVzPC0BlalVDThyKzTFLA",
+    "views": 22000,
+    "durationSec": 217,
+    "durationFormatted": "03:37",
+    "url": "https://www.youtube.com/watch?v=xC3BeK35fPw",
+    "thumb": "https://i.ytimg.com/vi/xC3BeK35fPw/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/xC3BeK35fPw/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -16931,54 +17636,16 @@ const ALL_VIDEOS = [
     "wallpaperCount": 5
   },
   {
-    "id": "xC3BeK35fPw",
-    "title": "Magnus Munsterhjelm/Магнус  Мунстеръелм",
-    "channel": "Art for us",
-    "channelUrl": "https://www.youtube.com/channel/UCQAVzPC0BlalVDThyKzTFLA",
-    "views": 22000,
-    "durationSec": 217,
-    "durationFormatted": "03:37",
-    "url": "https://www.youtube.com/watch?v=xC3BeK35fPw",
-    "thumb": "https://i.ytimg.com/vi/xC3BeK35fPw/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/xC3BeK35fPw/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
-    "id": "Ht3cSOCueJc",
-    "title": "Rose Maynard Barton: A collection of 40 paintings (HD)",
-    "channel": "LearnFromMasters",
-    "channelUrl": "https://www.youtube.com/channel/UCWjLl5TDZqMZimHbHXk0Wpg",
-    "views": 22000,
-    "durationSec": 272,
-    "durationFormatted": "04:32",
-    "url": "https://www.youtube.com/watch?v=Ht3cSOCueJc",
-    "thumb": "https://i.ytimg.com/vi/Ht3cSOCueJc/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/Ht3cSOCueJc/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
-    "id": "RyoWkJ2r314",
-    "title": "Visual Poems | The Stone Path and Clear Greens After Rain | Living Oil Paintings",
+    "id": "smlzmKwRXBM",
+    "title": "Visual Poems | A Reverie of a White Dress | Living Oil Paintings",
     "channel": "Muse Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 20000,
-    "durationSec": 195,
-    "durationFormatted": "03:15",
-    "url": "https://www.youtube.com/watch?v=RyoWkJ2r314",
-    "thumb": "https://i.ytimg.com/vi/RyoWkJ2r314/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/RyoWkJ2r314/maxresdefault.jpg",
+    "views": 22000,
+    "durationSec": 188,
+    "durationFormatted": "03:08",
+    "url": "https://www.youtube.com/watch?v=smlzmKwRXBM",
+    "thumb": "https://i.ytimg.com/vi/smlzmKwRXBM/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/smlzmKwRXBM/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -16998,6 +17665,25 @@ const ALL_VIDEOS = [
     "url": "https://www.youtube.com/watch?v=Bxr5GYtwRnY",
     "thumb": "https://i.ytimg.com/vi/Bxr5GYtwRnY/hqdefault.jpg",
     "maxresThumb": "https://i.ytimg.com/vi/Bxr5GYtwRnY/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "RyoWkJ2r314",
+    "title": "Visual Poems | The Stone Path and Clear Greens After Rain | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 20000,
+    "durationSec": 195,
+    "durationFormatted": "03:15",
+    "url": "https://www.youtube.com/watch?v=RyoWkJ2r314",
+    "thumb": "https://i.ytimg.com/vi/RyoWkJ2r314/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/RyoWkJ2r314/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -17036,25 +17722,6 @@ const ALL_VIDEOS = [
     "url": "https://www.youtube.com/watch?v=QB1p9MKrf1M",
     "thumb": "https://i.ytimg.com/vi/QB1p9MKrf1M/hqdefault.jpg",
     "maxresThumb": "https://i.ytimg.com/vi/QB1p9MKrf1M/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
-    "id": "mTi-O-vmJYI",
-    "title": "Visual Poems | The Blossom River and Silent Time | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 18000,
-    "durationSec": 204,
-    "durationFormatted": "03:24",
-    "url": "https://www.youtube.com/watch?v=mTi-O-vmJYI",
-    "thumb": "https://i.ytimg.com/vi/mTi-O-vmJYI/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/mTi-O-vmJYI/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -17174,114 +17841,23 @@ const ALL_VIDEOS = [
     "wallpaperCount": 5
   },
   {
-    "id": "qEmmHWrxlno",
-    "title": "Claude Monet Painting | Winter Light in Venice",
-    "channel": "Cupid Studio",
-    "channelUrl": "https://www.youtube.com/channel/UClWtMcqVrDo3039JTMAYE4w",
-    "views": 17000,
-    "durationSec": 206,
-    "durationFormatted": "03:26",
-    "url": "https://www.youtube.com/watch?v=qEmmHWrxlno",
-    "thumb": "wallpapers/qEmmHWrxlno/snapshot_1.jpg",
-    "maxresThumb": "wallpapers/qEmmHWrxlno/snapshot_1.jpg",
-    "width": 3840,
-    "height": 2160,
-    "resolution": "3840x2160",
-    "qualityLabel": "4K UHD",
-    "is4K": true,
-    "wallpapers": [
-      {
-        "id": "qEmmHWrxlno_1",
-        "videoId": "qEmmHWrxlno",
-        "videoTitle": "Claude Monet Painting | Winter Light in Venice",
-        "channel": "Cupid Studio",
-        "snapshotIndex": 1,
-        "timestampSec": 16,
-        "timestampFormatted": "00:16",
-        "path": "wallpapers/qEmmHWrxlno/snapshot_1.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 700.9,
-        "tags": [],
-        "primaryPalette": [],
-        "formFactor": "desktop"
-      },
-      {
-        "id": "qEmmHWrxlno_2",
-        "videoId": "qEmmHWrxlno",
-        "videoTitle": "Claude Monet Painting | Winter Light in Venice",
-        "channel": "Cupid Studio",
-        "snapshotIndex": 2,
-        "timestampSec": 59,
-        "timestampFormatted": "00:59",
-        "path": "wallpapers/qEmmHWrxlno/snapshot_2.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 584.8,
-        "tags": [],
-        "primaryPalette": [],
-        "formFactor": "desktop"
-      },
-      {
-        "id": "qEmmHWrxlno_3",
-        "videoId": "qEmmHWrxlno",
-        "videoTitle": "Claude Monet Painting | Winter Light in Venice",
-        "channel": "Cupid Studio",
-        "snapshotIndex": 3,
-        "timestampSec": 102,
-        "timestampFormatted": "01:42",
-        "path": "wallpapers/qEmmHWrxlno/snapshot_3.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 722.9,
-        "tags": [],
-        "primaryPalette": [],
-        "formFactor": "desktop"
-      },
-      {
-        "id": "qEmmHWrxlno_4",
-        "videoId": "qEmmHWrxlno",
-        "videoTitle": "Claude Monet Painting | Winter Light in Venice",
-        "channel": "Cupid Studio",
-        "snapshotIndex": 4,
-        "timestampSec": 145,
-        "timestampFormatted": "02:25",
-        "path": "wallpapers/qEmmHWrxlno/snapshot_4.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 487.2,
-        "tags": [],
-        "primaryPalette": [],
-        "formFactor": "desktop"
-      },
-      {
-        "id": "qEmmHWrxlno_5",
-        "videoId": "qEmmHWrxlno",
-        "videoTitle": "Claude Monet Painting | Winter Light in Venice",
-        "channel": "Cupid Studio",
-        "snapshotIndex": 5,
-        "timestampSec": 189,
-        "timestampFormatted": "03:09",
-        "path": "wallpapers/qEmmHWrxlno/snapshot_5.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 492.7,
-        "tags": [],
-        "primaryPalette": [],
-        "formFactor": "desktop"
-      }
-    ],
-    "wallpaperCount": 5
+    "id": "mTi-O-vmJYI",
+    "title": "Visual Poems | The Blossom River and Silent Time | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 18000,
+    "durationSec": 204,
+    "durationFormatted": "03:24",
+    "url": "https://www.youtube.com/watch?v=mTi-O-vmJYI",
+    "thumb": "https://i.ytimg.com/vi/mTi-O-vmJYI/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/mTi-O-vmJYI/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
   },
   {
     "id": "ltdyuf1oK6I",
@@ -17430,23 +18006,114 @@ const ALL_VIDEOS = [
     "wallpaperCount": 7
   },
   {
-    "id": "JWrfLhlSfzA",
-    "title": "Visual Poems | Whispers of the Forget-Me-Not by the Brook | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 16000,
-    "durationSec": 239,
-    "durationFormatted": "03:59",
-    "url": "https://www.youtube.com/watch?v=JWrfLhlSfzA",
-    "thumb": "https://i.ytimg.com/vi/JWrfLhlSfzA/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/JWrfLhlSfzA/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
+    "id": "qEmmHWrxlno",
+    "title": "Claude Monet Painting | Winter Light in Venice",
+    "channel": "Cupid Studio",
+    "channelUrl": "https://www.youtube.com/channel/UClWtMcqVrDo3039JTMAYE4w",
+    "views": 17000,
+    "durationSec": 206,
+    "durationFormatted": "03:26",
+    "url": "https://www.youtube.com/watch?v=qEmmHWrxlno",
+    "thumb": "wallpapers/qEmmHWrxlno/snapshot_1.jpg",
+    "maxresThumb": "wallpapers/qEmmHWrxlno/snapshot_1.jpg",
+    "width": 3840,
+    "height": 2160,
+    "resolution": "3840x2160",
+    "qualityLabel": "4K UHD",
+    "is4K": true,
+    "wallpapers": [
+      {
+        "id": "qEmmHWrxlno_1",
+        "videoId": "qEmmHWrxlno",
+        "videoTitle": "Claude Monet Painting | Winter Light in Venice",
+        "channel": "Cupid Studio",
+        "snapshotIndex": 1,
+        "timestampSec": 16,
+        "timestampFormatted": "00:16",
+        "path": "wallpapers/qEmmHWrxlno/snapshot_1.jpg",
+        "width": 3840,
+        "height": 2160,
+        "qualityLabel": "4K UHD",
+        "is4K": true,
+        "fileSizeKB": 700.9,
+        "tags": [],
+        "primaryPalette": [],
+        "formFactor": "desktop"
+      },
+      {
+        "id": "qEmmHWrxlno_2",
+        "videoId": "qEmmHWrxlno",
+        "videoTitle": "Claude Monet Painting | Winter Light in Venice",
+        "channel": "Cupid Studio",
+        "snapshotIndex": 2,
+        "timestampSec": 59,
+        "timestampFormatted": "00:59",
+        "path": "wallpapers/qEmmHWrxlno/snapshot_2.jpg",
+        "width": 3840,
+        "height": 2160,
+        "qualityLabel": "4K UHD",
+        "is4K": true,
+        "fileSizeKB": 584.8,
+        "tags": [],
+        "primaryPalette": [],
+        "formFactor": "desktop"
+      },
+      {
+        "id": "qEmmHWrxlno_3",
+        "videoId": "qEmmHWrxlno",
+        "videoTitle": "Claude Monet Painting | Winter Light in Venice",
+        "channel": "Cupid Studio",
+        "snapshotIndex": 3,
+        "timestampSec": 102,
+        "timestampFormatted": "01:42",
+        "path": "wallpapers/qEmmHWrxlno/snapshot_3.jpg",
+        "width": 3840,
+        "height": 2160,
+        "qualityLabel": "4K UHD",
+        "is4K": true,
+        "fileSizeKB": 722.9,
+        "tags": [],
+        "primaryPalette": [],
+        "formFactor": "desktop"
+      },
+      {
+        "id": "qEmmHWrxlno_4",
+        "videoId": "qEmmHWrxlno",
+        "videoTitle": "Claude Monet Painting | Winter Light in Venice",
+        "channel": "Cupid Studio",
+        "snapshotIndex": 4,
+        "timestampSec": 145,
+        "timestampFormatted": "02:25",
+        "path": "wallpapers/qEmmHWrxlno/snapshot_4.jpg",
+        "width": 3840,
+        "height": 2160,
+        "qualityLabel": "4K UHD",
+        "is4K": true,
+        "fileSizeKB": 487.2,
+        "tags": [],
+        "primaryPalette": [],
+        "formFactor": "desktop"
+      },
+      {
+        "id": "qEmmHWrxlno_5",
+        "videoId": "qEmmHWrxlno",
+        "videoTitle": "Claude Monet Painting | Winter Light in Venice",
+        "channel": "Cupid Studio",
+        "snapshotIndex": 5,
+        "timestampSec": 189,
+        "timestampFormatted": "03:09",
+        "path": "wallpapers/qEmmHWrxlno/snapshot_5.jpg",
+        "width": 3840,
+        "height": 2160,
+        "qualityLabel": "4K UHD",
+        "is4K": true,
+        "fileSizeKB": 492.7,
+        "tags": [],
+        "primaryPalette": [],
+        "formFactor": "desktop"
+      }
+    ],
+    "wallpaperCount": 5
   },
   {
     "id": "DEBpPMu4w20",
@@ -17463,6 +18130,25 @@ const ALL_VIDEOS = [
     "height": 1080,
     "resolution": "1920x1080",
     "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "6fwRmi1dCwg",
+    "title": "Romantic Russian Paintings of Ships at Sea by Ivan Aivazovsky",
+    "channel": "Faces of Ancient Europe",
+    "channelUrl": "https://www.youtube.com/channel/UCXqfbPOyADaV_v38Gp4CiiA",
+    "views": 16000,
+    "durationSec": 784,
+    "durationFormatted": "13:04",
+    "url": "https://www.youtube.com/watch?v=6fwRmi1dCwg",
+    "thumb": "https://i.ytimg.com/vi/6fwRmi1dCwg/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/6fwRmi1dCwg/maxresdefault.jpg",
+    "width": 1280,
+    "height": 720,
+    "resolution": "1280x720",
+    "qualityLabel": "720p",
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0
@@ -17487,20 +18173,20 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "6fwRmi1dCwg",
-    "title": "Romantic Russian Paintings of Ships at Sea by Ivan Aivazovsky",
-    "channel": "Faces of Ancient Europe",
-    "channelUrl": "https://www.youtube.com/channel/UCXqfbPOyADaV_v38Gp4CiiA",
+    "id": "JWrfLhlSfzA",
+    "title": "Visual Poems | Whispers of the Forget-Me-Not by the Brook | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
     "views": 16000,
-    "durationSec": 784,
-    "durationFormatted": "13:04",
-    "url": "https://www.youtube.com/watch?v=6fwRmi1dCwg",
-    "thumb": "https://i.ytimg.com/vi/6fwRmi1dCwg/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/6fwRmi1dCwg/maxresdefault.jpg",
-    "width": 1280,
-    "height": 720,
-    "resolution": "1280x720",
-    "qualityLabel": "720p",
+    "durationSec": 239,
+    "durationFormatted": "03:59",
+    "url": "https://www.youtube.com/watch?v=JWrfLhlSfzA",
+    "thumb": "https://i.ytimg.com/vi/JWrfLhlSfzA/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/JWrfLhlSfzA/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0
@@ -17910,82 +18596,6 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "jWlxfU71NXI",
-    "title": "Visual Poems | Between Bloom and Fade | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 11000,
-    "durationSec": 210,
-    "durationFormatted": "03:30",
-    "url": "https://www.youtube.com/watch?v=jWlxfU71NXI",
-    "thumb": "https://i.ytimg.com/vi/jWlxfU71NXI/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/jWlxfU71NXI/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
-    "id": "FRHDbIlwNXo",
-    "title": "Visual Poems | Afterglow by the Lake | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 11000,
-    "durationSec": 203,
-    "durationFormatted": "03:23",
-    "url": "https://www.youtube.com/watch?v=FRHDbIlwNXo",
-    "thumb": "https://i.ytimg.com/vi/FRHDbIlwNXo/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/FRHDbIlwNXo/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
-    "id": "Gxziid-_SvA",
-    "title": "Visual Poems | The Farm Deep in the Blossoms | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 11000,
-    "durationSec": 208,
-    "durationFormatted": "03:28",
-    "url": "https://www.youtube.com/watch?v=Gxziid-_SvA",
-    "thumb": "https://i.ytimg.com/vi/Gxziid-_SvA/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/Gxziid-_SvA/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
-    "id": "mojInAa9s8o",
-    "title": "Visual Poems | The Impressionist Countryside | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 11000,
-    "durationSec": 200,
-    "durationFormatted": "03:20",
-    "url": "https://www.youtube.com/watch?v=mojInAa9s8o",
-    "thumb": "https://i.ytimg.com/vi/mojInAa9s8o/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/mojInAa9s8o/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
     "id": "3jIhJIeCC70",
     "title": "Visual Poems | Yorkshire, A Date with Daffodils | Living Oil Paintings",
     "channel": "Muse Visual Art",
@@ -18113,6 +18723,25 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 5
+  },
+  {
+    "id": "mojInAa9s8o",
+    "title": "Visual Poems | The Impressionist Countryside | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 11000,
+    "durationSec": 200,
+    "durationFormatted": "03:20",
+    "url": "https://www.youtube.com/watch?v=mojInAa9s8o",
+    "thumb": "https://i.ytimg.com/vi/mojInAa9s8o/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/mojInAa9s8o/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
   },
   {
     "id": "5zj7MU2CyzY",
@@ -18261,6 +18890,101 @@ const ALL_VIDEOS = [
     "wallpaperCount": 7
   },
   {
+    "id": "Gxziid-_SvA",
+    "title": "Visual Poems | The Farm Deep in the Blossoms | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 11000,
+    "durationSec": 208,
+    "durationFormatted": "03:28",
+    "url": "https://www.youtube.com/watch?v=Gxziid-_SvA",
+    "thumb": "https://i.ytimg.com/vi/Gxziid-_SvA/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/Gxziid-_SvA/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "FRHDbIlwNXo",
+    "title": "Visual Poems | Afterglow by the Lake | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 11000,
+    "durationSec": 203,
+    "durationFormatted": "03:23",
+    "url": "https://www.youtube.com/watch?v=FRHDbIlwNXo",
+    "thumb": "https://i.ytimg.com/vi/FRHDbIlwNXo/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/FRHDbIlwNXo/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "jWlxfU71NXI",
+    "title": "Visual Poems | Between Bloom and Fade | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 11000,
+    "durationSec": 210,
+    "durationFormatted": "03:30",
+    "url": "https://www.youtube.com/watch?v=jWlxfU71NXI",
+    "thumb": "https://i.ytimg.com/vi/jWlxfU71NXI/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/jWlxfU71NXI/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "8SWvmB2_AN8",
+    "title": "Visual Poems | Chamomile Fields in Summer | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 10000,
+    "durationSec": 200,
+    "durationFormatted": "03:20",
+    "url": "https://www.youtube.com/watch?v=8SWvmB2_AN8",
+    "thumb": "https://i.ytimg.com/vi/8SWvmB2_AN8/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/8SWvmB2_AN8/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "8dPO3fDt5OE",
+    "title": "Visual Poems | Claude Monet | Arrival of the Normandy Train: The Reunion (Part 2)",
+    "channel": "Painters Dream",
+    "channelUrl": "https://www.youtube.com/channel/UCqCzEEy42I36ACXVFs2t15g",
+    "views": 10000,
+    "durationSec": 189,
+    "durationFormatted": "03:09",
+    "url": "https://www.youtube.com/watch?v=8dPO3fDt5OE",
+    "thumb": "https://i.ytimg.com/vi/8dPO3fDt5OE/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/8dPO3fDt5OE/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
     "id": "sNLWtm_pGNc",
     "title": "Visual Poems | Alpine Meadows and Streams | Living Oil Paintings",
     "channel": "Muse Visual Art",
@@ -18375,25 +19099,6 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "8dPO3fDt5OE",
-    "title": "Visual Poems | Claude Monet | Arrival of the Normandy Train: The Reunion (Part 2)",
-    "channel": "Painters Dream",
-    "channelUrl": "https://www.youtube.com/channel/UCqCzEEy42I36ACXVFs2t15g",
-    "views": 10000,
-    "durationSec": 189,
-    "durationFormatted": "03:09",
-    "url": "https://www.youtube.com/watch?v=8dPO3fDt5OE",
-    "thumb": "https://i.ytimg.com/vi/8dPO3fDt5OE/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/8dPO3fDt5OE/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
     "id": "ZqP1sJfO5Vg",
     "title": "Visual Poems | Where Clouds and Flowers Compete in Beauty | Living Oil Paintings",
     "channel": "Muse Visual Art",
@@ -18493,50 +19198,12 @@ const ALL_VIDEOS = [
     "title": "Visual Poems | Awaking in Spring Meadows | Living Oil Paintings",
     "channel": "Muse Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 8800,
+    "views": 8900,
     "durationSec": 214,
     "durationFormatted": "03:34",
     "url": "https://www.youtube.com/watch?v=wJCFTm619jI",
     "thumb": "https://i.ytimg.com/vi/wJCFTm619jI/hqdefault.jpg",
     "maxresThumb": "https://i.ytimg.com/vi/wJCFTm619jI/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
-    "id": "9LTrHubvJ7c",
-    "title": "Visual Poems | Wind Through Sunflowers and Lavender | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 8800,
-    "durationSec": 183,
-    "durationFormatted": "03:03",
-    "url": "https://www.youtube.com/watch?v=9LTrHubvJ7c",
-    "thumb": "https://i.ytimg.com/vi/9LTrHubvJ7c/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/9LTrHubvJ7c/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
-    "id": "eIBHyqwf_IU",
-    "title": "Monet’s River of Light: The Poplars on the Epte｜Impressionist Art Film",
-    "channel": "Extraordinary Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
-    "views": 8800,
-    "durationSec": 268,
-    "durationFormatted": "04:28",
-    "url": "https://www.youtube.com/watch?v=eIBHyqwf_IU",
-    "thumb": "https://i.ytimg.com/vi/eIBHyqwf_IU/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/eIBHyqwf_IU/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -18692,16 +19359,35 @@ const ALL_VIDEOS = [
     "wallpaperCount": 7
   },
   {
-    "id": "O-pFK5rH5LM",
-    "title": "Visual Poems | Wildflowers, Birds and Wind | Living Oil Paintings",
+    "id": "eIBHyqwf_IU",
+    "title": "Monet’s River of Light: The Poplars on the Epte｜Impressionist Art Film",
+    "channel": "Extraordinary Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UCB5QogHzrLP7VlG_f0rK8hQ",
+    "views": 8800,
+    "durationSec": 268,
+    "durationFormatted": "04:28",
+    "url": "https://www.youtube.com/watch?v=eIBHyqwf_IU",
+    "thumb": "https://i.ytimg.com/vi/eIBHyqwf_IU/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/eIBHyqwf_IU/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "9LTrHubvJ7c",
+    "title": "Visual Poems | Wind Through Sunflowers and Lavender | Living Oil Paintings",
     "channel": "Muse Visual Art",
     "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 8600,
-    "durationSec": 203,
-    "durationFormatted": "03:23",
-    "url": "https://www.youtube.com/watch?v=O-pFK5rH5LM",
-    "thumb": "https://i.ytimg.com/vi/O-pFK5rH5LM/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/O-pFK5rH5LM/maxresdefault.jpg",
+    "views": 8800,
+    "durationSec": 183,
+    "durationFormatted": "03:03",
+    "url": "https://www.youtube.com/watch?v=9LTrHubvJ7c",
+    "thumb": "https://i.ytimg.com/vi/9LTrHubvJ7c/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/9LTrHubvJ7c/maxresdefault.jpg",
     "width": 1920,
     "height": 1080,
     "resolution": "1920x1080",
@@ -18819,6 +19505,25 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 5
+  },
+  {
+    "id": "O-pFK5rH5LM",
+    "title": "Visual Poems | Wildflowers, Birds and Wind | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 8600,
+    "durationSec": 203,
+    "durationFormatted": "03:23",
+    "url": "https://www.youtube.com/watch?v=O-pFK5rH5LM",
+    "thumb": "https://i.ytimg.com/vi/O-pFK5rH5LM/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/O-pFK5rH5LM/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
   },
   {
     "id": "sdquibgE3dU",
@@ -18954,116 +19659,6 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "2hugXnfMJPw",
-    "title": "Claude Monet Painting | Parisian Romance",
-    "channel": "Cupid Studio",
-    "channelUrl": "https://www.youtube.com/channel/UClWtMcqVrDo3039JTMAYE4w",
-    "views": 6500,
-    "durationSec": 196,
-    "durationFormatted": "03:16",
-    "url": "https://www.youtube.com/watch?v=2hugXnfMJPw",
-    "thumb": "wallpapers/2hugXnfMJPw/snapshot_1.jpg",
-    "maxresThumb": "wallpapers/2hugXnfMJPw/snapshot_1.jpg",
-    "width": 3840,
-    "height": 2160,
-    "resolution": "3840x2160",
-    "qualityLabel": "4K UHD",
-    "is4K": true,
-    "wallpapers": [
-      {
-        "id": "2hugXnfMJPw_1",
-        "videoId": "2hugXnfMJPw",
-        "videoTitle": "Claude Monet Painting | Parisian Romance",
-        "channel": "Cupid Studio",
-        "snapshotIndex": 1,
-        "timestampSec": 15,
-        "timestampFormatted": "00:15",
-        "path": "wallpapers/2hugXnfMJPw/snapshot_1.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 668.0,
-        "tags": [],
-        "primaryPalette": [],
-        "formFactor": "desktop"
-      },
-      {
-        "id": "2hugXnfMJPw_2",
-        "videoId": "2hugXnfMJPw",
-        "videoTitle": "Claude Monet Painting | Parisian Romance",
-        "channel": "Cupid Studio",
-        "snapshotIndex": 2,
-        "timestampSec": 56,
-        "timestampFormatted": "00:56",
-        "path": "wallpapers/2hugXnfMJPw/snapshot_2.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 828.2,
-        "tags": [],
-        "primaryPalette": [],
-        "formFactor": "desktop"
-      },
-      {
-        "id": "2hugXnfMJPw_3",
-        "videoId": "2hugXnfMJPw",
-        "videoTitle": "Claude Monet Painting | Parisian Romance",
-        "channel": "Cupid Studio",
-        "snapshotIndex": 3,
-        "timestampSec": 97,
-        "timestampFormatted": "01:37",
-        "path": "wallpapers/2hugXnfMJPw/snapshot_3.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 661.6,
-        "tags": [],
-        "primaryPalette": [],
-        "formFactor": "desktop"
-      },
-      {
-        "id": "2hugXnfMJPw_4",
-        "videoId": "2hugXnfMJPw",
-        "videoTitle": "Claude Monet Painting | Parisian Romance",
-        "channel": "Cupid Studio",
-        "snapshotIndex": 4,
-        "timestampSec": 138,
-        "timestampFormatted": "02:18",
-        "path": "wallpapers/2hugXnfMJPw/snapshot_4.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 650.2,
-        "tags": [],
-        "primaryPalette": [],
-        "formFactor": "desktop"
-      },
-      {
-        "id": "2hugXnfMJPw_5",
-        "videoId": "2hugXnfMJPw",
-        "videoTitle": "Claude Monet Painting | Parisian Romance",
-        "channel": "Cupid Studio",
-        "snapshotIndex": 5,
-        "timestampSec": 180,
-        "timestampFormatted": "03:00",
-        "path": "wallpapers/2hugXnfMJPw/snapshot_5.jpg",
-        "width": 3840,
-        "height": 2160,
-        "qualityLabel": "4K UHD",
-        "is4K": true,
-        "fileSizeKB": 623.5,
-        "tags": [],
-        "primaryPalette": [],
-        "formFactor": "desktop"
-      }
-    ],
-    "wallpaperCount": 5
-  },
-  {
     "id": "jTfxxjwUwzI",
     "title": "Claude Monet Painting | Love on Valentine's",
     "channel": "Cupid Studio",
@@ -19166,6 +19761,116 @@ const ALL_VIDEOS = [
         "qualityLabel": "4K UHD",
         "is4K": true,
         "fileSizeKB": 1046.5,
+        "tags": [],
+        "primaryPalette": [],
+        "formFactor": "desktop"
+      }
+    ],
+    "wallpaperCount": 5
+  },
+  {
+    "id": "2hugXnfMJPw",
+    "title": "Claude Monet Painting | Parisian Romance",
+    "channel": "Cupid Studio",
+    "channelUrl": "https://www.youtube.com/channel/UClWtMcqVrDo3039JTMAYE4w",
+    "views": 6500,
+    "durationSec": 196,
+    "durationFormatted": "03:16",
+    "url": "https://www.youtube.com/watch?v=2hugXnfMJPw",
+    "thumb": "wallpapers/2hugXnfMJPw/snapshot_1.jpg",
+    "maxresThumb": "wallpapers/2hugXnfMJPw/snapshot_1.jpg",
+    "width": 3840,
+    "height": 2160,
+    "resolution": "3840x2160",
+    "qualityLabel": "4K UHD",
+    "is4K": true,
+    "wallpapers": [
+      {
+        "id": "2hugXnfMJPw_1",
+        "videoId": "2hugXnfMJPw",
+        "videoTitle": "Claude Monet Painting | Parisian Romance",
+        "channel": "Cupid Studio",
+        "snapshotIndex": 1,
+        "timestampSec": 15,
+        "timestampFormatted": "00:15",
+        "path": "wallpapers/2hugXnfMJPw/snapshot_1.jpg",
+        "width": 3840,
+        "height": 2160,
+        "qualityLabel": "4K UHD",
+        "is4K": true,
+        "fileSizeKB": 668.0,
+        "tags": [],
+        "primaryPalette": [],
+        "formFactor": "desktop"
+      },
+      {
+        "id": "2hugXnfMJPw_2",
+        "videoId": "2hugXnfMJPw",
+        "videoTitle": "Claude Monet Painting | Parisian Romance",
+        "channel": "Cupid Studio",
+        "snapshotIndex": 2,
+        "timestampSec": 56,
+        "timestampFormatted": "00:56",
+        "path": "wallpapers/2hugXnfMJPw/snapshot_2.jpg",
+        "width": 3840,
+        "height": 2160,
+        "qualityLabel": "4K UHD",
+        "is4K": true,
+        "fileSizeKB": 828.2,
+        "tags": [],
+        "primaryPalette": [],
+        "formFactor": "desktop"
+      },
+      {
+        "id": "2hugXnfMJPw_3",
+        "videoId": "2hugXnfMJPw",
+        "videoTitle": "Claude Monet Painting | Parisian Romance",
+        "channel": "Cupid Studio",
+        "snapshotIndex": 3,
+        "timestampSec": 97,
+        "timestampFormatted": "01:37",
+        "path": "wallpapers/2hugXnfMJPw/snapshot_3.jpg",
+        "width": 3840,
+        "height": 2160,
+        "qualityLabel": "4K UHD",
+        "is4K": true,
+        "fileSizeKB": 661.6,
+        "tags": [],
+        "primaryPalette": [],
+        "formFactor": "desktop"
+      },
+      {
+        "id": "2hugXnfMJPw_4",
+        "videoId": "2hugXnfMJPw",
+        "videoTitle": "Claude Monet Painting | Parisian Romance",
+        "channel": "Cupid Studio",
+        "snapshotIndex": 4,
+        "timestampSec": 138,
+        "timestampFormatted": "02:18",
+        "path": "wallpapers/2hugXnfMJPw/snapshot_4.jpg",
+        "width": 3840,
+        "height": 2160,
+        "qualityLabel": "4K UHD",
+        "is4K": true,
+        "fileSizeKB": 650.2,
+        "tags": [],
+        "primaryPalette": [],
+        "formFactor": "desktop"
+      },
+      {
+        "id": "2hugXnfMJPw_5",
+        "videoId": "2hugXnfMJPw",
+        "videoTitle": "Claude Monet Painting | Parisian Romance",
+        "channel": "Cupid Studio",
+        "snapshotIndex": 5,
+        "timestampSec": 180,
+        "timestampFormatted": "03:00",
+        "path": "wallpapers/2hugXnfMJPw/snapshot_5.jpg",
+        "width": 3840,
+        "height": 2160,
+        "qualityLabel": "4K UHD",
+        "is4K": true,
+        "fileSizeKB": 623.5,
         "tags": [],
         "primaryPalette": [],
         "formFactor": "desktop"
@@ -19493,25 +20198,6 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "la54ByAq8kA",
-    "title": "Visual Poems | Walking in Summer Poppies | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 4200,
-    "durationSec": 197,
-    "durationFormatted": "03:17",
-    "url": "https://www.youtube.com/watch?v=la54ByAq8kA",
-    "thumb": "https://i.ytimg.com/vi/la54ByAq8kA/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/la54ByAq8kA/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
     "id": "-JSSbxoY4dM",
     "title": "Visual Poems | Claude Monet |The World's Oldest Railway Station – Liverpool Road 1830",
     "channel": "Painters Dream",
@@ -19526,6 +20212,25 @@ const ALL_VIDEOS = [
     "height": 1064,
     "resolution": "1920x1064",
     "qualityLabel": "1064p",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "la54ByAq8kA",
+    "title": "Visual Poems | Walking in Summer Poppies | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 4200,
+    "durationSec": 197,
+    "durationFormatted": "03:17",
+    "url": "https://www.youtube.com/watch?v=la54ByAq8kA",
+    "thumb": "https://i.ytimg.com/vi/la54ByAq8kA/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/la54ByAq8kA/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0
@@ -19679,44 +20384,6 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "OZLaj_AKaSY",
-    "title": "Visual Poems | Spring Rain on High Mountain Meadows | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 3700,
-    "durationSec": 215,
-    "durationFormatted": "03:35",
-    "url": "https://www.youtube.com/watch?v=OZLaj_AKaSY",
-    "thumb": "https://i.ytimg.com/vi/OZLaj_AKaSY/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/OZLaj_AKaSY/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
-    "id": "7Hsyg36ckdU",
-    "title": "Visual Poems | Duckweed, Canal and Willows | Living Oil Paintings",
-    "channel": "Muse Visual Art",
-    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
-    "views": 3700,
-    "durationSec": 188,
-    "durationFormatted": "03:08",
-    "url": "https://www.youtube.com/watch?v=7Hsyg36ckdU",
-    "thumb": "https://i.ytimg.com/vi/7Hsyg36ckdU/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/7Hsyg36ckdU/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
     "id": "RE7ozAvuKjI",
     "title": "Renoir Painting | Paris Garden Party",
     "channel": "Cupid Studio",
@@ -19825,6 +20492,44 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 5
+  },
+  {
+    "id": "OZLaj_AKaSY",
+    "title": "Visual Poems | Spring Rain on High Mountain Meadows | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 3700,
+    "durationSec": 215,
+    "durationFormatted": "03:35",
+    "url": "https://www.youtube.com/watch?v=OZLaj_AKaSY",
+    "thumb": "https://i.ytimg.com/vi/OZLaj_AKaSY/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/OZLaj_AKaSY/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "7Hsyg36ckdU",
+    "title": "Visual Poems | Duckweed, Canal and Willows | Living Oil Paintings",
+    "channel": "Muse Visual Art",
+    "channelUrl": "https://www.youtube.com/channel/UC0OfM-PGrJgi_cSBwI0-nGg",
+    "views": 3700,
+    "durationSec": 188,
+    "durationFormatted": "03:08",
+    "url": "https://www.youtube.com/watch?v=7Hsyg36ckdU",
+    "thumb": "https://i.ytimg.com/vi/7Hsyg36ckdU/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/7Hsyg36ckdU/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
   },
   {
     "id": "AGoap1I0Fqg",
@@ -19951,25 +20656,6 @@ const ALL_VIDEOS = [
     "height": 1080,
     "resolution": "1920x1080",
     "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
-    "id": "j5EPNKdBb4Q",
-    "title": "Visual Poems | Monet | Whisper of Light [Soothing & Healing Art]",
-    "channel": "Luminaris Muse",
-    "channelUrl": "https://www.youtube.com/channel/UCGxfAYU8ya7H15nZMLIsydw",
-    "views": 3300,
-    "durationSec": 567,
-    "durationFormatted": "09:27",
-    "url": "https://www.youtube.com/watch?v=j5EPNKdBb4Q",
-    "thumb": "https://i.ytimg.com/vi/j5EPNKdBb4Q/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/j5EPNKdBb4Q/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1074,
-    "resolution": "1920x1074",
-    "qualityLabel": "1074p",
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0
@@ -20104,6 +20790,25 @@ const ALL_VIDEOS = [
     "wallpaperCount": 5
   },
   {
+    "id": "j5EPNKdBb4Q",
+    "title": "Visual Poems | Monet | Whisper of Light [Soothing & Healing Art]",
+    "channel": "Luminaris Muse",
+    "channelUrl": "https://www.youtube.com/channel/UCGxfAYU8ya7H15nZMLIsydw",
+    "views": 3300,
+    "durationSec": 567,
+    "durationFormatted": "09:27",
+    "url": "https://www.youtube.com/watch?v=j5EPNKdBb4Q",
+    "thumb": "https://i.ytimg.com/vi/j5EPNKdBb4Q/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/j5EPNKdBb4Q/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1074,
+    "resolution": "1920x1074",
+    "qualityLabel": "1074p",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
     "id": "Ahek_O5ZTAQ",
     "title": "Visual Poems | A Dream of Impressionism Garden | Living Oil Paintings",
     "channel": "Muse Visual Art",
@@ -20119,6 +20824,25 @@ const ALL_VIDEOS = [
     "resolution": "1920x1080",
     "qualityLabel": "1080p FHD",
     "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "ZGuimqw_tpo",
+    "title": "Visual Poems｜Monet Peaceful Summer｜Living Oil Painting",
+    "channel": "Living Visual Poems",
+    "channelUrl": "https://www.youtube.com/channel/UC8OJx6hpApmEcPIa-AEwueQ",
+    "views": 2900,
+    "durationSec": 181,
+    "durationFormatted": "03:01",
+    "url": "https://www.youtube.com/watch?v=ZGuimqw_tpo",
+    "thumb": "https://i.ytimg.com/vi/ZGuimqw_tpo/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/ZGuimqw_tpo/maxresdefault.jpg",
+    "width": 3840,
+    "height": 2160,
+    "resolution": "3840x2160",
+    "qualityLabel": "4K UHD",
+    "is4K": true,
     "wallpapers": [],
     "wallpaperCount": 0
   },
@@ -20782,25 +21506,6 @@ const ALL_VIDEOS = [
     "wallpaperCount": 0
   },
   {
-    "id": "tYqFa62raXE",
-    "title": "Visual Poems | Claude Monet's Highest Journey  | La Rinconada",
-    "channel": "Painters Dream",
-    "channelUrl": "https://www.youtube.com/channel/UCqCzEEy42I36ACXVFs2t15g",
-    "views": 1200,
-    "durationSec": 191,
-    "durationFormatted": "03:11",
-    "url": "https://www.youtube.com/watch?v=tYqFa62raXE",
-    "thumb": "https://i.ytimg.com/vi/tYqFa62raXE/hqdefault.jpg",
-    "maxresThumb": "https://i.ytimg.com/vi/tYqFa62raXE/maxresdefault.jpg",
-    "width": 1920,
-    "height": 1080,
-    "resolution": "1920x1080",
-    "qualityLabel": "1080p FHD",
-    "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0
-  },
-  {
     "id": "8jD0pJLju3o",
     "title": "Visual Poems | Brought to Life and Inspired by Claude Monet | Living Art 24",
     "channel": "Beautiful Living Art",
@@ -20945,6 +21650,44 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7
+  },
+  {
+    "id": "tYqFa62raXE",
+    "title": "Visual Poems | Claude Monet's Highest Journey  | La Rinconada",
+    "channel": "Painters Dream",
+    "channelUrl": "https://www.youtube.com/channel/UCqCzEEy42I36ACXVFs2t15g",
+    "views": 1200,
+    "durationSec": 191,
+    "durationFormatted": "03:11",
+    "url": "https://www.youtube.com/watch?v=tYqFa62raXE",
+    "thumb": "https://i.ytimg.com/vi/tYqFa62raXE/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/tYqFa62raXE/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "mU3u9f43XVg",
+    "title": "[𝗽𝗹𝗮𝘆𝗹𝗶𝘀𝘁] A Lazy Stroll in a Green Garden 🍃 Classical Melodies for Pleasant Focus Mellostring",
+    "channel": "Mellostring",
+    "channelUrl": "https://www.youtube.com/channel/UCShfhQGVL-gmEcw_t-iEGRQ",
+    "views": 751,
+    "durationSec": 10370,
+    "durationFormatted": "2:52:50",
+    "url": "https://www.youtube.com/watch?v=mU3u9f43XVg",
+    "thumb": "https://i.ytimg.com/vi/mU3u9f43XVg/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/mU3u9f43XVg/maxresdefault.jpg",
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
   },
   {
     "id": "wsDbLAtIUIA",
@@ -21112,6 +21855,44 @@ const ALL_VIDEOS = [
     "wallpaperCount": 7
   },
   {
+    "id": "k3Ls4Bjx-ZY",
+    "title": "Visual Poems | Beautiful Red Poppy | Living Oil Painting",
+    "channel": "Living Visual Poems",
+    "channelUrl": "https://www.youtube.com/channel/UC8OJx6hpApmEcPIa-AEwueQ",
+    "views": 649,
+    "durationSec": 170,
+    "durationFormatted": "02:50",
+    "url": "https://www.youtube.com/watch?v=k3Ls4Bjx-ZY",
+    "thumb": "https://i.ytimg.com/vi/k3Ls4Bjx-ZY/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/k3Ls4Bjx-ZY/maxresdefault.jpg",
+    "width": 3840,
+    "height": 2160,
+    "resolution": "3840x2160",
+    "qualityLabel": "4K UHD",
+    "is4K": true,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "rxz8CSFGKRY",
+    "title": "Visual Poems | Claude Monet | Enter a Renoir Painting | Monet Living Art Piece 17",
+    "channel": "Beautiful Living Art",
+    "channelUrl": "https://www.youtube.com/channel/UCRHwLLdlYo0WZbeuQ1slnNA",
+    "views": 494,
+    "durationSec": 209,
+    "durationFormatted": "03:29",
+    "url": "https://www.youtube.com/watch?v=rxz8CSFGKRY",
+    "thumb": "https://i.ytimg.com/vi/rxz8CSFGKRY/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/rxz8CSFGKRY/maxresdefault.jpg",
+    "width": 1914,
+    "height": 1080,
+    "resolution": "1914x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
     "id": "YOpeCXH6bs0",
     "title": "Visual Poems | Claude Monet | Enter an Impressionist Painting | AI Living Art Piece 37",
     "channel": "Beautiful Living Art",
@@ -21160,6 +21941,25 @@ const ALL_VIDEOS = [
     "url": "https://www.youtube.com/watch?v=Fpp-ZBkfo28",
     "thumb": "https://i.ytimg.com/vi/Fpp-ZBkfo28/hqdefault.jpg",
     "maxresThumb": "https://i.ytimg.com/vi/Fpp-ZBkfo28/maxresdefault.jpg",
+    "width": 1914,
+    "height": 1080,
+    "resolution": "1914x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
+  },
+  {
+    "id": "jr38oRbEutQ",
+    "title": "Visual Poems | Claude Monet | Enter an Impressionist Painting | Living Art and Music 8",
+    "channel": "Beautiful Living Art",
+    "channelUrl": "https://www.youtube.com/channel/UCRHwLLdlYo0WZbeuQ1slnNA",
+    "views": 330,
+    "durationSec": 130,
+    "durationFormatted": "02:10",
+    "url": "https://www.youtube.com/watch?v=jr38oRbEutQ",
+    "thumb": "https://i.ytimg.com/vi/jr38oRbEutQ/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/jr38oRbEutQ/maxresdefault.jpg",
     "width": 1914,
     "height": 1080,
     "resolution": "1914x1080",
@@ -21319,7 +22119,7 @@ const ALL_VIDEOS = [
     "title": "Visual Poems | Monet Inspired Living Art Film | Relaxing Music 7",
     "channel": "Beautiful Living Art",
     "channelUrl": "https://www.youtube.com/channel/UCRHwLLdlYo0WZbeuQ1slnNA",
-    "views": 203,
+    "views": 204,
     "durationSec": 96,
     "durationFormatted": "01:36",
     "url": "https://www.youtube.com/watch?v=fV5IalilQpc",
@@ -21497,6 +22297,25 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7
+  },
+  {
+    "id": "qedoqPz7oic",
+    "title": "Visual Poems | AI Impressionism in Motion | Dreamy Living Art and Music 9",
+    "channel": "Beautiful Living Art",
+    "channelUrl": "https://www.youtube.com/channel/UCRHwLLdlYo0WZbeuQ1slnNA",
+    "views": 44,
+    "durationSec": 179,
+    "durationFormatted": "02:59",
+    "url": "https://www.youtube.com/watch?v=qedoqPz7oic",
+    "thumb": "https://i.ytimg.com/vi/qedoqPz7oic/hqdefault.jpg",
+    "maxresThumb": "https://i.ytimg.com/vi/qedoqPz7oic/maxresdefault.jpg",
+    "width": 1914,
+    "height": 1080,
+    "resolution": "1914x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false,
+    "wallpapers": [],
+    "wallpaperCount": 0
   },
   {
     "id": "lz0wa2hDis0",
