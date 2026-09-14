@@ -102,8 +102,27 @@ document.addEventListener('DOMContentLoaded', () => {
         resSelect.value = '4K';
     }
 
+    initBackToTop();
+
     applyFilters();
 });
+
+// Floating Back to Top Functionality
+function initBackToTop() {
+    const btn = document.getElementById('backToTopBtn');
+    if (!btn) return;
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 450) {
+            btn.classList.add('visible');
+        } else {
+            btn.classList.remove('visible');
+        }
+    }, { passive: true });
+}
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
 // Device Form-Factor Detection (Mobile vs Desktop)
 function detectDeviceFormFactor() {

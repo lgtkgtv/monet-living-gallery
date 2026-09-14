@@ -57,7 +57,7 @@ a {
 .hero {
   background: linear-gradient(135deg, #162f23 0%, #244434 50%, #173225 100%);
   color: #f8fafc;
-  padding: 52px 24px 44px;
+  padding: 36px 24px 28px;
   position: relative;
   overflow: hidden;
   border-bottom: 4px solid var(--color-gold);
@@ -121,7 +121,7 @@ a {
   font-size: clamp(2.2rem, 4.8vw, 3.6rem);
   font-weight: 700;
   line-height: 1.18;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   letter-spacing: -0.5px;
   color: #ffffff;
 }
@@ -132,7 +132,7 @@ a {
   max-width: 860px;
   font-weight: 300;
   line-height: 1.5;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
 }
 
 /* --- Hero 3-Section Navigation Tabs --- */
@@ -263,9 +263,9 @@ a {
 
 /* --- Section Headers --- */
 .section-header {
-  margin: 40px 0 20px;
+  margin: 28px 0 16px;
   border-bottom: 2px solid var(--border-color);
-  padding-bottom: 14px;
+  padding-bottom: 12px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -2739,6 +2739,56 @@ a {
   background: var(--color-primary-light);
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(30, 57, 42, 0.35);
+}
+
+/* --- Floating Back to Top Button --- */
+.back-to-top-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-full);
+  background: rgba(15, 23, 42, 0.88);
+  border: 1.5px solid rgba(212, 175, 55, 0.45);
+  color: #fbbf24;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  z-index: 90;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(14px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.back-to-top-btn:hover {
+  background: #1e392a;
+  border-color: #d4af37;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
+}
+
+.back-to-top-btn.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .back-to-top-btn {
+    bottom: 18px;
+    right: 18px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
 }
 
 
