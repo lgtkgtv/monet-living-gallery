@@ -3,12 +3,12 @@
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Gallery-brightgreen?logo=github)](https://lgtkgtv.github.io/monet-living-gallery/)
 [![4K UHD](https://img.shields.io/badge/Resolution-4K%20UHD%20(3840x2160)-gold)](https://lgtkgtv.github.io/monet-living-gallery/)
-[![Curated Works](https://img.shields.io/badge/Works-198%20Masterworks-blue)](https://lgtkgtv.github.io/monet-living-gallery/)
-[![Wallpapers](https://img.shields.io/badge/Wallpapers-366%20Snapshots-purple)](https://lgtkgtv.github.io/monet-living-gallery/)
+[![Curated Works](https://img.shields.io/badge/Works-199%20Masterworks-blue)](https://lgtkgtv.github.io/monet-living-gallery/)
+[![Wallpapers](https://img.shields.io/badge/Wallpapers-455%20Snapshots-purple)](https://lgtkgtv.github.io/monet-living-gallery/)
 [![Views](https://img.shields.io/badge/Views-24.2M%20Total-red)](https://lgtkgtv.github.io/monet-living-gallery/)
 [![Mobile First](https://img.shields.io/badge/Mobile-Optimized-success)](https://lgtkgtv.github.io/monet-living-gallery/)
 
-An interactive, curated digital museum and high-definition visual archive celebrating **Claude Monet** and the **Impressionist art movement**. Derived from the YouTube playlist **[sh_Monet inspired Visual Arts](https://www.youtube.com/playlist?list=PLeqGkucOU6lA)**, this project catalogs 198 masterworks across 39 distinct YouTube channels, featuring native resolution tags, dynamic channel aesthetic characterizations, verified links, instant bulk zip downloads, and a device-appropriate fullscreen wallpaper slideshow.
+An interactive, curated digital museum and high-definition visual archive celebrating **Claude Monet** and the **Impressionist art movement**. Derived from the YouTube playlist **[sh_Monet inspired Visual Arts](https://www.youtube.com/playlist?list=PLeqGkucOU6lA)**, this project catalogs 199 masterworks across 40 distinct YouTube channels, featuring native resolution tags, dynamic channel aesthetic characterizations, verified links, instant bulk zip downloads, and a device-appropriate fullscreen wallpaper slideshow.
 
 🌐 **Live Web Application**: **[https://lgtkgtv.github.io/monet-living-gallery/](https://lgtkgtv.github.io/monet-living-gallery/)**
 
@@ -19,7 +19,7 @@ An interactive, curated digital museum and high-definition visual archive celebr
 ### 1. 📱 Device-Appropriate Fullscreen Wallpaper Slideshow
 - **Automatic Form Factor Adaptation**: Automatically categorizes extracted snapshots into desktop widescreen (16:9) vs mobile/pillarboxed portrait using luminosity margin sampling.
 - **Smart Aspect Ratio Filtering**: When launching the fullscreen slideshow, desktop users automatically view widescreen-optimized masterworks, while mobile users receive portrait scenes (or toggle between Desktop, Mobile, and All formats).
-- **Ambient Classical Audio**: Integrated background audio player featuring Claude Debussy (*Clair de Lune*) and Erik Satie (*Gymnopédie No. 1*), with track switching (`N`), mute/play toggle (`A`), and graceful pause on exit.
+- **Ambient Classical Audio**: Integrated background audio suite featuring Claude Debussy (*Clair de Lune*, *Première Arabesque*), Erik Satie (*Gymnopédie No. 1*), and Maurice Ravel (*Pavane pour une infante défunte*), with track switching (`N`), mute/play toggle (`A`), and graceful pause on exit.
 - **Presentation Controls**: Fullscreen mode, automatic looping with play/pause, selectable transition delays (3s, 5s, 8s, 12s), fit vs cover mode, and keyboard navigation (`Space`, `ArrowLeft`, `ArrowRight`, `A` for Audio, `N` for Next track, `D` for Display mode, `Esc`).
 
 ### 2. ⚡ Progressive Batch DOM Rendering
