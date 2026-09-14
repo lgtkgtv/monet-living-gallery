@@ -1,5 +1,5 @@
 // Service Worker for L'Impressionnisme Vivant
-const CACHE_NAME = 'monet-gallery-v1';
+const CACHE_NAME = 'monet-gallery-v2';
 
 const CORE_PRECACHE_URLS = [
   './',
@@ -13,7 +13,9 @@ const CORE_PRECACHE_URLS = [
   'icons/icon-512.png',
   'icons/icon.svg',
   'audio/clair_de_lune.mp3',
-  'audio/gymnopedie_no1.mp3'
+  'audio/gymnopedie_no1.mp3',
+  'audio/debussy_arabesque_no1.mp3',
+  'audio/ravel_pavane.mp3'
 ];
 
 self.addEventListener('install', (event) => {

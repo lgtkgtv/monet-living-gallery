@@ -1371,11 +1371,13 @@ function changeSlideshowFormFactor(val) {
 }
 
 // ==========================================================================
-// AMBIENT CLASSICAL AUDIO CONTROLLER (Debussy & Satie)
+// AMBIENT CLASSICAL AUDIO CONTROLLER (Debussy, Satie & Ravel)
 // ==========================================================================
 const AMBIENT_TRACKS = [
     { title: 'Debussy: Clair de Lune', src: 'audio/clair_de_lune.mp3' },
-    { title: 'Satie: Gymnopédie No. 1', src: 'audio/gymnopedie_no1.mp3' }
+    { title: 'Satie: Gymnopédie No. 1', src: 'audio/gymnopedie_no1.mp3' },
+    { title: 'Debussy: Première Arabesque', src: 'audio/debussy_arabesque_no1.mp3' },
+    { title: 'Ravel: Pavane pour une infante défunte', src: 'audio/ravel_pavane.mp3' }
 ];
 let currentAudioTrackIndex = 0;
 let ambientAudio = null;

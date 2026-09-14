@@ -146,11 +146,13 @@ def run_serve(port=8000):
 
 def run_full_sync():
     print_banner("🔄 Running Full End-to-End Pipeline Sync")
-    print("\nStep 1/3: Checking resolutions cache...")
+    print("\nStep 1/4: Pulling latest playlist metadata from YouTube...")
+    run_pull_playlist()
+    print("\nStep 2/4: Checking and probing video resolutions cache...")
     run_sync_resolutions()
-    print("\nStep 2/3: Checking wallpaper extraction batch (top 5 pending)...")
-    run_extract(batch_size=5, tier='4K', delay=3.0)
-    print("\nStep 3/3: Building web assets & updating data.js...")
+    print("\nStep 3/4: Running wallpaper extraction batch...")
+    run_extract(batch_size=5, tier='fhd', delay=2.0)
+    print("\nStep 4/4: Building web assets, data.js, CSV, and Markdown catalogs...")
     run_build()
     print("\n✅ Full pipeline sync completed.")
     get_status()
