@@ -253,7 +253,7 @@ def print_status(tracker):
         print(f"  {i}. [{tier_label:7s}] {v.get('views', 0):>8,d} views | {v.get('channel')[:16]:16s} | {v.get('title')[:34]}")
     print("=" * 68 + "\n")
 
-def extract_video_wallpapers(entry):
+def extract_video_wallpapers(entry, cookies_browser=None, cookies_file=None):
     vid = entry["id"]
     title = entry.get("title", "")
     channel = entry.get("channel", "Unknown")
@@ -264,18 +264,35 @@ def extract_video_wallpapers(entry):
 
     timestamps = calculate_scenery_timestamps(duration)
 
+    cookie_args = []
+    if cookies_browser:
+        cookie_args.extend(["--cookies-from-browser", cookies_browser])
+    if cookies_file:
+        cookie_args.extend(["--cookies", cookies_file])
+
     # 1. Obtain stream URL with yt-dlp (up to 4K 2160p)
     yt_url = f"https://www.youtube.com/watch?v={vid}"
     cmd_stream = [
         "yt-dlp", "--no-warnings", "-g",
+        *cookie_args,
         "-f", "bestvideo[height<=2160][protocol=https]/bestvideo[height<=2160]/best",
         yt_url
     ]
     try:
         proc = subprocess.run(cmd_stream, capture_output=True, text=True, timeout=25)
         if proc.returncode != 0 or not proc.stdout.strip():
-            err_msg = (proc.stderr or proc.stdout or "stream_not_found").strip()[:100]
-            return False, f"yt-dlp error: {err_msg}", []
+            # Fallback retry with android player client (bypasses bot challenges and SABR restrictions)
+            cmd_fallback = [
+                "yt-dlp", "--no-warnings", "-g",
+                *cookie_args,
+                "--extractor-args", "youtube:player_client=android",
+                "-f", "bestvideo[height<=2160][protocol=https]/bestvideo[height<=2160]/best",
+                yt_url
+            ]
+            proc = subprocess.run(cmd_fallback, capture_output=True, text=True, timeout=25)
+            if proc.returncode != 0 or not proc.stdout.strip():
+                err_msg = (proc.stderr or proc.stdout or "stream_not_found").strip()[:100]
+                return False, f"yt-dlp error: {err_msg}", []
         stream_url = proc.stdout.strip().split("\n")[0]
     except Exception as e:
         return False, f"yt-dlp exception: {str(e)[:100]}", []
@@ -412,11 +429,18 @@ def sync_metadata_and_rebuild(new_records):
     except Exception as e:
         print(f"⚠️ Could not run build_webpage.py: {e}")
 
-def run_batch(batch_size=10, tier_filter=None, delay=3.0, max_retries=2, skip_copyright=False):
+def run_batch(batch_size=10, tier_filter=None, delay=3.0, max_retries=3, skip_copyright=False, cookies_browser=None, cookies_file=None, retry_failed=False):
     playlist, res_cache = load_playlist_and_resolutions()
     tracker = load_or_init_tracker(playlist, res_cache)
 
     vids = list(tracker["videos"].values())
+
+    if retry_failed:
+        for v in vids:
+            if v.get("status") == "failed":
+                v["status"] = "pending"
+                v["retry_count"] = 0
+        save_tracker(tracker)
 
     if skip_copyright:
         try:
@@ -465,7 +489,7 @@ def run_batch(batch_size=10, tier_filter=None, delay=3.0, max_retries=2, skip_co
         v["last_attempt"] = datetime.now().isoformat()
         save_tracker(tracker)
 
-        ok, msg, records = extract_video_wallpapers(v)
+        ok, msg, records = extract_video_wallpapers(v, cookies_browser=cookies_browser, cookies_file=cookies_file)
 
         if ok and records:
             success_count += 1
@@ -503,6 +527,9 @@ def main():
     parser.add_argument("--rebuild", action="store_true", help="Rebuild metadata and data.js from disk")
     parser.add_argument("--continuous", action="store_true", help="Continuously process all remaining batches until 100% complete")
     parser.add_argument("--skip-copyright-restricted", action="store_true", help="Exclude titles/channels with copyright download restrictions")
+    parser.add_argument("--cookies-from-browser", default=None, help="Extract cookies from browser (e.g. chrome, edge, firefox)")
+    parser.add_argument("--cookies", default=None, help="Path to Netscape-format cookies.txt file")
+    parser.add_argument("--retry-failed", action="store_true", help="Reset failed video statuses to pending to re-attempt extraction")
 
     args = parser.parse_args()
 
@@ -547,17 +574,17 @@ def main():
                 candidates = vids
             queue = [
                 v for v in candidates
-                if v["status"] == "pending" or (v["status"] == "failed" and v.get("retry_count", 0) < 2)
+                if v["status"] == "pending" or (v["status"] == "failed" and v.get("retry_count", 0) < 3)
             ]
             if not queue:
                 print(f"\n🎉 100% COMPLETE! All {len(candidates)} {args.tier.upper()} titles have been successfully processed!")
                 break
             print(f"\n📦 === Running Batch #{batch_num} ({min(args.batch_size, len(queue))} of {len(queue)} remaining) ===")
-            run_batch(batch_size=args.batch_size, tier_filter=tier_filter, delay=args.delay, skip_copyright=args.skip_copyright_restricted)
+            run_batch(batch_size=args.batch_size, tier_filter=tier_filter, delay=args.delay, skip_copyright=args.skip_copyright_restricted, cookies_browser=args.cookies_from_browser, cookies_file=args.cookies, retry_failed=args.retry_failed)
             batch_num += 1
         return
 
-    run_batch(batch_size=args.batch_size, tier_filter=tier_filter, delay=args.delay, skip_copyright=args.skip_copyright_restricted)
+    run_batch(batch_size=args.batch_size, tier_filter=tier_filter, delay=args.delay, skip_copyright=args.skip_copyright_restricted, cookies_browser=args.cookies_from_browser, cookies_file=args.cookies, retry_failed=args.retry_failed)
 
 if __name__ == "__main__":
     main()

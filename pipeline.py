@@ -136,7 +136,7 @@ def run_sync_resolutions():
         print("❌ update_resolutions.py failed.")
     return res.returncode == 0
 
-def run_extract(batch_size=10, tier=None, delay=3.0, continuous=False, skip_copyright=False):
+def run_extract(batch_size=10, tier=None, delay=3.0, continuous=False, skip_copyright=False, cookies_browser=None, cookies_file=None, retry_failed=False):
     cmd = [sys.executable, 'batch_wallpaper_extractor.py', '--batch-size', str(batch_size), '--delay', str(delay)]
     if tier:
         cmd.extend(['--tier', tier.lower()])
@@ -144,9 +144,16 @@ def run_extract(batch_size=10, tier=None, delay=3.0, continuous=False, skip_copy
         cmd.append('--continuous')
     if skip_copyright:
         cmd.append('--skip-copyright-restricted')
+    if cookies_browser:
+        cmd.extend(['--cookies-from-browser', cookies_browser])
+    if cookies_file:
+        cmd.extend(['--cookies', cookies_file])
+    if retry_failed:
+        cmd.append('--retry-failed')
     print(f"🖼️ Running wallpaper extraction: {' '.join(cmd)}...")
     res = subprocess.run(cmd, capture_output=False)
     return res.returncode == 0
+
 
 from core.playlist_engine import (
     load_gallery_config,
@@ -279,6 +286,9 @@ def main():
     parser.add_argument('--batch-size', type=int, default=10, help="Batch size for wallpaper extraction (default: 10)")
     parser.add_argument('--tier', type=str.upper, choices=['4K', 'FHD', 'ALL'], default=None, help="Resolution tier filter for extraction")
     parser.add_argument('--delay', type=float, default=3.0, help="Anti-throttling delay in seconds between video extractions")
+    parser.add_argument('--cookies-from-browser', default=None, help="Extract cookies from browser (e.g. chrome, edge, firefox)")
+    parser.add_argument('--cookies', default=None, help="Path to Netscape-format cookies.txt file")
+    parser.add_argument('--retry-failed', action='store_true', help="Reset failed video statuses to pending to re-attempt extraction")
     parser.add_argument('--sync', action='store_true', help="Perform full automated end-to-end sync (with wallpaper extraction)")
     parser.add_argument('--serve', action='store_true', help="Start local preview web server")
     parser.add_argument('--port', type=int, default=8000, help="Port for local web server (default: 8000)")
@@ -305,7 +315,16 @@ def main():
     if args.sync_resolutions:
         run_sync_resolutions()
     if args.extract:
-        run_extract(batch_size=args.batch_size, tier=args.tier, delay=args.delay, continuous=args.continuous, skip_copyright=args.skip_copyright_restricted)
+        run_extract(
+            batch_size=args.batch_size,
+            tier=args.tier,
+            delay=args.delay,
+            continuous=args.continuous,
+            skip_copyright=args.skip_copyright_restricted,
+            cookies_browser=args.cookies_from_browser,
+            cookies_file=args.cookies,
+            retry_failed=args.retry_failed
+        )
     if args.build:
         run_build()
     if args.sync:

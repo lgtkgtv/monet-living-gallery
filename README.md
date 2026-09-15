@@ -12,7 +12,7 @@
 
 An interactive, curated digital museum and ultra-high-definition visual archive celebrating **Claude Monet** and the **Impressionist art movement**. 
 
-Derived from curated YouTube collections (beginning with [sh_Monet inspired Visual Arts](https://www.youtube.com/playlist?list=PLeqGkucOU6lA)), the gallery catalogs **220 masterworks** across **41 distinct artistic channels**, delivering high-definition video curation, an extensive high-resolution wallpaper archive (**100% 4K UHD & 100% 1080p FHD coverage; 1,741+ wallpapers**), fullscreen cinematic Ken Burns slideshow motion, atmospheric classical audio, and seamless cross-device collection sharing.
+Derived from curated YouTube collections (beginning with [sh_Monet inspired Visual Arts](https://www.youtube.com/playlist?list=PLeqGkucOU6lA)), the gallery catalogs **220 masterworks** across **41 distinct artistic channels**, delivering high-definition video curation, an extensive high-resolution wallpaper archive (**100% 4K UHD & 100% 1080p FHD coverage; 1,780 active catalog wallpapers / 1,886 in archive**), fullscreen cinematic Ken Burns slideshow motion, atmospheric classical audio, and seamless cross-device collection sharing.
 
 🌐 **Live Web Application**: **[https://lgtkgtv.github.io/monet-living-gallery/](https://lgtkgtv.github.io/monet-living-gallery/)**
 
@@ -163,7 +163,7 @@ flowchart TD
 ```
 
 ### 2. ☁️ Wallpaper Storage & Scalability Architecture (Git vs LFS vs Cloudflare R2)
-As the gallery visual archive expands across multi-channel and multi-resolution tiers (~1,741 snapshots currently; projecting 5,000+ snapshots across future playlists), storage and egress bandwidth require deliberate architectural choices:
+As the gallery visual archive expands across multi-channel and multi-resolution tiers (~1,886 snapshots currently; projecting 5,000+ snapshots across future playlists), storage and egress bandwidth require deliberate architectural choices:
 
 | Architecture | Storage Capacity | Free Egress / Bandwidth | Latency / CDN | Best Used For |
 | :--- | :--- | :--- | :--- | :--- |
@@ -232,7 +232,9 @@ Wallpaper scenes are extracted directly from video streams without consuming You
   - Anthologies (>60 min): 16 scenes
 - **Luminosity Margin Sampling (`detect_form_factor`)**: Automatically categorizes stills as `desktop` widescreen (16:9) or `mobile` portrait by inspecting boundary luminosity for black letterboxing/pillarboxing bars.
 - **Anti-Throttling Pacing**: Configurable request delay with randomized jitter (`delay + uniform(0.5, 2.0)`) prevents HTTP 429 rate limiting.
-- **Stateful Resumption**: `wallpapers/batch_tracker.json` records status per video (`completed`, `in_progress`, `pending`, `failed`) allowing interruption-tolerant multi-day extractions.
+- **Automated Bot-Challenge Fallback (`youtube:player_client=android`)**: If standard web requests encounter YouTube's anti-bot verification challenge (*"Sign in to confirm you're not a bot"*), the extraction engine automatically falls back to YouTube's Android player client API. This resolves the challenge headlessly with 0 manual intervention and no login sessions required.
+- **Browser & Session Cookie Integration**: Supports `--cookies-from-browser <browser>` (e.g. Chrome, Firefox) and `--cookies <file>` (Netscape cookies.txt) for environments requiring explicit session authentication.
+- **Stateful Resumption & Retry**: `wallpapers/batch_tracker.json` records status per video (`completed`, `in_progress`, `pending`, `failed`) allowing interruption-tolerant multi-day extractions. The `--retry-failed` flag quickly resets failed titles to re-attempt extraction with updated fallbacks.
 - **Copyright Exclusion Flag**: The extractor supports `--skip-copyright-restricted` to automatically exclude video titles or channels with copyright reservations (e.g. *Living Art Moments*) from batch extraction runs.
 
 ### 7. 🤖 GitHub Actions Workflow Dispatch & Automation
@@ -327,6 +329,9 @@ python3 pipeline.py --extract --tier FHD --batch-size 15 --delay 2.0
 
 # Extract wallpaper batch excluding copyright-restricted channels
 python3 pipeline.py --extract --tier ALL --batch-size 15 --delay 2.0 --skip-copyright-restricted
+
+# Re-attempt failed extractions with automatic Android player-client fallback
+python3 pipeline.py --extract --tier ALL --retry-failed --skip-copyright-restricted
 
 # Complete end-to-end sync (resolutions -> extraction -> build -> report)
 python3 pipeline.py --sync
