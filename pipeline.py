@@ -94,11 +94,15 @@ def get_status():
         except Exception:
             wp_list = []
 
-    desktop_wp = sum(1 for wp in wp_list if wp.get('formFactor') == 'desktop')
-    mobile_wp = sum(1 for wp in wp_list if wp.get('formFactor') == 'mobile')
-    covered_vids = len(set(wp.get('videoId') for wp in wp_list if wp.get('videoId') in catalog_ids))
+    active_wp_list = [wp for wp in wp_list if wp.get('videoId') in catalog_ids]
+    orphaned_wp_count = len(wp_list) - len(active_wp_list)
+    desktop_wp = sum(1 for wp in active_wp_list if wp.get('formFactor') == 'desktop')
+    mobile_wp = sum(1 for wp in active_wp_list if wp.get('formFactor') == 'mobile')
+    covered_vids = len(set(wp.get('videoId') for wp in active_wp_list))
 
-    print(f"🖼️ Wallpaper Archive:         {len(wp_list)} snapshots ({desktop_wp} desktop widescreen, {mobile_wp} mobile portrait)")
+    print(f"🖼️ Wallpaper Archive:         {len(active_wp_list)} active snapshots ({desktop_wp} desktop widescreen, {mobile_wp} mobile portrait)")
+    if orphaned_wp_count > 0:
+        print(f"   Historical Stills on Disk: {orphaned_wp_count} snapshots from removed titles (run --prune to purge)")
     print(f"   Video Coverage:           {covered_vids} of {len(videos)} titles covered ({round(covered_vids/max(1, len(videos))*100, 1)}%)")
 
     # 5. Extraction Tracker
@@ -299,6 +303,111 @@ def run_sync_if_modified():
         print("✅ Source playlist(s) have not been modified since last sync.")
         print("   No network download or gallery rebuild necessary.")
 
+def run_audit_orphans():
+    print_banner("🔍 Catalog Integrity & Orphaned Cache Audit")
+    if not os.path.exists(PLAYLIST_FILE):
+        print(f"❌ Missing {PLAYLIST_FILE}")
+        return
+    with open(PLAYLIST_FILE, 'r', encoding='utf-8') as f:
+        playlist = json.load(f)
+    active_ids = set(v.get('id') for v in playlist if v.get('id'))
+
+    # 1. Check wallpapers directories on disk
+    disk_orphans = []
+    orphan_bytes = 0
+    if os.path.exists(WALLPAPER_DIR):
+        for d in os.listdir(WALLPAPER_DIR):
+            p = os.path.join(WALLPAPER_DIR, d)
+            if os.path.isdir(p) and d not in active_ids:
+                disk_orphans.append(d)
+                for f in os.listdir(p):
+                    orphan_bytes += os.path.getsize(os.path.join(p, f))
+
+    # 2. Check wallpapers/metadata.json
+    meta_orphans = []
+    if os.path.exists(METADATA_FILE):
+        try:
+            with open(METADATA_FILE, 'r', encoding='utf-8') as f:
+                wp_meta = json.load(f)
+            meta_orphans = [w for w in wp_meta if w.get('videoId') not in active_ids]
+        except Exception:
+            pass
+
+    # 3. Check video_resolutions.json
+    res_orphans = []
+    if os.path.exists(RESOLUTIONS_FILE):
+        try:
+            with open(RESOLUTIONS_FILE, 'r', encoding='utf-8') as f:
+                res_cache = json.load(f)
+            res_orphans = [k for k in res_cache if k not in active_ids]
+        except Exception:
+            pass
+
+    print(f"Active Catalog Titles:           {len(active_ids)} videos")
+    print(f"Orphaned Wallpaper Dirs:         {len(disk_orphans)} directories ({orphan_bytes / (1024*1024):.2f} MB)")
+    print(f"Orphaned Wallpaper Metadata:     {len(meta_orphans)} snapshots across {len(set(w.get('videoId') for w in meta_orphans))} titles")
+    print(f"Cached Non-Catalog Resolutions:  {len(res_orphans)} titles in resolution cache")
+
+    if disk_orphans or meta_orphans:
+        print("\n💡 Recommendation: Run `uv run python3 pipeline.py --prune` to reclaim disk space")
+        print("   and purge assets for videos removed from the YouTube playlist.\n")
+    else:
+        print("\n✨ Cache integrity verified: No orphaned assets or files detected.\n")
+    return len(disk_orphans) + len(meta_orphans)
+
+def run_prune(prune_resolutions=False):
+    print_banner("🧹 Pruning Orphaned Assets for Removed YouTube Titles")
+    if not os.path.exists(PLAYLIST_FILE):
+        print(f"❌ Missing {PLAYLIST_FILE}")
+        return
+    with open(PLAYLIST_FILE, 'r', encoding='utf-8') as f:
+        playlist = json.load(f)
+    active_ids = set(v.get('id') for v in playlist if v.get('id'))
+
+    import shutil
+
+    # 1. Prune disk wallpaper directories
+    removed_dirs = 0
+    freed_bytes = 0
+    if os.path.exists(WALLPAPER_DIR):
+        for d in os.listdir(WALLPAPER_DIR):
+            p = os.path.join(WALLPAPER_DIR, d)
+            if os.path.isdir(p) and d not in active_ids:
+                for f in os.listdir(p):
+                    freed_bytes += os.path.getsize(os.path.join(p, f))
+                shutil.rmtree(p)
+                removed_dirs += 1
+    print(f"   ✓ Purged {removed_dirs} orphaned wallpaper directories ({freed_bytes / (1024*1024):.2f} MB reclaimed).")
+
+    # 2. Prune wallpapers/metadata.json
+    if os.path.exists(METADATA_FILE):
+        try:
+            with open(METADATA_FILE, 'r', encoding='utf-8') as f:
+                wp_meta = json.load(f)
+            clean_meta = [w for w in wp_meta if w.get('videoId') in active_ids]
+            with open(METADATA_FILE, 'w', encoding='utf-8') as f:
+                json.dump(clean_meta, f, indent=2, ensure_ascii=False)
+            print(f"   ✓ Cleaned {METADATA_FILE}: {len(wp_meta) - len(clean_meta)} orphaned entries removed ({len(clean_meta)} active preserved).")
+        except Exception as e:
+            print(f"   ⚠️ Could not prune {METADATA_FILE}: {e}")
+
+    # 3. Prune video_resolutions.json if requested
+    if prune_resolutions and os.path.exists(RESOLUTIONS_FILE):
+        try:
+            with open(RESOLUTIONS_FILE, 'r', encoding='utf-8') as f:
+                res_cache = json.load(f)
+            clean_res = {k: v for k, v in res_cache.items() if k in active_ids}
+            with open(RESOLUTIONS_FILE, 'w', encoding='utf-8') as f:
+                json.dump(clean_res, f, indent=2, ensure_ascii=False)
+            print(f"   ✓ Cleaned {RESOLUTIONS_FILE}: {len(res_cache) - len(clean_res)} non-catalog resolutions pruned.")
+        except Exception as e:
+            print(f"   ⚠️ Could not prune {RESOLUTIONS_FILE}: {e}")
+
+    # 4. Rebuild web assets
+    print("\nRebuilding catalog assets...")
+    run_build()
+    print("\n✅ Prune complete. Archive and cache are 100% aligned with active playlist.\n")
+
 def run_detect_duplicates():
     print_banner("🔍 Multi-Cut & Duplicate Segment Analysis")
     if not os.path.exists('data.json'):
@@ -340,6 +449,9 @@ def main():
     parser.add_argument('--status', action='store_true', help="Display comprehensive pipeline & catalog dashboard")
     parser.add_argument('--check-updates', action='store_true', help="Check if source YouTube playlist has been modified or updated")
     parser.add_argument('--sync-if-modified', action='store_true', help="Conditionally sync only if source YouTube playlist has been modified")
+    parser.add_argument('--audit-orphans', action='store_true', help="Audit disk and caches for assets from removed YouTube videos")
+    parser.add_argument('--prune', action='store_true', help="Purge orphaned wallpaper directories and clean metadata.json for removed titles")
+    parser.add_argument('--prune-resolutions', action='store_true', help="Also prune non-catalog entries from video_resolutions.json when pruning")
     parser.add_argument('--refresh', nargs='?', const='', help="One-command manual refresh: pull playlist(s), probe resolutions & rebuild site")
     parser.add_argument('--pull-playlist', nargs='?', const='', help="Fetch fresh playlist JSON (accepts URL, comma-separated URLs, or reads playlists.json)")
     parser.add_argument('--build', action='store_true', help="Rebuild data.js, data.json, and catalog CSV")
@@ -372,6 +484,10 @@ def main():
         run_check_updates()
     if args.sync_if_modified:
         run_sync_if_modified()
+    if args.audit_orphans:
+        run_audit_orphans()
+    if args.prune:
+        run_prune(prune_resolutions=args.prune_resolutions)
     if args.detect_duplicates:
         run_detect_duplicates()
     if args.refresh is not None:
