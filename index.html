@@ -136,16 +136,30 @@
                         <option value="ALL">📚 All Playlists</option>
                     </select>
 
+                    <select id="artistSelect" class="select-dropdown" title="Explore by Impressionist Artist">
+                        <option value="ALL">🎨 All Artists (18 Masters)</option>
+                    </select>
+
+                    <select id="themeSelect" class="select-dropdown" title="Explore by Curated Motif & Theme">
+                        <option value="ALL">🏛️ All Themes & Motifs (10 Categories)</option>
+                    </select>
+
                     <select id="channelSelect" class="select-dropdown">
                         <!-- Populated by JS -->
                     </select>
 
                     <select id="resSelect" class="select-dropdown">
-                        <option value="4K" selected>👑 4K UHD Only (47 works)</option>
+                        <option value="4K" selected>👑 4K UHD Only (58 works)</option>
                         <option value="1080P_PLUS">💎 1080p HD or better (214 works)</option>
-                        <option value="1080P_EXACT">✨ 1080p Full HD (167 works)</option>
+                        <option value="1080P_EXACT">✨ 1080p Full HD (156 works)</option>
                         <option value="ALL">All Resolutions (220 works)</option>
                         <option value="OTHER">Standard HD (720p / 6 works)</option>
+                    </select>
+
+                    <select id="copyrightSelect" class="select-dropdown" title="Filter by Copyright & Download Permission">
+                        <option value="ALL">⚖️ All Licenses (Public Domain & View-Only)</option>
+                        <option value="DOWNLOADABLE">✅ Free Wallpaper Downloads Only</option>
+                        <option value="VIEW_ONLY">🔒 Copyright Reserved (View-Only)</option>
                     </select>
 
                     <select id="sortSelect" class="select-dropdown">
@@ -296,6 +310,10 @@
                 <div class="wp-header-title-block">
                     <h3 id="wpModalTitle" class="wp-modal-title" title="Wallpaper Title">Wallpaper Preview</h3>
                     <div id="wpModalSubtitle" class="wp-modal-subtitle">Claude Monet</div>
+                    <div id="wpModalRightsBanner" class="wp-modal-rights-banner" aria-label="Copyright and licensing attribution">
+                        <span id="wpModalRightsIcon" class="rights-icon">⚖️</span>
+                        <span id="wpModalRightsText" class="rights-text">Public Domain Impressionism</span>
+                    </div>
                 </div>
                 <button class="btn-close-modal" onclick="closeWallpaperModal()" aria-label="Close wallpaper gallery dialog" title="Close Gallery (Esc)">✕</button>
             </div>

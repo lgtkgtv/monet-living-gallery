@@ -217,10 +217,84 @@ if (playlistSelect.options.length !== 3) { // ALL + 2 playlists
 }
 console.log('[PASS] Generic Multi-Playlist Architecture verified: dynamic filter activation & tagging');
 
+// Verification 21: Artist dropdown filter & auto-resolution relaxation
+dom.window.switchMainTab('videos');
+dom.window.resetFilters();
+const artistSelect = dom.window.document.getElementById('artistSelect');
+const resSelect = dom.window.document.getElementById('resSelect');
+if (!artistSelect) throw new Error('Expected #artistSelect to exist in DOM');
+if (resSelect.value !== '4K') throw new Error(`Expected default resolution to be 4K, got ${resSelect.value}`);
+
+// Alfred Sisley has 0 4K works and 12 FHD works. Selecting Alfred Sisley should auto-expand resolution to ALL.
+artistSelect.value = 'Alfred Sisley';
+dom.window.onArtistFilterChange();
+if (resSelect.value !== 'ALL') {
+    throw new Error(`Expected resolution to auto-expand to ALL for Alfred Sisley, got ${resSelect.value}`);
+}
+const sisleyCardCount = dom.window.document.querySelectorAll('#videosGrid .video-card').length;
+if (sisleyCardCount === 0) throw new Error('Expected video cards to render for Alfred Sisley');
+console.log(`[PASS] Artist dropdown & auto-resolution expansion: ${sisleyCardCount} works rendered for Alfred Sisley`);
+
+// Verification 22: Theme dropdown filter
+dom.window.resetFilters();
+const themeSelect = dom.window.document.getElementById('themeSelect');
+if (!themeSelect) throw new Error('Expected #themeSelect to exist in DOM');
+themeSelect.value = 'Water Lilies & Lotus Ponds';
+dom.window.onThemeFilterChange();
+const waterLilyCardCount = dom.window.document.querySelectorAll('#videosGrid .video-card').length;
+if (waterLilyCardCount === 0) throw new Error('Expected cards rendered for Water Lilies theme');
+console.log(`[PASS] Theme dropdown filter: ${waterLilyCardCount} works rendered for Water Lilies motif`);
+
+// Verification 23: Copyright filter
+dom.window.resetFilters();
+const resSelectEl = dom.window.document.getElementById('resSelect');
+if (resSelectEl) resSelectEl.value = 'ALL'; // Living Art Moments titles are in 1080p FHD
+const copyrightSelect = dom.window.document.getElementById('copyrightSelect');
+if (!copyrightSelect) throw new Error('Expected #copyrightSelect to exist in DOM');
+copyrightSelect.value = 'VIEW_ONLY';
+dom.window.applyFilters();
+const viewOnlyCards = dom.window.document.querySelectorAll('#videosGrid .video-card');
+if (viewOnlyCards.length === 0) throw new Error('Expected view-only titles to match filter');
+console.log(`[PASS] Copyright filter: ${viewOnlyCards.length} view-only copyright-restricted works isolated`);
+
+// Verification 24: Smart Search Assistance & Educational Discovery Pills for uncataloged artists
+dom.window.resetFilters();
+searchInput.value = 'Pissarro';
+dom.window.applyFilters();
+const guidanceBox = dom.window.document.querySelector('.empty-state-guidance-box');
+const discoveryPills = dom.window.document.querySelectorAll('.artist-pill-btn');
+if (!guidanceBox) throw new Error('Expected .empty-state-guidance-box to be displayed for uncataloged artist search');
+if (discoveryPills.length === 0) throw new Error('Expected artist discovery pills to be present');
+console.log(`[PASS] Educational discovery empty-state assistance rendered ${discoveryPills.length} artist pills`);
+
+// Test pill click
+dom.window.selectArtistFromDropdown('Claude Monet');
+if (searchInput.value !== '') throw new Error('Expected search input to be cleared on artist pill selection');
+if (artistSelect.value !== 'Claude Monet') throw new Error('Expected artistSelect to be set to Claude Monet');
+const monetCardCount = dom.window.document.querySelectorAll('#videosGrid .video-card').length;
+if (monetCardCount === 0) throw new Error('Expected cards to render for Claude Monet after pill selection');
+console.log(`[PASS] Artist discovery pill selection successfully navigated to Claude Monet (${monetCardCount} works)`);
+
+// Verification 25: Wallpaper modal rights banner & attribution generation
+const sampleVideoWithWp = dom.window.ALL_VIDEOS.find(v => v.wallpapers && v.wallpapers.length > 0);
+if (!sampleVideoWithWp) throw new Error('Expected sample video with wallpapers');
+dom.window.openWallpaperModal(sampleVideoWithWp.id, 0);
+const modalRightsBanner = dom.window.document.getElementById('wpModalRightsBanner');
+const modalRightsText = dom.window.document.getElementById('wpModalRightsText');
+if (!modalRightsBanner) throw new Error('Expected #wpModalRightsBanner to exist');
+if (!modalRightsText.textContent.includes('Artwork')) throw new Error('Expected rights banner to mention Artwork attribution');
+dom.window.closeWallpaperModal();
+
+const attrText = dom.window.buildZipAttributionText(sampleVideoWithWp.wallpapers, 'Test Attribution Scope');
+if (!attrText.includes('IMPRESSIONIST LIVING GALLERY') || !attrText.includes('TERMS OF USE')) {
+    throw new Error('Expected generated ZIP attribution text to have valid terms & headers');
+}
+console.log('[PASS] Lightbox rights banner & ZIP download attribution verification successful');
+
 if (errors.length > 0) {
     console.error('❌ Uncaught runtime errors:', errors);
     process.exit(1);
 }
 
-console.log('\n🎉 ALL 20 VERIFICATION TESTS PASSED SUCCESSFULLY WITH 0 ERRORS!\n');
+console.log('\n🎉 ALL 25 VERIFICATION TESTS PASSED SUCCESSFULLY WITH 0 ERRORS!\n');
 

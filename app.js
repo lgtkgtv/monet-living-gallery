@@ -285,8 +285,11 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeroStats();
     renderChannelCards();
     populatePlaylistFilter();
+    populateArtistFilter();
+    populateThemeFilter();
     populateChannelFilter();
     populateResolutionFilter();
+    populateCopyrightFilter();
     initSearchSuggestions();
     initFiltersAndEvents();
     buildAllWallpapersList();
@@ -377,7 +380,11 @@ function buildAllWallpapersList() {
                     ...wp,
                     videoTitle: v.title,
                     channel: v.channel,
-                    videoUrl: v.url
+                    videoUrl: v.url,
+                    artist: v.artist,
+                    theme: v.theme,
+                    downloadProhibited: v.downloadProhibited,
+                    copyrightStatus: v.copyrightStatus
                 });
             });
         }
@@ -495,6 +502,149 @@ function populatePlaylistFilter() {
         opt.textContent = `📂 ${p.title}`;
         select.appendChild(opt);
     });
+}
+
+function populateArtistFilter() {
+    const select = document.getElementById('artistSelect');
+    if (!select) return;
+    const currentVal = select.value || 'ALL';
+    const artists = (typeof CATALOG_ARTISTS !== 'undefined' && Array.isArray(CATALOG_ARTISTS))
+        ? CATALOG_ARTISTS
+        : [];
+    select.innerHTML = `<option value="ALL">🎨 All Artists (${artists.length} Masters)</option>`;
+
+    artists.forEach(a => {
+        const opt = document.createElement('option');
+        opt.value = a.name;
+        const resHint = a.count4K > 0 ? `4K & FHD` : `1080p`;
+        opt.textContent = `${a.icon || '🎨'} ${a.name} (${a.count} · ${resHint})`;
+        select.appendChild(opt);
+    });
+    select.value = currentVal;
+}
+
+function populateThemeFilter() {
+    const select = document.getElementById('themeSelect');
+    if (!select) return;
+    const currentVal = select.value || 'ALL';
+    const themes = (typeof CATALOG_THEMES !== 'undefined' && Array.isArray(CATALOG_THEMES))
+        ? CATALOG_THEMES
+        : [];
+    select.innerHTML = `<option value="ALL">🏛️ All Themes & Motifs (${themes.length} Categories)</option>`;
+
+    themes.forEach(t => {
+        const opt = document.createElement('option');
+        opt.value = t.name;
+        const resHint = t.count4K > 0 ? `4K & FHD` : `1080p`;
+        opt.textContent = `${t.icon || '🏛️'} ${t.name} (${t.count} · ${resHint})`;
+        select.appendChild(opt);
+    });
+    select.value = currentVal;
+}
+
+function populateCopyrightFilter() {
+    const select = document.getElementById('copyrightSelect');
+    if (!select) return;
+    const currentVal = select.value || 'ALL';
+    const downloadableCount = ALL_VIDEOS.filter(v => !v.downloadProhibited).length;
+    const prohibitedCount = ALL_VIDEOS.filter(v => v.downloadProhibited).length;
+
+    select.innerHTML = `
+        <option value="ALL">⚖️ All Licenses (${ALL_VIDEOS.length} works)</option>
+        <option value="DOWNLOADABLE">✅ Free Wallpaper Downloads (${downloadableCount} works)</option>
+        <option value="VIEW_ONLY">🔒 Copyright Reserved (${prohibitedCount} works · View Only)</option>
+    `;
+    select.value = currentVal;
+}
+
+function onArtistFilterChange() {
+    const artistSelect = document.getElementById('artistSelect');
+    const resSelect = document.getElementById('resSelect');
+    const channelSelect = document.getElementById('channelSelect');
+    if (!artistSelect) return;
+    const selectedArtist = artistSelect.value;
+
+    if (selectedArtist !== 'ALL') {
+        const artists = (typeof CATALOG_ARTISTS !== 'undefined') ? CATALOG_ARTISTS : [];
+        const aObj = artists.find(a => a.name === selectedArtist);
+        
+        // If user is on 4K filter and this artist has 0 works in 4K, auto-expand to 1080p/ALL
+        if (resSelect && resSelect.value === '4K' && aObj && aObj.count4K === 0 && aObj.count > 0) {
+            resSelect.value = 'ALL';
+            showFilterAssistToast(`🎬 Switched to All Resolutions: <strong>${escapeQuotes(aObj.name)}</strong> masterworks are available in 1080p Full HD.`);
+        }
+
+        // If current channel has 0 works for this artist, auto-reset channel to ALL
+        if (channelSelect && channelSelect.value !== 'ALL') {
+            const hasInChannel = ALL_VIDEOS.some(v => v.channel === channelSelect.value && (v.artist === selectedArtist || (aObj && v.title.toLowerCase().includes(aObj.query.toLowerCase()))));
+            if (!hasInChannel) {
+                channelSelect.value = 'ALL';
+            }
+        }
+    }
+
+    applyFilters();
+}
+
+function onThemeFilterChange() {
+    const themeSelect = document.getElementById('themeSelect');
+    const resSelect = document.getElementById('resSelect');
+    const channelSelect = document.getElementById('channelSelect');
+    if (!themeSelect) return;
+    const selectedTheme = themeSelect.value;
+
+    if (selectedTheme !== 'ALL') {
+        const themes = (typeof CATALOG_THEMES !== 'undefined') ? CATALOG_THEMES : [];
+        const tObj = themes.find(t => t.name === selectedTheme);
+
+        if (resSelect && resSelect.value === '4K' && tObj && tObj.count4K === 0 && tObj.count > 0) {
+            resSelect.value = 'ALL';
+            showFilterAssistToast(`🎬 Switched to All Resolutions: "<strong>${escapeQuotes(tObj.name)}</strong>" works are in 1080p Full HD.`);
+        }
+
+        if (channelSelect && channelSelect.value !== 'ALL') {
+            const hasInChannel = ALL_VIDEOS.some(v => v.channel === channelSelect.value && (v.theme === selectedTheme || (tObj && (tObj.synonyms || []).some(s => v.title.toLowerCase().includes(s)))));
+            if (!hasInChannel) {
+                channelSelect.value = 'ALL';
+            }
+        }
+    }
+
+    applyFilters();
+}
+
+function selectArtistFromDropdown(artistName) {
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) searchInput.value = '';
+    updateActiveSearchChips('');
+    const select = document.getElementById('artistSelect');
+    if (select) {
+        select.value = artistName;
+        onArtistFilterChange();
+    }
+}
+
+function matchesThemeQuery(title, themeName) {
+    if (!themeName || themeName === 'ALL') return true;
+    const tObj = (typeof CATALOG_THEMES !== 'undefined' ? CATALOG_THEMES : []).find(t => t.name === themeName || t.query === themeName);
+    if (!tObj) return title.toLowerCase().includes(themeName.toLowerCase());
+    const lower = title.toLowerCase();
+    return (tObj.synonyms || []).some(s => lower.includes(s)) || lower.includes((tObj.query || '').toLowerCase());
+}
+
+function showFilterAssistToast(msg) {
+    let toast = document.getElementById('filterAssistToast');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'filterAssistToast';
+        toast.className = 'filter-assist-toast';
+        document.body.appendChild(toast);
+    }
+    toast.innerHTML = msg;
+    toast.classList.add('visible');
+    setTimeout(() => {
+        if (toast) toast.classList.remove('visible');
+    }, 4500);
 }
 
 function populateChannelFilter() {
@@ -702,7 +852,11 @@ function createWallpaperCard(wp) {
     const wpAlt = `${escapeQuotes(wp.videoTitle)} - High-resolution Impressionist scene snapshot at ${wp.timestampFormatted} (${wp.width}×${wp.height})`;
     const isProhibited = (typeof isChannelDownloadProhibited === 'function')
         ? isChannelDownloadProhibited(wp.channel)
-        : false;
+        : (wp.downloadProhibited || false);
+
+    const rightsBadge = isProhibited
+        ? `<span class="wp-card-rights-pill rights-restricted" title="Copyright Reserved · View-Only Contemplation in Gallery">🔒 View Only</span>`
+        : `<span class="wp-card-rights-pill rights-public" title="Public Domain Artwork · Free Wallpaper Download">✅ Free DL</span>`;
 
     const actionBtnLabel = isProhibited 
         ? `View Artwork (${wp.width}×${wp.height}) 🔒` 
@@ -718,7 +872,10 @@ function createWallpaperCard(wp) {
             <span class="wp-pill-time">${isProhibited ? '🔒 View Only · ' : ''}Scene at ${wp.timestampFormatted}</span>
         </div>
         <div class="wp-card-info">
-            <span class="wp-card-channel">${wp.channel}${isProhibited ? ' · 🔒 Copyright' : ''}</span>
+            <div class="wp-card-meta-row">
+                <span class="wp-card-channel" title="${escapeQuotes(wp.channel)}">${wp.channel}</span>
+                ${rightsBadge}
+            </div>
             <h4 class="wp-card-title">${wp.videoTitle}</h4>
             <div class="wp-card-actions">
                 <button class="btn-wp-view" aria-label="${actionBtnTitle}" title="${actionBtnTitle}">${actionBtnLabel}</button>
@@ -746,61 +903,128 @@ function buildEmptyStateHTML(type = 'paintings') {
     const channelEl = document.getElementById('channelSelect');
     const searchEl = document.getElementById('searchInput');
     const resEl = document.getElementById('resSelect');
+    const artistEl = document.getElementById('artistSelect');
+    const themeEl = document.getElementById('themeSelect');
+    const copyrightEl = document.getElementById('copyrightSelect');
 
     const selectedChannel = channelEl ? channelEl.value : 'ALL';
     const rawQuery = searchEl ? searchEl.value.trim() : '';
-    const selectedRes = resEl ? resEl.value : '1080P_PLUS';
+    const selectedRes = resEl ? resEl.value : '4K';
+    const selectedArtist = artistEl ? artistEl.value : 'ALL';
+    const selectedTheme = themeEl ? themeEl.value : 'ALL';
+    const selectedCopyright = copyrightEl ? copyrightEl.value : 'ALL';
 
     const title = type === 'paintings' ? 'No paintings or videos found' : 'No wallpapers match your criteria';
-    const subtitle = 'Try adjusting your search query, resolution filter, or channel selection.';
+    const subtitle = 'Try adjusting your search query, artist, motif, resolution, or channel filters.';
     let conflictHTML = '';
     let actionButtons = `
         <button class="btn btn-primary" style="margin-top: 16px;" onclick="resetFilters()">Reset All Filters</button>
     `;
 
-    // Smart cross-filter detection: check if query has matches in other channels or resolutions
-    if (rawQuery && selectedChannel !== 'ALL') {
+    // 1. Cross-resolution conflict: query or artist has 0 in 4K, but exists in 1080p FHD / All
+    if (rawQuery && (selectedRes === '4K' || selectedRes === '1080P_EXACT')) {
         const matchesInCatalog = ALL_VIDEOS.filter(v => matchesSearch(v.title, v.channel, rawQuery)).length;
         if (matchesInCatalog > 0) {
             conflictHTML = `
-                <div style="margin: 14px auto; max-width: 520px; padding: 12px 18px; background: rgba(229, 176, 53, 0.12); border: 1px solid rgba(229, 176, 53, 0.35); border-radius: 8px; color: var(--text-main); font-size: 0.92rem;">
-                    💡 <strong>Found ${matchesInCatalog} works</strong> matching "<em>${escapeQuotes(rawQuery)}</em>" in other channels.
+                <div class="empty-state-assistance-box">
+                    <div class="empty-assist-msg">
+                        💡 Found <strong>${matchesInCatalog} work(s)</strong> matching "<em>${escapeQuotes(rawQuery)}</em>" in 1080p Full HD.
+                    </div>
+                    <div class="empty-assist-buttons">
+                        <button class="btn btn-primary" onclick="searchAllResolutionsForQuery('${escapeQuotes(rawQuery)}')">
+                            🎬 View in All Resolutions (${matchesInCatalog})
+                        </button>
+                        <button class="btn btn-outline-white" onclick="resetFilters()">
+                            Reset All Filters
+                        </button>
+                    </div>
                 </div>
             `;
-            actionButtons = `
-                <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 14px;">
-                    <button class="btn btn-primary" onclick="searchAllChannelsForQuery('${escapeQuotes(rawQuery)}')">
-                        🔍 Search "${escapeQuotes(rawQuery)}" Across All Channels (${matchesInCatalog})
-                    </button>
-                    <button class="btn btn-outline-white" onclick="resetFilters()">
-                        Reset All Filters
-                    </button>
-                </div>
-            `;
+            actionButtons = '';
         }
-    } else if (rawQuery && selectedRes !== 'ALL') {
+    }
+
+    // 2. Cross-channel conflict: query has matches across other channels
+    if (!conflictHTML && rawQuery && selectedChannel !== 'ALL') {
         const matchesInCatalog = ALL_VIDEOS.filter(v => matchesSearch(v.title, v.channel, rawQuery)).length;
         if (matchesInCatalog > 0) {
             conflictHTML = `
-                <div style="margin: 14px auto; max-width: 520px; padding: 12px 18px; background: rgba(229, 176, 53, 0.12); border: 1px solid rgba(229, 176, 53, 0.35); border-radius: 8px; color: var(--text-main); font-size: 0.92rem;">
-                    💡 <strong>Found ${matchesInCatalog} works</strong> matching "<em>${escapeQuotes(rawQuery)}</em>" across all resolutions.
+                <div class="empty-state-assistance-box">
+                    <div class="empty-assist-msg">
+                        💡 Found <strong>${matchesInCatalog} work(s)</strong> matching "<em>${escapeQuotes(rawQuery)}</em>" across other channels.
+                    </div>
+                    <div class="empty-assist-buttons">
+                        <button class="btn btn-primary" onclick="searchAllChannelsForQuery('${escapeQuotes(rawQuery)}')">
+                            📺 Search All Channels (${matchesInCatalog})
+                        </button>
+                        <button class="btn btn-outline-white" onclick="resetFilters()">
+                            Reset All Filters
+                        </button>
+                    </div>
+                </div>
+            `;
+            actionButtons = '';
+        }
+    }
+
+    // 3. Copyright conflict: downloadable filter active but matches exist under view-only
+    if (!conflictHTML && rawQuery && selectedCopyright === 'DOWNLOADABLE') {
+        const matchesInCatalog = ALL_VIDEOS.filter(v => matchesSearch(v.title, v.channel, rawQuery)).length;
+        if (matchesInCatalog > 0) {
+            conflictHTML = `
+                <div class="empty-state-assistance-box">
+                    <div class="empty-assist-msg">
+                        💡 Found <strong>${matchesInCatalog} work(s)</strong> matching "<em>${escapeQuotes(rawQuery)}</em>" under Copyright Reserved (View-Only).
+                    </div>
+                    <div class="empty-assist-buttons">
+                        <button class="btn btn-primary" onclick="showAllLicensesForQuery('${escapeQuotes(rawQuery)}')">
+                            ⚖️ View Under All Licenses (${matchesInCatalog})
+                        </button>
+                        <button class="btn btn-outline-white" onclick="resetFilters()">
+                            Reset All Filters
+                        </button>
+                    </div>
+                </div>
+            `;
+            actionButtons = '';
+        }
+    }
+
+    // 4. Zero matches in entire collection (e.g. "Pissarro", "Renoir", or uncataloged search)
+    if (!conflictHTML && rawQuery) {
+        const totalMatchesAnywhere = ALL_VIDEOS.filter(v => matchesSearch(v.title, v.channel, rawQuery)).length;
+        if (totalMatchesAnywhere === 0) {
+            const artists = (typeof CATALOG_ARTISTS !== 'undefined' && Array.isArray(CATALOG_ARTISTS))
+                ? CATALOG_ARTISTS
+                : [];
+            const featuredArtists = artists.slice(0, 8);
+            const pillsHTML = featuredArtists.map(a => `
+                <button type="button" class="artist-pill-btn" onclick="selectArtistFromDropdown('${escapeQuotes(a.name)}')">
+                    ${a.icon || '🎨'} ${escapeQuotes(a.name)} (${a.count})
+                </button>
+            `).join('');
+
+            conflictHTML = `
+                <div class="empty-state-guidance-box">
+                    <div class="empty-assist-msg">
+                        🎨 "<strong>${escapeQuotes(rawQuery)}</strong>" was not found in this 220-title exhibition.
+                        <br><span style="font-size: 0.88rem; color: var(--text-muted);">The Impressionist Living Gallery features 18 masters. Explore our featured artists:</span>
+                    </div>
+                    <div class="artist-discovery-pills">
+                        ${pillsHTML}
+                    </div>
                 </div>
             `;
             actionButtons = `
                 <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 14px;">
-                    <button class="btn btn-primary" onclick="searchAllResolutionsForQuery('${escapeQuotes(rawQuery)}')">
-                        🎬 View in All Resolutions (${matchesInCatalog})
-                    </button>
-                    <button class="btn btn-outline-white" onclick="resetFilters()">
-                        Reset All Filters
-                    </button>
+                    <button class="btn btn-outline-white" onclick="resetFilters()">Reset All Filters</button>
                 </div>
             `;
         }
     }
 
     return `
-        <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; color: var(--text-muted);">
+        <div style="grid-column: 1 / -1; text-align: center; padding: 50px 20px; color: var(--text-muted);">
             <h3 style="color: var(--text-main); margin-bottom: 8px;">${title}</h3>
             <p>${subtitle}</p>
             ${conflictHTML}
@@ -821,6 +1045,34 @@ function searchAllChannelsForQuery(query) {
 function searchAllResolutionsForQuery(query) {
     const resSelect = document.getElementById('resSelect');
     if (resSelect) resSelect.value = 'ALL';
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) searchInput.value = query;
+    updateActiveSearchChips(query);
+    showFilterAssistToast(`🎬 Switched to All Resolutions for "${escapeQuotes(query)}"`);
+    applyFilters();
+}
+
+function showAllLicensesForQuery(query) {
+    const copyrightSelect = document.getElementById('copyrightSelect');
+    if (copyrightSelect) copyrightSelect.value = 'ALL';
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) searchInput.value = query;
+    updateActiveSearchChips(query);
+    showFilterAssistToast(`⚖️ Showing All Licenses for "${escapeQuotes(query)}"`);
+    applyFilters();
+}
+
+function clearRestrictionsForQuery(query) {
+    const channelSelect = document.getElementById('channelSelect');
+    if (channelSelect) channelSelect.value = 'ALL';
+    const resSelect = document.getElementById('resSelect');
+    if (resSelect) resSelect.value = 'ALL';
+    const copyrightSelect = document.getElementById('copyrightSelect');
+    if (copyrightSelect) copyrightSelect.value = 'ALL';
+    const artistSelect = document.getElementById('artistSelect');
+    if (artistSelect) artistSelect.value = 'ALL';
+    const themeSelect = document.getElementById('themeSelect');
+    if (themeSelect) themeSelect.value = 'ALL';
     const searchInput = document.getElementById('searchInput');
     if (searchInput) searchInput.value = query;
     updateActiveSearchChips(query);
@@ -1099,12 +1351,40 @@ function matchesSearch(title, channel, query) {
     return false;
 }
 
+function checkArtistMatch(video, artistName) {
+    if (!artistName || artistName === 'ALL') return true;
+    if (video.artist === artistName) return true;
+    const artists = (typeof CATALOG_ARTISTS !== 'undefined' && Array.isArray(CATALOG_ARTISTS))
+        ? CATALOG_ARTISTS
+        : [];
+    const aObj = artists.find(a => a.name === artistName);
+    if (aObj && aObj.query && video.title.toLowerCase().includes(aObj.query.toLowerCase())) return true;
+    return video.title.toLowerCase().includes(artistName.toLowerCase());
+}
+
+function checkThemeMatch(video, themeName) {
+    if (!themeName || themeName === 'ALL') return true;
+    if (video.theme === themeName) return true;
+    return matchesThemeQuery(video.title, themeName);
+}
+
+function checkCopyrightMatch(video, copyrightMode) {
+    if (!copyrightMode || copyrightMode === 'ALL') return true;
+    if (copyrightMode === 'DOWNLOADABLE') return !video.downloadProhibited;
+    if (copyrightMode === 'VIEW_ONLY') return video.downloadProhibited === true;
+    return true;
+}
+
 function applyFilters() {
     const searchEl = document.getElementById('searchInput');
     const channelEl = document.getElementById('channelSelect');
     const resEl = document.getElementById('resSelect');
     const sortEl = document.getElementById('sortSelect');
     const playlistEl = document.getElementById('playlistSelect');
+    const artistEl = document.getElementById('artistSelect');
+    const themeEl = document.getElementById('themeSelect');
+    const copyrightEl = document.getElementById('copyrightSelect');
+
     const emptyState = document.getElementById('favoritesEmptyState');
     const gridVid = document.getElementById('videosGrid');
     const gridWp = document.getElementById('wallpapersGrid');
@@ -1112,9 +1392,12 @@ function applyFilters() {
 
     const rawQuery = searchEl ? searchEl.value.trim() : '';
     const selectedChannel = channelEl ? channelEl.value : 'ALL';
-    const selectedRes = resEl ? resEl.value : '1080P_PLUS';
+    const selectedRes = resEl ? resEl.value : '4K';
     const sortBy = sortEl ? sortEl.value : 'views_desc';
     const selectedPlaylist = (playlistEl && playlistEl.value) ? playlistEl.value : 'ALL';
+    const selectedArtist = (artistEl && artistEl.value) ? artistEl.value : 'ALL';
+    const selectedTheme = (themeEl && themeEl.value) ? themeEl.value : 'ALL';
+    const selectedCopyright = (copyrightEl && copyrightEl.value) ? copyrightEl.value : 'ALL';
 
     updateActiveSearchChips(rawQuery);
 
@@ -1152,7 +1435,11 @@ function applyFilters() {
                 matchesRes = (!v.is4K && v.height < 1080);
             }
 
-            return matchesQuery && matchesChannel && matchesRes && matchesPlaylist;
+            const matchesArtist = checkArtistMatch(v, selectedArtist);
+            const matchesTheme = checkThemeMatch(v, selectedTheme);
+            const matchesCopyright = checkCopyrightMatch(v, selectedCopyright);
+
+            return matchesQuery && matchesChannel && matchesRes && matchesPlaylist && matchesArtist && matchesTheme && matchesCopyright;
         });
 
         if (sortBy === 'views_desc') filtered.sort((a, b) => b.views - a.views);
@@ -1220,7 +1507,11 @@ function applyFilters() {
                 matchesRes = (!v.is4K && v.height < 1080);
             }
 
-            return matchesQuery && matchesChannel && matchesRes && matchesPlaylist;
+            const matchesArtist = checkArtistMatch(v, selectedArtist);
+            const matchesTheme = checkThemeMatch(v, selectedTheme);
+            const matchesCopyright = checkCopyrightMatch(v, selectedCopyright);
+
+            return matchesQuery && matchesChannel && matchesRes && matchesPlaylist && matchesArtist && matchesTheme && matchesCopyright;
         });
 
         if (sortBy === 'views_desc') filtered.sort((a, b) => b.views - a.views);
@@ -1254,13 +1545,21 @@ function applyFilters() {
                 matchesRes = (!v.is4K && v.height < 1080);
             }
 
-            if (matchesQuery && matchesChannel && matchesRes && matchesPlaylist && v.wallpapers) {
+            const matchesArtist = checkArtistMatch(v, selectedArtist);
+            const matchesTheme = checkThemeMatch(v, selectedTheme);
+            const matchesCopyright = checkCopyrightMatch(v, selectedCopyright);
+
+            if (matchesQuery && matchesChannel && matchesRes && matchesPlaylist && matchesArtist && matchesTheme && matchesCopyright && v.wallpapers) {
                 v.wallpapers.forEach(wp => {
                     filteredWp.push({
                         ...wp,
                         videoTitle: v.title,
                         channel: v.channel,
-                        videoUrl: v.url
+                        videoUrl: v.url,
+                        artist: v.artist,
+                        theme: v.theme,
+                        downloadProhibited: v.downloadProhibited,
+                        copyrightStatus: v.copyrightStatus
                     });
                 });
             }
@@ -1282,6 +1581,12 @@ function filterTo4K() {
     if (searchInput) searchInput.value = '';
     const channelSelect = document.getElementById('channelSelect');
     if (channelSelect) channelSelect.value = 'ALL';
+    const artistSelect = document.getElementById('artistSelect');
+    if (artistSelect) artistSelect.value = 'ALL';
+    const themeSelect = document.getElementById('themeSelect');
+    if (themeSelect) themeSelect.value = 'ALL';
+    const copyrightSelect = document.getElementById('copyrightSelect');
+    if (copyrightSelect) copyrightSelect.value = 'ALL';
     updateActiveSearchChips('');
     applyFilters();
     const container = document.querySelector('main.container');
@@ -1364,10 +1669,16 @@ function resetFilters() {
     if (searchInput) searchInput.value = '';
     const playlistSelect = document.getElementById('playlistSelect');
     if (playlistSelect) playlistSelect.value = 'ALL';
+    const artistSelect = document.getElementById('artistSelect');
+    if (artistSelect) artistSelect.value = 'ALL';
+    const themeSelect = document.getElementById('themeSelect');
+    if (themeSelect) themeSelect.value = 'ALL';
     const channelSelect = document.getElementById('channelSelect');
     if (channelSelect) channelSelect.value = 'ALL';
     const resSelect = document.getElementById('resSelect');
     if (resSelect) resSelect.value = '4K';
+    const copyrightSelect = document.getElementById('copyrightSelect');
+    if (copyrightSelect) copyrightSelect.value = 'ALL';
     const sortSelect = document.getElementById('sortSelect');
     if (sortSelect) sortSelect.value = 'views_desc';
 
@@ -1377,10 +1688,16 @@ function resetFilters() {
 function resetFavoritesFilters() {
     const playlistSelect = document.getElementById('playlistSelect');
     if (playlistSelect) playlistSelect.value = 'ALL';
+    const artistSelect = document.getElementById('artistSelect');
+    if (artistSelect) artistSelect.value = 'ALL';
+    const themeSelect = document.getElementById('themeSelect');
+    if (themeSelect) themeSelect.value = 'ALL';
     const channelSelect = document.getElementById('channelSelect');
     if (channelSelect) channelSelect.value = 'ALL';
     const resSelect = document.getElementById('resSelect');
     if (resSelect) resSelect.value = 'ALL';
+    const copyrightSelect = document.getElementById('copyrightSelect');
+    if (copyrightSelect) copyrightSelect.value = 'ALL';
     const searchInput = document.getElementById('searchInput');
     if (searchInput) searchInput.value = '';
     applyFilters();
@@ -1409,11 +1726,20 @@ function initFiltersAndEvents() {
     const searchInput = document.getElementById('searchInput');
     if (searchInput) searchInput.addEventListener('input', debounce(applyFilters, 150));
 
+    const artistSelect = document.getElementById('artistSelect');
+    if (artistSelect) artistSelect.addEventListener('change', onArtistFilterChange);
+
+    const themeSelect = document.getElementById('themeSelect');
+    if (themeSelect) themeSelect.addEventListener('change', onThemeFilterChange);
+
     const channelSelect = document.getElementById('channelSelect');
     if (channelSelect) channelSelect.addEventListener('change', applyFilters);
 
     const resSelect = document.getElementById('resSelect');
     if (resSelect) resSelect.addEventListener('change', applyFilters);
+
+    const copyrightSelect = document.getElementById('copyrightSelect');
+    if (copyrightSelect) copyrightSelect.addEventListener('change', applyFilters);
 
     const sortSelect = document.getElementById('sortSelect');
     if (sortSelect) sortSelect.addEventListener('change', applyFilters);
@@ -1777,7 +2103,27 @@ function displayActiveWallpaper() {
 
     const isProhibited = (typeof isChannelDownloadProhibited === 'function') 
         ? isChannelDownloadProhibited(wp.channel)
-        : false;
+        : (wp.downloadProhibited || false);
+
+    const rightsBanner = document.getElementById('wpModalRightsBanner');
+    const rightsIcon = document.getElementById('wpModalRightsIcon');
+    const rightsText = document.getElementById('wpModalRightsText');
+
+    if (rightsBanner) {
+        if (isProhibited) {
+            rightsBanner.className = 'wp-modal-rights-banner banner-restricted';
+            if (rightsIcon) rightsIcon.textContent = '🔒';
+            if (rightsText) {
+                rightsText.textContent = `Copyright Reserved (${escapeQuotes(wp.channel)}) · View-Only Contemplation in Gallery · Downloads Prohibited`;
+            }
+        } else {
+            rightsBanner.className = 'wp-modal-rights-banner banner-public';
+            if (rightsIcon) rightsIcon.textContent = '⚖️';
+            if (rightsText) {
+                rightsText.textContent = `Public Domain Artwork (${escapeQuotes(wp.channel)}) · Free Wallpaper Download & Personal Use`;
+            }
+        }
+    }
 
     const dlCurBtn = document.getElementById('wpDownloadCurrentBtn');
     const dlAllBtn = document.getElementById('wpDownloadAllBtn');
@@ -1861,6 +2207,8 @@ function downloadCurrentWallpaper() {
 
     if (btn) btn.innerHTML = '✓ Downloading...';
 
+    showFilterAssistToast(`⚖️ Downloading wallpaper for personal contemplation · Artwork in Public Domain · Channel: ${escapeQuotes(wp.channel || video.channel || 'Curated')}`);
+
     const a = document.createElement('a');
     a.href = wp.path;
     a.download = filename;
@@ -1872,6 +2220,71 @@ function downloadCurrentWallpaper() {
         if (btn) btn.innerHTML = originalText;
         isDownloadingCurrent = false;
     }, 1200);
+}
+
+function buildZipAttributionText(items, collectionScope = 'Curated Impressionist Collection') {
+    const dateStr = new Date().toISOString().split('T')[0];
+    const channelMap = new Map();
+
+    items.forEach(item => {
+        const ch = item.channel || 'Curated Contributor';
+        if (!channelMap.has(ch)) {
+            channelMap.set(ch, []);
+        }
+        const titles = channelMap.get(ch);
+        const title = item.videoTitle || 'Impressionist Masterwork';
+        if (!titles.includes(title)) {
+            titles.push(title);
+        }
+    });
+
+    let channelsSection = '';
+    channelMap.forEach((titles, ch) => {
+        channelsSection += `\nChannel: ${ch}\n`;
+        titles.slice(0, 15).forEach(t => {
+            channelsSection += `  - ${t}\n`;
+        });
+        if (titles.length > 15) {
+            channelsSection += `  - ...and ${titles.length - 15} additional works\n`;
+        }
+    });
+
+    return `================================================================================
+IMPRESSIONIST LIVING GALLERY · WALLPAPER ARCHIVE ATTRIBUTION & RIGHTS
+================================================================================
+Generated: ${dateStr}
+Scope: ${collectionScope}
+Total Wallpapers: ${items.length}
+
+--------------------------------------------------------------------------------
+1. ARTWORK & HISTORICAL CONTEXT
+--------------------------------------------------------------------------------
+The historical paintings featured in these wallpapers (including masterworks by
+Claude Monet, Vincent van Gogh, Alfred Sisley, Eugène Boudin, Gustave Loiseau,
+Isaac Levitan, and others) are in the Public Domain worldwide due to the
+expiration of their copyright terms (author's life + 70 to 100 years).
+
+--------------------------------------------------------------------------------
+2. VIDEO CREATOR ATTRIBUTION & ORIGINATING CHANNELS
+--------------------------------------------------------------------------------
+These 4K/FHD wallpaper scenes originate from video presentations curated and
+streamed on YouTube. Please support and subscribe to the creators:${channelsSection}
+
+--------------------------------------------------------------------------------
+3. TERMS OF USE & LICENSING
+--------------------------------------------------------------------------------
+• Non-commercial Personal Contemplation: Permitted. You may use these images as
+  desktop wallpapers, personal art frames, screensavers, and private art study.
+• Commercial Redistribution: Prohibited. Video presentations, channel branding,
+  and digital curation may be protected by respective channel copyrights.
+• Channel Copyright Reserved Titles: Titles originating from channels with explicit
+  reservation (e.g. "Living Art Moments") are restricted to view-only contemplation
+  within the living gallery and are excluded from bulk download archives.
+
+================================================================================
+Impressionist Living Gallery — Celebrating Fine Art & Digital Preservation
+================================================================================
+`;
 }
 
 // Download all wallpapers for this video packaged cleanly into a single ZIP archive
@@ -1934,6 +2347,9 @@ async function downloadAllWallpapers() {
 
             zip.file(itemFilename, blob);
         }
+
+        const attrText = buildZipAttributionText(activeWallpaperList, safeTitle);
+        zip.file('COPYRIGHT_AND_ATTRIBUTION.txt', attrText);
 
         if (btn) btn.innerHTML = '📦 Compressing...';
         const zipBlob = await zip.generateAsync({
@@ -2020,6 +2436,19 @@ async function downloadAllFilteredWallpapers() {
         return;
     }
 
+    const downloadableItems = currentWallpapers.filter(wp => {
+        const isProhibited = (typeof isChannelDownloadProhibited === 'function') 
+            ? isChannelDownloadProhibited(wp.channel) 
+            : (wp.downloadProhibited || false);
+        return !isProhibited;
+    });
+
+    if (downloadableItems.length === 0) {
+        alert('All matching wallpapers in this selection have view-only copyright protections. Fullscreen viewing and slideshows remain available.');
+        return;
+    }
+
+    const skippedCount = currentWallpapers.length - downloadableItems.length;
     const btn = document.getElementById('wpDownloadFilteredBtn');
     const originalText = btn ? btn.innerHTML : '';
 
@@ -2045,7 +2474,7 @@ async function downloadAllFilteredWallpapers() {
         ? channelEl.value.replace(/[/\\?%*:|"<>]/g, '').replace(/\s+/g, '_') 
         : 'All_Channels';
     const resName = resEl ? resEl.value : 'Filtered';
-    const total = currentWallpapers.length;
+    const total = downloadableItems.length;
     const zipFilename = `Monet_Wallpapers_${channelName}_${resName}_(${total}_items).zip`;
 
     isDownloadingFiltered = true;
@@ -2060,7 +2489,7 @@ async function downloadAllFilteredWallpapers() {
         const batchSize = 6;
         for (let i = 0; i < total; i += batchSize) {
             await new Promise(r => setTimeout(r, 0)); // Yield to event loop to keep UI smooth and reactive
-            const batch = currentWallpapers.slice(i, i + batchSize);
+            const batch = downloadableItems.slice(i, i + batchSize);
             await Promise.all(batch.map(async (wp, bIdx) => {
                 const globalIdx = i + bIdx + 1;
                 const safeTitle = (wp.videoTitle || 'Impressionism').replace(/[/\\?%*:|"<>]/g, '').replace(/\s+/g, '_').substring(0, 30);
@@ -2088,6 +2517,9 @@ async function downloadAllFilteredWallpapers() {
             throw new Error('No wallpaper files could be loaded');
         }
 
+        const attrText = buildZipAttributionText(downloadableItems, `Channel: ${channelName} | Resolution: ${resName}`);
+        zip.file('COPYRIGHT_AND_ATTRIBUTION.txt', attrText);
+
         if (btn) btn.innerHTML = '📦 Compressing ZIP...';
         const zipBlob = await zip.generateAsync({
             type: 'blob',
@@ -2097,6 +2529,9 @@ async function downloadAllFilteredWallpapers() {
         triggerBlobDownload(zipBlob, zipFilename);
 
         if (btn) btn.innerHTML = `✓ Downloaded ${successful} Wallpapers!`;
+        if (skippedCount > 0) {
+            showFilterAssistToast(`⚖️ Packaged ${successful} downloadable wallpapers. Excluded ${skippedCount} copyright-reserved view-only works.`);
+        }
         setTimeout(() => {
             if (btn) {
                 btn.innerHTML = originalText;

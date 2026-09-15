@@ -412,11 +412,20 @@ def sync_metadata_and_rebuild(new_records):
     except Exception as e:
         print(f"⚠️ Could not run build_webpage.py: {e}")
 
-def run_batch(batch_size=10, tier_filter=None, delay=3.0, max_retries=2):
+def run_batch(batch_size=10, tier_filter=None, delay=3.0, max_retries=2, skip_copyright=False):
     playlist, res_cache = load_playlist_and_resolutions()
     tracker = load_or_init_tracker(playlist, res_cache)
 
     vids = list(tracker["videos"].values())
+
+    if skip_copyright:
+        try:
+            from core.playlist_engine import load_gallery_config
+            cfg = load_gallery_config()
+            prohibited = set(cfg.get('prohibitedDownloadChannels', ['Living Art Moments']))
+            vids = [v for v in vids if v.get('channel') not in prohibited]
+        except Exception:
+            pass
 
     # Filter by tier if specified
     if tier_filter == "4k":
@@ -493,6 +502,7 @@ def main():
     parser.add_argument("--delay", type=float, default=3.0, help="Polite delay between extractions in seconds (default: 3.0)")
     parser.add_argument("--rebuild", action="store_true", help="Rebuild metadata and data.js from disk")
     parser.add_argument("--continuous", action="store_true", help="Continuously process all remaining batches until 100% complete")
+    parser.add_argument("--skip-copyright-restricted", action="store_true", help="Exclude titles/channels with copyright download restrictions")
 
     args = parser.parse_args()
 
@@ -514,11 +524,21 @@ def main():
 
     if args.continuous:
         print(f"\n🔄 Starting Continuous Wallpaper Extraction (Tier: {args.tier.upper()}, Batch Size: {args.batch_size}, Delay: {args.delay}s)...")
+        if args.skip_copyright_restricted:
+            print("🛡️ Copyright Filter: Skipping channels with download restrictions.")
         batch_num = 1
         while True:
             playlist, res_cache = load_playlist_and_resolutions()
             tracker = load_or_init_tracker(playlist, res_cache)
             vids = list(tracker["videos"].values())
+            if args.skip_copyright_restricted:
+                try:
+                    from core.playlist_engine import load_gallery_config
+                    cfg = load_gallery_config()
+                    prohibited = set(cfg.get('prohibitedDownloadChannels', ['Living Art Moments']))
+                    vids = [v for v in vids if v.get('channel') not in prohibited]
+                except Exception:
+                    pass
             if tier_filter == "4k":
                 candidates = [v for v in vids if v.get("is_4k")]
             elif tier_filter == "fhd":
@@ -533,11 +553,11 @@ def main():
                 print(f"\n🎉 100% COMPLETE! All {len(candidates)} {args.tier.upper()} titles have been successfully processed!")
                 break
             print(f"\n📦 === Running Batch #{batch_num} ({min(args.batch_size, len(queue))} of {len(queue)} remaining) ===")
-            run_batch(batch_size=args.batch_size, tier_filter=tier_filter, delay=args.delay)
+            run_batch(batch_size=args.batch_size, tier_filter=tier_filter, delay=args.delay, skip_copyright=args.skip_copyright_restricted)
             batch_num += 1
         return
 
-    run_batch(batch_size=args.batch_size, tier_filter=tier_filter, delay=args.delay)
+    run_batch(batch_size=args.batch_size, tier_filter=tier_filter, delay=args.delay, skip_copyright=args.skip_copyright_restricted)
 
 if __name__ == "__main__":
     main()

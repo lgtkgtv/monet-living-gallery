@@ -4,6 +4,40 @@ import csv
 from collections import defaultdict, Counter
 from core.playlist_engine import load_gallery_config
 
+CATALOG_ARTISTS = [
+    {"name": "Claude Monet", "query": "Monet", "icon": "🎨", "era": "French Impressionism"},
+    {"name": "Vincent van Gogh", "query": "Van Gogh", "icon": "🌻", "era": "Post-Impressionism"},
+    {"name": "Pierre-Auguste Renoir", "query": "Renoir", "icon": "🌸", "era": "French Impressionism"},
+    {"name": "Alfred Sisley", "query": "Sisley", "icon": "⛵", "era": "French Impressionism"},
+    {"name": "Eugène Boudin", "query": "Boudin", "icon": "🌊", "era": "Plein-Air Pre-Impressionism"},
+    {"name": "Isaac Levitan", "query": "Levitan", "icon": "🌲", "era": "Russian Mood Landscape"},
+    {"name": "Gustave Loiseau", "query": "Loiseau", "icon": "🍂", "era": "Post-Impressionism"},
+    {"name": "Edouard-Léon Cortès", "query": "Cortès", "altQuery": "Cortes", "icon": "🗼", "era": "Parisian Impressionism"},
+    {"name": "Victor Bykov", "query": "Bykov", "icon": "🏞️", "era": "Russian Nature Impressionism"},
+    {"name": "Carl Spitzweg", "query": "Spitzweg", "icon": "📜", "era": "Biedermeier / Romanticism"},
+    {"name": "Charles Leickert", "query": "Leickert", "icon": "⛸️", "era": "Dutch Romantic Landscape"},
+    {"name": "Johan Hendrik Weissenbruch", "query": "Weissenbruch", "icon": "🌾", "era": "Hague School"},
+    {"name": "Vladimir Orlovsky", "query": "Orlovsky", "icon": "🌾", "era": "Realist / Impressionist Landscape"},
+    {"name": "Antonio Parreiras", "query": "Parreiras", "icon": "🌴", "era": "Brazilian Impressionism"},
+    {"name": "Walter Moras", "query": "Moras", "icon": "❄️", "era": "German Impressionist Landscape"},
+    {"name": "Fritz Thaulow", "query": "Thaulow", "icon": "🌊", "era": "Norwegian Impressionism"},
+    {"name": "Ivan Shishkin", "query": "Shishkin", "icon": "🌲", "era": "Russian Landscape"},
+    {"name": "Peder Mørk Mønsted", "query": "Mønsted", "altQuery": "Monsted", "icon": "🏡", "era": "Danish Realism"}
+]
+
+CATALOG_THEMES = [
+    {"name": "Water Lilies & Garden Sanctuaries", "query": "Water Lilies", "icon": "🪷", "synonyms": ["water lilies", "water lily", "garden", "nympheas", "giverny", "pond"]},
+    {"name": "Winter & Snowbound Landscapes", "query": "Winter", "icon": "❄️", "synonyms": ["winter", "snow", "magpie", "ice", "frost"]},
+    {"name": "Parisian Life & Belle Époque", "query": "Paris", "icon": "🗼", "synonyms": ["paris", "belle époque", "boulevard", "cafe", "street", "opera", "ballet", "can can", "luncheon", "match girl"]},
+    {"name": "Venice & Riviera Escapes", "query": "Venice", "icon": "🎭", "synonyms": ["venice", "riviera", "canal", "san giorgio", "gondola"]},
+    {"name": "Train Nostalgia & Gare Saint-Lazare", "query": "Train", "icon": "🚂", "synonyms": ["train", "locomotive", "gare", "saint-lazare", "steam", "railway"]},
+    {"name": "Coastal Cliffs, Étretat & Ocean Waves", "query": "Étretat", "icon": "🌊", "synonyms": ["étretat", "coast", "ocean", "waves", "cliff", "shore", "sea", "beach", "ship", "ships", "marine"]},
+    {"name": "River Seine & Waterways", "query": "Seine", "icon": "⛵", "synonyms": ["seine", "river", "boat", "argenteuil", "grenouillère", "waterside", "cabin", "lake"]},
+    {"name": "Sunlit Countryside & Floral Meadows", "query": "Countryside", "icon": "🌻", "synonyms": ["country", "meadow", "floral", "blossom", "sunflower", "field", "poppy", "poppies", "haystacks", "hillside", "rose", "forest", "woodland", "trees"]},
+    {"name": "Visual Poems & Living Art Canvases", "query": "Visual Poems", "icon": "🖼️", "synonyms": ["visual poem", "visual poems", "living oil", "living art", "ai impressionism"]},
+    {"name": "Masterwork Retrospectives & Anthologies", "query": "Collection", "icon": "🏛️", "synonyms": ["collection of", "screensaver", "slideshow", "retrospective"]}
+]
+
 def main():
     config = load_gallery_config()
     prohibited_channels = set(config.get('prohibitedDownloadChannels', ['Living Art Moments']))
@@ -228,9 +262,48 @@ def main():
         p_title = e.get('playlistTitle') or (playlists_list[0]['title'] if playlists_list else 'sh_Monet inspired Visual Arts')
         source_pids = e.get('sourcePlaylistIds') or [p_id]
 
+        v_title = e.get('title') or ''
+        v_title_lower = v_title.lower()
+
+        # Detect artist
+        matched_artist = 'Claude Monet'
+        for a in CATALOG_ARTISTS:
+            q = a['query'].lower()
+            alt_q = a.get('altQuery', '').lower()
+            if q in v_title_lower or (alt_q and alt_q in v_title_lower):
+                matched_artist = a['name']
+                break
+        else:
+            if 'renoir' in channel_name.lower():
+                matched_artist = 'Pierre-Auguste Renoir'
+            elif 'van gogh' in channel_name.lower():
+                matched_artist = 'Vincent van Gogh'
+            elif 'monet' in channel_name.lower():
+                matched_artist = 'Claude Monet'
+            else:
+                matched_artist = 'Impressionist Masters'
+
+        # Detect theme
+        matched_theme = 'Visual Poems & Living Art Canvases'
+        for t in CATALOG_THEMES:
+            if any(syn in v_title_lower for syn in t['synonyms']):
+                matched_theme = t['name']
+                break
+
+        # Attach copyright and attribution directly to each extracted wallpaper snapshot
+        for wp in video_wallpapers:
+            wp['channel'] = channel_name
+            wp['channelUrl'] = e.get('channel_url') or f"https://www.youtube.com/results?search_query={channel_name}"
+            wp['copyrightStatus'] = 'Copyright Reserved (View-Only)' if is_prohibited else 'Public Domain Masterworks'
+            wp['downloadProhibited'] = is_prohibited
+            wp['artist'] = matched_artist
+            wp['theme'] = matched_theme
+            wp['videoTitle'] = v_title
+            wp['videoUrl'] = e.get('url')
+
         clean_videos.append({
             'id': vid,
-            'title': e.get('title'),
+            'title': v_title,
             'channel': channel_name,
             'channelUrl': e.get('channel_url') or '',
             'views': e.get('view_count') or 0,
@@ -250,11 +323,38 @@ def main():
             'playlistTitle': p_title,
             'sourcePlaylistIds': source_pids,
             'downloadProhibited': is_prohibited,
-            'copyrightStatus': 'Copyright Reserved (View-Only)' if is_prohibited else 'Public Domain Masterworks'
+            'copyrightStatus': 'Copyright Reserved (View-Only)' if is_prohibited else 'Public Domain Masterworks',
+            'artist': matched_artist,
+            'theme': matched_theme
         })
 
     # Sort ALL_VIDEOS by views descending by default
     clean_videos.sort(key=lambda x: x['views'], reverse=True)
+
+    # Calculate live catalog counts for artists & themes
+    computed_artists = []
+    for a in CATALOG_ARTISTS:
+        q = a['query'].lower()
+        alt_q = a.get('altQuery', '').lower()
+        matched = [v for v in clean_videos if q in v['title'].lower() or (alt_q and alt_q in v['title'].lower()) or v['artist'] == a['name']]
+        computed_artists.append({
+            **a,
+            'count': len(matched),
+            'count4K': sum(1 for v in matched if v['is4K']),
+            'countFHD': sum(1 for v in matched if not v['is4K']),
+            'wallpapersCount': sum(v['wallpaperCount'] for v in matched)
+        })
+
+    computed_themes = []
+    for t in CATALOG_THEMES:
+        matched = [v for v in clean_videos if any(syn in v['title'].lower() for syn in t['synonyms']) or v['theme'] == t['name']]
+        computed_themes.append({
+            **t,
+            'count': len(matched),
+            'count4K': sum(1 for v in matched if v['is4K']),
+            'countFHD': sum(1 for v in matched if not v['is4K']),
+            'wallpapersCount': sum(v['wallpaperCount'] for v in matched)
+        })
 
     first_playlist_url = playlists_list[0]['url'] if playlists_list else 'https://www.youtube.com/playlist?list=PLeqGkucOU6lA'
     first_playlist_title = playlists_list[0]['title'] if playlists_list else 'sh_Monet inspired Visual Arts'
@@ -276,6 +376,8 @@ const PLAYLIST_METADATA = {{
 const PLAYLISTS_CONFIG = {json.dumps(playlists_list, indent=2, ensure_ascii=False)};
 const CHANNEL_PROFILES = {json.dumps(channel_profiles, indent=2, ensure_ascii=False)};
 const CHANNEL_STATS = {json.dumps(channel_stats, indent=2, ensure_ascii=False)};
+const CATALOG_ARTISTS = {json.dumps(computed_artists, indent=2, ensure_ascii=False)};
+const CATALOG_THEMES = {json.dumps(computed_themes, indent=2, ensure_ascii=False)};
 const ALL_VIDEOS = {json.dumps(clean_videos, indent=2, ensure_ascii=False)};
 
 // Also attach to window for resilient cross-module and global access
@@ -284,6 +386,8 @@ if (typeof window !== 'undefined') {{
     window.PLAYLISTS_CONFIG = PLAYLISTS_CONFIG;
     window.CHANNEL_PROFILES = CHANNEL_PROFILES;
     window.CHANNEL_STATS = CHANNEL_STATS;
+    window.CATALOG_ARTISTS = CATALOG_ARTISTS;
+    window.CATALOG_THEMES = CATALOG_THEMES;
     window.ALL_VIDEOS = ALL_VIDEOS;
 }}
 """
@@ -307,6 +411,8 @@ if (typeof window !== 'undefined') {{
         'playlistsConfig': playlists_list,
         'channelProfiles': channel_profiles,
         'channelStats': channel_stats,
+        'artists': computed_artists,
+        'themes': computed_themes,
         'videos': clean_videos
     }
 
