@@ -6,11 +6,23 @@ const PLAYLIST_METADATA = {
     totalViews: 45472777,
     totalDurationSec: 309138,
     channelCount: 41,
-    totalWallpapers: 562,
+    totalWallpapers: 634,
     count4K: 47,
-    countFHD: 166
+    countFHD: 166,
+    playlistCount: 1
 };
 
+const PLAYLISTS_CONFIG = [
+  {
+    "id": "PLeqGkucOU6lA",
+    "url": "https://www.youtube.com/playlist?list=PLeqGkucOU6lA",
+    "title": "sh_Monet inspired Visual Arts",
+    "category": "Impressionism & Masters",
+    "curator": "sachin g",
+    "enabled": true,
+    "description": "Curated collection of Monet and Impressionist animated masterworks, retrospectives, and 4K living canvases."
+  }
+];
 const CHANNEL_PROFILES = {
   "LearnFromMasters": {
     "name": "LearnFromMasters",
@@ -10641,6 +10653,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 9,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -10717,6 +10734,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 3,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -11027,6 +11049,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 16,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -11337,6 +11364,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 16,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -11413,6 +11445,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 3,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -11651,6 +11688,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 12,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -11835,6 +11877,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 9,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -11983,6 +12030,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -12293,6 +12345,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 16,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -12441,6 +12498,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -12679,6 +12741,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 12,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -12755,6 +12822,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 3,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -13065,6 +13137,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 16,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -13141,6 +13218,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 3,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -13325,6 +13407,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 9,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -13401,6 +13488,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 3,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -13711,6 +13803,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 16,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -13895,6 +13992,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 9,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -14133,6 +14235,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 12,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -14281,6 +14388,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -14393,6 +14505,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 5,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -14703,6 +14820,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 16,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -14887,6 +15009,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 9,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -14908,6 +15035,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -15056,6 +15188,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -15204,6 +15341,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -15352,6 +15494,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -15662,6 +15809,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 16,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -15810,6 +15962,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -15958,6 +16115,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -15977,8 +16139,176 @@ const ALL_VIDEOS = [
     "resolution": "1920x1080",
     "qualityLabel": "1080p FHD",
     "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0,
+    "wallpapers": [
+      {
+        "id": "Xul5WT0ReYw_1",
+        "videoId": "Xul5WT0ReYw",
+        "videoTitle": "Guglielmo Ciardi: A collection of 54 paintings (HD)",
+        "channel": "LearnFromMasters",
+        "snapshotIndex": 1,
+        "timestampSec": 21,
+        "timestampFormatted": "00:21",
+        "path": "wallpapers/Xul5WT0ReYw/snapshot_1.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 158.4,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "Xul5WT0ReYw_2",
+        "videoId": "Xul5WT0ReYw",
+        "videoTitle": "Guglielmo Ciardi: A collection of 54 paintings (HD)",
+        "channel": "LearnFromMasters",
+        "snapshotIndex": 2,
+        "timestampSec": 60,
+        "timestampFormatted": "01:00",
+        "path": "wallpapers/Xul5WT0ReYw/snapshot_2.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 386.7,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "Xul5WT0ReYw_3",
+        "videoId": "Xul5WT0ReYw",
+        "videoTitle": "Guglielmo Ciardi: A collection of 54 paintings (HD)",
+        "channel": "LearnFromMasters",
+        "snapshotIndex": 3,
+        "timestampSec": 99,
+        "timestampFormatted": "01:39",
+        "path": "wallpapers/Xul5WT0ReYw/snapshot_3.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 319.7,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "Xul5WT0ReYw_4",
+        "videoId": "Xul5WT0ReYw",
+        "videoTitle": "Guglielmo Ciardi: A collection of 54 paintings (HD)",
+        "channel": "LearnFromMasters",
+        "snapshotIndex": 4,
+        "timestampSec": 138,
+        "timestampFormatted": "02:18",
+        "path": "wallpapers/Xul5WT0ReYw/snapshot_4.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 402.2,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "Xul5WT0ReYw_5",
+        "videoId": "Xul5WT0ReYw",
+        "videoTitle": "Guglielmo Ciardi: A collection of 54 paintings (HD)",
+        "channel": "LearnFromMasters",
+        "snapshotIndex": 5,
+        "timestampSec": 177,
+        "timestampFormatted": "02:57",
+        "path": "wallpapers/Xul5WT0ReYw/snapshot_5.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 368.8,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "Xul5WT0ReYw_6",
+        "videoId": "Xul5WT0ReYw",
+        "videoTitle": "Guglielmo Ciardi: A collection of 54 paintings (HD)",
+        "channel": "LearnFromMasters",
+        "snapshotIndex": 6,
+        "timestampSec": 216,
+        "timestampFormatted": "03:36",
+        "path": "wallpapers/Xul5WT0ReYw/snapshot_6.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 821.6,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "Xul5WT0ReYw_7",
+        "videoId": "Xul5WT0ReYw",
+        "videoTitle": "Guglielmo Ciardi: A collection of 54 paintings (HD)",
+        "channel": "LearnFromMasters",
+        "snapshotIndex": 7,
+        "timestampSec": 255,
+        "timestampFormatted": "04:15",
+        "path": "wallpapers/Xul5WT0ReYw/snapshot_7.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 428.7,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "Xul5WT0ReYw_8",
+        "videoId": "Xul5WT0ReYw",
+        "videoTitle": "Guglielmo Ciardi: A collection of 54 paintings (HD)",
+        "channel": "LearnFromMasters",
+        "snapshotIndex": 8,
+        "timestampSec": 294,
+        "timestampFormatted": "04:54",
+        "path": "wallpapers/Xul5WT0ReYw/snapshot_8.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 517.7,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "Xul5WT0ReYw_9",
+        "videoId": "Xul5WT0ReYw",
+        "videoTitle": "Guglielmo Ciardi: A collection of 54 paintings (HD)",
+        "channel": "LearnFromMasters",
+        "snapshotIndex": 9,
+        "timestampSec": 334,
+        "timestampFormatted": "05:34",
+        "path": "wallpapers/Xul5WT0ReYw/snapshot_9.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 156.5,
+        "tags": [],
+        "primaryPalette": []
+      }
+    ],
+    "wallpaperCount": 9,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -15998,8 +16328,230 @@ const ALL_VIDEOS = [
     "resolution": "1920x1080",
     "qualityLabel": "1080p FHD",
     "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0,
+    "wallpapers": [
+      {
+        "id": "8tt3XV_OIlc_1",
+        "videoId": "8tt3XV_OIlc",
+        "videoTitle": "Gustave Loiseau: A collection of 564 works (HD)",
+        "channel": "LearnFromMasters",
+        "snapshotIndex": 1,
+        "timestampSec": 136,
+        "timestampFormatted": "02:16",
+        "path": "wallpapers/8tt3XV_OIlc/snapshot_1.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 430.8,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "8tt3XV_OIlc_2",
+        "videoId": "8tt3XV_OIlc",
+        "videoTitle": "Gustave Loiseau: A collection of 564 works (HD)",
+        "channel": "LearnFromMasters",
+        "snapshotIndex": 2,
+        "timestampSec": 421,
+        "timestampFormatted": "07:01",
+        "path": "wallpapers/8tt3XV_OIlc/snapshot_2.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 488.1,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "8tt3XV_OIlc_3",
+        "videoId": "8tt3XV_OIlc",
+        "videoTitle": "Gustave Loiseau: A collection of 564 works (HD)",
+        "channel": "LearnFromMasters",
+        "snapshotIndex": 3,
+        "timestampSec": 706,
+        "timestampFormatted": "11:46",
+        "path": "wallpapers/8tt3XV_OIlc/snapshot_3.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 369.5,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "8tt3XV_OIlc_4",
+        "videoId": "8tt3XV_OIlc",
+        "videoTitle": "Gustave Loiseau: A collection of 564 works (HD)",
+        "channel": "LearnFromMasters",
+        "snapshotIndex": 4,
+        "timestampSec": 992,
+        "timestampFormatted": "16:32",
+        "path": "wallpapers/8tt3XV_OIlc/snapshot_4.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 237.7,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "8tt3XV_OIlc_5",
+        "videoId": "8tt3XV_OIlc",
+        "videoTitle": "Gustave Loiseau: A collection of 564 works (HD)",
+        "channel": "LearnFromMasters",
+        "snapshotIndex": 5,
+        "timestampSec": 1277,
+        "timestampFormatted": "21:17",
+        "path": "wallpapers/8tt3XV_OIlc/snapshot_5.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 334.9,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "8tt3XV_OIlc_6",
+        "videoId": "8tt3XV_OIlc",
+        "videoTitle": "Gustave Loiseau: A collection of 564 works (HD)",
+        "channel": "LearnFromMasters",
+        "snapshotIndex": 6,
+        "timestampSec": 1563,
+        "timestampFormatted": "26:03",
+        "path": "wallpapers/8tt3XV_OIlc/snapshot_6.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 442.8,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "8tt3XV_OIlc_7",
+        "videoId": "8tt3XV_OIlc",
+        "videoTitle": "Gustave Loiseau: A collection of 564 works (HD)",
+        "channel": "LearnFromMasters",
+        "snapshotIndex": 7,
+        "timestampSec": 1848,
+        "timestampFormatted": "30:48",
+        "path": "wallpapers/8tt3XV_OIlc/snapshot_7.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 301.5,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "8tt3XV_OIlc_8",
+        "videoId": "8tt3XV_OIlc",
+        "videoTitle": "Gustave Loiseau: A collection of 564 works (HD)",
+        "channel": "LearnFromMasters",
+        "snapshotIndex": 8,
+        "timestampSec": 2134,
+        "timestampFormatted": "35:34",
+        "path": "wallpapers/8tt3XV_OIlc/snapshot_8.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 406.0,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "8tt3XV_OIlc_9",
+        "videoId": "8tt3XV_OIlc",
+        "videoTitle": "Gustave Loiseau: A collection of 564 works (HD)",
+        "channel": "LearnFromMasters",
+        "snapshotIndex": 9,
+        "timestampSec": 2419,
+        "timestampFormatted": "40:19",
+        "path": "wallpapers/8tt3XV_OIlc/snapshot_9.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 170.2,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "8tt3XV_OIlc_10",
+        "videoId": "8tt3XV_OIlc",
+        "videoTitle": "Gustave Loiseau: A collection of 564 works (HD)",
+        "channel": "LearnFromMasters",
+        "snapshotIndex": 10,
+        "timestampSec": 2705,
+        "timestampFormatted": "45:05",
+        "path": "wallpapers/8tt3XV_OIlc/snapshot_10.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 445.4,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "8tt3XV_OIlc_11",
+        "videoId": "8tt3XV_OIlc",
+        "videoTitle": "Gustave Loiseau: A collection of 564 works (HD)",
+        "channel": "LearnFromMasters",
+        "snapshotIndex": 11,
+        "timestampSec": 2990,
+        "timestampFormatted": "49:50",
+        "path": "wallpapers/8tt3XV_OIlc/snapshot_11.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 373.1,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "8tt3XV_OIlc_12",
+        "videoId": "8tt3XV_OIlc",
+        "videoTitle": "Gustave Loiseau: A collection of 564 works (HD)",
+        "channel": "LearnFromMasters",
+        "snapshotIndex": 12,
+        "timestampSec": 3276,
+        "timestampFormatted": "54:36",
+        "path": "wallpapers/8tt3XV_OIlc/snapshot_12.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 351.1,
+        "tags": [],
+        "primaryPalette": []
+      }
+    ],
+    "wallpaperCount": 12,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -16220,6 +16772,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 11,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -16241,6 +16798,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -16260,8 +16822,140 @@ const ALL_VIDEOS = [
     "resolution": "1920x1080",
     "qualityLabel": "1080p FHD",
     "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0,
+    "wallpapers": [
+      {
+        "id": "V0Nz7TQcGF0_1",
+        "videoId": "V0Nz7TQcGF0",
+        "videoTitle": "Visual Poems | Rose Garden | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 1,
+        "timestampSec": 16,
+        "timestampFormatted": "00:16",
+        "path": "wallpapers/V0Nz7TQcGF0/snapshot_1.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 444.5,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "V0Nz7TQcGF0_2",
+        "videoId": "V0Nz7TQcGF0",
+        "videoTitle": "Visual Poems | Rose Garden | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 2,
+        "timestampSec": 45,
+        "timestampFormatted": "00:45",
+        "path": "wallpapers/V0Nz7TQcGF0/snapshot_2.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 498.7,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "V0Nz7TQcGF0_3",
+        "videoId": "V0Nz7TQcGF0",
+        "videoTitle": "Visual Poems | Rose Garden | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 3,
+        "timestampSec": 75,
+        "timestampFormatted": "01:15",
+        "path": "wallpapers/V0Nz7TQcGF0/snapshot_3.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 393.6,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "V0Nz7TQcGF0_4",
+        "videoId": "V0Nz7TQcGF0",
+        "videoTitle": "Visual Poems | Rose Garden | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 4,
+        "timestampSec": 105,
+        "timestampFormatted": "01:45",
+        "path": "wallpapers/V0Nz7TQcGF0/snapshot_4.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 440.6,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "V0Nz7TQcGF0_5",
+        "videoId": "V0Nz7TQcGF0",
+        "videoTitle": "Visual Poems | Rose Garden | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 5,
+        "timestampSec": 135,
+        "timestampFormatted": "02:15",
+        "path": "wallpapers/V0Nz7TQcGF0/snapshot_5.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 335.9,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "V0Nz7TQcGF0_6",
+        "videoId": "V0Nz7TQcGF0",
+        "videoTitle": "Visual Poems | Rose Garden | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 6,
+        "timestampSec": 165,
+        "timestampFormatted": "02:45",
+        "path": "wallpapers/V0Nz7TQcGF0/snapshot_6.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 395.0,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "V0Nz7TQcGF0_7",
+        "videoId": "V0Nz7TQcGF0",
+        "videoTitle": "Visual Poems | Rose Garden | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 7,
+        "timestampSec": 195,
+        "timestampFormatted": "03:15",
+        "path": "wallpapers/V0Nz7TQcGF0/snapshot_7.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 429.5,
+        "tags": [],
+        "primaryPalette": []
+      }
+    ],
+    "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -16374,6 +17068,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 5,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -16393,8 +17092,176 @@ const ALL_VIDEOS = [
     "resolution": "1920x1080",
     "qualityLabel": "1080p FHD",
     "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0,
+    "wallpapers": [
+      {
+        "id": "ejXEYGBo2E0_1",
+        "videoId": "ejXEYGBo2E0",
+        "videoTitle": "A Rainy Day in the English Countryside | Victorian Visual Poem with Classical Music",
+        "channel": "Visual Poems in Paintings",
+        "snapshotIndex": 1,
+        "timestampSec": 30,
+        "timestampFormatted": "00:30",
+        "path": "wallpapers/ejXEYGBo2E0/snapshot_1.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 268.1,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "ejXEYGBo2E0_2",
+        "videoId": "ejXEYGBo2E0",
+        "videoTitle": "A Rainy Day in the English Countryside | Victorian Visual Poem with Classical Music",
+        "channel": "Visual Poems in Paintings",
+        "snapshotIndex": 2,
+        "timestampSec": 85,
+        "timestampFormatted": "01:25",
+        "path": "wallpapers/ejXEYGBo2E0/snapshot_2.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 269.9,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "ejXEYGBo2E0_3",
+        "videoId": "ejXEYGBo2E0",
+        "videoTitle": "A Rainy Day in the English Countryside | Victorian Visual Poem with Classical Music",
+        "channel": "Visual Poems in Paintings",
+        "snapshotIndex": 3,
+        "timestampSec": 141,
+        "timestampFormatted": "02:21",
+        "path": "wallpapers/ejXEYGBo2E0/snapshot_3.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 252.0,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "ejXEYGBo2E0_4",
+        "videoId": "ejXEYGBo2E0",
+        "videoTitle": "A Rainy Day in the English Countryside | Victorian Visual Poem with Classical Music",
+        "channel": "Visual Poems in Paintings",
+        "snapshotIndex": 4,
+        "timestampSec": 196,
+        "timestampFormatted": "03:16",
+        "path": "wallpapers/ejXEYGBo2E0/snapshot_4.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 270.3,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "ejXEYGBo2E0_5",
+        "videoId": "ejXEYGBo2E0",
+        "videoTitle": "A Rainy Day in the English Countryside | Victorian Visual Poem with Classical Music",
+        "channel": "Visual Poems in Paintings",
+        "snapshotIndex": 5,
+        "timestampSec": 252,
+        "timestampFormatted": "04:12",
+        "path": "wallpapers/ejXEYGBo2E0/snapshot_5.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 303.1,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "ejXEYGBo2E0_6",
+        "videoId": "ejXEYGBo2E0",
+        "videoTitle": "A Rainy Day in the English Countryside | Victorian Visual Poem with Classical Music",
+        "channel": "Visual Poems in Paintings",
+        "snapshotIndex": 6,
+        "timestampSec": 308,
+        "timestampFormatted": "05:08",
+        "path": "wallpapers/ejXEYGBo2E0/snapshot_6.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 223.1,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "ejXEYGBo2E0_7",
+        "videoId": "ejXEYGBo2E0",
+        "videoTitle": "A Rainy Day in the English Countryside | Victorian Visual Poem with Classical Music",
+        "channel": "Visual Poems in Paintings",
+        "snapshotIndex": 7,
+        "timestampSec": 363,
+        "timestampFormatted": "06:03",
+        "path": "wallpapers/ejXEYGBo2E0/snapshot_7.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 326.1,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "ejXEYGBo2E0_8",
+        "videoId": "ejXEYGBo2E0",
+        "videoTitle": "A Rainy Day in the English Countryside | Victorian Visual Poem with Classical Music",
+        "channel": "Visual Poems in Paintings",
+        "snapshotIndex": 8,
+        "timestampSec": 419,
+        "timestampFormatted": "06:59",
+        "path": "wallpapers/ejXEYGBo2E0/snapshot_8.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 309.3,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "ejXEYGBo2E0_9",
+        "videoId": "ejXEYGBo2E0",
+        "videoTitle": "A Rainy Day in the English Countryside | Victorian Visual Poem with Classical Music",
+        "channel": "Visual Poems in Paintings",
+        "snapshotIndex": 9,
+        "timestampSec": 475,
+        "timestampFormatted": "07:55",
+        "path": "wallpapers/ejXEYGBo2E0/snapshot_9.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 300.7,
+        "tags": [],
+        "primaryPalette": []
+      }
+    ],
+    "wallpaperCount": 9,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -16416,6 +17283,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -16435,8 +17307,140 @@ const ALL_VIDEOS = [
     "resolution": "1920x1080",
     "qualityLabel": "1080p FHD",
     "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0,
+    "wallpapers": [
+      {
+        "id": "qinshTPWa1o_1",
+        "videoId": "qinshTPWa1o",
+        "videoTitle": "Visual Poems | Claude Monet | Beautiful Time on the Country Road",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 1,
+        "timestampSec": 18,
+        "timestampFormatted": "00:18",
+        "path": "wallpapers/qinshTPWa1o/snapshot_1.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 314.5,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "qinshTPWa1o_2",
+        "videoId": "qinshTPWa1o",
+        "videoTitle": "Visual Poems | Claude Monet | Beautiful Time on the Country Road",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 2,
+        "timestampSec": 50,
+        "timestampFormatted": "00:50",
+        "path": "wallpapers/qinshTPWa1o/snapshot_2.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 261.0,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "qinshTPWa1o_3",
+        "videoId": "qinshTPWa1o",
+        "videoTitle": "Visual Poems | Claude Monet | Beautiful Time on the Country Road",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 3,
+        "timestampSec": 82,
+        "timestampFormatted": "01:22",
+        "path": "wallpapers/qinshTPWa1o/snapshot_3.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 434.3,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "qinshTPWa1o_4",
+        "videoId": "qinshTPWa1o",
+        "videoTitle": "Visual Poems | Claude Monet | Beautiful Time on the Country Road",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 4,
+        "timestampSec": 114,
+        "timestampFormatted": "01:54",
+        "path": "wallpapers/qinshTPWa1o/snapshot_4.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 211.3,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "qinshTPWa1o_5",
+        "videoId": "qinshTPWa1o",
+        "videoTitle": "Visual Poems | Claude Monet | Beautiful Time on the Country Road",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 5,
+        "timestampSec": 146,
+        "timestampFormatted": "02:26",
+        "path": "wallpapers/qinshTPWa1o/snapshot_5.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 251.0,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "qinshTPWa1o_6",
+        "videoId": "qinshTPWa1o",
+        "videoTitle": "Visual Poems | Claude Monet | Beautiful Time on the Country Road",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 6,
+        "timestampSec": 178,
+        "timestampFormatted": "02:58",
+        "path": "wallpapers/qinshTPWa1o/snapshot_6.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 471.4,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "qinshTPWa1o_7",
+        "videoId": "qinshTPWa1o",
+        "videoTitle": "Visual Poems | Claude Monet | Beautiful Time on the Country Road",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 7,
+        "timestampSec": 210,
+        "timestampFormatted": "03:30",
+        "path": "wallpapers/qinshTPWa1o/snapshot_7.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 393.1,
+        "tags": [],
+        "primaryPalette": []
+      }
+    ],
+    "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -16456,8 +17460,140 @@ const ALL_VIDEOS = [
     "resolution": "1920x1080",
     "qualityLabel": "1080p FHD",
     "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0,
+    "wallpapers": [
+      {
+        "id": "2fqxjaNY-60_1",
+        "videoId": "2fqxjaNY-60",
+        "videoTitle": "Visual Poems | The Quiet Language of Waves | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 1,
+        "timestampSec": 16,
+        "timestampFormatted": "00:16",
+        "path": "wallpapers/2fqxjaNY-60/snapshot_1.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 229.5,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "2fqxjaNY-60_2",
+        "videoId": "2fqxjaNY-60",
+        "videoTitle": "Visual Poems | The Quiet Language of Waves | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 2,
+        "timestampSec": 44,
+        "timestampFormatted": "00:44",
+        "path": "wallpapers/2fqxjaNY-60/snapshot_2.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 195.5,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "2fqxjaNY-60_3",
+        "videoId": "2fqxjaNY-60",
+        "videoTitle": "Visual Poems | The Quiet Language of Waves | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 3,
+        "timestampSec": 72,
+        "timestampFormatted": "01:12",
+        "path": "wallpapers/2fqxjaNY-60/snapshot_3.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 330.1,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "2fqxjaNY-60_4",
+        "videoId": "2fqxjaNY-60",
+        "videoTitle": "Visual Poems | The Quiet Language of Waves | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 4,
+        "timestampSec": 100,
+        "timestampFormatted": "01:40",
+        "path": "wallpapers/2fqxjaNY-60/snapshot_4.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 448.6,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "2fqxjaNY-60_5",
+        "videoId": "2fqxjaNY-60",
+        "videoTitle": "Visual Poems | The Quiet Language of Waves | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 5,
+        "timestampSec": 128,
+        "timestampFormatted": "02:08",
+        "path": "wallpapers/2fqxjaNY-60/snapshot_5.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 440.1,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "2fqxjaNY-60_6",
+        "videoId": "2fqxjaNY-60",
+        "videoTitle": "Visual Poems | The Quiet Language of Waves | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 6,
+        "timestampSec": 156,
+        "timestampFormatted": "02:36",
+        "path": "wallpapers/2fqxjaNY-60/snapshot_6.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 384.0,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "2fqxjaNY-60_7",
+        "videoId": "2fqxjaNY-60",
+        "videoTitle": "Visual Poems | The Quiet Language of Waves | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 7,
+        "timestampSec": 184,
+        "timestampFormatted": "03:04",
+        "path": "wallpapers/2fqxjaNY-60/snapshot_7.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 382.7,
+        "tags": [],
+        "primaryPalette": []
+      }
+    ],
+    "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -16606,6 +17742,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -16625,8 +17766,140 @@ const ALL_VIDEOS = [
     "resolution": "1920x1080",
     "qualityLabel": "1080p FHD",
     "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0,
+    "wallpapers": [
+      {
+        "id": "3XPsYH7DwCg_1",
+        "videoId": "3XPsYH7DwCg",
+        "videoTitle": "Visual Poems | Waterside Cabin, Blooming Shores | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 1,
+        "timestampSec": 18,
+        "timestampFormatted": "00:18",
+        "path": "wallpapers/3XPsYH7DwCg/snapshot_1.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 398.5,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "3XPsYH7DwCg_2",
+        "videoId": "3XPsYH7DwCg",
+        "videoTitle": "Visual Poems | Waterside Cabin, Blooming Shores | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 2,
+        "timestampSec": 51,
+        "timestampFormatted": "00:51",
+        "path": "wallpapers/3XPsYH7DwCg/snapshot_2.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 482.2,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "3XPsYH7DwCg_3",
+        "videoId": "3XPsYH7DwCg",
+        "videoTitle": "Visual Poems | Waterside Cabin, Blooming Shores | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 3,
+        "timestampSec": 84,
+        "timestampFormatted": "01:24",
+        "path": "wallpapers/3XPsYH7DwCg/snapshot_3.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 211.3,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "3XPsYH7DwCg_4",
+        "videoId": "3XPsYH7DwCg",
+        "videoTitle": "Visual Poems | Waterside Cabin, Blooming Shores | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 4,
+        "timestampSec": 117,
+        "timestampFormatted": "01:57",
+        "path": "wallpapers/3XPsYH7DwCg/snapshot_4.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 375.5,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "3XPsYH7DwCg_5",
+        "videoId": "3XPsYH7DwCg",
+        "videoTitle": "Visual Poems | Waterside Cabin, Blooming Shores | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 5,
+        "timestampSec": 150,
+        "timestampFormatted": "02:30",
+        "path": "wallpapers/3XPsYH7DwCg/snapshot_5.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 222.5,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "3XPsYH7DwCg_6",
+        "videoId": "3XPsYH7DwCg",
+        "videoTitle": "Visual Poems | Waterside Cabin, Blooming Shores | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 6,
+        "timestampSec": 183,
+        "timestampFormatted": "03:03",
+        "path": "wallpapers/3XPsYH7DwCg/snapshot_6.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 214.0,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "3XPsYH7DwCg_7",
+        "videoId": "3XPsYH7DwCg",
+        "videoTitle": "Visual Poems | Waterside Cabin, Blooming Shores | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 7,
+        "timestampSec": 216,
+        "timestampFormatted": "03:36",
+        "path": "wallpapers/3XPsYH7DwCg/snapshot_7.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 368.7,
+        "tags": [],
+        "primaryPalette": []
+      }
+    ],
+    "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -16646,8 +17919,140 @@ const ALL_VIDEOS = [
     "resolution": "1906x1080",
     "qualityLabel": "1080p FHD",
     "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0,
+    "wallpapers": [
+      {
+        "id": "EWTdrp3vvKU_1",
+        "videoId": "EWTdrp3vvKU",
+        "videoTitle": "Visual Poems | Claude Monet  | The Magpie [AI Music Video]",
+        "channel": "Painters Dream",
+        "snapshotIndex": 1,
+        "timestampSec": 18,
+        "timestampFormatted": "00:18",
+        "path": "wallpapers/EWTdrp3vvKU/snapshot_1.jpg",
+        "width": 1906,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 352.3,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "EWTdrp3vvKU_2",
+        "videoId": "EWTdrp3vvKU",
+        "videoTitle": "Visual Poems | Claude Monet  | The Magpie [AI Music Video]",
+        "channel": "Painters Dream",
+        "snapshotIndex": 2,
+        "timestampSec": 50,
+        "timestampFormatted": "00:50",
+        "path": "wallpapers/EWTdrp3vvKU/snapshot_2.jpg",
+        "width": 1906,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 461.1,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "EWTdrp3vvKU_3",
+        "videoId": "EWTdrp3vvKU",
+        "videoTitle": "Visual Poems | Claude Monet  | The Magpie [AI Music Video]",
+        "channel": "Painters Dream",
+        "snapshotIndex": 3,
+        "timestampSec": 83,
+        "timestampFormatted": "01:23",
+        "path": "wallpapers/EWTdrp3vvKU/snapshot_3.jpg",
+        "width": 1906,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 549.0,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "EWTdrp3vvKU_4",
+        "videoId": "EWTdrp3vvKU",
+        "videoTitle": "Visual Poems | Claude Monet  | The Magpie [AI Music Video]",
+        "channel": "Painters Dream",
+        "snapshotIndex": 4,
+        "timestampSec": 115,
+        "timestampFormatted": "01:55",
+        "path": "wallpapers/EWTdrp3vvKU/snapshot_4.jpg",
+        "width": 1906,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 433.2,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "EWTdrp3vvKU_5",
+        "videoId": "EWTdrp3vvKU",
+        "videoTitle": "Visual Poems | Claude Monet  | The Magpie [AI Music Video]",
+        "channel": "Painters Dream",
+        "snapshotIndex": 5,
+        "timestampSec": 148,
+        "timestampFormatted": "02:28",
+        "path": "wallpapers/EWTdrp3vvKU/snapshot_5.jpg",
+        "width": 1906,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 345.7,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "EWTdrp3vvKU_6",
+        "videoId": "EWTdrp3vvKU",
+        "videoTitle": "Visual Poems | Claude Monet  | The Magpie [AI Music Video]",
+        "channel": "Painters Dream",
+        "snapshotIndex": 6,
+        "timestampSec": 180,
+        "timestampFormatted": "03:00",
+        "path": "wallpapers/EWTdrp3vvKU/snapshot_6.jpg",
+        "width": 1906,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 356.1,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "EWTdrp3vvKU_7",
+        "videoId": "EWTdrp3vvKU",
+        "videoTitle": "Visual Poems | Claude Monet  | The Magpie [AI Music Video]",
+        "channel": "Painters Dream",
+        "snapshotIndex": 7,
+        "timestampSec": 213,
+        "timestampFormatted": "03:33",
+        "path": "wallpapers/EWTdrp3vvKU/snapshot_7.jpg",
+        "width": 1906,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 267.2,
+        "tags": [],
+        "primaryPalette": []
+      }
+    ],
+    "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -16667,8 +18072,140 @@ const ALL_VIDEOS = [
     "resolution": "1920x1080",
     "qualityLabel": "1080p FHD",
     "is4K": false,
-    "wallpapers": [],
-    "wallpaperCount": 0,
+    "wallpapers": [
+      {
+        "id": "bgwokHmFTLQ_1",
+        "videoId": "bgwokHmFTLQ",
+        "videoTitle": "Visual Poems | Whispers of Blooms and Water | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 1,
+        "timestampSec": 17,
+        "timestampFormatted": "00:17",
+        "path": "wallpapers/bgwokHmFTLQ/snapshot_1.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 503.7,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "bgwokHmFTLQ_2",
+        "videoId": "bgwokHmFTLQ",
+        "videoTitle": "Visual Poems | Whispers of Blooms and Water | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 2,
+        "timestampSec": 47,
+        "timestampFormatted": "00:47",
+        "path": "wallpapers/bgwokHmFTLQ/snapshot_2.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 482.0,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "bgwokHmFTLQ_3",
+        "videoId": "bgwokHmFTLQ",
+        "videoTitle": "Visual Poems | Whispers of Blooms and Water | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 3,
+        "timestampSec": 78,
+        "timestampFormatted": "01:18",
+        "path": "wallpapers/bgwokHmFTLQ/snapshot_3.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 513.8,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "bgwokHmFTLQ_4",
+        "videoId": "bgwokHmFTLQ",
+        "videoTitle": "Visual Poems | Whispers of Blooms and Water | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 4,
+        "timestampSec": 108,
+        "timestampFormatted": "01:48",
+        "path": "wallpapers/bgwokHmFTLQ/snapshot_4.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 254.5,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "bgwokHmFTLQ_5",
+        "videoId": "bgwokHmFTLQ",
+        "videoTitle": "Visual Poems | Whispers of Blooms and Water | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 5,
+        "timestampSec": 139,
+        "timestampFormatted": "02:19",
+        "path": "wallpapers/bgwokHmFTLQ/snapshot_5.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 349.3,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "bgwokHmFTLQ_6",
+        "videoId": "bgwokHmFTLQ",
+        "videoTitle": "Visual Poems | Whispers of Blooms and Water | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 6,
+        "timestampSec": 169,
+        "timestampFormatted": "02:49",
+        "path": "wallpapers/bgwokHmFTLQ/snapshot_6.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 482.2,
+        "tags": [],
+        "primaryPalette": []
+      },
+      {
+        "id": "bgwokHmFTLQ_7",
+        "videoId": "bgwokHmFTLQ",
+        "videoTitle": "Visual Poems | Whispers of Blooms and Water | Living Oil Paintings",
+        "channel": "Muse Visual Art",
+        "snapshotIndex": 7,
+        "timestampSec": 200,
+        "timestampFormatted": "03:20",
+        "path": "wallpapers/bgwokHmFTLQ/snapshot_7.jpg",
+        "width": 1920,
+        "height": 1080,
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "formFactor": "desktop",
+        "fileSizeKB": 410.5,
+        "tags": [],
+        "primaryPalette": []
+      }
+    ],
+    "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -16781,6 +18318,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 5,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -16802,6 +18344,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -16823,6 +18370,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -16844,6 +18396,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -16865,6 +18422,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -16886,6 +18448,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -16907,6 +18474,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -17055,6 +18627,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -17076,6 +18653,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -17097,6 +18679,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -17118,6 +18705,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -17139,6 +18731,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -17160,6 +18757,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -17181,6 +18783,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -17202,6 +18809,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -17223,6 +18835,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -17335,6 +18952,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 5,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -17356,6 +18978,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -17377,6 +19004,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -17597,6 +19229,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 11,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -17618,6 +19255,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -17639,6 +19281,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -17660,6 +19307,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -17808,6 +19460,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -17829,6 +19486,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -17850,6 +19512,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -17871,6 +19538,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -17892,6 +19564,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -17913,6 +19590,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18133,6 +19815,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 11,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18154,6 +19841,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18175,6 +19867,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18196,6 +19893,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18217,6 +19919,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18238,6 +19945,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18259,6 +19971,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18280,6 +19997,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18301,6 +20023,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18322,6 +20049,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18343,6 +20075,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18491,6 +20228,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18512,6 +20254,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18533,6 +20280,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18554,6 +20306,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18575,6 +20332,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18596,6 +20358,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18617,6 +20384,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18638,6 +20410,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18659,6 +20436,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18680,6 +20462,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18701,6 +20488,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18722,6 +20514,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18743,6 +20540,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18764,6 +20566,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18785,6 +20592,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18806,6 +20618,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18827,6 +20644,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18848,6 +20670,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18869,6 +20696,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18890,6 +20722,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -18911,6 +20748,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -19059,6 +20901,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -19080,6 +20927,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -19101,6 +20953,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -19122,6 +20979,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -19306,6 +21168,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 9,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -19490,6 +21357,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 9,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -19674,6 +21546,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 9,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -19695,6 +21572,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -19716,6 +21598,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -19737,6 +21624,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -19957,6 +21849,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 11,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -19978,6 +21875,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -19999,6 +21901,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20183,6 +22090,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 9,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20204,6 +22116,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20225,6 +22142,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20246,6 +22168,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20267,6 +22194,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20288,6 +22220,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20309,6 +22246,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20330,6 +22272,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20351,6 +22298,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20372,6 +22324,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20484,6 +22441,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 5,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20505,6 +22467,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20526,6 +22493,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20547,6 +22519,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20568,6 +22545,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20589,6 +22571,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20610,6 +22597,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20631,6 +22623,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20652,6 +22649,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20673,6 +22675,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20694,6 +22701,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20715,6 +22727,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20736,6 +22753,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20757,6 +22779,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20778,6 +22805,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20799,6 +22831,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20820,6 +22857,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20841,6 +22883,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20862,6 +22909,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20883,6 +22935,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20904,6 +22961,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20925,6 +22987,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -20946,6 +23013,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -21094,6 +23166,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -21278,6 +23355,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 9,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -21299,6 +23381,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -21411,6 +23498,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 5,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -21432,6 +23524,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -21453,6 +23550,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -21474,6 +23576,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -21495,6 +23602,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -21679,6 +23791,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 9,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -21700,6 +23817,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -21721,6 +23843,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -21742,6 +23869,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -21763,6 +23895,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -21784,6 +23921,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -21805,6 +23947,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -21989,6 +24136,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 9,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -22010,6 +24162,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -22031,6 +24188,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -22215,6 +24377,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 9,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -22236,6 +24403,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -22257,6 +24429,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -22405,6 +24582,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -22517,6 +24699,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 5,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -22538,6 +24725,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -22559,6 +24751,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -22671,6 +24868,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 5,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -22692,6 +24894,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -22713,6 +24920,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -22734,6 +24946,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -22755,6 +24972,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -22776,6 +24998,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -22888,6 +25115,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 5,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -22909,6 +25141,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -22930,6 +25167,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -23078,6 +25320,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -23099,6 +25346,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -23120,6 +25372,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -23141,6 +25398,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -23325,6 +25587,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 9,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -23346,6 +25613,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -23530,6 +25802,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 9,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -23714,6 +25991,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 9,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -23735,6 +26017,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -23973,6 +26260,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 12,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -23994,6 +26286,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -24142,6 +26439,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -24163,6 +26465,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -24184,6 +26491,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -24332,6 +26644,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -24353,6 +26670,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -24374,6 +26696,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -24522,6 +26849,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -24543,6 +26875,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -24691,6 +27028,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -24712,6 +27054,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -24733,6 +27080,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -24754,6 +27106,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -24775,6 +27132,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -24796,6 +27158,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -24817,6 +27184,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -24838,6 +27210,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -24986,6 +27363,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -25007,6 +27389,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -25028,6 +27415,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -25049,6 +27441,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -25197,6 +27594,11 @@ const ALL_VIDEOS = [
       }
     ],
     "wallpaperCount": 7,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -25218,6 +27620,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -25239,6 +27646,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks"
   },
@@ -25260,6 +27672,11 @@ const ALL_VIDEOS = [
     "is4K": false,
     "wallpapers": [],
     "wallpaperCount": 0,
+    "playlistId": "PLeqGkucOU6lA",
+    "playlistTitle": "sh_Monet inspired Visual Arts",
+    "sourcePlaylistIds": [
+      "PLeqGkucOU6lA"
+    ],
     "downloadProhibited": true,
     "copyrightStatus": "Copyright Reserved (View-Only)"
   }
@@ -25268,6 +27685,7 @@ const ALL_VIDEOS = [
 // Also attach to window for resilient cross-module and global access
 if (typeof window !== 'undefined') {
     window.PLAYLIST_METADATA = PLAYLIST_METADATA;
+    window.PLAYLISTS_CONFIG = PLAYLISTS_CONFIG;
     window.CHANNEL_PROFILES = CHANNEL_PROFILES;
     window.CHANNEL_STATS = CHANNEL_STATS;
     window.ALL_VIDEOS = ALL_VIDEOS;

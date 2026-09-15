@@ -284,6 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadFavorites();
     initHeroStats();
     renderChannelCards();
+    populatePlaylistFilter();
     populateChannelFilter();
     populateResolutionFilter();
     initSearchSuggestions();
@@ -477,6 +478,23 @@ function renderChannelCards() {
     if (badgeSpan) {
         badgeSpan.textContent = `${channelsToRender.length} Featured Curators · ${CHANNEL_STATS.length} Source Channels`;
     }
+}
+
+function populatePlaylistFilter() {
+    const select = document.getElementById('playlistSelect');
+    if (!select) return;
+    if (typeof PLAYLISTS_CONFIG === 'undefined' || !Array.isArray(PLAYLISTS_CONFIG) || PLAYLISTS_CONFIG.length <= 1) {
+        select.style.display = 'none';
+        return;
+    }
+    select.style.display = 'inline-block';
+    select.innerHTML = `<option value="ALL">📚 All Playlists (${PLAYLISTS_CONFIG.length})</option>`;
+    PLAYLISTS_CONFIG.forEach(p => {
+        const opt = document.createElement('option');
+        opt.value = p.id;
+        opt.textContent = `📂 ${p.title}`;
+        select.appendChild(opt);
+    });
 }
 
 function populateChannelFilter() {
@@ -1086,6 +1104,7 @@ function applyFilters() {
     const channelEl = document.getElementById('channelSelect');
     const resEl = document.getElementById('resSelect');
     const sortEl = document.getElementById('sortSelect');
+    const playlistEl = document.getElementById('playlistSelect');
     const emptyState = document.getElementById('favoritesEmptyState');
     const gridVid = document.getElementById('videosGrid');
     const gridWp = document.getElementById('wallpapersGrid');
@@ -1095,6 +1114,7 @@ function applyFilters() {
     const selectedChannel = channelEl ? channelEl.value : 'ALL';
     const selectedRes = resEl ? resEl.value : '1080P_PLUS';
     const sortBy = sortEl ? sortEl.value : 'views_desc';
+    const selectedPlaylist = (playlistEl && playlistEl.value) ? playlistEl.value : 'ALL';
 
     updateActiveSearchChips(rawQuery);
 
@@ -1117,6 +1137,9 @@ function applyFilters() {
             if (!isFavoriteVideo(v.id)) return false;
             const matchesQuery = matchesSearch(v.title, v.channel, rawQuery);
             const matchesChannel = (selectedChannel === 'ALL') || (v.channel === selectedChannel);
+            const matchesPlaylist = (selectedPlaylist === 'ALL') || 
+                (v.playlistId === selectedPlaylist) || 
+                (Array.isArray(v.sourcePlaylistIds) && v.sourcePlaylistIds.includes(selectedPlaylist));
 
             let matchesRes = true;
             if (selectedRes === '1080P_PLUS' || selectedRes === '1080P_OR_BETTER' || selectedRes === 'FHD_PLUS' || selectedRes === '1080P') {
@@ -1129,7 +1152,7 @@ function applyFilters() {
                 matchesRes = (!v.is4K && v.height < 1080);
             }
 
-            return matchesQuery && matchesChannel && matchesRes;
+            return matchesQuery && matchesChannel && matchesRes && matchesPlaylist;
         });
 
         if (sortBy === 'views_desc') filtered.sort((a, b) => b.views - a.views);
@@ -1182,6 +1205,9 @@ function applyFilters() {
         let filtered = ALL_VIDEOS.filter(v => {
             const matchesQuery = matchesSearch(v.title, v.channel, rawQuery);
             const matchesChannel = (selectedChannel === 'ALL') || (v.channel === selectedChannel);
+            const matchesPlaylist = (selectedPlaylist === 'ALL') || 
+                (v.playlistId === selectedPlaylist) || 
+                (Array.isArray(v.sourcePlaylistIds) && v.sourcePlaylistIds.includes(selectedPlaylist));
 
             let matchesRes = true;
             if (selectedRes === '1080P_PLUS' || selectedRes === '1080P_OR_BETTER' || selectedRes === 'FHD_PLUS' || selectedRes === '1080P') {
@@ -1194,7 +1220,7 @@ function applyFilters() {
                 matchesRes = (!v.is4K && v.height < 1080);
             }
 
-            return matchesQuery && matchesChannel && matchesRes;
+            return matchesQuery && matchesChannel && matchesRes && matchesPlaylist;
         });
 
         if (sortBy === 'views_desc') filtered.sort((a, b) => b.views - a.views);
@@ -1213,6 +1239,9 @@ function applyFilters() {
         ALL_VIDEOS.forEach(v => {
             const matchesQuery = matchesSearch(v.title, v.channel, rawQuery);
             const matchesChannel = (selectedChannel === 'ALL') || (v.channel === selectedChannel);
+            const matchesPlaylist = (selectedPlaylist === 'ALL') || 
+                (v.playlistId === selectedPlaylist) || 
+                (Array.isArray(v.sourcePlaylistIds) && v.sourcePlaylistIds.includes(selectedPlaylist));
 
             let matchesRes = true;
             if (selectedRes === '1080P_PLUS' || selectedRes === '1080P_OR_BETTER' || selectedRes === 'FHD_PLUS' || selectedRes === '1080P') {
@@ -1225,7 +1254,7 @@ function applyFilters() {
                 matchesRes = (!v.is4K && v.height < 1080);
             }
 
-            if (matchesQuery && matchesChannel && matchesRes && v.wallpapers) {
+            if (matchesQuery && matchesChannel && matchesRes && matchesPlaylist && v.wallpapers) {
                 v.wallpapers.forEach(wp => {
                     filteredWp.push({
                         ...wp,
@@ -1333,6 +1362,8 @@ function selectPathway(pathwayKey) {
 function resetFilters() {
     const searchInput = document.getElementById('searchInput');
     if (searchInput) searchInput.value = '';
+    const playlistSelect = document.getElementById('playlistSelect');
+    if (playlistSelect) playlistSelect.value = 'ALL';
     const channelSelect = document.getElementById('channelSelect');
     if (channelSelect) channelSelect.value = 'ALL';
     const resSelect = document.getElementById('resSelect');
@@ -1344,6 +1375,8 @@ function resetFilters() {
 }
 
 function resetFavoritesFilters() {
+    const playlistSelect = document.getElementById('playlistSelect');
+    if (playlistSelect) playlistSelect.value = 'ALL';
     const channelSelect = document.getElementById('channelSelect');
     if (channelSelect) channelSelect.value = 'ALL';
     const resSelect = document.getElementById('resSelect');

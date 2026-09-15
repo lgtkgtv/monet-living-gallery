@@ -2,8 +2,14 @@ import json
 import os
 import csv
 from collections import defaultdict, Counter
+from core.playlist_engine import load_gallery_config
 
 def main():
+    config = load_gallery_config()
+    prohibited_channels = set(config.get('prohibitedDownloadChannels', ['Living Art Moments']))
+    app_meta = config.get('app', {})
+    playlists_list = config.get('playlists', [])
+
     with open('playlist_raw.json', 'r', encoding='utf-8') as f:
         entries = json.load(f)
 
@@ -217,6 +223,11 @@ def main():
         if channel_name == 'Cupid Studio' and video_wallpapers:
             thumb_img = video_wallpapers[0]['path']
 
+        is_prohibited = channel_name in prohibited_channels
+        p_id = e.get('playlistId') or (playlists_list[0]['id'] if playlists_list else 'PLeqGkucOU6lA')
+        p_title = e.get('playlistTitle') or (playlists_list[0]['title'] if playlists_list else 'sh_Monet inspired Visual Arts')
+        source_pids = e.get('sourcePlaylistIds') or [p_id]
+
         clean_videos.append({
             'id': vid,
             'title': e.get('title'),
@@ -235,26 +246,34 @@ def main():
             'is4K': r_info.get('is4K', False),
             'wallpapers': video_wallpapers,
             'wallpaperCount': len(video_wallpapers),
-            'downloadProhibited': channel_name in {'Living Art Moments'},
-            'copyrightStatus': 'Copyright Reserved (View-Only)' if channel_name in {'Living Art Moments'} else 'Public Domain Masterworks'
+            'playlistId': p_id,
+            'playlistTitle': p_title,
+            'sourcePlaylistIds': source_pids,
+            'downloadProhibited': is_prohibited,
+            'copyrightStatus': 'Copyright Reserved (View-Only)' if is_prohibited else 'Public Domain Masterworks'
         })
 
     # Sort ALL_VIDEOS by views descending by default
     clean_videos.sort(key=lambda x: x['views'], reverse=True)
 
+    first_playlist_url = playlists_list[0]['url'] if playlists_list else 'https://www.youtube.com/playlist?list=PLeqGkucOU6lA'
+    first_playlist_title = playlists_list[0]['title'] if playlists_list else 'sh_Monet inspired Visual Arts'
+
     data_js = f"""// Generated Data for Monet Playlist Web Guide & 4K Wallpaper Archive
 const PLAYLIST_METADATA = {{
-    title: "sh_Monet inspired Visual Arts",
-    playlistUrl: "https://www.youtube.com/playlist?list=PLeqGkucOU6lA",
+    title: "{first_playlist_title}",
+    playlistUrl: "{first_playlist_url}",
     totalVideos: {len(clean_videos)},
     totalViews: {sum(v['views'] for v in clean_videos)},
     totalDurationSec: {sum(v['durationSec'] for v in clean_videos)},
     channelCount: {len(channels)},
     totalWallpapers: {sum(v['wallpaperCount'] for v in clean_videos)},
     count4K: {count_4k},
-    countFHD: {count_fhd}
+    countFHD: {count_fhd},
+    playlistCount: {len(playlists_list)}
 }};
 
+const PLAYLISTS_CONFIG = {json.dumps(playlists_list, indent=2, ensure_ascii=False)};
 const CHANNEL_PROFILES = {json.dumps(channel_profiles, indent=2, ensure_ascii=False)};
 const CHANNEL_STATS = {json.dumps(channel_stats, indent=2, ensure_ascii=False)};
 const ALL_VIDEOS = {json.dumps(clean_videos, indent=2, ensure_ascii=False)};
@@ -262,6 +281,7 @@ const ALL_VIDEOS = {json.dumps(clean_videos, indent=2, ensure_ascii=False)};
 // Also attach to window for resilient cross-module and global access
 if (typeof window !== 'undefined') {{
     window.PLAYLIST_METADATA = PLAYLIST_METADATA;
+    window.PLAYLISTS_CONFIG = PLAYLISTS_CONFIG;
     window.CHANNEL_PROFILES = CHANNEL_PROFILES;
     window.CHANNEL_STATS = CHANNEL_STATS;
     window.ALL_VIDEOS = ALL_VIDEOS;
@@ -273,16 +293,18 @@ if (typeof window !== 'undefined') {{
 
     data_payload = {
         'metadata': {
-            'title': "sh_Monet inspired Visual Arts",
-            'playlistUrl': "https://www.youtube.com/playlist?list=PLeqGkucOU6lA",
+            'title': first_playlist_title,
+            'playlistUrl': first_playlist_url,
             'totalVideos': len(clean_videos),
             'totalViews': sum(v['views'] for v in clean_videos),
             'totalDurationSec': sum(v['durationSec'] for v in clean_videos),
             'channelCount': len(channels),
             'totalWallpapers': sum(v['wallpaperCount'] for v in clean_videos),
             'count4K': count_4k,
-            'countFHD': count_fhd
+            'countFHD': count_fhd,
+            'playlistCount': len(playlists_list)
         },
+        'playlistsConfig': playlists_list,
         'channelProfiles': channel_profiles,
         'channelStats': channel_stats,
         'videos': clean_videos

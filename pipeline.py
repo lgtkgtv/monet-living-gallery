@@ -122,21 +122,20 @@ def run_extract(batch_size=10, tier=None, delay=3.0):
     res = subprocess.run(cmd, capture_output=False)
     return res.returncode == 0
 
-PLAYLIST_REGISTRY = 'playlists.json'
+from core.playlist_engine import (
+    load_gallery_config,
+    get_active_playlists,
+    ingest_all_configured_playlists,
+    sync_and_save_raw_catalog
+)
 
 def get_configured_playlists():
-    if os.path.exists(PLAYLIST_REGISTRY):
-        try:
-            with open(PLAYLIST_REGISTRY, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-                return [p['url'] for p in data if p.get('enabled', True) and p.get('url')]
-        except Exception as e:
-            print(f"⚠️ Could not read {PLAYLIST_REGISTRY}: {e}")
-    return ["https://www.youtube.com/playlist?list=PLeqGkucOU6lA"]
+    config = load_gallery_config()
+    return [p['url'] for p in get_active_playlists(config)]
 
 def run_pull_playlist(playlist_urls=None):
     if not playlist_urls:
-        playlist_urls = get_configured_playlists()
+        return sync_and_save_raw_catalog(PLAYLIST_FILE)
     elif isinstance(playlist_urls, str):
         if ',' in playlist_urls:
             playlist_urls = [u.strip() for u in playlist_urls.split(',') if u.strip()]

@@ -1,0 +1,121 @@
+name: 🔄 Monet Living Gallery - Pipeline & Sync
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'Pipeline task to execute'
+        required: true
+        type: choice
+        default: 'refresh'
+        options:
+          - 'refresh'
+          - 'extract_wallpapers'
+          - 'full_sync'
+          - 'sync_resolutions'
+          - 'rebuild_only'
+      batch_size:
+        description: 'Wallpaper batch extraction count (if action extracts wallpapers)'
+        required: false
+        type: string
+        default: '10'
+      tier:
+        description: 'Wallpaper quality tier to prioritize'
+        required: false
+        type: choice
+        default: 'fhd'
+        options:
+          - 'fhd'
+          - '4k'
+          - 'all'
+  schedule:
+    # Optional scheduled weekly check: Sunday at 04:00 UTC
+    - cron: '0 4 * * 0'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gallery-pipeline
+  cancel-in-progress: false
+
+jobs:
+  pipeline:
+    name: Run Gallery Orchestrator
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: 🐍 Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: 🟢 Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 📦 Install FFmpeg & System Utilities
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+
+      - name: 📦 Install Python & Node Dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install -U yt-dlp
+          npm install jsdom
+
+      - name: 🚀 Execute Pipeline Action
+        run: |
+          ACTION="${{ inputs.action || 'refresh' }}"
+          BATCH_SIZE="${{ inputs.batch_size || '10' }}"
+          TIER="${{ inputs.tier || 'fhd' }}"
+
+          echo "======================================================"
+          echo "🎨 Executing Action: $ACTION"
+          echo "   Batch Size:      $BATCH_SIZE"
+          echo "   Quality Tier:    $TIER"
+          echo "======================================================"
+
+          if [ "$ACTION" = "refresh" ]; then
+            python3 pipeline.py --refresh
+          elif [ "$ACTION" = "extract_wallpapers" ]; then
+            python3 pipeline.py --extract --tier "$TIER" --batch-size "$BATCH_SIZE" --delay 2.5
+            python3 pipeline.py --build
+          elif [ "$ACTION" = "full_sync" ]; then
+            python3 pipeline.py --sync
+          elif [ "$ACTION" = "sync_resolutions" ]; then
+            python3 pipeline.py --sync-resolutions
+          elif [ "$ACTION" = "rebuild_only" ]; then
+            python3 pipeline.py --build
+          else
+            echo "Unknown action: $ACTION. Defaulting to status & build."
+            python3 pipeline.py --build
+          fi
+
+      - name: 🧪 Run Automated Verification Tests
+        run: |
+          node tests/test_gallery.js
+
+      - name: 📤 Commit & Push Updated Gallery
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git add -A
+          
+          if git diff --staged --quiet; then
+            echo "✅ No updates detected. Working tree is clean."
+          else
+            ACTION_LABEL="${{ inputs.action || 'scheduled-refresh' }}"
+            TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
+            git commit -m "chore(sync): automated gallery pipeline ($ACTION_LABEL) - $TIMESTAMP [skip ci]"
+            git push origin main
+            echo "🚀 Successfully pushed updates to origin/main."
+          fi

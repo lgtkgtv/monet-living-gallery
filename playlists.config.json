@@ -1,0 +1,26 @@
+{
+  "$schema": "./schemas/playlists_config.schema.json",
+  "app": {
+    "title": "L'Impressionnisme Vivant",
+    "subtitle": "Step inside the living canvases of Claude Monet and the Impressionist masters.",
+    "curator": "sachin g",
+    "contactEmail": "lgtkgtv@gmail.com",
+    "themeColor": "#f59e0b",
+    "defaultResolutionFilter": "4K",
+    "allowMultiPlaylistSelection": true
+  },
+  "playlists": [
+    {
+      "id": "PLeqGkucOU6lA",
+      "url": "https://www.youtube.com/playlist?list=PLeqGkucOU6lA",
+      "title": "sh_Monet inspired Visual Arts",
+      "category": "Impressionism & Masters",
+      "curator": "sachin g",
+      "enabled": true,
+      "description": "Curated collection of Monet and Impressionist animated masterworks, retrospectives, and 4K living canvases."
+    }
+  ],
+  "prohibitedDownloadChannels": [
+    "Living Art Moments"
+  ]
+}

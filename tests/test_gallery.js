@@ -195,12 +195,32 @@ if (!slideshowImg.classList.contains('ken-burns')) throw new Error('Expected sli
 dom.window.toggleSlideshowKenBurns();
 if (kenBurnsBtn.classList.contains('active')) throw new Error('Expected Ken Burns button to be deactivated');
 if (slideshowImg.classList.contains('ken-burns')) throw new Error('Expected ken-burns class to be removed');
-console.log('[PASS] Ken Burns cinematic motion toggle verified');
+// Verification 20: Generic Multi-Playlist Architecture
+if (!Array.isArray(dom.window.PLAYLISTS_CONFIG)) {
+    throw new Error('Expected PLAYLISTS_CONFIG to be an array');
+}
+if (!dom.window.ALL_VIDEOS[0].playlistId) {
+    throw new Error('Expected video entries to be tagged with playlistId');
+}
+// Test multi-playlist dynamic UI activation
+dom.window.PLAYLISTS_CONFIG = [
+    { id: 'PLeqGkucOU6lA', title: 'Monet Living Arts', url: 'https://youtube.com/playlist?list=PLeqGkucOU6lA' },
+    { id: 'PL_Test2', title: 'Post-Impressionist Masters', url: 'https://youtube.com/playlist?list=PL_Test2' }
+];
+dom.window.populatePlaylistFilter();
+const playlistSelect = dom.window.document.getElementById('playlistSelect');
+if (playlistSelect.style.display === 'none') {
+    throw new Error('Expected playlistSelect to be visible when multiple playlists configured');
+}
+if (playlistSelect.options.length !== 3) { // ALL + 2 playlists
+    throw new Error(`Expected 3 options in playlistSelect, got ${playlistSelect.options.length}`);
+}
+console.log('[PASS] Generic Multi-Playlist Architecture verified: dynamic filter activation & tagging');
 
 if (errors.length > 0) {
     console.error('❌ Uncaught runtime errors:', errors);
     process.exit(1);
 }
 
-console.log('\n🎉 ALL 19 VERIFICATION TESTS PASSED SUCCESSFULLY WITH 0 ERRORS!\n');
+console.log('\n🎉 ALL 20 VERIFICATION TESTS PASSED SUCCESSFULLY WITH 0 ERRORS!\n');
 
