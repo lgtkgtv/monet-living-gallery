@@ -730,11 +730,11 @@
       "is_4k": false,
       "height": 1074,
       "duration": 567,
-      "status": "pending",
+      "status": "failed",
       "extracted_count": 0,
-      "last_attempt": null,
-      "error": null,
-      "retry_count": 0
+      "last_attempt": "2026-09-15T11:49:16.855052",
+      "error": "yt-dlp error: ERROR: [youtube] j5EPNKdBb4Q: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --c",
+      "retry_count": 1
     },
     "9LTrHubvJ7c": {
       "id": "9LTrHubvJ7c",
@@ -1546,11 +1546,11 @@
       "is_4k": false,
       "height": 1064,
       "duration": 192,
-      "status": "pending",
+      "status": "failed",
       "extracted_count": 0,
-      "last_attempt": null,
-      "error": null,
-      "retry_count": 0
+      "last_attempt": "2026-09-15T11:49:11.711625",
+      "error": "yt-dlp error: ERROR: [youtube] -JSSbxoY4dM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --c",
+      "retry_count": 1
     },
     "tJjqAH1h8fk": {
       "id": "tJjqAH1h8fk",
@@ -2586,11 +2586,11 @@
       "is_4k": false,
       "height": 720,
       "duration": 784,
-      "status": "pending",
+      "status": "failed",
       "extracted_count": 0,
-      "last_attempt": null,
-      "error": null,
-      "retry_count": 0
+      "last_attempt": "2026-09-15T11:49:06.192323",
+      "error": "yt-dlp error: ERROR: [youtube] 6fwRmi1dCwg: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --c",
+      "retry_count": 1
     },
     "Xul5WT0ReYw": {
       "id": "Xul5WT0ReYw",
@@ -2810,11 +2810,11 @@
       "is_4k": false,
       "height": 480,
       "duration": 216,
-      "status": "pending",
+      "status": "failed",
       "extracted_count": 0,
-      "last_attempt": null,
-      "error": null,
-      "retry_count": 0
+      "last_attempt": "2026-09-15T11:48:56.542457",
+      "error": "yt-dlp error: ERROR: [youtube] DwSmbvERJtk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --c",
+      "retry_count": 1
     },
     "nCVYEqc_Hw4": {
       "id": "nCVYEqc_Hw4",
@@ -2858,11 +2858,11 @@
       "is_4k": false,
       "height": 720,
       "duration": 165,
-      "status": "pending",
+      "status": "failed",
       "extracted_count": 0,
-      "last_attempt": null,
-      "error": null,
-      "retry_count": 0
+      "last_attempt": "2026-09-15T11:49:01.153198",
+      "error": "yt-dlp error: ERROR: [youtube] o2If95E4GLI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --c",
+      "retry_count": 1
     },
     "V0Nz7TQcGF0": {
       "id": "V0Nz7TQcGF0",
@@ -3521,5 +3521,5 @@
       "retry_count": 0
     }
   },
-  "last_updated": "2026-09-15T05:24:08.855464"
+  "last_updated": "2026-09-15T11:49:19.076039"
 }

@@ -56,12 +56,26 @@ def get_status():
                 res_cache = json.load(f)
         except Exception:
             res_cache = {}
-    
-    count_4k = sum(1 for v in res_cache.values() if v.get('is4K'))
-    count_fhd = sum(1 for v in res_cache.values() if not v.get('is4K') and v.get('height', 0) >= 1080)
+
+    catalog_ids = set(v.get('id') for v in videos if v.get('id'))
+    indexed_in_catalog = sum(1 for vid in catalog_ids if vid in res_cache)
+
+    if os.path.exists('data.json'):
+        try:
+            with open('data.json', 'r', encoding='utf-8') as f:
+                dmeta = json.load(f).get('metadata', {})
+                count_4k = dmeta.get('count4K', 0)
+                count_fhd = dmeta.get('countFHD', 0)
+        except Exception:
+            count_4k = sum(1 for vid in catalog_ids if res_cache.get(vid, {}).get('is4K'))
+            count_fhd = sum(1 for vid in catalog_ids if not res_cache.get(vid, {}).get('is4K') and res_cache.get(vid, {}).get('height', 0) >= 1080)
+    else:
+        count_4k = sum(1 for vid in catalog_ids if res_cache.get(vid, {}).get('is4K'))
+        count_fhd = sum(1 for vid in catalog_ids if not res_cache.get(vid, {}).get('is4K') and res_cache.get(vid, {}).get('height', 0) >= 1080)
+
     count_other = len(videos) - (count_4k + count_fhd)
     print(f"📐 Resolution Breakdown:     {count_4k} in 4K UHD · {count_fhd} in 1080p FHD · {count_other} Other")
-    print(f"   Resolution Cache Status:  {len(res_cache)} of {len(videos)} indexed ({round(len(res_cache)/max(1, len(videos))*100, 1)}%)")
+    print(f"   Resolution Cache Status:  {indexed_in_catalog} of {len(videos)} catalog titles indexed ({round(indexed_in_catalog/max(1, len(videos))*100, 1)}%)")
 
     # 3. Channels
     channel_counts = Counter(v.get('channel') or v.get('uploader') or 'Unknown' for v in videos)
@@ -79,11 +93,11 @@ def get_status():
                 wp_list = json.load(f)
         except Exception:
             wp_list = []
-    
+
     desktop_wp = sum(1 for wp in wp_list if wp.get('formFactor') == 'desktop')
     mobile_wp = sum(1 for wp in wp_list if wp.get('formFactor') == 'mobile')
-    covered_vids = len(set(wp.get('videoId') for wp in wp_list))
-    
+    covered_vids = len(set(wp.get('videoId') for wp in wp_list if wp.get('videoId') in catalog_ids))
+
     print(f"🖼️ Wallpaper Archive:         {len(wp_list)} snapshots ({desktop_wp} desktop widescreen, {mobile_wp} mobile portrait)")
     print(f"   Video Coverage:           {covered_vids} of {len(videos)} titles covered ({round(covered_vids/max(1, len(videos))*100, 1)}%)")
 
