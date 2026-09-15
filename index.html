@@ -162,6 +162,11 @@
                         <option value="VIEW_ONLY">🔒 Copyright Reserved (View-Only)</option>
                     </select>
 
+                    <select id="declutterSelect" class="select-dropdown" title="De-clutter Duplicate Titles and Multi-Length Segments">
+                        <option value="DECLUTTER" selected>🧹 De-clutter (Primary Cuts Only)</option>
+                        <option value="ALL_CUTS">📑 Show All Cuts (Include Alternates)</option>
+                    </select>
+
                     <select id="sortSelect" class="select-dropdown">
                         <option value="views_desc" selected>Popularity: High to Low</option>
                         <option value="views_asc">Popularity: Low to High</option>
@@ -278,6 +283,14 @@
                 <!-- iframe injected dynamically via youtube-nocookie.com or privacy streaming -->
             </div>
             
+            <!-- Alternate cuts & multi-length segment switcher bar -->
+            <div id="modalAlternateCutsBar" class="modal-cuts-bar" style="display: none;">
+                <span class="modal-cuts-label">🎞️ Alternate Cuts:</span>
+                <div class="modal-cuts-list" id="modalAlternateCutsList">
+                    <!-- Populated dynamically by app.js -->
+                </div>
+            </div>
+
             <!-- Clean, professional modal footer with clear hierarchy and attribution -->
             <div class="modal-footer-toolbar">
                 <div class="modal-footer-info">

@@ -9,7 +9,10 @@ const PLAYLIST_METADATA = {
     totalWallpapers: 1741,
     count4K: 58,
     countFHD: 155,
-    playlistCount: 1
+    playlistCount: 1,
+    totalDuplicateGroups: 2,
+    alternateCutsCount: 4,
+    declutteredVideosCount: 216
 };
 
 const PLAYLISTS_CONFIG = [
@@ -21,6 +24,104 @@ const PLAYLISTS_CONFIG = [
     "curator": "sachin g",
     "enabled": true,
     "description": "Curated collection of Monet and Impressionist animated masterworks, retrospectives, and 4K living canvases."
+  }
+];
+const DUPLICATE_GROUPS = [
+  {
+    "groupId": "cluster_gj55gTwrllA",
+    "canonicalStem": "visual poems | claude monet | enter a renoir painting",
+    "channel": "Beautiful Living Art",
+    "primaryVideoId": "gj55gTwrllA",
+    "totalCuts": 4,
+    "cuts": [
+      {
+        "id": "gj55gTwrllA",
+        "title": "Visual Poems | Claude Monet | Enter a Renoir Painting | Warm Relaxing Monet Inspired Visual Poetry 3",
+        "channel": "Beautiful Living Art",
+        "durationSec": 126,
+        "durationFormatted": "02:06",
+        "resolution": "3830x2160",
+        "qualityLabel": "4K UHD",
+        "is4K": true,
+        "views": 1700,
+        "wallpaperCount": 7,
+        "isPrimary": true
+      },
+      {
+        "id": "rxz8CSFGKRY",
+        "title": "Visual Poems | Claude Monet | Enter a Renoir Painting | Monet Living Art Piece 17",
+        "channel": "Beautiful Living Art",
+        "durationSec": 209,
+        "durationFormatted": "03:29",
+        "resolution": "1914x1080",
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "views": 497,
+        "wallpaperCount": 7,
+        "isPrimary": false
+      },
+      {
+        "id": "Fpp-ZBkfo28",
+        "title": "Visual Poems | Claude Monet | Enter a Renoir Painting | Monet Living Art Piece 38",
+        "channel": "Beautiful Living Art",
+        "durationSec": 209,
+        "durationFormatted": "03:29",
+        "resolution": "1914x1080",
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "views": 339,
+        "wallpaperCount": 7,
+        "isPrimary": false
+      },
+      {
+        "id": "wsDbLAtIUIA",
+        "title": "Visual Poems | Claude Monet | Enter a Renoir Painting | Monet Living Art Piece 36",
+        "channel": "Beautiful Living Art",
+        "durationSec": 125,
+        "durationFormatted": "02:05",
+        "resolution": "1914x1080",
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "views": 707,
+        "wallpaperCount": 7,
+        "isPrimary": false
+      }
+    ]
+  },
+  {
+    "groupId": "cluster_jr38oRbEutQ",
+    "canonicalStem": "visual poems | claude monet | enter an impressionist painting",
+    "channel": "Beautiful Living Art",
+    "primaryVideoId": "jr38oRbEutQ",
+    "totalCuts": 2,
+    "cuts": [
+      {
+        "id": "jr38oRbEutQ",
+        "title": "Visual Poems | Claude Monet | Enter an Impressionist Painting | Living Art and Music 8",
+        "channel": "Beautiful Living Art",
+        "durationSec": 130,
+        "durationFormatted": "02:10",
+        "resolution": "1914x1080",
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "views": 332,
+        "wallpaperCount": 7,
+        "isPrimary": true
+      },
+      {
+        "id": "YOpeCXH6bs0",
+        "title": "Visual Poems | Claude Monet | Enter an Impressionist Painting | AI Living Art Piece 37",
+        "channel": "Beautiful Living Art",
+        "durationSec": 124,
+        "durationFormatted": "02:04",
+        "resolution": "1914x1080",
+        "qualityLabel": "1080p FHD",
+        "is4K": false,
+        "views": 393,
+        "wallpaperCount": 7,
+        "isPrimary": false
+      }
+    ]
   }
 ];
 const CHANNEL_PROFILES = {
@@ -10881,7 +10982,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=cKkDMiGUbUw"
+        "videoUrl": "https://www.youtube.com/watch?v=cKkDMiGUbUw",
+        "declutterPrimary": true
       },
       {
         "id": "cKkDMiGUbUw_2",
@@ -10905,7 +11007,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=cKkDMiGUbUw"
+        "videoUrl": "https://www.youtube.com/watch?v=cKkDMiGUbUw",
+        "declutterPrimary": true
       },
       {
         "id": "cKkDMiGUbUw_3",
@@ -10929,7 +11032,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=cKkDMiGUbUw"
+        "videoUrl": "https://www.youtube.com/watch?v=cKkDMiGUbUw",
+        "declutterPrimary": true
       },
       {
         "id": "cKkDMiGUbUw_4",
@@ -10953,7 +11057,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=cKkDMiGUbUw"
+        "videoUrl": "https://www.youtube.com/watch?v=cKkDMiGUbUw",
+        "declutterPrimary": true
       },
       {
         "id": "cKkDMiGUbUw_5",
@@ -10977,7 +11082,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=cKkDMiGUbUw"
+        "videoUrl": "https://www.youtube.com/watch?v=cKkDMiGUbUw",
+        "declutterPrimary": true
       },
       {
         "id": "cKkDMiGUbUw_6",
@@ -11001,7 +11107,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=cKkDMiGUbUw"
+        "videoUrl": "https://www.youtube.com/watch?v=cKkDMiGUbUw",
+        "declutterPrimary": true
       },
       {
         "id": "cKkDMiGUbUw_7",
@@ -11025,7 +11132,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=cKkDMiGUbUw"
+        "videoUrl": "https://www.youtube.com/watch?v=cKkDMiGUbUw",
+        "declutterPrimary": true
       },
       {
         "id": "cKkDMiGUbUw_8",
@@ -11049,7 +11157,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=cKkDMiGUbUw"
+        "videoUrl": "https://www.youtube.com/watch?v=cKkDMiGUbUw",
+        "declutterPrimary": true
       },
       {
         "id": "cKkDMiGUbUw_9",
@@ -11073,7 +11182,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=cKkDMiGUbUw"
+        "videoUrl": "https://www.youtube.com/watch?v=cKkDMiGUbUw",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -11085,7 +11195,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "nCVYEqc_Hw4",
@@ -11126,7 +11239,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=nCVYEqc_Hw4"
+        "videoUrl": "https://www.youtube.com/watch?v=nCVYEqc_Hw4",
+        "declutterPrimary": true
       },
       {
         "id": "nCVYEqc_Hw4_2",
@@ -11150,7 +11264,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=nCVYEqc_Hw4"
+        "videoUrl": "https://www.youtube.com/watch?v=nCVYEqc_Hw4",
+        "declutterPrimary": true
       },
       {
         "id": "nCVYEqc_Hw4_3",
@@ -11174,7 +11289,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=nCVYEqc_Hw4"
+        "videoUrl": "https://www.youtube.com/watch?v=nCVYEqc_Hw4",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 3,
@@ -11186,7 +11302,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Masterwork Retrospectives & Anthologies"
+    "theme": "Masterwork Retrospectives & Anthologies",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "8XdHP_fQoB0",
@@ -11227,7 +11346,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0"
+        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0",
+        "declutterPrimary": true
       },
       {
         "id": "8XdHP_fQoB0_2",
@@ -11251,7 +11371,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0"
+        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0",
+        "declutterPrimary": true
       },
       {
         "id": "8XdHP_fQoB0_3",
@@ -11275,7 +11396,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0"
+        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0",
+        "declutterPrimary": true
       },
       {
         "id": "8XdHP_fQoB0_4",
@@ -11299,7 +11421,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0"
+        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0",
+        "declutterPrimary": true
       },
       {
         "id": "8XdHP_fQoB0_5",
@@ -11323,7 +11446,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0"
+        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0",
+        "declutterPrimary": true
       },
       {
         "id": "8XdHP_fQoB0_6",
@@ -11347,7 +11471,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0"
+        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0",
+        "declutterPrimary": true
       },
       {
         "id": "8XdHP_fQoB0_7",
@@ -11371,7 +11496,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0"
+        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0",
+        "declutterPrimary": true
       },
       {
         "id": "8XdHP_fQoB0_8",
@@ -11395,7 +11521,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0"
+        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0",
+        "declutterPrimary": true
       },
       {
         "id": "8XdHP_fQoB0_9",
@@ -11419,7 +11546,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0"
+        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0",
+        "declutterPrimary": true
       },
       {
         "id": "8XdHP_fQoB0_10",
@@ -11443,7 +11571,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0"
+        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0",
+        "declutterPrimary": true
       },
       {
         "id": "8XdHP_fQoB0_11",
@@ -11467,7 +11596,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0"
+        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0",
+        "declutterPrimary": true
       },
       {
         "id": "8XdHP_fQoB0_12",
@@ -11491,7 +11621,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0"
+        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0",
+        "declutterPrimary": true
       },
       {
         "id": "8XdHP_fQoB0_13",
@@ -11515,7 +11646,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0"
+        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0",
+        "declutterPrimary": true
       },
       {
         "id": "8XdHP_fQoB0_14",
@@ -11539,7 +11671,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0"
+        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0",
+        "declutterPrimary": true
       },
       {
         "id": "8XdHP_fQoB0_15",
@@ -11563,7 +11696,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0"
+        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0",
+        "declutterPrimary": true
       },
       {
         "id": "8XdHP_fQoB0_16",
@@ -11587,7 +11721,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0"
+        "videoUrl": "https://www.youtube.com/watch?v=8XdHP_fQoB0",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 16,
@@ -11599,7 +11734,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "yGKyyaETZ2M",
@@ -11640,7 +11778,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M"
+        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M",
+        "declutterPrimary": true
       },
       {
         "id": "yGKyyaETZ2M_2",
@@ -11664,7 +11803,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M"
+        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M",
+        "declutterPrimary": true
       },
       {
         "id": "yGKyyaETZ2M_3",
@@ -11688,7 +11828,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M"
+        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M",
+        "declutterPrimary": true
       },
       {
         "id": "yGKyyaETZ2M_4",
@@ -11712,7 +11853,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M"
+        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M",
+        "declutterPrimary": true
       },
       {
         "id": "yGKyyaETZ2M_5",
@@ -11736,7 +11878,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M"
+        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M",
+        "declutterPrimary": true
       },
       {
         "id": "yGKyyaETZ2M_6",
@@ -11760,7 +11903,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M"
+        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M",
+        "declutterPrimary": true
       },
       {
         "id": "yGKyyaETZ2M_7",
@@ -11784,7 +11928,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M"
+        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M",
+        "declutterPrimary": true
       },
       {
         "id": "yGKyyaETZ2M_8",
@@ -11808,7 +11953,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M"
+        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M",
+        "declutterPrimary": true
       },
       {
         "id": "yGKyyaETZ2M_9",
@@ -11832,7 +11978,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M"
+        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M",
+        "declutterPrimary": true
       },
       {
         "id": "yGKyyaETZ2M_10",
@@ -11856,7 +12003,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M"
+        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M",
+        "declutterPrimary": true
       },
       {
         "id": "yGKyyaETZ2M_11",
@@ -11880,7 +12028,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M"
+        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M",
+        "declutterPrimary": true
       },
       {
         "id": "yGKyyaETZ2M_12",
@@ -11904,7 +12053,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M"
+        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M",
+        "declutterPrimary": true
       },
       {
         "id": "yGKyyaETZ2M_13",
@@ -11928,7 +12078,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M"
+        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M",
+        "declutterPrimary": true
       },
       {
         "id": "yGKyyaETZ2M_14",
@@ -11952,7 +12103,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M"
+        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M",
+        "declutterPrimary": true
       },
       {
         "id": "yGKyyaETZ2M_15",
@@ -11976,7 +12128,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M"
+        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M",
+        "declutterPrimary": true
       },
       {
         "id": "yGKyyaETZ2M_16",
@@ -12000,7 +12153,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M"
+        "videoUrl": "https://www.youtube.com/watch?v=yGKyyaETZ2M",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 16,
@@ -12012,7 +12166,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "TZUn8nU0CZI",
@@ -12053,7 +12210,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Antonio Parreiras",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=TZUn8nU0CZI"
+        "videoUrl": "https://www.youtube.com/watch?v=TZUn8nU0CZI",
+        "declutterPrimary": true
       },
       {
         "id": "TZUn8nU0CZI_2",
@@ -12077,7 +12235,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Antonio Parreiras",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=TZUn8nU0CZI"
+        "videoUrl": "https://www.youtube.com/watch?v=TZUn8nU0CZI",
+        "declutterPrimary": true
       },
       {
         "id": "TZUn8nU0CZI_3",
@@ -12101,7 +12260,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Antonio Parreiras",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=TZUn8nU0CZI"
+        "videoUrl": "https://www.youtube.com/watch?v=TZUn8nU0CZI",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 3,
@@ -12113,7 +12273,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Antonio Parreiras",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "h3-WUZi-0hU",
@@ -12154,7 +12317,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Isaac Levitan",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=h3-WUZi-0hU"
+        "videoUrl": "https://www.youtube.com/watch?v=h3-WUZi-0hU",
+        "declutterPrimary": true
       },
       {
         "id": "h3-WUZi-0hU_2",
@@ -12178,7 +12342,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Isaac Levitan",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=h3-WUZi-0hU"
+        "videoUrl": "https://www.youtube.com/watch?v=h3-WUZi-0hU",
+        "declutterPrimary": true
       },
       {
         "id": "h3-WUZi-0hU_3",
@@ -12202,7 +12367,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Isaac Levitan",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=h3-WUZi-0hU"
+        "videoUrl": "https://www.youtube.com/watch?v=h3-WUZi-0hU",
+        "declutterPrimary": true
       },
       {
         "id": "h3-WUZi-0hU_4",
@@ -12226,7 +12392,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Isaac Levitan",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=h3-WUZi-0hU"
+        "videoUrl": "https://www.youtube.com/watch?v=h3-WUZi-0hU",
+        "declutterPrimary": true
       },
       {
         "id": "h3-WUZi-0hU_5",
@@ -12250,7 +12417,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Isaac Levitan",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=h3-WUZi-0hU"
+        "videoUrl": "https://www.youtube.com/watch?v=h3-WUZi-0hU",
+        "declutterPrimary": true
       },
       {
         "id": "h3-WUZi-0hU_6",
@@ -12274,7 +12442,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Isaac Levitan",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=h3-WUZi-0hU"
+        "videoUrl": "https://www.youtube.com/watch?v=h3-WUZi-0hU",
+        "declutterPrimary": true
       },
       {
         "id": "h3-WUZi-0hU_7",
@@ -12298,7 +12467,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Isaac Levitan",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=h3-WUZi-0hU"
+        "videoUrl": "https://www.youtube.com/watch?v=h3-WUZi-0hU",
+        "declutterPrimary": true
       },
       {
         "id": "h3-WUZi-0hU_8",
@@ -12322,7 +12492,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Isaac Levitan",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=h3-WUZi-0hU"
+        "videoUrl": "https://www.youtube.com/watch?v=h3-WUZi-0hU",
+        "declutterPrimary": true
       },
       {
         "id": "h3-WUZi-0hU_9",
@@ -12346,7 +12517,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Isaac Levitan",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=h3-WUZi-0hU"
+        "videoUrl": "https://www.youtube.com/watch?v=h3-WUZi-0hU",
+        "declutterPrimary": true
       },
       {
         "id": "h3-WUZi-0hU_10",
@@ -12370,7 +12542,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Isaac Levitan",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=h3-WUZi-0hU"
+        "videoUrl": "https://www.youtube.com/watch?v=h3-WUZi-0hU",
+        "declutterPrimary": true
       },
       {
         "id": "h3-WUZi-0hU_11",
@@ -12394,7 +12567,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Isaac Levitan",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=h3-WUZi-0hU"
+        "videoUrl": "https://www.youtube.com/watch?v=h3-WUZi-0hU",
+        "declutterPrimary": true
       },
       {
         "id": "h3-WUZi-0hU_12",
@@ -12418,7 +12592,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Isaac Levitan",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=h3-WUZi-0hU"
+        "videoUrl": "https://www.youtube.com/watch?v=h3-WUZi-0hU",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 12,
@@ -12430,7 +12605,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Isaac Levitan",
-    "theme": "Masterwork Retrospectives & Anthologies"
+    "theme": "Masterwork Retrospectives & Anthologies",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "MWRc13v-ZhA",
@@ -12471,7 +12649,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=MWRc13v-ZhA"
+        "videoUrl": "https://www.youtube.com/watch?v=MWRc13v-ZhA",
+        "declutterPrimary": true
       },
       {
         "id": "MWRc13v-ZhA_2",
@@ -12495,7 +12674,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=MWRc13v-ZhA"
+        "videoUrl": "https://www.youtube.com/watch?v=MWRc13v-ZhA",
+        "declutterPrimary": true
       },
       {
         "id": "MWRc13v-ZhA_3",
@@ -12519,7 +12699,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=MWRc13v-ZhA"
+        "videoUrl": "https://www.youtube.com/watch?v=MWRc13v-ZhA",
+        "declutterPrimary": true
       },
       {
         "id": "MWRc13v-ZhA_4",
@@ -12543,7 +12724,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=MWRc13v-ZhA"
+        "videoUrl": "https://www.youtube.com/watch?v=MWRc13v-ZhA",
+        "declutterPrimary": true
       },
       {
         "id": "MWRc13v-ZhA_5",
@@ -12567,7 +12749,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=MWRc13v-ZhA"
+        "videoUrl": "https://www.youtube.com/watch?v=MWRc13v-ZhA",
+        "declutterPrimary": true
       },
       {
         "id": "MWRc13v-ZhA_6",
@@ -12591,7 +12774,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=MWRc13v-ZhA"
+        "videoUrl": "https://www.youtube.com/watch?v=MWRc13v-ZhA",
+        "declutterPrimary": true
       },
       {
         "id": "MWRc13v-ZhA_7",
@@ -12615,7 +12799,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=MWRc13v-ZhA"
+        "videoUrl": "https://www.youtube.com/watch?v=MWRc13v-ZhA",
+        "declutterPrimary": true
       },
       {
         "id": "MWRc13v-ZhA_8",
@@ -12639,7 +12824,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=MWRc13v-ZhA"
+        "videoUrl": "https://www.youtube.com/watch?v=MWRc13v-ZhA",
+        "declutterPrimary": true
       },
       {
         "id": "MWRc13v-ZhA_9",
@@ -12663,7 +12849,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=MWRc13v-ZhA"
+        "videoUrl": "https://www.youtube.com/watch?v=MWRc13v-ZhA",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -12675,7 +12862,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Water Lilies & Garden Sanctuaries"
+    "theme": "Water Lilies & Garden Sanctuaries",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "Sk8XKO668Ks",
@@ -12716,7 +12906,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Sk8XKO668Ks"
+        "videoUrl": "https://www.youtube.com/watch?v=Sk8XKO668Ks",
+        "declutterPrimary": true
       },
       {
         "id": "Sk8XKO668Ks_2",
@@ -12740,7 +12931,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Sk8XKO668Ks"
+        "videoUrl": "https://www.youtube.com/watch?v=Sk8XKO668Ks",
+        "declutterPrimary": true
       },
       {
         "id": "Sk8XKO668Ks_3",
@@ -12764,7 +12956,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Sk8XKO668Ks"
+        "videoUrl": "https://www.youtube.com/watch?v=Sk8XKO668Ks",
+        "declutterPrimary": true
       },
       {
         "id": "Sk8XKO668Ks_4",
@@ -12788,7 +12981,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Sk8XKO668Ks"
+        "videoUrl": "https://www.youtube.com/watch?v=Sk8XKO668Ks",
+        "declutterPrimary": true
       },
       {
         "id": "Sk8XKO668Ks_5",
@@ -12812,7 +13006,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Sk8XKO668Ks"
+        "videoUrl": "https://www.youtube.com/watch?v=Sk8XKO668Ks",
+        "declutterPrimary": true
       },
       {
         "id": "Sk8XKO668Ks_6",
@@ -12836,7 +13031,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Sk8XKO668Ks"
+        "videoUrl": "https://www.youtube.com/watch?v=Sk8XKO668Ks",
+        "declutterPrimary": true
       },
       {
         "id": "Sk8XKO668Ks_7",
@@ -12860,7 +13056,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Sk8XKO668Ks"
+        "videoUrl": "https://www.youtube.com/watch?v=Sk8XKO668Ks",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -12872,7 +13069,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Vincent van Gogh",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "FN16izlRi-8",
@@ -12913,7 +13113,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8"
+        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8",
+        "declutterPrimary": true
       },
       {
         "id": "FN16izlRi-8_2",
@@ -12937,7 +13138,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8"
+        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8",
+        "declutterPrimary": true
       },
       {
         "id": "FN16izlRi-8_3",
@@ -12961,7 +13163,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8"
+        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8",
+        "declutterPrimary": true
       },
       {
         "id": "FN16izlRi-8_4",
@@ -12985,7 +13188,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8"
+        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8",
+        "declutterPrimary": true
       },
       {
         "id": "FN16izlRi-8_5",
@@ -13009,7 +13213,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8"
+        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8",
+        "declutterPrimary": true
       },
       {
         "id": "FN16izlRi-8_6",
@@ -13033,7 +13238,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8"
+        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8",
+        "declutterPrimary": true
       },
       {
         "id": "FN16izlRi-8_7",
@@ -13057,7 +13263,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8"
+        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8",
+        "declutterPrimary": true
       },
       {
         "id": "FN16izlRi-8_8",
@@ -13081,7 +13288,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8"
+        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8",
+        "declutterPrimary": true
       },
       {
         "id": "FN16izlRi-8_9",
@@ -13105,7 +13313,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8"
+        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8",
+        "declutterPrimary": true
       },
       {
         "id": "FN16izlRi-8_10",
@@ -13129,7 +13338,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8"
+        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8",
+        "declutterPrimary": true
       },
       {
         "id": "FN16izlRi-8_11",
@@ -13153,7 +13363,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8"
+        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8",
+        "declutterPrimary": true
       },
       {
         "id": "FN16izlRi-8_12",
@@ -13177,7 +13388,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8"
+        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8",
+        "declutterPrimary": true
       },
       {
         "id": "FN16izlRi-8_13",
@@ -13201,7 +13413,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8"
+        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8",
+        "declutterPrimary": true
       },
       {
         "id": "FN16izlRi-8_14",
@@ -13225,7 +13438,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8"
+        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8",
+        "declutterPrimary": true
       },
       {
         "id": "FN16izlRi-8_15",
@@ -13249,7 +13463,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8"
+        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8",
+        "declutterPrimary": true
       },
       {
         "id": "FN16izlRi-8_16",
@@ -13273,7 +13488,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8"
+        "videoUrl": "https://www.youtube.com/watch?v=FN16izlRi-8",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 16,
@@ -13285,7 +13501,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Water Lilies & Garden Sanctuaries"
+    "theme": "Water Lilies & Garden Sanctuaries",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "RX0kyBl-4Bk",
@@ -13326,7 +13545,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RX0kyBl-4Bk"
+        "videoUrl": "https://www.youtube.com/watch?v=RX0kyBl-4Bk",
+        "declutterPrimary": true
       },
       {
         "id": "RX0kyBl-4Bk_2",
@@ -13350,7 +13570,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RX0kyBl-4Bk"
+        "videoUrl": "https://www.youtube.com/watch?v=RX0kyBl-4Bk",
+        "declutterPrimary": true
       },
       {
         "id": "RX0kyBl-4Bk_3",
@@ -13374,7 +13595,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RX0kyBl-4Bk"
+        "videoUrl": "https://www.youtube.com/watch?v=RX0kyBl-4Bk",
+        "declutterPrimary": true
       },
       {
         "id": "RX0kyBl-4Bk_4",
@@ -13398,7 +13620,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RX0kyBl-4Bk"
+        "videoUrl": "https://www.youtube.com/watch?v=RX0kyBl-4Bk",
+        "declutterPrimary": true
       },
       {
         "id": "RX0kyBl-4Bk_5",
@@ -13422,7 +13645,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RX0kyBl-4Bk"
+        "videoUrl": "https://www.youtube.com/watch?v=RX0kyBl-4Bk",
+        "declutterPrimary": true
       },
       {
         "id": "RX0kyBl-4Bk_6",
@@ -13446,7 +13670,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RX0kyBl-4Bk"
+        "videoUrl": "https://www.youtube.com/watch?v=RX0kyBl-4Bk",
+        "declutterPrimary": true
       },
       {
         "id": "RX0kyBl-4Bk_7",
@@ -13470,7 +13695,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RX0kyBl-4Bk"
+        "videoUrl": "https://www.youtube.com/watch?v=RX0kyBl-4Bk",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -13482,7 +13708,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "52Sg9uFRx4s",
@@ -13523,7 +13752,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Peder Mørk Mønsted",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=52Sg9uFRx4s"
+        "videoUrl": "https://www.youtube.com/watch?v=52Sg9uFRx4s",
+        "declutterPrimary": true
       },
       {
         "id": "52Sg9uFRx4s_2",
@@ -13547,7 +13777,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Peder Mørk Mønsted",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=52Sg9uFRx4s"
+        "videoUrl": "https://www.youtube.com/watch?v=52Sg9uFRx4s",
+        "declutterPrimary": true
       },
       {
         "id": "52Sg9uFRx4s_3",
@@ -13571,7 +13802,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Peder Mørk Mønsted",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=52Sg9uFRx4s"
+        "videoUrl": "https://www.youtube.com/watch?v=52Sg9uFRx4s",
+        "declutterPrimary": true
       },
       {
         "id": "52Sg9uFRx4s_4",
@@ -13595,7 +13827,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Peder Mørk Mønsted",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=52Sg9uFRx4s"
+        "videoUrl": "https://www.youtube.com/watch?v=52Sg9uFRx4s",
+        "declutterPrimary": true
       },
       {
         "id": "52Sg9uFRx4s_5",
@@ -13619,7 +13852,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Peder Mørk Mønsted",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=52Sg9uFRx4s"
+        "videoUrl": "https://www.youtube.com/watch?v=52Sg9uFRx4s",
+        "declutterPrimary": true
       },
       {
         "id": "52Sg9uFRx4s_6",
@@ -13643,7 +13877,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Peder Mørk Mønsted",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=52Sg9uFRx4s"
+        "videoUrl": "https://www.youtube.com/watch?v=52Sg9uFRx4s",
+        "declutterPrimary": true
       },
       {
         "id": "52Sg9uFRx4s_7",
@@ -13667,7 +13902,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Peder Mørk Mønsted",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=52Sg9uFRx4s"
+        "videoUrl": "https://www.youtube.com/watch?v=52Sg9uFRx4s",
+        "declutterPrimary": true
       },
       {
         "id": "52Sg9uFRx4s_8",
@@ -13691,7 +13927,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Peder Mørk Mønsted",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=52Sg9uFRx4s"
+        "videoUrl": "https://www.youtube.com/watch?v=52Sg9uFRx4s",
+        "declutterPrimary": true
       },
       {
         "id": "52Sg9uFRx4s_9",
@@ -13715,7 +13952,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Peder Mørk Mønsted",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=52Sg9uFRx4s"
+        "videoUrl": "https://www.youtube.com/watch?v=52Sg9uFRx4s",
+        "declutterPrimary": true
       },
       {
         "id": "52Sg9uFRx4s_10",
@@ -13739,7 +13977,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Peder Mørk Mønsted",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=52Sg9uFRx4s"
+        "videoUrl": "https://www.youtube.com/watch?v=52Sg9uFRx4s",
+        "declutterPrimary": true
       },
       {
         "id": "52Sg9uFRx4s_11",
@@ -13763,7 +14002,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Peder Mørk Mønsted",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=52Sg9uFRx4s"
+        "videoUrl": "https://www.youtube.com/watch?v=52Sg9uFRx4s",
+        "declutterPrimary": true
       },
       {
         "id": "52Sg9uFRx4s_12",
@@ -13787,7 +14027,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Peder Mørk Mønsted",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=52Sg9uFRx4s"
+        "videoUrl": "https://www.youtube.com/watch?v=52Sg9uFRx4s",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 12,
@@ -13799,7 +14040,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Peder Mørk Mønsted",
-    "theme": "Masterwork Retrospectives & Anthologies"
+    "theme": "Masterwork Retrospectives & Anthologies",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "gAWrEV-3ahw",
@@ -13840,7 +14084,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Eugène Boudin",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=gAWrEV-3ahw"
+        "videoUrl": "https://www.youtube.com/watch?v=gAWrEV-3ahw",
+        "declutterPrimary": true
       },
       {
         "id": "gAWrEV-3ahw_2",
@@ -13864,7 +14109,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Eugène Boudin",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=gAWrEV-3ahw"
+        "videoUrl": "https://www.youtube.com/watch?v=gAWrEV-3ahw",
+        "declutterPrimary": true
       },
       {
         "id": "gAWrEV-3ahw_3",
@@ -13888,7 +14134,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Eugène Boudin",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=gAWrEV-3ahw"
+        "videoUrl": "https://www.youtube.com/watch?v=gAWrEV-3ahw",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 3,
@@ -13900,7 +14147,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Eugène Boudin",
-    "theme": "Masterwork Retrospectives & Anthologies"
+    "theme": "Masterwork Retrospectives & Anthologies",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "AWcmN1W_jJI",
@@ -13941,7 +14191,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI"
+        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI",
+        "declutterPrimary": true
       },
       {
         "id": "AWcmN1W_jJI_2",
@@ -13965,7 +14216,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI"
+        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI",
+        "declutterPrimary": true
       },
       {
         "id": "AWcmN1W_jJI_3",
@@ -13989,7 +14241,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI"
+        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI",
+        "declutterPrimary": true
       },
       {
         "id": "AWcmN1W_jJI_4",
@@ -14013,7 +14266,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI"
+        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI",
+        "declutterPrimary": true
       },
       {
         "id": "AWcmN1W_jJI_5",
@@ -14037,7 +14291,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI"
+        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI",
+        "declutterPrimary": true
       },
       {
         "id": "AWcmN1W_jJI_6",
@@ -14061,7 +14316,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI"
+        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI",
+        "declutterPrimary": true
       },
       {
         "id": "AWcmN1W_jJI_7",
@@ -14085,7 +14341,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI"
+        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI",
+        "declutterPrimary": true
       },
       {
         "id": "AWcmN1W_jJI_8",
@@ -14109,7 +14366,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI"
+        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI",
+        "declutterPrimary": true
       },
       {
         "id": "AWcmN1W_jJI_9",
@@ -14133,7 +14391,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI"
+        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI",
+        "declutterPrimary": true
       },
       {
         "id": "AWcmN1W_jJI_10",
@@ -14157,7 +14416,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI"
+        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI",
+        "declutterPrimary": true
       },
       {
         "id": "AWcmN1W_jJI_11",
@@ -14181,7 +14441,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI"
+        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI",
+        "declutterPrimary": true
       },
       {
         "id": "AWcmN1W_jJI_12",
@@ -14205,7 +14466,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI"
+        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI",
+        "declutterPrimary": true
       },
       {
         "id": "AWcmN1W_jJI_13",
@@ -14229,7 +14491,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI"
+        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI",
+        "declutterPrimary": true
       },
       {
         "id": "AWcmN1W_jJI_14",
@@ -14253,7 +14516,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI"
+        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI",
+        "declutterPrimary": true
       },
       {
         "id": "AWcmN1W_jJI_15",
@@ -14277,7 +14541,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI"
+        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI",
+        "declutterPrimary": true
       },
       {
         "id": "AWcmN1W_jJI_16",
@@ -14301,7 +14566,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI"
+        "videoUrl": "https://www.youtube.com/watch?v=AWcmN1W_jJI",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 16,
@@ -14313,7 +14579,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Masterwork Retrospectives & Anthologies"
+    "theme": "Masterwork Retrospectives & Anthologies",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "CBNoD-qbdss",
@@ -14354,7 +14623,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=CBNoD-qbdss"
+        "videoUrl": "https://www.youtube.com/watch?v=CBNoD-qbdss",
+        "declutterPrimary": true
       },
       {
         "id": "CBNoD-qbdss_2",
@@ -14378,7 +14648,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=CBNoD-qbdss"
+        "videoUrl": "https://www.youtube.com/watch?v=CBNoD-qbdss",
+        "declutterPrimary": true
       },
       {
         "id": "CBNoD-qbdss_3",
@@ -14402,7 +14673,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=CBNoD-qbdss"
+        "videoUrl": "https://www.youtube.com/watch?v=CBNoD-qbdss",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 3,
@@ -14414,7 +14686,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Train Nostalgia & Gare Saint-Lazare"
+    "theme": "Train Nostalgia & Gare Saint-Lazare",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "FTxh92VdZVw",
@@ -14455,7 +14730,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=FTxh92VdZVw"
+        "videoUrl": "https://www.youtube.com/watch?v=FTxh92VdZVw",
+        "declutterPrimary": true
       },
       {
         "id": "FTxh92VdZVw_2",
@@ -14479,7 +14755,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=FTxh92VdZVw"
+        "videoUrl": "https://www.youtube.com/watch?v=FTxh92VdZVw",
+        "declutterPrimary": true
       },
       {
         "id": "FTxh92VdZVw_3",
@@ -14503,7 +14780,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=FTxh92VdZVw"
+        "videoUrl": "https://www.youtube.com/watch?v=FTxh92VdZVw",
+        "declutterPrimary": true
       },
       {
         "id": "FTxh92VdZVw_4",
@@ -14527,7 +14805,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=FTxh92VdZVw"
+        "videoUrl": "https://www.youtube.com/watch?v=FTxh92VdZVw",
+        "declutterPrimary": true
       },
       {
         "id": "FTxh92VdZVw_5",
@@ -14551,7 +14830,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=FTxh92VdZVw"
+        "videoUrl": "https://www.youtube.com/watch?v=FTxh92VdZVw",
+        "declutterPrimary": true
       },
       {
         "id": "FTxh92VdZVw_6",
@@ -14575,7 +14855,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=FTxh92VdZVw"
+        "videoUrl": "https://www.youtube.com/watch?v=FTxh92VdZVw",
+        "declutterPrimary": true
       },
       {
         "id": "FTxh92VdZVw_7",
@@ -14599,7 +14880,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=FTxh92VdZVw"
+        "videoUrl": "https://www.youtube.com/watch?v=FTxh92VdZVw",
+        "declutterPrimary": true
       },
       {
         "id": "FTxh92VdZVw_8",
@@ -14623,7 +14905,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=FTxh92VdZVw"
+        "videoUrl": "https://www.youtube.com/watch?v=FTxh92VdZVw",
+        "declutterPrimary": true
       },
       {
         "id": "FTxh92VdZVw_9",
@@ -14647,7 +14930,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=FTxh92VdZVw"
+        "videoUrl": "https://www.youtube.com/watch?v=FTxh92VdZVw",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -14659,7 +14943,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "49gUho777mI",
@@ -14700,7 +14987,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Alfred Sisley",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=49gUho777mI"
+        "videoUrl": "https://www.youtube.com/watch?v=49gUho777mI",
+        "declutterPrimary": true
       },
       {
         "id": "49gUho777mI_2",
@@ -14724,7 +15012,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Alfred Sisley",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=49gUho777mI"
+        "videoUrl": "https://www.youtube.com/watch?v=49gUho777mI",
+        "declutterPrimary": true
       },
       {
         "id": "49gUho777mI_3",
@@ -14748,7 +15037,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Alfred Sisley",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=49gUho777mI"
+        "videoUrl": "https://www.youtube.com/watch?v=49gUho777mI",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 3,
@@ -14760,7 +15050,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Alfred Sisley",
-    "theme": "Masterwork Retrospectives & Anthologies"
+    "theme": "Masterwork Retrospectives & Anthologies",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "oIDKMOVf_RI",
@@ -14801,7 +15094,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI"
+        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI",
+        "declutterPrimary": true
       },
       {
         "id": "oIDKMOVf_RI_2",
@@ -14825,7 +15119,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI"
+        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI",
+        "declutterPrimary": true
       },
       {
         "id": "oIDKMOVf_RI_3",
@@ -14849,7 +15144,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI"
+        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI",
+        "declutterPrimary": true
       },
       {
         "id": "oIDKMOVf_RI_4",
@@ -14873,7 +15169,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI"
+        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI",
+        "declutterPrimary": true
       },
       {
         "id": "oIDKMOVf_RI_5",
@@ -14897,7 +15194,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI"
+        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI",
+        "declutterPrimary": true
       },
       {
         "id": "oIDKMOVf_RI_6",
@@ -14921,7 +15219,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI"
+        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI",
+        "declutterPrimary": true
       },
       {
         "id": "oIDKMOVf_RI_7",
@@ -14945,7 +15244,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI"
+        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI",
+        "declutterPrimary": true
       },
       {
         "id": "oIDKMOVf_RI_8",
@@ -14969,7 +15269,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI"
+        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI",
+        "declutterPrimary": true
       },
       {
         "id": "oIDKMOVf_RI_9",
@@ -14993,7 +15294,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI"
+        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI",
+        "declutterPrimary": true
       },
       {
         "id": "oIDKMOVf_RI_10",
@@ -15017,7 +15319,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI"
+        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI",
+        "declutterPrimary": true
       },
       {
         "id": "oIDKMOVf_RI_11",
@@ -15041,7 +15344,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI"
+        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI",
+        "declutterPrimary": true
       },
       {
         "id": "oIDKMOVf_RI_12",
@@ -15065,7 +15369,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI"
+        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI",
+        "declutterPrimary": true
       },
       {
         "id": "oIDKMOVf_RI_13",
@@ -15089,7 +15394,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI"
+        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI",
+        "declutterPrimary": true
       },
       {
         "id": "oIDKMOVf_RI_14",
@@ -15113,7 +15419,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI"
+        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI",
+        "declutterPrimary": true
       },
       {
         "id": "oIDKMOVf_RI_15",
@@ -15137,7 +15444,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI"
+        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI",
+        "declutterPrimary": true
       },
       {
         "id": "oIDKMOVf_RI_16",
@@ -15161,7 +15469,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI"
+        "videoUrl": "https://www.youtube.com/watch?v=oIDKMOVf_RI",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 16,
@@ -15173,7 +15482,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Coastal Cliffs, Étretat & Ocean Waves"
+    "theme": "Coastal Cliffs, Étretat & Ocean Waves",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "qykGjhk80Sw",
@@ -15214,7 +15526,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=qykGjhk80Sw"
+        "videoUrl": "https://www.youtube.com/watch?v=qykGjhk80Sw",
+        "declutterPrimary": true
       },
       {
         "id": "qykGjhk80Sw_2",
@@ -15238,7 +15551,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=qykGjhk80Sw"
+        "videoUrl": "https://www.youtube.com/watch?v=qykGjhk80Sw",
+        "declutterPrimary": true
       },
       {
         "id": "qykGjhk80Sw_3",
@@ -15262,7 +15576,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=qykGjhk80Sw"
+        "videoUrl": "https://www.youtube.com/watch?v=qykGjhk80Sw",
+        "declutterPrimary": true
       },
       {
         "id": "qykGjhk80Sw_4",
@@ -15286,7 +15601,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=qykGjhk80Sw"
+        "videoUrl": "https://www.youtube.com/watch?v=qykGjhk80Sw",
+        "declutterPrimary": true
       },
       {
         "id": "qykGjhk80Sw_5",
@@ -15310,7 +15626,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=qykGjhk80Sw"
+        "videoUrl": "https://www.youtube.com/watch?v=qykGjhk80Sw",
+        "declutterPrimary": true
       },
       {
         "id": "qykGjhk80Sw_6",
@@ -15334,7 +15651,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=qykGjhk80Sw"
+        "videoUrl": "https://www.youtube.com/watch?v=qykGjhk80Sw",
+        "declutterPrimary": true
       },
       {
         "id": "qykGjhk80Sw_7",
@@ -15358,7 +15676,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=qykGjhk80Sw"
+        "videoUrl": "https://www.youtube.com/watch?v=qykGjhk80Sw",
+        "declutterPrimary": true
       },
       {
         "id": "qykGjhk80Sw_8",
@@ -15382,7 +15701,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=qykGjhk80Sw"
+        "videoUrl": "https://www.youtube.com/watch?v=qykGjhk80Sw",
+        "declutterPrimary": true
       },
       {
         "id": "qykGjhk80Sw_9",
@@ -15406,7 +15726,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=qykGjhk80Sw"
+        "videoUrl": "https://www.youtube.com/watch?v=qykGjhk80Sw",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -15418,7 +15739,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Winter & Snowbound Landscapes"
+    "theme": "Winter & Snowbound Landscapes",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "XUEzojRuVhw",
@@ -15459,7 +15783,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Fritz Thaulow",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XUEzojRuVhw"
+        "videoUrl": "https://www.youtube.com/watch?v=XUEzojRuVhw",
+        "declutterPrimary": true
       },
       {
         "id": "XUEzojRuVhw_2",
@@ -15483,7 +15808,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Fritz Thaulow",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XUEzojRuVhw"
+        "videoUrl": "https://www.youtube.com/watch?v=XUEzojRuVhw",
+        "declutterPrimary": true
       },
       {
         "id": "XUEzojRuVhw_3",
@@ -15507,7 +15833,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Fritz Thaulow",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XUEzojRuVhw"
+        "videoUrl": "https://www.youtube.com/watch?v=XUEzojRuVhw",
+        "declutterPrimary": true
       },
       {
         "id": "XUEzojRuVhw_4",
@@ -15531,7 +15858,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Fritz Thaulow",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XUEzojRuVhw"
+        "videoUrl": "https://www.youtube.com/watch?v=XUEzojRuVhw",
+        "declutterPrimary": true
       },
       {
         "id": "XUEzojRuVhw_5",
@@ -15555,7 +15883,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Fritz Thaulow",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XUEzojRuVhw"
+        "videoUrl": "https://www.youtube.com/watch?v=XUEzojRuVhw",
+        "declutterPrimary": true
       },
       {
         "id": "XUEzojRuVhw_6",
@@ -15579,7 +15908,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Fritz Thaulow",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XUEzojRuVhw"
+        "videoUrl": "https://www.youtube.com/watch?v=XUEzojRuVhw",
+        "declutterPrimary": true
       },
       {
         "id": "XUEzojRuVhw_7",
@@ -15603,7 +15933,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Fritz Thaulow",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XUEzojRuVhw"
+        "videoUrl": "https://www.youtube.com/watch?v=XUEzojRuVhw",
+        "declutterPrimary": true
       },
       {
         "id": "XUEzojRuVhw_8",
@@ -15627,7 +15958,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Fritz Thaulow",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XUEzojRuVhw"
+        "videoUrl": "https://www.youtube.com/watch?v=XUEzojRuVhw",
+        "declutterPrimary": true
       },
       {
         "id": "XUEzojRuVhw_9",
@@ -15651,7 +15983,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Fritz Thaulow",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XUEzojRuVhw"
+        "videoUrl": "https://www.youtube.com/watch?v=XUEzojRuVhw",
+        "declutterPrimary": true
       },
       {
         "id": "XUEzojRuVhw_10",
@@ -15675,7 +16008,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Fritz Thaulow",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XUEzojRuVhw"
+        "videoUrl": "https://www.youtube.com/watch?v=XUEzojRuVhw",
+        "declutterPrimary": true
       },
       {
         "id": "XUEzojRuVhw_11",
@@ -15699,7 +16033,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Fritz Thaulow",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XUEzojRuVhw"
+        "videoUrl": "https://www.youtube.com/watch?v=XUEzojRuVhw",
+        "declutterPrimary": true
       },
       {
         "id": "XUEzojRuVhw_12",
@@ -15723,7 +16058,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Fritz Thaulow",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XUEzojRuVhw"
+        "videoUrl": "https://www.youtube.com/watch?v=XUEzojRuVhw",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 12,
@@ -15735,7 +16071,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Fritz Thaulow",
-    "theme": "Masterwork Retrospectives & Anthologies"
+    "theme": "Masterwork Retrospectives & Anthologies",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "KMd8wH1bQsY",
@@ -15776,7 +16115,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=KMd8wH1bQsY"
+        "videoUrl": "https://www.youtube.com/watch?v=KMd8wH1bQsY",
+        "declutterPrimary": true
       },
       {
         "id": "KMd8wH1bQsY_2",
@@ -15800,7 +16140,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=KMd8wH1bQsY"
+        "videoUrl": "https://www.youtube.com/watch?v=KMd8wH1bQsY",
+        "declutterPrimary": true
       },
       {
         "id": "KMd8wH1bQsY_3",
@@ -15824,7 +16165,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=KMd8wH1bQsY"
+        "videoUrl": "https://www.youtube.com/watch?v=KMd8wH1bQsY",
+        "declutterPrimary": true
       },
       {
         "id": "KMd8wH1bQsY_4",
@@ -15848,7 +16190,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=KMd8wH1bQsY"
+        "videoUrl": "https://www.youtube.com/watch?v=KMd8wH1bQsY",
+        "declutterPrimary": true
       },
       {
         "id": "KMd8wH1bQsY_5",
@@ -15872,7 +16215,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=KMd8wH1bQsY"
+        "videoUrl": "https://www.youtube.com/watch?v=KMd8wH1bQsY",
+        "declutterPrimary": true
       },
       {
         "id": "KMd8wH1bQsY_6",
@@ -15896,7 +16240,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=KMd8wH1bQsY"
+        "videoUrl": "https://www.youtube.com/watch?v=KMd8wH1bQsY",
+        "declutterPrimary": true
       },
       {
         "id": "KMd8wH1bQsY_7",
@@ -15920,7 +16265,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=KMd8wH1bQsY"
+        "videoUrl": "https://www.youtube.com/watch?v=KMd8wH1bQsY",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -15932,7 +16278,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Vincent van Gogh",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "x3fwY0Kh7uM",
@@ -15973,7 +16322,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=x3fwY0Kh7uM"
+        "videoUrl": "https://www.youtube.com/watch?v=x3fwY0Kh7uM",
+        "declutterPrimary": true
       },
       {
         "id": "x3fwY0Kh7uM_2",
@@ -15997,7 +16347,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=x3fwY0Kh7uM"
+        "videoUrl": "https://www.youtube.com/watch?v=x3fwY0Kh7uM",
+        "declutterPrimary": true
       },
       {
         "id": "x3fwY0Kh7uM_3",
@@ -16021,7 +16372,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=x3fwY0Kh7uM"
+        "videoUrl": "https://www.youtube.com/watch?v=x3fwY0Kh7uM",
+        "declutterPrimary": true
       },
       {
         "id": "x3fwY0Kh7uM_4",
@@ -16045,7 +16397,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=x3fwY0Kh7uM"
+        "videoUrl": "https://www.youtube.com/watch?v=x3fwY0Kh7uM",
+        "declutterPrimary": true
       },
       {
         "id": "x3fwY0Kh7uM_5",
@@ -16069,7 +16422,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=x3fwY0Kh7uM"
+        "videoUrl": "https://www.youtube.com/watch?v=x3fwY0Kh7uM",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 5,
@@ -16081,7 +16435,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Winter & Snowbound Landscapes"
+    "theme": "Winter & Snowbound Landscapes",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "40xg3sB2PEc",
@@ -16122,7 +16479,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Ivan Shishkin",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc"
+        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc",
+        "declutterPrimary": true
       },
       {
         "id": "40xg3sB2PEc_2",
@@ -16146,7 +16504,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Ivan Shishkin",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc"
+        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc",
+        "declutterPrimary": true
       },
       {
         "id": "40xg3sB2PEc_3",
@@ -16170,7 +16529,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Ivan Shishkin",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc"
+        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc",
+        "declutterPrimary": true
       },
       {
         "id": "40xg3sB2PEc_4",
@@ -16194,7 +16554,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Ivan Shishkin",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc"
+        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc",
+        "declutterPrimary": true
       },
       {
         "id": "40xg3sB2PEc_5",
@@ -16218,7 +16579,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Ivan Shishkin",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc"
+        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc",
+        "declutterPrimary": true
       },
       {
         "id": "40xg3sB2PEc_6",
@@ -16242,7 +16604,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Ivan Shishkin",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc"
+        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc",
+        "declutterPrimary": true
       },
       {
         "id": "40xg3sB2PEc_7",
@@ -16266,7 +16629,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Ivan Shishkin",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc"
+        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc",
+        "declutterPrimary": true
       },
       {
         "id": "40xg3sB2PEc_8",
@@ -16290,7 +16654,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Ivan Shishkin",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc"
+        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc",
+        "declutterPrimary": true
       },
       {
         "id": "40xg3sB2PEc_9",
@@ -16314,7 +16679,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Ivan Shishkin",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc"
+        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc",
+        "declutterPrimary": true
       },
       {
         "id": "40xg3sB2PEc_10",
@@ -16338,7 +16704,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Ivan Shishkin",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc"
+        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc",
+        "declutterPrimary": true
       },
       {
         "id": "40xg3sB2PEc_11",
@@ -16362,7 +16729,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Ivan Shishkin",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc"
+        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc",
+        "declutterPrimary": true
       },
       {
         "id": "40xg3sB2PEc_12",
@@ -16386,7 +16754,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Ivan Shishkin",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc"
+        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc",
+        "declutterPrimary": true
       },
       {
         "id": "40xg3sB2PEc_13",
@@ -16410,7 +16779,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Ivan Shishkin",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc"
+        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc",
+        "declutterPrimary": true
       },
       {
         "id": "40xg3sB2PEc_14",
@@ -16434,7 +16804,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Ivan Shishkin",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc"
+        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc",
+        "declutterPrimary": true
       },
       {
         "id": "40xg3sB2PEc_15",
@@ -16458,7 +16829,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Ivan Shishkin",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc"
+        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc",
+        "declutterPrimary": true
       },
       {
         "id": "40xg3sB2PEc_16",
@@ -16482,7 +16854,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Ivan Shishkin",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc"
+        "videoUrl": "https://www.youtube.com/watch?v=40xg3sB2PEc",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 16,
@@ -16494,7 +16867,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Ivan Shishkin",
-    "theme": "Masterwork Retrospectives & Anthologies"
+    "theme": "Masterwork Retrospectives & Anthologies",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "4cdn4PvIjao",
@@ -16535,7 +16911,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Walter Moras",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=4cdn4PvIjao"
+        "videoUrl": "https://www.youtube.com/watch?v=4cdn4PvIjao",
+        "declutterPrimary": true
       },
       {
         "id": "4cdn4PvIjao_2",
@@ -16559,7 +16936,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Walter Moras",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=4cdn4PvIjao"
+        "videoUrl": "https://www.youtube.com/watch?v=4cdn4PvIjao",
+        "declutterPrimary": true
       },
       {
         "id": "4cdn4PvIjao_3",
@@ -16583,7 +16961,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Walter Moras",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=4cdn4PvIjao"
+        "videoUrl": "https://www.youtube.com/watch?v=4cdn4PvIjao",
+        "declutterPrimary": true
       },
       {
         "id": "4cdn4PvIjao_4",
@@ -16607,7 +16986,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Walter Moras",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=4cdn4PvIjao"
+        "videoUrl": "https://www.youtube.com/watch?v=4cdn4PvIjao",
+        "declutterPrimary": true
       },
       {
         "id": "4cdn4PvIjao_5",
@@ -16631,7 +17011,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Walter Moras",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=4cdn4PvIjao"
+        "videoUrl": "https://www.youtube.com/watch?v=4cdn4PvIjao",
+        "declutterPrimary": true
       },
       {
         "id": "4cdn4PvIjao_6",
@@ -16655,7 +17036,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Walter Moras",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=4cdn4PvIjao"
+        "videoUrl": "https://www.youtube.com/watch?v=4cdn4PvIjao",
+        "declutterPrimary": true
       },
       {
         "id": "4cdn4PvIjao_7",
@@ -16679,7 +17061,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Walter Moras",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=4cdn4PvIjao"
+        "videoUrl": "https://www.youtube.com/watch?v=4cdn4PvIjao",
+        "declutterPrimary": true
       },
       {
         "id": "4cdn4PvIjao_8",
@@ -16703,7 +17086,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Walter Moras",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=4cdn4PvIjao"
+        "videoUrl": "https://www.youtube.com/watch?v=4cdn4PvIjao",
+        "declutterPrimary": true
       },
       {
         "id": "4cdn4PvIjao_9",
@@ -16727,7 +17111,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Walter Moras",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=4cdn4PvIjao"
+        "videoUrl": "https://www.youtube.com/watch?v=4cdn4PvIjao",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -16739,7 +17124,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Walter Moras",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "DwSmbvERJtk",
@@ -16767,7 +17155,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "CgCYYSY3AQs",
@@ -16808,7 +17199,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=CgCYYSY3AQs"
+        "videoUrl": "https://www.youtube.com/watch?v=CgCYYSY3AQs",
+        "declutterPrimary": true
       },
       {
         "id": "CgCYYSY3AQs_2",
@@ -16832,7 +17224,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=CgCYYSY3AQs"
+        "videoUrl": "https://www.youtube.com/watch?v=CgCYYSY3AQs",
+        "declutterPrimary": true
       },
       {
         "id": "CgCYYSY3AQs_3",
@@ -16856,7 +17249,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=CgCYYSY3AQs"
+        "videoUrl": "https://www.youtube.com/watch?v=CgCYYSY3AQs",
+        "declutterPrimary": true
       },
       {
         "id": "CgCYYSY3AQs_4",
@@ -16880,7 +17274,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=CgCYYSY3AQs"
+        "videoUrl": "https://www.youtube.com/watch?v=CgCYYSY3AQs",
+        "declutterPrimary": true
       },
       {
         "id": "CgCYYSY3AQs_5",
@@ -16904,7 +17299,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=CgCYYSY3AQs"
+        "videoUrl": "https://www.youtube.com/watch?v=CgCYYSY3AQs",
+        "declutterPrimary": true
       },
       {
         "id": "CgCYYSY3AQs_6",
@@ -16928,7 +17324,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=CgCYYSY3AQs"
+        "videoUrl": "https://www.youtube.com/watch?v=CgCYYSY3AQs",
+        "declutterPrimary": true
       },
       {
         "id": "CgCYYSY3AQs_7",
@@ -16952,7 +17349,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=CgCYYSY3AQs"
+        "videoUrl": "https://www.youtube.com/watch?v=CgCYYSY3AQs",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -16964,7 +17362,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Parisian Life & Belle Époque"
+    "theme": "Parisian Life & Belle Époque",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "ZXjKmShmdUc",
@@ -17005,7 +17406,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=ZXjKmShmdUc"
+        "videoUrl": "https://www.youtube.com/watch?v=ZXjKmShmdUc",
+        "declutterPrimary": true
       },
       {
         "id": "ZXjKmShmdUc_2",
@@ -17029,7 +17431,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=ZXjKmShmdUc"
+        "videoUrl": "https://www.youtube.com/watch?v=ZXjKmShmdUc",
+        "declutterPrimary": true
       },
       {
         "id": "ZXjKmShmdUc_3",
@@ -17053,7 +17456,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=ZXjKmShmdUc"
+        "videoUrl": "https://www.youtube.com/watch?v=ZXjKmShmdUc",
+        "declutterPrimary": true
       },
       {
         "id": "ZXjKmShmdUc_4",
@@ -17077,7 +17481,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=ZXjKmShmdUc"
+        "videoUrl": "https://www.youtube.com/watch?v=ZXjKmShmdUc",
+        "declutterPrimary": true
       },
       {
         "id": "ZXjKmShmdUc_5",
@@ -17101,7 +17506,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=ZXjKmShmdUc"
+        "videoUrl": "https://www.youtube.com/watch?v=ZXjKmShmdUc",
+        "declutterPrimary": true
       },
       {
         "id": "ZXjKmShmdUc_6",
@@ -17125,7 +17531,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=ZXjKmShmdUc"
+        "videoUrl": "https://www.youtube.com/watch?v=ZXjKmShmdUc",
+        "declutterPrimary": true
       },
       {
         "id": "ZXjKmShmdUc_7",
@@ -17149,7 +17556,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=ZXjKmShmdUc"
+        "videoUrl": "https://www.youtube.com/watch?v=ZXjKmShmdUc",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -17161,7 +17569,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "fjT4VO79B5U",
@@ -17202,7 +17613,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=fjT4VO79B5U"
+        "videoUrl": "https://www.youtube.com/watch?v=fjT4VO79B5U",
+        "declutterPrimary": true
       },
       {
         "id": "fjT4VO79B5U_2",
@@ -17226,7 +17638,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=fjT4VO79B5U"
+        "videoUrl": "https://www.youtube.com/watch?v=fjT4VO79B5U",
+        "declutterPrimary": true
       },
       {
         "id": "fjT4VO79B5U_3",
@@ -17250,7 +17663,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=fjT4VO79B5U"
+        "videoUrl": "https://www.youtube.com/watch?v=fjT4VO79B5U",
+        "declutterPrimary": true
       },
       {
         "id": "fjT4VO79B5U_4",
@@ -17274,7 +17688,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=fjT4VO79B5U"
+        "videoUrl": "https://www.youtube.com/watch?v=fjT4VO79B5U",
+        "declutterPrimary": true
       },
       {
         "id": "fjT4VO79B5U_5",
@@ -17298,7 +17713,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=fjT4VO79B5U"
+        "videoUrl": "https://www.youtube.com/watch?v=fjT4VO79B5U",
+        "declutterPrimary": true
       },
       {
         "id": "fjT4VO79B5U_6",
@@ -17322,7 +17738,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=fjT4VO79B5U"
+        "videoUrl": "https://www.youtube.com/watch?v=fjT4VO79B5U",
+        "declutterPrimary": true
       },
       {
         "id": "fjT4VO79B5U_7",
@@ -17346,7 +17763,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=fjT4VO79B5U"
+        "videoUrl": "https://www.youtube.com/watch?v=fjT4VO79B5U",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -17358,7 +17776,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Pierre-Auguste Renoir",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "CnaWoKQRCnI",
@@ -17399,7 +17820,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI"
+        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI",
+        "declutterPrimary": true
       },
       {
         "id": "CnaWoKQRCnI_2",
@@ -17423,7 +17845,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI"
+        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI",
+        "declutterPrimary": true
       },
       {
         "id": "CnaWoKQRCnI_3",
@@ -17447,7 +17870,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI"
+        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI",
+        "declutterPrimary": true
       },
       {
         "id": "CnaWoKQRCnI_4",
@@ -17471,7 +17895,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI"
+        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI",
+        "declutterPrimary": true
       },
       {
         "id": "CnaWoKQRCnI_5",
@@ -17495,7 +17920,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI"
+        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI",
+        "declutterPrimary": true
       },
       {
         "id": "CnaWoKQRCnI_6",
@@ -17519,7 +17945,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI"
+        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI",
+        "declutterPrimary": true
       },
       {
         "id": "CnaWoKQRCnI_7",
@@ -17543,7 +17970,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI"
+        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI",
+        "declutterPrimary": true
       },
       {
         "id": "CnaWoKQRCnI_8",
@@ -17567,7 +17995,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI"
+        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI",
+        "declutterPrimary": true
       },
       {
         "id": "CnaWoKQRCnI_9",
@@ -17591,7 +18020,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI"
+        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI",
+        "declutterPrimary": true
       },
       {
         "id": "CnaWoKQRCnI_10",
@@ -17615,7 +18045,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI"
+        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI",
+        "declutterPrimary": true
       },
       {
         "id": "CnaWoKQRCnI_11",
@@ -17639,7 +18070,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI"
+        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI",
+        "declutterPrimary": true
       },
       {
         "id": "CnaWoKQRCnI_12",
@@ -17663,7 +18095,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI"
+        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI",
+        "declutterPrimary": true
       },
       {
         "id": "CnaWoKQRCnI_13",
@@ -17687,7 +18120,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI"
+        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI",
+        "declutterPrimary": true
       },
       {
         "id": "CnaWoKQRCnI_14",
@@ -17711,7 +18145,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI"
+        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI",
+        "declutterPrimary": true
       },
       {
         "id": "CnaWoKQRCnI_15",
@@ -17735,7 +18170,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI"
+        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI",
+        "declutterPrimary": true
       },
       {
         "id": "CnaWoKQRCnI_16",
@@ -17759,7 +18195,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI"
+        "videoUrl": "https://www.youtube.com/watch?v=CnaWoKQRCnI",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 16,
@@ -17771,7 +18208,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Vincent van Gogh",
-    "theme": "Masterwork Retrospectives & Anthologies"
+    "theme": "Masterwork Retrospectives & Anthologies",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "j8kxk_s1Iv8",
@@ -17812,7 +18252,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=j8kxk_s1Iv8"
+        "videoUrl": "https://www.youtube.com/watch?v=j8kxk_s1Iv8",
+        "declutterPrimary": true
       },
       {
         "id": "j8kxk_s1Iv8_2",
@@ -17836,7 +18277,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=j8kxk_s1Iv8"
+        "videoUrl": "https://www.youtube.com/watch?v=j8kxk_s1Iv8",
+        "declutterPrimary": true
       },
       {
         "id": "j8kxk_s1Iv8_3",
@@ -17860,7 +18302,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=j8kxk_s1Iv8"
+        "videoUrl": "https://www.youtube.com/watch?v=j8kxk_s1Iv8",
+        "declutterPrimary": true
       },
       {
         "id": "j8kxk_s1Iv8_4",
@@ -17884,7 +18327,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=j8kxk_s1Iv8"
+        "videoUrl": "https://www.youtube.com/watch?v=j8kxk_s1Iv8",
+        "declutterPrimary": true
       },
       {
         "id": "j8kxk_s1Iv8_5",
@@ -17908,7 +18352,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=j8kxk_s1Iv8"
+        "videoUrl": "https://www.youtube.com/watch?v=j8kxk_s1Iv8",
+        "declutterPrimary": true
       },
       {
         "id": "j8kxk_s1Iv8_6",
@@ -17932,7 +18377,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=j8kxk_s1Iv8"
+        "videoUrl": "https://www.youtube.com/watch?v=j8kxk_s1Iv8",
+        "declutterPrimary": true
       },
       {
         "id": "j8kxk_s1Iv8_7",
@@ -17956,7 +18402,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=j8kxk_s1Iv8"
+        "videoUrl": "https://www.youtube.com/watch?v=j8kxk_s1Iv8",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -17968,7 +18415,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "Vls1Mq-oMdg",
@@ -18009,7 +18459,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Vls1Mq-oMdg"
+        "videoUrl": "https://www.youtube.com/watch?v=Vls1Mq-oMdg",
+        "declutterPrimary": true
       },
       {
         "id": "Vls1Mq-oMdg_2",
@@ -18033,7 +18484,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Vls1Mq-oMdg"
+        "videoUrl": "https://www.youtube.com/watch?v=Vls1Mq-oMdg",
+        "declutterPrimary": true
       },
       {
         "id": "Vls1Mq-oMdg_3",
@@ -18057,7 +18509,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Vls1Mq-oMdg"
+        "videoUrl": "https://www.youtube.com/watch?v=Vls1Mq-oMdg",
+        "declutterPrimary": true
       },
       {
         "id": "Vls1Mq-oMdg_4",
@@ -18081,7 +18534,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Vls1Mq-oMdg"
+        "videoUrl": "https://www.youtube.com/watch?v=Vls1Mq-oMdg",
+        "declutterPrimary": true
       },
       {
         "id": "Vls1Mq-oMdg_5",
@@ -18105,7 +18559,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Vls1Mq-oMdg"
+        "videoUrl": "https://www.youtube.com/watch?v=Vls1Mq-oMdg",
+        "declutterPrimary": true
       },
       {
         "id": "Vls1Mq-oMdg_6",
@@ -18129,7 +18584,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Vls1Mq-oMdg"
+        "videoUrl": "https://www.youtube.com/watch?v=Vls1Mq-oMdg",
+        "declutterPrimary": true
       },
       {
         "id": "Vls1Mq-oMdg_7",
@@ -18153,7 +18609,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Vls1Mq-oMdg"
+        "videoUrl": "https://www.youtube.com/watch?v=Vls1Mq-oMdg",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -18165,7 +18622,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Vincent van Gogh",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "Xul5WT0ReYw",
@@ -18206,7 +18666,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=Xul5WT0ReYw"
+        "videoUrl": "https://www.youtube.com/watch?v=Xul5WT0ReYw",
+        "declutterPrimary": true
       },
       {
         "id": "Xul5WT0ReYw_2",
@@ -18230,7 +18691,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=Xul5WT0ReYw"
+        "videoUrl": "https://www.youtube.com/watch?v=Xul5WT0ReYw",
+        "declutterPrimary": true
       },
       {
         "id": "Xul5WT0ReYw_3",
@@ -18254,7 +18716,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=Xul5WT0ReYw"
+        "videoUrl": "https://www.youtube.com/watch?v=Xul5WT0ReYw",
+        "declutterPrimary": true
       },
       {
         "id": "Xul5WT0ReYw_4",
@@ -18278,7 +18741,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=Xul5WT0ReYw"
+        "videoUrl": "https://www.youtube.com/watch?v=Xul5WT0ReYw",
+        "declutterPrimary": true
       },
       {
         "id": "Xul5WT0ReYw_5",
@@ -18302,7 +18766,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=Xul5WT0ReYw"
+        "videoUrl": "https://www.youtube.com/watch?v=Xul5WT0ReYw",
+        "declutterPrimary": true
       },
       {
         "id": "Xul5WT0ReYw_6",
@@ -18326,7 +18791,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=Xul5WT0ReYw"
+        "videoUrl": "https://www.youtube.com/watch?v=Xul5WT0ReYw",
+        "declutterPrimary": true
       },
       {
         "id": "Xul5WT0ReYw_7",
@@ -18350,7 +18816,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=Xul5WT0ReYw"
+        "videoUrl": "https://www.youtube.com/watch?v=Xul5WT0ReYw",
+        "declutterPrimary": true
       },
       {
         "id": "Xul5WT0ReYw_8",
@@ -18374,7 +18841,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=Xul5WT0ReYw"
+        "videoUrl": "https://www.youtube.com/watch?v=Xul5WT0ReYw",
+        "declutterPrimary": true
       },
       {
         "id": "Xul5WT0ReYw_9",
@@ -18398,7 +18866,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=Xul5WT0ReYw"
+        "videoUrl": "https://www.youtube.com/watch?v=Xul5WT0ReYw",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -18410,7 +18879,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Masterwork Retrospectives & Anthologies"
+    "theme": "Masterwork Retrospectives & Anthologies",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "8tt3XV_OIlc",
@@ -18451,7 +18923,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Gustave Loiseau",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=8tt3XV_OIlc"
+        "videoUrl": "https://www.youtube.com/watch?v=8tt3XV_OIlc",
+        "declutterPrimary": true
       },
       {
         "id": "8tt3XV_OIlc_2",
@@ -18475,7 +18948,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Gustave Loiseau",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=8tt3XV_OIlc"
+        "videoUrl": "https://www.youtube.com/watch?v=8tt3XV_OIlc",
+        "declutterPrimary": true
       },
       {
         "id": "8tt3XV_OIlc_3",
@@ -18499,7 +18973,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Gustave Loiseau",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=8tt3XV_OIlc"
+        "videoUrl": "https://www.youtube.com/watch?v=8tt3XV_OIlc",
+        "declutterPrimary": true
       },
       {
         "id": "8tt3XV_OIlc_4",
@@ -18523,7 +18998,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Gustave Loiseau",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=8tt3XV_OIlc"
+        "videoUrl": "https://www.youtube.com/watch?v=8tt3XV_OIlc",
+        "declutterPrimary": true
       },
       {
         "id": "8tt3XV_OIlc_5",
@@ -18547,7 +19023,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Gustave Loiseau",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=8tt3XV_OIlc"
+        "videoUrl": "https://www.youtube.com/watch?v=8tt3XV_OIlc",
+        "declutterPrimary": true
       },
       {
         "id": "8tt3XV_OIlc_6",
@@ -18571,7 +19048,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Gustave Loiseau",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=8tt3XV_OIlc"
+        "videoUrl": "https://www.youtube.com/watch?v=8tt3XV_OIlc",
+        "declutterPrimary": true
       },
       {
         "id": "8tt3XV_OIlc_7",
@@ -18595,7 +19073,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Gustave Loiseau",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=8tt3XV_OIlc"
+        "videoUrl": "https://www.youtube.com/watch?v=8tt3XV_OIlc",
+        "declutterPrimary": true
       },
       {
         "id": "8tt3XV_OIlc_8",
@@ -18619,7 +19098,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Gustave Loiseau",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=8tt3XV_OIlc"
+        "videoUrl": "https://www.youtube.com/watch?v=8tt3XV_OIlc",
+        "declutterPrimary": true
       },
       {
         "id": "8tt3XV_OIlc_9",
@@ -18643,7 +19123,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Gustave Loiseau",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=8tt3XV_OIlc"
+        "videoUrl": "https://www.youtube.com/watch?v=8tt3XV_OIlc",
+        "declutterPrimary": true
       },
       {
         "id": "8tt3XV_OIlc_10",
@@ -18667,7 +19148,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Gustave Loiseau",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=8tt3XV_OIlc"
+        "videoUrl": "https://www.youtube.com/watch?v=8tt3XV_OIlc",
+        "declutterPrimary": true
       },
       {
         "id": "8tt3XV_OIlc_11",
@@ -18691,7 +19173,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Gustave Loiseau",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=8tt3XV_OIlc"
+        "videoUrl": "https://www.youtube.com/watch?v=8tt3XV_OIlc",
+        "declutterPrimary": true
       },
       {
         "id": "8tt3XV_OIlc_12",
@@ -18715,7 +19198,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Gustave Loiseau",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=8tt3XV_OIlc"
+        "videoUrl": "https://www.youtube.com/watch?v=8tt3XV_OIlc",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 12,
@@ -18727,7 +19211,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Gustave Loiseau",
-    "theme": "Coastal Cliffs, Étretat & Ocean Waves"
+    "theme": "Coastal Cliffs, Étretat & Ocean Waves",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "yYmuEB9XTnY",
@@ -18768,7 +19255,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=yYmuEB9XTnY"
+        "videoUrl": "https://www.youtube.com/watch?v=yYmuEB9XTnY",
+        "declutterPrimary": true
       },
       {
         "id": "yYmuEB9XTnY_2",
@@ -18792,7 +19280,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=yYmuEB9XTnY"
+        "videoUrl": "https://www.youtube.com/watch?v=yYmuEB9XTnY",
+        "declutterPrimary": true
       },
       {
         "id": "yYmuEB9XTnY_3",
@@ -18816,7 +19305,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=yYmuEB9XTnY"
+        "videoUrl": "https://www.youtube.com/watch?v=yYmuEB9XTnY",
+        "declutterPrimary": true
       },
       {
         "id": "yYmuEB9XTnY_4",
@@ -18840,7 +19330,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=yYmuEB9XTnY"
+        "videoUrl": "https://www.youtube.com/watch?v=yYmuEB9XTnY",
+        "declutterPrimary": true
       },
       {
         "id": "yYmuEB9XTnY_5",
@@ -18864,7 +19355,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=yYmuEB9XTnY"
+        "videoUrl": "https://www.youtube.com/watch?v=yYmuEB9XTnY",
+        "declutterPrimary": true
       },
       {
         "id": "yYmuEB9XTnY_6",
@@ -18888,7 +19380,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=yYmuEB9XTnY"
+        "videoUrl": "https://www.youtube.com/watch?v=yYmuEB9XTnY",
+        "declutterPrimary": true
       },
       {
         "id": "yYmuEB9XTnY_7",
@@ -18912,7 +19405,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=yYmuEB9XTnY"
+        "videoUrl": "https://www.youtube.com/watch?v=yYmuEB9XTnY",
+        "declutterPrimary": true
       },
       {
         "id": "yYmuEB9XTnY_8",
@@ -18936,7 +19430,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=yYmuEB9XTnY"
+        "videoUrl": "https://www.youtube.com/watch?v=yYmuEB9XTnY",
+        "declutterPrimary": true
       },
       {
         "id": "yYmuEB9XTnY_9",
@@ -18960,7 +19455,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=yYmuEB9XTnY"
+        "videoUrl": "https://www.youtube.com/watch?v=yYmuEB9XTnY",
+        "declutterPrimary": true
       },
       {
         "id": "yYmuEB9XTnY_10",
@@ -18984,7 +19480,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=yYmuEB9XTnY"
+        "videoUrl": "https://www.youtube.com/watch?v=yYmuEB9XTnY",
+        "declutterPrimary": true
       },
       {
         "id": "yYmuEB9XTnY_11",
@@ -19008,7 +19505,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=yYmuEB9XTnY"
+        "videoUrl": "https://www.youtube.com/watch?v=yYmuEB9XTnY",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 11,
@@ -19020,7 +19518,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Masterwork Retrospectives & Anthologies"
+    "theme": "Masterwork Retrospectives & Anthologies",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "o2If95E4GLI",
@@ -19048,7 +19549,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Edouard-Léon Cortès",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "V0Nz7TQcGF0",
@@ -19089,7 +19593,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=V0Nz7TQcGF0"
+        "videoUrl": "https://www.youtube.com/watch?v=V0Nz7TQcGF0",
+        "declutterPrimary": true
       },
       {
         "id": "V0Nz7TQcGF0_2",
@@ -19113,7 +19618,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=V0Nz7TQcGF0"
+        "videoUrl": "https://www.youtube.com/watch?v=V0Nz7TQcGF0",
+        "declutterPrimary": true
       },
       {
         "id": "V0Nz7TQcGF0_3",
@@ -19137,7 +19643,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=V0Nz7TQcGF0"
+        "videoUrl": "https://www.youtube.com/watch?v=V0Nz7TQcGF0",
+        "declutterPrimary": true
       },
       {
         "id": "V0Nz7TQcGF0_4",
@@ -19161,7 +19668,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=V0Nz7TQcGF0"
+        "videoUrl": "https://www.youtube.com/watch?v=V0Nz7TQcGF0",
+        "declutterPrimary": true
       },
       {
         "id": "V0Nz7TQcGF0_5",
@@ -19185,7 +19693,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=V0Nz7TQcGF0"
+        "videoUrl": "https://www.youtube.com/watch?v=V0Nz7TQcGF0",
+        "declutterPrimary": true
       },
       {
         "id": "V0Nz7TQcGF0_6",
@@ -19209,7 +19718,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=V0Nz7TQcGF0"
+        "videoUrl": "https://www.youtube.com/watch?v=V0Nz7TQcGF0",
+        "declutterPrimary": true
       },
       {
         "id": "V0Nz7TQcGF0_7",
@@ -19233,7 +19743,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=V0Nz7TQcGF0"
+        "videoUrl": "https://www.youtube.com/watch?v=V0Nz7TQcGF0",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -19245,7 +19756,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Water Lilies & Garden Sanctuaries"
+    "theme": "Water Lilies & Garden Sanctuaries",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "LuJGblxlTqs",
@@ -19286,7 +19800,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=LuJGblxlTqs"
+        "videoUrl": "https://www.youtube.com/watch?v=LuJGblxlTqs",
+        "declutterPrimary": true
       },
       {
         "id": "LuJGblxlTqs_2",
@@ -19310,7 +19825,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=LuJGblxlTqs"
+        "videoUrl": "https://www.youtube.com/watch?v=LuJGblxlTqs",
+        "declutterPrimary": true
       },
       {
         "id": "LuJGblxlTqs_3",
@@ -19334,7 +19850,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=LuJGblxlTqs"
+        "videoUrl": "https://www.youtube.com/watch?v=LuJGblxlTqs",
+        "declutterPrimary": true
       },
       {
         "id": "LuJGblxlTqs_4",
@@ -19358,7 +19875,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=LuJGblxlTqs"
+        "videoUrl": "https://www.youtube.com/watch?v=LuJGblxlTqs",
+        "declutterPrimary": true
       },
       {
         "id": "LuJGblxlTqs_5",
@@ -19382,7 +19900,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=LuJGblxlTqs"
+        "videoUrl": "https://www.youtube.com/watch?v=LuJGblxlTqs",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 5,
@@ -19394,7 +19913,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Vincent van Gogh",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "ejXEYGBo2E0",
@@ -19435,7 +19957,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=ejXEYGBo2E0"
+        "videoUrl": "https://www.youtube.com/watch?v=ejXEYGBo2E0",
+        "declutterPrimary": true
       },
       {
         "id": "ejXEYGBo2E0_2",
@@ -19459,7 +19982,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=ejXEYGBo2E0"
+        "videoUrl": "https://www.youtube.com/watch?v=ejXEYGBo2E0",
+        "declutterPrimary": true
       },
       {
         "id": "ejXEYGBo2E0_3",
@@ -19483,7 +20007,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=ejXEYGBo2E0"
+        "videoUrl": "https://www.youtube.com/watch?v=ejXEYGBo2E0",
+        "declutterPrimary": true
       },
       {
         "id": "ejXEYGBo2E0_4",
@@ -19507,7 +20032,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=ejXEYGBo2E0"
+        "videoUrl": "https://www.youtube.com/watch?v=ejXEYGBo2E0",
+        "declutterPrimary": true
       },
       {
         "id": "ejXEYGBo2E0_5",
@@ -19531,7 +20057,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=ejXEYGBo2E0"
+        "videoUrl": "https://www.youtube.com/watch?v=ejXEYGBo2E0",
+        "declutterPrimary": true
       },
       {
         "id": "ejXEYGBo2E0_6",
@@ -19555,7 +20082,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=ejXEYGBo2E0"
+        "videoUrl": "https://www.youtube.com/watch?v=ejXEYGBo2E0",
+        "declutterPrimary": true
       },
       {
         "id": "ejXEYGBo2E0_7",
@@ -19579,7 +20107,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=ejXEYGBo2E0"
+        "videoUrl": "https://www.youtube.com/watch?v=ejXEYGBo2E0",
+        "declutterPrimary": true
       },
       {
         "id": "ejXEYGBo2E0_8",
@@ -19603,7 +20132,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=ejXEYGBo2E0"
+        "videoUrl": "https://www.youtube.com/watch?v=ejXEYGBo2E0",
+        "declutterPrimary": true
       },
       {
         "id": "ejXEYGBo2E0_9",
@@ -19627,7 +20157,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=ejXEYGBo2E0"
+        "videoUrl": "https://www.youtube.com/watch?v=ejXEYGBo2E0",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -19639,7 +20170,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "0Y6vdxhuSD8",
@@ -19680,7 +20214,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Victor Bykov",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=0Y6vdxhuSD8"
+        "videoUrl": "https://www.youtube.com/watch?v=0Y6vdxhuSD8",
+        "declutterPrimary": true
       },
       {
         "id": "0Y6vdxhuSD8_2",
@@ -19704,7 +20239,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Victor Bykov",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=0Y6vdxhuSD8"
+        "videoUrl": "https://www.youtube.com/watch?v=0Y6vdxhuSD8",
+        "declutterPrimary": true
       },
       {
         "id": "0Y6vdxhuSD8_3",
@@ -19728,7 +20264,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Victor Bykov",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=0Y6vdxhuSD8"
+        "videoUrl": "https://www.youtube.com/watch?v=0Y6vdxhuSD8",
+        "declutterPrimary": true
       },
       {
         "id": "0Y6vdxhuSD8_4",
@@ -19752,7 +20289,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Victor Bykov",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=0Y6vdxhuSD8"
+        "videoUrl": "https://www.youtube.com/watch?v=0Y6vdxhuSD8",
+        "declutterPrimary": true
       },
       {
         "id": "0Y6vdxhuSD8_5",
@@ -19776,7 +20314,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Victor Bykov",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=0Y6vdxhuSD8"
+        "videoUrl": "https://www.youtube.com/watch?v=0Y6vdxhuSD8",
+        "declutterPrimary": true
       },
       {
         "id": "0Y6vdxhuSD8_6",
@@ -19800,7 +20339,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Victor Bykov",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=0Y6vdxhuSD8"
+        "videoUrl": "https://www.youtube.com/watch?v=0Y6vdxhuSD8",
+        "declutterPrimary": true
       },
       {
         "id": "0Y6vdxhuSD8_7",
@@ -19824,7 +20364,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Victor Bykov",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=0Y6vdxhuSD8"
+        "videoUrl": "https://www.youtube.com/watch?v=0Y6vdxhuSD8",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -19836,7 +20377,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Victor Bykov",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "qinshTPWa1o",
@@ -19877,7 +20421,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=qinshTPWa1o"
+        "videoUrl": "https://www.youtube.com/watch?v=qinshTPWa1o",
+        "declutterPrimary": true
       },
       {
         "id": "qinshTPWa1o_2",
@@ -19901,7 +20446,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=qinshTPWa1o"
+        "videoUrl": "https://www.youtube.com/watch?v=qinshTPWa1o",
+        "declutterPrimary": true
       },
       {
         "id": "qinshTPWa1o_3",
@@ -19925,7 +20471,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=qinshTPWa1o"
+        "videoUrl": "https://www.youtube.com/watch?v=qinshTPWa1o",
+        "declutterPrimary": true
       },
       {
         "id": "qinshTPWa1o_4",
@@ -19949,7 +20496,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=qinshTPWa1o"
+        "videoUrl": "https://www.youtube.com/watch?v=qinshTPWa1o",
+        "declutterPrimary": true
       },
       {
         "id": "qinshTPWa1o_5",
@@ -19973,7 +20521,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=qinshTPWa1o"
+        "videoUrl": "https://www.youtube.com/watch?v=qinshTPWa1o",
+        "declutterPrimary": true
       },
       {
         "id": "qinshTPWa1o_6",
@@ -19997,7 +20546,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=qinshTPWa1o"
+        "videoUrl": "https://www.youtube.com/watch?v=qinshTPWa1o",
+        "declutterPrimary": true
       },
       {
         "id": "qinshTPWa1o_7",
@@ -20021,7 +20571,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=qinshTPWa1o"
+        "videoUrl": "https://www.youtube.com/watch?v=qinshTPWa1o",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -20033,7 +20584,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "2fqxjaNY-60",
@@ -20074,7 +20628,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=2fqxjaNY-60"
+        "videoUrl": "https://www.youtube.com/watch?v=2fqxjaNY-60",
+        "declutterPrimary": true
       },
       {
         "id": "2fqxjaNY-60_2",
@@ -20098,7 +20653,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=2fqxjaNY-60"
+        "videoUrl": "https://www.youtube.com/watch?v=2fqxjaNY-60",
+        "declutterPrimary": true
       },
       {
         "id": "2fqxjaNY-60_3",
@@ -20122,7 +20678,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=2fqxjaNY-60"
+        "videoUrl": "https://www.youtube.com/watch?v=2fqxjaNY-60",
+        "declutterPrimary": true
       },
       {
         "id": "2fqxjaNY-60_4",
@@ -20146,7 +20703,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=2fqxjaNY-60"
+        "videoUrl": "https://www.youtube.com/watch?v=2fqxjaNY-60",
+        "declutterPrimary": true
       },
       {
         "id": "2fqxjaNY-60_5",
@@ -20170,7 +20728,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=2fqxjaNY-60"
+        "videoUrl": "https://www.youtube.com/watch?v=2fqxjaNY-60",
+        "declutterPrimary": true
       },
       {
         "id": "2fqxjaNY-60_6",
@@ -20194,7 +20753,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=2fqxjaNY-60"
+        "videoUrl": "https://www.youtube.com/watch?v=2fqxjaNY-60",
+        "declutterPrimary": true
       },
       {
         "id": "2fqxjaNY-60_7",
@@ -20218,7 +20778,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=2fqxjaNY-60"
+        "videoUrl": "https://www.youtube.com/watch?v=2fqxjaNY-60",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -20230,7 +20791,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Coastal Cliffs, Étretat & Ocean Waves"
+    "theme": "Coastal Cliffs, Étretat & Ocean Waves",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "tJjqAH1h8fk",
@@ -20271,7 +20835,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=tJjqAH1h8fk"
+        "videoUrl": "https://www.youtube.com/watch?v=tJjqAH1h8fk",
+        "declutterPrimary": true
       },
       {
         "id": "tJjqAH1h8fk_2",
@@ -20295,7 +20860,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=tJjqAH1h8fk"
+        "videoUrl": "https://www.youtube.com/watch?v=tJjqAH1h8fk",
+        "declutterPrimary": true
       },
       {
         "id": "tJjqAH1h8fk_3",
@@ -20319,7 +20885,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=tJjqAH1h8fk"
+        "videoUrl": "https://www.youtube.com/watch?v=tJjqAH1h8fk",
+        "declutterPrimary": true
       },
       {
         "id": "tJjqAH1h8fk_4",
@@ -20343,7 +20910,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=tJjqAH1h8fk"
+        "videoUrl": "https://www.youtube.com/watch?v=tJjqAH1h8fk",
+        "declutterPrimary": true
       },
       {
         "id": "tJjqAH1h8fk_5",
@@ -20367,7 +20935,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=tJjqAH1h8fk"
+        "videoUrl": "https://www.youtube.com/watch?v=tJjqAH1h8fk",
+        "declutterPrimary": true
       },
       {
         "id": "tJjqAH1h8fk_6",
@@ -20391,7 +20960,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=tJjqAH1h8fk"
+        "videoUrl": "https://www.youtube.com/watch?v=tJjqAH1h8fk",
+        "declutterPrimary": true
       },
       {
         "id": "tJjqAH1h8fk_7",
@@ -20415,7 +20985,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=tJjqAH1h8fk"
+        "videoUrl": "https://www.youtube.com/watch?v=tJjqAH1h8fk",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -20427,7 +20998,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "3XPsYH7DwCg",
@@ -20468,7 +21042,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=3XPsYH7DwCg"
+        "videoUrl": "https://www.youtube.com/watch?v=3XPsYH7DwCg",
+        "declutterPrimary": true
       },
       {
         "id": "3XPsYH7DwCg_2",
@@ -20492,7 +21067,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=3XPsYH7DwCg"
+        "videoUrl": "https://www.youtube.com/watch?v=3XPsYH7DwCg",
+        "declutterPrimary": true
       },
       {
         "id": "3XPsYH7DwCg_3",
@@ -20516,7 +21092,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=3XPsYH7DwCg"
+        "videoUrl": "https://www.youtube.com/watch?v=3XPsYH7DwCg",
+        "declutterPrimary": true
       },
       {
         "id": "3XPsYH7DwCg_4",
@@ -20540,7 +21117,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=3XPsYH7DwCg"
+        "videoUrl": "https://www.youtube.com/watch?v=3XPsYH7DwCg",
+        "declutterPrimary": true
       },
       {
         "id": "3XPsYH7DwCg_5",
@@ -20564,7 +21142,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=3XPsYH7DwCg"
+        "videoUrl": "https://www.youtube.com/watch?v=3XPsYH7DwCg",
+        "declutterPrimary": true
       },
       {
         "id": "3XPsYH7DwCg_6",
@@ -20588,7 +21167,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=3XPsYH7DwCg"
+        "videoUrl": "https://www.youtube.com/watch?v=3XPsYH7DwCg",
+        "declutterPrimary": true
       },
       {
         "id": "3XPsYH7DwCg_7",
@@ -20612,7 +21192,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=3XPsYH7DwCg"
+        "videoUrl": "https://www.youtube.com/watch?v=3XPsYH7DwCg",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -20624,7 +21205,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Coastal Cliffs, Étretat & Ocean Waves"
+    "theme": "Coastal Cliffs, Étretat & Ocean Waves",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "EWTdrp3vvKU",
@@ -20665,7 +21249,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=EWTdrp3vvKU"
+        "videoUrl": "https://www.youtube.com/watch?v=EWTdrp3vvKU",
+        "declutterPrimary": true
       },
       {
         "id": "EWTdrp3vvKU_2",
@@ -20689,7 +21274,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=EWTdrp3vvKU"
+        "videoUrl": "https://www.youtube.com/watch?v=EWTdrp3vvKU",
+        "declutterPrimary": true
       },
       {
         "id": "EWTdrp3vvKU_3",
@@ -20713,7 +21299,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=EWTdrp3vvKU"
+        "videoUrl": "https://www.youtube.com/watch?v=EWTdrp3vvKU",
+        "declutterPrimary": true
       },
       {
         "id": "EWTdrp3vvKU_4",
@@ -20737,7 +21324,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=EWTdrp3vvKU"
+        "videoUrl": "https://www.youtube.com/watch?v=EWTdrp3vvKU",
+        "declutterPrimary": true
       },
       {
         "id": "EWTdrp3vvKU_5",
@@ -20761,7 +21349,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=EWTdrp3vvKU"
+        "videoUrl": "https://www.youtube.com/watch?v=EWTdrp3vvKU",
+        "declutterPrimary": true
       },
       {
         "id": "EWTdrp3vvKU_6",
@@ -20785,7 +21374,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=EWTdrp3vvKU"
+        "videoUrl": "https://www.youtube.com/watch?v=EWTdrp3vvKU",
+        "declutterPrimary": true
       },
       {
         "id": "EWTdrp3vvKU_7",
@@ -20809,7 +21399,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=EWTdrp3vvKU"
+        "videoUrl": "https://www.youtube.com/watch?v=EWTdrp3vvKU",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -20821,7 +21412,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Winter & Snowbound Landscapes"
+    "theme": "Winter & Snowbound Landscapes",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "bgwokHmFTLQ",
@@ -20862,7 +21456,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=bgwokHmFTLQ"
+        "videoUrl": "https://www.youtube.com/watch?v=bgwokHmFTLQ",
+        "declutterPrimary": true
       },
       {
         "id": "bgwokHmFTLQ_2",
@@ -20886,7 +21481,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=bgwokHmFTLQ"
+        "videoUrl": "https://www.youtube.com/watch?v=bgwokHmFTLQ",
+        "declutterPrimary": true
       },
       {
         "id": "bgwokHmFTLQ_3",
@@ -20910,7 +21506,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=bgwokHmFTLQ"
+        "videoUrl": "https://www.youtube.com/watch?v=bgwokHmFTLQ",
+        "declutterPrimary": true
       },
       {
         "id": "bgwokHmFTLQ_4",
@@ -20934,7 +21531,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=bgwokHmFTLQ"
+        "videoUrl": "https://www.youtube.com/watch?v=bgwokHmFTLQ",
+        "declutterPrimary": true
       },
       {
         "id": "bgwokHmFTLQ_5",
@@ -20958,7 +21556,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=bgwokHmFTLQ"
+        "videoUrl": "https://www.youtube.com/watch?v=bgwokHmFTLQ",
+        "declutterPrimary": true
       },
       {
         "id": "bgwokHmFTLQ_6",
@@ -20982,7 +21581,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=bgwokHmFTLQ"
+        "videoUrl": "https://www.youtube.com/watch?v=bgwokHmFTLQ",
+        "declutterPrimary": true
       },
       {
         "id": "bgwokHmFTLQ_7",
@@ -21006,7 +21606,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=bgwokHmFTLQ"
+        "videoUrl": "https://www.youtube.com/watch?v=bgwokHmFTLQ",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -21018,7 +21619,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "RDhj8mOWXsg",
@@ -21059,7 +21663,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RDhj8mOWXsg"
+        "videoUrl": "https://www.youtube.com/watch?v=RDhj8mOWXsg",
+        "declutterPrimary": true
       },
       {
         "id": "RDhj8mOWXsg_2",
@@ -21083,7 +21688,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RDhj8mOWXsg"
+        "videoUrl": "https://www.youtube.com/watch?v=RDhj8mOWXsg",
+        "declutterPrimary": true
       },
       {
         "id": "RDhj8mOWXsg_3",
@@ -21107,7 +21713,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RDhj8mOWXsg"
+        "videoUrl": "https://www.youtube.com/watch?v=RDhj8mOWXsg",
+        "declutterPrimary": true
       },
       {
         "id": "RDhj8mOWXsg_4",
@@ -21131,7 +21738,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RDhj8mOWXsg"
+        "videoUrl": "https://www.youtube.com/watch?v=RDhj8mOWXsg",
+        "declutterPrimary": true
       },
       {
         "id": "RDhj8mOWXsg_5",
@@ -21155,7 +21763,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RDhj8mOWXsg"
+        "videoUrl": "https://www.youtube.com/watch?v=RDhj8mOWXsg",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 5,
@@ -21167,7 +21776,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "LcjME5OeHk8",
@@ -21208,7 +21820,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=LcjME5OeHk8"
+        "videoUrl": "https://www.youtube.com/watch?v=LcjME5OeHk8",
+        "declutterPrimary": true
       },
       {
         "id": "LcjME5OeHk8_2",
@@ -21232,7 +21845,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=LcjME5OeHk8"
+        "videoUrl": "https://www.youtube.com/watch?v=LcjME5OeHk8",
+        "declutterPrimary": true
       },
       {
         "id": "LcjME5OeHk8_3",
@@ -21256,7 +21870,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=LcjME5OeHk8"
+        "videoUrl": "https://www.youtube.com/watch?v=LcjME5OeHk8",
+        "declutterPrimary": true
       },
       {
         "id": "LcjME5OeHk8_4",
@@ -21280,7 +21895,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=LcjME5OeHk8"
+        "videoUrl": "https://www.youtube.com/watch?v=LcjME5OeHk8",
+        "declutterPrimary": true
       },
       {
         "id": "LcjME5OeHk8_5",
@@ -21304,7 +21920,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=LcjME5OeHk8"
+        "videoUrl": "https://www.youtube.com/watch?v=LcjME5OeHk8",
+        "declutterPrimary": true
       },
       {
         "id": "LcjME5OeHk8_6",
@@ -21328,7 +21945,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=LcjME5OeHk8"
+        "videoUrl": "https://www.youtube.com/watch?v=LcjME5OeHk8",
+        "declutterPrimary": true
       },
       {
         "id": "LcjME5OeHk8_7",
@@ -21352,7 +21970,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=LcjME5OeHk8"
+        "videoUrl": "https://www.youtube.com/watch?v=LcjME5OeHk8",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -21364,7 +21983,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "River Seine & Waterways"
+    "theme": "River Seine & Waterways",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "vczWTya7ygg",
@@ -21405,7 +22027,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Carl Spitzweg",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=vczWTya7ygg"
+        "videoUrl": "https://www.youtube.com/watch?v=vczWTya7ygg",
+        "declutterPrimary": true
       },
       {
         "id": "vczWTya7ygg_2",
@@ -21429,7 +22052,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Carl Spitzweg",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=vczWTya7ygg"
+        "videoUrl": "https://www.youtube.com/watch?v=vczWTya7ygg",
+        "declutterPrimary": true
       },
       {
         "id": "vczWTya7ygg_3",
@@ -21453,7 +22077,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Carl Spitzweg",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=vczWTya7ygg"
+        "videoUrl": "https://www.youtube.com/watch?v=vczWTya7ygg",
+        "declutterPrimary": true
       },
       {
         "id": "vczWTya7ygg_4",
@@ -21477,7 +22102,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Carl Spitzweg",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=vczWTya7ygg"
+        "videoUrl": "https://www.youtube.com/watch?v=vczWTya7ygg",
+        "declutterPrimary": true
       },
       {
         "id": "vczWTya7ygg_5",
@@ -21501,7 +22127,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Carl Spitzweg",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=vczWTya7ygg"
+        "videoUrl": "https://www.youtube.com/watch?v=vczWTya7ygg",
+        "declutterPrimary": true
       },
       {
         "id": "vczWTya7ygg_6",
@@ -21525,7 +22152,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Carl Spitzweg",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=vczWTya7ygg"
+        "videoUrl": "https://www.youtube.com/watch?v=vczWTya7ygg",
+        "declutterPrimary": true
       },
       {
         "id": "vczWTya7ygg_7",
@@ -21549,7 +22177,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Carl Spitzweg",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=vczWTya7ygg"
+        "videoUrl": "https://www.youtube.com/watch?v=vczWTya7ygg",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -21561,7 +22190,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Carl Spitzweg",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "6b59b123wDg",
@@ -21602,7 +22234,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=6b59b123wDg"
+        "videoUrl": "https://www.youtube.com/watch?v=6b59b123wDg",
+        "declutterPrimary": true
       },
       {
         "id": "6b59b123wDg_2",
@@ -21626,7 +22259,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=6b59b123wDg"
+        "videoUrl": "https://www.youtube.com/watch?v=6b59b123wDg",
+        "declutterPrimary": true
       },
       {
         "id": "6b59b123wDg_3",
@@ -21650,7 +22284,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=6b59b123wDg"
+        "videoUrl": "https://www.youtube.com/watch?v=6b59b123wDg",
+        "declutterPrimary": true
       },
       {
         "id": "6b59b123wDg_4",
@@ -21674,7 +22309,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=6b59b123wDg"
+        "videoUrl": "https://www.youtube.com/watch?v=6b59b123wDg",
+        "declutterPrimary": true
       },
       {
         "id": "6b59b123wDg_5",
@@ -21698,7 +22334,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=6b59b123wDg"
+        "videoUrl": "https://www.youtube.com/watch?v=6b59b123wDg",
+        "declutterPrimary": true
       },
       {
         "id": "6b59b123wDg_6",
@@ -21722,7 +22359,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=6b59b123wDg"
+        "videoUrl": "https://www.youtube.com/watch?v=6b59b123wDg",
+        "declutterPrimary": true
       },
       {
         "id": "6b59b123wDg_7",
@@ -21746,7 +22384,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=6b59b123wDg"
+        "videoUrl": "https://www.youtube.com/watch?v=6b59b123wDg",
+        "declutterPrimary": true
       },
       {
         "id": "6b59b123wDg_8",
@@ -21770,7 +22409,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=6b59b123wDg"
+        "videoUrl": "https://www.youtube.com/watch?v=6b59b123wDg",
+        "declutterPrimary": true
       },
       {
         "id": "6b59b123wDg_9",
@@ -21794,7 +22434,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=6b59b123wDg"
+        "videoUrl": "https://www.youtube.com/watch?v=6b59b123wDg",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -21806,7 +22447,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "GdVkaMfxfts",
@@ -21847,7 +22491,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=GdVkaMfxfts"
+        "videoUrl": "https://www.youtube.com/watch?v=GdVkaMfxfts",
+        "declutterPrimary": true
       },
       {
         "id": "GdVkaMfxfts_2",
@@ -21871,7 +22516,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=GdVkaMfxfts"
+        "videoUrl": "https://www.youtube.com/watch?v=GdVkaMfxfts",
+        "declutterPrimary": true
       },
       {
         "id": "GdVkaMfxfts_3",
@@ -21895,7 +22541,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=GdVkaMfxfts"
+        "videoUrl": "https://www.youtube.com/watch?v=GdVkaMfxfts",
+        "declutterPrimary": true
       },
       {
         "id": "GdVkaMfxfts_4",
@@ -21919,7 +22566,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=GdVkaMfxfts"
+        "videoUrl": "https://www.youtube.com/watch?v=GdVkaMfxfts",
+        "declutterPrimary": true
       },
       {
         "id": "GdVkaMfxfts_5",
@@ -21943,7 +22591,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=GdVkaMfxfts"
+        "videoUrl": "https://www.youtube.com/watch?v=GdVkaMfxfts",
+        "declutterPrimary": true
       },
       {
         "id": "GdVkaMfxfts_6",
@@ -21967,7 +22616,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=GdVkaMfxfts"
+        "videoUrl": "https://www.youtube.com/watch?v=GdVkaMfxfts",
+        "declutterPrimary": true
       },
       {
         "id": "GdVkaMfxfts_7",
@@ -21991,7 +22641,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=GdVkaMfxfts"
+        "videoUrl": "https://www.youtube.com/watch?v=GdVkaMfxfts",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -22003,7 +22654,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "MyM-rQ5ZvGk",
@@ -22044,7 +22698,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vladimir Orlovsky",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=MyM-rQ5ZvGk"
+        "videoUrl": "https://www.youtube.com/watch?v=MyM-rQ5ZvGk",
+        "declutterPrimary": true
       },
       {
         "id": "MyM-rQ5ZvGk_2",
@@ -22068,7 +22723,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vladimir Orlovsky",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=MyM-rQ5ZvGk"
+        "videoUrl": "https://www.youtube.com/watch?v=MyM-rQ5ZvGk",
+        "declutterPrimary": true
       },
       {
         "id": "MyM-rQ5ZvGk_3",
@@ -22092,7 +22748,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vladimir Orlovsky",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=MyM-rQ5ZvGk"
+        "videoUrl": "https://www.youtube.com/watch?v=MyM-rQ5ZvGk",
+        "declutterPrimary": true
       },
       {
         "id": "MyM-rQ5ZvGk_4",
@@ -22116,7 +22773,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vladimir Orlovsky",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=MyM-rQ5ZvGk"
+        "videoUrl": "https://www.youtube.com/watch?v=MyM-rQ5ZvGk",
+        "declutterPrimary": true
       },
       {
         "id": "MyM-rQ5ZvGk_5",
@@ -22140,7 +22798,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vladimir Orlovsky",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=MyM-rQ5ZvGk"
+        "videoUrl": "https://www.youtube.com/watch?v=MyM-rQ5ZvGk",
+        "declutterPrimary": true
       },
       {
         "id": "MyM-rQ5ZvGk_6",
@@ -22164,7 +22823,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vladimir Orlovsky",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=MyM-rQ5ZvGk"
+        "videoUrl": "https://www.youtube.com/watch?v=MyM-rQ5ZvGk",
+        "declutterPrimary": true
       },
       {
         "id": "MyM-rQ5ZvGk_7",
@@ -22188,7 +22848,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vladimir Orlovsky",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=MyM-rQ5ZvGk"
+        "videoUrl": "https://www.youtube.com/watch?v=MyM-rQ5ZvGk",
+        "declutterPrimary": true
       },
       {
         "id": "MyM-rQ5ZvGk_8",
@@ -22212,7 +22873,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vladimir Orlovsky",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=MyM-rQ5ZvGk"
+        "videoUrl": "https://www.youtube.com/watch?v=MyM-rQ5ZvGk",
+        "declutterPrimary": true
       },
       {
         "id": "MyM-rQ5ZvGk_9",
@@ -22236,7 +22898,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vladimir Orlovsky",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=MyM-rQ5ZvGk"
+        "videoUrl": "https://www.youtube.com/watch?v=MyM-rQ5ZvGk",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -22248,7 +22911,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Vladimir Orlovsky",
-    "theme": "Masterwork Retrospectives & Anthologies"
+    "theme": "Masterwork Retrospectives & Anthologies",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "jVQ_mmOomvY",
@@ -22289,7 +22955,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Johan Hendrik Weissenbruch",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=jVQ_mmOomvY"
+        "videoUrl": "https://www.youtube.com/watch?v=jVQ_mmOomvY",
+        "declutterPrimary": true
       },
       {
         "id": "jVQ_mmOomvY_2",
@@ -22313,7 +22980,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Johan Hendrik Weissenbruch",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=jVQ_mmOomvY"
+        "videoUrl": "https://www.youtube.com/watch?v=jVQ_mmOomvY",
+        "declutterPrimary": true
       },
       {
         "id": "jVQ_mmOomvY_3",
@@ -22337,7 +23005,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Johan Hendrik Weissenbruch",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=jVQ_mmOomvY"
+        "videoUrl": "https://www.youtube.com/watch?v=jVQ_mmOomvY",
+        "declutterPrimary": true
       },
       {
         "id": "jVQ_mmOomvY_4",
@@ -22361,7 +23030,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Johan Hendrik Weissenbruch",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=jVQ_mmOomvY"
+        "videoUrl": "https://www.youtube.com/watch?v=jVQ_mmOomvY",
+        "declutterPrimary": true
       },
       {
         "id": "jVQ_mmOomvY_5",
@@ -22385,7 +23055,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Johan Hendrik Weissenbruch",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=jVQ_mmOomvY"
+        "videoUrl": "https://www.youtube.com/watch?v=jVQ_mmOomvY",
+        "declutterPrimary": true
       },
       {
         "id": "jVQ_mmOomvY_6",
@@ -22409,7 +23080,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Johan Hendrik Weissenbruch",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=jVQ_mmOomvY"
+        "videoUrl": "https://www.youtube.com/watch?v=jVQ_mmOomvY",
+        "declutterPrimary": true
       },
       {
         "id": "jVQ_mmOomvY_7",
@@ -22433,7 +23105,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Johan Hendrik Weissenbruch",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=jVQ_mmOomvY"
+        "videoUrl": "https://www.youtube.com/watch?v=jVQ_mmOomvY",
+        "declutterPrimary": true
       },
       {
         "id": "jVQ_mmOomvY_8",
@@ -22457,7 +23130,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Johan Hendrik Weissenbruch",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=jVQ_mmOomvY"
+        "videoUrl": "https://www.youtube.com/watch?v=jVQ_mmOomvY",
+        "declutterPrimary": true
       },
       {
         "id": "jVQ_mmOomvY_9",
@@ -22481,7 +23155,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Johan Hendrik Weissenbruch",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=jVQ_mmOomvY"
+        "videoUrl": "https://www.youtube.com/watch?v=jVQ_mmOomvY",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -22493,7 +23168,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Johan Hendrik Weissenbruch",
-    "theme": "Masterwork Retrospectives & Anthologies"
+    "theme": "Masterwork Retrospectives & Anthologies",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "AubPDZQPVEY",
@@ -22534,7 +23212,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=AubPDZQPVEY"
+        "videoUrl": "https://www.youtube.com/watch?v=AubPDZQPVEY",
+        "declutterPrimary": true
       },
       {
         "id": "AubPDZQPVEY_2",
@@ -22558,7 +23237,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=AubPDZQPVEY"
+        "videoUrl": "https://www.youtube.com/watch?v=AubPDZQPVEY",
+        "declutterPrimary": true
       },
       {
         "id": "AubPDZQPVEY_3",
@@ -22582,7 +23262,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=AubPDZQPVEY"
+        "videoUrl": "https://www.youtube.com/watch?v=AubPDZQPVEY",
+        "declutterPrimary": true
       },
       {
         "id": "AubPDZQPVEY_4",
@@ -22606,7 +23287,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=AubPDZQPVEY"
+        "videoUrl": "https://www.youtube.com/watch?v=AubPDZQPVEY",
+        "declutterPrimary": true
       },
       {
         "id": "AubPDZQPVEY_5",
@@ -22630,7 +23312,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=AubPDZQPVEY"
+        "videoUrl": "https://www.youtube.com/watch?v=AubPDZQPVEY",
+        "declutterPrimary": true
       },
       {
         "id": "AubPDZQPVEY_6",
@@ -22654,7 +23337,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=AubPDZQPVEY"
+        "videoUrl": "https://www.youtube.com/watch?v=AubPDZQPVEY",
+        "declutterPrimary": true
       },
       {
         "id": "AubPDZQPVEY_7",
@@ -22678,7 +23362,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=AubPDZQPVEY"
+        "videoUrl": "https://www.youtube.com/watch?v=AubPDZQPVEY",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -22690,7 +23375,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "River Seine & Waterways"
+    "theme": "River Seine & Waterways",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "vzlLI1B_91g",
@@ -22731,7 +23419,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=vzlLI1B_91g"
+        "videoUrl": "https://www.youtube.com/watch?v=vzlLI1B_91g",
+        "declutterPrimary": true
       },
       {
         "id": "vzlLI1B_91g_2",
@@ -22755,7 +23444,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=vzlLI1B_91g"
+        "videoUrl": "https://www.youtube.com/watch?v=vzlLI1B_91g",
+        "declutterPrimary": true
       },
       {
         "id": "vzlLI1B_91g_3",
@@ -22779,7 +23469,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=vzlLI1B_91g"
+        "videoUrl": "https://www.youtube.com/watch?v=vzlLI1B_91g",
+        "declutterPrimary": true
       },
       {
         "id": "vzlLI1B_91g_4",
@@ -22803,7 +23494,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=vzlLI1B_91g"
+        "videoUrl": "https://www.youtube.com/watch?v=vzlLI1B_91g",
+        "declutterPrimary": true
       },
       {
         "id": "vzlLI1B_91g_5",
@@ -22827,7 +23519,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=vzlLI1B_91g"
+        "videoUrl": "https://www.youtube.com/watch?v=vzlLI1B_91g",
+        "declutterPrimary": true
       },
       {
         "id": "vzlLI1B_91g_6",
@@ -22851,7 +23544,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=vzlLI1B_91g"
+        "videoUrl": "https://www.youtube.com/watch?v=vzlLI1B_91g",
+        "declutterPrimary": true
       },
       {
         "id": "vzlLI1B_91g_7",
@@ -22875,7 +23569,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=vzlLI1B_91g"
+        "videoUrl": "https://www.youtube.com/watch?v=vzlLI1B_91g",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -22887,7 +23582,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "j-i8EEgur_0",
@@ -22928,7 +23626,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=j-i8EEgur_0"
+        "videoUrl": "https://www.youtube.com/watch?v=j-i8EEgur_0",
+        "declutterPrimary": true
       },
       {
         "id": "j-i8EEgur_0_2",
@@ -22952,7 +23651,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=j-i8EEgur_0"
+        "videoUrl": "https://www.youtube.com/watch?v=j-i8EEgur_0",
+        "declutterPrimary": true
       },
       {
         "id": "j-i8EEgur_0_3",
@@ -22976,7 +23676,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=j-i8EEgur_0"
+        "videoUrl": "https://www.youtube.com/watch?v=j-i8EEgur_0",
+        "declutterPrimary": true
       },
       {
         "id": "j-i8EEgur_0_4",
@@ -23000,7 +23701,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=j-i8EEgur_0"
+        "videoUrl": "https://www.youtube.com/watch?v=j-i8EEgur_0",
+        "declutterPrimary": true
       },
       {
         "id": "j-i8EEgur_0_5",
@@ -23024,7 +23726,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=j-i8EEgur_0"
+        "videoUrl": "https://www.youtube.com/watch?v=j-i8EEgur_0",
+        "declutterPrimary": true
       },
       {
         "id": "j-i8EEgur_0_6",
@@ -23048,7 +23751,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=j-i8EEgur_0"
+        "videoUrl": "https://www.youtube.com/watch?v=j-i8EEgur_0",
+        "declutterPrimary": true
       },
       {
         "id": "j-i8EEgur_0_7",
@@ -23072,7 +23776,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=j-i8EEgur_0"
+        "videoUrl": "https://www.youtube.com/watch?v=j-i8EEgur_0",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -23084,7 +23789,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "6rfKrNplN04",
@@ -23125,7 +23833,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Charles Leickert",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=6rfKrNplN04"
+        "videoUrl": "https://www.youtube.com/watch?v=6rfKrNplN04",
+        "declutterPrimary": true
       },
       {
         "id": "6rfKrNplN04_2",
@@ -23149,7 +23858,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Charles Leickert",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=6rfKrNplN04"
+        "videoUrl": "https://www.youtube.com/watch?v=6rfKrNplN04",
+        "declutterPrimary": true
       },
       {
         "id": "6rfKrNplN04_3",
@@ -23173,7 +23883,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Charles Leickert",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=6rfKrNplN04"
+        "videoUrl": "https://www.youtube.com/watch?v=6rfKrNplN04",
+        "declutterPrimary": true
       },
       {
         "id": "6rfKrNplN04_4",
@@ -23197,7 +23908,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Charles Leickert",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=6rfKrNplN04"
+        "videoUrl": "https://www.youtube.com/watch?v=6rfKrNplN04",
+        "declutterPrimary": true
       },
       {
         "id": "6rfKrNplN04_5",
@@ -23221,7 +23933,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Charles Leickert",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=6rfKrNplN04"
+        "videoUrl": "https://www.youtube.com/watch?v=6rfKrNplN04",
+        "declutterPrimary": true
       },
       {
         "id": "6rfKrNplN04_6",
@@ -23245,7 +23958,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Charles Leickert",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=6rfKrNplN04"
+        "videoUrl": "https://www.youtube.com/watch?v=6rfKrNplN04",
+        "declutterPrimary": true
       },
       {
         "id": "6rfKrNplN04_7",
@@ -23269,7 +23983,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Charles Leickert",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=6rfKrNplN04"
+        "videoUrl": "https://www.youtube.com/watch?v=6rfKrNplN04",
+        "declutterPrimary": true
       },
       {
         "id": "6rfKrNplN04_8",
@@ -23293,7 +24008,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Charles Leickert",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=6rfKrNplN04"
+        "videoUrl": "https://www.youtube.com/watch?v=6rfKrNplN04",
+        "declutterPrimary": true
       },
       {
         "id": "6rfKrNplN04_9",
@@ -23317,7 +24033,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Charles Leickert",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=6rfKrNplN04"
+        "videoUrl": "https://www.youtube.com/watch?v=6rfKrNplN04",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -23329,7 +24046,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Charles Leickert",
-    "theme": "Masterwork Retrospectives & Anthologies"
+    "theme": "Masterwork Retrospectives & Anthologies",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "xJhuOM71f2Q",
@@ -23370,7 +24090,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=xJhuOM71f2Q"
+        "videoUrl": "https://www.youtube.com/watch?v=xJhuOM71f2Q",
+        "declutterPrimary": true
       },
       {
         "id": "xJhuOM71f2Q_2",
@@ -23394,7 +24115,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=xJhuOM71f2Q"
+        "videoUrl": "https://www.youtube.com/watch?v=xJhuOM71f2Q",
+        "declutterPrimary": true
       },
       {
         "id": "xJhuOM71f2Q_3",
@@ -23418,7 +24140,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=xJhuOM71f2Q"
+        "videoUrl": "https://www.youtube.com/watch?v=xJhuOM71f2Q",
+        "declutterPrimary": true
       },
       {
         "id": "xJhuOM71f2Q_4",
@@ -23442,7 +24165,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=xJhuOM71f2Q"
+        "videoUrl": "https://www.youtube.com/watch?v=xJhuOM71f2Q",
+        "declutterPrimary": true
       },
       {
         "id": "xJhuOM71f2Q_5",
@@ -23466,7 +24190,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=xJhuOM71f2Q"
+        "videoUrl": "https://www.youtube.com/watch?v=xJhuOM71f2Q",
+        "declutterPrimary": true
       },
       {
         "id": "xJhuOM71f2Q_6",
@@ -23490,7 +24215,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=xJhuOM71f2Q"
+        "videoUrl": "https://www.youtube.com/watch?v=xJhuOM71f2Q",
+        "declutterPrimary": true
       },
       {
         "id": "xJhuOM71f2Q_7",
@@ -23514,7 +24240,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=xJhuOM71f2Q"
+        "videoUrl": "https://www.youtube.com/watch?v=xJhuOM71f2Q",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -23526,7 +24253,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "_OSQz1PzQn8",
@@ -23567,7 +24297,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=_OSQz1PzQn8"
+        "videoUrl": "https://www.youtube.com/watch?v=_OSQz1PzQn8",
+        "declutterPrimary": true
       },
       {
         "id": "_OSQz1PzQn8_2",
@@ -23591,7 +24322,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=_OSQz1PzQn8"
+        "videoUrl": "https://www.youtube.com/watch?v=_OSQz1PzQn8",
+        "declutterPrimary": true
       },
       {
         "id": "_OSQz1PzQn8_3",
@@ -23615,7 +24347,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=_OSQz1PzQn8"
+        "videoUrl": "https://www.youtube.com/watch?v=_OSQz1PzQn8",
+        "declutterPrimary": true
       },
       {
         "id": "_OSQz1PzQn8_4",
@@ -23639,7 +24372,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=_OSQz1PzQn8"
+        "videoUrl": "https://www.youtube.com/watch?v=_OSQz1PzQn8",
+        "declutterPrimary": true
       },
       {
         "id": "_OSQz1PzQn8_5",
@@ -23663,7 +24397,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=_OSQz1PzQn8"
+        "videoUrl": "https://www.youtube.com/watch?v=_OSQz1PzQn8",
+        "declutterPrimary": true
       },
       {
         "id": "_OSQz1PzQn8_6",
@@ -23687,7 +24422,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=_OSQz1PzQn8"
+        "videoUrl": "https://www.youtube.com/watch?v=_OSQz1PzQn8",
+        "declutterPrimary": true
       },
       {
         "id": "_OSQz1PzQn8_7",
@@ -23711,7 +24447,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=_OSQz1PzQn8"
+        "videoUrl": "https://www.youtube.com/watch?v=_OSQz1PzQn8",
+        "declutterPrimary": true
       },
       {
         "id": "_OSQz1PzQn8_8",
@@ -23735,7 +24472,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=_OSQz1PzQn8"
+        "videoUrl": "https://www.youtube.com/watch?v=_OSQz1PzQn8",
+        "declutterPrimary": true
       },
       {
         "id": "_OSQz1PzQn8_9",
@@ -23759,7 +24497,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=_OSQz1PzQn8"
+        "videoUrl": "https://www.youtube.com/watch?v=_OSQz1PzQn8",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -23771,7 +24510,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Masterwork Retrospectives & Anthologies"
+    "theme": "Masterwork Retrospectives & Anthologies",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "LCrG7Gm5riM",
@@ -23812,7 +24554,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=LCrG7Gm5riM"
+        "videoUrl": "https://www.youtube.com/watch?v=LCrG7Gm5riM",
+        "declutterPrimary": true
       },
       {
         "id": "LCrG7Gm5riM_2",
@@ -23836,7 +24579,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=LCrG7Gm5riM"
+        "videoUrl": "https://www.youtube.com/watch?v=LCrG7Gm5riM",
+        "declutterPrimary": true
       },
       {
         "id": "LCrG7Gm5riM_3",
@@ -23860,7 +24604,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=LCrG7Gm5riM"
+        "videoUrl": "https://www.youtube.com/watch?v=LCrG7Gm5riM",
+        "declutterPrimary": true
       },
       {
         "id": "LCrG7Gm5riM_4",
@@ -23884,7 +24629,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=LCrG7Gm5riM"
+        "videoUrl": "https://www.youtube.com/watch?v=LCrG7Gm5riM",
+        "declutterPrimary": true
       },
       {
         "id": "LCrG7Gm5riM_5",
@@ -23908,7 +24654,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=LCrG7Gm5riM"
+        "videoUrl": "https://www.youtube.com/watch?v=LCrG7Gm5riM",
+        "declutterPrimary": true
       },
       {
         "id": "LCrG7Gm5riM_6",
@@ -23932,7 +24679,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=LCrG7Gm5riM"
+        "videoUrl": "https://www.youtube.com/watch?v=LCrG7Gm5riM",
+        "declutterPrimary": true
       },
       {
         "id": "LCrG7Gm5riM_7",
@@ -23956,7 +24704,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=LCrG7Gm5riM"
+        "videoUrl": "https://www.youtube.com/watch?v=LCrG7Gm5riM",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -23968,7 +24717,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "XtDnD1qmAX8",
@@ -24009,7 +24761,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8"
+        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8",
+        "declutterPrimary": true
       },
       {
         "id": "XtDnD1qmAX8_2",
@@ -24033,7 +24786,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8"
+        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8",
+        "declutterPrimary": true
       },
       {
         "id": "XtDnD1qmAX8_3",
@@ -24057,7 +24811,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8"
+        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8",
+        "declutterPrimary": true
       },
       {
         "id": "XtDnD1qmAX8_4",
@@ -24081,7 +24836,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8"
+        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8",
+        "declutterPrimary": true
       },
       {
         "id": "XtDnD1qmAX8_5",
@@ -24105,7 +24861,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8"
+        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8",
+        "declutterPrimary": true
       },
       {
         "id": "XtDnD1qmAX8_6",
@@ -24129,7 +24886,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8"
+        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8",
+        "declutterPrimary": true
       },
       {
         "id": "XtDnD1qmAX8_7",
@@ -24153,7 +24911,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8"
+        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8",
+        "declutterPrimary": true
       },
       {
         "id": "XtDnD1qmAX8_8",
@@ -24177,7 +24936,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8"
+        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8",
+        "declutterPrimary": true
       },
       {
         "id": "XtDnD1qmAX8_9",
@@ -24201,7 +24961,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8"
+        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8",
+        "declutterPrimary": true
       },
       {
         "id": "XtDnD1qmAX8_10",
@@ -24225,7 +24986,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8"
+        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8",
+        "declutterPrimary": true
       },
       {
         "id": "XtDnD1qmAX8_11",
@@ -24249,7 +25011,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8"
+        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8",
+        "declutterPrimary": true
       },
       {
         "id": "XtDnD1qmAX8_12",
@@ -24273,7 +25036,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8"
+        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8",
+        "declutterPrimary": true
       },
       {
         "id": "XtDnD1qmAX8_13",
@@ -24297,7 +25061,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8"
+        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8",
+        "declutterPrimary": true
       },
       {
         "id": "XtDnD1qmAX8_14",
@@ -24321,7 +25086,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8"
+        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8",
+        "declutterPrimary": true
       },
       {
         "id": "XtDnD1qmAX8_15",
@@ -24345,7 +25111,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8"
+        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8",
+        "declutterPrimary": true
       },
       {
         "id": "XtDnD1qmAX8_16",
@@ -24369,7 +25136,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8"
+        "videoUrl": "https://www.youtube.com/watch?v=XtDnD1qmAX8",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 16,
@@ -24381,7 +25149,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Vincent van Gogh",
-    "theme": "Masterwork Retrospectives & Anthologies"
+    "theme": "Masterwork Retrospectives & Anthologies",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "kW_p6SuX7Zg",
@@ -24422,7 +25193,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=kW_p6SuX7Zg"
+        "videoUrl": "https://www.youtube.com/watch?v=kW_p6SuX7Zg",
+        "declutterPrimary": true
       },
       {
         "id": "kW_p6SuX7Zg_2",
@@ -24446,7 +25218,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=kW_p6SuX7Zg"
+        "videoUrl": "https://www.youtube.com/watch?v=kW_p6SuX7Zg",
+        "declutterPrimary": true
       },
       {
         "id": "kW_p6SuX7Zg_3",
@@ -24470,7 +25243,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=kW_p6SuX7Zg"
+        "videoUrl": "https://www.youtube.com/watch?v=kW_p6SuX7Zg",
+        "declutterPrimary": true
       },
       {
         "id": "kW_p6SuX7Zg_4",
@@ -24494,7 +25268,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=kW_p6SuX7Zg"
+        "videoUrl": "https://www.youtube.com/watch?v=kW_p6SuX7Zg",
+        "declutterPrimary": true
       },
       {
         "id": "kW_p6SuX7Zg_5",
@@ -24518,7 +25293,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=kW_p6SuX7Zg"
+        "videoUrl": "https://www.youtube.com/watch?v=kW_p6SuX7Zg",
+        "declutterPrimary": true
       },
       {
         "id": "kW_p6SuX7Zg_6",
@@ -24542,7 +25318,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=kW_p6SuX7Zg"
+        "videoUrl": "https://www.youtube.com/watch?v=kW_p6SuX7Zg",
+        "declutterPrimary": true
       },
       {
         "id": "kW_p6SuX7Zg_7",
@@ -24566,7 +25343,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=kW_p6SuX7Zg"
+        "videoUrl": "https://www.youtube.com/watch?v=kW_p6SuX7Zg",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -24578,7 +25356,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "Kv8qx-XkxJc",
@@ -24619,7 +25400,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Kv8qx-XkxJc"
+        "videoUrl": "https://www.youtube.com/watch?v=Kv8qx-XkxJc",
+        "declutterPrimary": true
       },
       {
         "id": "Kv8qx-XkxJc_2",
@@ -24643,7 +25425,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Kv8qx-XkxJc"
+        "videoUrl": "https://www.youtube.com/watch?v=Kv8qx-XkxJc",
+        "declutterPrimary": true
       },
       {
         "id": "Kv8qx-XkxJc_3",
@@ -24667,7 +25450,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Kv8qx-XkxJc"
+        "videoUrl": "https://www.youtube.com/watch?v=Kv8qx-XkxJc",
+        "declutterPrimary": true
       },
       {
         "id": "Kv8qx-XkxJc_4",
@@ -24691,7 +25475,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Kv8qx-XkxJc"
+        "videoUrl": "https://www.youtube.com/watch?v=Kv8qx-XkxJc",
+        "declutterPrimary": true
       },
       {
         "id": "Kv8qx-XkxJc_5",
@@ -24715,7 +25500,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Kv8qx-XkxJc"
+        "videoUrl": "https://www.youtube.com/watch?v=Kv8qx-XkxJc",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 5,
@@ -24727,7 +25513,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Water Lilies & Garden Sanctuaries"
+    "theme": "Water Lilies & Garden Sanctuaries",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "8z5XHjZwaEU",
@@ -24768,7 +25557,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=8z5XHjZwaEU"
+        "videoUrl": "https://www.youtube.com/watch?v=8z5XHjZwaEU",
+        "declutterPrimary": true
       },
       {
         "id": "8z5XHjZwaEU_2",
@@ -24792,7 +25582,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=8z5XHjZwaEU"
+        "videoUrl": "https://www.youtube.com/watch?v=8z5XHjZwaEU",
+        "declutterPrimary": true
       },
       {
         "id": "8z5XHjZwaEU_3",
@@ -24816,7 +25607,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=8z5XHjZwaEU"
+        "videoUrl": "https://www.youtube.com/watch?v=8z5XHjZwaEU",
+        "declutterPrimary": true
       },
       {
         "id": "8z5XHjZwaEU_4",
@@ -24840,7 +25632,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=8z5XHjZwaEU"
+        "videoUrl": "https://www.youtube.com/watch?v=8z5XHjZwaEU",
+        "declutterPrimary": true
       },
       {
         "id": "8z5XHjZwaEU_5",
@@ -24864,7 +25657,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=8z5XHjZwaEU"
+        "videoUrl": "https://www.youtube.com/watch?v=8z5XHjZwaEU",
+        "declutterPrimary": true
       },
       {
         "id": "8z5XHjZwaEU_6",
@@ -24888,7 +25682,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=8z5XHjZwaEU"
+        "videoUrl": "https://www.youtube.com/watch?v=8z5XHjZwaEU",
+        "declutterPrimary": true
       },
       {
         "id": "8z5XHjZwaEU_7",
@@ -24912,7 +25707,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=8z5XHjZwaEU"
+        "videoUrl": "https://www.youtube.com/watch?v=8z5XHjZwaEU",
+        "declutterPrimary": true
       },
       {
         "id": "8z5XHjZwaEU_8",
@@ -24936,7 +25732,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=8z5XHjZwaEU"
+        "videoUrl": "https://www.youtube.com/watch?v=8z5XHjZwaEU",
+        "declutterPrimary": true
       },
       {
         "id": "8z5XHjZwaEU_9",
@@ -24960,7 +25757,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=8z5XHjZwaEU"
+        "videoUrl": "https://www.youtube.com/watch?v=8z5XHjZwaEU",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -24972,7 +25770,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Masterwork Retrospectives & Anthologies"
+    "theme": "Masterwork Retrospectives & Anthologies",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "XTzuOtPSodI",
@@ -25013,7 +25814,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI"
+        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI",
+        "declutterPrimary": true
       },
       {
         "id": "XTzuOtPSodI_2",
@@ -25037,7 +25839,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI"
+        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI",
+        "declutterPrimary": true
       },
       {
         "id": "XTzuOtPSodI_3",
@@ -25061,7 +25864,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI"
+        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI",
+        "declutterPrimary": true
       },
       {
         "id": "XTzuOtPSodI_4",
@@ -25085,7 +25889,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI"
+        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI",
+        "declutterPrimary": true
       },
       {
         "id": "XTzuOtPSodI_5",
@@ -25109,7 +25914,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI"
+        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI",
+        "declutterPrimary": true
       },
       {
         "id": "XTzuOtPSodI_6",
@@ -25133,7 +25939,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI"
+        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI",
+        "declutterPrimary": true
       },
       {
         "id": "XTzuOtPSodI_7",
@@ -25157,7 +25964,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI"
+        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI",
+        "declutterPrimary": true
       },
       {
         "id": "XTzuOtPSodI_8",
@@ -25181,7 +25989,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI"
+        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI",
+        "declutterPrimary": true
       },
       {
         "id": "XTzuOtPSodI_9",
@@ -25205,7 +26014,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI"
+        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI",
+        "declutterPrimary": true
       },
       {
         "id": "XTzuOtPSodI_10",
@@ -25229,7 +26039,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI"
+        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI",
+        "declutterPrimary": true
       },
       {
         "id": "XTzuOtPSodI_11",
@@ -25253,7 +26064,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI"
+        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI",
+        "declutterPrimary": true
       },
       {
         "id": "XTzuOtPSodI_12",
@@ -25277,7 +26089,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI"
+        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI",
+        "declutterPrimary": true
       },
       {
         "id": "XTzuOtPSodI_13",
@@ -25301,7 +26114,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI"
+        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI",
+        "declutterPrimary": true
       },
       {
         "id": "XTzuOtPSodI_14",
@@ -25325,7 +26139,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI"
+        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI",
+        "declutterPrimary": true
       },
       {
         "id": "XTzuOtPSodI_15",
@@ -25349,7 +26164,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI"
+        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI",
+        "declutterPrimary": true
       },
       {
         "id": "XTzuOtPSodI_16",
@@ -25373,7 +26189,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI"
+        "videoUrl": "https://www.youtube.com/watch?v=XTzuOtPSodI",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 16,
@@ -25385,7 +26202,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Pierre-Auguste Renoir",
-    "theme": "Masterwork Retrospectives & Anthologies"
+    "theme": "Masterwork Retrospectives & Anthologies",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "hhCbN53J4EU",
@@ -25426,7 +26246,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=hhCbN53J4EU"
+        "videoUrl": "https://www.youtube.com/watch?v=hhCbN53J4EU",
+        "declutterPrimary": true
       },
       {
         "id": "hhCbN53J4EU_2",
@@ -25450,7 +26271,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=hhCbN53J4EU"
+        "videoUrl": "https://www.youtube.com/watch?v=hhCbN53J4EU",
+        "declutterPrimary": true
       },
       {
         "id": "hhCbN53J4EU_3",
@@ -25474,7 +26296,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=hhCbN53J4EU"
+        "videoUrl": "https://www.youtube.com/watch?v=hhCbN53J4EU",
+        "declutterPrimary": true
       },
       {
         "id": "hhCbN53J4EU_4",
@@ -25498,7 +26321,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=hhCbN53J4EU"
+        "videoUrl": "https://www.youtube.com/watch?v=hhCbN53J4EU",
+        "declutterPrimary": true
       },
       {
         "id": "hhCbN53J4EU_5",
@@ -25522,7 +26346,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=hhCbN53J4EU"
+        "videoUrl": "https://www.youtube.com/watch?v=hhCbN53J4EU",
+        "declutterPrimary": true
       },
       {
         "id": "hhCbN53J4EU_6",
@@ -25546,7 +26371,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=hhCbN53J4EU"
+        "videoUrl": "https://www.youtube.com/watch?v=hhCbN53J4EU",
+        "declutterPrimary": true
       },
       {
         "id": "hhCbN53J4EU_7",
@@ -25570,7 +26396,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=hhCbN53J4EU"
+        "videoUrl": "https://www.youtube.com/watch?v=hhCbN53J4EU",
+        "declutterPrimary": true
       },
       {
         "id": "hhCbN53J4EU_8",
@@ -25594,7 +26421,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=hhCbN53J4EU"
+        "videoUrl": "https://www.youtube.com/watch?v=hhCbN53J4EU",
+        "declutterPrimary": true
       },
       {
         "id": "hhCbN53J4EU_9",
@@ -25618,7 +26446,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=hhCbN53J4EU"
+        "videoUrl": "https://www.youtube.com/watch?v=hhCbN53J4EU",
+        "declutterPrimary": true
       },
       {
         "id": "hhCbN53J4EU_10",
@@ -25642,7 +26471,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=hhCbN53J4EU"
+        "videoUrl": "https://www.youtube.com/watch?v=hhCbN53J4EU",
+        "declutterPrimary": true
       },
       {
         "id": "hhCbN53J4EU_11",
@@ -25666,7 +26496,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=hhCbN53J4EU"
+        "videoUrl": "https://www.youtube.com/watch?v=hhCbN53J4EU",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 11,
@@ -25678,7 +26509,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "Xbfis3bqJ7M",
@@ -25719,7 +26553,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=Xbfis3bqJ7M"
+        "videoUrl": "https://www.youtube.com/watch?v=Xbfis3bqJ7M",
+        "declutterPrimary": true
       },
       {
         "id": "Xbfis3bqJ7M_2",
@@ -25743,7 +26578,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=Xbfis3bqJ7M"
+        "videoUrl": "https://www.youtube.com/watch?v=Xbfis3bqJ7M",
+        "declutterPrimary": true
       },
       {
         "id": "Xbfis3bqJ7M_3",
@@ -25767,7 +26603,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=Xbfis3bqJ7M"
+        "videoUrl": "https://www.youtube.com/watch?v=Xbfis3bqJ7M",
+        "declutterPrimary": true
       },
       {
         "id": "Xbfis3bqJ7M_4",
@@ -25791,7 +26628,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=Xbfis3bqJ7M"
+        "videoUrl": "https://www.youtube.com/watch?v=Xbfis3bqJ7M",
+        "declutterPrimary": true
       },
       {
         "id": "Xbfis3bqJ7M_5",
@@ -25815,7 +26653,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=Xbfis3bqJ7M"
+        "videoUrl": "https://www.youtube.com/watch?v=Xbfis3bqJ7M",
+        "declutterPrimary": true
       },
       {
         "id": "Xbfis3bqJ7M_6",
@@ -25839,7 +26678,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=Xbfis3bqJ7M"
+        "videoUrl": "https://www.youtube.com/watch?v=Xbfis3bqJ7M",
+        "declutterPrimary": true
       },
       {
         "id": "Xbfis3bqJ7M_7",
@@ -25863,7 +26703,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=Xbfis3bqJ7M"
+        "videoUrl": "https://www.youtube.com/watch?v=Xbfis3bqJ7M",
+        "declutterPrimary": true
       },
       {
         "id": "Xbfis3bqJ7M_8",
@@ -25887,7 +26728,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=Xbfis3bqJ7M"
+        "videoUrl": "https://www.youtube.com/watch?v=Xbfis3bqJ7M",
+        "declutterPrimary": true
       },
       {
         "id": "Xbfis3bqJ7M_9",
@@ -25911,7 +26753,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=Xbfis3bqJ7M"
+        "videoUrl": "https://www.youtube.com/watch?v=Xbfis3bqJ7M",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -25923,7 +26766,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Masterwork Retrospectives & Anthologies"
+    "theme": "Masterwork Retrospectives & Anthologies",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "y_V8_qF9i-s",
@@ -25964,7 +26810,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=y_V8_qF9i-s"
+        "videoUrl": "https://www.youtube.com/watch?v=y_V8_qF9i-s",
+        "declutterPrimary": true
       },
       {
         "id": "y_V8_qF9i-s_2",
@@ -25988,7 +26835,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=y_V8_qF9i-s"
+        "videoUrl": "https://www.youtube.com/watch?v=y_V8_qF9i-s",
+        "declutterPrimary": true
       },
       {
         "id": "y_V8_qF9i-s_3",
@@ -26012,7 +26860,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=y_V8_qF9i-s"
+        "videoUrl": "https://www.youtube.com/watch?v=y_V8_qF9i-s",
+        "declutterPrimary": true
       },
       {
         "id": "y_V8_qF9i-s_4",
@@ -26036,7 +26885,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=y_V8_qF9i-s"
+        "videoUrl": "https://www.youtube.com/watch?v=y_V8_qF9i-s",
+        "declutterPrimary": true
       },
       {
         "id": "y_V8_qF9i-s_5",
@@ -26060,7 +26910,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=y_V8_qF9i-s"
+        "videoUrl": "https://www.youtube.com/watch?v=y_V8_qF9i-s",
+        "declutterPrimary": true
       },
       {
         "id": "y_V8_qF9i-s_6",
@@ -26084,7 +26935,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=y_V8_qF9i-s"
+        "videoUrl": "https://www.youtube.com/watch?v=y_V8_qF9i-s",
+        "declutterPrimary": true
       },
       {
         "id": "y_V8_qF9i-s_7",
@@ -26108,7 +26960,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=y_V8_qF9i-s"
+        "videoUrl": "https://www.youtube.com/watch?v=y_V8_qF9i-s",
+        "declutterPrimary": true
       },
       {
         "id": "y_V8_qF9i-s_8",
@@ -26132,7 +26985,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=y_V8_qF9i-s"
+        "videoUrl": "https://www.youtube.com/watch?v=y_V8_qF9i-s",
+        "declutterPrimary": true
       },
       {
         "id": "y_V8_qF9i-s_9",
@@ -26156,7 +27010,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=y_V8_qF9i-s"
+        "videoUrl": "https://www.youtube.com/watch?v=y_V8_qF9i-s",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -26168,7 +27023,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Coastal Cliffs, Étretat & Ocean Waves"
+    "theme": "Coastal Cliffs, Étretat & Ocean Waves",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "UUp97AwbYl8",
@@ -26209,7 +27067,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=UUp97AwbYl8"
+        "videoUrl": "https://www.youtube.com/watch?v=UUp97AwbYl8",
+        "declutterPrimary": true
       },
       {
         "id": "UUp97AwbYl8_2",
@@ -26233,7 +27092,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=UUp97AwbYl8"
+        "videoUrl": "https://www.youtube.com/watch?v=UUp97AwbYl8",
+        "declutterPrimary": true
       },
       {
         "id": "UUp97AwbYl8_3",
@@ -26257,7 +27117,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=UUp97AwbYl8"
+        "videoUrl": "https://www.youtube.com/watch?v=UUp97AwbYl8",
+        "declutterPrimary": true
       },
       {
         "id": "UUp97AwbYl8_4",
@@ -26281,7 +27142,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=UUp97AwbYl8"
+        "videoUrl": "https://www.youtube.com/watch?v=UUp97AwbYl8",
+        "declutterPrimary": true
       },
       {
         "id": "UUp97AwbYl8_5",
@@ -26305,7 +27167,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=UUp97AwbYl8"
+        "videoUrl": "https://www.youtube.com/watch?v=UUp97AwbYl8",
+        "declutterPrimary": true
       },
       {
         "id": "UUp97AwbYl8_6",
@@ -26329,7 +27192,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=UUp97AwbYl8"
+        "videoUrl": "https://www.youtube.com/watch?v=UUp97AwbYl8",
+        "declutterPrimary": true
       },
       {
         "id": "UUp97AwbYl8_7",
@@ -26353,7 +27217,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=UUp97AwbYl8"
+        "videoUrl": "https://www.youtube.com/watch?v=UUp97AwbYl8",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -26365,7 +27230,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "y0NG1iXxuhY",
@@ -26406,7 +27274,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=y0NG1iXxuhY"
+        "videoUrl": "https://www.youtube.com/watch?v=y0NG1iXxuhY",
+        "declutterPrimary": true
       },
       {
         "id": "y0NG1iXxuhY_2",
@@ -26430,7 +27299,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=y0NG1iXxuhY"
+        "videoUrl": "https://www.youtube.com/watch?v=y0NG1iXxuhY",
+        "declutterPrimary": true
       },
       {
         "id": "y0NG1iXxuhY_3",
@@ -26454,7 +27324,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=y0NG1iXxuhY"
+        "videoUrl": "https://www.youtube.com/watch?v=y0NG1iXxuhY",
+        "declutterPrimary": true
       },
       {
         "id": "y0NG1iXxuhY_4",
@@ -26478,7 +27349,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=y0NG1iXxuhY"
+        "videoUrl": "https://www.youtube.com/watch?v=y0NG1iXxuhY",
+        "declutterPrimary": true
       },
       {
         "id": "y0NG1iXxuhY_5",
@@ -26502,7 +27374,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=y0NG1iXxuhY"
+        "videoUrl": "https://www.youtube.com/watch?v=y0NG1iXxuhY",
+        "declutterPrimary": true
       },
       {
         "id": "y0NG1iXxuhY_6",
@@ -26526,7 +27399,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=y0NG1iXxuhY"
+        "videoUrl": "https://www.youtube.com/watch?v=y0NG1iXxuhY",
+        "declutterPrimary": true
       },
       {
         "id": "y0NG1iXxuhY_7",
@@ -26550,7 +27424,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=y0NG1iXxuhY"
+        "videoUrl": "https://www.youtube.com/watch?v=y0NG1iXxuhY",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -26562,7 +27437,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Coastal Cliffs, Étretat & Ocean Waves"
+    "theme": "Coastal Cliffs, Étretat & Ocean Waves",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "ZB0ky7lNrq8",
@@ -26603,7 +27481,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZB0ky7lNrq8"
+        "videoUrl": "https://www.youtube.com/watch?v=ZB0ky7lNrq8",
+        "declutterPrimary": true
       },
       {
         "id": "ZB0ky7lNrq8_2",
@@ -26627,7 +27506,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZB0ky7lNrq8"
+        "videoUrl": "https://www.youtube.com/watch?v=ZB0ky7lNrq8",
+        "declutterPrimary": true
       },
       {
         "id": "ZB0ky7lNrq8_3",
@@ -26651,7 +27531,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZB0ky7lNrq8"
+        "videoUrl": "https://www.youtube.com/watch?v=ZB0ky7lNrq8",
+        "declutterPrimary": true
       },
       {
         "id": "ZB0ky7lNrq8_4",
@@ -26675,7 +27556,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZB0ky7lNrq8"
+        "videoUrl": "https://www.youtube.com/watch?v=ZB0ky7lNrq8",
+        "declutterPrimary": true
       },
       {
         "id": "ZB0ky7lNrq8_5",
@@ -26699,7 +27581,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZB0ky7lNrq8"
+        "videoUrl": "https://www.youtube.com/watch?v=ZB0ky7lNrq8",
+        "declutterPrimary": true
       },
       {
         "id": "ZB0ky7lNrq8_6",
@@ -26723,7 +27606,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZB0ky7lNrq8"
+        "videoUrl": "https://www.youtube.com/watch?v=ZB0ky7lNrq8",
+        "declutterPrimary": true
       },
       {
         "id": "ZB0ky7lNrq8_7",
@@ -26747,7 +27631,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZB0ky7lNrq8"
+        "videoUrl": "https://www.youtube.com/watch?v=ZB0ky7lNrq8",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -26759,7 +27644,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "tP37hSs10Io",
@@ -26800,7 +27688,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=tP37hSs10Io"
+        "videoUrl": "https://www.youtube.com/watch?v=tP37hSs10Io",
+        "declutterPrimary": true
       },
       {
         "id": "tP37hSs10Io_2",
@@ -26824,7 +27713,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=tP37hSs10Io"
+        "videoUrl": "https://www.youtube.com/watch?v=tP37hSs10Io",
+        "declutterPrimary": true
       },
       {
         "id": "tP37hSs10Io_3",
@@ -26848,7 +27738,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=tP37hSs10Io"
+        "videoUrl": "https://www.youtube.com/watch?v=tP37hSs10Io",
+        "declutterPrimary": true
       },
       {
         "id": "tP37hSs10Io_4",
@@ -26872,7 +27763,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=tP37hSs10Io"
+        "videoUrl": "https://www.youtube.com/watch?v=tP37hSs10Io",
+        "declutterPrimary": true
       },
       {
         "id": "tP37hSs10Io_5",
@@ -26896,7 +27788,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=tP37hSs10Io"
+        "videoUrl": "https://www.youtube.com/watch?v=tP37hSs10Io",
+        "declutterPrimary": true
       },
       {
         "id": "tP37hSs10Io_6",
@@ -26920,7 +27813,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=tP37hSs10Io"
+        "videoUrl": "https://www.youtube.com/watch?v=tP37hSs10Io",
+        "declutterPrimary": true
       },
       {
         "id": "tP37hSs10Io_7",
@@ -26944,7 +27838,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=tP37hSs10Io"
+        "videoUrl": "https://www.youtube.com/watch?v=tP37hSs10Io",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -26956,7 +27851,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "0ADdYoYZIqg",
@@ -26997,7 +27895,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=0ADdYoYZIqg"
+        "videoUrl": "https://www.youtube.com/watch?v=0ADdYoYZIqg",
+        "declutterPrimary": true
       },
       {
         "id": "0ADdYoYZIqg_2",
@@ -27021,7 +27920,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=0ADdYoYZIqg"
+        "videoUrl": "https://www.youtube.com/watch?v=0ADdYoYZIqg",
+        "declutterPrimary": true
       },
       {
         "id": "0ADdYoYZIqg_3",
@@ -27045,7 +27945,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=0ADdYoYZIqg"
+        "videoUrl": "https://www.youtube.com/watch?v=0ADdYoYZIqg",
+        "declutterPrimary": true
       },
       {
         "id": "0ADdYoYZIqg_4",
@@ -27069,7 +27970,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=0ADdYoYZIqg"
+        "videoUrl": "https://www.youtube.com/watch?v=0ADdYoYZIqg",
+        "declutterPrimary": true
       },
       {
         "id": "0ADdYoYZIqg_5",
@@ -27093,7 +27995,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=0ADdYoYZIqg"
+        "videoUrl": "https://www.youtube.com/watch?v=0ADdYoYZIqg",
+        "declutterPrimary": true
       },
       {
         "id": "0ADdYoYZIqg_6",
@@ -27117,7 +28020,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=0ADdYoYZIqg"
+        "videoUrl": "https://www.youtube.com/watch?v=0ADdYoYZIqg",
+        "declutterPrimary": true
       },
       {
         "id": "0ADdYoYZIqg_7",
@@ -27141,7 +28045,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=0ADdYoYZIqg"
+        "videoUrl": "https://www.youtube.com/watch?v=0ADdYoYZIqg",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -27153,7 +28058,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "I2dt7XlcWHM",
@@ -27194,7 +28102,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=I2dt7XlcWHM"
+        "videoUrl": "https://www.youtube.com/watch?v=I2dt7XlcWHM",
+        "declutterPrimary": true
       },
       {
         "id": "I2dt7XlcWHM_2",
@@ -27218,7 +28127,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=I2dt7XlcWHM"
+        "videoUrl": "https://www.youtube.com/watch?v=I2dt7XlcWHM",
+        "declutterPrimary": true
       },
       {
         "id": "I2dt7XlcWHM_3",
@@ -27242,7 +28152,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=I2dt7XlcWHM"
+        "videoUrl": "https://www.youtube.com/watch?v=I2dt7XlcWHM",
+        "declutterPrimary": true
       },
       {
         "id": "I2dt7XlcWHM_4",
@@ -27266,7 +28177,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=I2dt7XlcWHM"
+        "videoUrl": "https://www.youtube.com/watch?v=I2dt7XlcWHM",
+        "declutterPrimary": true
       },
       {
         "id": "I2dt7XlcWHM_5",
@@ -27290,7 +28202,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=I2dt7XlcWHM"
+        "videoUrl": "https://www.youtube.com/watch?v=I2dt7XlcWHM",
+        "declutterPrimary": true
       },
       {
         "id": "I2dt7XlcWHM_6",
@@ -27314,7 +28227,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=I2dt7XlcWHM"
+        "videoUrl": "https://www.youtube.com/watch?v=I2dt7XlcWHM",
+        "declutterPrimary": true
       },
       {
         "id": "I2dt7XlcWHM_7",
@@ -27338,7 +28252,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=I2dt7XlcWHM"
+        "videoUrl": "https://www.youtube.com/watch?v=I2dt7XlcWHM",
+        "declutterPrimary": true
       },
       {
         "id": "I2dt7XlcWHM_8",
@@ -27362,7 +28277,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=I2dt7XlcWHM"
+        "videoUrl": "https://www.youtube.com/watch?v=I2dt7XlcWHM",
+        "declutterPrimary": true
       },
       {
         "id": "I2dt7XlcWHM_9",
@@ -27386,7 +28302,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=I2dt7XlcWHM"
+        "videoUrl": "https://www.youtube.com/watch?v=I2dt7XlcWHM",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -27398,7 +28315,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Coastal Cliffs, Étretat & Ocean Waves"
+    "theme": "Coastal Cliffs, Étretat & Ocean Waves",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "AyjhVXeIhKU",
@@ -27439,7 +28359,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=AyjhVXeIhKU"
+        "videoUrl": "https://www.youtube.com/watch?v=AyjhVXeIhKU",
+        "declutterPrimary": true
       },
       {
         "id": "AyjhVXeIhKU_2",
@@ -27463,7 +28384,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=AyjhVXeIhKU"
+        "videoUrl": "https://www.youtube.com/watch?v=AyjhVXeIhKU",
+        "declutterPrimary": true
       },
       {
         "id": "AyjhVXeIhKU_3",
@@ -27487,7 +28409,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=AyjhVXeIhKU"
+        "videoUrl": "https://www.youtube.com/watch?v=AyjhVXeIhKU",
+        "declutterPrimary": true
       },
       {
         "id": "AyjhVXeIhKU_4",
@@ -27511,7 +28434,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=AyjhVXeIhKU"
+        "videoUrl": "https://www.youtube.com/watch?v=AyjhVXeIhKU",
+        "declutterPrimary": true
       },
       {
         "id": "AyjhVXeIhKU_5",
@@ -27535,7 +28459,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=AyjhVXeIhKU"
+        "videoUrl": "https://www.youtube.com/watch?v=AyjhVXeIhKU",
+        "declutterPrimary": true
       },
       {
         "id": "AyjhVXeIhKU_6",
@@ -27559,7 +28484,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=AyjhVXeIhKU"
+        "videoUrl": "https://www.youtube.com/watch?v=AyjhVXeIhKU",
+        "declutterPrimary": true
       },
       {
         "id": "AyjhVXeIhKU_7",
@@ -27583,7 +28509,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=AyjhVXeIhKU"
+        "videoUrl": "https://www.youtube.com/watch?v=AyjhVXeIhKU",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -27595,7 +28522,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "River Seine & Waterways"
+    "theme": "River Seine & Waterways",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "NwxqzVKJeto",
@@ -27636,7 +28566,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=NwxqzVKJeto"
+        "videoUrl": "https://www.youtube.com/watch?v=NwxqzVKJeto",
+        "declutterPrimary": true
       },
       {
         "id": "NwxqzVKJeto_2",
@@ -27660,7 +28591,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=NwxqzVKJeto"
+        "videoUrl": "https://www.youtube.com/watch?v=NwxqzVKJeto",
+        "declutterPrimary": true
       },
       {
         "id": "NwxqzVKJeto_3",
@@ -27684,7 +28616,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=NwxqzVKJeto"
+        "videoUrl": "https://www.youtube.com/watch?v=NwxqzVKJeto",
+        "declutterPrimary": true
       },
       {
         "id": "NwxqzVKJeto_4",
@@ -27708,7 +28641,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=NwxqzVKJeto"
+        "videoUrl": "https://www.youtube.com/watch?v=NwxqzVKJeto",
+        "declutterPrimary": true
       },
       {
         "id": "NwxqzVKJeto_5",
@@ -27732,7 +28666,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=NwxqzVKJeto"
+        "videoUrl": "https://www.youtube.com/watch?v=NwxqzVKJeto",
+        "declutterPrimary": true
       },
       {
         "id": "NwxqzVKJeto_6",
@@ -27756,7 +28691,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=NwxqzVKJeto"
+        "videoUrl": "https://www.youtube.com/watch?v=NwxqzVKJeto",
+        "declutterPrimary": true
       },
       {
         "id": "NwxqzVKJeto_7",
@@ -27780,7 +28716,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=NwxqzVKJeto"
+        "videoUrl": "https://www.youtube.com/watch?v=NwxqzVKJeto",
+        "declutterPrimary": true
       },
       {
         "id": "NwxqzVKJeto_8",
@@ -27804,7 +28741,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=NwxqzVKJeto"
+        "videoUrl": "https://www.youtube.com/watch?v=NwxqzVKJeto",
+        "declutterPrimary": true
       },
       {
         "id": "NwxqzVKJeto_9",
@@ -27828,7 +28766,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=NwxqzVKJeto"
+        "videoUrl": "https://www.youtube.com/watch?v=NwxqzVKJeto",
+        "declutterPrimary": true
       },
       {
         "id": "NwxqzVKJeto_10",
@@ -27852,7 +28791,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=NwxqzVKJeto"
+        "videoUrl": "https://www.youtube.com/watch?v=NwxqzVKJeto",
+        "declutterPrimary": true
       },
       {
         "id": "NwxqzVKJeto_11",
@@ -27876,7 +28816,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=NwxqzVKJeto"
+        "videoUrl": "https://www.youtube.com/watch?v=NwxqzVKJeto",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 11,
@@ -27888,7 +28829,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "fhKXyihwy24",
@@ -27929,7 +28873,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=fhKXyihwy24"
+        "videoUrl": "https://www.youtube.com/watch?v=fhKXyihwy24",
+        "declutterPrimary": true
       },
       {
         "id": "fhKXyihwy24_2",
@@ -27953,7 +28898,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=fhKXyihwy24"
+        "videoUrl": "https://www.youtube.com/watch?v=fhKXyihwy24",
+        "declutterPrimary": true
       },
       {
         "id": "fhKXyihwy24_3",
@@ -27977,7 +28923,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=fhKXyihwy24"
+        "videoUrl": "https://www.youtube.com/watch?v=fhKXyihwy24",
+        "declutterPrimary": true
       },
       {
         "id": "fhKXyihwy24_4",
@@ -28001,7 +28948,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=fhKXyihwy24"
+        "videoUrl": "https://www.youtube.com/watch?v=fhKXyihwy24",
+        "declutterPrimary": true
       },
       {
         "id": "fhKXyihwy24_5",
@@ -28025,7 +28973,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=fhKXyihwy24"
+        "videoUrl": "https://www.youtube.com/watch?v=fhKXyihwy24",
+        "declutterPrimary": true
       },
       {
         "id": "fhKXyihwy24_6",
@@ -28049,7 +28998,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=fhKXyihwy24"
+        "videoUrl": "https://www.youtube.com/watch?v=fhKXyihwy24",
+        "declutterPrimary": true
       },
       {
         "id": "fhKXyihwy24_7",
@@ -28073,7 +29023,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=fhKXyihwy24"
+        "videoUrl": "https://www.youtube.com/watch?v=fhKXyihwy24",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -28085,7 +29036,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "1jaEEos2Moc",
@@ -28126,7 +29080,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=1jaEEos2Moc"
+        "videoUrl": "https://www.youtube.com/watch?v=1jaEEos2Moc",
+        "declutterPrimary": true
       },
       {
         "id": "1jaEEos2Moc_2",
@@ -28150,7 +29105,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=1jaEEos2Moc"
+        "videoUrl": "https://www.youtube.com/watch?v=1jaEEos2Moc",
+        "declutterPrimary": true
       },
       {
         "id": "1jaEEos2Moc_3",
@@ -28174,7 +29130,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=1jaEEos2Moc"
+        "videoUrl": "https://www.youtube.com/watch?v=1jaEEos2Moc",
+        "declutterPrimary": true
       },
       {
         "id": "1jaEEos2Moc_4",
@@ -28198,7 +29155,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=1jaEEos2Moc"
+        "videoUrl": "https://www.youtube.com/watch?v=1jaEEos2Moc",
+        "declutterPrimary": true
       },
       {
         "id": "1jaEEos2Moc_5",
@@ -28222,7 +29180,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=1jaEEos2Moc"
+        "videoUrl": "https://www.youtube.com/watch?v=1jaEEos2Moc",
+        "declutterPrimary": true
       },
       {
         "id": "1jaEEos2Moc_6",
@@ -28246,7 +29205,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=1jaEEos2Moc"
+        "videoUrl": "https://www.youtube.com/watch?v=1jaEEos2Moc",
+        "declutterPrimary": true
       },
       {
         "id": "1jaEEos2Moc_7",
@@ -28270,7 +29230,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=1jaEEos2Moc"
+        "videoUrl": "https://www.youtube.com/watch?v=1jaEEos2Moc",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -28282,7 +29243,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "phdjREhk2wg",
@@ -28323,7 +29287,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=phdjREhk2wg"
+        "videoUrl": "https://www.youtube.com/watch?v=phdjREhk2wg",
+        "declutterPrimary": true
       },
       {
         "id": "phdjREhk2wg_2",
@@ -28347,7 +29312,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=phdjREhk2wg"
+        "videoUrl": "https://www.youtube.com/watch?v=phdjREhk2wg",
+        "declutterPrimary": true
       },
       {
         "id": "phdjREhk2wg_3",
@@ -28371,7 +29337,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=phdjREhk2wg"
+        "videoUrl": "https://www.youtube.com/watch?v=phdjREhk2wg",
+        "declutterPrimary": true
       },
       {
         "id": "phdjREhk2wg_4",
@@ -28395,7 +29362,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=phdjREhk2wg"
+        "videoUrl": "https://www.youtube.com/watch?v=phdjREhk2wg",
+        "declutterPrimary": true
       },
       {
         "id": "phdjREhk2wg_5",
@@ -28419,7 +29387,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=phdjREhk2wg"
+        "videoUrl": "https://www.youtube.com/watch?v=phdjREhk2wg",
+        "declutterPrimary": true
       },
       {
         "id": "phdjREhk2wg_6",
@@ -28443,7 +29412,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=phdjREhk2wg"
+        "videoUrl": "https://www.youtube.com/watch?v=phdjREhk2wg",
+        "declutterPrimary": true
       },
       {
         "id": "phdjREhk2wg_7",
@@ -28467,7 +29437,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=phdjREhk2wg"
+        "videoUrl": "https://www.youtube.com/watch?v=phdjREhk2wg",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -28479,7 +29450,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "y2qq6rdVTxg",
@@ -28520,7 +29494,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=y2qq6rdVTxg"
+        "videoUrl": "https://www.youtube.com/watch?v=y2qq6rdVTxg",
+        "declutterPrimary": true
       },
       {
         "id": "y2qq6rdVTxg_2",
@@ -28544,7 +29519,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=y2qq6rdVTxg"
+        "videoUrl": "https://www.youtube.com/watch?v=y2qq6rdVTxg",
+        "declutterPrimary": true
       },
       {
         "id": "y2qq6rdVTxg_3",
@@ -28568,7 +29544,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=y2qq6rdVTxg"
+        "videoUrl": "https://www.youtube.com/watch?v=y2qq6rdVTxg",
+        "declutterPrimary": true
       },
       {
         "id": "y2qq6rdVTxg_4",
@@ -28592,7 +29569,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=y2qq6rdVTxg"
+        "videoUrl": "https://www.youtube.com/watch?v=y2qq6rdVTxg",
+        "declutterPrimary": true
       },
       {
         "id": "y2qq6rdVTxg_5",
@@ -28616,7 +29594,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=y2qq6rdVTxg"
+        "videoUrl": "https://www.youtube.com/watch?v=y2qq6rdVTxg",
+        "declutterPrimary": true
       },
       {
         "id": "y2qq6rdVTxg_6",
@@ -28640,7 +29619,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=y2qq6rdVTxg"
+        "videoUrl": "https://www.youtube.com/watch?v=y2qq6rdVTxg",
+        "declutterPrimary": true
       },
       {
         "id": "y2qq6rdVTxg_7",
@@ -28664,7 +29644,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=y2qq6rdVTxg"
+        "videoUrl": "https://www.youtube.com/watch?v=y2qq6rdVTxg",
+        "declutterPrimary": true
       },
       {
         "id": "y2qq6rdVTxg_8",
@@ -28688,7 +29669,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=y2qq6rdVTxg"
+        "videoUrl": "https://www.youtube.com/watch?v=y2qq6rdVTxg",
+        "declutterPrimary": true
       },
       {
         "id": "y2qq6rdVTxg_9",
@@ -28712,7 +29694,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=y2qq6rdVTxg"
+        "videoUrl": "https://www.youtube.com/watch?v=y2qq6rdVTxg",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -28724,7 +29707,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Water Lilies & Garden Sanctuaries"
+    "theme": "Water Lilies & Garden Sanctuaries",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "0wPmoFYmLyA",
@@ -28765,7 +29751,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=0wPmoFYmLyA"
+        "videoUrl": "https://www.youtube.com/watch?v=0wPmoFYmLyA",
+        "declutterPrimary": true
       },
       {
         "id": "0wPmoFYmLyA_2",
@@ -28789,7 +29776,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=0wPmoFYmLyA"
+        "videoUrl": "https://www.youtube.com/watch?v=0wPmoFYmLyA",
+        "declutterPrimary": true
       },
       {
         "id": "0wPmoFYmLyA_3",
@@ -28813,7 +29801,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=0wPmoFYmLyA"
+        "videoUrl": "https://www.youtube.com/watch?v=0wPmoFYmLyA",
+        "declutterPrimary": true
       },
       {
         "id": "0wPmoFYmLyA_4",
@@ -28837,7 +29826,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=0wPmoFYmLyA"
+        "videoUrl": "https://www.youtube.com/watch?v=0wPmoFYmLyA",
+        "declutterPrimary": true
       },
       {
         "id": "0wPmoFYmLyA_5",
@@ -28861,7 +29851,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=0wPmoFYmLyA"
+        "videoUrl": "https://www.youtube.com/watch?v=0wPmoFYmLyA",
+        "declutterPrimary": true
       },
       {
         "id": "0wPmoFYmLyA_6",
@@ -28885,7 +29876,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=0wPmoFYmLyA"
+        "videoUrl": "https://www.youtube.com/watch?v=0wPmoFYmLyA",
+        "declutterPrimary": true
       },
       {
         "id": "0wPmoFYmLyA_7",
@@ -28909,7 +29901,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=0wPmoFYmLyA"
+        "videoUrl": "https://www.youtube.com/watch?v=0wPmoFYmLyA",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -28921,7 +29914,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "FAnpNHcWxAw",
@@ -28962,7 +29958,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=FAnpNHcWxAw"
+        "videoUrl": "https://www.youtube.com/watch?v=FAnpNHcWxAw",
+        "declutterPrimary": true
       },
       {
         "id": "FAnpNHcWxAw_2",
@@ -28986,7 +29983,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=FAnpNHcWxAw"
+        "videoUrl": "https://www.youtube.com/watch?v=FAnpNHcWxAw",
+        "declutterPrimary": true
       },
       {
         "id": "FAnpNHcWxAw_3",
@@ -29010,7 +30008,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=FAnpNHcWxAw"
+        "videoUrl": "https://www.youtube.com/watch?v=FAnpNHcWxAw",
+        "declutterPrimary": true
       },
       {
         "id": "FAnpNHcWxAw_4",
@@ -29034,7 +30033,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=FAnpNHcWxAw"
+        "videoUrl": "https://www.youtube.com/watch?v=FAnpNHcWxAw",
+        "declutterPrimary": true
       },
       {
         "id": "FAnpNHcWxAw_5",
@@ -29058,7 +30058,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=FAnpNHcWxAw"
+        "videoUrl": "https://www.youtube.com/watch?v=FAnpNHcWxAw",
+        "declutterPrimary": true
       },
       {
         "id": "FAnpNHcWxAw_6",
@@ -29082,7 +30083,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=FAnpNHcWxAw"
+        "videoUrl": "https://www.youtube.com/watch?v=FAnpNHcWxAw",
+        "declutterPrimary": true
       },
       {
         "id": "FAnpNHcWxAw_7",
@@ -29106,7 +30108,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=FAnpNHcWxAw"
+        "videoUrl": "https://www.youtube.com/watch?v=FAnpNHcWxAw",
+        "declutterPrimary": true
       },
       {
         "id": "FAnpNHcWxAw_8",
@@ -29130,7 +30133,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=FAnpNHcWxAw"
+        "videoUrl": "https://www.youtube.com/watch?v=FAnpNHcWxAw",
+        "declutterPrimary": true
       },
       {
         "id": "FAnpNHcWxAw_9",
@@ -29154,7 +30158,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=FAnpNHcWxAw"
+        "videoUrl": "https://www.youtube.com/watch?v=FAnpNHcWxAw",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -29166,7 +30171,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "SfJFnwW-m3M",
@@ -29207,7 +30215,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=SfJFnwW-m3M"
+        "videoUrl": "https://www.youtube.com/watch?v=SfJFnwW-m3M",
+        "declutterPrimary": true
       },
       {
         "id": "SfJFnwW-m3M_2",
@@ -29231,7 +30240,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=SfJFnwW-m3M"
+        "videoUrl": "https://www.youtube.com/watch?v=SfJFnwW-m3M",
+        "declutterPrimary": true
       },
       {
         "id": "SfJFnwW-m3M_3",
@@ -29255,7 +30265,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=SfJFnwW-m3M"
+        "videoUrl": "https://www.youtube.com/watch?v=SfJFnwW-m3M",
+        "declutterPrimary": true
       },
       {
         "id": "SfJFnwW-m3M_4",
@@ -29279,7 +30290,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=SfJFnwW-m3M"
+        "videoUrl": "https://www.youtube.com/watch?v=SfJFnwW-m3M",
+        "declutterPrimary": true
       },
       {
         "id": "SfJFnwW-m3M_5",
@@ -29303,7 +30315,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=SfJFnwW-m3M"
+        "videoUrl": "https://www.youtube.com/watch?v=SfJFnwW-m3M",
+        "declutterPrimary": true
       },
       {
         "id": "SfJFnwW-m3M_6",
@@ -29327,7 +30340,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=SfJFnwW-m3M"
+        "videoUrl": "https://www.youtube.com/watch?v=SfJFnwW-m3M",
+        "declutterPrimary": true
       },
       {
         "id": "SfJFnwW-m3M_7",
@@ -29351,7 +30365,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=SfJFnwW-m3M"
+        "videoUrl": "https://www.youtube.com/watch?v=SfJFnwW-m3M",
+        "declutterPrimary": true
       },
       {
         "id": "SfJFnwW-m3M_8",
@@ -29375,7 +30390,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=SfJFnwW-m3M"
+        "videoUrl": "https://www.youtube.com/watch?v=SfJFnwW-m3M",
+        "declutterPrimary": true
       },
       {
         "id": "SfJFnwW-m3M_9",
@@ -29399,7 +30415,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=SfJFnwW-m3M"
+        "videoUrl": "https://www.youtube.com/watch?v=SfJFnwW-m3M",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -29411,7 +30428,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "River Seine & Waterways"
+    "theme": "River Seine & Waterways",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "S2diglp47fo",
@@ -29452,7 +30472,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=S2diglp47fo"
+        "videoUrl": "https://www.youtube.com/watch?v=S2diglp47fo",
+        "declutterPrimary": true
       },
       {
         "id": "S2diglp47fo_2",
@@ -29476,7 +30497,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=S2diglp47fo"
+        "videoUrl": "https://www.youtube.com/watch?v=S2diglp47fo",
+        "declutterPrimary": true
       },
       {
         "id": "S2diglp47fo_3",
@@ -29500,7 +30522,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=S2diglp47fo"
+        "videoUrl": "https://www.youtube.com/watch?v=S2diglp47fo",
+        "declutterPrimary": true
       },
       {
         "id": "S2diglp47fo_4",
@@ -29524,7 +30547,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=S2diglp47fo"
+        "videoUrl": "https://www.youtube.com/watch?v=S2diglp47fo",
+        "declutterPrimary": true
       },
       {
         "id": "S2diglp47fo_5",
@@ -29548,7 +30572,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=S2diglp47fo"
+        "videoUrl": "https://www.youtube.com/watch?v=S2diglp47fo",
+        "declutterPrimary": true
       },
       {
         "id": "S2diglp47fo_6",
@@ -29572,7 +30597,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=S2diglp47fo"
+        "videoUrl": "https://www.youtube.com/watch?v=S2diglp47fo",
+        "declutterPrimary": true
       },
       {
         "id": "S2diglp47fo_7",
@@ -29596,7 +30622,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=S2diglp47fo"
+        "videoUrl": "https://www.youtube.com/watch?v=S2diglp47fo",
+        "declutterPrimary": true
       },
       {
         "id": "S2diglp47fo_8",
@@ -29620,7 +30647,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=S2diglp47fo"
+        "videoUrl": "https://www.youtube.com/watch?v=S2diglp47fo",
+        "declutterPrimary": true
       },
       {
         "id": "S2diglp47fo_9",
@@ -29644,7 +30672,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Masterwork Retrospectives & Anthologies",
-        "videoUrl": "https://www.youtube.com/watch?v=S2diglp47fo"
+        "videoUrl": "https://www.youtube.com/watch?v=S2diglp47fo",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -29656,7 +30685,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Masterwork Retrospectives & Anthologies"
+    "theme": "Masterwork Retrospectives & Anthologies",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "gwrPKwZ01fc",
@@ -29697,7 +30729,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=gwrPKwZ01fc"
+        "videoUrl": "https://www.youtube.com/watch?v=gwrPKwZ01fc",
+        "declutterPrimary": true
       },
       {
         "id": "gwrPKwZ01fc_2",
@@ -29721,7 +30754,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=gwrPKwZ01fc"
+        "videoUrl": "https://www.youtube.com/watch?v=gwrPKwZ01fc",
+        "declutterPrimary": true
       },
       {
         "id": "gwrPKwZ01fc_3",
@@ -29745,7 +30779,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=gwrPKwZ01fc"
+        "videoUrl": "https://www.youtube.com/watch?v=gwrPKwZ01fc",
+        "declutterPrimary": true
       },
       {
         "id": "gwrPKwZ01fc_4",
@@ -29769,7 +30804,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=gwrPKwZ01fc"
+        "videoUrl": "https://www.youtube.com/watch?v=gwrPKwZ01fc",
+        "declutterPrimary": true
       },
       {
         "id": "gwrPKwZ01fc_5",
@@ -29793,7 +30829,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=gwrPKwZ01fc"
+        "videoUrl": "https://www.youtube.com/watch?v=gwrPKwZ01fc",
+        "declutterPrimary": true
       },
       {
         "id": "gwrPKwZ01fc_6",
@@ -29817,7 +30854,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=gwrPKwZ01fc"
+        "videoUrl": "https://www.youtube.com/watch?v=gwrPKwZ01fc",
+        "declutterPrimary": true
       },
       {
         "id": "gwrPKwZ01fc_7",
@@ -29841,7 +30879,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=gwrPKwZ01fc"
+        "videoUrl": "https://www.youtube.com/watch?v=gwrPKwZ01fc",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -29853,7 +30892,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "8DoY7OKZ_eA",
@@ -29894,7 +30936,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8DoY7OKZ_eA"
+        "videoUrl": "https://www.youtube.com/watch?v=8DoY7OKZ_eA",
+        "declutterPrimary": true
       },
       {
         "id": "8DoY7OKZ_eA_2",
@@ -29918,7 +30961,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8DoY7OKZ_eA"
+        "videoUrl": "https://www.youtube.com/watch?v=8DoY7OKZ_eA",
+        "declutterPrimary": true
       },
       {
         "id": "8DoY7OKZ_eA_3",
@@ -29942,7 +30986,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8DoY7OKZ_eA"
+        "videoUrl": "https://www.youtube.com/watch?v=8DoY7OKZ_eA",
+        "declutterPrimary": true
       },
       {
         "id": "8DoY7OKZ_eA_4",
@@ -29966,7 +31011,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8DoY7OKZ_eA"
+        "videoUrl": "https://www.youtube.com/watch?v=8DoY7OKZ_eA",
+        "declutterPrimary": true
       },
       {
         "id": "8DoY7OKZ_eA_5",
@@ -29990,7 +31036,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8DoY7OKZ_eA"
+        "videoUrl": "https://www.youtube.com/watch?v=8DoY7OKZ_eA",
+        "declutterPrimary": true
       },
       {
         "id": "8DoY7OKZ_eA_6",
@@ -30014,7 +31061,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8DoY7OKZ_eA"
+        "videoUrl": "https://www.youtube.com/watch?v=8DoY7OKZ_eA",
+        "declutterPrimary": true
       },
       {
         "id": "8DoY7OKZ_eA_7",
@@ -30038,7 +31086,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8DoY7OKZ_eA"
+        "videoUrl": "https://www.youtube.com/watch?v=8DoY7OKZ_eA",
+        "declutterPrimary": true
       },
       {
         "id": "8DoY7OKZ_eA_8",
@@ -30062,7 +31111,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8DoY7OKZ_eA"
+        "videoUrl": "https://www.youtube.com/watch?v=8DoY7OKZ_eA",
+        "declutterPrimary": true
       },
       {
         "id": "8DoY7OKZ_eA_9",
@@ -30086,7 +31136,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8DoY7OKZ_eA"
+        "videoUrl": "https://www.youtube.com/watch?v=8DoY7OKZ_eA",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -30098,7 +31149,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "QJrKGGe6fok",
@@ -30139,7 +31193,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QJrKGGe6fok"
+        "videoUrl": "https://www.youtube.com/watch?v=QJrKGGe6fok",
+        "declutterPrimary": true
       },
       {
         "id": "QJrKGGe6fok_2",
@@ -30163,7 +31218,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QJrKGGe6fok"
+        "videoUrl": "https://www.youtube.com/watch?v=QJrKGGe6fok",
+        "declutterPrimary": true
       },
       {
         "id": "QJrKGGe6fok_3",
@@ -30187,7 +31243,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QJrKGGe6fok"
+        "videoUrl": "https://www.youtube.com/watch?v=QJrKGGe6fok",
+        "declutterPrimary": true
       },
       {
         "id": "QJrKGGe6fok_4",
@@ -30211,7 +31268,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QJrKGGe6fok"
+        "videoUrl": "https://www.youtube.com/watch?v=QJrKGGe6fok",
+        "declutterPrimary": true
       },
       {
         "id": "QJrKGGe6fok_5",
@@ -30235,7 +31293,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QJrKGGe6fok"
+        "videoUrl": "https://www.youtube.com/watch?v=QJrKGGe6fok",
+        "declutterPrimary": true
       },
       {
         "id": "QJrKGGe6fok_6",
@@ -30259,7 +31318,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QJrKGGe6fok"
+        "videoUrl": "https://www.youtube.com/watch?v=QJrKGGe6fok",
+        "declutterPrimary": true
       },
       {
         "id": "QJrKGGe6fok_7",
@@ -30283,7 +31343,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QJrKGGe6fok"
+        "videoUrl": "https://www.youtube.com/watch?v=QJrKGGe6fok",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -30295,7 +31356,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "A-le9yB8PYY",
@@ -30336,7 +31400,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=A-le9yB8PYY"
+        "videoUrl": "https://www.youtube.com/watch?v=A-le9yB8PYY",
+        "declutterPrimary": true
       },
       {
         "id": "A-le9yB8PYY_2",
@@ -30360,7 +31425,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=A-le9yB8PYY"
+        "videoUrl": "https://www.youtube.com/watch?v=A-le9yB8PYY",
+        "declutterPrimary": true
       },
       {
         "id": "A-le9yB8PYY_3",
@@ -30384,7 +31450,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=A-le9yB8PYY"
+        "videoUrl": "https://www.youtube.com/watch?v=A-le9yB8PYY",
+        "declutterPrimary": true
       },
       {
         "id": "A-le9yB8PYY_4",
@@ -30408,7 +31475,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=A-le9yB8PYY"
+        "videoUrl": "https://www.youtube.com/watch?v=A-le9yB8PYY",
+        "declutterPrimary": true
       },
       {
         "id": "A-le9yB8PYY_5",
@@ -30432,7 +31500,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=A-le9yB8PYY"
+        "videoUrl": "https://www.youtube.com/watch?v=A-le9yB8PYY",
+        "declutterPrimary": true
       },
       {
         "id": "A-le9yB8PYY_6",
@@ -30456,7 +31525,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=A-le9yB8PYY"
+        "videoUrl": "https://www.youtube.com/watch?v=A-le9yB8PYY",
+        "declutterPrimary": true
       },
       {
         "id": "A-le9yB8PYY_7",
@@ -30480,7 +31550,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=A-le9yB8PYY"
+        "videoUrl": "https://www.youtube.com/watch?v=A-le9yB8PYY",
+        "declutterPrimary": true
       },
       {
         "id": "A-le9yB8PYY_8",
@@ -30504,7 +31575,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=A-le9yB8PYY"
+        "videoUrl": "https://www.youtube.com/watch?v=A-le9yB8PYY",
+        "declutterPrimary": true
       },
       {
         "id": "A-le9yB8PYY_9",
@@ -30528,7 +31600,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=A-le9yB8PYY"
+        "videoUrl": "https://www.youtube.com/watch?v=A-le9yB8PYY",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -30540,7 +31613,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "26VEKoCFZcI",
@@ -30581,7 +31657,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=26VEKoCFZcI"
+        "videoUrl": "https://www.youtube.com/watch?v=26VEKoCFZcI",
+        "declutterPrimary": true
       },
       {
         "id": "26VEKoCFZcI_2",
@@ -30605,7 +31682,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=26VEKoCFZcI"
+        "videoUrl": "https://www.youtube.com/watch?v=26VEKoCFZcI",
+        "declutterPrimary": true
       },
       {
         "id": "26VEKoCFZcI_3",
@@ -30629,7 +31707,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=26VEKoCFZcI"
+        "videoUrl": "https://www.youtube.com/watch?v=26VEKoCFZcI",
+        "declutterPrimary": true
       },
       {
         "id": "26VEKoCFZcI_4",
@@ -30653,7 +31732,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=26VEKoCFZcI"
+        "videoUrl": "https://www.youtube.com/watch?v=26VEKoCFZcI",
+        "declutterPrimary": true
       },
       {
         "id": "26VEKoCFZcI_5",
@@ -30677,7 +31757,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=26VEKoCFZcI"
+        "videoUrl": "https://www.youtube.com/watch?v=26VEKoCFZcI",
+        "declutterPrimary": true
       },
       {
         "id": "26VEKoCFZcI_6",
@@ -30701,7 +31782,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=26VEKoCFZcI"
+        "videoUrl": "https://www.youtube.com/watch?v=26VEKoCFZcI",
+        "declutterPrimary": true
       },
       {
         "id": "26VEKoCFZcI_7",
@@ -30725,7 +31807,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=26VEKoCFZcI"
+        "videoUrl": "https://www.youtube.com/watch?v=26VEKoCFZcI",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -30737,7 +31820,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "uR1ljov-MRc",
@@ -30778,7 +31864,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc"
+        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc",
+        "declutterPrimary": true
       },
       {
         "id": "uR1ljov-MRc_2",
@@ -30802,7 +31889,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc"
+        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc",
+        "declutterPrimary": true
       },
       {
         "id": "uR1ljov-MRc_3",
@@ -30826,7 +31914,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc"
+        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc",
+        "declutterPrimary": true
       },
       {
         "id": "uR1ljov-MRc_4",
@@ -30850,7 +31939,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc"
+        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc",
+        "declutterPrimary": true
       },
       {
         "id": "uR1ljov-MRc_5",
@@ -30874,7 +31964,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc"
+        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc",
+        "declutterPrimary": true
       },
       {
         "id": "uR1ljov-MRc_6",
@@ -30898,7 +31989,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc"
+        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc",
+        "declutterPrimary": true
       },
       {
         "id": "uR1ljov-MRc_7",
@@ -30922,7 +32014,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc"
+        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc",
+        "declutterPrimary": true
       },
       {
         "id": "uR1ljov-MRc_8",
@@ -30946,7 +32039,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc"
+        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc",
+        "declutterPrimary": true
       },
       {
         "id": "uR1ljov-MRc_9",
@@ -30970,7 +32064,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc"
+        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc",
+        "declutterPrimary": true
       },
       {
         "id": "uR1ljov-MRc_10",
@@ -30994,7 +32089,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc"
+        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc",
+        "declutterPrimary": true
       },
       {
         "id": "uR1ljov-MRc_11",
@@ -31018,7 +32114,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc"
+        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc",
+        "declutterPrimary": true
       },
       {
         "id": "uR1ljov-MRc_12",
@@ -31042,7 +32139,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc"
+        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc",
+        "declutterPrimary": true
       },
       {
         "id": "uR1ljov-MRc_13",
@@ -31066,7 +32164,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc"
+        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc",
+        "declutterPrimary": true
       },
       {
         "id": "uR1ljov-MRc_14",
@@ -31090,7 +32189,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc"
+        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc",
+        "declutterPrimary": true
       },
       {
         "id": "uR1ljov-MRc_15",
@@ -31114,7 +32214,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc"
+        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc",
+        "declutterPrimary": true
       },
       {
         "id": "uR1ljov-MRc_16",
@@ -31138,7 +32239,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc"
+        "videoUrl": "https://www.youtube.com/watch?v=uR1ljov-MRc",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 16,
@@ -31150,7 +32252,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "_HUYiFugH4A",
@@ -31191,7 +32296,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=_HUYiFugH4A"
+        "videoUrl": "https://www.youtube.com/watch?v=_HUYiFugH4A",
+        "declutterPrimary": true
       },
       {
         "id": "_HUYiFugH4A_2",
@@ -31215,7 +32321,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=_HUYiFugH4A"
+        "videoUrl": "https://www.youtube.com/watch?v=_HUYiFugH4A",
+        "declutterPrimary": true
       },
       {
         "id": "_HUYiFugH4A_3",
@@ -31239,7 +32346,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=_HUYiFugH4A"
+        "videoUrl": "https://www.youtube.com/watch?v=_HUYiFugH4A",
+        "declutterPrimary": true
       },
       {
         "id": "_HUYiFugH4A_4",
@@ -31263,7 +32371,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=_HUYiFugH4A"
+        "videoUrl": "https://www.youtube.com/watch?v=_HUYiFugH4A",
+        "declutterPrimary": true
       },
       {
         "id": "_HUYiFugH4A_5",
@@ -31287,7 +32396,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=_HUYiFugH4A"
+        "videoUrl": "https://www.youtube.com/watch?v=_HUYiFugH4A",
+        "declutterPrimary": true
       },
       {
         "id": "_HUYiFugH4A_6",
@@ -31311,7 +32421,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=_HUYiFugH4A"
+        "videoUrl": "https://www.youtube.com/watch?v=_HUYiFugH4A",
+        "declutterPrimary": true
       },
       {
         "id": "_HUYiFugH4A_7",
@@ -31335,7 +32446,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=_HUYiFugH4A"
+        "videoUrl": "https://www.youtube.com/watch?v=_HUYiFugH4A",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -31347,7 +32459,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Coastal Cliffs, Étretat & Ocean Waves"
+    "theme": "Coastal Cliffs, Étretat & Ocean Waves",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "uSNByH7eer8",
@@ -31388,7 +32503,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uSNByH7eer8"
+        "videoUrl": "https://www.youtube.com/watch?v=uSNByH7eer8",
+        "declutterPrimary": true
       },
       {
         "id": "uSNByH7eer8_2",
@@ -31412,7 +32528,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uSNByH7eer8"
+        "videoUrl": "https://www.youtube.com/watch?v=uSNByH7eer8",
+        "declutterPrimary": true
       },
       {
         "id": "uSNByH7eer8_3",
@@ -31436,7 +32553,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uSNByH7eer8"
+        "videoUrl": "https://www.youtube.com/watch?v=uSNByH7eer8",
+        "declutterPrimary": true
       },
       {
         "id": "uSNByH7eer8_4",
@@ -31460,7 +32578,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uSNByH7eer8"
+        "videoUrl": "https://www.youtube.com/watch?v=uSNByH7eer8",
+        "declutterPrimary": true
       },
       {
         "id": "uSNByH7eer8_5",
@@ -31484,7 +32603,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uSNByH7eer8"
+        "videoUrl": "https://www.youtube.com/watch?v=uSNByH7eer8",
+        "declutterPrimary": true
       },
       {
         "id": "uSNByH7eer8_6",
@@ -31508,7 +32628,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uSNByH7eer8"
+        "videoUrl": "https://www.youtube.com/watch?v=uSNByH7eer8",
+        "declutterPrimary": true
       },
       {
         "id": "uSNByH7eer8_7",
@@ -31532,7 +32653,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uSNByH7eer8"
+        "videoUrl": "https://www.youtube.com/watch?v=uSNByH7eer8",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -31544,7 +32666,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "Qp-nsEID1Mg",
@@ -31585,7 +32710,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=Qp-nsEID1Mg"
+        "videoUrl": "https://www.youtube.com/watch?v=Qp-nsEID1Mg",
+        "declutterPrimary": true
       },
       {
         "id": "Qp-nsEID1Mg_2",
@@ -31609,7 +32735,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=Qp-nsEID1Mg"
+        "videoUrl": "https://www.youtube.com/watch?v=Qp-nsEID1Mg",
+        "declutterPrimary": true
       },
       {
         "id": "Qp-nsEID1Mg_3",
@@ -31633,7 +32760,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=Qp-nsEID1Mg"
+        "videoUrl": "https://www.youtube.com/watch?v=Qp-nsEID1Mg",
+        "declutterPrimary": true
       },
       {
         "id": "Qp-nsEID1Mg_4",
@@ -31657,7 +32785,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=Qp-nsEID1Mg"
+        "videoUrl": "https://www.youtube.com/watch?v=Qp-nsEID1Mg",
+        "declutterPrimary": true
       },
       {
         "id": "Qp-nsEID1Mg_5",
@@ -31681,7 +32810,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=Qp-nsEID1Mg"
+        "videoUrl": "https://www.youtube.com/watch?v=Qp-nsEID1Mg",
+        "declutterPrimary": true
       },
       {
         "id": "Qp-nsEID1Mg_6",
@@ -31705,7 +32835,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=Qp-nsEID1Mg"
+        "videoUrl": "https://www.youtube.com/watch?v=Qp-nsEID1Mg",
+        "declutterPrimary": true
       },
       {
         "id": "Qp-nsEID1Mg_7",
@@ -31729,7 +32860,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=Qp-nsEID1Mg"
+        "videoUrl": "https://www.youtube.com/watch?v=Qp-nsEID1Mg",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -31741,7 +32873,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "River Seine & Waterways"
+    "theme": "River Seine & Waterways",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "ZGW5FS7vkEg",
@@ -31782,7 +32917,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZGW5FS7vkEg"
+        "videoUrl": "https://www.youtube.com/watch?v=ZGW5FS7vkEg",
+        "declutterPrimary": true
       },
       {
         "id": "ZGW5FS7vkEg_2",
@@ -31806,7 +32942,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZGW5FS7vkEg"
+        "videoUrl": "https://www.youtube.com/watch?v=ZGW5FS7vkEg",
+        "declutterPrimary": true
       },
       {
         "id": "ZGW5FS7vkEg_3",
@@ -31830,7 +32967,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZGW5FS7vkEg"
+        "videoUrl": "https://www.youtube.com/watch?v=ZGW5FS7vkEg",
+        "declutterPrimary": true
       },
       {
         "id": "ZGW5FS7vkEg_4",
@@ -31854,7 +32992,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZGW5FS7vkEg"
+        "videoUrl": "https://www.youtube.com/watch?v=ZGW5FS7vkEg",
+        "declutterPrimary": true
       },
       {
         "id": "ZGW5FS7vkEg_5",
@@ -31878,7 +33017,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZGW5FS7vkEg"
+        "videoUrl": "https://www.youtube.com/watch?v=ZGW5FS7vkEg",
+        "declutterPrimary": true
       },
       {
         "id": "ZGW5FS7vkEg_6",
@@ -31902,7 +33042,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZGW5FS7vkEg"
+        "videoUrl": "https://www.youtube.com/watch?v=ZGW5FS7vkEg",
+        "declutterPrimary": true
       },
       {
         "id": "ZGW5FS7vkEg_7",
@@ -31926,7 +33067,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZGW5FS7vkEg"
+        "videoUrl": "https://www.youtube.com/watch?v=ZGW5FS7vkEg",
+        "declutterPrimary": true
       },
       {
         "id": "ZGW5FS7vkEg_8",
@@ -31950,7 +33092,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZGW5FS7vkEg"
+        "videoUrl": "https://www.youtube.com/watch?v=ZGW5FS7vkEg",
+        "declutterPrimary": true
       },
       {
         "id": "ZGW5FS7vkEg_9",
@@ -31974,7 +33117,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZGW5FS7vkEg"
+        "videoUrl": "https://www.youtube.com/watch?v=ZGW5FS7vkEg",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -31986,7 +33130,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "zA3_D2o5lgc",
@@ -32027,7 +33174,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=zA3_D2o5lgc"
+        "videoUrl": "https://www.youtube.com/watch?v=zA3_D2o5lgc",
+        "declutterPrimary": true
       },
       {
         "id": "zA3_D2o5lgc_2",
@@ -32051,7 +33199,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=zA3_D2o5lgc"
+        "videoUrl": "https://www.youtube.com/watch?v=zA3_D2o5lgc",
+        "declutterPrimary": true
       },
       {
         "id": "zA3_D2o5lgc_3",
@@ -32075,7 +33224,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=zA3_D2o5lgc"
+        "videoUrl": "https://www.youtube.com/watch?v=zA3_D2o5lgc",
+        "declutterPrimary": true
       },
       {
         "id": "zA3_D2o5lgc_4",
@@ -32099,7 +33249,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=zA3_D2o5lgc"
+        "videoUrl": "https://www.youtube.com/watch?v=zA3_D2o5lgc",
+        "declutterPrimary": true
       },
       {
         "id": "zA3_D2o5lgc_5",
@@ -32123,7 +33274,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=zA3_D2o5lgc"
+        "videoUrl": "https://www.youtube.com/watch?v=zA3_D2o5lgc",
+        "declutterPrimary": true
       },
       {
         "id": "zA3_D2o5lgc_6",
@@ -32147,7 +33299,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=zA3_D2o5lgc"
+        "videoUrl": "https://www.youtube.com/watch?v=zA3_D2o5lgc",
+        "declutterPrimary": true
       },
       {
         "id": "zA3_D2o5lgc_7",
@@ -32171,7 +33324,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=zA3_D2o5lgc"
+        "videoUrl": "https://www.youtube.com/watch?v=zA3_D2o5lgc",
+        "declutterPrimary": true
       },
       {
         "id": "zA3_D2o5lgc_8",
@@ -32195,7 +33349,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=zA3_D2o5lgc"
+        "videoUrl": "https://www.youtube.com/watch?v=zA3_D2o5lgc",
+        "declutterPrimary": true
       },
       {
         "id": "zA3_D2o5lgc_9",
@@ -32219,7 +33374,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=zA3_D2o5lgc"
+        "videoUrl": "https://www.youtube.com/watch?v=zA3_D2o5lgc",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -32231,7 +33387,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Winter & Snowbound Landscapes"
+    "theme": "Winter & Snowbound Landscapes",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "r_ZaXKUuXMc",
@@ -32272,7 +33431,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=r_ZaXKUuXMc"
+        "videoUrl": "https://www.youtube.com/watch?v=r_ZaXKUuXMc",
+        "declutterPrimary": true
       },
       {
         "id": "r_ZaXKUuXMc_2",
@@ -32296,7 +33456,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=r_ZaXKUuXMc"
+        "videoUrl": "https://www.youtube.com/watch?v=r_ZaXKUuXMc",
+        "declutterPrimary": true
       },
       {
         "id": "r_ZaXKUuXMc_3",
@@ -32320,7 +33481,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=r_ZaXKUuXMc"
+        "videoUrl": "https://www.youtube.com/watch?v=r_ZaXKUuXMc",
+        "declutterPrimary": true
       },
       {
         "id": "r_ZaXKUuXMc_4",
@@ -32344,7 +33506,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=r_ZaXKUuXMc"
+        "videoUrl": "https://www.youtube.com/watch?v=r_ZaXKUuXMc",
+        "declutterPrimary": true
       },
       {
         "id": "r_ZaXKUuXMc_5",
@@ -32368,7 +33531,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=r_ZaXKUuXMc"
+        "videoUrl": "https://www.youtube.com/watch?v=r_ZaXKUuXMc",
+        "declutterPrimary": true
       },
       {
         "id": "r_ZaXKUuXMc_6",
@@ -32392,7 +33556,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=r_ZaXKUuXMc"
+        "videoUrl": "https://www.youtube.com/watch?v=r_ZaXKUuXMc",
+        "declutterPrimary": true
       },
       {
         "id": "r_ZaXKUuXMc_7",
@@ -32416,7 +33581,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=r_ZaXKUuXMc"
+        "videoUrl": "https://www.youtube.com/watch?v=r_ZaXKUuXMc",
+        "declutterPrimary": true
       },
       {
         "id": "r_ZaXKUuXMc_8",
@@ -32440,7 +33606,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=r_ZaXKUuXMc"
+        "videoUrl": "https://www.youtube.com/watch?v=r_ZaXKUuXMc",
+        "declutterPrimary": true
       },
       {
         "id": "r_ZaXKUuXMc_9",
@@ -32464,7 +33631,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=r_ZaXKUuXMc"
+        "videoUrl": "https://www.youtube.com/watch?v=r_ZaXKUuXMc",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -32476,7 +33644,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "Et2jSjaNy7M",
@@ -32517,7 +33688,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Et2jSjaNy7M"
+        "videoUrl": "https://www.youtube.com/watch?v=Et2jSjaNy7M",
+        "declutterPrimary": true
       },
       {
         "id": "Et2jSjaNy7M_2",
@@ -32541,7 +33713,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Et2jSjaNy7M"
+        "videoUrl": "https://www.youtube.com/watch?v=Et2jSjaNy7M",
+        "declutterPrimary": true
       },
       {
         "id": "Et2jSjaNy7M_3",
@@ -32565,7 +33738,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Et2jSjaNy7M"
+        "videoUrl": "https://www.youtube.com/watch?v=Et2jSjaNy7M",
+        "declutterPrimary": true
       },
       {
         "id": "Et2jSjaNy7M_4",
@@ -32589,7 +33763,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Et2jSjaNy7M"
+        "videoUrl": "https://www.youtube.com/watch?v=Et2jSjaNy7M",
+        "declutterPrimary": true
       },
       {
         "id": "Et2jSjaNy7M_5",
@@ -32613,7 +33788,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Et2jSjaNy7M"
+        "videoUrl": "https://www.youtube.com/watch?v=Et2jSjaNy7M",
+        "declutterPrimary": true
       },
       {
         "id": "Et2jSjaNy7M_6",
@@ -32637,7 +33813,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Et2jSjaNy7M"
+        "videoUrl": "https://www.youtube.com/watch?v=Et2jSjaNy7M",
+        "declutterPrimary": true
       },
       {
         "id": "Et2jSjaNy7M_7",
@@ -32661,7 +33838,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Et2jSjaNy7M"
+        "videoUrl": "https://www.youtube.com/watch?v=Et2jSjaNy7M",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -32673,7 +33851,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "srsiIWbB1sU",
@@ -32714,7 +33895,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=srsiIWbB1sU"
+        "videoUrl": "https://www.youtube.com/watch?v=srsiIWbB1sU",
+        "declutterPrimary": true
       },
       {
         "id": "srsiIWbB1sU_2",
@@ -32738,7 +33920,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=srsiIWbB1sU"
+        "videoUrl": "https://www.youtube.com/watch?v=srsiIWbB1sU",
+        "declutterPrimary": true
       },
       {
         "id": "srsiIWbB1sU_3",
@@ -32762,7 +33945,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=srsiIWbB1sU"
+        "videoUrl": "https://www.youtube.com/watch?v=srsiIWbB1sU",
+        "declutterPrimary": true
       },
       {
         "id": "srsiIWbB1sU_4",
@@ -32786,7 +33970,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=srsiIWbB1sU"
+        "videoUrl": "https://www.youtube.com/watch?v=srsiIWbB1sU",
+        "declutterPrimary": true
       },
       {
         "id": "srsiIWbB1sU_5",
@@ -32810,7 +33995,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=srsiIWbB1sU"
+        "videoUrl": "https://www.youtube.com/watch?v=srsiIWbB1sU",
+        "declutterPrimary": true
       },
       {
         "id": "srsiIWbB1sU_6",
@@ -32834,7 +34020,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=srsiIWbB1sU"
+        "videoUrl": "https://www.youtube.com/watch?v=srsiIWbB1sU",
+        "declutterPrimary": true
       },
       {
         "id": "srsiIWbB1sU_7",
@@ -32858,7 +34045,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=srsiIWbB1sU"
+        "videoUrl": "https://www.youtube.com/watch?v=srsiIWbB1sU",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -32870,7 +34058,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "U2WXMUa7BWo",
@@ -32911,7 +34102,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=U2WXMUa7BWo"
+        "videoUrl": "https://www.youtube.com/watch?v=U2WXMUa7BWo",
+        "declutterPrimary": true
       },
       {
         "id": "U2WXMUa7BWo_2",
@@ -32935,7 +34127,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=U2WXMUa7BWo"
+        "videoUrl": "https://www.youtube.com/watch?v=U2WXMUa7BWo",
+        "declutterPrimary": true
       },
       {
         "id": "U2WXMUa7BWo_3",
@@ -32959,7 +34152,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=U2WXMUa7BWo"
+        "videoUrl": "https://www.youtube.com/watch?v=U2WXMUa7BWo",
+        "declutterPrimary": true
       },
       {
         "id": "U2WXMUa7BWo_4",
@@ -32983,7 +34177,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=U2WXMUa7BWo"
+        "videoUrl": "https://www.youtube.com/watch?v=U2WXMUa7BWo",
+        "declutterPrimary": true
       },
       {
         "id": "U2WXMUa7BWo_5",
@@ -33007,7 +34202,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=U2WXMUa7BWo"
+        "videoUrl": "https://www.youtube.com/watch?v=U2WXMUa7BWo",
+        "declutterPrimary": true
       },
       {
         "id": "U2WXMUa7BWo_6",
@@ -33031,7 +34227,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=U2WXMUa7BWo"
+        "videoUrl": "https://www.youtube.com/watch?v=U2WXMUa7BWo",
+        "declutterPrimary": true
       },
       {
         "id": "U2WXMUa7BWo_7",
@@ -33055,7 +34252,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=U2WXMUa7BWo"
+        "videoUrl": "https://www.youtube.com/watch?v=U2WXMUa7BWo",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -33067,7 +34265,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "smlzmKwRXBM",
@@ -33108,7 +34309,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=smlzmKwRXBM"
+        "videoUrl": "https://www.youtube.com/watch?v=smlzmKwRXBM",
+        "declutterPrimary": true
       },
       {
         "id": "smlzmKwRXBM_2",
@@ -33132,7 +34334,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=smlzmKwRXBM"
+        "videoUrl": "https://www.youtube.com/watch?v=smlzmKwRXBM",
+        "declutterPrimary": true
       },
       {
         "id": "smlzmKwRXBM_3",
@@ -33156,7 +34359,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=smlzmKwRXBM"
+        "videoUrl": "https://www.youtube.com/watch?v=smlzmKwRXBM",
+        "declutterPrimary": true
       },
       {
         "id": "smlzmKwRXBM_4",
@@ -33180,7 +34384,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=smlzmKwRXBM"
+        "videoUrl": "https://www.youtube.com/watch?v=smlzmKwRXBM",
+        "declutterPrimary": true
       },
       {
         "id": "smlzmKwRXBM_5",
@@ -33204,7 +34409,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=smlzmKwRXBM"
+        "videoUrl": "https://www.youtube.com/watch?v=smlzmKwRXBM",
+        "declutterPrimary": true
       },
       {
         "id": "smlzmKwRXBM_6",
@@ -33228,7 +34434,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=smlzmKwRXBM"
+        "videoUrl": "https://www.youtube.com/watch?v=smlzmKwRXBM",
+        "declutterPrimary": true
       },
       {
         "id": "smlzmKwRXBM_7",
@@ -33252,7 +34459,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=smlzmKwRXBM"
+        "videoUrl": "https://www.youtube.com/watch?v=smlzmKwRXBM",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -33264,7 +34472,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "xC3BeK35fPw",
@@ -33305,7 +34516,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=xC3BeK35fPw"
+        "videoUrl": "https://www.youtube.com/watch?v=xC3BeK35fPw",
+        "declutterPrimary": true
       },
       {
         "id": "xC3BeK35fPw_2",
@@ -33329,7 +34541,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=xC3BeK35fPw"
+        "videoUrl": "https://www.youtube.com/watch?v=xC3BeK35fPw",
+        "declutterPrimary": true
       },
       {
         "id": "xC3BeK35fPw_3",
@@ -33353,7 +34566,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=xC3BeK35fPw"
+        "videoUrl": "https://www.youtube.com/watch?v=xC3BeK35fPw",
+        "declutterPrimary": true
       },
       {
         "id": "xC3BeK35fPw_4",
@@ -33377,7 +34591,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=xC3BeK35fPw"
+        "videoUrl": "https://www.youtube.com/watch?v=xC3BeK35fPw",
+        "declutterPrimary": true
       },
       {
         "id": "xC3BeK35fPw_5",
@@ -33401,7 +34616,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=xC3BeK35fPw"
+        "videoUrl": "https://www.youtube.com/watch?v=xC3BeK35fPw",
+        "declutterPrimary": true
       },
       {
         "id": "xC3BeK35fPw_6",
@@ -33425,7 +34641,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=xC3BeK35fPw"
+        "videoUrl": "https://www.youtube.com/watch?v=xC3BeK35fPw",
+        "declutterPrimary": true
       },
       {
         "id": "xC3BeK35fPw_7",
@@ -33449,7 +34666,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=xC3BeK35fPw"
+        "videoUrl": "https://www.youtube.com/watch?v=xC3BeK35fPw",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -33461,7 +34679,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "Ht3cSOCueJc",
@@ -33502,7 +34723,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=Ht3cSOCueJc"
+        "videoUrl": "https://www.youtube.com/watch?v=Ht3cSOCueJc",
+        "declutterPrimary": true
       },
       {
         "id": "Ht3cSOCueJc_2",
@@ -33526,7 +34748,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=Ht3cSOCueJc"
+        "videoUrl": "https://www.youtube.com/watch?v=Ht3cSOCueJc",
+        "declutterPrimary": true
       },
       {
         "id": "Ht3cSOCueJc_3",
@@ -33550,7 +34773,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=Ht3cSOCueJc"
+        "videoUrl": "https://www.youtube.com/watch?v=Ht3cSOCueJc",
+        "declutterPrimary": true
       },
       {
         "id": "Ht3cSOCueJc_4",
@@ -33574,7 +34798,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=Ht3cSOCueJc"
+        "videoUrl": "https://www.youtube.com/watch?v=Ht3cSOCueJc",
+        "declutterPrimary": true
       },
       {
         "id": "Ht3cSOCueJc_5",
@@ -33598,7 +34823,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=Ht3cSOCueJc"
+        "videoUrl": "https://www.youtube.com/watch?v=Ht3cSOCueJc",
+        "declutterPrimary": true
       },
       {
         "id": "Ht3cSOCueJc_6",
@@ -33622,7 +34848,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=Ht3cSOCueJc"
+        "videoUrl": "https://www.youtube.com/watch?v=Ht3cSOCueJc",
+        "declutterPrimary": true
       },
       {
         "id": "Ht3cSOCueJc_7",
@@ -33646,7 +34873,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=Ht3cSOCueJc"
+        "videoUrl": "https://www.youtube.com/watch?v=Ht3cSOCueJc",
+        "declutterPrimary": true
       },
       {
         "id": "Ht3cSOCueJc_8",
@@ -33670,7 +34898,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=Ht3cSOCueJc"
+        "videoUrl": "https://www.youtube.com/watch?v=Ht3cSOCueJc",
+        "declutterPrimary": true
       },
       {
         "id": "Ht3cSOCueJc_9",
@@ -33694,7 +34923,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=Ht3cSOCueJc"
+        "videoUrl": "https://www.youtube.com/watch?v=Ht3cSOCueJc",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -33706,7 +34936,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "RyoWkJ2r314",
@@ -33747,7 +34980,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RyoWkJ2r314"
+        "videoUrl": "https://www.youtube.com/watch?v=RyoWkJ2r314",
+        "declutterPrimary": true
       },
       {
         "id": "RyoWkJ2r314_2",
@@ -33771,7 +35005,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RyoWkJ2r314"
+        "videoUrl": "https://www.youtube.com/watch?v=RyoWkJ2r314",
+        "declutterPrimary": true
       },
       {
         "id": "RyoWkJ2r314_3",
@@ -33795,7 +35030,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RyoWkJ2r314"
+        "videoUrl": "https://www.youtube.com/watch?v=RyoWkJ2r314",
+        "declutterPrimary": true
       },
       {
         "id": "RyoWkJ2r314_4",
@@ -33819,7 +35055,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RyoWkJ2r314"
+        "videoUrl": "https://www.youtube.com/watch?v=RyoWkJ2r314",
+        "declutterPrimary": true
       },
       {
         "id": "RyoWkJ2r314_5",
@@ -33843,7 +35080,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RyoWkJ2r314"
+        "videoUrl": "https://www.youtube.com/watch?v=RyoWkJ2r314",
+        "declutterPrimary": true
       },
       {
         "id": "RyoWkJ2r314_6",
@@ -33867,7 +35105,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RyoWkJ2r314"
+        "videoUrl": "https://www.youtube.com/watch?v=RyoWkJ2r314",
+        "declutterPrimary": true
       },
       {
         "id": "RyoWkJ2r314_7",
@@ -33891,7 +35130,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RyoWkJ2r314"
+        "videoUrl": "https://www.youtube.com/watch?v=RyoWkJ2r314",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -33903,7 +35143,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "LTfNIXenqjY",
@@ -33944,7 +35187,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=LTfNIXenqjY"
+        "videoUrl": "https://www.youtube.com/watch?v=LTfNIXenqjY",
+        "declutterPrimary": true
       },
       {
         "id": "LTfNIXenqjY_2",
@@ -33968,7 +35212,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=LTfNIXenqjY"
+        "videoUrl": "https://www.youtube.com/watch?v=LTfNIXenqjY",
+        "declutterPrimary": true
       },
       {
         "id": "LTfNIXenqjY_3",
@@ -33992,7 +35237,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=LTfNIXenqjY"
+        "videoUrl": "https://www.youtube.com/watch?v=LTfNIXenqjY",
+        "declutterPrimary": true
       },
       {
         "id": "LTfNIXenqjY_4",
@@ -34016,7 +35262,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=LTfNIXenqjY"
+        "videoUrl": "https://www.youtube.com/watch?v=LTfNIXenqjY",
+        "declutterPrimary": true
       },
       {
         "id": "LTfNIXenqjY_5",
@@ -34040,7 +35287,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=LTfNIXenqjY"
+        "videoUrl": "https://www.youtube.com/watch?v=LTfNIXenqjY",
+        "declutterPrimary": true
       },
       {
         "id": "LTfNIXenqjY_6",
@@ -34064,7 +35312,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=LTfNIXenqjY"
+        "videoUrl": "https://www.youtube.com/watch?v=LTfNIXenqjY",
+        "declutterPrimary": true
       },
       {
         "id": "LTfNIXenqjY_7",
@@ -34088,7 +35337,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=LTfNIXenqjY"
+        "videoUrl": "https://www.youtube.com/watch?v=LTfNIXenqjY",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -34100,7 +35350,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "Bxr5GYtwRnY",
@@ -34141,7 +35394,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY"
+        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY",
+        "declutterPrimary": true
       },
       {
         "id": "Bxr5GYtwRnY_2",
@@ -34165,7 +35419,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY"
+        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY",
+        "declutterPrimary": true
       },
       {
         "id": "Bxr5GYtwRnY_3",
@@ -34189,7 +35444,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY"
+        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY",
+        "declutterPrimary": true
       },
       {
         "id": "Bxr5GYtwRnY_4",
@@ -34213,7 +35469,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY"
+        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY",
+        "declutterPrimary": true
       },
       {
         "id": "Bxr5GYtwRnY_5",
@@ -34237,7 +35494,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY"
+        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY",
+        "declutterPrimary": true
       },
       {
         "id": "Bxr5GYtwRnY_6",
@@ -34261,7 +35519,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY"
+        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY",
+        "declutterPrimary": true
       },
       {
         "id": "Bxr5GYtwRnY_7",
@@ -34285,7 +35544,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY"
+        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY",
+        "declutterPrimary": true
       },
       {
         "id": "Bxr5GYtwRnY_8",
@@ -34309,7 +35569,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY"
+        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY",
+        "declutterPrimary": true
       },
       {
         "id": "Bxr5GYtwRnY_9",
@@ -34333,7 +35594,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY"
+        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY",
+        "declutterPrimary": true
       },
       {
         "id": "Bxr5GYtwRnY_10",
@@ -34357,7 +35619,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY"
+        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY",
+        "declutterPrimary": true
       },
       {
         "id": "Bxr5GYtwRnY_11",
@@ -34381,7 +35644,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY"
+        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY",
+        "declutterPrimary": true
       },
       {
         "id": "Bxr5GYtwRnY_12",
@@ -34405,7 +35669,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY"
+        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY",
+        "declutterPrimary": true
       },
       {
         "id": "Bxr5GYtwRnY_13",
@@ -34429,7 +35694,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY"
+        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY",
+        "declutterPrimary": true
       },
       {
         "id": "Bxr5GYtwRnY_14",
@@ -34453,7 +35719,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY"
+        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY",
+        "declutterPrimary": true
       },
       {
         "id": "Bxr5GYtwRnY_15",
@@ -34477,7 +35744,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY"
+        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY",
+        "declutterPrimary": true
       },
       {
         "id": "Bxr5GYtwRnY_16",
@@ -34501,7 +35769,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY"
+        "videoUrl": "https://www.youtube.com/watch?v=Bxr5GYtwRnY",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 16,
@@ -34513,7 +35782,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "QB1p9MKrf1M",
@@ -34554,7 +35826,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QB1p9MKrf1M"
+        "videoUrl": "https://www.youtube.com/watch?v=QB1p9MKrf1M",
+        "declutterPrimary": true
       },
       {
         "id": "QB1p9MKrf1M_2",
@@ -34578,7 +35851,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QB1p9MKrf1M"
+        "videoUrl": "https://www.youtube.com/watch?v=QB1p9MKrf1M",
+        "declutterPrimary": true
       },
       {
         "id": "QB1p9MKrf1M_3",
@@ -34602,7 +35876,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QB1p9MKrf1M"
+        "videoUrl": "https://www.youtube.com/watch?v=QB1p9MKrf1M",
+        "declutterPrimary": true
       },
       {
         "id": "QB1p9MKrf1M_4",
@@ -34626,7 +35901,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QB1p9MKrf1M"
+        "videoUrl": "https://www.youtube.com/watch?v=QB1p9MKrf1M",
+        "declutterPrimary": true
       },
       {
         "id": "QB1p9MKrf1M_5",
@@ -34650,7 +35926,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QB1p9MKrf1M"
+        "videoUrl": "https://www.youtube.com/watch?v=QB1p9MKrf1M",
+        "declutterPrimary": true
       },
       {
         "id": "QB1p9MKrf1M_6",
@@ -34674,7 +35951,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QB1p9MKrf1M"
+        "videoUrl": "https://www.youtube.com/watch?v=QB1p9MKrf1M",
+        "declutterPrimary": true
       },
       {
         "id": "QB1p9MKrf1M_7",
@@ -34698,7 +35976,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QB1p9MKrf1M"
+        "videoUrl": "https://www.youtube.com/watch?v=QB1p9MKrf1M",
+        "declutterPrimary": true
       },
       {
         "id": "QB1p9MKrf1M_8",
@@ -34722,7 +36001,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QB1p9MKrf1M"
+        "videoUrl": "https://www.youtube.com/watch?v=QB1p9MKrf1M",
+        "declutterPrimary": true
       },
       {
         "id": "QB1p9MKrf1M_9",
@@ -34746,7 +36026,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QB1p9MKrf1M"
+        "videoUrl": "https://www.youtube.com/watch?v=QB1p9MKrf1M",
+        "declutterPrimary": true
       },
       {
         "id": "QB1p9MKrf1M_10",
@@ -34770,7 +36051,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QB1p9MKrf1M"
+        "videoUrl": "https://www.youtube.com/watch?v=QB1p9MKrf1M",
+        "declutterPrimary": true
       },
       {
         "id": "QB1p9MKrf1M_11",
@@ -34794,7 +36076,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QB1p9MKrf1M"
+        "videoUrl": "https://www.youtube.com/watch?v=QB1p9MKrf1M",
+        "declutterPrimary": true
       },
       {
         "id": "QB1p9MKrf1M_12",
@@ -34818,7 +36101,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QB1p9MKrf1M"
+        "videoUrl": "https://www.youtube.com/watch?v=QB1p9MKrf1M",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 12,
@@ -34830,7 +36114,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "mTi-O-vmJYI",
@@ -34871,7 +36158,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=mTi-O-vmJYI"
+        "videoUrl": "https://www.youtube.com/watch?v=mTi-O-vmJYI",
+        "declutterPrimary": true
       },
       {
         "id": "mTi-O-vmJYI_2",
@@ -34895,7 +36183,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=mTi-O-vmJYI"
+        "videoUrl": "https://www.youtube.com/watch?v=mTi-O-vmJYI",
+        "declutterPrimary": true
       },
       {
         "id": "mTi-O-vmJYI_3",
@@ -34919,7 +36208,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=mTi-O-vmJYI"
+        "videoUrl": "https://www.youtube.com/watch?v=mTi-O-vmJYI",
+        "declutterPrimary": true
       },
       {
         "id": "mTi-O-vmJYI_4",
@@ -34943,7 +36233,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=mTi-O-vmJYI"
+        "videoUrl": "https://www.youtube.com/watch?v=mTi-O-vmJYI",
+        "declutterPrimary": true
       },
       {
         "id": "mTi-O-vmJYI_5",
@@ -34967,7 +36258,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=mTi-O-vmJYI"
+        "videoUrl": "https://www.youtube.com/watch?v=mTi-O-vmJYI",
+        "declutterPrimary": true
       },
       {
         "id": "mTi-O-vmJYI_6",
@@ -34991,7 +36283,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=mTi-O-vmJYI"
+        "videoUrl": "https://www.youtube.com/watch?v=mTi-O-vmJYI",
+        "declutterPrimary": true
       },
       {
         "id": "mTi-O-vmJYI_7",
@@ -35015,7 +36308,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=mTi-O-vmJYI"
+        "videoUrl": "https://www.youtube.com/watch?v=mTi-O-vmJYI",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -35027,7 +36321,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "River Seine & Waterways"
+    "theme": "River Seine & Waterways",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "ltdyuf1oK6I",
@@ -35068,7 +36365,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=ltdyuf1oK6I"
+        "videoUrl": "https://www.youtube.com/watch?v=ltdyuf1oK6I",
+        "declutterPrimary": true
       },
       {
         "id": "ltdyuf1oK6I_2",
@@ -35092,7 +36390,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=ltdyuf1oK6I"
+        "videoUrl": "https://www.youtube.com/watch?v=ltdyuf1oK6I",
+        "declutterPrimary": true
       },
       {
         "id": "ltdyuf1oK6I_3",
@@ -35116,7 +36415,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=ltdyuf1oK6I"
+        "videoUrl": "https://www.youtube.com/watch?v=ltdyuf1oK6I",
+        "declutterPrimary": true
       },
       {
         "id": "ltdyuf1oK6I_4",
@@ -35140,7 +36440,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=ltdyuf1oK6I"
+        "videoUrl": "https://www.youtube.com/watch?v=ltdyuf1oK6I",
+        "declutterPrimary": true
       },
       {
         "id": "ltdyuf1oK6I_5",
@@ -35164,7 +36465,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=ltdyuf1oK6I"
+        "videoUrl": "https://www.youtube.com/watch?v=ltdyuf1oK6I",
+        "declutterPrimary": true
       },
       {
         "id": "ltdyuf1oK6I_6",
@@ -35188,7 +36490,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=ltdyuf1oK6I"
+        "videoUrl": "https://www.youtube.com/watch?v=ltdyuf1oK6I",
+        "declutterPrimary": true
       },
       {
         "id": "ltdyuf1oK6I_7",
@@ -35212,7 +36515,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=ltdyuf1oK6I"
+        "videoUrl": "https://www.youtube.com/watch?v=ltdyuf1oK6I",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -35224,7 +36528,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "JWrfLhlSfzA",
@@ -35265,7 +36572,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=JWrfLhlSfzA"
+        "videoUrl": "https://www.youtube.com/watch?v=JWrfLhlSfzA",
+        "declutterPrimary": true
       },
       {
         "id": "JWrfLhlSfzA_2",
@@ -35289,7 +36597,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=JWrfLhlSfzA"
+        "videoUrl": "https://www.youtube.com/watch?v=JWrfLhlSfzA",
+        "declutterPrimary": true
       },
       {
         "id": "JWrfLhlSfzA_3",
@@ -35313,7 +36622,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=JWrfLhlSfzA"
+        "videoUrl": "https://www.youtube.com/watch?v=JWrfLhlSfzA",
+        "declutterPrimary": true
       },
       {
         "id": "JWrfLhlSfzA_4",
@@ -35337,7 +36647,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=JWrfLhlSfzA"
+        "videoUrl": "https://www.youtube.com/watch?v=JWrfLhlSfzA",
+        "declutterPrimary": true
       },
       {
         "id": "JWrfLhlSfzA_5",
@@ -35361,7 +36672,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=JWrfLhlSfzA"
+        "videoUrl": "https://www.youtube.com/watch?v=JWrfLhlSfzA",
+        "declutterPrimary": true
       },
       {
         "id": "JWrfLhlSfzA_6",
@@ -35385,7 +36697,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=JWrfLhlSfzA"
+        "videoUrl": "https://www.youtube.com/watch?v=JWrfLhlSfzA",
+        "declutterPrimary": true
       },
       {
         "id": "JWrfLhlSfzA_7",
@@ -35409,7 +36722,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=JWrfLhlSfzA"
+        "videoUrl": "https://www.youtube.com/watch?v=JWrfLhlSfzA",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -35421,7 +36735,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "DEBpPMu4w20",
@@ -35462,7 +36779,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=DEBpPMu4w20"
+        "videoUrl": "https://www.youtube.com/watch?v=DEBpPMu4w20",
+        "declutterPrimary": true
       },
       {
         "id": "DEBpPMu4w20_2",
@@ -35486,7 +36804,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=DEBpPMu4w20"
+        "videoUrl": "https://www.youtube.com/watch?v=DEBpPMu4w20",
+        "declutterPrimary": true
       },
       {
         "id": "DEBpPMu4w20_3",
@@ -35510,7 +36829,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=DEBpPMu4w20"
+        "videoUrl": "https://www.youtube.com/watch?v=DEBpPMu4w20",
+        "declutterPrimary": true
       },
       {
         "id": "DEBpPMu4w20_4",
@@ -35534,7 +36854,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=DEBpPMu4w20"
+        "videoUrl": "https://www.youtube.com/watch?v=DEBpPMu4w20",
+        "declutterPrimary": true
       },
       {
         "id": "DEBpPMu4w20_5",
@@ -35558,7 +36879,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=DEBpPMu4w20"
+        "videoUrl": "https://www.youtube.com/watch?v=DEBpPMu4w20",
+        "declutterPrimary": true
       },
       {
         "id": "DEBpPMu4w20_6",
@@ -35582,7 +36904,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=DEBpPMu4w20"
+        "videoUrl": "https://www.youtube.com/watch?v=DEBpPMu4w20",
+        "declutterPrimary": true
       },
       {
         "id": "DEBpPMu4w20_7",
@@ -35606,7 +36929,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=DEBpPMu4w20"
+        "videoUrl": "https://www.youtube.com/watch?v=DEBpPMu4w20",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -35618,7 +36942,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "River Seine & Waterways"
+    "theme": "River Seine & Waterways",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "VG1Z_CS8G3U",
@@ -35659,7 +36986,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=VG1Z_CS8G3U"
+        "videoUrl": "https://www.youtube.com/watch?v=VG1Z_CS8G3U",
+        "declutterPrimary": true
       },
       {
         "id": "VG1Z_CS8G3U_2",
@@ -35683,7 +37011,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=VG1Z_CS8G3U"
+        "videoUrl": "https://www.youtube.com/watch?v=VG1Z_CS8G3U",
+        "declutterPrimary": true
       },
       {
         "id": "VG1Z_CS8G3U_3",
@@ -35707,7 +37036,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=VG1Z_CS8G3U"
+        "videoUrl": "https://www.youtube.com/watch?v=VG1Z_CS8G3U",
+        "declutterPrimary": true
       },
       {
         "id": "VG1Z_CS8G3U_4",
@@ -35731,7 +37061,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=VG1Z_CS8G3U"
+        "videoUrl": "https://www.youtube.com/watch?v=VG1Z_CS8G3U",
+        "declutterPrimary": true
       },
       {
         "id": "VG1Z_CS8G3U_5",
@@ -35755,7 +37086,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=VG1Z_CS8G3U"
+        "videoUrl": "https://www.youtube.com/watch?v=VG1Z_CS8G3U",
+        "declutterPrimary": true
       },
       {
         "id": "VG1Z_CS8G3U_6",
@@ -35779,7 +37111,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=VG1Z_CS8G3U"
+        "videoUrl": "https://www.youtube.com/watch?v=VG1Z_CS8G3U",
+        "declutterPrimary": true
       },
       {
         "id": "VG1Z_CS8G3U_7",
@@ -35803,7 +37136,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=VG1Z_CS8G3U"
+        "videoUrl": "https://www.youtube.com/watch?v=VG1Z_CS8G3U",
+        "declutterPrimary": true
       },
       {
         "id": "VG1Z_CS8G3U_8",
@@ -35827,7 +37161,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=VG1Z_CS8G3U"
+        "videoUrl": "https://www.youtube.com/watch?v=VG1Z_CS8G3U",
+        "declutterPrimary": true
       },
       {
         "id": "VG1Z_CS8G3U_9",
@@ -35851,7 +37186,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=VG1Z_CS8G3U"
+        "videoUrl": "https://www.youtube.com/watch?v=VG1Z_CS8G3U",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -35863,7 +37199,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Parisian Life & Belle Époque"
+    "theme": "Parisian Life & Belle Époque",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "eDjSipbx9HA",
@@ -35904,7 +37243,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=eDjSipbx9HA"
+        "videoUrl": "https://www.youtube.com/watch?v=eDjSipbx9HA",
+        "declutterPrimary": true
       },
       {
         "id": "eDjSipbx9HA_2",
@@ -35928,7 +37268,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=eDjSipbx9HA"
+        "videoUrl": "https://www.youtube.com/watch?v=eDjSipbx9HA",
+        "declutterPrimary": true
       },
       {
         "id": "eDjSipbx9HA_3",
@@ -35952,7 +37293,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=eDjSipbx9HA"
+        "videoUrl": "https://www.youtube.com/watch?v=eDjSipbx9HA",
+        "declutterPrimary": true
       },
       {
         "id": "eDjSipbx9HA_4",
@@ -35976,7 +37318,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=eDjSipbx9HA"
+        "videoUrl": "https://www.youtube.com/watch?v=eDjSipbx9HA",
+        "declutterPrimary": true
       },
       {
         "id": "eDjSipbx9HA_5",
@@ -36000,7 +37343,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=eDjSipbx9HA"
+        "videoUrl": "https://www.youtube.com/watch?v=eDjSipbx9HA",
+        "declutterPrimary": true
       },
       {
         "id": "eDjSipbx9HA_6",
@@ -36024,7 +37368,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=eDjSipbx9HA"
+        "videoUrl": "https://www.youtube.com/watch?v=eDjSipbx9HA",
+        "declutterPrimary": true
       },
       {
         "id": "eDjSipbx9HA_7",
@@ -36048,7 +37393,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=eDjSipbx9HA"
+        "videoUrl": "https://www.youtube.com/watch?v=eDjSipbx9HA",
+        "declutterPrimary": true
       },
       {
         "id": "eDjSipbx9HA_8",
@@ -36072,7 +37418,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=eDjSipbx9HA"
+        "videoUrl": "https://www.youtube.com/watch?v=eDjSipbx9HA",
+        "declutterPrimary": true
       },
       {
         "id": "eDjSipbx9HA_9",
@@ -36096,7 +37443,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=eDjSipbx9HA"
+        "videoUrl": "https://www.youtube.com/watch?v=eDjSipbx9HA",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -36108,7 +37456,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Train Nostalgia & Gare Saint-Lazare"
+    "theme": "Train Nostalgia & Gare Saint-Lazare",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "XhnGd0MNRrI",
@@ -36149,7 +37500,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Venice & Riviera Escapes",
-        "videoUrl": "https://www.youtube.com/watch?v=XhnGd0MNRrI"
+        "videoUrl": "https://www.youtube.com/watch?v=XhnGd0MNRrI",
+        "declutterPrimary": true
       },
       {
         "id": "XhnGd0MNRrI_2",
@@ -36173,7 +37525,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Venice & Riviera Escapes",
-        "videoUrl": "https://www.youtube.com/watch?v=XhnGd0MNRrI"
+        "videoUrl": "https://www.youtube.com/watch?v=XhnGd0MNRrI",
+        "declutterPrimary": true
       },
       {
         "id": "XhnGd0MNRrI_3",
@@ -36197,7 +37550,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Venice & Riviera Escapes",
-        "videoUrl": "https://www.youtube.com/watch?v=XhnGd0MNRrI"
+        "videoUrl": "https://www.youtube.com/watch?v=XhnGd0MNRrI",
+        "declutterPrimary": true
       },
       {
         "id": "XhnGd0MNRrI_4",
@@ -36221,7 +37575,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Venice & Riviera Escapes",
-        "videoUrl": "https://www.youtube.com/watch?v=XhnGd0MNRrI"
+        "videoUrl": "https://www.youtube.com/watch?v=XhnGd0MNRrI",
+        "declutterPrimary": true
       },
       {
         "id": "XhnGd0MNRrI_5",
@@ -36245,7 +37600,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Venice & Riviera Escapes",
-        "videoUrl": "https://www.youtube.com/watch?v=XhnGd0MNRrI"
+        "videoUrl": "https://www.youtube.com/watch?v=XhnGd0MNRrI",
+        "declutterPrimary": true
       },
       {
         "id": "XhnGd0MNRrI_6",
@@ -36269,7 +37625,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Venice & Riviera Escapes",
-        "videoUrl": "https://www.youtube.com/watch?v=XhnGd0MNRrI"
+        "videoUrl": "https://www.youtube.com/watch?v=XhnGd0MNRrI",
+        "declutterPrimary": true
       },
       {
         "id": "XhnGd0MNRrI_7",
@@ -36293,7 +37650,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Venice & Riviera Escapes",
-        "videoUrl": "https://www.youtube.com/watch?v=XhnGd0MNRrI"
+        "videoUrl": "https://www.youtube.com/watch?v=XhnGd0MNRrI",
+        "declutterPrimary": true
       },
       {
         "id": "XhnGd0MNRrI_8",
@@ -36317,7 +37675,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Venice & Riviera Escapes",
-        "videoUrl": "https://www.youtube.com/watch?v=XhnGd0MNRrI"
+        "videoUrl": "https://www.youtube.com/watch?v=XhnGd0MNRrI",
+        "declutterPrimary": true
       },
       {
         "id": "XhnGd0MNRrI_9",
@@ -36341,7 +37700,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Venice & Riviera Escapes",
-        "videoUrl": "https://www.youtube.com/watch?v=XhnGd0MNRrI"
+        "videoUrl": "https://www.youtube.com/watch?v=XhnGd0MNRrI",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -36353,7 +37713,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Venice & Riviera Escapes"
+    "theme": "Venice & Riviera Escapes",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "NKK6mP47EFE",
@@ -36394,7 +37757,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Venice & Riviera Escapes",
-        "videoUrl": "https://www.youtube.com/watch?v=NKK6mP47EFE"
+        "videoUrl": "https://www.youtube.com/watch?v=NKK6mP47EFE",
+        "declutterPrimary": true
       },
       {
         "id": "NKK6mP47EFE_2",
@@ -36418,7 +37782,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Venice & Riviera Escapes",
-        "videoUrl": "https://www.youtube.com/watch?v=NKK6mP47EFE"
+        "videoUrl": "https://www.youtube.com/watch?v=NKK6mP47EFE",
+        "declutterPrimary": true
       },
       {
         "id": "NKK6mP47EFE_3",
@@ -36442,7 +37807,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Venice & Riviera Escapes",
-        "videoUrl": "https://www.youtube.com/watch?v=NKK6mP47EFE"
+        "videoUrl": "https://www.youtube.com/watch?v=NKK6mP47EFE",
+        "declutterPrimary": true
       },
       {
         "id": "NKK6mP47EFE_4",
@@ -36466,7 +37832,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Venice & Riviera Escapes",
-        "videoUrl": "https://www.youtube.com/watch?v=NKK6mP47EFE"
+        "videoUrl": "https://www.youtube.com/watch?v=NKK6mP47EFE",
+        "declutterPrimary": true
       },
       {
         "id": "NKK6mP47EFE_5",
@@ -36490,7 +37857,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Venice & Riviera Escapes",
-        "videoUrl": "https://www.youtube.com/watch?v=NKK6mP47EFE"
+        "videoUrl": "https://www.youtube.com/watch?v=NKK6mP47EFE",
+        "declutterPrimary": true
       },
       {
         "id": "NKK6mP47EFE_6",
@@ -36514,7 +37882,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Venice & Riviera Escapes",
-        "videoUrl": "https://www.youtube.com/watch?v=NKK6mP47EFE"
+        "videoUrl": "https://www.youtube.com/watch?v=NKK6mP47EFE",
+        "declutterPrimary": true
       },
       {
         "id": "NKK6mP47EFE_7",
@@ -36538,7 +37907,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Venice & Riviera Escapes",
-        "videoUrl": "https://www.youtube.com/watch?v=NKK6mP47EFE"
+        "videoUrl": "https://www.youtube.com/watch?v=NKK6mP47EFE",
+        "declutterPrimary": true
       },
       {
         "id": "NKK6mP47EFE_8",
@@ -36562,7 +37932,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Venice & Riviera Escapes",
-        "videoUrl": "https://www.youtube.com/watch?v=NKK6mP47EFE"
+        "videoUrl": "https://www.youtube.com/watch?v=NKK6mP47EFE",
+        "declutterPrimary": true
       },
       {
         "id": "NKK6mP47EFE_9",
@@ -36586,7 +37957,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Venice & Riviera Escapes",
-        "videoUrl": "https://www.youtube.com/watch?v=NKK6mP47EFE"
+        "videoUrl": "https://www.youtube.com/watch?v=NKK6mP47EFE",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -36598,7 +37970,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Venice & Riviera Escapes"
+    "theme": "Venice & Riviera Escapes",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "idaaEXwbjLo",
@@ -36639,7 +38014,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=idaaEXwbjLo"
+        "videoUrl": "https://www.youtube.com/watch?v=idaaEXwbjLo",
+        "declutterPrimary": true
       },
       {
         "id": "idaaEXwbjLo_2",
@@ -36663,7 +38039,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=idaaEXwbjLo"
+        "videoUrl": "https://www.youtube.com/watch?v=idaaEXwbjLo",
+        "declutterPrimary": true
       },
       {
         "id": "idaaEXwbjLo_3",
@@ -36687,7 +38064,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=idaaEXwbjLo"
+        "videoUrl": "https://www.youtube.com/watch?v=idaaEXwbjLo",
+        "declutterPrimary": true
       },
       {
         "id": "idaaEXwbjLo_4",
@@ -36711,7 +38089,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=idaaEXwbjLo"
+        "videoUrl": "https://www.youtube.com/watch?v=idaaEXwbjLo",
+        "declutterPrimary": true
       },
       {
         "id": "idaaEXwbjLo_5",
@@ -36735,7 +38114,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=idaaEXwbjLo"
+        "videoUrl": "https://www.youtube.com/watch?v=idaaEXwbjLo",
+        "declutterPrimary": true
       },
       {
         "id": "idaaEXwbjLo_6",
@@ -36759,7 +38139,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=idaaEXwbjLo"
+        "videoUrl": "https://www.youtube.com/watch?v=idaaEXwbjLo",
+        "declutterPrimary": true
       },
       {
         "id": "idaaEXwbjLo_7",
@@ -36783,7 +38164,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=idaaEXwbjLo"
+        "videoUrl": "https://www.youtube.com/watch?v=idaaEXwbjLo",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -36795,7 +38177,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "6fwRmi1dCwg",
@@ -36823,7 +38208,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Coastal Cliffs, Étretat & Ocean Waves"
+    "theme": "Coastal Cliffs, Étretat & Ocean Waves",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "kKK_l6IQnUk",
@@ -36864,7 +38252,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=kKK_l6IQnUk"
+        "videoUrl": "https://www.youtube.com/watch?v=kKK_l6IQnUk",
+        "declutterPrimary": true
       },
       {
         "id": "kKK_l6IQnUk_2",
@@ -36888,7 +38277,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=kKK_l6IQnUk"
+        "videoUrl": "https://www.youtube.com/watch?v=kKK_l6IQnUk",
+        "declutterPrimary": true
       },
       {
         "id": "kKK_l6IQnUk_3",
@@ -36912,7 +38302,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=kKK_l6IQnUk"
+        "videoUrl": "https://www.youtube.com/watch?v=kKK_l6IQnUk",
+        "declutterPrimary": true
       },
       {
         "id": "kKK_l6IQnUk_4",
@@ -36936,7 +38327,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=kKK_l6IQnUk"
+        "videoUrl": "https://www.youtube.com/watch?v=kKK_l6IQnUk",
+        "declutterPrimary": true
       },
       {
         "id": "kKK_l6IQnUk_5",
@@ -36960,7 +38352,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=kKK_l6IQnUk"
+        "videoUrl": "https://www.youtube.com/watch?v=kKK_l6IQnUk",
+        "declutterPrimary": true
       },
       {
         "id": "kKK_l6IQnUk_6",
@@ -36984,7 +38377,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=kKK_l6IQnUk"
+        "videoUrl": "https://www.youtube.com/watch?v=kKK_l6IQnUk",
+        "declutterPrimary": true
       },
       {
         "id": "kKK_l6IQnUk_7",
@@ -37008,7 +38402,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=kKK_l6IQnUk"
+        "videoUrl": "https://www.youtube.com/watch?v=kKK_l6IQnUk",
+        "declutterPrimary": true
       },
       {
         "id": "kKK_l6IQnUk_8",
@@ -37032,7 +38427,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=kKK_l6IQnUk"
+        "videoUrl": "https://www.youtube.com/watch?v=kKK_l6IQnUk",
+        "declutterPrimary": true
       },
       {
         "id": "kKK_l6IQnUk_9",
@@ -37056,7 +38452,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=kKK_l6IQnUk"
+        "videoUrl": "https://www.youtube.com/watch?v=kKK_l6IQnUk",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -37068,7 +38465,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Water Lilies & Garden Sanctuaries"
+    "theme": "Water Lilies & Garden Sanctuaries",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "U6aYJHR-XsQ",
@@ -37109,7 +38509,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=U6aYJHR-XsQ"
+        "videoUrl": "https://www.youtube.com/watch?v=U6aYJHR-XsQ",
+        "declutterPrimary": true
       },
       {
         "id": "U6aYJHR-XsQ_2",
@@ -37133,7 +38534,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=U6aYJHR-XsQ"
+        "videoUrl": "https://www.youtube.com/watch?v=U6aYJHR-XsQ",
+        "declutterPrimary": true
       },
       {
         "id": "U6aYJHR-XsQ_3",
@@ -37157,7 +38559,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=U6aYJHR-XsQ"
+        "videoUrl": "https://www.youtube.com/watch?v=U6aYJHR-XsQ",
+        "declutterPrimary": true
       },
       {
         "id": "U6aYJHR-XsQ_4",
@@ -37181,7 +38584,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=U6aYJHR-XsQ"
+        "videoUrl": "https://www.youtube.com/watch?v=U6aYJHR-XsQ",
+        "declutterPrimary": true
       },
       {
         "id": "U6aYJHR-XsQ_5",
@@ -37205,7 +38609,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=U6aYJHR-XsQ"
+        "videoUrl": "https://www.youtube.com/watch?v=U6aYJHR-XsQ",
+        "declutterPrimary": true
       },
       {
         "id": "U6aYJHR-XsQ_6",
@@ -37229,7 +38634,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=U6aYJHR-XsQ"
+        "videoUrl": "https://www.youtube.com/watch?v=U6aYJHR-XsQ",
+        "declutterPrimary": true
       },
       {
         "id": "U6aYJHR-XsQ_7",
@@ -37253,7 +38659,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=U6aYJHR-XsQ"
+        "videoUrl": "https://www.youtube.com/watch?v=U6aYJHR-XsQ",
+        "declutterPrimary": true
       },
       {
         "id": "U6aYJHR-XsQ_8",
@@ -37277,7 +38684,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=U6aYJHR-XsQ"
+        "videoUrl": "https://www.youtube.com/watch?v=U6aYJHR-XsQ",
+        "declutterPrimary": true
       },
       {
         "id": "U6aYJHR-XsQ_9",
@@ -37301,7 +38709,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=U6aYJHR-XsQ"
+        "videoUrl": "https://www.youtube.com/watch?v=U6aYJHR-XsQ",
+        "declutterPrimary": true
       },
       {
         "id": "U6aYJHR-XsQ_10",
@@ -37325,7 +38734,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=U6aYJHR-XsQ"
+        "videoUrl": "https://www.youtube.com/watch?v=U6aYJHR-XsQ",
+        "declutterPrimary": true
       },
       {
         "id": "U6aYJHR-XsQ_11",
@@ -37349,7 +38759,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=U6aYJHR-XsQ"
+        "videoUrl": "https://www.youtube.com/watch?v=U6aYJHR-XsQ",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 11,
@@ -37361,7 +38772,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Vincent van Gogh",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "a4KibWHOOww",
@@ -37402,7 +38816,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=a4KibWHOOww"
+        "videoUrl": "https://www.youtube.com/watch?v=a4KibWHOOww",
+        "declutterPrimary": true
       },
       {
         "id": "a4KibWHOOww_2",
@@ -37426,7 +38841,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=a4KibWHOOww"
+        "videoUrl": "https://www.youtube.com/watch?v=a4KibWHOOww",
+        "declutterPrimary": true
       },
       {
         "id": "a4KibWHOOww_3",
@@ -37450,7 +38866,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=a4KibWHOOww"
+        "videoUrl": "https://www.youtube.com/watch?v=a4KibWHOOww",
+        "declutterPrimary": true
       },
       {
         "id": "a4KibWHOOww_4",
@@ -37474,7 +38891,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=a4KibWHOOww"
+        "videoUrl": "https://www.youtube.com/watch?v=a4KibWHOOww",
+        "declutterPrimary": true
       },
       {
         "id": "a4KibWHOOww_5",
@@ -37498,7 +38916,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=a4KibWHOOww"
+        "videoUrl": "https://www.youtube.com/watch?v=a4KibWHOOww",
+        "declutterPrimary": true
       },
       {
         "id": "a4KibWHOOww_6",
@@ -37522,7 +38941,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=a4KibWHOOww"
+        "videoUrl": "https://www.youtube.com/watch?v=a4KibWHOOww",
+        "declutterPrimary": true
       },
       {
         "id": "a4KibWHOOww_7",
@@ -37546,7 +38966,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=a4KibWHOOww"
+        "videoUrl": "https://www.youtube.com/watch?v=a4KibWHOOww",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -37558,7 +38979,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "QaDuXmZMXWc",
@@ -37599,7 +39023,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QaDuXmZMXWc"
+        "videoUrl": "https://www.youtube.com/watch?v=QaDuXmZMXWc",
+        "declutterPrimary": true
       },
       {
         "id": "QaDuXmZMXWc_2",
@@ -37623,7 +39048,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QaDuXmZMXWc"
+        "videoUrl": "https://www.youtube.com/watch?v=QaDuXmZMXWc",
+        "declutterPrimary": true
       },
       {
         "id": "QaDuXmZMXWc_3",
@@ -37647,7 +39073,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QaDuXmZMXWc"
+        "videoUrl": "https://www.youtube.com/watch?v=QaDuXmZMXWc",
+        "declutterPrimary": true
       },
       {
         "id": "QaDuXmZMXWc_4",
@@ -37671,7 +39098,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QaDuXmZMXWc"
+        "videoUrl": "https://www.youtube.com/watch?v=QaDuXmZMXWc",
+        "declutterPrimary": true
       },
       {
         "id": "QaDuXmZMXWc_5",
@@ -37695,7 +39123,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QaDuXmZMXWc"
+        "videoUrl": "https://www.youtube.com/watch?v=QaDuXmZMXWc",
+        "declutterPrimary": true
       },
       {
         "id": "QaDuXmZMXWc_6",
@@ -37719,7 +39148,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QaDuXmZMXWc"
+        "videoUrl": "https://www.youtube.com/watch?v=QaDuXmZMXWc",
+        "declutterPrimary": true
       },
       {
         "id": "QaDuXmZMXWc_7",
@@ -37743,7 +39173,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QaDuXmZMXWc"
+        "videoUrl": "https://www.youtube.com/watch?v=QaDuXmZMXWc",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -37755,7 +39186,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "EHgDWy0a3Is",
@@ -37796,7 +39230,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=EHgDWy0a3Is"
+        "videoUrl": "https://www.youtube.com/watch?v=EHgDWy0a3Is",
+        "declutterPrimary": true
       },
       {
         "id": "EHgDWy0a3Is_2",
@@ -37820,7 +39255,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=EHgDWy0a3Is"
+        "videoUrl": "https://www.youtube.com/watch?v=EHgDWy0a3Is",
+        "declutterPrimary": true
       },
       {
         "id": "EHgDWy0a3Is_3",
@@ -37844,7 +39280,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=EHgDWy0a3Is"
+        "videoUrl": "https://www.youtube.com/watch?v=EHgDWy0a3Is",
+        "declutterPrimary": true
       },
       {
         "id": "EHgDWy0a3Is_4",
@@ -37868,7 +39305,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=EHgDWy0a3Is"
+        "videoUrl": "https://www.youtube.com/watch?v=EHgDWy0a3Is",
+        "declutterPrimary": true
       },
       {
         "id": "EHgDWy0a3Is_5",
@@ -37892,7 +39330,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=EHgDWy0a3Is"
+        "videoUrl": "https://www.youtube.com/watch?v=EHgDWy0a3Is",
+        "declutterPrimary": true
       },
       {
         "id": "EHgDWy0a3Is_6",
@@ -37916,7 +39355,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=EHgDWy0a3Is"
+        "videoUrl": "https://www.youtube.com/watch?v=EHgDWy0a3Is",
+        "declutterPrimary": true
       },
       {
         "id": "EHgDWy0a3Is_7",
@@ -37940,7 +39380,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=EHgDWy0a3Is"
+        "videoUrl": "https://www.youtube.com/watch?v=EHgDWy0a3Is",
+        "declutterPrimary": true
       },
       {
         "id": "EHgDWy0a3Is_8",
@@ -37964,7 +39405,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=EHgDWy0a3Is"
+        "videoUrl": "https://www.youtube.com/watch?v=EHgDWy0a3Is",
+        "declutterPrimary": true
       },
       {
         "id": "EHgDWy0a3Is_9",
@@ -37988,7 +39430,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=EHgDWy0a3Is"
+        "videoUrl": "https://www.youtube.com/watch?v=EHgDWy0a3Is",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -38000,7 +39443,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Parisian Life & Belle Époque"
+    "theme": "Parisian Life & Belle Époque",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "N6dSF_2qnlk",
@@ -38041,7 +39487,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=N6dSF_2qnlk"
+        "videoUrl": "https://www.youtube.com/watch?v=N6dSF_2qnlk",
+        "declutterPrimary": true
       },
       {
         "id": "N6dSF_2qnlk_2",
@@ -38065,7 +39512,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=N6dSF_2qnlk"
+        "videoUrl": "https://www.youtube.com/watch?v=N6dSF_2qnlk",
+        "declutterPrimary": true
       },
       {
         "id": "N6dSF_2qnlk_3",
@@ -38089,7 +39537,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=N6dSF_2qnlk"
+        "videoUrl": "https://www.youtube.com/watch?v=N6dSF_2qnlk",
+        "declutterPrimary": true
       },
       {
         "id": "N6dSF_2qnlk_4",
@@ -38113,7 +39562,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=N6dSF_2qnlk"
+        "videoUrl": "https://www.youtube.com/watch?v=N6dSF_2qnlk",
+        "declutterPrimary": true
       },
       {
         "id": "N6dSF_2qnlk_5",
@@ -38137,7 +39587,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=N6dSF_2qnlk"
+        "videoUrl": "https://www.youtube.com/watch?v=N6dSF_2qnlk",
+        "declutterPrimary": true
       },
       {
         "id": "N6dSF_2qnlk_6",
@@ -38161,7 +39612,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=N6dSF_2qnlk"
+        "videoUrl": "https://www.youtube.com/watch?v=N6dSF_2qnlk",
+        "declutterPrimary": true
       },
       {
         "id": "N6dSF_2qnlk_7",
@@ -38185,7 +39637,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=N6dSF_2qnlk"
+        "videoUrl": "https://www.youtube.com/watch?v=N6dSF_2qnlk",
+        "declutterPrimary": true
       },
       {
         "id": "N6dSF_2qnlk_8",
@@ -38209,7 +39662,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=N6dSF_2qnlk"
+        "videoUrl": "https://www.youtube.com/watch?v=N6dSF_2qnlk",
+        "declutterPrimary": true
       },
       {
         "id": "N6dSF_2qnlk_9",
@@ -38233,7 +39687,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=N6dSF_2qnlk"
+        "videoUrl": "https://www.youtube.com/watch?v=N6dSF_2qnlk",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -38245,7 +39700,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "8SWvmB2_AN8",
@@ -38286,7 +39744,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8SWvmB2_AN8"
+        "videoUrl": "https://www.youtube.com/watch?v=8SWvmB2_AN8",
+        "declutterPrimary": true
       },
       {
         "id": "8SWvmB2_AN8_2",
@@ -38310,7 +39769,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8SWvmB2_AN8"
+        "videoUrl": "https://www.youtube.com/watch?v=8SWvmB2_AN8",
+        "declutterPrimary": true
       },
       {
         "id": "8SWvmB2_AN8_3",
@@ -38334,7 +39794,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8SWvmB2_AN8"
+        "videoUrl": "https://www.youtube.com/watch?v=8SWvmB2_AN8",
+        "declutterPrimary": true
       },
       {
         "id": "8SWvmB2_AN8_4",
@@ -38358,7 +39819,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8SWvmB2_AN8"
+        "videoUrl": "https://www.youtube.com/watch?v=8SWvmB2_AN8",
+        "declutterPrimary": true
       },
       {
         "id": "8SWvmB2_AN8_5",
@@ -38382,7 +39844,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8SWvmB2_AN8"
+        "videoUrl": "https://www.youtube.com/watch?v=8SWvmB2_AN8",
+        "declutterPrimary": true
       },
       {
         "id": "8SWvmB2_AN8_6",
@@ -38406,7 +39869,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8SWvmB2_AN8"
+        "videoUrl": "https://www.youtube.com/watch?v=8SWvmB2_AN8",
+        "declutterPrimary": true
       },
       {
         "id": "8SWvmB2_AN8_7",
@@ -38430,7 +39894,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8SWvmB2_AN8"
+        "videoUrl": "https://www.youtube.com/watch?v=8SWvmB2_AN8",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -38442,7 +39907,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "WrkiT2xR8Gw",
@@ -38483,7 +39951,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=WrkiT2xR8Gw"
+        "videoUrl": "https://www.youtube.com/watch?v=WrkiT2xR8Gw",
+        "declutterPrimary": true
       },
       {
         "id": "WrkiT2xR8Gw_2",
@@ -38507,7 +39976,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=WrkiT2xR8Gw"
+        "videoUrl": "https://www.youtube.com/watch?v=WrkiT2xR8Gw",
+        "declutterPrimary": true
       },
       {
         "id": "WrkiT2xR8Gw_3",
@@ -38531,7 +40001,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=WrkiT2xR8Gw"
+        "videoUrl": "https://www.youtube.com/watch?v=WrkiT2xR8Gw",
+        "declutterPrimary": true
       },
       {
         "id": "WrkiT2xR8Gw_4",
@@ -38555,7 +40026,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=WrkiT2xR8Gw"
+        "videoUrl": "https://www.youtube.com/watch?v=WrkiT2xR8Gw",
+        "declutterPrimary": true
       },
       {
         "id": "WrkiT2xR8Gw_5",
@@ -38579,7 +40051,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=WrkiT2xR8Gw"
+        "videoUrl": "https://www.youtube.com/watch?v=WrkiT2xR8Gw",
+        "declutterPrimary": true
       },
       {
         "id": "WrkiT2xR8Gw_6",
@@ -38603,7 +40076,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=WrkiT2xR8Gw"
+        "videoUrl": "https://www.youtube.com/watch?v=WrkiT2xR8Gw",
+        "declutterPrimary": true
       },
       {
         "id": "WrkiT2xR8Gw_7",
@@ -38627,7 +40101,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=WrkiT2xR8Gw"
+        "videoUrl": "https://www.youtube.com/watch?v=WrkiT2xR8Gw",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -38639,7 +40114,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "cvBgRP6N-fE",
@@ -38680,7 +40158,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=cvBgRP6N-fE"
+        "videoUrl": "https://www.youtube.com/watch?v=cvBgRP6N-fE",
+        "declutterPrimary": true
       },
       {
         "id": "cvBgRP6N-fE_2",
@@ -38704,7 +40183,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=cvBgRP6N-fE"
+        "videoUrl": "https://www.youtube.com/watch?v=cvBgRP6N-fE",
+        "declutterPrimary": true
       },
       {
         "id": "cvBgRP6N-fE_3",
@@ -38728,7 +40208,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=cvBgRP6N-fE"
+        "videoUrl": "https://www.youtube.com/watch?v=cvBgRP6N-fE",
+        "declutterPrimary": true
       },
       {
         "id": "cvBgRP6N-fE_4",
@@ -38752,7 +40233,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=cvBgRP6N-fE"
+        "videoUrl": "https://www.youtube.com/watch?v=cvBgRP6N-fE",
+        "declutterPrimary": true
       },
       {
         "id": "cvBgRP6N-fE_5",
@@ -38776,7 +40258,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=cvBgRP6N-fE"
+        "videoUrl": "https://www.youtube.com/watch?v=cvBgRP6N-fE",
+        "declutterPrimary": true
       },
       {
         "id": "cvBgRP6N-fE_6",
@@ -38800,7 +40283,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=cvBgRP6N-fE"
+        "videoUrl": "https://www.youtube.com/watch?v=cvBgRP6N-fE",
+        "declutterPrimary": true
       },
       {
         "id": "cvBgRP6N-fE_7",
@@ -38824,7 +40308,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=cvBgRP6N-fE"
+        "videoUrl": "https://www.youtube.com/watch?v=cvBgRP6N-fE",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -38836,7 +40321,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "River Seine & Waterways"
+    "theme": "River Seine & Waterways",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "jWlxfU71NXI",
@@ -38877,7 +40365,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=jWlxfU71NXI"
+        "videoUrl": "https://www.youtube.com/watch?v=jWlxfU71NXI",
+        "declutterPrimary": true
       },
       {
         "id": "jWlxfU71NXI_2",
@@ -38901,7 +40390,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=jWlxfU71NXI"
+        "videoUrl": "https://www.youtube.com/watch?v=jWlxfU71NXI",
+        "declutterPrimary": true
       },
       {
         "id": "jWlxfU71NXI_3",
@@ -38925,7 +40415,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=jWlxfU71NXI"
+        "videoUrl": "https://www.youtube.com/watch?v=jWlxfU71NXI",
+        "declutterPrimary": true
       },
       {
         "id": "jWlxfU71NXI_4",
@@ -38949,7 +40440,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=jWlxfU71NXI"
+        "videoUrl": "https://www.youtube.com/watch?v=jWlxfU71NXI",
+        "declutterPrimary": true
       },
       {
         "id": "jWlxfU71NXI_5",
@@ -38973,7 +40465,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=jWlxfU71NXI"
+        "videoUrl": "https://www.youtube.com/watch?v=jWlxfU71NXI",
+        "declutterPrimary": true
       },
       {
         "id": "jWlxfU71NXI_6",
@@ -38997,7 +40490,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=jWlxfU71NXI"
+        "videoUrl": "https://www.youtube.com/watch?v=jWlxfU71NXI",
+        "declutterPrimary": true
       },
       {
         "id": "jWlxfU71NXI_7",
@@ -39021,7 +40515,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=jWlxfU71NXI"
+        "videoUrl": "https://www.youtube.com/watch?v=jWlxfU71NXI",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -39033,7 +40528,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "FRHDbIlwNXo",
@@ -39074,7 +40572,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=FRHDbIlwNXo"
+        "videoUrl": "https://www.youtube.com/watch?v=FRHDbIlwNXo",
+        "declutterPrimary": true
       },
       {
         "id": "FRHDbIlwNXo_2",
@@ -39098,7 +40597,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=FRHDbIlwNXo"
+        "videoUrl": "https://www.youtube.com/watch?v=FRHDbIlwNXo",
+        "declutterPrimary": true
       },
       {
         "id": "FRHDbIlwNXo_3",
@@ -39122,7 +40622,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=FRHDbIlwNXo"
+        "videoUrl": "https://www.youtube.com/watch?v=FRHDbIlwNXo",
+        "declutterPrimary": true
       },
       {
         "id": "FRHDbIlwNXo_4",
@@ -39146,7 +40647,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=FRHDbIlwNXo"
+        "videoUrl": "https://www.youtube.com/watch?v=FRHDbIlwNXo",
+        "declutterPrimary": true
       },
       {
         "id": "FRHDbIlwNXo_5",
@@ -39170,7 +40672,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=FRHDbIlwNXo"
+        "videoUrl": "https://www.youtube.com/watch?v=FRHDbIlwNXo",
+        "declutterPrimary": true
       },
       {
         "id": "FRHDbIlwNXo_6",
@@ -39194,7 +40697,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=FRHDbIlwNXo"
+        "videoUrl": "https://www.youtube.com/watch?v=FRHDbIlwNXo",
+        "declutterPrimary": true
       },
       {
         "id": "FRHDbIlwNXo_7",
@@ -39218,7 +40722,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=FRHDbIlwNXo"
+        "videoUrl": "https://www.youtube.com/watch?v=FRHDbIlwNXo",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -39230,7 +40735,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "River Seine & Waterways"
+    "theme": "River Seine & Waterways",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "Gxziid-_SvA",
@@ -39271,7 +40779,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=Gxziid-_SvA"
+        "videoUrl": "https://www.youtube.com/watch?v=Gxziid-_SvA",
+        "declutterPrimary": true
       },
       {
         "id": "Gxziid-_SvA_2",
@@ -39295,7 +40804,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=Gxziid-_SvA"
+        "videoUrl": "https://www.youtube.com/watch?v=Gxziid-_SvA",
+        "declutterPrimary": true
       },
       {
         "id": "Gxziid-_SvA_3",
@@ -39319,7 +40829,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=Gxziid-_SvA"
+        "videoUrl": "https://www.youtube.com/watch?v=Gxziid-_SvA",
+        "declutterPrimary": true
       },
       {
         "id": "Gxziid-_SvA_4",
@@ -39343,7 +40854,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=Gxziid-_SvA"
+        "videoUrl": "https://www.youtube.com/watch?v=Gxziid-_SvA",
+        "declutterPrimary": true
       },
       {
         "id": "Gxziid-_SvA_5",
@@ -39367,7 +40879,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=Gxziid-_SvA"
+        "videoUrl": "https://www.youtube.com/watch?v=Gxziid-_SvA",
+        "declutterPrimary": true
       },
       {
         "id": "Gxziid-_SvA_6",
@@ -39391,7 +40904,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=Gxziid-_SvA"
+        "videoUrl": "https://www.youtube.com/watch?v=Gxziid-_SvA",
+        "declutterPrimary": true
       },
       {
         "id": "Gxziid-_SvA_7",
@@ -39415,7 +40929,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=Gxziid-_SvA"
+        "videoUrl": "https://www.youtube.com/watch?v=Gxziid-_SvA",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -39427,7 +40942,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "mojInAa9s8o",
@@ -39468,7 +40986,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=mojInAa9s8o"
+        "videoUrl": "https://www.youtube.com/watch?v=mojInAa9s8o",
+        "declutterPrimary": true
       },
       {
         "id": "mojInAa9s8o_2",
@@ -39492,7 +41011,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=mojInAa9s8o"
+        "videoUrl": "https://www.youtube.com/watch?v=mojInAa9s8o",
+        "declutterPrimary": true
       },
       {
         "id": "mojInAa9s8o_3",
@@ -39516,7 +41036,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=mojInAa9s8o"
+        "videoUrl": "https://www.youtube.com/watch?v=mojInAa9s8o",
+        "declutterPrimary": true
       },
       {
         "id": "mojInAa9s8o_4",
@@ -39540,7 +41061,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=mojInAa9s8o"
+        "videoUrl": "https://www.youtube.com/watch?v=mojInAa9s8o",
+        "declutterPrimary": true
       },
       {
         "id": "mojInAa9s8o_5",
@@ -39564,7 +41086,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=mojInAa9s8o"
+        "videoUrl": "https://www.youtube.com/watch?v=mojInAa9s8o",
+        "declutterPrimary": true
       },
       {
         "id": "mojInAa9s8o_6",
@@ -39588,7 +41111,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=mojInAa9s8o"
+        "videoUrl": "https://www.youtube.com/watch?v=mojInAa9s8o",
+        "declutterPrimary": true
       },
       {
         "id": "mojInAa9s8o_7",
@@ -39612,7 +41136,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=mojInAa9s8o"
+        "videoUrl": "https://www.youtube.com/watch?v=mojInAa9s8o",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -39624,7 +41149,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "3jIhJIeCC70",
@@ -39665,7 +41193,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=3jIhJIeCC70"
+        "videoUrl": "https://www.youtube.com/watch?v=3jIhJIeCC70",
+        "declutterPrimary": true
       },
       {
         "id": "3jIhJIeCC70_2",
@@ -39689,7 +41218,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=3jIhJIeCC70"
+        "videoUrl": "https://www.youtube.com/watch?v=3jIhJIeCC70",
+        "declutterPrimary": true
       },
       {
         "id": "3jIhJIeCC70_3",
@@ -39713,7 +41243,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=3jIhJIeCC70"
+        "videoUrl": "https://www.youtube.com/watch?v=3jIhJIeCC70",
+        "declutterPrimary": true
       },
       {
         "id": "3jIhJIeCC70_4",
@@ -39737,7 +41268,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=3jIhJIeCC70"
+        "videoUrl": "https://www.youtube.com/watch?v=3jIhJIeCC70",
+        "declutterPrimary": true
       },
       {
         "id": "3jIhJIeCC70_5",
@@ -39761,7 +41293,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=3jIhJIeCC70"
+        "videoUrl": "https://www.youtube.com/watch?v=3jIhJIeCC70",
+        "declutterPrimary": true
       },
       {
         "id": "3jIhJIeCC70_6",
@@ -39785,7 +41318,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=3jIhJIeCC70"
+        "videoUrl": "https://www.youtube.com/watch?v=3jIhJIeCC70",
+        "declutterPrimary": true
       },
       {
         "id": "3jIhJIeCC70_7",
@@ -39809,7 +41343,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=3jIhJIeCC70"
+        "videoUrl": "https://www.youtube.com/watch?v=3jIhJIeCC70",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -39821,7 +41356,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "uLtTuYGEO_E",
@@ -39862,7 +41400,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uLtTuYGEO_E"
+        "videoUrl": "https://www.youtube.com/watch?v=uLtTuYGEO_E",
+        "declutterPrimary": true
       },
       {
         "id": "uLtTuYGEO_E_2",
@@ -39886,7 +41425,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uLtTuYGEO_E"
+        "videoUrl": "https://www.youtube.com/watch?v=uLtTuYGEO_E",
+        "declutterPrimary": true
       },
       {
         "id": "uLtTuYGEO_E_3",
@@ -39910,7 +41450,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uLtTuYGEO_E"
+        "videoUrl": "https://www.youtube.com/watch?v=uLtTuYGEO_E",
+        "declutterPrimary": true
       },
       {
         "id": "uLtTuYGEO_E_4",
@@ -39934,7 +41475,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uLtTuYGEO_E"
+        "videoUrl": "https://www.youtube.com/watch?v=uLtTuYGEO_E",
+        "declutterPrimary": true
       },
       {
         "id": "uLtTuYGEO_E_5",
@@ -39958,7 +41500,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=uLtTuYGEO_E"
+        "videoUrl": "https://www.youtube.com/watch?v=uLtTuYGEO_E",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 5,
@@ -39970,7 +41513,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Vincent van Gogh",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "sNLWtm_pGNc",
@@ -40011,7 +41557,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=sNLWtm_pGNc"
+        "videoUrl": "https://www.youtube.com/watch?v=sNLWtm_pGNc",
+        "declutterPrimary": true
       },
       {
         "id": "sNLWtm_pGNc_2",
@@ -40035,7 +41582,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=sNLWtm_pGNc"
+        "videoUrl": "https://www.youtube.com/watch?v=sNLWtm_pGNc",
+        "declutterPrimary": true
       },
       {
         "id": "sNLWtm_pGNc_3",
@@ -40059,7 +41607,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=sNLWtm_pGNc"
+        "videoUrl": "https://www.youtube.com/watch?v=sNLWtm_pGNc",
+        "declutterPrimary": true
       },
       {
         "id": "sNLWtm_pGNc_4",
@@ -40083,7 +41632,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=sNLWtm_pGNc"
+        "videoUrl": "https://www.youtube.com/watch?v=sNLWtm_pGNc",
+        "declutterPrimary": true
       },
       {
         "id": "sNLWtm_pGNc_5",
@@ -40107,7 +41657,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=sNLWtm_pGNc"
+        "videoUrl": "https://www.youtube.com/watch?v=sNLWtm_pGNc",
+        "declutterPrimary": true
       },
       {
         "id": "sNLWtm_pGNc_6",
@@ -40131,7 +41682,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=sNLWtm_pGNc"
+        "videoUrl": "https://www.youtube.com/watch?v=sNLWtm_pGNc",
+        "declutterPrimary": true
       },
       {
         "id": "sNLWtm_pGNc_7",
@@ -40155,7 +41707,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=sNLWtm_pGNc"
+        "videoUrl": "https://www.youtube.com/watch?v=sNLWtm_pGNc",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -40167,7 +41720,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "9bJ1zs1mU5U",
@@ -40208,7 +41764,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=9bJ1zs1mU5U"
+        "videoUrl": "https://www.youtube.com/watch?v=9bJ1zs1mU5U",
+        "declutterPrimary": true
       },
       {
         "id": "9bJ1zs1mU5U_2",
@@ -40232,7 +41789,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=9bJ1zs1mU5U"
+        "videoUrl": "https://www.youtube.com/watch?v=9bJ1zs1mU5U",
+        "declutterPrimary": true
       },
       {
         "id": "9bJ1zs1mU5U_3",
@@ -40256,7 +41814,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=9bJ1zs1mU5U"
+        "videoUrl": "https://www.youtube.com/watch?v=9bJ1zs1mU5U",
+        "declutterPrimary": true
       },
       {
         "id": "9bJ1zs1mU5U_4",
@@ -40280,7 +41839,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=9bJ1zs1mU5U"
+        "videoUrl": "https://www.youtube.com/watch?v=9bJ1zs1mU5U",
+        "declutterPrimary": true
       },
       {
         "id": "9bJ1zs1mU5U_5",
@@ -40304,7 +41864,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=9bJ1zs1mU5U"
+        "videoUrl": "https://www.youtube.com/watch?v=9bJ1zs1mU5U",
+        "declutterPrimary": true
       },
       {
         "id": "9bJ1zs1mU5U_6",
@@ -40328,7 +41889,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=9bJ1zs1mU5U"
+        "videoUrl": "https://www.youtube.com/watch?v=9bJ1zs1mU5U",
+        "declutterPrimary": true
       },
       {
         "id": "9bJ1zs1mU5U_7",
@@ -40352,7 +41914,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=9bJ1zs1mU5U"
+        "videoUrl": "https://www.youtube.com/watch?v=9bJ1zs1mU5U",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -40364,7 +41927,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "-haidoSkGtg",
@@ -40405,7 +41971,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=-haidoSkGtg"
+        "videoUrl": "https://www.youtube.com/watch?v=-haidoSkGtg",
+        "declutterPrimary": true
       },
       {
         "id": "-haidoSkGtg_2",
@@ -40429,7 +41996,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=-haidoSkGtg"
+        "videoUrl": "https://www.youtube.com/watch?v=-haidoSkGtg",
+        "declutterPrimary": true
       },
       {
         "id": "-haidoSkGtg_3",
@@ -40453,7 +42021,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=-haidoSkGtg"
+        "videoUrl": "https://www.youtube.com/watch?v=-haidoSkGtg",
+        "declutterPrimary": true
       },
       {
         "id": "-haidoSkGtg_4",
@@ -40477,7 +42046,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=-haidoSkGtg"
+        "videoUrl": "https://www.youtube.com/watch?v=-haidoSkGtg",
+        "declutterPrimary": true
       },
       {
         "id": "-haidoSkGtg_5",
@@ -40501,7 +42071,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=-haidoSkGtg"
+        "videoUrl": "https://www.youtube.com/watch?v=-haidoSkGtg",
+        "declutterPrimary": true
       },
       {
         "id": "-haidoSkGtg_6",
@@ -40525,7 +42096,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=-haidoSkGtg"
+        "videoUrl": "https://www.youtube.com/watch?v=-haidoSkGtg",
+        "declutterPrimary": true
       },
       {
         "id": "-haidoSkGtg_7",
@@ -40549,7 +42121,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=-haidoSkGtg"
+        "videoUrl": "https://www.youtube.com/watch?v=-haidoSkGtg",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -40561,7 +42134,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Water Lilies & Garden Sanctuaries"
+    "theme": "Water Lilies & Garden Sanctuaries",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "RKq496jXEn0",
@@ -40602,7 +42178,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RKq496jXEn0"
+        "videoUrl": "https://www.youtube.com/watch?v=RKq496jXEn0",
+        "declutterPrimary": true
       },
       {
         "id": "RKq496jXEn0_2",
@@ -40626,7 +42203,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RKq496jXEn0"
+        "videoUrl": "https://www.youtube.com/watch?v=RKq496jXEn0",
+        "declutterPrimary": true
       },
       {
         "id": "RKq496jXEn0_3",
@@ -40650,7 +42228,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RKq496jXEn0"
+        "videoUrl": "https://www.youtube.com/watch?v=RKq496jXEn0",
+        "declutterPrimary": true
       },
       {
         "id": "RKq496jXEn0_4",
@@ -40674,7 +42253,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RKq496jXEn0"
+        "videoUrl": "https://www.youtube.com/watch?v=RKq496jXEn0",
+        "declutterPrimary": true
       },
       {
         "id": "RKq496jXEn0_5",
@@ -40698,7 +42278,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RKq496jXEn0"
+        "videoUrl": "https://www.youtube.com/watch?v=RKq496jXEn0",
+        "declutterPrimary": true
       },
       {
         "id": "RKq496jXEn0_6",
@@ -40722,7 +42303,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RKq496jXEn0"
+        "videoUrl": "https://www.youtube.com/watch?v=RKq496jXEn0",
+        "declutterPrimary": true
       },
       {
         "id": "RKq496jXEn0_7",
@@ -40746,7 +42328,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=RKq496jXEn0"
+        "videoUrl": "https://www.youtube.com/watch?v=RKq496jXEn0",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -40758,7 +42341,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "Nc8RnymSkXs",
@@ -40799,7 +42385,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=Nc8RnymSkXs"
+        "videoUrl": "https://www.youtube.com/watch?v=Nc8RnymSkXs",
+        "declutterPrimary": true
       },
       {
         "id": "Nc8RnymSkXs_2",
@@ -40823,7 +42410,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=Nc8RnymSkXs"
+        "videoUrl": "https://www.youtube.com/watch?v=Nc8RnymSkXs",
+        "declutterPrimary": true
       },
       {
         "id": "Nc8RnymSkXs_3",
@@ -40847,7 +42435,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=Nc8RnymSkXs"
+        "videoUrl": "https://www.youtube.com/watch?v=Nc8RnymSkXs",
+        "declutterPrimary": true
       },
       {
         "id": "Nc8RnymSkXs_4",
@@ -40871,7 +42460,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=Nc8RnymSkXs"
+        "videoUrl": "https://www.youtube.com/watch?v=Nc8RnymSkXs",
+        "declutterPrimary": true
       },
       {
         "id": "Nc8RnymSkXs_5",
@@ -40895,7 +42485,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=Nc8RnymSkXs"
+        "videoUrl": "https://www.youtube.com/watch?v=Nc8RnymSkXs",
+        "declutterPrimary": true
       },
       {
         "id": "Nc8RnymSkXs_6",
@@ -40919,7 +42510,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=Nc8RnymSkXs"
+        "videoUrl": "https://www.youtube.com/watch?v=Nc8RnymSkXs",
+        "declutterPrimary": true
       },
       {
         "id": "Nc8RnymSkXs_7",
@@ -40943,7 +42535,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=Nc8RnymSkXs"
+        "videoUrl": "https://www.youtube.com/watch?v=Nc8RnymSkXs",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -40955,7 +42548,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Parisian Life & Belle Époque"
+    "theme": "Parisian Life & Belle Époque",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "8dPO3fDt5OE",
@@ -40996,7 +42592,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=8dPO3fDt5OE"
+        "videoUrl": "https://www.youtube.com/watch?v=8dPO3fDt5OE",
+        "declutterPrimary": true
       },
       {
         "id": "8dPO3fDt5OE_2",
@@ -41020,7 +42617,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=8dPO3fDt5OE"
+        "videoUrl": "https://www.youtube.com/watch?v=8dPO3fDt5OE",
+        "declutterPrimary": true
       },
       {
         "id": "8dPO3fDt5OE_3",
@@ -41044,7 +42642,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=8dPO3fDt5OE"
+        "videoUrl": "https://www.youtube.com/watch?v=8dPO3fDt5OE",
+        "declutterPrimary": true
       },
       {
         "id": "8dPO3fDt5OE_4",
@@ -41068,7 +42667,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=8dPO3fDt5OE"
+        "videoUrl": "https://www.youtube.com/watch?v=8dPO3fDt5OE",
+        "declutterPrimary": true
       },
       {
         "id": "8dPO3fDt5OE_5",
@@ -41092,7 +42692,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=8dPO3fDt5OE"
+        "videoUrl": "https://www.youtube.com/watch?v=8dPO3fDt5OE",
+        "declutterPrimary": true
       },
       {
         "id": "8dPO3fDt5OE_6",
@@ -41116,7 +42717,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=8dPO3fDt5OE"
+        "videoUrl": "https://www.youtube.com/watch?v=8dPO3fDt5OE",
+        "declutterPrimary": true
       },
       {
         "id": "8dPO3fDt5OE_7",
@@ -41140,7 +42742,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=8dPO3fDt5OE"
+        "videoUrl": "https://www.youtube.com/watch?v=8dPO3fDt5OE",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -41152,7 +42755,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Train Nostalgia & Gare Saint-Lazare"
+    "theme": "Train Nostalgia & Gare Saint-Lazare",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "ZqP1sJfO5Vg",
@@ -41193,7 +42799,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZqP1sJfO5Vg"
+        "videoUrl": "https://www.youtube.com/watch?v=ZqP1sJfO5Vg",
+        "declutterPrimary": true
       },
       {
         "id": "ZqP1sJfO5Vg_2",
@@ -41217,7 +42824,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZqP1sJfO5Vg"
+        "videoUrl": "https://www.youtube.com/watch?v=ZqP1sJfO5Vg",
+        "declutterPrimary": true
       },
       {
         "id": "ZqP1sJfO5Vg_3",
@@ -41241,7 +42849,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZqP1sJfO5Vg"
+        "videoUrl": "https://www.youtube.com/watch?v=ZqP1sJfO5Vg",
+        "declutterPrimary": true
       },
       {
         "id": "ZqP1sJfO5Vg_4",
@@ -41265,7 +42874,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZqP1sJfO5Vg"
+        "videoUrl": "https://www.youtube.com/watch?v=ZqP1sJfO5Vg",
+        "declutterPrimary": true
       },
       {
         "id": "ZqP1sJfO5Vg_5",
@@ -41289,7 +42899,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZqP1sJfO5Vg"
+        "videoUrl": "https://www.youtube.com/watch?v=ZqP1sJfO5Vg",
+        "declutterPrimary": true
       },
       {
         "id": "ZqP1sJfO5Vg_6",
@@ -41313,7 +42924,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZqP1sJfO5Vg"
+        "videoUrl": "https://www.youtube.com/watch?v=ZqP1sJfO5Vg",
+        "declutterPrimary": true
       },
       {
         "id": "ZqP1sJfO5Vg_7",
@@ -41337,7 +42949,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZqP1sJfO5Vg"
+        "videoUrl": "https://www.youtube.com/watch?v=ZqP1sJfO5Vg",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -41349,7 +42962,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "NzREQZY9S0w",
@@ -41390,7 +43006,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=NzREQZY9S0w"
+        "videoUrl": "https://www.youtube.com/watch?v=NzREQZY9S0w",
+        "declutterPrimary": true
       },
       {
         "id": "NzREQZY9S0w_2",
@@ -41414,7 +43031,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=NzREQZY9S0w"
+        "videoUrl": "https://www.youtube.com/watch?v=NzREQZY9S0w",
+        "declutterPrimary": true
       },
       {
         "id": "NzREQZY9S0w_3",
@@ -41438,7 +43056,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=NzREQZY9S0w"
+        "videoUrl": "https://www.youtube.com/watch?v=NzREQZY9S0w",
+        "declutterPrimary": true
       },
       {
         "id": "NzREQZY9S0w_4",
@@ -41462,7 +43081,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=NzREQZY9S0w"
+        "videoUrl": "https://www.youtube.com/watch?v=NzREQZY9S0w",
+        "declutterPrimary": true
       },
       {
         "id": "NzREQZY9S0w_5",
@@ -41486,7 +43106,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=NzREQZY9S0w"
+        "videoUrl": "https://www.youtube.com/watch?v=NzREQZY9S0w",
+        "declutterPrimary": true
       },
       {
         "id": "NzREQZY9S0w_6",
@@ -41510,7 +43131,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=NzREQZY9S0w"
+        "videoUrl": "https://www.youtube.com/watch?v=NzREQZY9S0w",
+        "declutterPrimary": true
       },
       {
         "id": "NzREQZY9S0w_7",
@@ -41534,7 +43156,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=NzREQZY9S0w"
+        "videoUrl": "https://www.youtube.com/watch?v=NzREQZY9S0w",
+        "declutterPrimary": true
       },
       {
         "id": "NzREQZY9S0w_8",
@@ -41558,7 +43181,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=NzREQZY9S0w"
+        "videoUrl": "https://www.youtube.com/watch?v=NzREQZY9S0w",
+        "declutterPrimary": true
       },
       {
         "id": "NzREQZY9S0w_9",
@@ -41582,7 +43206,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=NzREQZY9S0w"
+        "videoUrl": "https://www.youtube.com/watch?v=NzREQZY9S0w",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -41594,7 +43219,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "gMY8kML1UVA",
@@ -41635,7 +43263,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=gMY8kML1UVA"
+        "videoUrl": "https://www.youtube.com/watch?v=gMY8kML1UVA",
+        "declutterPrimary": true
       },
       {
         "id": "gMY8kML1UVA_2",
@@ -41659,7 +43288,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=gMY8kML1UVA"
+        "videoUrl": "https://www.youtube.com/watch?v=gMY8kML1UVA",
+        "declutterPrimary": true
       },
       {
         "id": "gMY8kML1UVA_3",
@@ -41683,7 +43313,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=gMY8kML1UVA"
+        "videoUrl": "https://www.youtube.com/watch?v=gMY8kML1UVA",
+        "declutterPrimary": true
       },
       {
         "id": "gMY8kML1UVA_4",
@@ -41707,7 +43338,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=gMY8kML1UVA"
+        "videoUrl": "https://www.youtube.com/watch?v=gMY8kML1UVA",
+        "declutterPrimary": true
       },
       {
         "id": "gMY8kML1UVA_5",
@@ -41731,7 +43363,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=gMY8kML1UVA"
+        "videoUrl": "https://www.youtube.com/watch?v=gMY8kML1UVA",
+        "declutterPrimary": true
       },
       {
         "id": "gMY8kML1UVA_6",
@@ -41755,7 +43388,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=gMY8kML1UVA"
+        "videoUrl": "https://www.youtube.com/watch?v=gMY8kML1UVA",
+        "declutterPrimary": true
       },
       {
         "id": "gMY8kML1UVA_7",
@@ -41779,7 +43413,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=gMY8kML1UVA"
+        "videoUrl": "https://www.youtube.com/watch?v=gMY8kML1UVA",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -41791,7 +43426,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Water Lilies & Garden Sanctuaries"
+    "theme": "Water Lilies & Garden Sanctuaries",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "LA2Aca2HFWE",
@@ -41832,7 +43470,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=LA2Aca2HFWE"
+        "videoUrl": "https://www.youtube.com/watch?v=LA2Aca2HFWE",
+        "declutterPrimary": true
       },
       {
         "id": "LA2Aca2HFWE_2",
@@ -41856,7 +43495,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=LA2Aca2HFWE"
+        "videoUrl": "https://www.youtube.com/watch?v=LA2Aca2HFWE",
+        "declutterPrimary": true
       },
       {
         "id": "LA2Aca2HFWE_3",
@@ -41880,7 +43520,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=LA2Aca2HFWE"
+        "videoUrl": "https://www.youtube.com/watch?v=LA2Aca2HFWE",
+        "declutterPrimary": true
       },
       {
         "id": "LA2Aca2HFWE_4",
@@ -41904,7 +43545,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=LA2Aca2HFWE"
+        "videoUrl": "https://www.youtube.com/watch?v=LA2Aca2HFWE",
+        "declutterPrimary": true
       },
       {
         "id": "LA2Aca2HFWE_5",
@@ -41928,7 +43570,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=LA2Aca2HFWE"
+        "videoUrl": "https://www.youtube.com/watch?v=LA2Aca2HFWE",
+        "declutterPrimary": true
       },
       {
         "id": "LA2Aca2HFWE_6",
@@ -41952,7 +43595,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=LA2Aca2HFWE"
+        "videoUrl": "https://www.youtube.com/watch?v=LA2Aca2HFWE",
+        "declutterPrimary": true
       },
       {
         "id": "LA2Aca2HFWE_7",
@@ -41976,7 +43620,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=LA2Aca2HFWE"
+        "videoUrl": "https://www.youtube.com/watch?v=LA2Aca2HFWE",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -41988,7 +43633,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "rNtZNeeXNlw",
@@ -42029,7 +43677,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=rNtZNeeXNlw"
+        "videoUrl": "https://www.youtube.com/watch?v=rNtZNeeXNlw",
+        "declutterPrimary": true
       },
       {
         "id": "rNtZNeeXNlw_2",
@@ -42053,7 +43702,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=rNtZNeeXNlw"
+        "videoUrl": "https://www.youtube.com/watch?v=rNtZNeeXNlw",
+        "declutterPrimary": true
       },
       {
         "id": "rNtZNeeXNlw_3",
@@ -42077,7 +43727,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=rNtZNeeXNlw"
+        "videoUrl": "https://www.youtube.com/watch?v=rNtZNeeXNlw",
+        "declutterPrimary": true
       },
       {
         "id": "rNtZNeeXNlw_4",
@@ -42101,7 +43752,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=rNtZNeeXNlw"
+        "videoUrl": "https://www.youtube.com/watch?v=rNtZNeeXNlw",
+        "declutterPrimary": true
       },
       {
         "id": "rNtZNeeXNlw_5",
@@ -42125,7 +43777,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=rNtZNeeXNlw"
+        "videoUrl": "https://www.youtube.com/watch?v=rNtZNeeXNlw",
+        "declutterPrimary": true
       },
       {
         "id": "rNtZNeeXNlw_6",
@@ -42149,7 +43802,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=rNtZNeeXNlw"
+        "videoUrl": "https://www.youtube.com/watch?v=rNtZNeeXNlw",
+        "declutterPrimary": true
       },
       {
         "id": "rNtZNeeXNlw_7",
@@ -42173,7 +43827,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=rNtZNeeXNlw"
+        "videoUrl": "https://www.youtube.com/watch?v=rNtZNeeXNlw",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -42185,7 +43840,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Coastal Cliffs, Étretat & Ocean Waves"
+    "theme": "Coastal Cliffs, Étretat & Ocean Waves",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "wJCFTm619jI",
@@ -42226,7 +43884,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=wJCFTm619jI"
+        "videoUrl": "https://www.youtube.com/watch?v=wJCFTm619jI",
+        "declutterPrimary": true
       },
       {
         "id": "wJCFTm619jI_2",
@@ -42250,7 +43909,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=wJCFTm619jI"
+        "videoUrl": "https://www.youtube.com/watch?v=wJCFTm619jI",
+        "declutterPrimary": true
       },
       {
         "id": "wJCFTm619jI_3",
@@ -42274,7 +43934,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=wJCFTm619jI"
+        "videoUrl": "https://www.youtube.com/watch?v=wJCFTm619jI",
+        "declutterPrimary": true
       },
       {
         "id": "wJCFTm619jI_4",
@@ -42298,7 +43959,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=wJCFTm619jI"
+        "videoUrl": "https://www.youtube.com/watch?v=wJCFTm619jI",
+        "declutterPrimary": true
       },
       {
         "id": "wJCFTm619jI_5",
@@ -42322,7 +43984,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=wJCFTm619jI"
+        "videoUrl": "https://www.youtube.com/watch?v=wJCFTm619jI",
+        "declutterPrimary": true
       },
       {
         "id": "wJCFTm619jI_6",
@@ -42346,7 +44009,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=wJCFTm619jI"
+        "videoUrl": "https://www.youtube.com/watch?v=wJCFTm619jI",
+        "declutterPrimary": true
       },
       {
         "id": "wJCFTm619jI_7",
@@ -42370,7 +44034,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=wJCFTm619jI"
+        "videoUrl": "https://www.youtube.com/watch?v=wJCFTm619jI",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -42382,7 +44047,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "eIBHyqwf_IU",
@@ -42423,7 +44091,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=eIBHyqwf_IU"
+        "videoUrl": "https://www.youtube.com/watch?v=eIBHyqwf_IU",
+        "declutterPrimary": true
       },
       {
         "id": "eIBHyqwf_IU_2",
@@ -42447,7 +44116,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=eIBHyqwf_IU"
+        "videoUrl": "https://www.youtube.com/watch?v=eIBHyqwf_IU",
+        "declutterPrimary": true
       },
       {
         "id": "eIBHyqwf_IU_3",
@@ -42471,7 +44141,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=eIBHyqwf_IU"
+        "videoUrl": "https://www.youtube.com/watch?v=eIBHyqwf_IU",
+        "declutterPrimary": true
       },
       {
         "id": "eIBHyqwf_IU_4",
@@ -42495,7 +44166,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=eIBHyqwf_IU"
+        "videoUrl": "https://www.youtube.com/watch?v=eIBHyqwf_IU",
+        "declutterPrimary": true
       },
       {
         "id": "eIBHyqwf_IU_5",
@@ -42519,7 +44191,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=eIBHyqwf_IU"
+        "videoUrl": "https://www.youtube.com/watch?v=eIBHyqwf_IU",
+        "declutterPrimary": true
       },
       {
         "id": "eIBHyqwf_IU_6",
@@ -42543,7 +44216,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=eIBHyqwf_IU"
+        "videoUrl": "https://www.youtube.com/watch?v=eIBHyqwf_IU",
+        "declutterPrimary": true
       },
       {
         "id": "eIBHyqwf_IU_7",
@@ -42567,7 +44241,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=eIBHyqwf_IU"
+        "videoUrl": "https://www.youtube.com/watch?v=eIBHyqwf_IU",
+        "declutterPrimary": true
       },
       {
         "id": "eIBHyqwf_IU_8",
@@ -42591,7 +44266,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=eIBHyqwf_IU"
+        "videoUrl": "https://www.youtube.com/watch?v=eIBHyqwf_IU",
+        "declutterPrimary": true
       },
       {
         "id": "eIBHyqwf_IU_9",
@@ -42615,7 +44291,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=eIBHyqwf_IU"
+        "videoUrl": "https://www.youtube.com/watch?v=eIBHyqwf_IU",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -42627,7 +44304,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "River Seine & Waterways"
+    "theme": "River Seine & Waterways",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "9LTrHubvJ7c",
@@ -42668,7 +44348,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=9LTrHubvJ7c"
+        "videoUrl": "https://www.youtube.com/watch?v=9LTrHubvJ7c",
+        "declutterPrimary": true
       },
       {
         "id": "9LTrHubvJ7c_2",
@@ -42692,7 +44373,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=9LTrHubvJ7c"
+        "videoUrl": "https://www.youtube.com/watch?v=9LTrHubvJ7c",
+        "declutterPrimary": true
       },
       {
         "id": "9LTrHubvJ7c_3",
@@ -42716,7 +44398,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=9LTrHubvJ7c"
+        "videoUrl": "https://www.youtube.com/watch?v=9LTrHubvJ7c",
+        "declutterPrimary": true
       },
       {
         "id": "9LTrHubvJ7c_4",
@@ -42740,7 +44423,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=9LTrHubvJ7c"
+        "videoUrl": "https://www.youtube.com/watch?v=9LTrHubvJ7c",
+        "declutterPrimary": true
       },
       {
         "id": "9LTrHubvJ7c_5",
@@ -42764,7 +44448,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=9LTrHubvJ7c"
+        "videoUrl": "https://www.youtube.com/watch?v=9LTrHubvJ7c",
+        "declutterPrimary": true
       },
       {
         "id": "9LTrHubvJ7c_6",
@@ -42788,7 +44473,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=9LTrHubvJ7c"
+        "videoUrl": "https://www.youtube.com/watch?v=9LTrHubvJ7c",
+        "declutterPrimary": true
       },
       {
         "id": "9LTrHubvJ7c_7",
@@ -42812,7 +44498,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=9LTrHubvJ7c"
+        "videoUrl": "https://www.youtube.com/watch?v=9LTrHubvJ7c",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -42824,7 +44511,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "O-pFK5rH5LM",
@@ -42865,7 +44555,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=O-pFK5rH5LM"
+        "videoUrl": "https://www.youtube.com/watch?v=O-pFK5rH5LM",
+        "declutterPrimary": true
       },
       {
         "id": "O-pFK5rH5LM_2",
@@ -42889,7 +44580,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=O-pFK5rH5LM"
+        "videoUrl": "https://www.youtube.com/watch?v=O-pFK5rH5LM",
+        "declutterPrimary": true
       },
       {
         "id": "O-pFK5rH5LM_3",
@@ -42913,7 +44605,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=O-pFK5rH5LM"
+        "videoUrl": "https://www.youtube.com/watch?v=O-pFK5rH5LM",
+        "declutterPrimary": true
       },
       {
         "id": "O-pFK5rH5LM_4",
@@ -42937,7 +44630,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=O-pFK5rH5LM"
+        "videoUrl": "https://www.youtube.com/watch?v=O-pFK5rH5LM",
+        "declutterPrimary": true
       },
       {
         "id": "O-pFK5rH5LM_5",
@@ -42961,7 +44655,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=O-pFK5rH5LM"
+        "videoUrl": "https://www.youtube.com/watch?v=O-pFK5rH5LM",
+        "declutterPrimary": true
       },
       {
         "id": "O-pFK5rH5LM_6",
@@ -42985,7 +44680,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=O-pFK5rH5LM"
+        "videoUrl": "https://www.youtube.com/watch?v=O-pFK5rH5LM",
+        "declutterPrimary": true
       },
       {
         "id": "O-pFK5rH5LM_7",
@@ -43009,7 +44705,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=O-pFK5rH5LM"
+        "videoUrl": "https://www.youtube.com/watch?v=O-pFK5rH5LM",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -43021,7 +44718,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "sdquibgE3dU",
@@ -43062,7 +44762,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=sdquibgE3dU"
+        "videoUrl": "https://www.youtube.com/watch?v=sdquibgE3dU",
+        "declutterPrimary": true
       },
       {
         "id": "sdquibgE3dU_2",
@@ -43086,7 +44787,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=sdquibgE3dU"
+        "videoUrl": "https://www.youtube.com/watch?v=sdquibgE3dU",
+        "declutterPrimary": true
       },
       {
         "id": "sdquibgE3dU_3",
@@ -43110,7 +44812,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=sdquibgE3dU"
+        "videoUrl": "https://www.youtube.com/watch?v=sdquibgE3dU",
+        "declutterPrimary": true
       },
       {
         "id": "sdquibgE3dU_4",
@@ -43134,7 +44837,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=sdquibgE3dU"
+        "videoUrl": "https://www.youtube.com/watch?v=sdquibgE3dU",
+        "declutterPrimary": true
       },
       {
         "id": "sdquibgE3dU_5",
@@ -43158,7 +44862,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=sdquibgE3dU"
+        "videoUrl": "https://www.youtube.com/watch?v=sdquibgE3dU",
+        "declutterPrimary": true
       },
       {
         "id": "sdquibgE3dU_6",
@@ -43182,7 +44887,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=sdquibgE3dU"
+        "videoUrl": "https://www.youtube.com/watch?v=sdquibgE3dU",
+        "declutterPrimary": true
       },
       {
         "id": "sdquibgE3dU_7",
@@ -43206,7 +44912,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=sdquibgE3dU"
+        "videoUrl": "https://www.youtube.com/watch?v=sdquibgE3dU",
+        "declutterPrimary": true
       },
       {
         "id": "sdquibgE3dU_8",
@@ -43230,7 +44937,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=sdquibgE3dU"
+        "videoUrl": "https://www.youtube.com/watch?v=sdquibgE3dU",
+        "declutterPrimary": true
       },
       {
         "id": "sdquibgE3dU_9",
@@ -43254,7 +44962,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=sdquibgE3dU"
+        "videoUrl": "https://www.youtube.com/watch?v=sdquibgE3dU",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -43266,7 +44975,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Coastal Cliffs, Étretat & Ocean Waves"
+    "theme": "Coastal Cliffs, Étretat & Ocean Waves",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "h97dWKu2d1k",
@@ -43307,7 +45019,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=h97dWKu2d1k"
+        "videoUrl": "https://www.youtube.com/watch?v=h97dWKu2d1k",
+        "declutterPrimary": true
       },
       {
         "id": "h97dWKu2d1k_2",
@@ -43331,7 +45044,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=h97dWKu2d1k"
+        "videoUrl": "https://www.youtube.com/watch?v=h97dWKu2d1k",
+        "declutterPrimary": true
       },
       {
         "id": "h97dWKu2d1k_3",
@@ -43355,7 +45069,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=h97dWKu2d1k"
+        "videoUrl": "https://www.youtube.com/watch?v=h97dWKu2d1k",
+        "declutterPrimary": true
       },
       {
         "id": "h97dWKu2d1k_4",
@@ -43379,7 +45094,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=h97dWKu2d1k"
+        "videoUrl": "https://www.youtube.com/watch?v=h97dWKu2d1k",
+        "declutterPrimary": true
       },
       {
         "id": "h97dWKu2d1k_5",
@@ -43403,7 +45119,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=h97dWKu2d1k"
+        "videoUrl": "https://www.youtube.com/watch?v=h97dWKu2d1k",
+        "declutterPrimary": true
       },
       {
         "id": "h97dWKu2d1k_6",
@@ -43427,7 +45144,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=h97dWKu2d1k"
+        "videoUrl": "https://www.youtube.com/watch?v=h97dWKu2d1k",
+        "declutterPrimary": true
       },
       {
         "id": "h97dWKu2d1k_7",
@@ -43451,7 +45169,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=h97dWKu2d1k"
+        "videoUrl": "https://www.youtube.com/watch?v=h97dWKu2d1k",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -43463,7 +45182,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Coastal Cliffs, Étretat & Ocean Waves"
+    "theme": "Coastal Cliffs, Étretat & Ocean Waves",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "KKkGsQkfBjw",
@@ -43504,7 +45226,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=KKkGsQkfBjw"
+        "videoUrl": "https://www.youtube.com/watch?v=KKkGsQkfBjw",
+        "declutterPrimary": true
       },
       {
         "id": "KKkGsQkfBjw_2",
@@ -43528,7 +45251,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=KKkGsQkfBjw"
+        "videoUrl": "https://www.youtube.com/watch?v=KKkGsQkfBjw",
+        "declutterPrimary": true
       },
       {
         "id": "KKkGsQkfBjw_3",
@@ -43552,7 +45276,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=KKkGsQkfBjw"
+        "videoUrl": "https://www.youtube.com/watch?v=KKkGsQkfBjw",
+        "declutterPrimary": true
       },
       {
         "id": "KKkGsQkfBjw_4",
@@ -43576,7 +45301,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=KKkGsQkfBjw"
+        "videoUrl": "https://www.youtube.com/watch?v=KKkGsQkfBjw",
+        "declutterPrimary": true
       },
       {
         "id": "KKkGsQkfBjw_5",
@@ -43600,7 +45326,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=KKkGsQkfBjw"
+        "videoUrl": "https://www.youtube.com/watch?v=KKkGsQkfBjw",
+        "declutterPrimary": true
       },
       {
         "id": "KKkGsQkfBjw_6",
@@ -43624,7 +45351,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=KKkGsQkfBjw"
+        "videoUrl": "https://www.youtube.com/watch?v=KKkGsQkfBjw",
+        "declutterPrimary": true
       },
       {
         "id": "KKkGsQkfBjw_7",
@@ -43648,7 +45376,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=KKkGsQkfBjw"
+        "videoUrl": "https://www.youtube.com/watch?v=KKkGsQkfBjw",
+        "declutterPrimary": true
       },
       {
         "id": "KKkGsQkfBjw_8",
@@ -43672,7 +45401,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=KKkGsQkfBjw"
+        "videoUrl": "https://www.youtube.com/watch?v=KKkGsQkfBjw",
+        "declutterPrimary": true
       },
       {
         "id": "KKkGsQkfBjw_9",
@@ -43696,7 +45426,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=KKkGsQkfBjw"
+        "videoUrl": "https://www.youtube.com/watch?v=KKkGsQkfBjw",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -43708,7 +45439,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "Be1abFztDXE",
@@ -43749,7 +45483,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Be1abFztDXE"
+        "videoUrl": "https://www.youtube.com/watch?v=Be1abFztDXE",
+        "declutterPrimary": true
       },
       {
         "id": "Be1abFztDXE_2",
@@ -43773,7 +45508,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Be1abFztDXE"
+        "videoUrl": "https://www.youtube.com/watch?v=Be1abFztDXE",
+        "declutterPrimary": true
       },
       {
         "id": "Be1abFztDXE_3",
@@ -43797,7 +45533,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Be1abFztDXE"
+        "videoUrl": "https://www.youtube.com/watch?v=Be1abFztDXE",
+        "declutterPrimary": true
       },
       {
         "id": "Be1abFztDXE_4",
@@ -43821,7 +45558,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Be1abFztDXE"
+        "videoUrl": "https://www.youtube.com/watch?v=Be1abFztDXE",
+        "declutterPrimary": true
       },
       {
         "id": "Be1abFztDXE_5",
@@ -43845,7 +45583,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Be1abFztDXE"
+        "videoUrl": "https://www.youtube.com/watch?v=Be1abFztDXE",
+        "declutterPrimary": true
       },
       {
         "id": "Be1abFztDXE_6",
@@ -43869,7 +45608,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Be1abFztDXE"
+        "videoUrl": "https://www.youtube.com/watch?v=Be1abFztDXE",
+        "declutterPrimary": true
       },
       {
         "id": "Be1abFztDXE_7",
@@ -43893,7 +45633,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Be1abFztDXE"
+        "videoUrl": "https://www.youtube.com/watch?v=Be1abFztDXE",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -43905,7 +45646,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Water Lilies & Garden Sanctuaries"
+    "theme": "Water Lilies & Garden Sanctuaries",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "TlT_YeXzw5E",
@@ -43946,7 +45690,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=TlT_YeXzw5E"
+        "videoUrl": "https://www.youtube.com/watch?v=TlT_YeXzw5E",
+        "declutterPrimary": true
       },
       {
         "id": "TlT_YeXzw5E_2",
@@ -43970,7 +45715,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=TlT_YeXzw5E"
+        "videoUrl": "https://www.youtube.com/watch?v=TlT_YeXzw5E",
+        "declutterPrimary": true
       },
       {
         "id": "TlT_YeXzw5E_3",
@@ -43994,7 +45740,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=TlT_YeXzw5E"
+        "videoUrl": "https://www.youtube.com/watch?v=TlT_YeXzw5E",
+        "declutterPrimary": true
       },
       {
         "id": "TlT_YeXzw5E_4",
@@ -44018,7 +45765,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=TlT_YeXzw5E"
+        "videoUrl": "https://www.youtube.com/watch?v=TlT_YeXzw5E",
+        "declutterPrimary": true
       },
       {
         "id": "TlT_YeXzw5E_5",
@@ -44042,7 +45790,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=TlT_YeXzw5E"
+        "videoUrl": "https://www.youtube.com/watch?v=TlT_YeXzw5E",
+        "declutterPrimary": true
       },
       {
         "id": "TlT_YeXzw5E_6",
@@ -44066,7 +45815,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=TlT_YeXzw5E"
+        "videoUrl": "https://www.youtube.com/watch?v=TlT_YeXzw5E",
+        "declutterPrimary": true
       },
       {
         "id": "TlT_YeXzw5E_7",
@@ -44090,7 +45840,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=TlT_YeXzw5E"
+        "videoUrl": "https://www.youtube.com/watch?v=TlT_YeXzw5E",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -44102,7 +45853,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "KfeNumv1QtY",
@@ -44143,7 +45897,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=KfeNumv1QtY"
+        "videoUrl": "https://www.youtube.com/watch?v=KfeNumv1QtY",
+        "declutterPrimary": true
       },
       {
         "id": "KfeNumv1QtY_2",
@@ -44167,7 +45922,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=KfeNumv1QtY"
+        "videoUrl": "https://www.youtube.com/watch?v=KfeNumv1QtY",
+        "declutterPrimary": true
       },
       {
         "id": "KfeNumv1QtY_3",
@@ -44191,7 +45947,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=KfeNumv1QtY"
+        "videoUrl": "https://www.youtube.com/watch?v=KfeNumv1QtY",
+        "declutterPrimary": true
       },
       {
         "id": "KfeNumv1QtY_4",
@@ -44215,7 +45972,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=KfeNumv1QtY"
+        "videoUrl": "https://www.youtube.com/watch?v=KfeNumv1QtY",
+        "declutterPrimary": true
       },
       {
         "id": "KfeNumv1QtY_5",
@@ -44239,7 +45997,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=KfeNumv1QtY"
+        "videoUrl": "https://www.youtube.com/watch?v=KfeNumv1QtY",
+        "declutterPrimary": true
       },
       {
         "id": "KfeNumv1QtY_6",
@@ -44263,7 +46022,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=KfeNumv1QtY"
+        "videoUrl": "https://www.youtube.com/watch?v=KfeNumv1QtY",
+        "declutterPrimary": true
       },
       {
         "id": "KfeNumv1QtY_7",
@@ -44287,7 +46047,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=KfeNumv1QtY"
+        "videoUrl": "https://www.youtube.com/watch?v=KfeNumv1QtY",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -44299,7 +46060,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "Oj-PJ16K-jE",
@@ -44340,7 +46104,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Oj-PJ16K-jE"
+        "videoUrl": "https://www.youtube.com/watch?v=Oj-PJ16K-jE",
+        "declutterPrimary": true
       },
       {
         "id": "Oj-PJ16K-jE_2",
@@ -44364,7 +46129,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Oj-PJ16K-jE"
+        "videoUrl": "https://www.youtube.com/watch?v=Oj-PJ16K-jE",
+        "declutterPrimary": true
       },
       {
         "id": "Oj-PJ16K-jE_3",
@@ -44388,7 +46154,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Oj-PJ16K-jE"
+        "videoUrl": "https://www.youtube.com/watch?v=Oj-PJ16K-jE",
+        "declutterPrimary": true
       },
       {
         "id": "Oj-PJ16K-jE_4",
@@ -44412,7 +46179,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Oj-PJ16K-jE"
+        "videoUrl": "https://www.youtube.com/watch?v=Oj-PJ16K-jE",
+        "declutterPrimary": true
       },
       {
         "id": "Oj-PJ16K-jE_5",
@@ -44436,7 +46204,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Oj-PJ16K-jE"
+        "videoUrl": "https://www.youtube.com/watch?v=Oj-PJ16K-jE",
+        "declutterPrimary": true
       },
       {
         "id": "Oj-PJ16K-jE_6",
@@ -44460,7 +46229,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Oj-PJ16K-jE"
+        "videoUrl": "https://www.youtube.com/watch?v=Oj-PJ16K-jE",
+        "declutterPrimary": true
       },
       {
         "id": "Oj-PJ16K-jE_7",
@@ -44484,7 +46254,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Oj-PJ16K-jE"
+        "videoUrl": "https://www.youtube.com/watch?v=Oj-PJ16K-jE",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -44496,7 +46267,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Water Lilies & Garden Sanctuaries"
+    "theme": "Water Lilies & Garden Sanctuaries",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "AVs62d5zljQ",
@@ -44537,7 +46311,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=AVs62d5zljQ"
+        "videoUrl": "https://www.youtube.com/watch?v=AVs62d5zljQ",
+        "declutterPrimary": true
       },
       {
         "id": "AVs62d5zljQ_2",
@@ -44561,7 +46336,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=AVs62d5zljQ"
+        "videoUrl": "https://www.youtube.com/watch?v=AVs62d5zljQ",
+        "declutterPrimary": true
       },
       {
         "id": "AVs62d5zljQ_3",
@@ -44585,7 +46361,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=AVs62d5zljQ"
+        "videoUrl": "https://www.youtube.com/watch?v=AVs62d5zljQ",
+        "declutterPrimary": true
       },
       {
         "id": "AVs62d5zljQ_4",
@@ -44609,7 +46386,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=AVs62d5zljQ"
+        "videoUrl": "https://www.youtube.com/watch?v=AVs62d5zljQ",
+        "declutterPrimary": true
       },
       {
         "id": "AVs62d5zljQ_5",
@@ -44633,7 +46411,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=AVs62d5zljQ"
+        "videoUrl": "https://www.youtube.com/watch?v=AVs62d5zljQ",
+        "declutterPrimary": true
       },
       {
         "id": "AVs62d5zljQ_6",
@@ -44657,7 +46436,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=AVs62d5zljQ"
+        "videoUrl": "https://www.youtube.com/watch?v=AVs62d5zljQ",
+        "declutterPrimary": true
       },
       {
         "id": "AVs62d5zljQ_7",
@@ -44681,7 +46461,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=AVs62d5zljQ"
+        "videoUrl": "https://www.youtube.com/watch?v=AVs62d5zljQ",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -44693,7 +46474,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "4Pf-Azm4TwA",
@@ -44734,7 +46518,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=4Pf-Azm4TwA"
+        "videoUrl": "https://www.youtube.com/watch?v=4Pf-Azm4TwA",
+        "declutterPrimary": true
       },
       {
         "id": "4Pf-Azm4TwA_2",
@@ -44758,7 +46543,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=4Pf-Azm4TwA"
+        "videoUrl": "https://www.youtube.com/watch?v=4Pf-Azm4TwA",
+        "declutterPrimary": true
       },
       {
         "id": "4Pf-Azm4TwA_3",
@@ -44782,7 +46568,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=4Pf-Azm4TwA"
+        "videoUrl": "https://www.youtube.com/watch?v=4Pf-Azm4TwA",
+        "declutterPrimary": true
       },
       {
         "id": "4Pf-Azm4TwA_4",
@@ -44806,7 +46593,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=4Pf-Azm4TwA"
+        "videoUrl": "https://www.youtube.com/watch?v=4Pf-Azm4TwA",
+        "declutterPrimary": true
       },
       {
         "id": "4Pf-Azm4TwA_5",
@@ -44830,7 +46618,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=4Pf-Azm4TwA"
+        "videoUrl": "https://www.youtube.com/watch?v=4Pf-Azm4TwA",
+        "declutterPrimary": true
       },
       {
         "id": "4Pf-Azm4TwA_6",
@@ -44854,7 +46643,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=4Pf-Azm4TwA"
+        "videoUrl": "https://www.youtube.com/watch?v=4Pf-Azm4TwA",
+        "declutterPrimary": true
       },
       {
         "id": "4Pf-Azm4TwA_7",
@@ -44878,7 +46668,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=4Pf-Azm4TwA"
+        "videoUrl": "https://www.youtube.com/watch?v=4Pf-Azm4TwA",
+        "declutterPrimary": true
       },
       {
         "id": "4Pf-Azm4TwA_8",
@@ -44902,7 +46693,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=4Pf-Azm4TwA"
+        "videoUrl": "https://www.youtube.com/watch?v=4Pf-Azm4TwA",
+        "declutterPrimary": true
       },
       {
         "id": "4Pf-Azm4TwA_9",
@@ -44926,7 +46718,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=4Pf-Azm4TwA"
+        "videoUrl": "https://www.youtube.com/watch?v=4Pf-Azm4TwA",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -44938,7 +46731,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Train Nostalgia & Gare Saint-Lazare"
+    "theme": "Train Nostalgia & Gare Saint-Lazare",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "3L7EzPjFkoc",
@@ -44979,7 +46775,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=3L7EzPjFkoc"
+        "videoUrl": "https://www.youtube.com/watch?v=3L7EzPjFkoc",
+        "declutterPrimary": true
       },
       {
         "id": "3L7EzPjFkoc_2",
@@ -45003,7 +46800,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=3L7EzPjFkoc"
+        "videoUrl": "https://www.youtube.com/watch?v=3L7EzPjFkoc",
+        "declutterPrimary": true
       },
       {
         "id": "3L7EzPjFkoc_3",
@@ -45027,7 +46825,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=3L7EzPjFkoc"
+        "videoUrl": "https://www.youtube.com/watch?v=3L7EzPjFkoc",
+        "declutterPrimary": true
       },
       {
         "id": "3L7EzPjFkoc_4",
@@ -45051,7 +46850,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=3L7EzPjFkoc"
+        "videoUrl": "https://www.youtube.com/watch?v=3L7EzPjFkoc",
+        "declutterPrimary": true
       },
       {
         "id": "3L7EzPjFkoc_5",
@@ -45075,7 +46875,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=3L7EzPjFkoc"
+        "videoUrl": "https://www.youtube.com/watch?v=3L7EzPjFkoc",
+        "declutterPrimary": true
       },
       {
         "id": "3L7EzPjFkoc_6",
@@ -45099,7 +46900,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=3L7EzPjFkoc"
+        "videoUrl": "https://www.youtube.com/watch?v=3L7EzPjFkoc",
+        "declutterPrimary": true
       },
       {
         "id": "3L7EzPjFkoc_7",
@@ -45123,7 +46925,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=3L7EzPjFkoc"
+        "videoUrl": "https://www.youtube.com/watch?v=3L7EzPjFkoc",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -45135,7 +46938,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "niIh8h8hAWo",
@@ -45176,7 +46982,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=niIh8h8hAWo"
+        "videoUrl": "https://www.youtube.com/watch?v=niIh8h8hAWo",
+        "declutterPrimary": true
       },
       {
         "id": "niIh8h8hAWo_2",
@@ -45200,7 +47007,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=niIh8h8hAWo"
+        "videoUrl": "https://www.youtube.com/watch?v=niIh8h8hAWo",
+        "declutterPrimary": true
       },
       {
         "id": "niIh8h8hAWo_3",
@@ -45224,7 +47032,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=niIh8h8hAWo"
+        "videoUrl": "https://www.youtube.com/watch?v=niIh8h8hAWo",
+        "declutterPrimary": true
       },
       {
         "id": "niIh8h8hAWo_4",
@@ -45248,7 +47057,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=niIh8h8hAWo"
+        "videoUrl": "https://www.youtube.com/watch?v=niIh8h8hAWo",
+        "declutterPrimary": true
       },
       {
         "id": "niIh8h8hAWo_5",
@@ -45272,7 +47082,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=niIh8h8hAWo"
+        "videoUrl": "https://www.youtube.com/watch?v=niIh8h8hAWo",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 5,
@@ -45284,7 +47095,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Vincent van Gogh",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "xVg1gJFl-Lw",
@@ -45325,7 +47139,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=xVg1gJFl-Lw"
+        "videoUrl": "https://www.youtube.com/watch?v=xVg1gJFl-Lw",
+        "declutterPrimary": true
       },
       {
         "id": "xVg1gJFl-Lw_2",
@@ -45349,7 +47164,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=xVg1gJFl-Lw"
+        "videoUrl": "https://www.youtube.com/watch?v=xVg1gJFl-Lw",
+        "declutterPrimary": true
       },
       {
         "id": "xVg1gJFl-Lw_3",
@@ -45373,7 +47189,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=xVg1gJFl-Lw"
+        "videoUrl": "https://www.youtube.com/watch?v=xVg1gJFl-Lw",
+        "declutterPrimary": true
       },
       {
         "id": "xVg1gJFl-Lw_4",
@@ -45397,7 +47214,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=xVg1gJFl-Lw"
+        "videoUrl": "https://www.youtube.com/watch?v=xVg1gJFl-Lw",
+        "declutterPrimary": true
       },
       {
         "id": "xVg1gJFl-Lw_5",
@@ -45421,7 +47239,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=xVg1gJFl-Lw"
+        "videoUrl": "https://www.youtube.com/watch?v=xVg1gJFl-Lw",
+        "declutterPrimary": true
       },
       {
         "id": "xVg1gJFl-Lw_6",
@@ -45445,7 +47264,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=xVg1gJFl-Lw"
+        "videoUrl": "https://www.youtube.com/watch?v=xVg1gJFl-Lw",
+        "declutterPrimary": true
       },
       {
         "id": "xVg1gJFl-Lw_7",
@@ -45469,7 +47289,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=xVg1gJFl-Lw"
+        "videoUrl": "https://www.youtube.com/watch?v=xVg1gJFl-Lw",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -45481,7 +47302,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "wDbrDQO6c98",
@@ -45522,7 +47346,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=wDbrDQO6c98"
+        "videoUrl": "https://www.youtube.com/watch?v=wDbrDQO6c98",
+        "declutterPrimary": true
       },
       {
         "id": "wDbrDQO6c98_2",
@@ -45546,7 +47371,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=wDbrDQO6c98"
+        "videoUrl": "https://www.youtube.com/watch?v=wDbrDQO6c98",
+        "declutterPrimary": true
       },
       {
         "id": "wDbrDQO6c98_3",
@@ -45570,7 +47396,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=wDbrDQO6c98"
+        "videoUrl": "https://www.youtube.com/watch?v=wDbrDQO6c98",
+        "declutterPrimary": true
       },
       {
         "id": "wDbrDQO6c98_4",
@@ -45594,7 +47421,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=wDbrDQO6c98"
+        "videoUrl": "https://www.youtube.com/watch?v=wDbrDQO6c98",
+        "declutterPrimary": true
       },
       {
         "id": "wDbrDQO6c98_5",
@@ -45618,7 +47446,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=wDbrDQO6c98"
+        "videoUrl": "https://www.youtube.com/watch?v=wDbrDQO6c98",
+        "declutterPrimary": true
       },
       {
         "id": "wDbrDQO6c98_6",
@@ -45642,7 +47471,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=wDbrDQO6c98"
+        "videoUrl": "https://www.youtube.com/watch?v=wDbrDQO6c98",
+        "declutterPrimary": true
       },
       {
         "id": "wDbrDQO6c98_7",
@@ -45666,7 +47496,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=wDbrDQO6c98"
+        "videoUrl": "https://www.youtube.com/watch?v=wDbrDQO6c98",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -45678,7 +47509,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Parisian Life & Belle Époque"
+    "theme": "Parisian Life & Belle Époque",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "JxN6RTXENnM",
@@ -45719,7 +47553,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=JxN6RTXENnM"
+        "videoUrl": "https://www.youtube.com/watch?v=JxN6RTXENnM",
+        "declutterPrimary": true
       },
       {
         "id": "JxN6RTXENnM_2",
@@ -45743,7 +47578,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=JxN6RTXENnM"
+        "videoUrl": "https://www.youtube.com/watch?v=JxN6RTXENnM",
+        "declutterPrimary": true
       },
       {
         "id": "JxN6RTXENnM_3",
@@ -45767,7 +47603,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=JxN6RTXENnM"
+        "videoUrl": "https://www.youtube.com/watch?v=JxN6RTXENnM",
+        "declutterPrimary": true
       },
       {
         "id": "JxN6RTXENnM_4",
@@ -45791,7 +47628,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=JxN6RTXENnM"
+        "videoUrl": "https://www.youtube.com/watch?v=JxN6RTXENnM",
+        "declutterPrimary": true
       },
       {
         "id": "JxN6RTXENnM_5",
@@ -45815,7 +47653,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=JxN6RTXENnM"
+        "videoUrl": "https://www.youtube.com/watch?v=JxN6RTXENnM",
+        "declutterPrimary": true
       },
       {
         "id": "JxN6RTXENnM_6",
@@ -45839,7 +47678,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=JxN6RTXENnM"
+        "videoUrl": "https://www.youtube.com/watch?v=JxN6RTXENnM",
+        "declutterPrimary": true
       },
       {
         "id": "JxN6RTXENnM_7",
@@ -45863,7 +47703,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=JxN6RTXENnM"
+        "videoUrl": "https://www.youtube.com/watch?v=JxN6RTXENnM",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -45875,7 +47716,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Coastal Cliffs, Étretat & Ocean Waves"
+    "theme": "Coastal Cliffs, Étretat & Ocean Waves",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "McwYz2CHc_4",
@@ -45916,7 +47760,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=McwYz2CHc_4"
+        "videoUrl": "https://www.youtube.com/watch?v=McwYz2CHc_4",
+        "declutterPrimary": true
       },
       {
         "id": "McwYz2CHc_4_2",
@@ -45940,7 +47785,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=McwYz2CHc_4"
+        "videoUrl": "https://www.youtube.com/watch?v=McwYz2CHc_4",
+        "declutterPrimary": true
       },
       {
         "id": "McwYz2CHc_4_3",
@@ -45964,7 +47810,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=McwYz2CHc_4"
+        "videoUrl": "https://www.youtube.com/watch?v=McwYz2CHc_4",
+        "declutterPrimary": true
       },
       {
         "id": "McwYz2CHc_4_4",
@@ -45988,7 +47835,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=McwYz2CHc_4"
+        "videoUrl": "https://www.youtube.com/watch?v=McwYz2CHc_4",
+        "declutterPrimary": true
       },
       {
         "id": "McwYz2CHc_4_5",
@@ -46012,7 +47860,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=McwYz2CHc_4"
+        "videoUrl": "https://www.youtube.com/watch?v=McwYz2CHc_4",
+        "declutterPrimary": true
       },
       {
         "id": "McwYz2CHc_4_6",
@@ -46036,7 +47885,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=McwYz2CHc_4"
+        "videoUrl": "https://www.youtube.com/watch?v=McwYz2CHc_4",
+        "declutterPrimary": true
       },
       {
         "id": "McwYz2CHc_4_7",
@@ -46060,7 +47910,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=McwYz2CHc_4"
+        "videoUrl": "https://www.youtube.com/watch?v=McwYz2CHc_4",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -46072,7 +47923,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "tQw4aLeY5Oo",
@@ -46113,7 +47967,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=tQw4aLeY5Oo"
+        "videoUrl": "https://www.youtube.com/watch?v=tQw4aLeY5Oo",
+        "declutterPrimary": true
       },
       {
         "id": "tQw4aLeY5Oo_2",
@@ -46137,7 +47992,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=tQw4aLeY5Oo"
+        "videoUrl": "https://www.youtube.com/watch?v=tQw4aLeY5Oo",
+        "declutterPrimary": true
       },
       {
         "id": "tQw4aLeY5Oo_3",
@@ -46161,7 +48017,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=tQw4aLeY5Oo"
+        "videoUrl": "https://www.youtube.com/watch?v=tQw4aLeY5Oo",
+        "declutterPrimary": true
       },
       {
         "id": "tQw4aLeY5Oo_4",
@@ -46185,7 +48042,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=tQw4aLeY5Oo"
+        "videoUrl": "https://www.youtube.com/watch?v=tQw4aLeY5Oo",
+        "declutterPrimary": true
       },
       {
         "id": "tQw4aLeY5Oo_5",
@@ -46209,7 +48067,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=tQw4aLeY5Oo"
+        "videoUrl": "https://www.youtube.com/watch?v=tQw4aLeY5Oo",
+        "declutterPrimary": true
       },
       {
         "id": "tQw4aLeY5Oo_6",
@@ -46233,7 +48092,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=tQw4aLeY5Oo"
+        "videoUrl": "https://www.youtube.com/watch?v=tQw4aLeY5Oo",
+        "declutterPrimary": true
       },
       {
         "id": "tQw4aLeY5Oo_7",
@@ -46257,7 +48117,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=tQw4aLeY5Oo"
+        "videoUrl": "https://www.youtube.com/watch?v=tQw4aLeY5Oo",
+        "declutterPrimary": true
       },
       {
         "id": "tQw4aLeY5Oo_8",
@@ -46281,7 +48142,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=tQw4aLeY5Oo"
+        "videoUrl": "https://www.youtube.com/watch?v=tQw4aLeY5Oo",
+        "declutterPrimary": true
       },
       {
         "id": "tQw4aLeY5Oo_9",
@@ -46305,7 +48167,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=tQw4aLeY5Oo"
+        "videoUrl": "https://www.youtube.com/watch?v=tQw4aLeY5Oo",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -46317,7 +48180,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "UCuqpVlRHtE",
@@ -46358,7 +48224,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=UCuqpVlRHtE"
+        "videoUrl": "https://www.youtube.com/watch?v=UCuqpVlRHtE",
+        "declutterPrimary": true
       },
       {
         "id": "UCuqpVlRHtE_2",
@@ -46382,7 +48249,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=UCuqpVlRHtE"
+        "videoUrl": "https://www.youtube.com/watch?v=UCuqpVlRHtE",
+        "declutterPrimary": true
       },
       {
         "id": "UCuqpVlRHtE_3",
@@ -46406,7 +48274,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=UCuqpVlRHtE"
+        "videoUrl": "https://www.youtube.com/watch?v=UCuqpVlRHtE",
+        "declutterPrimary": true
       },
       {
         "id": "UCuqpVlRHtE_4",
@@ -46430,7 +48299,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=UCuqpVlRHtE"
+        "videoUrl": "https://www.youtube.com/watch?v=UCuqpVlRHtE",
+        "declutterPrimary": true
       },
       {
         "id": "UCuqpVlRHtE_5",
@@ -46454,7 +48324,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=UCuqpVlRHtE"
+        "videoUrl": "https://www.youtube.com/watch?v=UCuqpVlRHtE",
+        "declutterPrimary": true
       },
       {
         "id": "UCuqpVlRHtE_6",
@@ -46478,7 +48349,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=UCuqpVlRHtE"
+        "videoUrl": "https://www.youtube.com/watch?v=UCuqpVlRHtE",
+        "declutterPrimary": true
       },
       {
         "id": "UCuqpVlRHtE_7",
@@ -46502,7 +48374,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=UCuqpVlRHtE"
+        "videoUrl": "https://www.youtube.com/watch?v=UCuqpVlRHtE",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -46514,7 +48387,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "dkDSwCTBv3I",
@@ -46555,7 +48431,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=dkDSwCTBv3I"
+        "videoUrl": "https://www.youtube.com/watch?v=dkDSwCTBv3I",
+        "declutterPrimary": true
       },
       {
         "id": "dkDSwCTBv3I_2",
@@ -46579,7 +48456,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=dkDSwCTBv3I"
+        "videoUrl": "https://www.youtube.com/watch?v=dkDSwCTBv3I",
+        "declutterPrimary": true
       },
       {
         "id": "dkDSwCTBv3I_3",
@@ -46603,7 +48481,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=dkDSwCTBv3I"
+        "videoUrl": "https://www.youtube.com/watch?v=dkDSwCTBv3I",
+        "declutterPrimary": true
       },
       {
         "id": "dkDSwCTBv3I_4",
@@ -46627,7 +48506,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=dkDSwCTBv3I"
+        "videoUrl": "https://www.youtube.com/watch?v=dkDSwCTBv3I",
+        "declutterPrimary": true
       },
       {
         "id": "dkDSwCTBv3I_5",
@@ -46651,7 +48531,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=dkDSwCTBv3I"
+        "videoUrl": "https://www.youtube.com/watch?v=dkDSwCTBv3I",
+        "declutterPrimary": true
       },
       {
         "id": "dkDSwCTBv3I_6",
@@ -46675,7 +48556,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=dkDSwCTBv3I"
+        "videoUrl": "https://www.youtube.com/watch?v=dkDSwCTBv3I",
+        "declutterPrimary": true
       },
       {
         "id": "dkDSwCTBv3I_7",
@@ -46699,7 +48581,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=dkDSwCTBv3I"
+        "videoUrl": "https://www.youtube.com/watch?v=dkDSwCTBv3I",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -46711,7 +48594,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Coastal Cliffs, Étretat & Ocean Waves"
+    "theme": "Coastal Cliffs, Étretat & Ocean Waves",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "K7K6fT5URv0",
@@ -46752,7 +48638,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=K7K6fT5URv0"
+        "videoUrl": "https://www.youtube.com/watch?v=K7K6fT5URv0",
+        "declutterPrimary": true
       },
       {
         "id": "K7K6fT5URv0_2",
@@ -46776,7 +48663,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=K7K6fT5URv0"
+        "videoUrl": "https://www.youtube.com/watch?v=K7K6fT5URv0",
+        "declutterPrimary": true
       },
       {
         "id": "K7K6fT5URv0_3",
@@ -46800,7 +48688,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=K7K6fT5URv0"
+        "videoUrl": "https://www.youtube.com/watch?v=K7K6fT5URv0",
+        "declutterPrimary": true
       },
       {
         "id": "K7K6fT5URv0_4",
@@ -46824,7 +48713,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=K7K6fT5URv0"
+        "videoUrl": "https://www.youtube.com/watch?v=K7K6fT5URv0",
+        "declutterPrimary": true
       },
       {
         "id": "K7K6fT5URv0_5",
@@ -46848,7 +48738,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=K7K6fT5URv0"
+        "videoUrl": "https://www.youtube.com/watch?v=K7K6fT5URv0",
+        "declutterPrimary": true
       },
       {
         "id": "K7K6fT5URv0_6",
@@ -46872,7 +48763,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=K7K6fT5URv0"
+        "videoUrl": "https://www.youtube.com/watch?v=K7K6fT5URv0",
+        "declutterPrimary": true
       },
       {
         "id": "K7K6fT5URv0_7",
@@ -46896,7 +48788,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=K7K6fT5URv0"
+        "videoUrl": "https://www.youtube.com/watch?v=K7K6fT5URv0",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -46908,7 +48801,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Coastal Cliffs, Étretat & Ocean Waves"
+    "theme": "Coastal Cliffs, Étretat & Ocean Waves",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "SwW9Y_ZLlDM",
@@ -46949,7 +48845,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=SwW9Y_ZLlDM"
+        "videoUrl": "https://www.youtube.com/watch?v=SwW9Y_ZLlDM",
+        "declutterPrimary": true
       },
       {
         "id": "SwW9Y_ZLlDM_2",
@@ -46973,7 +48870,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=SwW9Y_ZLlDM"
+        "videoUrl": "https://www.youtube.com/watch?v=SwW9Y_ZLlDM",
+        "declutterPrimary": true
       },
       {
         "id": "SwW9Y_ZLlDM_3",
@@ -46997,7 +48895,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=SwW9Y_ZLlDM"
+        "videoUrl": "https://www.youtube.com/watch?v=SwW9Y_ZLlDM",
+        "declutterPrimary": true
       },
       {
         "id": "SwW9Y_ZLlDM_4",
@@ -47021,7 +48920,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=SwW9Y_ZLlDM"
+        "videoUrl": "https://www.youtube.com/watch?v=SwW9Y_ZLlDM",
+        "declutterPrimary": true
       },
       {
         "id": "SwW9Y_ZLlDM_5",
@@ -47045,7 +48945,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=SwW9Y_ZLlDM"
+        "videoUrl": "https://www.youtube.com/watch?v=SwW9Y_ZLlDM",
+        "declutterPrimary": true
       },
       {
         "id": "SwW9Y_ZLlDM_6",
@@ -47069,7 +48970,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=SwW9Y_ZLlDM"
+        "videoUrl": "https://www.youtube.com/watch?v=SwW9Y_ZLlDM",
+        "declutterPrimary": true
       },
       {
         "id": "SwW9Y_ZLlDM_7",
@@ -47093,7 +48995,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=SwW9Y_ZLlDM"
+        "videoUrl": "https://www.youtube.com/watch?v=SwW9Y_ZLlDM",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -47105,7 +49008,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "dIn45M5nraw",
@@ -47146,7 +49052,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=dIn45M5nraw"
+        "videoUrl": "https://www.youtube.com/watch?v=dIn45M5nraw",
+        "declutterPrimary": true
       },
       {
         "id": "dIn45M5nraw_2",
@@ -47170,7 +49077,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=dIn45M5nraw"
+        "videoUrl": "https://www.youtube.com/watch?v=dIn45M5nraw",
+        "declutterPrimary": true
       },
       {
         "id": "dIn45M5nraw_3",
@@ -47194,7 +49102,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=dIn45M5nraw"
+        "videoUrl": "https://www.youtube.com/watch?v=dIn45M5nraw",
+        "declutterPrimary": true
       },
       {
         "id": "dIn45M5nraw_4",
@@ -47218,7 +49127,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=dIn45M5nraw"
+        "videoUrl": "https://www.youtube.com/watch?v=dIn45M5nraw",
+        "declutterPrimary": true
       },
       {
         "id": "dIn45M5nraw_5",
@@ -47242,7 +49152,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=dIn45M5nraw"
+        "videoUrl": "https://www.youtube.com/watch?v=dIn45M5nraw",
+        "declutterPrimary": true
       },
       {
         "id": "dIn45M5nraw_6",
@@ -47266,7 +49177,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=dIn45M5nraw"
+        "videoUrl": "https://www.youtube.com/watch?v=dIn45M5nraw",
+        "declutterPrimary": true
       },
       {
         "id": "dIn45M5nraw_7",
@@ -47290,7 +49202,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=dIn45M5nraw"
+        "videoUrl": "https://www.youtube.com/watch?v=dIn45M5nraw",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -47302,7 +49215,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "n6ctSn-KhPE",
@@ -47343,7 +49259,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=n6ctSn-KhPE"
+        "videoUrl": "https://www.youtube.com/watch?v=n6ctSn-KhPE",
+        "declutterPrimary": true
       },
       {
         "id": "n6ctSn-KhPE_2",
@@ -47367,7 +49284,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=n6ctSn-KhPE"
+        "videoUrl": "https://www.youtube.com/watch?v=n6ctSn-KhPE",
+        "declutterPrimary": true
       },
       {
         "id": "n6ctSn-KhPE_3",
@@ -47391,7 +49309,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=n6ctSn-KhPE"
+        "videoUrl": "https://www.youtube.com/watch?v=n6ctSn-KhPE",
+        "declutterPrimary": true
       },
       {
         "id": "n6ctSn-KhPE_4",
@@ -47415,7 +49334,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=n6ctSn-KhPE"
+        "videoUrl": "https://www.youtube.com/watch?v=n6ctSn-KhPE",
+        "declutterPrimary": true
       },
       {
         "id": "n6ctSn-KhPE_5",
@@ -47439,7 +49359,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=n6ctSn-KhPE"
+        "videoUrl": "https://www.youtube.com/watch?v=n6ctSn-KhPE",
+        "declutterPrimary": true
       },
       {
         "id": "n6ctSn-KhPE_6",
@@ -47463,7 +49384,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=n6ctSn-KhPE"
+        "videoUrl": "https://www.youtube.com/watch?v=n6ctSn-KhPE",
+        "declutterPrimary": true
       },
       {
         "id": "n6ctSn-KhPE_7",
@@ -47487,7 +49409,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=n6ctSn-KhPE"
+        "videoUrl": "https://www.youtube.com/watch?v=n6ctSn-KhPE",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -47499,7 +49422,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "River Seine & Waterways"
+    "theme": "River Seine & Waterways",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "OBrDPcnXEC4",
@@ -47540,7 +49466,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=OBrDPcnXEC4"
+        "videoUrl": "https://www.youtube.com/watch?v=OBrDPcnXEC4",
+        "declutterPrimary": true
       },
       {
         "id": "OBrDPcnXEC4_2",
@@ -47564,7 +49491,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=OBrDPcnXEC4"
+        "videoUrl": "https://www.youtube.com/watch?v=OBrDPcnXEC4",
+        "declutterPrimary": true
       },
       {
         "id": "OBrDPcnXEC4_3",
@@ -47588,7 +49516,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=OBrDPcnXEC4"
+        "videoUrl": "https://www.youtube.com/watch?v=OBrDPcnXEC4",
+        "declutterPrimary": true
       },
       {
         "id": "OBrDPcnXEC4_4",
@@ -47612,7 +49541,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=OBrDPcnXEC4"
+        "videoUrl": "https://www.youtube.com/watch?v=OBrDPcnXEC4",
+        "declutterPrimary": true
       },
       {
         "id": "OBrDPcnXEC4_5",
@@ -47636,7 +49566,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=OBrDPcnXEC4"
+        "videoUrl": "https://www.youtube.com/watch?v=OBrDPcnXEC4",
+        "declutterPrimary": true
       },
       {
         "id": "OBrDPcnXEC4_6",
@@ -47660,7 +49591,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=OBrDPcnXEC4"
+        "videoUrl": "https://www.youtube.com/watch?v=OBrDPcnXEC4",
+        "declutterPrimary": true
       },
       {
         "id": "OBrDPcnXEC4_7",
@@ -47684,7 +49616,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=OBrDPcnXEC4"
+        "videoUrl": "https://www.youtube.com/watch?v=OBrDPcnXEC4",
+        "declutterPrimary": true
       },
       {
         "id": "OBrDPcnXEC4_8",
@@ -47708,7 +49641,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=OBrDPcnXEC4"
+        "videoUrl": "https://www.youtube.com/watch?v=OBrDPcnXEC4",
+        "declutterPrimary": true
       },
       {
         "id": "OBrDPcnXEC4_9",
@@ -47732,7 +49666,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=OBrDPcnXEC4"
+        "videoUrl": "https://www.youtube.com/watch?v=OBrDPcnXEC4",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -47744,7 +49679,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "O2iB1rI-rYM",
@@ -47785,7 +49723,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=O2iB1rI-rYM"
+        "videoUrl": "https://www.youtube.com/watch?v=O2iB1rI-rYM",
+        "declutterPrimary": true
       },
       {
         "id": "O2iB1rI-rYM_2",
@@ -47809,7 +49748,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=O2iB1rI-rYM"
+        "videoUrl": "https://www.youtube.com/watch?v=O2iB1rI-rYM",
+        "declutterPrimary": true
       },
       {
         "id": "O2iB1rI-rYM_3",
@@ -47833,7 +49773,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=O2iB1rI-rYM"
+        "videoUrl": "https://www.youtube.com/watch?v=O2iB1rI-rYM",
+        "declutterPrimary": true
       },
       {
         "id": "O2iB1rI-rYM_4",
@@ -47857,7 +49798,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=O2iB1rI-rYM"
+        "videoUrl": "https://www.youtube.com/watch?v=O2iB1rI-rYM",
+        "declutterPrimary": true
       },
       {
         "id": "O2iB1rI-rYM_5",
@@ -47881,7 +49823,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=O2iB1rI-rYM"
+        "videoUrl": "https://www.youtube.com/watch?v=O2iB1rI-rYM",
+        "declutterPrimary": true
       },
       {
         "id": "O2iB1rI-rYM_6",
@@ -47905,7 +49848,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=O2iB1rI-rYM"
+        "videoUrl": "https://www.youtube.com/watch?v=O2iB1rI-rYM",
+        "declutterPrimary": true
       },
       {
         "id": "O2iB1rI-rYM_7",
@@ -47929,7 +49873,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=O2iB1rI-rYM"
+        "videoUrl": "https://www.youtube.com/watch?v=O2iB1rI-rYM",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -47941,7 +49886,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "River Seine & Waterways"
+    "theme": "River Seine & Waterways",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "feM9_E9kz8k",
@@ -47982,7 +49930,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=feM9_E9kz8k"
+        "videoUrl": "https://www.youtube.com/watch?v=feM9_E9kz8k",
+        "declutterPrimary": true
       },
       {
         "id": "feM9_E9kz8k_2",
@@ -48006,7 +49955,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=feM9_E9kz8k"
+        "videoUrl": "https://www.youtube.com/watch?v=feM9_E9kz8k",
+        "declutterPrimary": true
       },
       {
         "id": "feM9_E9kz8k_3",
@@ -48030,7 +49980,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=feM9_E9kz8k"
+        "videoUrl": "https://www.youtube.com/watch?v=feM9_E9kz8k",
+        "declutterPrimary": true
       },
       {
         "id": "feM9_E9kz8k_4",
@@ -48054,7 +50005,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=feM9_E9kz8k"
+        "videoUrl": "https://www.youtube.com/watch?v=feM9_E9kz8k",
+        "declutterPrimary": true
       },
       {
         "id": "feM9_E9kz8k_5",
@@ -48078,7 +50030,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=feM9_E9kz8k"
+        "videoUrl": "https://www.youtube.com/watch?v=feM9_E9kz8k",
+        "declutterPrimary": true
       },
       {
         "id": "feM9_E9kz8k_6",
@@ -48102,7 +50055,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=feM9_E9kz8k"
+        "videoUrl": "https://www.youtube.com/watch?v=feM9_E9kz8k",
+        "declutterPrimary": true
       },
       {
         "id": "feM9_E9kz8k_7",
@@ -48126,7 +50080,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=feM9_E9kz8k"
+        "videoUrl": "https://www.youtube.com/watch?v=feM9_E9kz8k",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -48138,7 +50093,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Coastal Cliffs, Étretat & Ocean Waves"
+    "theme": "Coastal Cliffs, Étretat & Ocean Waves",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "y5Ndomujfa0",
@@ -48179,7 +50137,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=y5Ndomujfa0"
+        "videoUrl": "https://www.youtube.com/watch?v=y5Ndomujfa0",
+        "declutterPrimary": true
       },
       {
         "id": "y5Ndomujfa0_2",
@@ -48203,7 +50162,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=y5Ndomujfa0"
+        "videoUrl": "https://www.youtube.com/watch?v=y5Ndomujfa0",
+        "declutterPrimary": true
       },
       {
         "id": "y5Ndomujfa0_3",
@@ -48227,7 +50187,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=y5Ndomujfa0"
+        "videoUrl": "https://www.youtube.com/watch?v=y5Ndomujfa0",
+        "declutterPrimary": true
       },
       {
         "id": "y5Ndomujfa0_4",
@@ -48251,7 +50212,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=y5Ndomujfa0"
+        "videoUrl": "https://www.youtube.com/watch?v=y5Ndomujfa0",
+        "declutterPrimary": true
       },
       {
         "id": "y5Ndomujfa0_5",
@@ -48275,7 +50237,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=y5Ndomujfa0"
+        "videoUrl": "https://www.youtube.com/watch?v=y5Ndomujfa0",
+        "declutterPrimary": true
       },
       {
         "id": "y5Ndomujfa0_6",
@@ -48299,7 +50262,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=y5Ndomujfa0"
+        "videoUrl": "https://www.youtube.com/watch?v=y5Ndomujfa0",
+        "declutterPrimary": true
       },
       {
         "id": "y5Ndomujfa0_7",
@@ -48323,7 +50287,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=y5Ndomujfa0"
+        "videoUrl": "https://www.youtube.com/watch?v=y5Ndomujfa0",
+        "declutterPrimary": true
       },
       {
         "id": "y5Ndomujfa0_8",
@@ -48347,7 +50312,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=y5Ndomujfa0"
+        "videoUrl": "https://www.youtube.com/watch?v=y5Ndomujfa0",
+        "declutterPrimary": true
       },
       {
         "id": "y5Ndomujfa0_9",
@@ -48371,7 +50337,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=y5Ndomujfa0"
+        "videoUrl": "https://www.youtube.com/watch?v=y5Ndomujfa0",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -48383,7 +50350,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "la54ByAq8kA",
@@ -48424,7 +50394,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=la54ByAq8kA"
+        "videoUrl": "https://www.youtube.com/watch?v=la54ByAq8kA",
+        "declutterPrimary": true
       },
       {
         "id": "la54ByAq8kA_2",
@@ -48448,7 +50419,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=la54ByAq8kA"
+        "videoUrl": "https://www.youtube.com/watch?v=la54ByAq8kA",
+        "declutterPrimary": true
       },
       {
         "id": "la54ByAq8kA_3",
@@ -48472,7 +50444,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=la54ByAq8kA"
+        "videoUrl": "https://www.youtube.com/watch?v=la54ByAq8kA",
+        "declutterPrimary": true
       },
       {
         "id": "la54ByAq8kA_4",
@@ -48496,7 +50469,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=la54ByAq8kA"
+        "videoUrl": "https://www.youtube.com/watch?v=la54ByAq8kA",
+        "declutterPrimary": true
       },
       {
         "id": "la54ByAq8kA_5",
@@ -48520,7 +50494,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=la54ByAq8kA"
+        "videoUrl": "https://www.youtube.com/watch?v=la54ByAq8kA",
+        "declutterPrimary": true
       },
       {
         "id": "la54ByAq8kA_6",
@@ -48544,7 +50519,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=la54ByAq8kA"
+        "videoUrl": "https://www.youtube.com/watch?v=la54ByAq8kA",
+        "declutterPrimary": true
       },
       {
         "id": "la54ByAq8kA_7",
@@ -48568,7 +50544,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=la54ByAq8kA"
+        "videoUrl": "https://www.youtube.com/watch?v=la54ByAq8kA",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -48580,7 +50557,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "-JSSbxoY4dM",
@@ -48608,7 +50588,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Train Nostalgia & Gare Saint-Lazare"
+    "theme": "Train Nostalgia & Gare Saint-Lazare",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "dnH4wrB4-Gk",
@@ -48649,7 +50632,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=dnH4wrB4-Gk"
+        "videoUrl": "https://www.youtube.com/watch?v=dnH4wrB4-Gk",
+        "declutterPrimary": true
       },
       {
         "id": "dnH4wrB4-Gk_2",
@@ -48673,7 +50657,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=dnH4wrB4-Gk"
+        "videoUrl": "https://www.youtube.com/watch?v=dnH4wrB4-Gk",
+        "declutterPrimary": true
       },
       {
         "id": "dnH4wrB4-Gk_3",
@@ -48697,7 +50682,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=dnH4wrB4-Gk"
+        "videoUrl": "https://www.youtube.com/watch?v=dnH4wrB4-Gk",
+        "declutterPrimary": true
       },
       {
         "id": "dnH4wrB4-Gk_4",
@@ -48721,7 +50707,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=dnH4wrB4-Gk"
+        "videoUrl": "https://www.youtube.com/watch?v=dnH4wrB4-Gk",
+        "declutterPrimary": true
       },
       {
         "id": "dnH4wrB4-Gk_5",
@@ -48745,7 +50732,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=dnH4wrB4-Gk"
+        "videoUrl": "https://www.youtube.com/watch?v=dnH4wrB4-Gk",
+        "declutterPrimary": true
       },
       {
         "id": "dnH4wrB4-Gk_6",
@@ -48769,7 +50757,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=dnH4wrB4-Gk"
+        "videoUrl": "https://www.youtube.com/watch?v=dnH4wrB4-Gk",
+        "declutterPrimary": true
       },
       {
         "id": "dnH4wrB4-Gk_7",
@@ -48793,7 +50782,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=dnH4wrB4-Gk"
+        "videoUrl": "https://www.youtube.com/watch?v=dnH4wrB4-Gk",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -48805,7 +50795,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Coastal Cliffs, Étretat & Ocean Waves"
+    "theme": "Coastal Cliffs, Étretat & Ocean Waves",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "55ZjmzmUoFc",
@@ -48846,7 +50839,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=55ZjmzmUoFc"
+        "videoUrl": "https://www.youtube.com/watch?v=55ZjmzmUoFc",
+        "declutterPrimary": true
       },
       {
         "id": "55ZjmzmUoFc_2",
@@ -48870,7 +50864,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=55ZjmzmUoFc"
+        "videoUrl": "https://www.youtube.com/watch?v=55ZjmzmUoFc",
+        "declutterPrimary": true
       },
       {
         "id": "55ZjmzmUoFc_3",
@@ -48894,7 +50889,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=55ZjmzmUoFc"
+        "videoUrl": "https://www.youtube.com/watch?v=55ZjmzmUoFc",
+        "declutterPrimary": true
       },
       {
         "id": "55ZjmzmUoFc_4",
@@ -48918,7 +50914,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=55ZjmzmUoFc"
+        "videoUrl": "https://www.youtube.com/watch?v=55ZjmzmUoFc",
+        "declutterPrimary": true
       },
       {
         "id": "55ZjmzmUoFc_5",
@@ -48942,7 +50939,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=55ZjmzmUoFc"
+        "videoUrl": "https://www.youtube.com/watch?v=55ZjmzmUoFc",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 5,
@@ -48954,7 +50952,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Coastal Cliffs, Étretat & Ocean Waves"
+    "theme": "Coastal Cliffs, Étretat & Ocean Waves",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "CbkFGrBvyrs",
@@ -48995,7 +50996,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=CbkFGrBvyrs"
+        "videoUrl": "https://www.youtube.com/watch?v=CbkFGrBvyrs",
+        "declutterPrimary": true
       },
       {
         "id": "CbkFGrBvyrs_2",
@@ -49019,7 +51021,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=CbkFGrBvyrs"
+        "videoUrl": "https://www.youtube.com/watch?v=CbkFGrBvyrs",
+        "declutterPrimary": true
       },
       {
         "id": "CbkFGrBvyrs_3",
@@ -49043,7 +51046,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=CbkFGrBvyrs"
+        "videoUrl": "https://www.youtube.com/watch?v=CbkFGrBvyrs",
+        "declutterPrimary": true
       },
       {
         "id": "CbkFGrBvyrs_4",
@@ -49067,7 +51071,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=CbkFGrBvyrs"
+        "videoUrl": "https://www.youtube.com/watch?v=CbkFGrBvyrs",
+        "declutterPrimary": true
       },
       {
         "id": "CbkFGrBvyrs_5",
@@ -49091,7 +51096,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=CbkFGrBvyrs"
+        "videoUrl": "https://www.youtube.com/watch?v=CbkFGrBvyrs",
+        "declutterPrimary": true
       },
       {
         "id": "CbkFGrBvyrs_6",
@@ -49115,7 +51121,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=CbkFGrBvyrs"
+        "videoUrl": "https://www.youtube.com/watch?v=CbkFGrBvyrs",
+        "declutterPrimary": true
       },
       {
         "id": "CbkFGrBvyrs_7",
@@ -49139,7 +51146,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=CbkFGrBvyrs"
+        "videoUrl": "https://www.youtube.com/watch?v=CbkFGrBvyrs",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -49151,7 +51159,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "dfQ8FYmq-J4",
@@ -49192,7 +51203,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=dfQ8FYmq-J4"
+        "videoUrl": "https://www.youtube.com/watch?v=dfQ8FYmq-J4",
+        "declutterPrimary": true
       },
       {
         "id": "dfQ8FYmq-J4_2",
@@ -49216,7 +51228,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=dfQ8FYmq-J4"
+        "videoUrl": "https://www.youtube.com/watch?v=dfQ8FYmq-J4",
+        "declutterPrimary": true
       },
       {
         "id": "dfQ8FYmq-J4_3",
@@ -49240,7 +51253,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=dfQ8FYmq-J4"
+        "videoUrl": "https://www.youtube.com/watch?v=dfQ8FYmq-J4",
+        "declutterPrimary": true
       },
       {
         "id": "dfQ8FYmq-J4_4",
@@ -49264,7 +51278,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=dfQ8FYmq-J4"
+        "videoUrl": "https://www.youtube.com/watch?v=dfQ8FYmq-J4",
+        "declutterPrimary": true
       },
       {
         "id": "dfQ8FYmq-J4_5",
@@ -49288,7 +51303,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=dfQ8FYmq-J4"
+        "videoUrl": "https://www.youtube.com/watch?v=dfQ8FYmq-J4",
+        "declutterPrimary": true
       },
       {
         "id": "dfQ8FYmq-J4_6",
@@ -49312,7 +51328,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=dfQ8FYmq-J4"
+        "videoUrl": "https://www.youtube.com/watch?v=dfQ8FYmq-J4",
+        "declutterPrimary": true
       },
       {
         "id": "dfQ8FYmq-J4_7",
@@ -49336,7 +51353,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=dfQ8FYmq-J4"
+        "videoUrl": "https://www.youtube.com/watch?v=dfQ8FYmq-J4",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -49348,7 +51366,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Coastal Cliffs, Étretat & Ocean Waves"
+    "theme": "Coastal Cliffs, Étretat & Ocean Waves",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "AGoap1I0Fqg",
@@ -49389,7 +51410,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=AGoap1I0Fqg"
+        "videoUrl": "https://www.youtube.com/watch?v=AGoap1I0Fqg",
+        "declutterPrimary": true
       },
       {
         "id": "AGoap1I0Fqg_2",
@@ -49413,7 +51435,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=AGoap1I0Fqg"
+        "videoUrl": "https://www.youtube.com/watch?v=AGoap1I0Fqg",
+        "declutterPrimary": true
       },
       {
         "id": "AGoap1I0Fqg_3",
@@ -49437,7 +51460,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=AGoap1I0Fqg"
+        "videoUrl": "https://www.youtube.com/watch?v=AGoap1I0Fqg",
+        "declutterPrimary": true
       },
       {
         "id": "AGoap1I0Fqg_4",
@@ -49461,7 +51485,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=AGoap1I0Fqg"
+        "videoUrl": "https://www.youtube.com/watch?v=AGoap1I0Fqg",
+        "declutterPrimary": true
       },
       {
         "id": "AGoap1I0Fqg_5",
@@ -49485,7 +51510,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=AGoap1I0Fqg"
+        "videoUrl": "https://www.youtube.com/watch?v=AGoap1I0Fqg",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 5,
@@ -49497,7 +51523,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "OZLaj_AKaSY",
@@ -49538,7 +51567,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=OZLaj_AKaSY"
+        "videoUrl": "https://www.youtube.com/watch?v=OZLaj_AKaSY",
+        "declutterPrimary": true
       },
       {
         "id": "OZLaj_AKaSY_2",
@@ -49562,7 +51592,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=OZLaj_AKaSY"
+        "videoUrl": "https://www.youtube.com/watch?v=OZLaj_AKaSY",
+        "declutterPrimary": true
       },
       {
         "id": "OZLaj_AKaSY_3",
@@ -49586,7 +51617,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=OZLaj_AKaSY"
+        "videoUrl": "https://www.youtube.com/watch?v=OZLaj_AKaSY",
+        "declutterPrimary": true
       },
       {
         "id": "OZLaj_AKaSY_4",
@@ -49610,7 +51642,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=OZLaj_AKaSY"
+        "videoUrl": "https://www.youtube.com/watch?v=OZLaj_AKaSY",
+        "declutterPrimary": true
       },
       {
         "id": "OZLaj_AKaSY_5",
@@ -49634,7 +51667,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=OZLaj_AKaSY"
+        "videoUrl": "https://www.youtube.com/watch?v=OZLaj_AKaSY",
+        "declutterPrimary": true
       },
       {
         "id": "OZLaj_AKaSY_6",
@@ -49658,7 +51692,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=OZLaj_AKaSY"
+        "videoUrl": "https://www.youtube.com/watch?v=OZLaj_AKaSY",
+        "declutterPrimary": true
       },
       {
         "id": "OZLaj_AKaSY_7",
@@ -49682,7 +51717,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=OZLaj_AKaSY"
+        "videoUrl": "https://www.youtube.com/watch?v=OZLaj_AKaSY",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -49694,7 +51730,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "7Hsyg36ckdU",
@@ -49735,7 +51774,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Venice & Riviera Escapes",
-        "videoUrl": "https://www.youtube.com/watch?v=7Hsyg36ckdU"
+        "videoUrl": "https://www.youtube.com/watch?v=7Hsyg36ckdU",
+        "declutterPrimary": true
       },
       {
         "id": "7Hsyg36ckdU_2",
@@ -49759,7 +51799,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Venice & Riviera Escapes",
-        "videoUrl": "https://www.youtube.com/watch?v=7Hsyg36ckdU"
+        "videoUrl": "https://www.youtube.com/watch?v=7Hsyg36ckdU",
+        "declutterPrimary": true
       },
       {
         "id": "7Hsyg36ckdU_3",
@@ -49783,7 +51824,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Venice & Riviera Escapes",
-        "videoUrl": "https://www.youtube.com/watch?v=7Hsyg36ckdU"
+        "videoUrl": "https://www.youtube.com/watch?v=7Hsyg36ckdU",
+        "declutterPrimary": true
       },
       {
         "id": "7Hsyg36ckdU_4",
@@ -49807,7 +51849,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Venice & Riviera Escapes",
-        "videoUrl": "https://www.youtube.com/watch?v=7Hsyg36ckdU"
+        "videoUrl": "https://www.youtube.com/watch?v=7Hsyg36ckdU",
+        "declutterPrimary": true
       },
       {
         "id": "7Hsyg36ckdU_5",
@@ -49831,7 +51874,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Venice & Riviera Escapes",
-        "videoUrl": "https://www.youtube.com/watch?v=7Hsyg36ckdU"
+        "videoUrl": "https://www.youtube.com/watch?v=7Hsyg36ckdU",
+        "declutterPrimary": true
       },
       {
         "id": "7Hsyg36ckdU_6",
@@ -49855,7 +51899,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Venice & Riviera Escapes",
-        "videoUrl": "https://www.youtube.com/watch?v=7Hsyg36ckdU"
+        "videoUrl": "https://www.youtube.com/watch?v=7Hsyg36ckdU",
+        "declutterPrimary": true
       },
       {
         "id": "7Hsyg36ckdU_7",
@@ -49879,7 +51924,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Venice & Riviera Escapes",
-        "videoUrl": "https://www.youtube.com/watch?v=7Hsyg36ckdU"
+        "videoUrl": "https://www.youtube.com/watch?v=7Hsyg36ckdU",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -49891,7 +51937,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Venice & Riviera Escapes"
+    "theme": "Venice & Riviera Escapes",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "QPZgmv7slPc",
@@ -49932,7 +51981,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QPZgmv7slPc"
+        "videoUrl": "https://www.youtube.com/watch?v=QPZgmv7slPc",
+        "declutterPrimary": true
       },
       {
         "id": "QPZgmv7slPc_2",
@@ -49956,7 +52006,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QPZgmv7slPc"
+        "videoUrl": "https://www.youtube.com/watch?v=QPZgmv7slPc",
+        "declutterPrimary": true
       },
       {
         "id": "QPZgmv7slPc_3",
@@ -49980,7 +52031,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QPZgmv7slPc"
+        "videoUrl": "https://www.youtube.com/watch?v=QPZgmv7slPc",
+        "declutterPrimary": true
       },
       {
         "id": "QPZgmv7slPc_4",
@@ -50004,7 +52056,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QPZgmv7slPc"
+        "videoUrl": "https://www.youtube.com/watch?v=QPZgmv7slPc",
+        "declutterPrimary": true
       },
       {
         "id": "QPZgmv7slPc_5",
@@ -50028,7 +52081,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QPZgmv7slPc"
+        "videoUrl": "https://www.youtube.com/watch?v=QPZgmv7slPc",
+        "declutterPrimary": true
       },
       {
         "id": "QPZgmv7slPc_6",
@@ -50052,7 +52106,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QPZgmv7slPc"
+        "videoUrl": "https://www.youtube.com/watch?v=QPZgmv7slPc",
+        "declutterPrimary": true
       },
       {
         "id": "QPZgmv7slPc_7",
@@ -50076,7 +52131,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=QPZgmv7slPc"
+        "videoUrl": "https://www.youtube.com/watch?v=QPZgmv7slPc",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -50088,7 +52144,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "j5EPNKdBb4Q",
@@ -50116,7 +52175,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "0RTg3a-IvtQ",
@@ -50157,7 +52219,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=0RTg3a-IvtQ"
+        "videoUrl": "https://www.youtube.com/watch?v=0RTg3a-IvtQ",
+        "declutterPrimary": true
       },
       {
         "id": "0RTg3a-IvtQ_2",
@@ -50181,7 +52244,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=0RTg3a-IvtQ"
+        "videoUrl": "https://www.youtube.com/watch?v=0RTg3a-IvtQ",
+        "declutterPrimary": true
       },
       {
         "id": "0RTg3a-IvtQ_3",
@@ -50205,7 +52269,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=0RTg3a-IvtQ"
+        "videoUrl": "https://www.youtube.com/watch?v=0RTg3a-IvtQ",
+        "declutterPrimary": true
       },
       {
         "id": "0RTg3a-IvtQ_4",
@@ -50229,7 +52294,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=0RTg3a-IvtQ"
+        "videoUrl": "https://www.youtube.com/watch?v=0RTg3a-IvtQ",
+        "declutterPrimary": true
       },
       {
         "id": "0RTg3a-IvtQ_5",
@@ -50253,7 +52319,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=0RTg3a-IvtQ"
+        "videoUrl": "https://www.youtube.com/watch?v=0RTg3a-IvtQ",
+        "declutterPrimary": true
       },
       {
         "id": "0RTg3a-IvtQ_6",
@@ -50277,7 +52344,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=0RTg3a-IvtQ"
+        "videoUrl": "https://www.youtube.com/watch?v=0RTg3a-IvtQ",
+        "declutterPrimary": true
       },
       {
         "id": "0RTg3a-IvtQ_7",
@@ -50301,7 +52369,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=0RTg3a-IvtQ"
+        "videoUrl": "https://www.youtube.com/watch?v=0RTg3a-IvtQ",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -50313,7 +52382,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "-UAZ9tHEU14",
@@ -50354,7 +52426,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=-UAZ9tHEU14"
+        "videoUrl": "https://www.youtube.com/watch?v=-UAZ9tHEU14",
+        "declutterPrimary": true
       },
       {
         "id": "-UAZ9tHEU14_2",
@@ -50378,7 +52451,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=-UAZ9tHEU14"
+        "videoUrl": "https://www.youtube.com/watch?v=-UAZ9tHEU14",
+        "declutterPrimary": true
       },
       {
         "id": "-UAZ9tHEU14_3",
@@ -50402,7 +52476,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=-UAZ9tHEU14"
+        "videoUrl": "https://www.youtube.com/watch?v=-UAZ9tHEU14",
+        "declutterPrimary": true
       },
       {
         "id": "-UAZ9tHEU14_4",
@@ -50426,7 +52501,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=-UAZ9tHEU14"
+        "videoUrl": "https://www.youtube.com/watch?v=-UAZ9tHEU14",
+        "declutterPrimary": true
       },
       {
         "id": "-UAZ9tHEU14_5",
@@ -50450,7 +52526,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=-UAZ9tHEU14"
+        "videoUrl": "https://www.youtube.com/watch?v=-UAZ9tHEU14",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 5,
@@ -50462,7 +52539,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "rNebBr9SVBQ",
@@ -50503,7 +52583,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=rNebBr9SVBQ"
+        "videoUrl": "https://www.youtube.com/watch?v=rNebBr9SVBQ",
+        "declutterPrimary": true
       },
       {
         "id": "rNebBr9SVBQ_2",
@@ -50527,7 +52608,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=rNebBr9SVBQ"
+        "videoUrl": "https://www.youtube.com/watch?v=rNebBr9SVBQ",
+        "declutterPrimary": true
       },
       {
         "id": "rNebBr9SVBQ_3",
@@ -50551,7 +52633,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=rNebBr9SVBQ"
+        "videoUrl": "https://www.youtube.com/watch?v=rNebBr9SVBQ",
+        "declutterPrimary": true
       },
       {
         "id": "rNebBr9SVBQ_4",
@@ -50575,7 +52658,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=rNebBr9SVBQ"
+        "videoUrl": "https://www.youtube.com/watch?v=rNebBr9SVBQ",
+        "declutterPrimary": true
       },
       {
         "id": "rNebBr9SVBQ_5",
@@ -50599,7 +52683,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=rNebBr9SVBQ"
+        "videoUrl": "https://www.youtube.com/watch?v=rNebBr9SVBQ",
+        "declutterPrimary": true
       },
       {
         "id": "rNebBr9SVBQ_6",
@@ -50623,7 +52708,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=rNebBr9SVBQ"
+        "videoUrl": "https://www.youtube.com/watch?v=rNebBr9SVBQ",
+        "declutterPrimary": true
       },
       {
         "id": "rNebBr9SVBQ_7",
@@ -50647,7 +52733,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=rNebBr9SVBQ"
+        "videoUrl": "https://www.youtube.com/watch?v=rNebBr9SVBQ",
+        "declutterPrimary": true
       },
       {
         "id": "rNebBr9SVBQ_8",
@@ -50671,7 +52758,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=rNebBr9SVBQ"
+        "videoUrl": "https://www.youtube.com/watch?v=rNebBr9SVBQ",
+        "declutterPrimary": true
       },
       {
         "id": "rNebBr9SVBQ_9",
@@ -50695,7 +52783,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=rNebBr9SVBQ"
+        "videoUrl": "https://www.youtube.com/watch?v=rNebBr9SVBQ",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -50707,7 +52796,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "River Seine & Waterways"
+    "theme": "River Seine & Waterways",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "Ahek_O5ZTAQ",
@@ -50748,7 +52840,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Ahek_O5ZTAQ"
+        "videoUrl": "https://www.youtube.com/watch?v=Ahek_O5ZTAQ",
+        "declutterPrimary": true
       },
       {
         "id": "Ahek_O5ZTAQ_2",
@@ -50772,7 +52865,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Ahek_O5ZTAQ"
+        "videoUrl": "https://www.youtube.com/watch?v=Ahek_O5ZTAQ",
+        "declutterPrimary": true
       },
       {
         "id": "Ahek_O5ZTAQ_3",
@@ -50796,7 +52890,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Ahek_O5ZTAQ"
+        "videoUrl": "https://www.youtube.com/watch?v=Ahek_O5ZTAQ",
+        "declutterPrimary": true
       },
       {
         "id": "Ahek_O5ZTAQ_4",
@@ -50820,7 +52915,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Ahek_O5ZTAQ"
+        "videoUrl": "https://www.youtube.com/watch?v=Ahek_O5ZTAQ",
+        "declutterPrimary": true
       },
       {
         "id": "Ahek_O5ZTAQ_5",
@@ -50844,7 +52940,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Ahek_O5ZTAQ"
+        "videoUrl": "https://www.youtube.com/watch?v=Ahek_O5ZTAQ",
+        "declutterPrimary": true
       },
       {
         "id": "Ahek_O5ZTAQ_6",
@@ -50868,7 +52965,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Ahek_O5ZTAQ"
+        "videoUrl": "https://www.youtube.com/watch?v=Ahek_O5ZTAQ",
+        "declutterPrimary": true
       },
       {
         "id": "Ahek_O5ZTAQ_7",
@@ -50892,7 +52990,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=Ahek_O5ZTAQ"
+        "videoUrl": "https://www.youtube.com/watch?v=Ahek_O5ZTAQ",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -50904,7 +53003,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Water Lilies & Garden Sanctuaries"
+    "theme": "Water Lilies & Garden Sanctuaries",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "ZGuimqw_tpo",
@@ -50945,7 +53047,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZGuimqw_tpo"
+        "videoUrl": "https://www.youtube.com/watch?v=ZGuimqw_tpo",
+        "declutterPrimary": true
       },
       {
         "id": "ZGuimqw_tpo_2",
@@ -50969,7 +53072,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZGuimqw_tpo"
+        "videoUrl": "https://www.youtube.com/watch?v=ZGuimqw_tpo",
+        "declutterPrimary": true
       },
       {
         "id": "ZGuimqw_tpo_3",
@@ -50993,7 +53097,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZGuimqw_tpo"
+        "videoUrl": "https://www.youtube.com/watch?v=ZGuimqw_tpo",
+        "declutterPrimary": true
       },
       {
         "id": "ZGuimqw_tpo_4",
@@ -51017,7 +53122,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZGuimqw_tpo"
+        "videoUrl": "https://www.youtube.com/watch?v=ZGuimqw_tpo",
+        "declutterPrimary": true
       },
       {
         "id": "ZGuimqw_tpo_5",
@@ -51041,7 +53147,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZGuimqw_tpo"
+        "videoUrl": "https://www.youtube.com/watch?v=ZGuimqw_tpo",
+        "declutterPrimary": true
       },
       {
         "id": "ZGuimqw_tpo_6",
@@ -51065,7 +53172,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZGuimqw_tpo"
+        "videoUrl": "https://www.youtube.com/watch?v=ZGuimqw_tpo",
+        "declutterPrimary": true
       },
       {
         "id": "ZGuimqw_tpo_7",
@@ -51089,7 +53197,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=ZGuimqw_tpo"
+        "videoUrl": "https://www.youtube.com/watch?v=ZGuimqw_tpo",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -51101,7 +53210,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "fNeoeo7RSXk",
@@ -51142,7 +53254,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=fNeoeo7RSXk"
+        "videoUrl": "https://www.youtube.com/watch?v=fNeoeo7RSXk",
+        "declutterPrimary": true
       },
       {
         "id": "fNeoeo7RSXk_2",
@@ -51166,7 +53279,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=fNeoeo7RSXk"
+        "videoUrl": "https://www.youtube.com/watch?v=fNeoeo7RSXk",
+        "declutterPrimary": true
       },
       {
         "id": "fNeoeo7RSXk_3",
@@ -51190,7 +53304,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=fNeoeo7RSXk"
+        "videoUrl": "https://www.youtube.com/watch?v=fNeoeo7RSXk",
+        "declutterPrimary": true
       },
       {
         "id": "fNeoeo7RSXk_4",
@@ -51214,7 +53329,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=fNeoeo7RSXk"
+        "videoUrl": "https://www.youtube.com/watch?v=fNeoeo7RSXk",
+        "declutterPrimary": true
       },
       {
         "id": "fNeoeo7RSXk_5",
@@ -51238,7 +53354,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=fNeoeo7RSXk"
+        "videoUrl": "https://www.youtube.com/watch?v=fNeoeo7RSXk",
+        "declutterPrimary": true
       },
       {
         "id": "fNeoeo7RSXk_6",
@@ -51262,7 +53379,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=fNeoeo7RSXk"
+        "videoUrl": "https://www.youtube.com/watch?v=fNeoeo7RSXk",
+        "declutterPrimary": true
       },
       {
         "id": "fNeoeo7RSXk_7",
@@ -51286,7 +53404,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=fNeoeo7RSXk"
+        "videoUrl": "https://www.youtube.com/watch?v=fNeoeo7RSXk",
+        "declutterPrimary": true
       },
       {
         "id": "fNeoeo7RSXk_8",
@@ -51310,7 +53429,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=fNeoeo7RSXk"
+        "videoUrl": "https://www.youtube.com/watch?v=fNeoeo7RSXk",
+        "declutterPrimary": true
       },
       {
         "id": "fNeoeo7RSXk_9",
@@ -51334,7 +53454,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "River Seine & Waterways",
-        "videoUrl": "https://www.youtube.com/watch?v=fNeoeo7RSXk"
+        "videoUrl": "https://www.youtube.com/watch?v=fNeoeo7RSXk",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -51346,7 +53467,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Vincent van Gogh",
-    "theme": "River Seine & Waterways"
+    "theme": "River Seine & Waterways",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "81njIoQoAOQ",
@@ -51387,7 +53511,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ"
+        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ",
+        "declutterPrimary": true
       },
       {
         "id": "81njIoQoAOQ_2",
@@ -51411,7 +53536,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ"
+        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ",
+        "declutterPrimary": true
       },
       {
         "id": "81njIoQoAOQ_3",
@@ -51435,7 +53561,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ"
+        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ",
+        "declutterPrimary": true
       },
       {
         "id": "81njIoQoAOQ_4",
@@ -51459,7 +53586,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ"
+        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ",
+        "declutterPrimary": true
       },
       {
         "id": "81njIoQoAOQ_5",
@@ -51483,7 +53611,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ"
+        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ",
+        "declutterPrimary": true
       },
       {
         "id": "81njIoQoAOQ_6",
@@ -51507,7 +53636,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ"
+        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ",
+        "declutterPrimary": true
       },
       {
         "id": "81njIoQoAOQ_7",
@@ -51531,7 +53661,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ"
+        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ",
+        "declutterPrimary": true
       },
       {
         "id": "81njIoQoAOQ_8",
@@ -51555,7 +53686,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ"
+        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ",
+        "declutterPrimary": true
       },
       {
         "id": "81njIoQoAOQ_9",
@@ -51579,7 +53711,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ"
+        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ",
+        "declutterPrimary": true
       },
       {
         "id": "81njIoQoAOQ_10",
@@ -51603,7 +53736,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ"
+        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ",
+        "declutterPrimary": true
       },
       {
         "id": "81njIoQoAOQ_11",
@@ -51627,7 +53761,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ"
+        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ",
+        "declutterPrimary": true
       },
       {
         "id": "81njIoQoAOQ_12",
@@ -51651,7 +53786,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ"
+        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ",
+        "declutterPrimary": true
       },
       {
         "id": "81njIoQoAOQ_13",
@@ -51675,7 +53811,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ"
+        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ",
+        "declutterPrimary": true
       },
       {
         "id": "81njIoQoAOQ_14",
@@ -51699,7 +53836,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ"
+        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ",
+        "declutterPrimary": true
       },
       {
         "id": "81njIoQoAOQ_15",
@@ -51723,7 +53861,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ"
+        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ",
+        "declutterPrimary": true
       },
       {
         "id": "81njIoQoAOQ_16",
@@ -51747,7 +53886,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ"
+        "videoUrl": "https://www.youtube.com/watch?v=81njIoQoAOQ",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 16,
@@ -51759,7 +53899,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "wRUS2Or6LP4",
@@ -51800,7 +53943,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wRUS2Or6LP4"
+        "videoUrl": "https://www.youtube.com/watch?v=wRUS2Or6LP4",
+        "declutterPrimary": true
       },
       {
         "id": "wRUS2Or6LP4_2",
@@ -51824,7 +53968,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wRUS2Or6LP4"
+        "videoUrl": "https://www.youtube.com/watch?v=wRUS2Or6LP4",
+        "declutterPrimary": true
       },
       {
         "id": "wRUS2Or6LP4_3",
@@ -51848,7 +53993,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wRUS2Or6LP4"
+        "videoUrl": "https://www.youtube.com/watch?v=wRUS2Or6LP4",
+        "declutterPrimary": true
       },
       {
         "id": "wRUS2Or6LP4_4",
@@ -51872,7 +54018,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wRUS2Or6LP4"
+        "videoUrl": "https://www.youtube.com/watch?v=wRUS2Or6LP4",
+        "declutterPrimary": true
       },
       {
         "id": "wRUS2Or6LP4_5",
@@ -51896,7 +54043,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wRUS2Or6LP4"
+        "videoUrl": "https://www.youtube.com/watch?v=wRUS2Or6LP4",
+        "declutterPrimary": true
       },
       {
         "id": "wRUS2Or6LP4_6",
@@ -51920,7 +54068,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wRUS2Or6LP4"
+        "videoUrl": "https://www.youtube.com/watch?v=wRUS2Or6LP4",
+        "declutterPrimary": true
       },
       {
         "id": "wRUS2Or6LP4_7",
@@ -51944,7 +54093,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wRUS2Or6LP4"
+        "videoUrl": "https://www.youtube.com/watch?v=wRUS2Or6LP4",
+        "declutterPrimary": true
       },
       {
         "id": "wRUS2Or6LP4_8",
@@ -51968,7 +54118,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wRUS2Or6LP4"
+        "videoUrl": "https://www.youtube.com/watch?v=wRUS2Or6LP4",
+        "declutterPrimary": true
       },
       {
         "id": "wRUS2Or6LP4_9",
@@ -51992,7 +54143,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wRUS2Or6LP4"
+        "videoUrl": "https://www.youtube.com/watch?v=wRUS2Or6LP4",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -52004,7 +54156,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "4ER-KQjaE7U",
@@ -52045,7 +54200,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=4ER-KQjaE7U"
+        "videoUrl": "https://www.youtube.com/watch?v=4ER-KQjaE7U",
+        "declutterPrimary": true
       },
       {
         "id": "4ER-KQjaE7U_2",
@@ -52069,7 +54225,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=4ER-KQjaE7U"
+        "videoUrl": "https://www.youtube.com/watch?v=4ER-KQjaE7U",
+        "declutterPrimary": true
       },
       {
         "id": "4ER-KQjaE7U_3",
@@ -52093,7 +54250,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=4ER-KQjaE7U"
+        "videoUrl": "https://www.youtube.com/watch?v=4ER-KQjaE7U",
+        "declutterPrimary": true
       },
       {
         "id": "4ER-KQjaE7U_4",
@@ -52117,7 +54275,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=4ER-KQjaE7U"
+        "videoUrl": "https://www.youtube.com/watch?v=4ER-KQjaE7U",
+        "declutterPrimary": true
       },
       {
         "id": "4ER-KQjaE7U_5",
@@ -52141,7 +54300,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=4ER-KQjaE7U"
+        "videoUrl": "https://www.youtube.com/watch?v=4ER-KQjaE7U",
+        "declutterPrimary": true
       },
       {
         "id": "4ER-KQjaE7U_6",
@@ -52165,7 +54325,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=4ER-KQjaE7U"
+        "videoUrl": "https://www.youtube.com/watch?v=4ER-KQjaE7U",
+        "declutterPrimary": true
       },
       {
         "id": "4ER-KQjaE7U_7",
@@ -52189,7 +54350,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=4ER-KQjaE7U"
+        "videoUrl": "https://www.youtube.com/watch?v=4ER-KQjaE7U",
+        "declutterPrimary": true
       },
       {
         "id": "4ER-KQjaE7U_8",
@@ -52213,7 +54375,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=4ER-KQjaE7U"
+        "videoUrl": "https://www.youtube.com/watch?v=4ER-KQjaE7U",
+        "declutterPrimary": true
       },
       {
         "id": "4ER-KQjaE7U_9",
@@ -52237,7 +54400,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=4ER-KQjaE7U"
+        "videoUrl": "https://www.youtube.com/watch?v=4ER-KQjaE7U",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -52249,7 +54413,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "J13ctlmXosw",
@@ -52290,7 +54457,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=J13ctlmXosw"
+        "videoUrl": "https://www.youtube.com/watch?v=J13ctlmXosw",
+        "declutterPrimary": true
       },
       {
         "id": "J13ctlmXosw_2",
@@ -52314,7 +54482,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=J13ctlmXosw"
+        "videoUrl": "https://www.youtube.com/watch?v=J13ctlmXosw",
+        "declutterPrimary": true
       },
       {
         "id": "J13ctlmXosw_3",
@@ -52338,7 +54507,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=J13ctlmXosw"
+        "videoUrl": "https://www.youtube.com/watch?v=J13ctlmXosw",
+        "declutterPrimary": true
       },
       {
         "id": "J13ctlmXosw_4",
@@ -52362,7 +54532,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=J13ctlmXosw"
+        "videoUrl": "https://www.youtube.com/watch?v=J13ctlmXosw",
+        "declutterPrimary": true
       },
       {
         "id": "J13ctlmXosw_5",
@@ -52386,7 +54557,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=J13ctlmXosw"
+        "videoUrl": "https://www.youtube.com/watch?v=J13ctlmXosw",
+        "declutterPrimary": true
       },
       {
         "id": "J13ctlmXosw_6",
@@ -52410,7 +54582,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=J13ctlmXosw"
+        "videoUrl": "https://www.youtube.com/watch?v=J13ctlmXosw",
+        "declutterPrimary": true
       },
       {
         "id": "J13ctlmXosw_7",
@@ -52434,7 +54607,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=J13ctlmXosw"
+        "videoUrl": "https://www.youtube.com/watch?v=J13ctlmXosw",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -52446,7 +54620,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Pierre-Auguste Renoir",
-    "theme": "Water Lilies & Garden Sanctuaries"
+    "theme": "Water Lilies & Garden Sanctuaries",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "u5KOrhx6mvY",
@@ -52487,7 +54664,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=u5KOrhx6mvY"
+        "videoUrl": "https://www.youtube.com/watch?v=u5KOrhx6mvY",
+        "declutterPrimary": true
       },
       {
         "id": "u5KOrhx6mvY_2",
@@ -52511,7 +54689,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=u5KOrhx6mvY"
+        "videoUrl": "https://www.youtube.com/watch?v=u5KOrhx6mvY",
+        "declutterPrimary": true
       },
       {
         "id": "u5KOrhx6mvY_3",
@@ -52535,7 +54714,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=u5KOrhx6mvY"
+        "videoUrl": "https://www.youtube.com/watch?v=u5KOrhx6mvY",
+        "declutterPrimary": true
       },
       {
         "id": "u5KOrhx6mvY_4",
@@ -52559,7 +54739,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=u5KOrhx6mvY"
+        "videoUrl": "https://www.youtube.com/watch?v=u5KOrhx6mvY",
+        "declutterPrimary": true
       },
       {
         "id": "u5KOrhx6mvY_5",
@@ -52583,7 +54764,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=u5KOrhx6mvY"
+        "videoUrl": "https://www.youtube.com/watch?v=u5KOrhx6mvY",
+        "declutterPrimary": true
       },
       {
         "id": "u5KOrhx6mvY_6",
@@ -52607,7 +54789,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=u5KOrhx6mvY"
+        "videoUrl": "https://www.youtube.com/watch?v=u5KOrhx6mvY",
+        "declutterPrimary": true
       },
       {
         "id": "u5KOrhx6mvY_7",
@@ -52631,7 +54814,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=u5KOrhx6mvY"
+        "videoUrl": "https://www.youtube.com/watch?v=u5KOrhx6mvY",
+        "declutterPrimary": true
       },
       {
         "id": "u5KOrhx6mvY_8",
@@ -52655,7 +54839,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=u5KOrhx6mvY"
+        "videoUrl": "https://www.youtube.com/watch?v=u5KOrhx6mvY",
+        "declutterPrimary": true
       },
       {
         "id": "u5KOrhx6mvY_9",
@@ -52679,7 +54864,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=u5KOrhx6mvY"
+        "videoUrl": "https://www.youtube.com/watch?v=u5KOrhx6mvY",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -52691,7 +54877,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "Rxtp7exVHQU",
@@ -52732,7 +54921,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=Rxtp7exVHQU"
+        "videoUrl": "https://www.youtube.com/watch?v=Rxtp7exVHQU",
+        "declutterPrimary": true
       },
       {
         "id": "Rxtp7exVHQU_2",
@@ -52756,7 +54946,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=Rxtp7exVHQU"
+        "videoUrl": "https://www.youtube.com/watch?v=Rxtp7exVHQU",
+        "declutterPrimary": true
       },
       {
         "id": "Rxtp7exVHQU_3",
@@ -52780,7 +54971,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=Rxtp7exVHQU"
+        "videoUrl": "https://www.youtube.com/watch?v=Rxtp7exVHQU",
+        "declutterPrimary": true
       },
       {
         "id": "Rxtp7exVHQU_4",
@@ -52804,7 +54996,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=Rxtp7exVHQU"
+        "videoUrl": "https://www.youtube.com/watch?v=Rxtp7exVHQU",
+        "declutterPrimary": true
       },
       {
         "id": "Rxtp7exVHQU_5",
@@ -52828,7 +55021,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=Rxtp7exVHQU"
+        "videoUrl": "https://www.youtube.com/watch?v=Rxtp7exVHQU",
+        "declutterPrimary": true
       },
       {
         "id": "Rxtp7exVHQU_6",
@@ -52852,7 +55046,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=Rxtp7exVHQU"
+        "videoUrl": "https://www.youtube.com/watch?v=Rxtp7exVHQU",
+        "declutterPrimary": true
       },
       {
         "id": "Rxtp7exVHQU_7",
@@ -52876,7 +55071,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=Rxtp7exVHQU"
+        "videoUrl": "https://www.youtube.com/watch?v=Rxtp7exVHQU",
+        "declutterPrimary": true
       },
       {
         "id": "Rxtp7exVHQU_8",
@@ -52900,7 +55096,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=Rxtp7exVHQU"
+        "videoUrl": "https://www.youtube.com/watch?v=Rxtp7exVHQU",
+        "declutterPrimary": true
       },
       {
         "id": "Rxtp7exVHQU_9",
@@ -52924,7 +55121,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=Rxtp7exVHQU"
+        "videoUrl": "https://www.youtube.com/watch?v=Rxtp7exVHQU",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -52936,7 +55134,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Train Nostalgia & Gare Saint-Lazare"
+    "theme": "Train Nostalgia & Gare Saint-Lazare",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "s19-pdfCt-M",
@@ -52977,7 +55178,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=s19-pdfCt-M"
+        "videoUrl": "https://www.youtube.com/watch?v=s19-pdfCt-M",
+        "declutterPrimary": true
       },
       {
         "id": "s19-pdfCt-M_2",
@@ -53001,7 +55203,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=s19-pdfCt-M"
+        "videoUrl": "https://www.youtube.com/watch?v=s19-pdfCt-M",
+        "declutterPrimary": true
       },
       {
         "id": "s19-pdfCt-M_3",
@@ -53025,7 +55228,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=s19-pdfCt-M"
+        "videoUrl": "https://www.youtube.com/watch?v=s19-pdfCt-M",
+        "declutterPrimary": true
       },
       {
         "id": "s19-pdfCt-M_4",
@@ -53049,7 +55253,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=s19-pdfCt-M"
+        "videoUrl": "https://www.youtube.com/watch?v=s19-pdfCt-M",
+        "declutterPrimary": true
       },
       {
         "id": "s19-pdfCt-M_5",
@@ -53073,7 +55278,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=s19-pdfCt-M"
+        "videoUrl": "https://www.youtube.com/watch?v=s19-pdfCt-M",
+        "declutterPrimary": true
       },
       {
         "id": "s19-pdfCt-M_6",
@@ -53097,7 +55303,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=s19-pdfCt-M"
+        "videoUrl": "https://www.youtube.com/watch?v=s19-pdfCt-M",
+        "declutterPrimary": true
       },
       {
         "id": "s19-pdfCt-M_7",
@@ -53121,7 +55328,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Winter & Snowbound Landscapes",
-        "videoUrl": "https://www.youtube.com/watch?v=s19-pdfCt-M"
+        "videoUrl": "https://www.youtube.com/watch?v=s19-pdfCt-M",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -53133,7 +55341,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Winter & Snowbound Landscapes"
+    "theme": "Winter & Snowbound Landscapes",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "wMEFlcQcn3I",
@@ -53174,7 +55385,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wMEFlcQcn3I"
+        "videoUrl": "https://www.youtube.com/watch?v=wMEFlcQcn3I",
+        "declutterPrimary": true
       },
       {
         "id": "wMEFlcQcn3I_2",
@@ -53198,7 +55410,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wMEFlcQcn3I"
+        "videoUrl": "https://www.youtube.com/watch?v=wMEFlcQcn3I",
+        "declutterPrimary": true
       },
       {
         "id": "wMEFlcQcn3I_3",
@@ -53222,7 +55435,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wMEFlcQcn3I"
+        "videoUrl": "https://www.youtube.com/watch?v=wMEFlcQcn3I",
+        "declutterPrimary": true
       },
       {
         "id": "wMEFlcQcn3I_4",
@@ -53246,7 +55460,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wMEFlcQcn3I"
+        "videoUrl": "https://www.youtube.com/watch?v=wMEFlcQcn3I",
+        "declutterPrimary": true
       },
       {
         "id": "wMEFlcQcn3I_5",
@@ -53270,7 +55485,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wMEFlcQcn3I"
+        "videoUrl": "https://www.youtube.com/watch?v=wMEFlcQcn3I",
+        "declutterPrimary": true
       },
       {
         "id": "wMEFlcQcn3I_6",
@@ -53294,7 +55510,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wMEFlcQcn3I"
+        "videoUrl": "https://www.youtube.com/watch?v=wMEFlcQcn3I",
+        "declutterPrimary": true
       },
       {
         "id": "wMEFlcQcn3I_7",
@@ -53318,7 +55535,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wMEFlcQcn3I"
+        "videoUrl": "https://www.youtube.com/watch?v=wMEFlcQcn3I",
+        "declutterPrimary": true
       },
       {
         "id": "wMEFlcQcn3I_8",
@@ -53342,7 +55560,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wMEFlcQcn3I"
+        "videoUrl": "https://www.youtube.com/watch?v=wMEFlcQcn3I",
+        "declutterPrimary": true
       },
       {
         "id": "wMEFlcQcn3I_9",
@@ -53366,7 +55585,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wMEFlcQcn3I"
+        "videoUrl": "https://www.youtube.com/watch?v=wMEFlcQcn3I",
+        "declutterPrimary": true
       },
       {
         "id": "wMEFlcQcn3I_10",
@@ -53390,7 +55610,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wMEFlcQcn3I"
+        "videoUrl": "https://www.youtube.com/watch?v=wMEFlcQcn3I",
+        "declutterPrimary": true
       },
       {
         "id": "wMEFlcQcn3I_11",
@@ -53414,7 +55635,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wMEFlcQcn3I"
+        "videoUrl": "https://www.youtube.com/watch?v=wMEFlcQcn3I",
+        "declutterPrimary": true
       },
       {
         "id": "wMEFlcQcn3I_12",
@@ -53438,7 +55660,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wMEFlcQcn3I"
+        "videoUrl": "https://www.youtube.com/watch?v=wMEFlcQcn3I",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 12,
@@ -53450,7 +55673,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "b90lVuK3Hpc",
@@ -53491,7 +55717,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=b90lVuK3Hpc"
+        "videoUrl": "https://www.youtube.com/watch?v=b90lVuK3Hpc",
+        "declutterPrimary": true
       },
       {
         "id": "b90lVuK3Hpc_2",
@@ -53515,7 +55742,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=b90lVuK3Hpc"
+        "videoUrl": "https://www.youtube.com/watch?v=b90lVuK3Hpc",
+        "declutterPrimary": true
       },
       {
         "id": "b90lVuK3Hpc_3",
@@ -53539,7 +55767,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=b90lVuK3Hpc"
+        "videoUrl": "https://www.youtube.com/watch?v=b90lVuK3Hpc",
+        "declutterPrimary": true
       },
       {
         "id": "b90lVuK3Hpc_4",
@@ -53563,7 +55792,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=b90lVuK3Hpc"
+        "videoUrl": "https://www.youtube.com/watch?v=b90lVuK3Hpc",
+        "declutterPrimary": true
       },
       {
         "id": "b90lVuK3Hpc_5",
@@ -53587,7 +55817,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=b90lVuK3Hpc"
+        "videoUrl": "https://www.youtube.com/watch?v=b90lVuK3Hpc",
+        "declutterPrimary": true
       },
       {
         "id": "b90lVuK3Hpc_6",
@@ -53611,7 +55842,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=b90lVuK3Hpc"
+        "videoUrl": "https://www.youtube.com/watch?v=b90lVuK3Hpc",
+        "declutterPrimary": true
       },
       {
         "id": "b90lVuK3Hpc_7",
@@ -53635,7 +55867,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=b90lVuK3Hpc"
+        "videoUrl": "https://www.youtube.com/watch?v=b90lVuK3Hpc",
+        "declutterPrimary": true
       },
       {
         "id": "b90lVuK3Hpc_8",
@@ -53659,7 +55892,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=b90lVuK3Hpc"
+        "videoUrl": "https://www.youtube.com/watch?v=b90lVuK3Hpc",
+        "declutterPrimary": true
       },
       {
         "id": "b90lVuK3Hpc_9",
@@ -53683,7 +55917,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Train Nostalgia & Gare Saint-Lazare",
-        "videoUrl": "https://www.youtube.com/watch?v=b90lVuK3Hpc"
+        "videoUrl": "https://www.youtube.com/watch?v=b90lVuK3Hpc",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -53695,7 +55930,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Train Nostalgia & Gare Saint-Lazare"
+    "theme": "Train Nostalgia & Gare Saint-Lazare",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "gj55gTwrllA",
@@ -53736,7 +55974,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=gj55gTwrllA"
+        "videoUrl": "https://www.youtube.com/watch?v=gj55gTwrllA",
+        "declutterPrimary": true
       },
       {
         "id": "gj55gTwrllA_2",
@@ -53760,7 +55999,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=gj55gTwrllA"
+        "videoUrl": "https://www.youtube.com/watch?v=gj55gTwrllA",
+        "declutterPrimary": true
       },
       {
         "id": "gj55gTwrllA_3",
@@ -53784,7 +56024,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=gj55gTwrllA"
+        "videoUrl": "https://www.youtube.com/watch?v=gj55gTwrllA",
+        "declutterPrimary": true
       },
       {
         "id": "gj55gTwrllA_4",
@@ -53808,7 +56049,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=gj55gTwrllA"
+        "videoUrl": "https://www.youtube.com/watch?v=gj55gTwrllA",
+        "declutterPrimary": true
       },
       {
         "id": "gj55gTwrllA_5",
@@ -53832,7 +56074,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=gj55gTwrllA"
+        "videoUrl": "https://www.youtube.com/watch?v=gj55gTwrllA",
+        "declutterPrimary": true
       },
       {
         "id": "gj55gTwrllA_6",
@@ -53856,7 +56099,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=gj55gTwrllA"
+        "videoUrl": "https://www.youtube.com/watch?v=gj55gTwrllA",
+        "declutterPrimary": true
       },
       {
         "id": "gj55gTwrllA_7",
@@ -53880,7 +56124,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=gj55gTwrllA"
+        "videoUrl": "https://www.youtube.com/watch?v=gj55gTwrllA",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -53892,7 +56137,69 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": true,
+    "duplicateGroup": {
+      "groupId": "cluster_gj55gTwrllA",
+      "canonicalStem": "visual poems | claude monet | enter a renoir painting",
+      "isPrimary": true,
+      "totalCuts": 4,
+      "cuts": [
+        {
+          "id": "gj55gTwrllA",
+          "title": "Visual Poems | Claude Monet | Enter a Renoir Painting | Warm Relaxing Monet Inspired Visual Poetry 3",
+          "channel": "Beautiful Living Art",
+          "durationSec": 126,
+          "durationFormatted": "02:06",
+          "resolution": "3830x2160",
+          "qualityLabel": "4K UHD",
+          "is4K": true,
+          "views": 1700,
+          "wallpaperCount": 7,
+          "isPrimary": true
+        },
+        {
+          "id": "rxz8CSFGKRY",
+          "title": "Visual Poems | Claude Monet | Enter a Renoir Painting | Monet Living Art Piece 17",
+          "channel": "Beautiful Living Art",
+          "durationSec": 209,
+          "durationFormatted": "03:29",
+          "resolution": "1914x1080",
+          "qualityLabel": "1080p FHD",
+          "is4K": false,
+          "views": 497,
+          "wallpaperCount": 7,
+          "isPrimary": false
+        },
+        {
+          "id": "Fpp-ZBkfo28",
+          "title": "Visual Poems | Claude Monet | Enter a Renoir Painting | Monet Living Art Piece 38",
+          "channel": "Beautiful Living Art",
+          "durationSec": 209,
+          "durationFormatted": "03:29",
+          "resolution": "1914x1080",
+          "qualityLabel": "1080p FHD",
+          "is4K": false,
+          "views": 339,
+          "wallpaperCount": 7,
+          "isPrimary": false
+        },
+        {
+          "id": "wsDbLAtIUIA",
+          "title": "Visual Poems | Claude Monet | Enter a Renoir Painting | Monet Living Art Piece 36",
+          "channel": "Beautiful Living Art",
+          "durationSec": 125,
+          "durationFormatted": "02:05",
+          "resolution": "1914x1080",
+          "qualityLabel": "1080p FHD",
+          "is4K": false,
+          "views": 707,
+          "wallpaperCount": 7,
+          "isPrimary": false
+        }
+      ]
+    }
   },
   {
     "id": "7Qm0mrqMvHk",
@@ -53933,7 +56240,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=7Qm0mrqMvHk"
+        "videoUrl": "https://www.youtube.com/watch?v=7Qm0mrqMvHk",
+        "declutterPrimary": true
       },
       {
         "id": "7Qm0mrqMvHk_2",
@@ -53957,7 +56265,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=7Qm0mrqMvHk"
+        "videoUrl": "https://www.youtube.com/watch?v=7Qm0mrqMvHk",
+        "declutterPrimary": true
       },
       {
         "id": "7Qm0mrqMvHk_3",
@@ -53981,7 +56290,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=7Qm0mrqMvHk"
+        "videoUrl": "https://www.youtube.com/watch?v=7Qm0mrqMvHk",
+        "declutterPrimary": true
       },
       {
         "id": "7Qm0mrqMvHk_4",
@@ -54005,7 +56315,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=7Qm0mrqMvHk"
+        "videoUrl": "https://www.youtube.com/watch?v=7Qm0mrqMvHk",
+        "declutterPrimary": true
       },
       {
         "id": "7Qm0mrqMvHk_5",
@@ -54029,7 +56340,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=7Qm0mrqMvHk"
+        "videoUrl": "https://www.youtube.com/watch?v=7Qm0mrqMvHk",
+        "declutterPrimary": true
       },
       {
         "id": "7Qm0mrqMvHk_6",
@@ -54053,7 +56365,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=7Qm0mrqMvHk"
+        "videoUrl": "https://www.youtube.com/watch?v=7Qm0mrqMvHk",
+        "declutterPrimary": true
       },
       {
         "id": "7Qm0mrqMvHk_7",
@@ -54077,7 +56390,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=7Qm0mrqMvHk"
+        "videoUrl": "https://www.youtube.com/watch?v=7Qm0mrqMvHk",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -54089,7 +56403,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "tYqFa62raXE",
@@ -54130,7 +56447,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=tYqFa62raXE"
+        "videoUrl": "https://www.youtube.com/watch?v=tYqFa62raXE",
+        "declutterPrimary": true
       },
       {
         "id": "tYqFa62raXE_2",
@@ -54154,7 +56472,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=tYqFa62raXE"
+        "videoUrl": "https://www.youtube.com/watch?v=tYqFa62raXE",
+        "declutterPrimary": true
       },
       {
         "id": "tYqFa62raXE_3",
@@ -54178,7 +56497,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=tYqFa62raXE"
+        "videoUrl": "https://www.youtube.com/watch?v=tYqFa62raXE",
+        "declutterPrimary": true
       },
       {
         "id": "tYqFa62raXE_4",
@@ -54202,7 +56522,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=tYqFa62raXE"
+        "videoUrl": "https://www.youtube.com/watch?v=tYqFa62raXE",
+        "declutterPrimary": true
       },
       {
         "id": "tYqFa62raXE_5",
@@ -54226,7 +56547,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=tYqFa62raXE"
+        "videoUrl": "https://www.youtube.com/watch?v=tYqFa62raXE",
+        "declutterPrimary": true
       },
       {
         "id": "tYqFa62raXE_6",
@@ -54250,7 +56572,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=tYqFa62raXE"
+        "videoUrl": "https://www.youtube.com/watch?v=tYqFa62raXE",
+        "declutterPrimary": true
       },
       {
         "id": "tYqFa62raXE_7",
@@ -54274,7 +56597,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=tYqFa62raXE"
+        "videoUrl": "https://www.youtube.com/watch?v=tYqFa62raXE",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -54286,7 +56610,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "8jD0pJLju3o",
@@ -54327,7 +56654,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8jD0pJLju3o"
+        "videoUrl": "https://www.youtube.com/watch?v=8jD0pJLju3o",
+        "declutterPrimary": true
       },
       {
         "id": "8jD0pJLju3o_2",
@@ -54351,7 +56679,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8jD0pJLju3o"
+        "videoUrl": "https://www.youtube.com/watch?v=8jD0pJLju3o",
+        "declutterPrimary": true
       },
       {
         "id": "8jD0pJLju3o_3",
@@ -54375,7 +56704,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8jD0pJLju3o"
+        "videoUrl": "https://www.youtube.com/watch?v=8jD0pJLju3o",
+        "declutterPrimary": true
       },
       {
         "id": "8jD0pJLju3o_4",
@@ -54399,7 +56729,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8jD0pJLju3o"
+        "videoUrl": "https://www.youtube.com/watch?v=8jD0pJLju3o",
+        "declutterPrimary": true
       },
       {
         "id": "8jD0pJLju3o_5",
@@ -54423,7 +56754,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8jD0pJLju3o"
+        "videoUrl": "https://www.youtube.com/watch?v=8jD0pJLju3o",
+        "declutterPrimary": true
       },
       {
         "id": "8jD0pJLju3o_6",
@@ -54447,7 +56779,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8jD0pJLju3o"
+        "videoUrl": "https://www.youtube.com/watch?v=8jD0pJLju3o",
+        "declutterPrimary": true
       },
       {
         "id": "8jD0pJLju3o_7",
@@ -54471,7 +56804,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=8jD0pJLju3o"
+        "videoUrl": "https://www.youtube.com/watch?v=8jD0pJLju3o",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -54483,7 +56817,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "fVLCr6U2ojI",
@@ -54524,7 +56861,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=fVLCr6U2ojI"
+        "videoUrl": "https://www.youtube.com/watch?v=fVLCr6U2ojI",
+        "declutterPrimary": true
       },
       {
         "id": "fVLCr6U2ojI_2",
@@ -54548,7 +56886,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=fVLCr6U2ojI"
+        "videoUrl": "https://www.youtube.com/watch?v=fVLCr6U2ojI",
+        "declutterPrimary": true
       },
       {
         "id": "fVLCr6U2ojI_3",
@@ -54572,7 +56911,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=fVLCr6U2ojI"
+        "videoUrl": "https://www.youtube.com/watch?v=fVLCr6U2ojI",
+        "declutterPrimary": true
       },
       {
         "id": "fVLCr6U2ojI_4",
@@ -54596,7 +56936,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=fVLCr6U2ojI"
+        "videoUrl": "https://www.youtube.com/watch?v=fVLCr6U2ojI",
+        "declutterPrimary": true
       },
       {
         "id": "fVLCr6U2ojI_5",
@@ -54620,7 +56961,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=fVLCr6U2ojI"
+        "videoUrl": "https://www.youtube.com/watch?v=fVLCr6U2ojI",
+        "declutterPrimary": true
       },
       {
         "id": "fVLCr6U2ojI_6",
@@ -54644,7 +56986,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=fVLCr6U2ojI"
+        "videoUrl": "https://www.youtube.com/watch?v=fVLCr6U2ojI",
+        "declutterPrimary": true
       },
       {
         "id": "fVLCr6U2ojI_7",
@@ -54668,7 +57011,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=fVLCr6U2ojI"
+        "videoUrl": "https://www.youtube.com/watch?v=fVLCr6U2ojI",
+        "declutterPrimary": true
       },
       {
         "id": "fVLCr6U2ojI_8",
@@ -54692,7 +57036,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=fVLCr6U2ojI"
+        "videoUrl": "https://www.youtube.com/watch?v=fVLCr6U2ojI",
+        "declutterPrimary": true
       },
       {
         "id": "fVLCr6U2ojI_9",
@@ -54716,7 +57061,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Coastal Cliffs, Étretat & Ocean Waves",
-        "videoUrl": "https://www.youtube.com/watch?v=fVLCr6U2ojI"
+        "videoUrl": "https://www.youtube.com/watch?v=fVLCr6U2ojI",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -54728,7 +57074,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Coastal Cliffs, Étretat & Ocean Waves"
+    "theme": "Coastal Cliffs, Étretat & Ocean Waves",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "mU3u9f43XVg",
@@ -54769,7 +57118,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg"
+        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg",
+        "declutterPrimary": true
       },
       {
         "id": "mU3u9f43XVg_2",
@@ -54793,7 +57143,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg"
+        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg",
+        "declutterPrimary": true
       },
       {
         "id": "mU3u9f43XVg_3",
@@ -54817,7 +57168,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg"
+        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg",
+        "declutterPrimary": true
       },
       {
         "id": "mU3u9f43XVg_4",
@@ -54841,7 +57193,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg"
+        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg",
+        "declutterPrimary": true
       },
       {
         "id": "mU3u9f43XVg_5",
@@ -54865,7 +57218,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg"
+        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg",
+        "declutterPrimary": true
       },
       {
         "id": "mU3u9f43XVg_6",
@@ -54889,7 +57243,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg"
+        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg",
+        "declutterPrimary": true
       },
       {
         "id": "mU3u9f43XVg_7",
@@ -54913,7 +57268,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg"
+        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg",
+        "declutterPrimary": true
       },
       {
         "id": "mU3u9f43XVg_8",
@@ -54937,7 +57293,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg"
+        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg",
+        "declutterPrimary": true
       },
       {
         "id": "mU3u9f43XVg_9",
@@ -54961,7 +57318,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg"
+        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg",
+        "declutterPrimary": true
       },
       {
         "id": "mU3u9f43XVg_10",
@@ -54985,7 +57343,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg"
+        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg",
+        "declutterPrimary": true
       },
       {
         "id": "mU3u9f43XVg_11",
@@ -55009,7 +57368,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg"
+        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg",
+        "declutterPrimary": true
       },
       {
         "id": "mU3u9f43XVg_12",
@@ -55033,7 +57393,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg"
+        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg",
+        "declutterPrimary": true
       },
       {
         "id": "mU3u9f43XVg_13",
@@ -55057,7 +57418,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg"
+        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg",
+        "declutterPrimary": true
       },
       {
         "id": "mU3u9f43XVg_14",
@@ -55081,7 +57443,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg"
+        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg",
+        "declutterPrimary": true
       },
       {
         "id": "mU3u9f43XVg_15",
@@ -55105,7 +57468,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg"
+        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg",
+        "declutterPrimary": true
       },
       {
         "id": "mU3u9f43XVg_16",
@@ -55129,7 +57493,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg"
+        "videoUrl": "https://www.youtube.com/watch?v=mU3u9f43XVg",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 16,
@@ -55141,7 +57506,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Water Lilies & Garden Sanctuaries"
+    "theme": "Water Lilies & Garden Sanctuaries",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "k3Ls4Bjx-ZY",
@@ -55182,7 +57550,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=k3Ls4Bjx-ZY"
+        "videoUrl": "https://www.youtube.com/watch?v=k3Ls4Bjx-ZY",
+        "declutterPrimary": true
       },
       {
         "id": "k3Ls4Bjx-ZY_2",
@@ -55206,7 +57575,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=k3Ls4Bjx-ZY"
+        "videoUrl": "https://www.youtube.com/watch?v=k3Ls4Bjx-ZY",
+        "declutterPrimary": true
       },
       {
         "id": "k3Ls4Bjx-ZY_3",
@@ -55230,7 +57600,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=k3Ls4Bjx-ZY"
+        "videoUrl": "https://www.youtube.com/watch?v=k3Ls4Bjx-ZY",
+        "declutterPrimary": true
       },
       {
         "id": "k3Ls4Bjx-ZY_4",
@@ -55254,7 +57625,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=k3Ls4Bjx-ZY"
+        "videoUrl": "https://www.youtube.com/watch?v=k3Ls4Bjx-ZY",
+        "declutterPrimary": true
       },
       {
         "id": "k3Ls4Bjx-ZY_5",
@@ -55278,7 +57650,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=k3Ls4Bjx-ZY"
+        "videoUrl": "https://www.youtube.com/watch?v=k3Ls4Bjx-ZY",
+        "declutterPrimary": true
       },
       {
         "id": "k3Ls4Bjx-ZY_6",
@@ -55302,7 +57675,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=k3Ls4Bjx-ZY"
+        "videoUrl": "https://www.youtube.com/watch?v=k3Ls4Bjx-ZY",
+        "declutterPrimary": true
       },
       {
         "id": "k3Ls4Bjx-ZY_7",
@@ -55326,7 +57700,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Sunlit Countryside & Floral Meadows",
-        "videoUrl": "https://www.youtube.com/watch?v=k3Ls4Bjx-ZY"
+        "videoUrl": "https://www.youtube.com/watch?v=k3Ls4Bjx-ZY",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -55338,7 +57713,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Sunlit Countryside & Floral Meadows"
+    "theme": "Sunlit Countryside & Floral Meadows",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "wsDbLAtIUIA",
@@ -55379,7 +57757,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wsDbLAtIUIA"
+        "videoUrl": "https://www.youtube.com/watch?v=wsDbLAtIUIA",
+        "declutterPrimary": false
       },
       {
         "id": "wsDbLAtIUIA_2",
@@ -55403,7 +57782,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wsDbLAtIUIA"
+        "videoUrl": "https://www.youtube.com/watch?v=wsDbLAtIUIA",
+        "declutterPrimary": false
       },
       {
         "id": "wsDbLAtIUIA_3",
@@ -55427,7 +57807,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wsDbLAtIUIA"
+        "videoUrl": "https://www.youtube.com/watch?v=wsDbLAtIUIA",
+        "declutterPrimary": false
       },
       {
         "id": "wsDbLAtIUIA_4",
@@ -55451,7 +57832,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wsDbLAtIUIA"
+        "videoUrl": "https://www.youtube.com/watch?v=wsDbLAtIUIA",
+        "declutterPrimary": false
       },
       {
         "id": "wsDbLAtIUIA_5",
@@ -55475,7 +57857,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wsDbLAtIUIA"
+        "videoUrl": "https://www.youtube.com/watch?v=wsDbLAtIUIA",
+        "declutterPrimary": false
       },
       {
         "id": "wsDbLAtIUIA_6",
@@ -55499,7 +57882,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wsDbLAtIUIA"
+        "videoUrl": "https://www.youtube.com/watch?v=wsDbLAtIUIA",
+        "declutterPrimary": false
       },
       {
         "id": "wsDbLAtIUIA_7",
@@ -55523,7 +57907,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=wsDbLAtIUIA"
+        "videoUrl": "https://www.youtube.com/watch?v=wsDbLAtIUIA",
+        "declutterPrimary": false
       }
     ],
     "wallpaperCount": 7,
@@ -55535,7 +57920,69 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": false,
+    "hasAlternateCuts": false,
+    "duplicateGroup": {
+      "groupId": "cluster_gj55gTwrllA",
+      "canonicalStem": "visual poems | claude monet | enter a renoir painting",
+      "isPrimary": false,
+      "totalCuts": 4,
+      "cuts": [
+        {
+          "id": "gj55gTwrllA",
+          "title": "Visual Poems | Claude Monet | Enter a Renoir Painting | Warm Relaxing Monet Inspired Visual Poetry 3",
+          "channel": "Beautiful Living Art",
+          "durationSec": 126,
+          "durationFormatted": "02:06",
+          "resolution": "3830x2160",
+          "qualityLabel": "4K UHD",
+          "is4K": true,
+          "views": 1700,
+          "wallpaperCount": 7,
+          "isPrimary": true
+        },
+        {
+          "id": "rxz8CSFGKRY",
+          "title": "Visual Poems | Claude Monet | Enter a Renoir Painting | Monet Living Art Piece 17",
+          "channel": "Beautiful Living Art",
+          "durationSec": 209,
+          "durationFormatted": "03:29",
+          "resolution": "1914x1080",
+          "qualityLabel": "1080p FHD",
+          "is4K": false,
+          "views": 497,
+          "wallpaperCount": 7,
+          "isPrimary": false
+        },
+        {
+          "id": "Fpp-ZBkfo28",
+          "title": "Visual Poems | Claude Monet | Enter a Renoir Painting | Monet Living Art Piece 38",
+          "channel": "Beautiful Living Art",
+          "durationSec": 209,
+          "durationFormatted": "03:29",
+          "resolution": "1914x1080",
+          "qualityLabel": "1080p FHD",
+          "is4K": false,
+          "views": 339,
+          "wallpaperCount": 7,
+          "isPrimary": false
+        },
+        {
+          "id": "wsDbLAtIUIA",
+          "title": "Visual Poems | Claude Monet | Enter a Renoir Painting | Monet Living Art Piece 36",
+          "channel": "Beautiful Living Art",
+          "durationSec": 125,
+          "durationFormatted": "02:05",
+          "resolution": "1914x1080",
+          "qualityLabel": "1080p FHD",
+          "is4K": false,
+          "views": 707,
+          "wallpaperCount": 7,
+          "isPrimary": false
+        }
+      ]
+    }
   },
   {
     "id": "D_wR8L621Es",
@@ -55576,7 +58023,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=D_wR8L621Es"
+        "videoUrl": "https://www.youtube.com/watch?v=D_wR8L621Es",
+        "declutterPrimary": true
       },
       {
         "id": "D_wR8L621Es_2",
@@ -55600,7 +58048,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=D_wR8L621Es"
+        "videoUrl": "https://www.youtube.com/watch?v=D_wR8L621Es",
+        "declutterPrimary": true
       },
       {
         "id": "D_wR8L621Es_3",
@@ -55624,7 +58073,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=D_wR8L621Es"
+        "videoUrl": "https://www.youtube.com/watch?v=D_wR8L621Es",
+        "declutterPrimary": true
       },
       {
         "id": "D_wR8L621Es_4",
@@ -55648,7 +58098,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=D_wR8L621Es"
+        "videoUrl": "https://www.youtube.com/watch?v=D_wR8L621Es",
+        "declutterPrimary": true
       },
       {
         "id": "D_wR8L621Es_5",
@@ -55672,7 +58123,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=D_wR8L621Es"
+        "videoUrl": "https://www.youtube.com/watch?v=D_wR8L621Es",
+        "declutterPrimary": true
       },
       {
         "id": "D_wR8L621Es_6",
@@ -55696,7 +58148,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=D_wR8L621Es"
+        "videoUrl": "https://www.youtube.com/watch?v=D_wR8L621Es",
+        "declutterPrimary": true
       },
       {
         "id": "D_wR8L621Es_7",
@@ -55720,7 +58173,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=D_wR8L621Es"
+        "videoUrl": "https://www.youtube.com/watch?v=D_wR8L621Es",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -55732,7 +58186,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "rxz8CSFGKRY",
@@ -55773,7 +58230,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=rxz8CSFGKRY"
+        "videoUrl": "https://www.youtube.com/watch?v=rxz8CSFGKRY",
+        "declutterPrimary": false
       },
       {
         "id": "rxz8CSFGKRY_2",
@@ -55797,7 +58255,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=rxz8CSFGKRY"
+        "videoUrl": "https://www.youtube.com/watch?v=rxz8CSFGKRY",
+        "declutterPrimary": false
       },
       {
         "id": "rxz8CSFGKRY_3",
@@ -55821,7 +58280,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=rxz8CSFGKRY"
+        "videoUrl": "https://www.youtube.com/watch?v=rxz8CSFGKRY",
+        "declutterPrimary": false
       },
       {
         "id": "rxz8CSFGKRY_4",
@@ -55845,7 +58305,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=rxz8CSFGKRY"
+        "videoUrl": "https://www.youtube.com/watch?v=rxz8CSFGKRY",
+        "declutterPrimary": false
       },
       {
         "id": "rxz8CSFGKRY_5",
@@ -55869,7 +58330,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=rxz8CSFGKRY"
+        "videoUrl": "https://www.youtube.com/watch?v=rxz8CSFGKRY",
+        "declutterPrimary": false
       },
       {
         "id": "rxz8CSFGKRY_6",
@@ -55893,7 +58355,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=rxz8CSFGKRY"
+        "videoUrl": "https://www.youtube.com/watch?v=rxz8CSFGKRY",
+        "declutterPrimary": false
       },
       {
         "id": "rxz8CSFGKRY_7",
@@ -55917,7 +58380,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=rxz8CSFGKRY"
+        "videoUrl": "https://www.youtube.com/watch?v=rxz8CSFGKRY",
+        "declutterPrimary": false
       }
     ],
     "wallpaperCount": 7,
@@ -55929,7 +58393,69 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": false,
+    "hasAlternateCuts": false,
+    "duplicateGroup": {
+      "groupId": "cluster_gj55gTwrllA",
+      "canonicalStem": "visual poems | claude monet | enter a renoir painting",
+      "isPrimary": false,
+      "totalCuts": 4,
+      "cuts": [
+        {
+          "id": "gj55gTwrllA",
+          "title": "Visual Poems | Claude Monet | Enter a Renoir Painting | Warm Relaxing Monet Inspired Visual Poetry 3",
+          "channel": "Beautiful Living Art",
+          "durationSec": 126,
+          "durationFormatted": "02:06",
+          "resolution": "3830x2160",
+          "qualityLabel": "4K UHD",
+          "is4K": true,
+          "views": 1700,
+          "wallpaperCount": 7,
+          "isPrimary": true
+        },
+        {
+          "id": "rxz8CSFGKRY",
+          "title": "Visual Poems | Claude Monet | Enter a Renoir Painting | Monet Living Art Piece 17",
+          "channel": "Beautiful Living Art",
+          "durationSec": 209,
+          "durationFormatted": "03:29",
+          "resolution": "1914x1080",
+          "qualityLabel": "1080p FHD",
+          "is4K": false,
+          "views": 497,
+          "wallpaperCount": 7,
+          "isPrimary": false
+        },
+        {
+          "id": "Fpp-ZBkfo28",
+          "title": "Visual Poems | Claude Monet | Enter a Renoir Painting | Monet Living Art Piece 38",
+          "channel": "Beautiful Living Art",
+          "durationSec": 209,
+          "durationFormatted": "03:29",
+          "resolution": "1914x1080",
+          "qualityLabel": "1080p FHD",
+          "is4K": false,
+          "views": 339,
+          "wallpaperCount": 7,
+          "isPrimary": false
+        },
+        {
+          "id": "wsDbLAtIUIA",
+          "title": "Visual Poems | Claude Monet | Enter a Renoir Painting | Monet Living Art Piece 36",
+          "channel": "Beautiful Living Art",
+          "durationSec": 125,
+          "durationFormatted": "02:05",
+          "resolution": "1914x1080",
+          "qualityLabel": "1080p FHD",
+          "is4K": false,
+          "views": 707,
+          "wallpaperCount": 7,
+          "isPrimary": false
+        }
+      ]
+    }
   },
   {
     "id": "YOpeCXH6bs0",
@@ -55970,7 +58496,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=YOpeCXH6bs0"
+        "videoUrl": "https://www.youtube.com/watch?v=YOpeCXH6bs0",
+        "declutterPrimary": false
       },
       {
         "id": "YOpeCXH6bs0_2",
@@ -55994,7 +58521,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=YOpeCXH6bs0"
+        "videoUrl": "https://www.youtube.com/watch?v=YOpeCXH6bs0",
+        "declutterPrimary": false
       },
       {
         "id": "YOpeCXH6bs0_3",
@@ -56018,7 +58546,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=YOpeCXH6bs0"
+        "videoUrl": "https://www.youtube.com/watch?v=YOpeCXH6bs0",
+        "declutterPrimary": false
       },
       {
         "id": "YOpeCXH6bs0_4",
@@ -56042,7 +58571,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=YOpeCXH6bs0"
+        "videoUrl": "https://www.youtube.com/watch?v=YOpeCXH6bs0",
+        "declutterPrimary": false
       },
       {
         "id": "YOpeCXH6bs0_5",
@@ -56066,7 +58596,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=YOpeCXH6bs0"
+        "videoUrl": "https://www.youtube.com/watch?v=YOpeCXH6bs0",
+        "declutterPrimary": false
       },
       {
         "id": "YOpeCXH6bs0_6",
@@ -56090,7 +58621,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=YOpeCXH6bs0"
+        "videoUrl": "https://www.youtube.com/watch?v=YOpeCXH6bs0",
+        "declutterPrimary": false
       },
       {
         "id": "YOpeCXH6bs0_7",
@@ -56114,7 +58646,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=YOpeCXH6bs0"
+        "videoUrl": "https://www.youtube.com/watch?v=YOpeCXH6bs0",
+        "declutterPrimary": false
       }
     ],
     "wallpaperCount": 7,
@@ -56126,7 +58659,43 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": false,
+    "hasAlternateCuts": false,
+    "duplicateGroup": {
+      "groupId": "cluster_jr38oRbEutQ",
+      "canonicalStem": "visual poems | claude monet | enter an impressionist painting",
+      "isPrimary": false,
+      "totalCuts": 2,
+      "cuts": [
+        {
+          "id": "jr38oRbEutQ",
+          "title": "Visual Poems | Claude Monet | Enter an Impressionist Painting | Living Art and Music 8",
+          "channel": "Beautiful Living Art",
+          "durationSec": 130,
+          "durationFormatted": "02:10",
+          "resolution": "1914x1080",
+          "qualityLabel": "1080p FHD",
+          "is4K": false,
+          "views": 332,
+          "wallpaperCount": 7,
+          "isPrimary": true
+        },
+        {
+          "id": "YOpeCXH6bs0",
+          "title": "Visual Poems | Claude Monet | Enter an Impressionist Painting | AI Living Art Piece 37",
+          "channel": "Beautiful Living Art",
+          "durationSec": 124,
+          "durationFormatted": "02:04",
+          "resolution": "1914x1080",
+          "qualityLabel": "1080p FHD",
+          "is4K": false,
+          "views": 393,
+          "wallpaperCount": 7,
+          "isPrimary": false
+        }
+      ]
+    }
   },
   {
     "id": "3VdQEHlFIe0",
@@ -56167,7 +58736,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=3VdQEHlFIe0"
+        "videoUrl": "https://www.youtube.com/watch?v=3VdQEHlFIe0",
+        "declutterPrimary": true
       },
       {
         "id": "3VdQEHlFIe0_2",
@@ -56191,7 +58761,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=3VdQEHlFIe0"
+        "videoUrl": "https://www.youtube.com/watch?v=3VdQEHlFIe0",
+        "declutterPrimary": true
       },
       {
         "id": "3VdQEHlFIe0_3",
@@ -56215,7 +58786,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=3VdQEHlFIe0"
+        "videoUrl": "https://www.youtube.com/watch?v=3VdQEHlFIe0",
+        "declutterPrimary": true
       },
       {
         "id": "3VdQEHlFIe0_4",
@@ -56239,7 +58811,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=3VdQEHlFIe0"
+        "videoUrl": "https://www.youtube.com/watch?v=3VdQEHlFIe0",
+        "declutterPrimary": true
       },
       {
         "id": "3VdQEHlFIe0_5",
@@ -56263,7 +58836,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=3VdQEHlFIe0"
+        "videoUrl": "https://www.youtube.com/watch?v=3VdQEHlFIe0",
+        "declutterPrimary": true
       },
       {
         "id": "3VdQEHlFIe0_6",
@@ -56287,7 +58861,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=3VdQEHlFIe0"
+        "videoUrl": "https://www.youtube.com/watch?v=3VdQEHlFIe0",
+        "declutterPrimary": true
       },
       {
         "id": "3VdQEHlFIe0_7",
@@ -56311,7 +58886,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=3VdQEHlFIe0"
+        "videoUrl": "https://www.youtube.com/watch?v=3VdQEHlFIe0",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -56323,7 +58899,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "srSfz1cRJ4c",
@@ -56364,7 +58943,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=srSfz1cRJ4c"
+        "videoUrl": "https://www.youtube.com/watch?v=srSfz1cRJ4c",
+        "declutterPrimary": true
       },
       {
         "id": "srSfz1cRJ4c_2",
@@ -56388,7 +58968,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=srSfz1cRJ4c"
+        "videoUrl": "https://www.youtube.com/watch?v=srSfz1cRJ4c",
+        "declutterPrimary": true
       },
       {
         "id": "srSfz1cRJ4c_3",
@@ -56412,7 +58993,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=srSfz1cRJ4c"
+        "videoUrl": "https://www.youtube.com/watch?v=srSfz1cRJ4c",
+        "declutterPrimary": true
       },
       {
         "id": "srSfz1cRJ4c_4",
@@ -56436,7 +59018,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=srSfz1cRJ4c"
+        "videoUrl": "https://www.youtube.com/watch?v=srSfz1cRJ4c",
+        "declutterPrimary": true
       },
       {
         "id": "srSfz1cRJ4c_5",
@@ -56460,7 +59043,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=srSfz1cRJ4c"
+        "videoUrl": "https://www.youtube.com/watch?v=srSfz1cRJ4c",
+        "declutterPrimary": true
       },
       {
         "id": "srSfz1cRJ4c_6",
@@ -56484,7 +59068,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=srSfz1cRJ4c"
+        "videoUrl": "https://www.youtube.com/watch?v=srSfz1cRJ4c",
+        "declutterPrimary": true
       },
       {
         "id": "srSfz1cRJ4c_7",
@@ -56508,7 +59093,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=srSfz1cRJ4c"
+        "videoUrl": "https://www.youtube.com/watch?v=srSfz1cRJ4c",
+        "declutterPrimary": true
       },
       {
         "id": "srSfz1cRJ4c_8",
@@ -56532,7 +59118,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=srSfz1cRJ4c"
+        "videoUrl": "https://www.youtube.com/watch?v=srSfz1cRJ4c",
+        "declutterPrimary": true
       },
       {
         "id": "srSfz1cRJ4c_9",
@@ -56556,7 +59143,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Parisian Life & Belle Époque",
-        "videoUrl": "https://www.youtube.com/watch?v=srSfz1cRJ4c"
+        "videoUrl": "https://www.youtube.com/watch?v=srSfz1cRJ4c",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -56568,7 +59156,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Parisian Life & Belle Époque"
+    "theme": "Parisian Life & Belle Époque",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "Fpp-ZBkfo28",
@@ -56609,7 +59200,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Fpp-ZBkfo28"
+        "videoUrl": "https://www.youtube.com/watch?v=Fpp-ZBkfo28",
+        "declutterPrimary": false
       },
       {
         "id": "Fpp-ZBkfo28_2",
@@ -56633,7 +59225,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Fpp-ZBkfo28"
+        "videoUrl": "https://www.youtube.com/watch?v=Fpp-ZBkfo28",
+        "declutterPrimary": false
       },
       {
         "id": "Fpp-ZBkfo28_3",
@@ -56657,7 +59250,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Fpp-ZBkfo28"
+        "videoUrl": "https://www.youtube.com/watch?v=Fpp-ZBkfo28",
+        "declutterPrimary": false
       },
       {
         "id": "Fpp-ZBkfo28_4",
@@ -56681,7 +59275,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Fpp-ZBkfo28"
+        "videoUrl": "https://www.youtube.com/watch?v=Fpp-ZBkfo28",
+        "declutterPrimary": false
       },
       {
         "id": "Fpp-ZBkfo28_5",
@@ -56705,7 +59300,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Fpp-ZBkfo28"
+        "videoUrl": "https://www.youtube.com/watch?v=Fpp-ZBkfo28",
+        "declutterPrimary": false
       },
       {
         "id": "Fpp-ZBkfo28_6",
@@ -56729,7 +59325,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Fpp-ZBkfo28"
+        "videoUrl": "https://www.youtube.com/watch?v=Fpp-ZBkfo28",
+        "declutterPrimary": false
       },
       {
         "id": "Fpp-ZBkfo28_7",
@@ -56753,7 +59350,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=Fpp-ZBkfo28"
+        "videoUrl": "https://www.youtube.com/watch?v=Fpp-ZBkfo28",
+        "declutterPrimary": false
       }
     ],
     "wallpaperCount": 7,
@@ -56765,7 +59363,69 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": false,
+    "hasAlternateCuts": false,
+    "duplicateGroup": {
+      "groupId": "cluster_gj55gTwrllA",
+      "canonicalStem": "visual poems | claude monet | enter a renoir painting",
+      "isPrimary": false,
+      "totalCuts": 4,
+      "cuts": [
+        {
+          "id": "gj55gTwrllA",
+          "title": "Visual Poems | Claude Monet | Enter a Renoir Painting | Warm Relaxing Monet Inspired Visual Poetry 3",
+          "channel": "Beautiful Living Art",
+          "durationSec": 126,
+          "durationFormatted": "02:06",
+          "resolution": "3830x2160",
+          "qualityLabel": "4K UHD",
+          "is4K": true,
+          "views": 1700,
+          "wallpaperCount": 7,
+          "isPrimary": true
+        },
+        {
+          "id": "rxz8CSFGKRY",
+          "title": "Visual Poems | Claude Monet | Enter a Renoir Painting | Monet Living Art Piece 17",
+          "channel": "Beautiful Living Art",
+          "durationSec": 209,
+          "durationFormatted": "03:29",
+          "resolution": "1914x1080",
+          "qualityLabel": "1080p FHD",
+          "is4K": false,
+          "views": 497,
+          "wallpaperCount": 7,
+          "isPrimary": false
+        },
+        {
+          "id": "Fpp-ZBkfo28",
+          "title": "Visual Poems | Claude Monet | Enter a Renoir Painting | Monet Living Art Piece 38",
+          "channel": "Beautiful Living Art",
+          "durationSec": 209,
+          "durationFormatted": "03:29",
+          "resolution": "1914x1080",
+          "qualityLabel": "1080p FHD",
+          "is4K": false,
+          "views": 339,
+          "wallpaperCount": 7,
+          "isPrimary": false
+        },
+        {
+          "id": "wsDbLAtIUIA",
+          "title": "Visual Poems | Claude Monet | Enter a Renoir Painting | Monet Living Art Piece 36",
+          "channel": "Beautiful Living Art",
+          "durationSec": 125,
+          "durationFormatted": "02:05",
+          "resolution": "1914x1080",
+          "qualityLabel": "1080p FHD",
+          "is4K": false,
+          "views": 707,
+          "wallpaperCount": 7,
+          "isPrimary": false
+        }
+      ]
+    }
   },
   {
     "id": "jr38oRbEutQ",
@@ -56806,7 +59466,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=jr38oRbEutQ"
+        "videoUrl": "https://www.youtube.com/watch?v=jr38oRbEutQ",
+        "declutterPrimary": true
       },
       {
         "id": "jr38oRbEutQ_2",
@@ -56830,7 +59491,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=jr38oRbEutQ"
+        "videoUrl": "https://www.youtube.com/watch?v=jr38oRbEutQ",
+        "declutterPrimary": true
       },
       {
         "id": "jr38oRbEutQ_3",
@@ -56854,7 +59516,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=jr38oRbEutQ"
+        "videoUrl": "https://www.youtube.com/watch?v=jr38oRbEutQ",
+        "declutterPrimary": true
       },
       {
         "id": "jr38oRbEutQ_4",
@@ -56878,7 +59541,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=jr38oRbEutQ"
+        "videoUrl": "https://www.youtube.com/watch?v=jr38oRbEutQ",
+        "declutterPrimary": true
       },
       {
         "id": "jr38oRbEutQ_5",
@@ -56902,7 +59566,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=jr38oRbEutQ"
+        "videoUrl": "https://www.youtube.com/watch?v=jr38oRbEutQ",
+        "declutterPrimary": true
       },
       {
         "id": "jr38oRbEutQ_6",
@@ -56926,7 +59591,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=jr38oRbEutQ"
+        "videoUrl": "https://www.youtube.com/watch?v=jr38oRbEutQ",
+        "declutterPrimary": true
       },
       {
         "id": "jr38oRbEutQ_7",
@@ -56950,7 +59616,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=jr38oRbEutQ"
+        "videoUrl": "https://www.youtube.com/watch?v=jr38oRbEutQ",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -56962,7 +59629,43 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": true,
+    "duplicateGroup": {
+      "groupId": "cluster_jr38oRbEutQ",
+      "canonicalStem": "visual poems | claude monet | enter an impressionist painting",
+      "isPrimary": true,
+      "totalCuts": 2,
+      "cuts": [
+        {
+          "id": "jr38oRbEutQ",
+          "title": "Visual Poems | Claude Monet | Enter an Impressionist Painting | Living Art and Music 8",
+          "channel": "Beautiful Living Art",
+          "durationSec": 130,
+          "durationFormatted": "02:10",
+          "resolution": "1914x1080",
+          "qualityLabel": "1080p FHD",
+          "is4K": false,
+          "views": 332,
+          "wallpaperCount": 7,
+          "isPrimary": true
+        },
+        {
+          "id": "YOpeCXH6bs0",
+          "title": "Visual Poems | Claude Monet | Enter an Impressionist Painting | AI Living Art Piece 37",
+          "channel": "Beautiful Living Art",
+          "durationSec": 124,
+          "durationFormatted": "02:04",
+          "resolution": "1914x1080",
+          "qualityLabel": "1080p FHD",
+          "is4K": false,
+          "views": 393,
+          "wallpaperCount": 7,
+          "isPrimary": false
+        }
+      ]
+    }
   },
   {
     "id": "MGY1oiovo2Q",
@@ -57003,7 +59706,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=MGY1oiovo2Q"
+        "videoUrl": "https://www.youtube.com/watch?v=MGY1oiovo2Q",
+        "declutterPrimary": true
       },
       {
         "id": "MGY1oiovo2Q_2",
@@ -57027,7 +59731,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=MGY1oiovo2Q"
+        "videoUrl": "https://www.youtube.com/watch?v=MGY1oiovo2Q",
+        "declutterPrimary": true
       },
       {
         "id": "MGY1oiovo2Q_3",
@@ -57051,7 +59756,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=MGY1oiovo2Q"
+        "videoUrl": "https://www.youtube.com/watch?v=MGY1oiovo2Q",
+        "declutterPrimary": true
       },
       {
         "id": "MGY1oiovo2Q_4",
@@ -57075,7 +59781,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=MGY1oiovo2Q"
+        "videoUrl": "https://www.youtube.com/watch?v=MGY1oiovo2Q",
+        "declutterPrimary": true
       },
       {
         "id": "MGY1oiovo2Q_5",
@@ -57099,7 +59806,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=MGY1oiovo2Q"
+        "videoUrl": "https://www.youtube.com/watch?v=MGY1oiovo2Q",
+        "declutterPrimary": true
       },
       {
         "id": "MGY1oiovo2Q_6",
@@ -57123,7 +59831,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=MGY1oiovo2Q"
+        "videoUrl": "https://www.youtube.com/watch?v=MGY1oiovo2Q",
+        "declutterPrimary": true
       },
       {
         "id": "MGY1oiovo2Q_7",
@@ -57147,7 +59856,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=MGY1oiovo2Q"
+        "videoUrl": "https://www.youtube.com/watch?v=MGY1oiovo2Q",
+        "declutterPrimary": true
       },
       {
         "id": "MGY1oiovo2Q_8",
@@ -57171,7 +59881,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=MGY1oiovo2Q"
+        "videoUrl": "https://www.youtube.com/watch?v=MGY1oiovo2Q",
+        "declutterPrimary": true
       },
       {
         "id": "MGY1oiovo2Q_9",
@@ -57195,7 +59906,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Water Lilies & Garden Sanctuaries",
-        "videoUrl": "https://www.youtube.com/watch?v=MGY1oiovo2Q"
+        "videoUrl": "https://www.youtube.com/watch?v=MGY1oiovo2Q",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -57207,7 +59919,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Water Lilies & Garden Sanctuaries"
+    "theme": "Water Lilies & Garden Sanctuaries",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "1oHJhkNDEKE",
@@ -57248,7 +59963,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=1oHJhkNDEKE"
+        "videoUrl": "https://www.youtube.com/watch?v=1oHJhkNDEKE",
+        "declutterPrimary": true
       },
       {
         "id": "1oHJhkNDEKE_2",
@@ -57272,7 +59988,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=1oHJhkNDEKE"
+        "videoUrl": "https://www.youtube.com/watch?v=1oHJhkNDEKE",
+        "declutterPrimary": true
       },
       {
         "id": "1oHJhkNDEKE_3",
@@ -57296,7 +60013,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=1oHJhkNDEKE"
+        "videoUrl": "https://www.youtube.com/watch?v=1oHJhkNDEKE",
+        "declutterPrimary": true
       },
       {
         "id": "1oHJhkNDEKE_4",
@@ -57320,7 +60038,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=1oHJhkNDEKE"
+        "videoUrl": "https://www.youtube.com/watch?v=1oHJhkNDEKE",
+        "declutterPrimary": true
       },
       {
         "id": "1oHJhkNDEKE_5",
@@ -57344,7 +60063,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=1oHJhkNDEKE"
+        "videoUrl": "https://www.youtube.com/watch?v=1oHJhkNDEKE",
+        "declutterPrimary": true
       },
       {
         "id": "1oHJhkNDEKE_6",
@@ -57368,7 +60088,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=1oHJhkNDEKE"
+        "videoUrl": "https://www.youtube.com/watch?v=1oHJhkNDEKE",
+        "declutterPrimary": true
       },
       {
         "id": "1oHJhkNDEKE_7",
@@ -57392,7 +60113,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=1oHJhkNDEKE"
+        "videoUrl": "https://www.youtube.com/watch?v=1oHJhkNDEKE",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -57404,7 +60126,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "dY1t_ELpKuc",
@@ -57445,7 +60170,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=dY1t_ELpKuc"
+        "videoUrl": "https://www.youtube.com/watch?v=dY1t_ELpKuc",
+        "declutterPrimary": true
       },
       {
         "id": "dY1t_ELpKuc_2",
@@ -57469,7 +60195,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=dY1t_ELpKuc"
+        "videoUrl": "https://www.youtube.com/watch?v=dY1t_ELpKuc",
+        "declutterPrimary": true
       },
       {
         "id": "dY1t_ELpKuc_3",
@@ -57493,7 +60220,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=dY1t_ELpKuc"
+        "videoUrl": "https://www.youtube.com/watch?v=dY1t_ELpKuc",
+        "declutterPrimary": true
       },
       {
         "id": "dY1t_ELpKuc_4",
@@ -57517,7 +60245,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=dY1t_ELpKuc"
+        "videoUrl": "https://www.youtube.com/watch?v=dY1t_ELpKuc",
+        "declutterPrimary": true
       },
       {
         "id": "dY1t_ELpKuc_5",
@@ -57541,7 +60270,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=dY1t_ELpKuc"
+        "videoUrl": "https://www.youtube.com/watch?v=dY1t_ELpKuc",
+        "declutterPrimary": true
       },
       {
         "id": "dY1t_ELpKuc_6",
@@ -57565,7 +60295,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=dY1t_ELpKuc"
+        "videoUrl": "https://www.youtube.com/watch?v=dY1t_ELpKuc",
+        "declutterPrimary": true
       },
       {
         "id": "dY1t_ELpKuc_7",
@@ -57589,7 +60320,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=dY1t_ELpKuc"
+        "videoUrl": "https://www.youtube.com/watch?v=dY1t_ELpKuc",
+        "declutterPrimary": true
       },
       {
         "id": "dY1t_ELpKuc_8",
@@ -57613,7 +60345,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=dY1t_ELpKuc"
+        "videoUrl": "https://www.youtube.com/watch?v=dY1t_ELpKuc",
+        "declutterPrimary": true
       },
       {
         "id": "dY1t_ELpKuc_9",
@@ -57637,7 +60370,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Pierre-Auguste Renoir",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=dY1t_ELpKuc"
+        "videoUrl": "https://www.youtube.com/watch?v=dY1t_ELpKuc",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 9,
@@ -57649,7 +60383,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Pierre-Auguste Renoir",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "fV5IalilQpc",
@@ -57690,7 +60427,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=fV5IalilQpc"
+        "videoUrl": "https://www.youtube.com/watch?v=fV5IalilQpc",
+        "declutterPrimary": true
       },
       {
         "id": "fV5IalilQpc_2",
@@ -57714,7 +60452,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=fV5IalilQpc"
+        "videoUrl": "https://www.youtube.com/watch?v=fV5IalilQpc",
+        "declutterPrimary": true
       },
       {
         "id": "fV5IalilQpc_3",
@@ -57738,7 +60477,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=fV5IalilQpc"
+        "videoUrl": "https://www.youtube.com/watch?v=fV5IalilQpc",
+        "declutterPrimary": true
       },
       {
         "id": "fV5IalilQpc_4",
@@ -57762,7 +60502,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=fV5IalilQpc"
+        "videoUrl": "https://www.youtube.com/watch?v=fV5IalilQpc",
+        "declutterPrimary": true
       },
       {
         "id": "fV5IalilQpc_5",
@@ -57786,7 +60527,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=fV5IalilQpc"
+        "videoUrl": "https://www.youtube.com/watch?v=fV5IalilQpc",
+        "declutterPrimary": true
       },
       {
         "id": "fV5IalilQpc_6",
@@ -57810,7 +60552,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=fV5IalilQpc"
+        "videoUrl": "https://www.youtube.com/watch?v=fV5IalilQpc",
+        "declutterPrimary": true
       },
       {
         "id": "fV5IalilQpc_7",
@@ -57834,7 +60577,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=fV5IalilQpc"
+        "videoUrl": "https://www.youtube.com/watch?v=fV5IalilQpc",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -57846,7 +60590,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "OPKpzQXzHds",
@@ -57887,7 +60634,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds"
+        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds",
+        "declutterPrimary": true
       },
       {
         "id": "OPKpzQXzHds_2",
@@ -57911,7 +60659,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds"
+        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds",
+        "declutterPrimary": true
       },
       {
         "id": "OPKpzQXzHds_3",
@@ -57935,7 +60684,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds"
+        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds",
+        "declutterPrimary": true
       },
       {
         "id": "OPKpzQXzHds_4",
@@ -57959,7 +60709,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds"
+        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds",
+        "declutterPrimary": true
       },
       {
         "id": "OPKpzQXzHds_5",
@@ -57983,7 +60734,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds"
+        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds",
+        "declutterPrimary": true
       },
       {
         "id": "OPKpzQXzHds_6",
@@ -58007,7 +60759,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds"
+        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds",
+        "declutterPrimary": true
       },
       {
         "id": "OPKpzQXzHds_7",
@@ -58031,7 +60784,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds"
+        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds",
+        "declutterPrimary": true
       },
       {
         "id": "OPKpzQXzHds_8",
@@ -58055,7 +60809,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds"
+        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds",
+        "declutterPrimary": true
       },
       {
         "id": "OPKpzQXzHds_9",
@@ -58079,7 +60834,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds"
+        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds",
+        "declutterPrimary": true
       },
       {
         "id": "OPKpzQXzHds_10",
@@ -58103,7 +60859,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds"
+        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds",
+        "declutterPrimary": true
       },
       {
         "id": "OPKpzQXzHds_11",
@@ -58127,7 +60884,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds"
+        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds",
+        "declutterPrimary": true
       },
       {
         "id": "OPKpzQXzHds_12",
@@ -58151,7 +60909,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds"
+        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds",
+        "declutterPrimary": true
       },
       {
         "id": "OPKpzQXzHds_13",
@@ -58175,7 +60934,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds"
+        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds",
+        "declutterPrimary": true
       },
       {
         "id": "OPKpzQXzHds_14",
@@ -58199,7 +60959,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds"
+        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds",
+        "declutterPrimary": true
       },
       {
         "id": "OPKpzQXzHds_15",
@@ -58223,7 +60984,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds"
+        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds",
+        "declutterPrimary": true
       },
       {
         "id": "OPKpzQXzHds_16",
@@ -58247,7 +61009,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds"
+        "videoUrl": "https://www.youtube.com/watch?v=OPKpzQXzHds",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 16,
@@ -58259,7 +61022,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "WvuFp_ZphFY",
@@ -58300,7 +61066,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=WvuFp_ZphFY"
+        "videoUrl": "https://www.youtube.com/watch?v=WvuFp_ZphFY",
+        "declutterPrimary": true
       },
       {
         "id": "WvuFp_ZphFY_2",
@@ -58324,7 +61091,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=WvuFp_ZphFY"
+        "videoUrl": "https://www.youtube.com/watch?v=WvuFp_ZphFY",
+        "declutterPrimary": true
       },
       {
         "id": "WvuFp_ZphFY_3",
@@ -58348,7 +61116,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=WvuFp_ZphFY"
+        "videoUrl": "https://www.youtube.com/watch?v=WvuFp_ZphFY",
+        "declutterPrimary": true
       },
       {
         "id": "WvuFp_ZphFY_4",
@@ -58372,7 +61141,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=WvuFp_ZphFY"
+        "videoUrl": "https://www.youtube.com/watch?v=WvuFp_ZphFY",
+        "declutterPrimary": true
       },
       {
         "id": "WvuFp_ZphFY_5",
@@ -58396,7 +61166,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=WvuFp_ZphFY"
+        "videoUrl": "https://www.youtube.com/watch?v=WvuFp_ZphFY",
+        "declutterPrimary": true
       },
       {
         "id": "WvuFp_ZphFY_6",
@@ -58420,7 +61191,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=WvuFp_ZphFY"
+        "videoUrl": "https://www.youtube.com/watch?v=WvuFp_ZphFY",
+        "declutterPrimary": true
       },
       {
         "id": "WvuFp_ZphFY_7",
@@ -58444,7 +61216,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Claude Monet",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=WvuFp_ZphFY"
+        "videoUrl": "https://www.youtube.com/watch?v=WvuFp_ZphFY",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -58456,7 +61229,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "qedoqPz7oic",
@@ -58497,7 +61273,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=qedoqPz7oic"
+        "videoUrl": "https://www.youtube.com/watch?v=qedoqPz7oic",
+        "declutterPrimary": true
       },
       {
         "id": "qedoqPz7oic_2",
@@ -58521,7 +61298,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=qedoqPz7oic"
+        "videoUrl": "https://www.youtube.com/watch?v=qedoqPz7oic",
+        "declutterPrimary": true
       },
       {
         "id": "qedoqPz7oic_3",
@@ -58545,7 +61323,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=qedoqPz7oic"
+        "videoUrl": "https://www.youtube.com/watch?v=qedoqPz7oic",
+        "declutterPrimary": true
       },
       {
         "id": "qedoqPz7oic_4",
@@ -58569,7 +61348,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=qedoqPz7oic"
+        "videoUrl": "https://www.youtube.com/watch?v=qedoqPz7oic",
+        "declutterPrimary": true
       },
       {
         "id": "qedoqPz7oic_5",
@@ -58593,7 +61373,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=qedoqPz7oic"
+        "videoUrl": "https://www.youtube.com/watch?v=qedoqPz7oic",
+        "declutterPrimary": true
       },
       {
         "id": "qedoqPz7oic_6",
@@ -58617,7 +61398,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=qedoqPz7oic"
+        "videoUrl": "https://www.youtube.com/watch?v=qedoqPz7oic",
+        "declutterPrimary": true
       },
       {
         "id": "qedoqPz7oic_7",
@@ -58641,7 +61423,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Impressionist Masters",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=qedoqPz7oic"
+        "videoUrl": "https://www.youtube.com/watch?v=qedoqPz7oic",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 7,
@@ -58653,7 +61436,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Impressionist Masters",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "_KdWYOjfmgg",
@@ -58694,7 +61480,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=_KdWYOjfmgg"
+        "videoUrl": "https://www.youtube.com/watch?v=_KdWYOjfmgg",
+        "declutterPrimary": true
       },
       {
         "id": "_KdWYOjfmgg_2",
@@ -58718,7 +61505,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=_KdWYOjfmgg"
+        "videoUrl": "https://www.youtube.com/watch?v=_KdWYOjfmgg",
+        "declutterPrimary": true
       },
       {
         "id": "_KdWYOjfmgg_3",
@@ -58742,7 +61530,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=_KdWYOjfmgg"
+        "videoUrl": "https://www.youtube.com/watch?v=_KdWYOjfmgg",
+        "declutterPrimary": true
       },
       {
         "id": "_KdWYOjfmgg_4",
@@ -58766,7 +61555,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=_KdWYOjfmgg"
+        "videoUrl": "https://www.youtube.com/watch?v=_KdWYOjfmgg",
+        "declutterPrimary": true
       },
       {
         "id": "_KdWYOjfmgg_5",
@@ -58790,7 +61580,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=_KdWYOjfmgg"
+        "videoUrl": "https://www.youtube.com/watch?v=_KdWYOjfmgg",
+        "declutterPrimary": true
       },
       {
         "id": "_KdWYOjfmgg_6",
@@ -58814,7 +61605,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=_KdWYOjfmgg"
+        "videoUrl": "https://www.youtube.com/watch?v=_KdWYOjfmgg",
+        "declutterPrimary": true
       },
       {
         "id": "_KdWYOjfmgg_7",
@@ -58838,7 +61630,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=_KdWYOjfmgg"
+        "videoUrl": "https://www.youtube.com/watch?v=_KdWYOjfmgg",
+        "declutterPrimary": true
       },
       {
         "id": "_KdWYOjfmgg_8",
@@ -58862,7 +61655,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=_KdWYOjfmgg"
+        "videoUrl": "https://www.youtube.com/watch?v=_KdWYOjfmgg",
+        "declutterPrimary": true
       },
       {
         "id": "_KdWYOjfmgg_9",
@@ -58886,7 +61680,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=_KdWYOjfmgg"
+        "videoUrl": "https://www.youtube.com/watch?v=_KdWYOjfmgg",
+        "declutterPrimary": true
       },
       {
         "id": "_KdWYOjfmgg_10",
@@ -58910,7 +61705,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=_KdWYOjfmgg"
+        "videoUrl": "https://www.youtube.com/watch?v=_KdWYOjfmgg",
+        "declutterPrimary": true
       },
       {
         "id": "_KdWYOjfmgg_11",
@@ -58934,7 +61730,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=_KdWYOjfmgg"
+        "videoUrl": "https://www.youtube.com/watch?v=_KdWYOjfmgg",
+        "declutterPrimary": true
       },
       {
         "id": "_KdWYOjfmgg_12",
@@ -58958,7 +61755,8 @@ const ALL_VIDEOS = [
         "downloadProhibited": false,
         "artist": "Vincent van Gogh",
         "theme": "Visual Poems & Living Art Canvases",
-        "videoUrl": "https://www.youtube.com/watch?v=_KdWYOjfmgg"
+        "videoUrl": "https://www.youtube.com/watch?v=_KdWYOjfmgg",
+        "declutterPrimary": true
       }
     ],
     "wallpaperCount": 12,
@@ -58970,7 +61768,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": false,
     "copyrightStatus": "Public Domain Masterworks",
     "artist": "Vincent van Gogh",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   },
   {
     "id": "lz0wa2hDis0",
@@ -58998,7 +61799,10 @@ const ALL_VIDEOS = [
     "downloadProhibited": true,
     "copyrightStatus": "Copyright Reserved (View-Only)",
     "artist": "Claude Monet",
-    "theme": "Visual Poems & Living Art Canvases"
+    "theme": "Visual Poems & Living Art Canvases",
+    "declutterPrimary": true,
+    "hasAlternateCuts": false,
+    "duplicateGroup": null
   }
 ];
 
@@ -59006,6 +61810,7 @@ const ALL_VIDEOS = [
 if (typeof window !== 'undefined') {
     window.PLAYLIST_METADATA = PLAYLIST_METADATA;
     window.PLAYLISTS_CONFIG = PLAYLISTS_CONFIG;
+    window.DUPLICATE_GROUPS = DUPLICATE_GROUPS;
     window.CHANNEL_PROFILES = CHANNEL_PROFILES;
     window.CHANNEL_STATS = CHANNEL_STATS;
     window.CATALOG_ARTISTS = CATALOG_ARTISTS;

@@ -925,6 +925,25 @@ select:focus-visible {
   color: #b45309;
 }
 
+.pill-cuts-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: #ede9fe;
+  color: #6d28d9;
+  border: 1px solid #ddd6fe;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.pill-cuts-tag.pill-alternate-tag {
+  background: #f1f5f9;
+  color: #64748b;
+  border: 1px dashed #cbd5e1;
+}
+
 .video-actions {
   display: flex;
   gap: 8px;
@@ -1470,6 +1489,91 @@ select:focus-visible {
   width: 100%;
   height: 100%;
   border: none;
+}
+
+/* Modal Alternate Cuts Switcher Bar */
+.modal-cuts-bar {
+  background: #182234;
+  padding: 8px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid #283548;
+  flex-wrap: wrap;
+}
+
+.modal-cuts-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #93c5fd;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.modal-cuts-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cut-pill {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e2e8f0;
+  font-size: 0.78rem;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.cut-pill:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.cut-pill.active {
+  background: var(--color-primary, #6366f1);
+  border-color: var(--color-primary, #6366f1);
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.4);
+}
+
+.cut-pill-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 1px 4px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fef08a;
+}
+
+.cut-pill.active .cut-pill-badge {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+.cut-pill-duration {
+  font-family: monospace;
+  font-size: 0.76rem;
+  color: #cbd5e1;
+}
+
+.cut-pill.active .cut-pill-duration {
+  color: #ffffff;
+}
+
+.cut-pill-star {
+  color: #fbbf24;
+  font-size: 0.8rem;
 }
 
 /* Modal Footer Toolbar (Clean, non-clickable static pills vs clickable actions) */
@@ -3227,6 +3331,18 @@ select:focus-visible {
 [data-theme="dark"] .pill-res-tag.tag-4k {
   background: rgba(245, 158, 11, 0.2);
   color: #fcd34d;
+}
+
+[data-theme="dark"] .pill-cuts-tag {
+  background: rgba(109, 40, 217, 0.25);
+  color: #c4b5fd;
+  border-color: rgba(139, 92, 246, 0.35);
+}
+
+[data-theme="dark"] .pill-cuts-tag.pill-alternate-tag {
+  background: rgba(100, 116, 139, 0.2);
+  color: #94a3b8;
+  border-color: rgba(148, 163, 184, 0.3);
 }
 
 [data-theme="dark"] .channel-card-body,

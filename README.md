@@ -6,9 +6,9 @@
 [![Curated Works](https://img.shields.io/badge/Works-220%20Masterworks-blue)](https://lgtkgtv.github.io/monet-living-gallery/)
 [![Wallpapers](https://img.shields.io/badge/Wallpapers-1741%2B%20Snapshots-purple)](https://lgtkgtv.github.io/monet-living-gallery/)
 [![Views](https://img.shields.io/badge/Views-46.5M%20Total-red)](https://lgtkgtv.github.io/monet-living-gallery/)
-[![Tests](https://img.shields.io/badge/Tests-25%2F25%20Passing-success)](https://github.com/lgtkgtv/monet-living-gallery)
+[![Tests](https://img.shields.io/badge/Tests-26%2F26%20Passing-success)](https://github.com/lgtkgtv/monet-living-gallery)
 [![Multi--Playlist](https://img.shields.io/badge/Architecture-Multi--Playlist%20Ready-teal)](https://github.com/lgtkgtv/monet-living-gallery)
-[![Artists](https://img.shields.io/badge/Artists-18%20Masters%20Cataloged-orange)](https://lgtkgtv.github.io/monet-living-gallery/)
+[![Artists](https://img.shields.io/badge/Artists-18%20Masters%20Cataloged-orange)](https://lgtkgtv.github.io/monet-living-gallery)
 
 An interactive, curated digital museum and ultra-high-definition visual archive celebrating **Claude Monet** and the **Impressionist art movement**. 
 
@@ -28,16 +28,18 @@ Derived from curated YouTube collections (beginning with [sh_Monet inspired Visu
   - [5. 💾 Instant Bulk Downloads & Adaptive Wallpapers](#5--instant-bulk-downloads--adaptive-wallpapers)
   - [6. ❤️ Saved Collections & Cross-Device Sharing](#6-️-saved-collections--cross-device-sharing)
   - [7. ⚖️ Ethical Attribution & Copyright Transparency](#7-️-ethical-attribution--copyright-transparency)
+  - [8. 🧹 Multi-Cut De-cluttering & Redundant Segment Management](#8--multi-cut-de-cluttering--redundant-segment-management)
 - [💻 Developer's Perspective (Architecture & Engineering Guide)](#-developers-perspective-architecture--engineering-guide)
   - [1. 🏛️ Core Architecture & Data Pipeline](#1-️-core-architecture--data-pipeline)
   - [2. ☁️ Wallpaper Storage & Scalability Architecture (Git vs LFS vs Cloudflare R2)](#2-️-wallpaper-storage--scalability-architecture-git-vs-lfs-vs-cloudflare-r2)
   - [3. 📚 Generic Multi-Playlist Engine (`core/`)](#3--generic-multi-playlist-engine-core)
   - [4. 🏷️ Taxonomic Catalog & Copyright Engine (`build_webpage.py`)](#4-️-taxonomic-catalog--copyright-engine-build_webpagepy)
-  - [5. 🖼️ Headless Wallpaper Extraction & Anti-Throttling Engine](#5-️-headless-wallpaper-extraction--anti-throttling-engine)
-  - [6. 🤖 GitHub Actions Workflow Dispatch & Automation](#6--github-actions-workflow-dispatch--automation)
-  - [7. ⚡ Client-Side Performance & DOM Virtualization](#7--client-side-performance--dom-virtualization)
-  - [8. 🧪 Test Suite & Quality Verification (25 Integration Tests)](#8--test-suite--quality-verification-25-integration-tests)
-  - [9. 🛠️ Unified Pipeline CLI Reference (`pipeline.py`)](#9-️-unified-pipeline-cli-reference-pipelinepy)
+  - [5. 🧹 Duplicate Title & Multi-Cut Clustering Engine (`build_webpage.py` & `pipeline.py`)](#5--duplicate-title--multi-cut-clustering-engine-build_webpagepy--pipelinepy)
+  - [6. 🖼️ Headless Wallpaper Extraction & Anti-Throttling Engine](#6-️-headless-wallpaper-extraction--anti-throttling-engine)
+  - [7. 🤖 GitHub Actions Workflow Dispatch & Automation](#7--github-actions-workflow-dispatch--automation)
+  - [8. ⚡ Client-Side Performance & DOM Virtualization](#8--client-side-performance--dom-virtualization)
+  - [9. 🧪 Test Suite & Quality Verification (26 Integration Tests)](#9--test-suite--quality-verification-26-integration-tests)
+  - [10. 🛠️ Unified Pipeline CLI Reference (`pipeline.py`)](#10-️-unified-pipeline-cli-reference-pipelinepy)
 - [📁 Repository Structure](#-repository-structure)
 - [📜 License & Curator Credits](#-license--curator-credits)
 
@@ -105,6 +107,13 @@ The central mission of this gallery is art appreciation, historical contemplatio
 - **Encountered Copyright on Download**: Single wallpaper downloads trigger an attribution toast (`⚖️ Downloading wallpaper for personal contemplation · Artwork in Public Domain · Channel: ...`).
 - **Bundled Attribution Document**: All single-video and bulk ZIP downloads bundle an official `COPYRIGHT_AND_ATTRIBUTION.txt` detailing public domain masterwork status, originating YouTube channels, and personal non-commercial contemplation terms.
 - **Copyright Filter (`#copyrightSelect`)**: Easily filter the gallery to show only titles with free wallpaper downloads or explore view-only copyright-reserved titles.
+
+### 8. 🧹 Multi-Cut De-cluttering & Redundant Segment Management
+YouTube creators frequently release the same artwork across multiple cuts and segment lengths (e.g. 2-minute short teaser clips vs 3.5-minute extended cuts, or series uploads like *Piece 17*, *Piece 36*, and *Piece 38* for Monet's *Enter a Renoir Painting*).
+- **Automatic De-clutter Mode (`#declutterSelect`)**: Active by default (`🧹 De-clutter (Primary Cuts Only)`), the gallery automatically collapses redundant segment uploads down to the definitive primary cut—prioritizing native 4K UHD resolutions, complete runtimes, and full wallpaper archives.
+- **Card Multi-Cut Badges**: Masterworks with alternative cuts display an informative badge in the card metadata: `🎞️ 4 Cuts (02:06 · 03:29 · 02:05)`. In full-catalog mode, alternate cuts are explicitly labeled with `✂️ Alternate Cut`.
+- **In-Player Alternate Cuts Switcher**: When viewing any painting in the embedded video player lightbox, an interactive **🎞️ Alternate Cuts** toolbar appears directly below the player frame, allowing visitors to switch between different cuts, durations, and resolutions with a single click.
+- **Toggle to Show All Cuts**: Select `📑 Show All Cuts (Include Alternates)` in the dropdown at any time to browse all 220 uploads without collapsing.
 
 ---
 
@@ -193,7 +202,27 @@ The architecture has been decoupled from single-playlist hardcoding into a reusa
 - **Impressionist Motif Taxonomy (`CATALOG_THEMES`)**: 10 recurring artistic motifs with semantic synonyms mapping visual subjects (e.g. *Water Lilies*, *Coastal Cliffs*, *Winter Snow*, *Giverny Gardens*).
 - **Automated Copyright Tracking**: Classifies video and wallpaper assets as either Public Domain with free downloads or Copyright Reserved (View-Only), ensuring licensing clarity across the UI and export tools.
 
-### 5. 🖼️ Headless Wallpaper Extraction & Anti-Throttling Engine
+### 5. 🧹 Duplicate Title & Multi-Cut Clustering Engine (`build_webpage.py` & `pipeline.py`)
+To eliminate visual clutter caused by creator channels posting different segment cuts, trailers, or re-uploads of the same artwork, `build_webpage.py` incorporates an automated clustering and primary cut detection pipeline:
+- **Title Normalization Pipelines**:
+  - `normalize_exact_title(t)`: Case folds, normalizes quotes (`“`, `”`, `‘`, `’`), strips resolution suffixes (`(4K)`, `(1080p)`, `(HD)`), and condenses whitespace to detect identical re-uploads across playlists.
+  - `clean_canonical_title(t)`: Strips episode, piece, volume, and series suffixes (e.g. `| Monet Living Art Piece 38`, `| AI Living Art Piece 37`, `| Living Art and Music 8`, `| Warm Relaxing...`) to expose the fundamental canvas subject.
+- **Graph-Based Connected Component Clustering (`detect_duplicate_clusters`)**:
+  - Evaluates pairwise relationships: pairs are grouped into a cluster if their exact normalized titles match, OR if they originate from the same creator channel and share the identical canonical artwork stem.
+- **Deterministic Primary Cut Selection**:
+  - Within each cluster, candidate cuts are sorted via a 4-tier ranking key:
+    1. **Native 4K First** (`is4K`): Native 3840×2160 takes priority over 1080p FHD.
+    2. **Full Runtime First** (`durationSec`): Extended complete editions take precedence over short 1–2 minute teaser snippets.
+    3. **Wallpaper Coverage First** (`wallpaperCount`): Titles with pre-extracted high-resolution stills are favored.
+    4. **Community Engagement First** (`views`): Higher view count breaks any remaining ties.
+- **Data Contract & UI Interoperability**:
+  - Every video is enriched with `declutterPrimary: boolean`, `hasAlternateCuts: boolean`, and a `duplicateGroup: { groupId, canonicalStem, isPrimary, totalCuts, cuts: [...] }` payload.
+  - Wallpapers inherit `declutterPrimary` from their parent video, guaranteeing that de-cluttering filters both the video explorer and wallpaper gallery consistently.
+  - `PLAYLIST_METADATA` exports `totalDuplicateGroups`, `alternateCutsCount`, and `declutteredVideosCount`.
+- **Command-Line Duplicate Telemetry**:
+  - Run `python3 pipeline.py --detect-duplicates` to inspect all detected clusters, quality labels, runtimes, and primary designations directly in the console.
+
+### 6. 🖼️ Headless Wallpaper Extraction & Anti-Throttling Engine
 Wallpaper scenes are extracted directly from video streams without consuming YouTube Data API quota:
 - **Zero API Quota**: Uses `yt-dlp` to obtain direct CDN stream URLs and `ffmpeg` to extract uncompressed intra-frame stills.
 - **Intelligent Scenery Sampling**: Timestamp calculation dynamically adapts to video length:
@@ -206,7 +235,7 @@ Wallpaper scenes are extracted directly from video streams without consuming You
 - **Stateful Resumption**: `wallpapers/batch_tracker.json` records status per video (`completed`, `in_progress`, `pending`, `failed`) allowing interruption-tolerant multi-day extractions.
 - **Copyright Exclusion Flag**: The extractor supports `--skip-copyright-restricted` to automatically exclude video titles or channels with copyright reservations (e.g. *Living Art Moments*) from batch extraction runs.
 
-### 6. 🤖 GitHub Actions Workflow Dispatch & Automation
+### 7. 🤖 GitHub Actions Workflow Dispatch & Automation
 The repository includes automated CI/CD workflows under `.github/workflows/`:
 - **`sync.yml`**: Full-featured workflow supporting both automated weekly runs and manual on-demand execution (`workflow_dispatch`):
   ```yaml
@@ -234,20 +263,20 @@ The repository includes automated CI/CD workflows under `.github/workflows/`:
   ```
 - Installs `ffmpeg` and `yt-dlp`, executes the pipeline, and commits updated datasets and extracted wallpapers back to `main`.
 
-### 7. ⚡ Client-Side Performance & DOM Virtualization
+### 8. ⚡ Client-Side Performance & DOM Virtualization
 - **Fast Initial Paint**: Initial render creates only 24 video cards via `DocumentFragment`.
 - **`IntersectionObserver` Sentinel**: Seamlessly loads subsequent 24-card increments as the user scrolls within 400px of the page bottom, maintaining 60 FPS even across hundreds of items.
 - **Focus Trapping & Accessibility**: Full WCAG compliance with keyboard trap utilities (`trapModalFocus`, `restoreFocus`), screen-reader live announcements (`aria-live="polite"`), and clear focus rings.
 - **PWA Service Worker (`sw.js`)**: Cache-First strategy for images, CSS, and audio; Network-First with offline fallback for application data.
 
-### 8. 🧪 Test Suite & Quality Verification (25 Integration Tests)
+### 9. 🧪 Test Suite & Quality Verification (26 Integration Tests)
 The project includes an end-to-end integration test suite in [`tests/test_gallery.js`](tests/test_gallery.js) executing against a simulated DOM environment:
 
 ```bash
 node tests/test_gallery.js
 ```
 
-**25 Verified Test Cases**:
+**26 Verified Test Cases**:
 1. Video card rendering & DOM batch threshold (>=24 cards)
 2. Results counter formatting
 3. Wallpaper grid tab switching
@@ -273,12 +302,16 @@ node tests/test_gallery.js
 23. **Copyright isolation filter** (`VIEW_ONLY` vs `DOWNLOADABLE`)
 24. **Smart search conflict assistance & educational discovery pills** (for uncataloged artists)
 25. **Wallpaper modal rights banner & ZIP download attribution generation** (`COPYRIGHT_AND_ATTRIBUTION.txt`)
+26. **Multi-Cut & Duplicate Title De-cluttering** (detection, filtering, card badges, modal cuts switcher bar)
 
-### 9. 🛠️ Unified Pipeline CLI Reference (`pipeline.py`)
+### 10. 🛠️ Unified Pipeline CLI Reference (`pipeline.py`)
 
 ```bash
 # Display comprehensive archive telemetry (videos, 4K count, channels, wallpapers)
 python3 pipeline.py --status
+
+# Detect duplicate titles, re-uploads, and multi-length segment cuts
+python3 pipeline.py --detect-duplicates
 
 # Recompile data.js, data.json, and CSV catalog from current metadata
 python3 pipeline.py --build
@@ -329,7 +362,7 @@ python3 pipeline.py --serve --port 8000
 ├── monet_playlist_by_channel.csv      # Formatted CSV catalog with resolutions
 ├── monet_playlist_catalog.md          # Formatted Markdown catalog
 ├── tests/
-│   └── test_gallery.js                # 20-point automated integration test suite
+│   └── test_gallery.js                # 26-point automated integration test suite
 ├── jszip.min.js                       # Client-side zip packaging library
 ├── sw.js                              # PWA service worker with offline caching
 ├── manifest.json                      # PWA web app manifest

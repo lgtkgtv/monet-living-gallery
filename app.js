@@ -805,6 +805,16 @@ function createVideoCard(v) {
     }
     const isFav = isFavoriteVideo(v.id);
     const videoDesc = `${escapeQuotes(v.title)} - ${v.qualityLabel} by ${escapeQuotes(v.channel)}`;
+
+    let cutsPillHtml = '';
+    if (v.hasAlternateCuts && v.duplicateGroup && v.duplicateGroup.cuts && v.duplicateGroup.cuts.length > 1) {
+        const cutsDurations = v.duplicateGroup.cuts.map(c => c.durationFormatted).join(' · ');
+        cutsPillHtml = `<span class="pill-cuts-tag" title="Multiple cuts available: ${v.duplicateGroup.cuts.length} versions (${cutsDurations})">🎞️ ${v.duplicateGroup.cuts.length} Cuts (${cutsDurations})</span>`;
+    } else if (v.declutterPrimary === false && v.duplicateGroup) {
+        const primaryCut = v.duplicateGroup.cuts ? v.duplicateGroup.cuts.find(c => c.isPrimary) : null;
+        const primaryTitle = primaryCut ? primaryCut.title : 'Primary Cut';
+        cutsPillHtml = `<span class="pill-cuts-tag pill-alternate-tag" title="Alternate cut of ${escapeQuotes(primaryTitle)}">✂️ Alternate Cut</span>`;
+    }
     
     card.innerHTML = `
         <div class="thumb-container">
@@ -830,6 +840,7 @@ function createVideoCard(v) {
             <div class="video-meta-pills">
                 <span class="pill-res-tag ${v.is4K ? 'tag-4k' : ''}">📐 ${v.resolution}</span>
                 <span class="pill-res-tag">${v.qualityLabel}</span>
+                ${cutsPillHtml}
             </div>
 
             <div class="video-actions">
@@ -1384,6 +1395,7 @@ function applyFilters() {
     const artistEl = document.getElementById('artistSelect');
     const themeEl = document.getElementById('themeSelect');
     const copyrightEl = document.getElementById('copyrightSelect');
+    const declutterEl = document.getElementById('declutterSelect');
 
     const emptyState = document.getElementById('favoritesEmptyState');
     const gridVid = document.getElementById('videosGrid');
@@ -1398,6 +1410,7 @@ function applyFilters() {
     const selectedArtist = (artistEl && artistEl.value) ? artistEl.value : 'ALL';
     const selectedTheme = (themeEl && themeEl.value) ? themeEl.value : 'ALL';
     const selectedCopyright = (copyrightEl && copyrightEl.value) ? copyrightEl.value : 'ALL';
+    const selectedDeclutter = (declutterEl && declutterEl.value) ? declutterEl.value : 'DECLUTTER';
 
     updateActiveSearchChips(rawQuery);
 
@@ -1510,8 +1523,9 @@ function applyFilters() {
             const matchesArtist = checkArtistMatch(v, selectedArtist);
             const matchesTheme = checkThemeMatch(v, selectedTheme);
             const matchesCopyright = checkCopyrightMatch(v, selectedCopyright);
+            const matchesDeclutter = (selectedDeclutter === 'ALL_CUTS') || (v.declutterPrimary !== false);
 
-            return matchesQuery && matchesChannel && matchesRes && matchesPlaylist && matchesArtist && matchesTheme && matchesCopyright;
+            return matchesQuery && matchesChannel && matchesRes && matchesPlaylist && matchesArtist && matchesTheme && matchesCopyright && matchesDeclutter;
         });
 
         if (sortBy === 'views_desc') filtered.sort((a, b) => b.views - a.views);
@@ -1548,8 +1562,9 @@ function applyFilters() {
             const matchesArtist = checkArtistMatch(v, selectedArtist);
             const matchesTheme = checkThemeMatch(v, selectedTheme);
             const matchesCopyright = checkCopyrightMatch(v, selectedCopyright);
+            const matchesDeclutter = (selectedDeclutter === 'ALL_CUTS') || (v.declutterPrimary !== false);
 
-            if (matchesQuery && matchesChannel && matchesRes && matchesPlaylist && matchesArtist && matchesTheme && matchesCopyright && v.wallpapers) {
+            if (matchesQuery && matchesChannel && matchesRes && matchesPlaylist && matchesArtist && matchesTheme && matchesCopyright && matchesDeclutter && v.wallpapers) {
                 v.wallpapers.forEach(wp => {
                     filteredWp.push({
                         ...wp,
@@ -1587,6 +1602,8 @@ function filterTo4K() {
     if (themeSelect) themeSelect.value = 'ALL';
     const copyrightSelect = document.getElementById('copyrightSelect');
     if (copyrightSelect) copyrightSelect.value = 'ALL';
+    const declutterSelect = document.getElementById('declutterSelect');
+    if (declutterSelect) declutterSelect.value = 'DECLUTTER';
     updateActiveSearchChips('');
     applyFilters();
     const container = document.querySelector('main.container');
@@ -1679,6 +1696,8 @@ function resetFilters() {
     if (resSelect) resSelect.value = '4K';
     const copyrightSelect = document.getElementById('copyrightSelect');
     if (copyrightSelect) copyrightSelect.value = 'ALL';
+    const declutterSelect = document.getElementById('declutterSelect');
+    if (declutterSelect) declutterSelect.value = 'DECLUTTER';
     const sortSelect = document.getElementById('sortSelect');
     if (sortSelect) sortSelect.value = 'views_desc';
 
@@ -1698,6 +1717,8 @@ function resetFavoritesFilters() {
     if (resSelect) resSelect.value = 'ALL';
     const copyrightSelect = document.getElementById('copyrightSelect');
     if (copyrightSelect) copyrightSelect.value = 'ALL';
+    const declutterSelect = document.getElementById('declutterSelect');
+    if (declutterSelect) declutterSelect.value = 'DECLUTTER';
     const searchInput = document.getElementById('searchInput');
     if (searchInput) searchInput.value = '';
     applyFilters();
@@ -1740,6 +1761,9 @@ function initFiltersAndEvents() {
 
     const copyrightSelect = document.getElementById('copyrightSelect');
     if (copyrightSelect) copyrightSelect.addEventListener('change', applyFilters);
+
+    const declutterSelect = document.getElementById('declutterSelect');
+    if (declutterSelect) declutterSelect.addEventListener('change', applyFilters);
 
     const sortSelect = document.getElementById('sortSelect');
     if (sortSelect) sortSelect.addEventListener('change', applyFilters);
@@ -1944,6 +1968,25 @@ function openVideoModal(videoId, title, startSec = 0, triggerEl = null) {
         ytDirectLink.href = `https://www.youtube.com/watch?v=${videoId}${startParam}`;
     }
 
+    // Render alternate cuts switcher bar if video is part of a duplicate/multi-cut group
+    const cutsBar = document.getElementById('modalAlternateCutsBar');
+    const cutsList = document.getElementById('modalAlternateCutsList');
+    if (cutsBar && cutsList) {
+        if (video && video.duplicateGroup && video.duplicateGroup.cuts && video.duplicateGroup.cuts.length > 1) {
+            cutsBar.style.display = 'flex';
+            cutsList.innerHTML = video.duplicateGroup.cuts.map(c => `
+                <button class="cut-pill ${c.id === videoId ? 'active' : ''}" onclick="switchModalCut('${c.id}')" title="${escapeQuotes(c.title)}">
+                    <span class="cut-pill-badge">${c.qualityLabel}</span>
+                    <span class="cut-pill-duration">${c.durationFormatted}</span>
+                    ${c.isPrimary ? '<span class="cut-pill-star" title="Primary Cut">★</span>' : ''}
+                </button>
+            `).join('');
+        } else {
+            cutsBar.style.display = 'none';
+            cutsList.innerHTML = '';
+        }
+    }
+
     loadPlayerIframe(videoId, title, startSec);
 
     if (modal) modal.classList.add('open');
@@ -1953,6 +1996,15 @@ function openVideoModal(videoId, title, startSec = 0, triggerEl = null) {
         const closeBtn = modal ? modal.querySelector('.btn-close-modal') : null;
         if (closeBtn) closeBtn.focus();
     }, 50);
+}
+
+function switchModalCut(cutId) {
+    const cutVideo = ALL_VIDEOS.find(v => v.id === cutId);
+    if (!cutVideo) return;
+    openVideoModal(cutId, cutVideo.title, 0);
+}
+if (typeof window !== 'undefined') {
+    window.switchModalCut = switchModalCut;
 }
 
 function openWallpaperFromModal() {

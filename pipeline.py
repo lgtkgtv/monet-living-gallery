@@ -39,6 +39,14 @@ def get_status():
     with open(PLAYLIST_FILE, 'r', encoding='utf-8') as f:
         videos = json.load(f)
     print(f"🎬 Total Catalog Videos:      {len(videos)}")
+    if os.path.exists('data.json'):
+        try:
+            with open('data.json', 'r', encoding='utf-8') as f:
+                dm = json.load(f).get('metadata', {})
+                if dm.get('alternateCutsCount'):
+                    print(f"   De-cluttered Gallery:     {dm.get('declutteredVideosCount')} works ({dm.get('alternateCutsCount')} redundant cuts collapsed across {dm.get('totalDuplicateGroups')} clusters)")
+        except Exception:
+            pass
 
     # 2. Resolutions
     res_cache = {}
@@ -207,6 +215,39 @@ def run_full_sync():
     print("\n✅ Full pipeline sync completed.")
     get_status()
 
+def run_detect_duplicates():
+    print_banner("🔍 Multi-Cut & Duplicate Segment Analysis")
+    if not os.path.exists('data.json'):
+        run_build()
+
+    with open('data.json', 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    meta = data.get('metadata', {})
+    groups = data.get('duplicateGroups', [])
+
+    print("📊 Catalog Overview:")
+    print(f"   • Total Catalog Videos:      {meta.get('totalVideos', 0)}")
+    print(f"   • De-cluttered Gallery Size: {meta.get('declutteredVideosCount', 0)} works")
+    print(f"   • Redundant Alternate Cuts:  {meta.get('alternateCutsCount', 0)} cuts across {meta.get('totalDuplicateGroups', 0)} clusters\n")
+
+    if not groups:
+        print("✅ No duplicate title clusters or multi-length cuts detected.")
+        return
+
+    for idx, g in enumerate(groups, 1):
+        print(f"Cluster #{idx}: {g['canonicalStem'].title()} ({g['totalCuts']} cuts)")
+        print(f"   🏛️ Channel: {g['channel']}")
+        print(f"   🔑 Primary Video: {g['primaryVideoId']}")
+        print("   🎞️ Available Cuts:")
+        for c in g['cuts']:
+            status_tag = "👑 PRIMARY CUT" if c.get('isPrimary') else "✂️ ALTERNATE"
+            print(f"      • [{status_tag}] {c['id']} | {c['qualityLabel']} | {c['durationFormatted']} | {c['views']} views")
+            print(f"        Title: \"{c['title']}\"")
+        print("-" * 64)
+    print("\n💡 Tip: In the Web Gallery, select 'De-clutter (Primary Cuts Only)' to collapse redundant segments,")
+    print("   or click the '🎞️ Alternate Cuts' bar inside any video player lightbox to switch between cuts.\n")
+
 def main():
     parser = argparse.ArgumentParser(
         description="L'Impressionnisme Vivant Unified Pipeline CLI",
@@ -216,6 +257,7 @@ def main():
     parser.add_argument('--refresh', nargs='?', const='', help="One-command manual refresh: pull playlist(s), probe resolutions & rebuild site")
     parser.add_argument('--pull-playlist', nargs='?', const='', help="Fetch fresh playlist JSON (accepts URL, comma-separated URLs, or reads playlists.json)")
     parser.add_argument('--build', action='store_true', help="Rebuild data.js, data.json, and catalog CSV")
+    parser.add_argument('--detect-duplicates', action='store_true', help="Detect duplicate titles, re-uploads, and multi-length segment cuts")
     parser.add_argument('--sync-resolutions', '--update-resolutions', dest='sync_resolutions', action='store_true', help="Probe missing resolutions from YouTube")
     parser.add_argument('--extract', action='store_true', help="Extract wallpaper scenes using batch_wallpaper_extractor.py")
     parser.add_argument('--continuous', action='store_true', help="Continuously extract all pending batches until 100% complete")
@@ -237,6 +279,8 @@ def main():
 
     if args.status:
         get_status()
+    if args.detect_duplicates:
+        run_detect_duplicates()
     if args.refresh is not None:
         target = args.refresh if args.refresh else None
         run_refresh(target)

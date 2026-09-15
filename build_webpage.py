@@ -1,8 +1,141 @@
 import json
 import os
 import csv
+import re
 from collections import defaultdict, Counter
 from core.playlist_engine import load_gallery_config
+
+def normalize_exact_title(title):
+    if not title:
+        return ''
+    t = title.strip().lower()
+    t = re.sub(r'[\u2018\u2019\u201a\u201b\']', "'", t)
+    t = re.sub(r'[\u201c\u201d\u201e\u201f\"]', '"', t)
+    t = re.sub(r'\s*\(?(4k|hd|1080p|uhd|60fps)\)?', '', t, flags=re.IGNORECASE)
+    t = re.sub(r'\s+', ' ', t).strip()
+    return t
+
+def clean_canonical_title(title):
+    if not title:
+        return ''
+    t = normalize_exact_title(title)
+    t = re.sub(r'[\'\"`]', '', t)
+    t = re.sub(r'\s*\|\s*(monet\s+living\s+art\s+piece|ai\s+living\s+art\s+piece|living\s+art\s+and\s+music|piece|part|episode|vol|volume|#)\s*\d+.*$', '', t, flags=re.IGNORECASE)
+    t = re.sub(r'\s*\|\s*warm\s+relaxing\s+.*$', '', t, flags=re.IGNORECASE)
+    t = re.sub(r'\s*\|\s*monet\s+inspired\s+.*$', '', t, flags=re.IGNORECASE)
+    t = re.sub(r'\s*\|\s*living\s+art\s+.*$', '', t, flags=re.IGNORECASE)
+    t = re.sub(r'[\s\|\-]+$', '', t).strip()
+    return t
+
+def detect_duplicate_clusters(videos):
+    """
+    Detect duplicate title clusters and multi-length segment uploads across videos.
+    Identifies primary cut (favoring 4K, longest duration, wallpapers, views)
+    and tags all videos with declutterPrimary, hasAlternateCuts, and duplicateGroup.
+    """
+    adj = defaultdict(set)
+    for i, v1 in enumerate(videos):
+        t1_exact = normalize_exact_title(v1['title'])
+        t1_stem = clean_canonical_title(v1['title'])
+        ch1 = (v1.get('channel') or '').lower()
+        for j in range(i + 1, len(videos)):
+            v2 = videos[j]
+            t2_exact = normalize_exact_title(v2['title'])
+            t2_stem = clean_canonical_title(v2['title'])
+            ch2 = (v2.get('channel') or '').lower()
+
+            is_exact_match = (t1_exact == t2_exact and len(t1_exact) > 5)
+            is_stem_match = (ch1 == ch2 and t1_stem == t2_stem and len(t1_stem) > 5)
+            if is_exact_match or is_stem_match:
+                adj[i].add(j)
+                adj[j].add(i)
+
+    visited = set()
+    clusters = []
+    for i in range(len(videos)):
+        if i not in visited:
+            comp = []
+            stack = [i]
+            visited.add(i)
+            while stack:
+                curr = stack.pop()
+                comp.append(curr)
+                for neighbor in adj[curr]:
+                    if neighbor not in visited:
+                        visited.add(neighbor)
+                        stack.append(neighbor)
+            if len(comp) > 1:
+                clusters.append([videos[idx] for idx in comp])
+
+    cluster_summaries = []
+    for c_idx, cl in enumerate(clusters, 1):
+        # Sort cluster to find primary cut:
+        # 1. 4K first (v['is4K'])
+        # 2. Longer duration first (v['durationSec'])
+        # 3. Has wallpapers first (v['wallpaperCount'])
+        # 4. Highest views first (v['views'])
+        cl.sort(key=lambda x: (
+            1 if x.get('is4K') else 0,
+            x.get('durationSec', 0),
+            x.get('wallpaperCount', 0),
+            x.get('views', 0)
+        ), reverse=True)
+
+        primary_cut = cl[0]
+        group_id = f"cluster_{primary_cut['id']}"
+        canonical_stem = clean_canonical_title(primary_cut['title'])
+
+        cuts_summary = [
+            {
+                'id': c['id'],
+                'title': c['title'],
+                'channel': c['channel'],
+                'durationSec': c['durationSec'],
+                'durationFormatted': c['durationFormatted'],
+                'resolution': c['resolution'],
+                'qualityLabel': c['qualityLabel'],
+                'is4K': c['is4K'],
+                'views': c['views'],
+                'wallpaperCount': c.get('wallpaperCount', 0),
+                'isPrimary': (c['id'] == primary_cut['id'])
+            }
+            for c in cl
+        ]
+
+        cluster_summaries.append({
+            'groupId': group_id,
+            'canonicalStem': canonical_stem,
+            'channel': primary_cut['channel'],
+            'primaryVideoId': primary_cut['id'],
+            'totalCuts': len(cl),
+            'cuts': cuts_summary
+        })
+
+        for c in cl:
+            is_primary = (c['id'] == primary_cut['id'])
+            c['declutterPrimary'] = is_primary
+            c['hasAlternateCuts'] = is_primary
+            c['duplicateGroup'] = {
+                'groupId': group_id,
+                'canonicalStem': canonical_stem,
+                'isPrimary': is_primary,
+                'totalCuts': len(cl),
+                'cuts': cuts_summary
+            }
+            # Update wallpapers for this video
+            for wp in c.get('wallpapers', []):
+                wp['declutterPrimary'] = is_primary
+
+    # For videos that are standalone (cluster size 1):
+    for v in videos:
+        if 'declutterPrimary' not in v:
+            v['declutterPrimary'] = True
+            v['hasAlternateCuts'] = False
+            v['duplicateGroup'] = None
+            for wp in v.get('wallpapers', []):
+                wp['declutterPrimary'] = True
+
+    return cluster_summaries
 
 CATALOG_ARTISTS = [
     {"name": "Claude Monet", "query": "Monet", "icon": "🎨", "era": "French Impressionism"},
@@ -331,6 +464,12 @@ def main():
     # Sort ALL_VIDEOS by views descending by default
     clean_videos.sort(key=lambda x: x['views'], reverse=True)
 
+    # Detect duplicate title clusters and multi-length segment uploads
+    duplicate_groups = detect_duplicate_clusters(clean_videos)
+    total_duplicate_groups = len(duplicate_groups)
+    alternate_cuts_count = sum(len(g['cuts']) - 1 for g in duplicate_groups)
+    decluttered_videos_count = len(clean_videos) - alternate_cuts_count
+
     # Calculate live catalog counts for artists & themes
     computed_artists = []
     for a in CATALOG_ARTISTS:
@@ -370,10 +509,14 @@ const PLAYLIST_METADATA = {{
     totalWallpapers: {sum(v['wallpaperCount'] for v in clean_videos)},
     count4K: {count_4k},
     countFHD: {count_fhd},
-    playlistCount: {len(playlists_list)}
+    playlistCount: {len(playlists_list)},
+    totalDuplicateGroups: {total_duplicate_groups},
+    alternateCutsCount: {alternate_cuts_count},
+    declutteredVideosCount: {decluttered_videos_count}
 }};
 
 const PLAYLISTS_CONFIG = {json.dumps(playlists_list, indent=2, ensure_ascii=False)};
+const DUPLICATE_GROUPS = {json.dumps(duplicate_groups, indent=2, ensure_ascii=False)};
 const CHANNEL_PROFILES = {json.dumps(channel_profiles, indent=2, ensure_ascii=False)};
 const CHANNEL_STATS = {json.dumps(channel_stats, indent=2, ensure_ascii=False)};
 const CATALOG_ARTISTS = {json.dumps(computed_artists, indent=2, ensure_ascii=False)};
@@ -384,6 +527,7 @@ const ALL_VIDEOS = {json.dumps(clean_videos, indent=2, ensure_ascii=False)};
 if (typeof window !== 'undefined') {{
     window.PLAYLIST_METADATA = PLAYLIST_METADATA;
     window.PLAYLISTS_CONFIG = PLAYLISTS_CONFIG;
+    window.DUPLICATE_GROUPS = DUPLICATE_GROUPS;
     window.CHANNEL_PROFILES = CHANNEL_PROFILES;
     window.CHANNEL_STATS = CHANNEL_STATS;
     window.CATALOG_ARTISTS = CATALOG_ARTISTS;
@@ -406,9 +550,13 @@ if (typeof window !== 'undefined') {{
             'totalWallpapers': sum(v['wallpaperCount'] for v in clean_videos),
             'count4K': count_4k,
             'countFHD': count_fhd,
-            'playlistCount': len(playlists_list)
+            'playlistCount': len(playlists_list),
+            'totalDuplicateGroups': total_duplicate_groups,
+            'alternateCutsCount': alternate_cuts_count,
+            'declutteredVideosCount': decluttered_videos_count
         },
         'playlistsConfig': playlists_list,
+        'duplicateGroups': duplicate_groups,
         'channelProfiles': channel_profiles,
         'channelStats': channel_stats,
         'artists': computed_artists,
@@ -419,7 +567,7 @@ if (typeof window !== 'undefined') {{
     with open('data.json', 'w', encoding='utf-8') as f:
         json.dump(data_payload, f, separators=(',', ':'), ensure_ascii=False)
 
-    print(f'data.js and data.json updated: {len(clean_videos)} videos, {count_4k} in 4K, {sum(v["wallpaperCount"] for v in clean_videos)} wallpapers.')
+    print(f'data.js and data.json updated: {len(clean_videos)} videos ({decluttered_videos_count} decluttered, {alternate_cuts_count} alternate cuts across {total_duplicate_groups} clusters), {count_4k} in 4K, {sum(v["wallpaperCount"] for v in clean_videos)} wallpapers.')
 
     # Update CSV with resolution columns
     with open('monet_playlist_by_channel.csv', 'w', newline='', encoding='utf-8') as f:

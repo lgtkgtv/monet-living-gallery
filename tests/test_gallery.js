@@ -291,10 +291,86 @@ if (!attrText.includes('IMPRESSIONIST LIVING GALLERY') || !attrText.includes('TE
 }
 console.log('[PASS] Lightbox rights banner & ZIP download attribution verification successful');
 
+// Verification 26: Multi-Cut & Duplicate Title De-cluttering
+dom.window.resetFilters();
+const declutterSelect = dom.window.document.getElementById('declutterSelect');
+if (!declutterSelect) throw new Error('Expected #declutterSelect to exist in DOM');
+if (declutterSelect.value !== 'DECLUTTER') {
+    throw new Error(`Expected declutterSelect to default to DECLUTTER, got ${declutterSelect.value}`);
+}
+
+// 26a: Verify DUPLICATE_GROUPS and metadata
+if (!Array.isArray(dom.window.DUPLICATE_GROUPS) || dom.window.DUPLICATE_GROUPS.length === 0) {
+    throw new Error('Expected DUPLICATE_GROUPS to contain detected multi-cut clusters');
+}
+const totalAlternateCuts = dom.window.PLAYLIST_METADATA.alternateCutsCount;
+if (typeof totalAlternateCuts !== 'number' || totalAlternateCuts <= 0) {
+    throw new Error('Expected PLAYLIST_METADATA.alternateCutsCount to be a positive number');
+}
+console.log(`[PASS] Multi-cut detection: ${dom.window.DUPLICATE_GROUPS.length} duplicate clusters detected (${totalAlternateCuts} redundant cuts tagged)`);
+
+// 26b: Test de-clutter filter behavior in videos grid
+const chSel = dom.window.document.getElementById('channelSelect');
+const rSel = dom.window.document.getElementById('resSelect');
+chSel.value = 'Beautiful Living Art';
+rSel.value = 'ALL';
+declutterSelect.value = 'DECLUTTER';
+dom.window.applyFilters();
+
+const declutteredCards = dom.window.document.querySelectorAll('#videosGrid .video-card');
+const primaryCutVid = dom.window.ALL_VIDEOS.find(v => v.id === 'gj55gTwrllA');
+if (!primaryCutVid || !primaryCutVid.hasAlternateCuts) {
+    throw new Error('Expected gj55gTwrllA to be tagged as primary cut with alternate cuts');
+}
+
+// Switch to ALL_CUTS
+declutterSelect.value = 'ALL_CUTS';
+dom.window.applyFilters();
+const allCutsCards = dom.window.document.querySelectorAll('#videosGrid .video-card');
+if (allCutsCards.length <= declutteredCards.length) {
+    throw new Error(`Expected more cards when ALL_CUTS is selected (got ${allCutsCards.length} vs ${declutteredCards.length})`);
+}
+console.log(`[PASS] De-clutter filter toggling: ${declutteredCards.length} primary cards vs ${allCutsCards.length} all-cuts cards`);
+
+// 26c: Alternate cuts badges on video cards
+const altPills = dom.window.document.querySelectorAll('#videosGrid .pill-alternate-tag');
+const cutsPills = dom.window.document.querySelectorAll('#videosGrid .pill-cuts-tag');
+if (altPills.length === 0) throw new Error('Expected alternate cuts to display .pill-alternate-tag in ALL_CUTS view');
+if (cutsPills.length === 0) throw new Error('Expected primary cuts to display .pill-cuts-tag badge');
+console.log(`[PASS] Card badges: rendered ${cutsPills.length} multi-cut badges and ${altPills.length} alternate badges`);
+
+// 26d: Video Player Lightbox Alternate Cuts Switcher Bar
+dom.window.openVideoModal('gj55gTwrllA', 'Enter a Renoir Painting', 0);
+const modalCutsBar = dom.window.document.getElementById('modalAlternateCutsBar');
+const cutPills = dom.window.document.querySelectorAll('#modalAlternateCutsList .cut-pill');
+if (!modalCutsBar || modalCutsBar.style.display === 'none') {
+    throw new Error('Expected modalAlternateCutsBar to be visible when watching video with alternate cuts');
+}
+if (cutPills.length !== 4) {
+    throw new Error(`Expected 4 cut pills in modal switcher bar for Enter a Renoir Painting cluster, got ${cutPills.length}`);
+}
+
+// Test switching cut inside modal
+dom.window.switchModalCut('rxz8CSFGKRY');
+const activePill = dom.window.document.querySelector('#modalAlternateCutsList .cut-pill.active');
+if (!activePill) throw new Error('Expected active cut pill after switchModalCut');
+dom.window.closeVideoModal();
+
+// Standalone video (no duplicates) should hide cuts bar
+const standaloneVid = dom.window.ALL_VIDEOS.find(v => !v.duplicateGroup);
+if (standaloneVid) {
+    dom.window.openVideoModal(standaloneVid.id, standaloneVid.title, 0);
+    if (modalCutsBar.style.display !== 'none') {
+        throw new Error('Expected modalAlternateCutsBar to be hidden for standalone title without duplicates');
+    }
+    dom.window.closeVideoModal();
+}
+console.log('[PASS] Video modal alternate cuts switcher bar verified: interactive switching & clean isolation');
+
 if (errors.length > 0) {
     console.error('❌ Uncaught runtime errors:', errors);
     process.exit(1);
 }
 
-console.log('\n🎉 ALL 25 VERIFICATION TESTS PASSED SUCCESSFULLY WITH 0 ERRORS!\n');
+console.log('\n🎉 ALL 26 VERIFICATION TESTS PASSED SUCCESSFULLY WITH 0 ERRORS!\n');
 
