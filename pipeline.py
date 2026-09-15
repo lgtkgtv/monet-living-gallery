@@ -114,10 +114,12 @@ def run_sync_resolutions():
         print("❌ update_resolutions.py failed.")
     return res.returncode == 0
 
-def run_extract(batch_size=10, tier=None, delay=3.0):
+def run_extract(batch_size=10, tier=None, delay=3.0, continuous=False):
     cmd = [sys.executable, 'batch_wallpaper_extractor.py', '--batch-size', str(batch_size), '--delay', str(delay)]
     if tier:
         cmd.extend(['--tier', tier.lower()])
+    if continuous:
+        cmd.append('--continuous')
     print(f"🖼️ Running wallpaper extraction: {' '.join(cmd)}...")
     res = subprocess.run(cmd, capture_output=False)
     return res.returncode == 0
@@ -214,6 +216,7 @@ def main():
     parser.add_argument('--build', action='store_true', help="Rebuild data.js, data.json, and catalog CSV")
     parser.add_argument('--sync-resolutions', '--update-resolutions', dest='sync_resolutions', action='store_true', help="Probe missing resolutions from YouTube")
     parser.add_argument('--extract', action='store_true', help="Extract wallpaper scenes using batch_wallpaper_extractor.py")
+    parser.add_argument('--continuous', action='store_true', help="Continuously extract all pending batches until 100% complete")
     parser.add_argument('--batch-size', type=int, default=10, help="Batch size for wallpaper extraction (default: 10)")
     parser.add_argument('--tier', type=str.upper, choices=['4K', 'FHD', 'ALL'], default=None, help="Resolution tier filter for extraction")
     parser.add_argument('--delay', type=float, default=3.0, help="Anti-throttling delay in seconds between video extractions")
@@ -241,7 +244,7 @@ def main():
     if args.sync_resolutions:
         run_sync_resolutions()
     if args.extract:
-        run_extract(batch_size=args.batch_size, tier=args.tier, delay=args.delay)
+        run_extract(batch_size=args.batch_size, tier=args.tier, delay=args.delay, continuous=args.continuous)
     if args.build:
         run_build()
     if args.sync:

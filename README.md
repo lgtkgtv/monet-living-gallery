@@ -4,14 +4,14 @@
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Gallery-brightgreen?logo=github)](https://lgtkgtv.github.io/monet-living-gallery/)
 [![4K UHD](https://img.shields.io/badge/Resolution-4K%20UHD%20Default-gold)](https://lgtkgtv.github.io/monet-living-gallery/)
 [![Curated Works](https://img.shields.io/badge/Works-220%20Masterworks-blue)](https://lgtkgtv.github.io/monet-living-gallery/)
-[![Wallpapers](https://img.shields.io/badge/Wallpapers-712%2B%20Snapshots-purple)](https://lgtkgtv.github.io/monet-living-gallery/)
+[![Wallpapers](https://img.shields.io/badge/Wallpapers-1741%2B%20Snapshots-purple)](https://lgtkgtv.github.io/monet-living-gallery/)
 [![Views](https://img.shields.io/badge/Views-46.5M%20Total-red)](https://lgtkgtv.github.io/monet-living-gallery/)
 [![Tests](https://img.shields.io/badge/Tests-20%2F20%20Passing-success)](https://github.com/lgtkgtv/monet-living-gallery)
 [![Multi--Playlist](https://img.shields.io/badge/Architecture-Multi--Playlist%20Ready-teal)](https://github.com/lgtkgtv/monet-living-gallery)
 
 An interactive, curated digital museum and ultra-high-definition visual archive celebrating **Claude Monet** and the **Impressionist art movement**. 
 
-Derived from curated YouTube collections (beginning with [sh_Monet inspired Visual Arts](https://www.youtube.com/playlist?list=PLeqGkucOU6lA)), the gallery catalogs **220 masterworks** across **41 distinct artistic channels**, delivering high-definition video curation, an extensive high-resolution wallpaper archive (100% of 4K titles + growing 1080p FHD backfill), fullscreen cinematic Ken Burns slideshow motion, atmospheric classical audio, and seamless cross-device collection sharing.
+Derived from curated YouTube collections (beginning with [sh_Monet inspired Visual Arts](https://www.youtube.com/playlist?list=PLeqGkucOU6lA)), the gallery catalogs **220 masterworks** across **41 distinct artistic channels**, delivering high-definition video curation, an extensive high-resolution wallpaper archive (**100% 4K UHD & 100% 1080p FHD coverage; 1,741+ wallpapers**), fullscreen cinematic Ken Burns slideshow motion, atmospheric classical audio, and seamless cross-device collection sharing.
 
 🌐 **Live Web Application**: **[https://lgtkgtv.github.io/monet-living-gallery/](https://lgtkgtv.github.io/monet-living-gallery/)**
 
@@ -61,7 +61,7 @@ Whether you are seeking quiet study accompaniment, high-resolution desktop backg
 ```
 
 ### 1. 🎨 The Living Gallery & 4K UHD Masterworks
-- **Default Native 4K Experience**: The gallery defaults to filtering by **Native 4K UHD (3840×2160)**, instantly presenting 47 museum-grade living canvases where individual impasto brushstrokes and canvas textures are rendered with cinematic fidelity.
+- **Default Native 4K Experience**: The gallery defaults to filtering by **Native 4K UHD (3840×2160)**, instantly presenting 58 museum-grade living canvases where individual impasto brushstrokes and canvas textures are rendered with cinematic fidelity.
 - **Midnight Gallery Dark Theme**: The interface defaults to an immersive deep midnight slate palette (`#0a0e14`) paired with authentic French cursive calligraphy headings. Canvases illuminate the screen without glare or visual distractions. A 1-click toggle switches to **Classic Museum Parchment** mode if preferred.
 
 ### 2. 🔍 Guided Exploration & Channel Profiles

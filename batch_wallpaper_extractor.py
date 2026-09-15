@@ -492,6 +492,7 @@ def main():
     parser.add_argument("--tier", choices=["all", "4k", "fhd"], default="all", help="Resolution tier to prioritize (default: all)")
     parser.add_argument("--delay", type=float, default=3.0, help="Polite delay between extractions in seconds (default: 3.0)")
     parser.add_argument("--rebuild", action="store_true", help="Rebuild metadata and data.js from disk")
+    parser.add_argument("--continuous", action="store_true", help="Continuously process all remaining batches until 100% complete")
 
     args = parser.parse_args()
 
@@ -510,6 +511,32 @@ def main():
         return
 
     tier_filter = None if args.tier == "all" else args.tier
+
+    if args.continuous:
+        print(f"\n🔄 Starting Continuous Wallpaper Extraction (Tier: {args.tier.upper()}, Batch Size: {args.batch_size}, Delay: {args.delay}s)...")
+        batch_num = 1
+        while True:
+            playlist, res_cache = load_playlist_and_resolutions()
+            tracker = load_or_init_tracker(playlist, res_cache)
+            vids = list(tracker["videos"].values())
+            if tier_filter == "4k":
+                candidates = [v for v in vids if v.get("is_4k")]
+            elif tier_filter == "fhd":
+                candidates = [v for v in vids if not v.get("is_4k") and v.get("height", 0) >= 1080]
+            else:
+                candidates = vids
+            queue = [
+                v for v in candidates
+                if v["status"] == "pending" or (v["status"] == "failed" and v.get("retry_count", 0) < 2)
+            ]
+            if not queue:
+                print(f"\n🎉 100% COMPLETE! All {len(candidates)} {args.tier.upper()} titles have been successfully processed!")
+                break
+            print(f"\n📦 === Running Batch #{batch_num} ({min(args.batch_size, len(queue))} of {len(queue)} remaining) ===")
+            run_batch(batch_size=args.batch_size, tier_filter=tier_filter, delay=args.delay)
+            batch_num += 1
+        return
+
     run_batch(batch_size=args.batch_size, tier_filter=tier_filter, delay=args.delay)
 
 if __name__ == "__main__":
