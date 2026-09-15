@@ -1586,6 +1586,43 @@ function applyFilters() {
         renderWallpapers(filteredWp);
         updateWallpaperDownloadBar(filteredWp);
     }
+    updateMobileFilterCount();
+}
+
+function updateMobileFilterCount() {
+    const artistSelect = document.getElementById('artistSelect');
+    const themeSelect = document.getElementById('themeSelect');
+    const channelSelect = document.getElementById('channelSelect');
+    const resSelect = document.getElementById('resSelect');
+    const copyrightSelect = document.getElementById('copyrightSelect');
+    const declutterSelect = document.getElementById('declutterSelect');
+    const sortSelect = document.getElementById('sortSelect');
+    const badge = document.getElementById('mobileActiveFilterCount');
+    const toggleBtn = document.getElementById('mobileFilterToggleBtn');
+
+    let count = 0;
+    if (artistSelect && artistSelect.value !== 'ALL') count++;
+    if (themeSelect && themeSelect.value !== 'ALL') count++;
+    if (channelSelect && channelSelect.value !== 'ALL') count++;
+    if (resSelect && resSelect.value !== '4K' && resSelect.value !== 'ALL') count++;
+    if (copyrightSelect && copyrightSelect.value !== 'ALL') count++;
+    if (declutterSelect && declutterSelect.value !== 'DECLUTTER') count++;
+    if (sortSelect && sortSelect.value !== 'views_desc') count++;
+
+    if (badge) badge.textContent = count;
+    if (toggleBtn) {
+        toggleBtn.classList.toggle('has-active-filters', count > 0);
+    }
+}
+
+function toggleMobileFilters() {
+    const group = document.getElementById('filterGroup');
+    const btn = document.getElementById('mobileFilterToggleBtn');
+    const arrow = document.getElementById('mobileFilterArrow');
+    if (!group) return;
+    const isOpen = group.classList.toggle('mobile-open');
+    if (btn) btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    if (arrow) arrow.textContent = isOpen ? '▴' : '▾';
 }
 
 function filterTo4K() {
@@ -2672,6 +2709,11 @@ function startSlideshow(startIndex = 0, customList = null, isSingleVideo = false
     filterSlideshowByFormFactor(startIndex);
     startSlideshowTimer();
 
+    // Auto-start ambient classical music on slideshow launch if not already playing
+    if (!isAudioPlaying) {
+        toggleSlideshowAudio();
+    }
+
     // Request native browser fullscreen if supported
     try {
         if (overlay.requestFullscreen) {
@@ -2826,7 +2868,7 @@ function toggleGlobalAudio() {
     toggleSlideshowAudio();
 }
 
-let slideshowKenBurnsEnabled = false;
+let slideshowKenBurnsEnabled = true;
 
 function toggleSlideshowFit() {
     slideshowFitMode = (slideshowFitMode === 'contain') ? 'cover' : 'contain';

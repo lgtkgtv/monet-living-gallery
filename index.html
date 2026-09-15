@@ -88,14 +88,14 @@
 
             <!-- Compact Single-Line Curation Statistics -->
             <div class="hero-stats-strip" id="heroStatsStrip">
-                <span class="stat-badge">🎨 Curated Works: <strong id="statTotalVideos">220</strong></span>
+                <span class="stat-badge">🎨 Curated Works: <strong id="statTotalVideos">237</strong></span>
                 <button class="stat-badge stat-gold stat-clickable" onclick="filterTo4K()" title="Filter to Native 4K UHD Masterworks">
-                    👑 Native 4K UHD: <strong id="stat4kCount">58 Works</strong>
+                    👑 Native 4K UHD: <strong id="stat4kCount">69 Works</strong>
                 </button>
-                <span class="stat-badge stat-accent">🖼️ Wallpapers: <strong id="statWallpapersCount">1,741+</strong></span>
-                <span class="stat-badge">👁️ Cumulative Views: <strong id="statTotalViews">46.5M</strong></span>
+                <span class="stat-badge stat-accent">🖼️ Wallpapers: <strong id="statWallpapersCount">1,766</strong></span>
+                <span class="stat-badge">👁️ Cumulative Views: <strong id="statTotalViews">53M+</strong></span>
                 <button class="stat-badge stat-clickable" onclick="switchMainTab('channels')" title="Explore Channel Guides &amp; Aesthetic Profiles">
-                    🏛️ Channels: <strong id="statChannelCount">41</strong> ↗
+                    🏛️ Channels: <strong id="statChannelCount">43</strong> ↗
                 </button>
             </div>
         </div>
@@ -131,7 +131,13 @@
                     </div>
                 </div>
 
-                <div class="filter-group">
+                <!-- Mobile Progressive Disclosure Toggle for Filter Dropdowns -->
+                <button type="button" id="mobileFilterToggleBtn" class="mobile-filter-toggle-btn" onclick="toggleMobileFilters()" aria-expanded="false" aria-controls="filterGroup">
+                    <span>⚙️ Filters &amp; Refine (<span id="mobileActiveFilterCount">0</span> active)</span>
+                    <span id="mobileFilterArrow" class="filter-toggle-arrow">▾</span>
+                </button>
+
+                <div class="filter-group" id="filterGroup">
                     <select id="playlistSelect" class="select-dropdown" style="display: none;" title="Filter by Curated Playlist">
                         <option value="ALL">📚 All Playlists</option>
                     </select>
@@ -149,11 +155,11 @@
                     </select>
 
                     <select id="resSelect" class="select-dropdown">
-                        <option value="4K" selected>👑 4K UHD Only (58 works)</option>
-                        <option value="1080P_PLUS">💎 1080p HD or better (214 works)</option>
-                        <option value="1080P_EXACT">✨ 1080p Full HD (156 works)</option>
-                        <option value="ALL">All Resolutions (220 works)</option>
-                        <option value="OTHER">Standard HD (720p / 6 works)</option>
+                        <option value="4K" selected>👑 4K UHD Only (69 works)</option>
+                        <option value="1080P_PLUS">💎 1080p HD or better (226 works)</option>
+                        <option value="1080P_EXACT">✨ 1080p Full HD (157 works)</option>
+                        <option value="ALL">All Resolutions (237 works)</option>
+                        <option value="OTHER">Standard HD (720p / 11 works)</option>
                     </select>
 
                     <select id="copyrightSelect" class="select-dropdown" title="Filter by Copyright & Download Permission">
@@ -401,7 +407,7 @@
                     🖼️
                 </button>
 
-                <button class="slideshow-btn-icon" id="slideshowKenBurnsBtn" onclick="toggleSlideshowKenBurns()" aria-label="Toggle Ken Burns cinematic pan and zoom motion" title="Toggle Ken Burns Cinematic Motion (K)">
+                <button class="slideshow-btn-icon active" id="slideshowKenBurnsBtn" onclick="toggleSlideshowKenBurns()" aria-label="Toggle Ken Burns cinematic pan and zoom motion" title="Ken Burns Cinematic Motion active — Click to disable (K)">
                     🎬
                 </button>
 

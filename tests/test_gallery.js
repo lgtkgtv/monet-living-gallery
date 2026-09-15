@@ -185,16 +185,16 @@ const sharedImportCount = parseInt(dom.window.document.getElementById('favTabCou
 if (sharedImportCount !== 2) throw new Error(`Expected 2 imported favorites, got ${sharedImportCount}`);
 console.log(`[PASS] Cross-device collection sharing imported ${sharedImportCount} works seamlessly`);
 
-// Verification 19: Ken Burns cinematic motion toggle
+// Verification 19: Ken Burns cinematic motion default & toggle
 const kenBurnsBtn = dom.window.document.getElementById('slideshowKenBurnsBtn');
 const slideshowImg = dom.window.document.getElementById('slideshowImage');
 if (!kenBurnsBtn) throw new Error('Expected slideshowKenBurnsBtn to exist in DOM');
-dom.window.toggleSlideshowKenBurns();
-if (!kenBurnsBtn.classList.contains('active')) throw new Error('Expected Ken Burns button to have active class');
-if (!slideshowImg.classList.contains('ken-burns')) throw new Error('Expected slideshow image to have ken-burns class');
+if (!kenBurnsBtn.classList.contains('active')) throw new Error('Expected Ken Burns button to have active class by default');
 dom.window.toggleSlideshowKenBurns();
 if (kenBurnsBtn.classList.contains('active')) throw new Error('Expected Ken Burns button to be deactivated');
 if (slideshowImg.classList.contains('ken-burns')) throw new Error('Expected ken-burns class to be removed');
+dom.window.toggleSlideshowKenBurns();
+if (!kenBurnsBtn.classList.contains('active')) throw new Error('Expected Ken Burns button to have active class after toggling back');
 // Verification 20: Generic Multi-Playlist Architecture
 if (!Array.isArray(dom.window.PLAYLISTS_CONFIG)) {
     throw new Error('Expected PLAYLISTS_CONFIG to be an array');
