@@ -1848,13 +1848,6 @@ function initFiltersAndEvents() {
         });
     }
 
-    const contactModalOverlay = document.getElementById('contactModalOverlay');
-    if (contactModalOverlay) {
-        contactModalOverlay.addEventListener('click', (e) => {
-            if (e.target.id === 'contactModalOverlay') closeContactModal();
-        });
-    }
-
     const legalModalOverlay = document.getElementById('legalModalOverlay');
     if (legalModalOverlay) {
         legalModalOverlay.addEventListener('click', (e) => {
@@ -1868,7 +1861,6 @@ function initFiltersAndEvents() {
             if (activeModal) {
                 if (activeModal.id === 'modalOverlay') closeVideoModal();
                 else if (activeModal.id === 'wallpaperModalOverlay') closeWallpaperModal();
-                else if (activeModal.id === 'contactModalOverlay') closeContactModal();
                 else if (activeModal.id === 'legalModalOverlay') closeLegalModal();
                 else if (activeModal.id === 'slideshowOverlay') closeSlideshow();
             }
@@ -1908,9 +1900,6 @@ function getActiveOpenModal() {
 
     const wpModal = document.getElementById('wallpaperModalOverlay');
     if (wpModal && wpModal.classList.contains('open')) return wpModal;
-
-    const contactModal = document.getElementById('contactModalOverlay');
-    if (contactModal && (contactModal.classList.contains('open') || contactModal.style.display === 'flex')) return contactModal;
 
     const legalModal = document.getElementById('legalModalOverlay');
     if (legalModal && (legalModal.classList.contains('open') || legalModal.style.display === 'flex')) return legalModal;
@@ -3163,122 +3152,6 @@ window.addEventListener('keydown', (e) => {
         changeSlideshowFormFactor(nextMode);
     }
 });
-
-// ==========================================================================
-// Modal 4: Contact sachin Feedback System
-// ==========================================================================
-function handleCuratorBadgeClick(event) {
-    if (event) {
-        event.preventDefault();
-    }
-    const trigger = (event && event.currentTarget) ? event.currentTarget : document.activeElement;
-    const email = 'lgtkgtv@gmail.com';
-    const badge = document.getElementById('cornerCuratedBadge') || document.getElementById('statCuratedBadge');
-
-    // Copy to clipboard immediately
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(email).catch(() => {
-            fallbackCopyText(email);
-        });
-    } else {
-        fallbackCopyText(email);
-    }
-
-    // Instant visual confirmation directly on the badge
-    if (badge) {
-        const originalHtml = badge.innerHTML;
-        badge.innerHTML = '✅ copied lgtkgtv@gmail.com!';
-        badge.style.borderColor = '#34d399';
-        badge.style.color = '#ffffff';
-        setTimeout(() => {
-            badge.innerHTML = originalHtml;
-            badge.style.borderColor = '';
-            badge.style.color = '';
-        }, 2500);
-    }
-
-    // Open modal dialog with compose options (Gmail Web, Copy, Mail App)
-    openContactModal(trigger);
-}
-
-function openContactModal(triggerEl = null) {
-    if (triggerEl) {
-        lastFocusedElement = triggerEl;
-    } else if (document.activeElement && document.activeElement !== document.body) {
-        const insideModal = document.activeElement.closest('.modal-overlay');
-        if (!insideModal) {
-            lastFocusedElement = document.activeElement;
-        }
-    }
-
-    const overlay = document.getElementById('contactModalOverlay');
-    if (overlay) {
-        overlay.style.display = 'flex';
-        overlay.classList.add('open');
-        document.body.style.overflow = 'hidden';
-        setTimeout(() => {
-            const closeBtn = overlay.querySelector('.btn-close-modal');
-            if (closeBtn) closeBtn.focus();
-        }, 50);
-    }
-}
-
-function closeContactModalQuiet() {
-    const overlay = document.getElementById('contactModalOverlay');
-    if (overlay) {
-        overlay.style.display = 'none';
-        overlay.classList.remove('open');
-        document.body.style.overflow = '';
-    }
-}
-
-function closeContactModal() {
-    closeContactModalQuiet();
-    restoreFocus();
-}
-
-function copyContactText(text, btnEl) {
-    if (!text) return;
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text).then(() => {
-            showCopyFeedback(btnEl);
-        }).catch(() => {
-            fallbackCopyText(text, btnEl);
-        });
-    } else {
-        fallbackCopyText(text, btnEl);
-    }
-}
-
-function fallbackCopyText(text, btnEl) {
-    const ta = document.createElement('textarea');
-    ta.value = text;
-    ta.style.position = 'fixed';
-    ta.style.opacity = '0';
-    document.body.appendChild(ta);
-    ta.focus();
-    ta.select();
-    try {
-        document.execCommand('copy');
-        if (btnEl) showCopyFeedback(btnEl);
-    } catch (e) {
-        console.error('Copy failed:', e);
-    }
-    document.body.removeChild(ta);
-}
-
-function showCopyFeedback(btnEl) {
-    if (!btnEl) return;
-    const original = btnEl.innerHTML;
-    btnEl.innerHTML = '✅ Copied!';
-    btnEl.style.color = '#10b981';
-    btnEl.style.borderColor = '#10b981';
-    setTimeout(() => {
-        btnEl.innerHTML = original;
-        btnEl.style.color = '';
-        btnEl.style.borderColor = '';
-    }, 2000);
-}
 
 // Modal 5: Legal & Copyright Notice Lightbox
 function openLegalModal(triggerEl = null) {
