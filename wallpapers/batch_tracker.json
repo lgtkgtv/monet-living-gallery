@@ -1082,9 +1082,9 @@
       "is_4k": false,
       "height": 1080,
       "duration": 243,
-      "status": "pending",
-      "extracted_count": 0,
-      "last_attempt": null,
+      "status": "completed",
+      "extracted_count": 9,
+      "last_attempt": "2026-09-15T03:35:00.915355",
       "error": null,
       "retry_count": 0
     },
@@ -1354,9 +1354,9 @@
       "is_4k": false,
       "height": 1080,
       "duration": 181,
-      "status": "pending",
-      "extracted_count": 0,
-      "last_attempt": null,
+      "status": "completed",
+      "extracted_count": 7,
+      "last_attempt": "2026-09-15T03:37:04.270651",
       "error": null,
       "retry_count": 0
     },
@@ -1962,9 +1962,9 @@
       "is_4k": false,
       "height": 1080,
       "duration": 209,
-      "status": "pending",
-      "extracted_count": 0,
-      "last_attempt": null,
+      "status": "completed",
+      "extracted_count": 7,
+      "last_attempt": "2026-09-15T03:36:49.396037",
       "error": null,
       "retry_count": 0
     },
@@ -2010,9 +2010,9 @@
       "is_4k": false,
       "height": 1080,
       "duration": 155,
-      "status": "pending",
-      "extracted_count": 0,
-      "last_attempt": null,
+      "status": "completed",
+      "extracted_count": 7,
+      "last_attempt": "2026-09-15T03:34:36.935511",
       "error": null,
       "retry_count": 0
     },
@@ -2074,9 +2074,9 @@
       "is_4k": false,
       "height": 1080,
       "duration": 186,
-      "status": "pending",
-      "extracted_count": 0,
-      "last_attempt": null,
+      "status": "completed",
+      "extracted_count": 7,
+      "last_attempt": "2026-09-15T03:35:29.495442",
       "error": null,
       "retry_count": 0
     },
@@ -2474,9 +2474,9 @@
       "is_4k": false,
       "height": 1080,
       "duration": 393,
-      "status": "pending",
-      "extracted_count": 0,
-      "last_attempt": null,
+      "status": "completed",
+      "extracted_count": 9,
+      "last_attempt": "2026-09-15T03:35:45.395060",
       "error": null,
       "retry_count": 0
     },
@@ -2682,9 +2682,9 @@
       "is_4k": false,
       "height": 1080,
       "duration": 722,
-      "status": "pending",
-      "extracted_count": 0,
-      "last_attempt": null,
+      "status": "completed",
+      "extracted_count": 9,
+      "last_attempt": "2026-09-15T03:37:23.954109",
       "error": null,
       "retry_count": 0
     },
@@ -2698,9 +2698,9 @@
       "is_4k": false,
       "height": 1080,
       "duration": 578,
-      "status": "pending",
-      "extracted_count": 0,
-      "last_attempt": null,
+      "status": "completed",
+      "extracted_count": 9,
+      "last_attempt": "2026-09-15T03:36:20.165291",
       "error": null,
       "retry_count": 0
     },
@@ -2794,11 +2794,11 @@
       "is_4k": false,
       "height": 1080,
       "duration": 234,
-      "status": "failed",
-      "extracted_count": 0,
-      "last_attempt": "2026-09-14T23:48:00.572416",
-      "error": "no_snapshots_extracted",
-      "retry_count": 1
+      "status": "completed",
+      "extracted_count": 7,
+      "last_attempt": "2026-09-15T03:34:11.569321",
+      "error": null,
+      "retry_count": 0
     },
     "DwSmbvERJtk": {
       "id": "DwSmbvERJtk",
@@ -2842,9 +2842,9 @@
       "is_4k": false,
       "height": 1080,
       "duration": 213,
-      "status": "pending",
-      "extracted_count": 0,
-      "last_attempt": null,
+      "status": "completed",
+      "extracted_count": 7,
+      "last_attempt": "2026-09-15T03:34:54.089004",
       "error": null,
       "retry_count": 0
     },
@@ -3521,5 +3521,5 @@
       "retry_count": 0
     }
   },
-  "last_updated": "2026-09-14T23:49:41.602820"
+  "last_updated": "2026-09-15T03:38:02.252230"
 }

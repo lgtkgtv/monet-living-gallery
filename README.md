@@ -2,88 +2,263 @@
 ### *The Impressionist Video Explorer & 4K Wallpaper Archive*
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Gallery-brightgreen?logo=github)](https://lgtkgtv.github.io/monet-living-gallery/)
-[![4K UHD](https://img.shields.io/badge/Resolution-4K%20UHD%20(3840x2160)-gold)](https://lgtkgtv.github.io/monet-living-gallery/)
-[![Curated Works](https://img.shields.io/badge/Works-212%20Masterworks-blue)](https://lgtkgtv.github.io/monet-living-gallery/)
-[![Wallpapers](https://img.shields.io/badge/Wallpapers-525%20Snapshots-purple)](https://lgtkgtv.github.io/monet-living-gallery/)
-[![Views](https://img.shields.io/badge/Views-46.2M%20Total-red)](https://lgtkgtv.github.io/monet-living-gallery/)
-[![Mobile First](https://img.shields.io/badge/Mobile-Optimized-success)](https://lgtkgtv.github.io/monet-living-gallery/)
+[![4K UHD](https://img.shields.io/badge/Resolution-4K%20UHD%20Default-gold)](https://lgtkgtv.github.io/monet-living-gallery/)
+[![Curated Works](https://img.shields.io/badge/Works-220%20Masterworks-blue)](https://lgtkgtv.github.io/monet-living-gallery/)
+[![Wallpapers](https://img.shields.io/badge/Wallpapers-712%2B%20Snapshots-purple)](https://lgtkgtv.github.io/monet-living-gallery/)
+[![Views](https://img.shields.io/badge/Views-46.5M%20Total-red)](https://lgtkgtv.github.io/monet-living-gallery/)
+[![Tests](https://img.shields.io/badge/Tests-20%2F20%20Passing-success)](https://github.com/lgtkgtv/monet-living-gallery)
+[![Multi--Playlist](https://img.shields.io/badge/Architecture-Multi--Playlist%20Ready-teal)](https://github.com/lgtkgtv/monet-living-gallery)
 
-An interactive, curated digital museum and high-definition visual archive celebrating **Claude Monet** and the **Impressionist art movement**. Derived from the YouTube playlist **[sh_Monet inspired Visual Arts](https://www.youtube.com/playlist?list=PLeqGkucOU6lA)**, this project catalogs 212 masterworks across 40 distinct YouTube channels, featuring native resolution tags, dynamic channel aesthetic characterizations, verified links, instant bulk zip downloads, 100% 4K UHD wallpaper extraction coverage, a device-appropriate fullscreen wallpaper slideshow, and personal collection bookmarks.
+An interactive, curated digital museum and ultra-high-definition visual archive celebrating **Claude Monet** and the **Impressionist art movement**. 
+
+Derived from curated YouTube collections (beginning with [sh_Monet inspired Visual Arts](https://www.youtube.com/playlist?list=PLeqGkucOU6lA)), the gallery catalogs **220 masterworks** across **41 distinct artistic channels**, delivering high-definition video curation, an extensive high-resolution wallpaper archive (100% of 4K titles + growing 1080p FHD backfill), fullscreen cinematic Ken Burns slideshow motion, atmospheric classical audio, and seamless cross-device collection sharing.
 
 🌐 **Live Web Application**: **[https://lgtkgtv.github.io/monet-living-gallery/](https://lgtkgtv.github.io/monet-living-gallery/)**
 
 ---
 
-## 🌟 Key Features & Architecture
+## 🧭 Navigation & Overview
 
-### 1. 📱 Device-Appropriate Fullscreen Wallpaper Slideshow
-- **Automatic Form Factor Adaptation**: Automatically categorizes extracted snapshots into desktop widescreen (16:9) vs mobile/pillarboxed portrait using luminosity margin sampling.
-- **Smart Aspect Ratio Filtering**: When launching the fullscreen slideshow, desktop users automatically view widescreen-optimized masterworks, while mobile users receive portrait scenes (or toggle between Desktop, Mobile, and All formats).
-- **Ambient Classical Audio**: Integrated background audio suite featuring Claude Debussy (*Clair de Lune*, *Première Arabesque*), Erik Satie (*Gymnopédie No. 1*), and Maurice Ravel (*Pavane pour une infante défunte*), with track switching (`N`), mute/play toggle (`A`), and graceful pause on exit.
-- **Presentation Controls**: Fullscreen mode, automatic looping with play/pause, selectable transition delays (3s, 5s, 8s, 12s), fit vs cover mode, and keyboard navigation (`Space`, `ArrowLeft`, `ArrowRight`, `A` for Audio, `N` for Next track, `D` for Display mode, `Esc`).
-
-### 2. ⚡ Progressive Batch DOM Rendering
-- **Instant Paint**: Initial grid render loads the first 24 cards in milliseconds using `DocumentFragment`.
-- **Infinite Scrolling Sentinel**: Uses an `IntersectionObserver` sentinel (with 400px margin) to smoothly append subsequent batches of 24 as the user scrolls, paired with a styled manual "Load More" trigger.
-- **Ultra-Low Memory Footprint**: Scalable to thousands of titles without lag or browser freezing.
-
-### 3. 📦 Instant Bulk Wallpaper Downloader & 100% 4K Coverage
-- **100% 4K UHD Wallpaper Extraction**: Every single native 4K UHD title in the catalog (46 of 46 titles) has high-resolution wallpaper snapshots (525 total snapshots in gallery).
-- **In-Browser Zip Packaging**: Uses `JSZip` to bundle filtered wallpapers directly in the browser with no server load.
-- **Contextual Selection**: Users can filter by artist, channel, or resolution tier with a single click.
-
-### 4. 🎨 Dynamic Curatorial Grid & Automated Channel Profiles
-- **Dynamic Extensibility**: Channels are dynamically profiled from catalog metrics. Hand-curated channels (*LearnFromMasters*, *Extraordinary Visual Art*, *Muse Visual Art*, *Cupid Studio*, *Beautiful Living Art*) are highlighted, while newly discovered channels receive automatic archetypes and metrics.
-- **Live Search Guide Chips**: Pre-curated artist chips (*Claude Monet*, *Renoir*, *Sisley*, *Boudin*, *Levitan*) and theme chips (*Water Lilies*, *Garden Sanctuaries*, *Winter & Snow*, *Venice*, *Paris*) dynamically compute and display current matching catalog counts.
-
-### 5. ❤️ Personal Collection / "My Favorites" Bookmarking
-- **Client-Side Persistence**: Bookmark favorite paintings and wallpapers with a 1-click heart toggle stored in `localStorage`.
-- **Dedicated Collection View**: Instant "❤️ My Collection" tab to revisit saved masterworks even offline.
-
-### 6. 📲 Progressive Web App (PWA) & Offline Caching
-- **Installable on All Devices**: Complete `manifest.json` and custom golden Impressionist palette icons (`icons/icon-192.png`, `icons/icon-512.png`, `icons/icon.svg`) allow installing the gallery directly to home screens on iOS, Android, macOS, and Windows.
-- **Service Worker (`sw.js`)**: Intelligent hybrid caching strategy (Cache-First for wallpapers, audio, and styles; Network-First with offline fallback for HTML and app data).
-
-### 7. 🤖 Automated Weekly Sync (GitHub Actions)
-- **Zero Maintenance Pipeline**: Scheduled `.github/workflows/sync_playlist.yml` workflow periodically polls YouTube for additions or title edits, probing missing resolutions and automatically updating the web gallery.
-
-### 8. 🏛️ Museum Dark Gallery Theme
-- **Immersive Art Viewing**: Defaults to deep gallery charcoal (`#0c140f`) with sunlight ochre accents, allowing vibrant Impressionist canvases to pop with authentic museum contrast.
-- **Persistent Toggle**: Seamless toggle between Dark Gallery and Classic Parchment modes, pre-rendered without theme flash.
-
-### 9. ♿ Full Accessibility & Keyboard Navigation
-- **Focus Management**: Modal dialogs enforce strict `Tab` / `Shift+Tab` focus trapping (`trapModalFocus`) with automatic restoration on exit (`restoreFocus`).
-- **High-Contrast Focus Indicators**: Accessible `:focus-visible` golden ring indicators across all interactive elements.
-- **Screen Reader Announcements**: Dynamic catalog filtering count updates announced via `aria-live="polite"`.
-- **Keyboard Traversal**: Wallpaper carousel thumbnails are keyboard-navigable (`tabindex="0"`, `role="button"`, `Enter`/`Space` activation).
+- [👤 User's Perspective (Visitor & Art Lover's Guide)](#-users-perspective-visitor--art-lovers-guide)
+  - [1. 🎨 The Living Gallery & 4K UHD Masterworks](#1--the-living-gallery--4k-uhd-masterworks)
+  - [2. 🔍 Guided Exploration & Channel Profiles](#2--guided-exploration--channel-profiles)
+  - [3. 🖼️ Ken Burns Wallpaper Slideshow & Ambient Music](#3-️-ken-burns-wallpaper-slideshow--ambient-music)
+  - [4. 💾 Instant Bulk Downloads & Adaptive Wallpapers](#4--instant-bulk-downloads--adaptive-wallpapers)
+  - [5. ❤️ Saved Collections & Cross-Device Sharing](#5-️-saved-collections--cross-device-sharing)
+  - [6. ⚖️ Ethical Attribution & Copyright Transparency](#6-️-ethical-attribution--copyright-transparency)
+- [💻 Developer's Perspective (Architecture & Engineering Guide)](#-developers-perspective-architecture--engineering-guide)
+  - [1. 🏛️ Core Architecture & Data Pipeline](#1-️-core-architecture--data-pipeline)
+  - [2. 📚 Generic Multi-Playlist Engine (`core/`)](#2--generic-multi-playlist-engine-core)
+  - [3. 🖼️ Headless Wallpaper Extraction & Anti-Throttling Engine](#3-️-headless-wallpaper-extraction--anti-throttling-engine)
+  - [4. 🤖 GitHub Actions Workflow Dispatch & Automation](#4--github-actions-workflow-dispatch--automation)
+  - [5. ⚡ Client-Side Performance & DOM Virtualization](#5--client-side-performance--dom-virtualization)
+  - [6. 🧪 Test Suite & Quality Verification](#6--test-suite--quality-verification)
+  - [7. 🛠️ Unified Pipeline CLI Reference (`pipeline.py`)](#7-️-unified-pipeline-cli-reference-pipelinepy)
+- [📁 Repository Structure](#-repository-structure)
+- [📜 License & Curator Credits](#-license--curator-credits)
 
 ---
 
-## 🛠️ Unified Pipeline CLI (`pipeline.py`)
+## 👤 User's Perspective (Visitor & Art Lover's Guide)
 
-A single command-line interface orchestrates the entire archive, metadata extraction, and deployment:
+Whether you are seeking quiet study accompaniment, high-resolution desktop backgrounds, or an art history exploration, *L'Impressionnisme Vivant* is crafted as a contemplative, museum-grade experience.
+
+```
++---------------------------------------------------------------------------------------------------+
+|  🎨 L'Impressionnisme Vivant — The Impressionist Living Gallery                                    |
+|                                                                                                   |
+|  [👑 Native 4K UHD (Default)]  [💎 1080p FHD]  [All Resolutions]  [📚 Playlist Filter]            |
+|  [Artist Chips: Monet | Renoir | Sisley...]   [Theme Chips: Water Lilies | Giverny | Snow...]     |
++---------------------------------------------------------------------------------------------------+
+|  [ 🎬 Video Masterworks Tab ]    [ 🖼️ Wallpaper Archive Tab ]    [ 🏛️ Channel Guides Tab ]        |
+|                                                                                                   |
+|  +--------------------+  +--------------------+  +--------------------+  +---------------------+  |
+|  |  [4K UHD Badge]    |  |  [4K UHD Badge]    |  |  [FHD Badge]       |  |  [4K UHD Badge]     |  |
+|  |  Water Lilies 1916 |  |  Woman with Parasol|  |  Autumn on Seine   |  |  Gare Saint-Lazare  |  |
+|  |  ▶ Play  🖼️ Stills |  |  ▶ Play  🖼️ Stills |  |  ▶ Play  🖼️ Stills |  |  ▶ Play  🖼️ Stills  |  |
+|  +--------------------+  +--------------------+  +--------------------+  +---------------------+  |
++---------------------------------------------------------------------------------------------------+
+```
+
+### 1. 🎨 The Living Gallery & 4K UHD Masterworks
+- **Default Native 4K Experience**: The gallery defaults to filtering by **Native 4K UHD (3840×2160)**, instantly presenting 47 museum-grade living canvases where individual impasto brushstrokes and canvas textures are rendered with cinematic fidelity.
+- **Midnight Gallery Dark Theme**: The interface defaults to an immersive deep midnight slate palette (`#0a0e14`) paired with authentic French cursive calligraphy headings. Canvases illuminate the screen without glare or visual distractions. A 1-click toggle switches to **Classic Museum Parchment** mode if preferred.
+
+### 2. 🔍 Guided Exploration & Channel Profiles
+- **Curated Search Chips**: Single-tap chips for legendary painters (*Claude Monet*, *Pierre-Auguste Renoir*, *Alfred Sisley*, *Eugène Boudin*, *Isaac Levitan*) and iconic Impressionist motifs (*Water Lilies*, *Garden Sanctuaries*, *Winter & Snow*, *Venice & Seine*, *Paris Belle Époque*) with real-time matching work counts.
+- **Dedicated Channel Guides Tab**: Jump between the gallery and the **🏛️ Channel Guides** tab to explore detailed aesthetic profiles for 41 curating channels (*LearnFromMasters*, *Extraordinary Visual Art*, *Muse Visual Art*, *Painters Dream*, *Cupid Studio*, *Beautiful Living Art*, etc.), detailing their visual style, musical tone, and curatorial focus.
+
+### 3. 🖼️ Ken Burns Wallpaper Slideshow & Ambient Music
+- **Cinematic Ken Burns Motion**: When entering the fullscreen slideshow, high-resolution masterworks come alive with gentle, slow-panning and subtle zooming transitions, simulating an intimate gallery stroll.
+- **Ambient Classical Soundtrack**: Curated background suites by Claude Debussy (*Clair de Lune*, *Première Arabesque*), Erik Satie (*Gymnopédie No. 1*), and Maurice Ravel (*Pavane pour une infante défunte*).
+- **Strict Audio Isolation**: Clicking play on any YouTube video automatically mutes/pauses the ambient audio track, ensuring you hear the original video’s authentic audio design without overlapping noise.
+- **Keyboard Shortcuts**:
+  - `Space`: Pause / Resume Slideshow
+  - `ArrowLeft` / `ArrowRight`: Previous / Next Wallpaper
+  - `A`: Toggle Ambient Classical Music (Mute / Unmute)
+  - `N`: Skip to Next Audio Track
+  - `D`: Toggle Display Mode (Fit Entire Canvas vs Fill Screen)
+  - `Esc`: Exit Fullscreen Slideshow
+
+### 4. 💾 Instant Bulk Downloads & Adaptive Wallpapers
+- **Adaptive Form Factors**: Snapshots are automatically categorized into **Desktop Widescreen (16:9)** and **Mobile Portrait** formats.
+- **Client-Side Bulk ZIP**: Filter wallpapers by artist, channel, or resolution and download them in a single `.zip` file generated right in your browser via `JSZip`—no wait time, no server uploads.
+
+### 5. ❤️ Saved Collections & Cross-Device Sharing
+- **Private Bookmarking**: Tap the heart icon on any work or wallpaper to curate your private favorites list, saved locally in your browser (`localStorage`).
+- **Seamless Cross-Device Sync**: Share your curated collection between your phone, laptop, or tablet using one-click JSON export/import or shareable URL links.
+
+### 6. ⚖️ Ethical Attribution & Copyright Transparency
+- **Per-Channel Copyright Badges**: Every video card and wallpaper lightbox prominently links back to the originating YouTube creator and channel.
+- **Protected Content Respect**: Channels that request copyright protection are tagged as `Copyright Reserved (View-Only)`, and bulk wallpaper downloads are respectfully disabled for those works while keeping the living video experience accessible.
+- **Curator Contact**: Direct reach-out to curator Sachin (`lgtkgtv@gmail.com`).
+
+---
+
+## 💻 Developer's Perspective (Architecture & Engineering Guide)
+
+*L'Impressionnisme Vivant* is engineered as a zero-maintenance, zero-API-cost static site with an automated Python metadata & frame-extraction pipeline and a robust client-side rendering engine.
+
+### 1. 🏛️ Core Architecture & Data Pipeline
+
+```mermaid
+flowchart TD
+    subgraph Sources ["1. Ingestion Sources"]
+        YTP["YouTube Playlists (playlists.config.json)"]
+    end
+
+    subgraph Pipeline ["2. Automated Data & Extraction Pipeline (pipeline.py)"]
+        YTDL["yt-dlp (Headless Metadata Extraction - 0 Quota)"]
+        RES["Resolution Prober (update_resolutions.py)"]
+        BWE["Batch Wallpaper Extractor (batch_wallpaper_extractor.py + ffmpeg)"]
+        TRACK["Batch Tracker (wallpapers/batch_tracker.json)"]
+        BUILD["Compiler (build_webpage.py + core/playlist_engine.py)"]
+    end
+
+    subgraph Data ["3. Generated Static Data Layer"]
+        DATAJS["data.js / data.json (Videos, Wallpapers, Profiles)"]
+        CSV["monet_playlist_by_channel.csv"]
+        WPDIR["wallpapers/<videoId>/snapshot_*.jpg"]
+    end
+
+    subgraph Client ["4. Client Application (GitHub Pages)"]
+        HTML["index.html (Semantic Accessible Shell)"]
+        JS["app.js (IntersectionObserver Sentinel, Slideshow, Audio)"]
+        SW["sw.js (PWA Offline Service Worker)"]
+    end
+
+    YTP --> YTDL
+    YTDL --> RES
+    RES --> BUILD
+    YTDL --> BWE
+    BWE <--> TRACK
+    BWE --> WPDIR
+    BUILD --> DATAJS
+    BUILD --> CSV
+    DATAJS --> JS
+    WPDIR --> JS
+    JS --> HTML
+```
+
+### 2. 📚 Generic Multi-Playlist Engine (`core/`)
+The architecture has been decoupled from single-playlist hardcoding into a reusable engine capable of ingesting arbitrary YouTube playlists:
+
+- **`playlists.config.json`**:
+  ```json
+  [
+    {
+      "id": "PLeqGkucOU6lA",
+      "title": "sh_Monet inspired Visual Arts",
+      "url": "https://www.youtube.com/playlist?list=PLeqGkucOU6lA",
+      "category": "Impressionism & Claude Monet",
+      "enabled": true
+    }
+  ]
+  ```
+- **`core/playlist_engine.py`**:
+  - Validates playlist URLs and IDs.
+  - Normalizes catalog entries, tracking which playlist(s) each video originates from (`sourcePlaylistIds`).
+  - Merges video records and deduplicates cross-listed works.
+  - Dynamically injects playlist metadata into `data.js` and activates the `#playlistSelect` filter in the web UI when multiple playlists are registered.
+
+### 3. 🖼️ Headless Wallpaper Extraction & Anti-Throttling Engine
+Wallpaper scenes are extracted directly from video streams without consuming YouTube Data API quota:
+- **Zero API Quota**: Uses `yt-dlp` to obtain direct CDN stream URLs and `ffmpeg` to extract uncompressed intra-frame stills.
+- **Intelligent Scenery Sampling**: Timestamp calculation dynamically adapts to video length:
+  - Short (<4 min): 7 scenes
+  - Medium (4–15 min): 9 scenes
+  - Long (15–60 min): 12 scenes
+  - Anthologies (>60 min): 16 scenes
+- **Luminosity Margin Sampling (`detect_form_factor`)**: Automatically categorizes stills as `desktop` widescreen (16:9) or `mobile` portrait by inspecting boundary luminosity for black letterboxing/pillarboxing bars.
+- **Anti-Throttling Pacing**: Configurable request delay with randomized jitter (`delay + uniform(0.5, 2.0)`) prevents HTTP 429 rate limiting.
+- **Stateful Resumption**: `wallpapers/batch_tracker.json` records status per video (`completed`, `in_progress`, `pending`, `failed`) allowing interruption-tolerant multi-day extractions.
+
+### 4. 🤖 GitHub Actions Workflow Dispatch & Automation
+The repository includes automated CI/CD workflows under `.github/workflows/`:
+- **`sync.yml`**: Full-featured workflow supporting both automated weekly runs and manual on-demand execution (`workflow_dispatch`):
+  ```yaml
+  on:
+    schedule:
+      - cron: '0 4 * * 0'   # Weekly at 04:00 UTC
+    workflow_dispatch:
+      inputs:
+        action:
+          description: 'Sync Action to execute'
+          required: true
+          default: 'sync'
+          type: choice
+          options: [sync, pull, resolutions, extract, build]
+        batch_size:
+          description: 'Wallpaper extraction batch size'
+          required: false
+          default: '10'
+        quality_tier:
+          description: 'Resolution tier filter'
+          required: false
+          default: 'fhd'
+          type: choice
+          options: [all, 4k, fhd]
+  ```
+- Installs `ffmpeg` and `yt-dlp`, executes the pipeline, and commits updated datasets and extracted wallpapers back to `main`.
+
+### 5. ⚡ Client-Side Performance & DOM Virtualization
+- **Fast Initial Paint**: Initial render creates only 24 video cards via `DocumentFragment`.
+- **`IntersectionObserver` Sentinel**: Seamlessly loads subsequent 24-card increments as the user scrolls within 400px of the page bottom, maintaining 60 FPS even across hundreds of items.
+- **Focus Trapping & Accessibility**: Full WCAG compliance with keyboard trap utilities (`trapModalFocus`, `restoreFocus`), screen-reader live announcements (`aria-live="polite"`), and clear focus rings.
+- **PWA Service Worker (`sw.js`)**: Cache-First strategy for images, CSS, and audio; Network-First with offline fallback for application data.
+
+### 6. 🧪 Test Suite & Quality Verification
+The project includes an end-to-end integration test suite in [`tests/test_gallery.js`](tests/test_gallery.js) executing against a simulated DOM environment:
 
 ```bash
-# 1. View real-time telemetry dashboard (videos, resolutions, channels, wallpapers)
-./pipeline.py --status
+node tests/test_gallery.js
+```
 
-# 2. Rebuild data.js, channel profiles, and CSV catalog instantly
-./pipeline.py --build
+**20 Verified Test Cases**:
+1. Video card rendering & DOM batch threshold (>=24 cards)
+2. Results counter formatting
+3. Wallpaper grid tab switching
+4. Saved favorites empty state
+5. Channel guides tab navigation (toggle & return)
+6. Channel card filter triggers
+7. Video modal open/close lifecycle
+8. Wallpaper modal open/close lifecycle
+9. Legal modal open/close lifecycle
+10. Simplified curator contact formatting
+11. Search filtering accuracy
+12. **Strict audio isolation** (ambient classical paused while video player active)
+13. Corrupted `localStorage` ID auto-purge
+14. Favorite addition and persistence
+15. Favorite tab rendering of saved items
+16. Favorite clear all and state reset
+17. Channel copyright download prohibition enforcement
+18. Default 4K resolution filter verification
+19. Action bar visibility toggling
+20. Cross-device collection sharing import/export
 
-# 3. Pull fresh playlist metadata directly from YouTube via yt-dlp
-./pipeline.py --pull-playlist
+### 7. 🛠️ Unified Pipeline CLI Reference (`pipeline.py`)
 
-# 4. Probe and cache missing video resolutions from YouTube
-./pipeline.py --sync-resolutions
+```bash
+# Display comprehensive archive telemetry (videos, 4K count, channels, wallpapers)
+python3 pipeline.py --status
 
-# 5. Extract 4K wallpapers with anti-throttling delay (e.g., batch of 10)
-./pipeline.py --extract --batch-size 10 --tier 4K --delay 3.0
+# Recompile data.js, data.json, and CSV catalog from current metadata
+python3 pipeline.py --build
 
-# 6. Full automated end-to-end sync (resolutions -> extraction -> build -> status)
-./pipeline.py --sync
+# Pull latest playlist updates directly from YouTube (multi-playlist enabled)
+python3 pipeline.py --pull-playlist
 
-# 7. Start local gallery preview server
-./pipeline.py --serve --port 8000
+# Audit and probe native resolutions for newly added titles
+python3 pipeline.py --sync-resolutions
+
+# Extract wallpaper batch for 1080p FHD tier with rate-limit delay
+python3 pipeline.py --extract --tier FHD --batch-size 10 --delay 2.0
+
+# Complete end-to-end sync (resolutions -> extraction -> build -> report)
+python3 pipeline.py --sync
+
+# Launch local preview server
+python3 pipeline.py --serve --port 8000
 ```
 
 ---
@@ -91,24 +266,42 @@ A single command-line interface orchestrates the entire archive, metadata extrac
 ## 📁 Repository Structure
 
 ```
-├── index.html                  # Responsive mobile-first gallery application
-├── styles.css                  # Impressionist typography, colors, animations & media queries
-├── app.js                      # Dynamic search guide, progressive renderer, slideshow & downloader
-├── pipeline.py                 # Unified CLI orchestrator (--status, --build, --extract, --sync)
-├── batch_wallpaper_extractor.py # Anti-throttled wallpaper extractor with form factor detection
-├── build_webpage.py            # Site data & CSV catalog compiler
-├── data.js                     # Static optimized dataset (212 videos, 525 wallpapers, profiles)
-├── video_resolutions.json      # Complete native resolution cache (100% indexed)
-├── playlist_raw.json           # Raw playlist JSON dump
-├── monet_playlist_by_channel.csv # Spreadsheet-ready catalog with resolution columns
-├── monet_playlist_catalog.md   # Markdown catalog with resolution tags and watch links
-├── jszip.min.js                # Client-side zip bundling for bulk downloads
-├── .nojekyll                   # Bypasses Jekyll processing on GitHub Pages
-└── wallpapers/                 # Extracted 4K & FHD wallpaper scene archive
-    ├── batch_tracker.json      # Extraction progress tracker (completed vs pending)
-    ├── metadata.json           # Wallpaper index, dimensions, timestamps, and formFactor
-    └── <video_id>/             # Scenery snapshots (snapshot_1.jpg, snapshot_2.jpg...)
+├── .github/
+│   └── workflows/
+│       ├── sync.yml                   # Manual workflow_dispatch & scheduled sync workflow
+│       └── sync_playlist.yml          # Legacy automated sync workflow
+├── core/
+│   ├── __init__.py                    # Python package definition
+│   └── playlist_engine.py             # Multi-playlist abstraction, validation & merging
+├── index.html                         # Accessible responsive application shell
+├── styles.css                         # Midnight palette, cursive typography & responsive rules
+├── app.js                             # Client controller (progressive DOM, slideshow, audio, sharing)
+├── pipeline.py                        # Unified command-line interface orchestrator
+├── batch_wallpaper_extractor.py       # Rate-limited frame extraction & form factor classifier
+├── build_webpage.py                   # Data compiler (data.js, data.json, CSV & Markdown catalogs)
+├── playlists.config.json              # Multi-playlist configuration registry
+├── playlists.json                     # Secondary playlist registry
+├── playlist_raw.json                  # Raw YouTube playlist metadata dump
+├── video_resolutions.json             # Native resolution cache (100% indexed)
+├── data.js                            # Precompiled browser dataset (videos, profiles, wallpapers)
+├── data.json                          # JSON representation of catalog
+├── monet_playlist_by_channel.csv      # Formatted CSV catalog with resolutions
+├── monet_playlist_catalog.md          # Formatted Markdown catalog
+├── tests/
+│   └── test_gallery.js                # 20-point automated integration test suite
+├── jszip.min.js                       # Client-side zip packaging library
+├── sw.js                              # PWA service worker with offline caching
+├── manifest.json                      # PWA web app manifest
+└── wallpapers/                        # Wallpaper image archive
+    ├── batch_tracker.json             # Resumable extraction state tracker
+    ├── metadata.json                  # Wallpaper dimensions, timestamps & form factor tags
+    └── <videoId>/                     # Extracted scene stills (snapshot_1.jpg, ...)
 ```
 
 ---
-*Curated by sachin g · [lgtkgtv@gmail.com](mailto:lgtkgtv@gmail.com)*
+
+## 📜 License & Curator Credits
+
+- **Curation**: Curated with passion for art history by **Sachin G** ([lgtkgtv@gmail.com](mailto:lgtkgtv@gmail.com)).
+- **Artwork & Imagery**: Masterworks depicted belong to the public domain (Claude Monet, Pierre-Auguste Renoir, Camille Pissarro, and contemporary Impressionists). Motion animations, sound design, and living interpretations are the creative property of the respective 41 source YouTube channels.
+- **Code**: The gallery application, extraction pipeline, and multi-playlist engine are released under the [MIT License](LICENSE).
