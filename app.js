@@ -811,6 +811,7 @@ let wallpaperObserver = null;
 function createVideoCard(v) {
     const card = document.createElement('div');
     card.className = 'video-card';
+    card.dataset.videoId = v.id;
     const resBadgeClass = v.is4K ? 'badge-4k' : (v.height >= 1080 ? 'badge-fhd' : 'badge-sd');
     let thumbSrc = v.thumb;
     if (v.channel === 'Cupid Studio' && v.wallpapers && v.wallpapers.length > 0) {
@@ -1813,6 +1814,24 @@ function initFiltersAndEvents() {
 
     const sortSelect = document.getElementById('sortSelect');
     if (sortSelect) sortSelect.addEventListener('change', applyFilters);
+
+    // Robust delegated click handler on videosGrid to ensure video play actions always launch reliably
+    const videosGrid = document.getElementById('videosGrid');
+    if (videosGrid) {
+        videosGrid.addEventListener('click', (e) => {
+            const playTrigger = e.target.closest('.btn-card-play, .play-overlay, .video-title, .thumb-img');
+            if (playTrigger) {
+                const card = playTrigger.closest('.video-card');
+                if (card && card.dataset.videoId) {
+                    const videoId = card.dataset.videoId;
+                    const modal = document.getElementById('modalOverlay');
+                    if (!modal || !modal.classList.contains('open') || currentModalVideoId !== videoId) {
+                        openVideoModal(videoId, null, 0, playTrigger);
+                    }
+                }
+            }
+        });
+    }
 
     // Modal click-outside listeners
     const modalOverlay = document.getElementById('modalOverlay');
@@ -3297,5 +3316,16 @@ function closeLegalModal() {
     closeLegalModalQuiet();
     restoreFocus();
 }
+
+if (typeof window !== 'undefined') {
+    window.openVideoModal = openVideoModal;
+    window.closeVideoModal = closeVideoModal;
+    window.openWallpaperModal = openWallpaperModal;
+    window.closeWallpaperModal = closeWallpaperModal;
+    window.switchModalCut = switchModalCut;
+    window.filterByChannel = filterByChannel;
+    window.toggleFavoriteVideo = toggleFavoriteVideo;
+}
+
 
 

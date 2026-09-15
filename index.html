@@ -43,7 +43,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Parisienne&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css?v=20">
 </head>
 <body>
 
@@ -279,6 +279,7 @@
         <div class="modal-content">
             <div class="modal-header compact-modal-header">
                 <div class="modal-header-tag-group">
+                    <h3 id="modalTitle" class="modal-title" title="Painting Title">Claude Monet Masterwork</h3>
                     <div class="modal-res-tag" id="modalVideoRes">4K UHD (3840×2160)</div>
                 </div>
                 <div class="modal-header-actions">
@@ -548,18 +549,21 @@
         ↑
     </button>
 
-    <!-- Scripts -->
-    <script src="./config.js"></script>
-    <script src="./data.js"></script>
-    <script src="./app.js"></script>
+    <!-- Scripts with Cache-Busting -->
+    <script src="./config.js?v=20"></script>
+    <script src="./data.js?v=20"></script>
+    <script src="./app.js?v=20"></script>
     
     <!-- PWA Service Worker Registration -->
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js')
+                navigator.serviceWorker.register('./sw.js?v=20')
                     .then((reg) => {
                         console.log('✨ Monet Gallery ServiceWorker registered with scope:', reg.scope);
+                        if (typeof reg.update === 'function') {
+                            reg.update();
+                        }
                     })
                     .catch((err) => {
                         console.warn('⚠️ ServiceWorker registration failed:', err);

@@ -398,15 +398,34 @@ monetsCards.forEach(card => {
     if (!playBtn) throw new Error('Expected .btn-card-play on video card');
     const onclickStr = playBtn.getAttribute('onclick');
     if (!onclickStr) throw new Error('Expected onclick attribute on play button');
+    
+    // Method 1: Evaluate inline onclick string
     dom.window.eval(onclickStr);
-    const modal = dom.window.document.getElementById('modalOverlay');
+    let modal = dom.window.document.getElementById('modalOverlay');
     if (!modal.classList.contains('open')) {
-        throw new Error('Play Video button failed to open modal for title with apostrophe');
+        throw new Error('Inline onclick failed to open modal for title with apostrophe');
     }
-    monetsLaunched++;
+    const modalTitleEl = dom.window.document.getElementById('modalTitle');
+    if (!modalTitleEl || !modalTitleEl.textContent.includes("Monet's")) {
+        throw new Error(`Expected modal title to contain Monet's, got: ${modalTitleEl ? modalTitleEl.textContent : 'null'}`);
+    }
     dom.window.closeVideoModal();
+
+    // Method 2: Real DOM click simulating user mouse/touch interaction (tests delegated handler)
+    playBtn.click();
+    modal = dom.window.document.getElementById('modalOverlay');
+    if (!modal.classList.contains('open')) {
+        throw new Error('Native DOM click failed to open modal for title with apostrophe');
+    }
+    const iframeWrapper = dom.window.document.getElementById('playerFrameWrapper');
+    if (!iframeWrapper || !iframeWrapper.querySelector('iframe')) {
+        throw new Error('Expected player iframe to be rendered in playerFrameWrapper');
+    }
+    dom.window.closeVideoModal();
+
+    monetsLaunched++;
 });
-console.log(`[PASS] Apostrophe and quote title robustness: verified ${monetsLaunched} titles with "Monet's" launch player without syntax error`);
+console.log(`[PASS] Apostrophe and quote title robustness: verified ${monetsLaunched} titles with "Monet's" launch player via inline handler AND delegated DOM click`);
 
 if (errors.length > 0) {
     console.error('❌ Uncaught runtime errors:', errors);

@@ -1,14 +1,14 @@
 // Service Worker for L'Impressionnisme Vivant
-const CACHE_NAME = 'monet-gallery-v18';
+const CACHE_NAME = 'monet-gallery-v20';
 
 const CORE_PRECACHE_URLS = [
   './',
   'index.html',
-  'styles.css',
-  'config.js',
-  'app.js',
-  'data.js',
-  'data.json',
+  'styles.css?v=20',
+  'config.js?v=20',
+  'app.js?v=20',
+  'data.js?v=20',
+  'data.json?v=20',
   'jszip.min.js',
   'manifest.json',
   'icons/icon-192.png',
@@ -32,6 +32,7 @@ self.addEventListener('activate', (event) => {
       return Promise.all(
         cacheNames.map((name) => {
           if (name !== CACHE_NAME) {
+            console.log(`[SW] Deleting obsolete cache: ${name}`);
             return caches.delete(name);
           }
         })
@@ -46,7 +47,12 @@ self.addEventListener('fetch', (event) => {
 
   // Ignore non-GET requests and cross-origin YouTube iframe calls
   if (request.method !== 'GET' || !url.protocol.startsWith('http')) return;
-  if (url.origin.includes('youtube.com') || url.origin.includes('googlevideo.com') || url.origin.includes('i.ytimg.com')) {
+  if (
+    url.origin.includes('youtube.com') ||
+    url.origin.includes('youtube-nocookie.com') ||
+    url.origin.includes('googlevideo.com') ||
+    url.origin.includes('i.ytimg.com')
+  ) {
     return;
   }
 
@@ -91,7 +97,7 @@ self.addEventListener('fetch', (event) => {
         return networkResponse;
       })
       .catch(() => {
-        return caches.match(request).then((cachedResponse) => {
+        return caches.match(request, { ignoreSearch: true }).then((cachedResponse) => {
           if (cachedResponse) {
             return cachedResponse;
           }
