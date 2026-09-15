@@ -31,15 +31,19 @@ Derived from curated YouTube collections (beginning with [sh_Monet inspired Visu
   - [8. 🧹 Multi-Cut De-cluttering & Redundant Segment Management](#8--multi-cut-de-cluttering--redundant-segment-management)
 - [💻 Developer's Perspective (Architecture & Engineering Guide)](#-developers-perspective-architecture--engineering-guide)
   - [1. 🏛️ Core Architecture & Data Pipeline](#1-️-core-architecture--data-pipeline)
-  - [2. ☁️ Wallpaper Storage & Scalability Architecture (Git vs LFS vs Cloudflare R2)](#2-️-wallpaper-storage--scalability-architecture-git-vs-lfs-vs-cloudflare-r2)
-  - [3. 📚 Generic Multi-Playlist Engine (`core/`)](#3--generic-multi-playlist-engine-core)
-  - [4. 🏷️ Taxonomic Catalog & Copyright Engine (`build_webpage.py`)](#4-️-taxonomic-catalog--copyright-engine-build_webpagepy)
-  - [5. 🧹 Duplicate Title & Multi-Cut Clustering Engine (`build_webpage.py` & `pipeline.py`)](#5--duplicate-title--multi-cut-clustering-engine-build_webpagepy--pipelinepy)
-  - [6. 🖼️ Headless Wallpaper Extraction & Anti-Throttling Engine](#6-️-headless-wallpaper-extraction--anti-throttling-engine)
-  - [7. 🤖 GitHub Actions Workflow Dispatch & Automation](#7--github-actions-workflow-dispatch--automation)
-  - [8. ⚡ Client-Side Performance & DOM Virtualization](#8--client-side-performance--dom-virtualization)
-  - [9. 🧪 Test Suite & Quality Verification (26 Integration Tests)](#9--test-suite--quality-verification-26-integration-tests)
-  - [10. 🛠️ Unified Pipeline CLI Reference (`pipeline.py`)](#10-️-unified-pipeline-cli-reference-pipelinepy)
+  - [2. ⚡ Python Environment Management (`uv`)](#2-️-python-environment-management-uv)
+  - [3. ☁️ Wallpaper Storage & Scalability Architecture (Git vs LFS vs Cloudflare R2)](#3-️-wallpaper-storage--scalability-architecture-git-vs-lfs-vs-cloudflare-r2)
+  - [4. 📚 Generic Multi-Playlist Engine (`core/`)](#4--generic-multi-playlist-engine-core)
+  - [5. 📡 Source Playlist Modification Monitoring & Conditional Sync](#5--source-playlist-modification-monitoring--conditional-sync)
+  - [6. 🏷️ Taxonomic Catalog & Copyright Engine (`build_webpage.py`)](#6-️-taxonomic-catalog--copyright-engine-build_webpagepy)
+  - [7. 🧹 Duplicate Title & Multi-Cut Clustering Engine (`build_webpage.py` & `pipeline.py`)](#7--duplicate-title--multi-cut-clustering-engine-build_webpagepy--pipelinepy)
+  - [8. 🖼️ Headless Wallpaper Extraction & Anti-Throttling Engine](#8-️-headless-wallpaper-extraction--anti-throttling-engine)
+  - [9. 🤖 GitHub Actions Workflow Dispatch & Automation](#9--github-actions-workflow-dispatch--automation)
+  - [10. ⚡ Client-Side Performance & DOM Virtualization](#10--client-side-performance--dom-virtualization)
+  - [11. 🔑 Secrets, Keys & Authentication Specification](#11--secrets-keys--authentication-specification)
+  - [12. 📑 YouTube Data API: Programmatic Playlist Creation & Mutation Guide](#12--youtube-data-api-programmatic-playlist-creation--mutation-guide)
+  - [13. 🧪 Test Suite & Quality Verification (27 Integration Tests)](#13--test-suite--quality-verification-27-integration-tests)
+  - [14. 🛠️ Unified Pipeline CLI Reference (`pipeline.py`)](#14-️-unified-pipeline-cli-reference-pipelinepy)
 - [📁 Repository Structure](#-repository-structure)
 - [📜 License & Curator Credits](#-license--curator-credits)
 
@@ -162,7 +166,22 @@ flowchart TD
     JS --> HTML
 ```
 
-### 2. ☁️ Wallpaper Storage & Scalability Architecture (Git vs LFS vs Cloudflare R2)
+### 2. ⚡ Modern Python Environment Management (`uv`)
+The project environment is managed with [`uv`](https://github.com/astral-sh/uv) — the extremely fast Python package and virtual environment orchestrator:
+- **Reproducible Virtual Environment**: Project metadata and requirements are defined in [`pyproject.toml`](pyproject.toml) and pinned deterministically in [`uv.lock`](uv.lock).
+- **Fast Execution via `uv run`**:
+  ```bash
+  # Initialize or synchronize the local virtual environment (.venv)
+  uv sync
+
+  # Run pipeline commands inside the uv environment
+  uv run python3 pipeline.py --status
+  uv run python3 pipeline.py --check-updates
+  uv run python3 pipeline.py --sync-if-modified
+  ```
+- **Zero-Friction Fallback**: Because dependencies are minimal (only `yt-dlp` beyond the standard Python 3.12 library), all scripts continue to function cleanly with system `python3` if `uv` is not installed.
+
+### 3. ☁️ Wallpaper Storage & Scalability Architecture (Git vs LFS vs Cloudflare R2)
 As the gallery visual archive expands across multi-channel and multi-resolution tiers (~1,886 snapshots currently; projecting 5,000+ snapshots across future playlists), storage and egress bandwidth require deliberate architectural choices:
 
 | Architecture | Storage Capacity | Free Egress / Bandwidth | Latency / CDN | Best Used For |
@@ -176,7 +195,7 @@ As the gallery visual archive expands across multi-channel and multi-resolution 
 1. **Current Scale (<2,000 wallpapers, ~421 MB)**: Direct Git storage under `wallpapers/<videoId>/snapshot_*.jpg` serves directly from GitHub Pages without external infrastructure, API tokens, or billing dependencies.
 2. **Future Multi-Playlist Expansion (>2 GB)**: When cataloging 5,000+ artworks across multiple playlists, migrate image assets to **Cloudflare R2**. Because Cloudflare R2 charges **$0.00 for data egress** (unlike AWS S3), a high-traffic art gallery can serve millions of high-resolution wallpaper downloads with zero bandwidth cost. The frontend is built to support this seamlessly by prepending an optional `const WALLPAPER_CDN_BASE = ""` prefix in `config.js`.
 
-### 3. 📚 Generic Multi-Playlist Engine (`core/`)
+### 4. 📚 Generic Multi-Playlist Engine (`core/`)
 The architecture has been decoupled from single-playlist hardcoding into a reusable engine capable of ingesting arbitrary YouTube playlists:
 
 - **`playlists.config.json`**:
@@ -197,12 +216,25 @@ The architecture has been decoupled from single-playlist hardcoding into a reusa
   - Merges video records and deduplicates cross-listed works.
   - Dynamically injects playlist metadata into `data.js` and activates the `#playlistSelect` filter in the web UI when multiple playlists are registered.
 
-### 4. 🏷️ Taxonomic Catalog & Copyright Engine (`build_webpage.py`)
+### 5. 📡 Source Playlist Modification Monitoring & Conditional Sync
+Curated YouTube playlists are living collections where owners frequently append newly animated canvases or modify title sequencing. To prevent unnecessary downloads while keeping the gallery synchronized:
+- **Sub-Second Live Probing (`probe_playlist_metadata`)**:
+  - Employs a single-item headless probe (`yt-dlp --flat-playlist --playlist-items 1 -J <url>`) that extracts YouTube's upstream `modified_date`, total `playlist_count`, and top item ID in **under 1.0 second**.
+  - Consumes **0 YouTube Data API quota units** and zero video stream bandwidth.
+- **Stateful Catalog Tracker (`playlist_tracker.json`)**:
+  - Records the last known modification date, item count, and timestamp of the previous successful synchronization.
+- **Auditing & Conditional Syncing**:
+  - `uv run python3 pipeline.py --check-updates`: Audits all registered playlists against local state, reporting modification status and any count/title discrepancies.
+  - `uv run python3 pipeline.py --sync-if-modified`: Compares the live metadata with `playlist_tracker.json`. If unchanged, it terminates in <1s without touching the network or disk. If new videos are detected, it automatically executes the full ingestion, resolution probe, and build pipeline.
+- **Automated CI Integration**:
+  - The weekly GitHub Actions schedule triggers `--sync-if-modified`, ensuring automatic weekly synchronization only when the curator actually updates the source YouTube playlist.
+
+### 6. 🏷️ Taxonomic Catalog & Copyright Engine (`build_webpage.py`)
 - **Master Artist Taxonomy (`CATALOG_ARTISTS`)**: 18 curated masters with normalized queries, icon motifs, and calculated resolution distribution counts (`count4K`, `countFHD`, `wallpapersCount`).
 - **Impressionist Motif Taxonomy (`CATALOG_THEMES`)**: 10 recurring artistic motifs with semantic synonyms mapping visual subjects (e.g. *Water Lilies*, *Coastal Cliffs*, *Winter Snow*, *Giverny Gardens*).
 - **Automated Copyright Tracking**: Classifies video and wallpaper assets as either Public Domain with free downloads or Copyright Reserved (View-Only), ensuring licensing clarity across the UI and export tools.
 
-### 5. 🧹 Duplicate Title & Multi-Cut Clustering Engine (`build_webpage.py` & `pipeline.py`)
+### 7. 🧹 Duplicate Title & Multi-Cut Clustering Engine (`build_webpage.py` & `pipeline.py`)
 To eliminate visual clutter caused by creator channels posting different segment cuts, trailers, or re-uploads of the same artwork, `build_webpage.py` incorporates an automated clustering and primary cut detection pipeline:
 - **Title Normalization Pipelines**:
   - `normalize_exact_title(t)`: Case folds, normalizes quotes (`“`, `”`, `‘`, `’`), strips resolution suffixes (`(4K)`, `(1080p)`, `(HD)`), and condenses whitespace to detect identical re-uploads across playlists.
@@ -222,7 +254,7 @@ To eliminate visual clutter caused by creator channels posting different segment
 - **Command-Line Duplicate Telemetry**:
   - Run `python3 pipeline.py --detect-duplicates` to inspect all detected clusters, quality labels, runtimes, and primary designations directly in the console.
 
-### 6. 🖼️ Headless Wallpaper Extraction & Anti-Throttling Engine
+### 8. 🖼️ Headless Wallpaper Extraction & Anti-Throttling Engine
 Wallpaper scenes are extracted directly from video streams without consuming YouTube Data API quota:
 - **Zero API Quota**: Uses `yt-dlp` to obtain direct CDN stream URLs and `ffmpeg` to extract uncompressed intra-frame stills.
 - **Intelligent Scenery Sampling**: Timestamp calculation dynamically adapts to video length:
@@ -237,48 +269,165 @@ Wallpaper scenes are extracted directly from video streams without consuming You
 - **Stateful Resumption & Retry**: `wallpapers/batch_tracker.json` records status per video (`completed`, `in_progress`, `pending`, `failed`) allowing interruption-tolerant multi-day extractions. The `--retry-failed` flag quickly resets failed titles to re-attempt extraction with updated fallbacks.
 - **Copyright Exclusion Flag**: The extractor supports `--skip-copyright-restricted` to automatically exclude video titles or channels with copyright reservations (e.g. *Living Art Moments*) from batch extraction runs.
 
-### 7. 🤖 GitHub Actions Workflow Dispatch & Automation
+### 9. 🤖 GitHub Actions Workflow Dispatch & Automation
 The repository includes automated CI/CD workflows under `.github/workflows/`:
-- **`sync.yml`**: Full-featured workflow supporting both automated weekly runs and manual on-demand execution (`workflow_dispatch`):
+- **`sync.yml`**: Modern workflow powered by `astral-sh/setup-uv` supporting both scheduled weekly runs and manual on-demand execution (`workflow_dispatch`):
   ```yaml
   on:
     schedule:
-      - cron: '0 4 * * 0'   # Weekly at 04:00 UTC
+      - cron: '0 4 * * 0'   # Weekly at 04:00 UTC (checks if modified before syncing)
     workflow_dispatch:
       inputs:
         action:
-          description: 'Sync Action to execute'
+          description: 'Pipeline task to execute'
           required: true
-          default: 'sync'
+          default: 'sync_if_modified'
           type: choice
-          options: [sync, pull, resolutions, extract, build]
-        batch_size:
-          description: 'Wallpaper extraction batch size'
-          required: false
-          default: '10'
-        quality_tier:
-          description: 'Resolution tier filter'
-          required: false
-          default: 'fhd'
-          type: choice
-          options: [all, 4k, fhd]
+          options: [sync_if_modified, check_updates, refresh, extract_wallpapers, full_sync, sync_resolutions, rebuild_only]
   ```
-- Installs `ffmpeg` and `yt-dlp`, executes the pipeline, and commits updated datasets and extracted wallpapers back to `main`.
+- Automatically provisions `uv`, `Python 3.12`, `Node.js 20`, and `ffmpeg`.
+- Runs verification test suite (`tests/test_gallery.js`) on every build and commits updated datasets back to `main`.
 
-### 8. ⚡ Client-Side Performance & DOM Virtualization
+### 10. ⚡ Client-Side Performance & DOM Virtualization
 - **Fast Initial Paint**: Initial render creates only 24 video cards via `DocumentFragment`.
 - **`IntersectionObserver` Sentinel**: Seamlessly loads subsequent 24-card increments as the user scrolls within 400px of the page bottom, maintaining 60 FPS even across hundreds of items.
 - **Focus Trapping & Accessibility**: Full WCAG compliance with keyboard trap utilities (`trapModalFocus`, `restoreFocus`), screen-reader live announcements (`aria-live="polite"`), and clear focus rings.
 - **PWA Service Worker (`sw.js`)**: Cache-First strategy for images, CSS, and audio; Network-First with offline fallback for application data.
 
-### 9. 🧪 Test Suite & Quality Verification (26 Integration Tests)
+### 11. 🔑 Secrets, Keys & Authentication Specification
+
+#### 💡 The Zero-Key Architecture
+A core design principle of *L'Impressionnisme Vivant* is that **no API keys, paid subscriptions, or credit cards are required** to clone, develop, extract wallpapers, or host the site:
+- **Read & Extraction Operations**: Powered by `yt-dlp` using YouTube's public web and Android client player endpoints.
+- **Zero Quota Exhaustion**: Ingestion runs without touching Google Cloud API quotas or incurring billable API requests.
+
+#### Complete Secrets & Keys Reference Table
+
+| Secret / Environment Variable | Purpose & Usage | Scope / Location | Required? | Default / Fallback Behavior |
+| :--- | :--- | :--- | :--- | :--- |
+| **`GITHUB_TOKEN`** | Automatically provided by GitHub Actions to commit updated catalog files (`data.js`, `data.json`, `wallpapers/`) back to `origin main`. | GitHub Actions Secrets | **Required for CI/CD Auto-Sync** (Provided natively by GitHub) | Not needed for local development. |
+| **`YOUTUBE_API_KEY`** | Optional Google Cloud API Key for YouTube Data API v3 read queries. | Local `.env` / Shell Environment | **Optional** | Not needed. The pipeline uses `yt-dlp` which incurs 0 quota units. |
+| **`YOUTUBE_COOKIES_TXT`** | Netscape-format cookie export for age-restricted or private YouTube videos. | Command line (`--cookies`) or CI secret | **Optional** | Not needed for public/unlisted videos. The pipeline automatically falls back to YouTube's Android player client to bypass bot sign-in challenges. |
+| **`CLOUDFLARE_R2_ACCESS_KEY_ID`**<br>**`CLOUDFLARE_R2_SECRET_ACCESS_KEY`** | Credentials for Cloudflare R2 object storage if offloading >2 GB of wallpapers. | GitHub Secrets / Local `.env` | **Optional** (Future Scale) | Default uses direct Git storage under GitHub Pages. |
+| **`GOOGLE_OAUTH_CLIENT_ID`**<br>**`GOOGLE_OAUTH_CLIENT_SECRET`**<br>**`GOOGLE_OAUTH_REFRESH_TOKEN`** | OAuth 2.0 user credentials required **only** if writing programmatic scripts to create or edit YouTube playlists on a user's channel. | Secure environment / KMS | **Optional** (Write automation only) | Not used for gallery presentation or wallpaper extraction. |
+
+---
+
+### 12. 📑 YouTube Data API: Programmatic Playlist Creation & Mutation Guide
+
+Developers frequently ask whether they can use a standard Google Cloud API key to programmatically create or curate YouTube playlists. Here is a definitive technical explanation of the architecture, permissions, and implementation details:
+
+#### 1. API Keys vs. OAuth 2.0 (The Critical Distinction)
+- **API Keys (`AIzaSy...`)**: Only identify the calling project and authenticate **read-only public requests** (e.g. searching public videos, reading public playlist metadata).
+- **OAuth 2.0 User Delegation (Mandatory for Playlist Mutation)**: Because a YouTube playlist belongs to an individual user's channel, creating, updating, or deleting playlists represents a **user data modification**. Google strictly blocks API keys from performing mutations:
+  - `playlists.insert` requires OAuth 2.0
+  - `playlists.update` requires OAuth 2.0
+  - `playlists.delete` requires OAuth 2.0
+  - `playlistItems.insert` (adding videos) requires OAuth 2.0
+  - `playlistItems.delete` (removing videos) requires OAuth 2.0
+
+#### 2. Required OAuth 2.0 Scopes
+Your application must request user authorization with one of the following scopes:
+- `https://www.googleapis.com/auth/youtube` (Full access: view, edit, and permanently delete your YouTube videos, playlists, and account data).
+- `https://www.googleapis.com/auth/youtube.force-ssl` (View and manage your YouTube account with SSL encryption — recommended for playlist management).
+
+#### 3. Google Cloud Setup Checklist
+1. **Google Cloud Console**: Create a project at [console.cloud.google.com](https://console.cloud.google.com).
+2. **Enable API**: Navigate to **APIs & Services > Library** and enable **YouTube Data API v3**.
+3. **Configure OAuth Consent Screen**:
+   - Set User Type to **External**.
+   - Fill in application name and support email.
+   - Add the scope: `https://www.googleapis.com/auth/youtube.force-ssl`.
+   - **Test Users**: While in "Testing" mode, add the Google/YouTube email account that owns the channel.
+4. **Create Credentials**:
+   - Go to **APIs & Services > Credentials > Create Credentials > OAuth client ID**.
+   - Application type: **Desktop App**.
+   - Download the generated `client_secrets.json`.
+
+#### 4. Quota Costs & Economics
+YouTube Data API enforces a default limit of **10,000 quota units per day**:
+- `playlists.insert`: **50 units**
+- `playlists.update`: **50 units**
+- `playlistItems.insert` (adding 1 video): **50 units**
+- `playlistItems.delete`: **50 units**
+
+*Example*: Creating 1 custom playlist and adding 100 Impressionist videos costs:
+$$50 + (100 \times 50) = 5,050 \text{ units}$$
+(Consumes ~50.5% of your free daily quota).
+
+#### 5. Headless Automation Pattern (The Refresh Token)
+To manage playlists inside automated scripts or CI/CD without an interactive browser popup:
+1. Run a one-time local script to authorize your Google account and capture both the `access_token` and `refresh_token`.
+2. Store the `client_id`, `client_secret`, and `refresh_token` as secure environment variables.
+3. Your automated script initializes credentials via `google.oauth2.credentials.Credentials(..., refresh_token=...)`, which silently refreshes the temporary access token headlessly.
+
+#### 6. Reference Python Implementation
+```python
+import os
+from google.oauth2.credentials import Credentials
+from googleapiclient.discovery import build
+
+def create_youtube_playlist(title, description, privacy="unlisted"):
+    """
+    Creates a new YouTube playlist using OAuth 2.0 refresh token authorization.
+    """
+    creds = Credentials(
+        None,  # access token generated automatically
+        refresh_token=os.environ["GOOGLE_OAUTH_REFRESH_TOKEN"],
+        token_uri="https://oauth2.googleapis.com/token",
+        client_id=os.environ["GOOGLE_OAUTH_CLIENT_ID"],
+        client_secret=os.environ["GOOGLE_OAUTH_CLIENT_SECRET"]
+    )
+
+    youtube = build("youtube", "v3", credentials=creds)
+
+    # 1. Create Playlist (50 units)
+    playlist_response = youtube.playlists().insert(
+        part="snippet,status",
+        body={
+            "snippet": {
+                "title": title,
+                "description": description,
+                "defaultLanguage": "en"
+            },
+            "status": {
+                "privacyStatus": privacy  # "public", "unlisted", or "private"
+            }
+        }
+    ).execute()
+
+    playlist_id = playlist_response["id"]
+    print(f"Created playlist: {title} (ID: {playlist_id})")
+    return playlist_id
+
+def add_video_to_playlist(youtube, playlist_id, video_id):
+    """
+    Adds a video to an existing playlist (50 units per video).
+    """
+    return youtube.playlistItems().insert(
+        part="snippet",
+        body={
+            "snippet": {
+                "playlistId": playlist_id,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": video_id
+                }
+            }
+        }
+    ).execute()
+```
+
+---
+
+### 13. 🧪 Test Suite & Quality Verification (27 Integration Tests)
 The project includes an end-to-end integration test suite in [`tests/test_gallery.js`](tests/test_gallery.js) executing against a simulated DOM environment:
 
 ```bash
 node tests/test_gallery.js
 ```
 
-**26 Verified Test Cases**:
+**27 Verified Test Cases**:
 1. Video card rendering & DOM batch threshold (>=24 cards)
 2. Results counter formatting
 3. Wallpaper grid tab switching
@@ -305,39 +454,48 @@ node tests/test_gallery.js
 24. **Smart search conflict assistance & educational discovery pills** (for uncataloged artists)
 25. **Wallpaper modal rights banner & ZIP download attribution generation** (`COPYRIGHT_AND_ATTRIBUTION.txt`)
 26. **Multi-Cut & Duplicate Title De-cluttering** (detection, filtering, card badges, modal cuts switcher bar)
+27. **Source Playlist Tracker & Modification Monitoring** (stateful modification date, item count, top video verification)
 
-### 10. 🛠️ Unified Pipeline CLI Reference (`pipeline.py`)
+### 14. 🛠️ Unified Pipeline CLI Reference (`pipeline.py`)
+
+Run commands through `uv run` (or standard `python3`):
 
 ```bash
-# Display comprehensive archive telemetry (videos, 4K count, channels, wallpapers)
-python3 pipeline.py --status
+# Display comprehensive archive telemetry (videos, 4K count, channels, wallpapers, source sync)
+uv run python3 pipeline.py --status
+
+# Audit source YouTube playlist for upstream modifications or new videos
+uv run python3 pipeline.py --check-updates
+
+# Conditionally sync only if source YouTube playlist has changed on YouTube
+uv run python3 pipeline.py --sync-if-modified
 
 # Detect duplicate titles, re-uploads, and multi-length segment cuts
-python3 pipeline.py --detect-duplicates
+uv run python3 pipeline.py --detect-duplicates
 
 # Recompile data.js, data.json, and CSV catalog from current metadata
-python3 pipeline.py --build
+uv run python3 pipeline.py --build
 
 # Pull latest playlist updates directly from YouTube (multi-playlist enabled)
-python3 pipeline.py --pull-playlist
+uv run python3 pipeline.py --pull-playlist
 
 # Audit and probe native resolutions for newly added titles
-python3 pipeline.py --sync-resolutions
+uv run python3 pipeline.py --sync-resolutions
 
 # Extract wallpaper batch for 1080p FHD tier with rate-limit delay
-python3 pipeline.py --extract --tier FHD --batch-size 15 --delay 2.0
+uv run python3 pipeline.py --extract --tier FHD --batch-size 15 --delay 2.0
 
 # Extract wallpaper batch excluding copyright-restricted channels
-python3 pipeline.py --extract --tier ALL --batch-size 15 --delay 2.0 --skip-copyright-restricted
+uv run python3 pipeline.py --extract --tier ALL --batch-size 15 --delay 2.0 --skip-copyright-restricted
 
 # Re-attempt failed extractions with automatic Android player-client fallback
-python3 pipeline.py --extract --tier ALL --retry-failed --skip-copyright-restricted
+uv run python3 pipeline.py --extract --tier ALL --retry-failed --skip-copyright-restricted
 
 # Complete end-to-end sync (resolutions -> extraction -> build -> report)
-python3 pipeline.py --sync
+uv run python3 pipeline.py --sync
 
 # Launch local preview server
-python3 pipeline.py --serve --port 8000
+uv run python3 pipeline.py --serve --port 8000
 ```
 
 ---
@@ -357,17 +515,20 @@ python3 pipeline.py --serve --port 8000
 ├── app.js                             # Client controller (progressive DOM, slideshow, audio, sharing)
 ├── pipeline.py                        # Unified command-line interface orchestrator
 ├── batch_wallpaper_extractor.py       # Rate-limited frame extraction & form factor classifier
+├── pyproject.toml                     # Python project definition & dependencies (uv managed)
+├── uv.lock                            # Deterministic package lockfile
 ├── build_webpage.py                   # Data compiler (data.js, data.json, CSV & Markdown catalogs)
 ├── playlists.config.json              # Multi-playlist configuration registry
 ├── playlists.json                     # Secondary playlist registry
 ├── playlist_raw.json                  # Raw YouTube playlist metadata dump
+├── playlist_tracker.json              # Source playlist modification & sync state tracker
 ├── video_resolutions.json             # Native resolution cache (100% indexed)
 ├── data.js                            # Precompiled browser dataset (videos, profiles, wallpapers)
 ├── data.json                          # JSON representation of catalog
 ├── monet_playlist_by_channel.csv      # Formatted CSV catalog with resolutions
 ├── monet_playlist_catalog.md          # Formatted Markdown catalog
 ├── tests/
-│   └── test_gallery.js                # 26-point automated integration test suite
+│   └── test_gallery.js                # 27-point automated integration test suite
 ├── jszip.min.js                       # Client-side zip packaging library
 ├── sw.js                              # PWA service worker with offline caching
 ├── manifest.json                      # PWA web app manifest

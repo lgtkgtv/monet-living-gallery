@@ -113,6 +113,22 @@ def get_status():
             print(f"⚙️ Batch Extractor Tracker:   {done} completed · {pending} pending · {failed} failed")
         except Exception:
             pass
+
+    # 6. Source YouTube Playlist Sync Status
+    try:
+        from core.playlist_engine import load_playlist_tracker
+        ptracker = load_playlist_tracker()
+        p_dict = ptracker.get('playlists', {})
+        if p_dict:
+            for pid, pinfo in p_dict.items():
+                p_title = pinfo.get('title') or pid
+                mod_date = pinfo.get('last_known_modified_date', 'N/A')
+                p_synced = (pinfo.get('last_synced_at') or 'N/A')[:10]
+                p_count = pinfo.get('synced_video_count', pinfo.get('last_known_count', 0))
+                print(f"📡 Source YouTube Sync:       {p_title} ({p_count} works synced)")
+                print(f"   YouTube Modified Date:    {mod_date} · Last Local Sync: {p_synced}")
+    except Exception:
+        pass
     print("=" * 64 + "\n")
 
 def run_build():
@@ -159,7 +175,10 @@ from core.playlist_engine import (
     load_gallery_config,
     get_active_playlists,
     ingest_all_configured_playlists,
-    sync_and_save_raw_catalog
+    sync_and_save_raw_catalog,
+    check_playlist_updates,
+    load_playlist_tracker,
+    probe_playlist_metadata
 )
 
 def get_configured_playlists():
@@ -236,6 +255,50 @@ def run_full_sync():
     print("\n✅ Full pipeline sync completed.")
     get_status()
 
+def run_check_updates():
+    print_banner("📡 Source YouTube Playlist Modification & Sync Audit")
+    results = check_playlist_updates()
+    has_updates = results.get('has_updates', False)
+
+    print(f"Audit Timestamp: {results.get('checked_at')}\n")
+    for p in results.get('playlists', []):
+        status_icon = "🔔 UPDATE DETECTED" if p.get('is_modified') else "✅ UP TO DATE"
+        print(f"Playlist: \"{p.get('title')}\"")
+        print(f"   URL:                    {p.get('url')}")
+        print(f"   Status:                 {status_icon}")
+        print(f"   YouTube Modified Date:  {p.get('live_modified_date') or 'Unknown'}")
+        print(f"   Live YouTube Count:     {p.get('live_count')} items")
+        saved_c = p.get('saved_count')
+        print(f"   Local Synced Count:     {saved_c if saved_c is not None else 'Not synced'} items")
+        if p.get('last_synced_at'):
+            print(f"   Last Local Sync:        {p.get('last_synced_at')[:19]}")
+        if p.get('is_modified'):
+            print("   Changes Detected on YouTube:")
+            for reason in p.get('reasons', []):
+                print(f"      • {reason}")
+        print("-" * 64)
+
+    if has_updates:
+        print("\n💡 Upstream modifications detected on YouTube.")
+        print("   Run `uv run python3 pipeline.py --refresh` or `uv run python3 pipeline.py --sync-if-modified` to sync.\n")
+    else:
+        print("\n✨ All source playlists are fully in sync with local gallery.\n")
+    return has_updates
+
+def run_sync_if_modified():
+    print_banner("🔄 Conditional Sync: Checking for Source Playlist Changes")
+    results = check_playlist_updates()
+    if results.get('has_updates'):
+        print("🔔 Source playlist modifications detected on YouTube! Triggering refresh...")
+        for p in results.get('playlists', []):
+            if p.get('is_modified'):
+                for r in p.get('reasons', []):
+                    print(f"   • [{p.get('title')}] {r}")
+        run_refresh()
+    else:
+        print("✅ Source playlist(s) have not been modified since last sync.")
+        print("   No network download or gallery rebuild necessary.")
+
 def run_detect_duplicates():
     print_banner("🔍 Multi-Cut & Duplicate Segment Analysis")
     if not os.path.exists('data.json'):
@@ -275,6 +338,8 @@ def main():
         formatter_class=argparse.RawTextHelpFormatter
     )
     parser.add_argument('--status', action='store_true', help="Display comprehensive pipeline & catalog dashboard")
+    parser.add_argument('--check-updates', action='store_true', help="Check if source YouTube playlist has been modified or updated")
+    parser.add_argument('--sync-if-modified', action='store_true', help="Conditionally sync only if source YouTube playlist has been modified")
     parser.add_argument('--refresh', nargs='?', const='', help="One-command manual refresh: pull playlist(s), probe resolutions & rebuild site")
     parser.add_argument('--pull-playlist', nargs='?', const='', help="Fetch fresh playlist JSON (accepts URL, comma-separated URLs, or reads playlists.json)")
     parser.add_argument('--build', action='store_true', help="Rebuild data.js, data.json, and catalog CSV")
@@ -303,6 +368,10 @@ def main():
 
     if args.status:
         get_status()
+    if args.check_updates:
+        run_check_updates()
+    if args.sync_if_modified:
+        run_sync_if_modified()
     if args.detect_duplicates:
         run_detect_duplicates()
     if args.refresh is not None:

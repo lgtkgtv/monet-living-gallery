@@ -23,6 +23,7 @@ from typing import Dict, List, Any, Optional, Set, Tuple
 DEFAULT_CONFIG_PATH = 'playlists.config.json'
 LEGACY_PLAYLIST_PATH = 'playlists.json'
 RAW_PLAYLIST_OUTPUT = 'playlist_raw.json'
+PLAYLIST_TRACKER_PATH = 'playlist_tracker.json'
 
 def load_gallery_config(config_path: str = DEFAULT_CONFIG_PATH) -> Dict[str, Any]:
     """
@@ -79,6 +80,146 @@ def get_active_playlists(config: Dict[str, Any]) -> List[Dict[str, Any]]:
     playlists = config.get('playlists', [])
     return [p for p in playlists if p.get('enabled', True) and p.get('url')]
 
+def load_playlist_tracker(path: str = PLAYLIST_TRACKER_PATH) -> Dict[str, Any]:
+    """Loads stateful source playlist tracker recording modification dates and sync history."""
+    if os.path.exists(path):
+        try:
+            with open(path, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return {
+        "last_checked": None,
+        "playlists": {}
+    }
+
+def save_playlist_tracker(tracker: Dict[str, Any], path: str = PLAYLIST_TRACKER_PATH) -> None:
+    """Persists playlist sync and modification state to JSON."""
+    try:
+        with open(path, 'w', encoding='utf-8') as f:
+            json.dump(tracker, f, indent=2, ensure_ascii=False)
+    except Exception as e:
+        print(f"⚠️ Could not save {path}: {e}")
+
+def probe_playlist_metadata(playlist_url: str, timeout_sec: int = 15) -> Dict[str, Any]:
+    """
+    Sub-second probe of YouTube playlist metadata (modified_date, playlist_count, top item ID)
+    without downloading streams or incurring YouTube Data API quota.
+    """
+    cmd = ['yt-dlp', '--flat-playlist', '--playlist-items', '1', '-J', playlist_url]
+    try:
+        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout_sec)
+        if proc.returncode == 0 and proc.stdout:
+            data = json.loads(proc.stdout)
+            entries = data.get('entries', [])
+            mod_raw = data.get('modified_date')
+            mod_fmt = f"{mod_raw[:4]}-{mod_raw[4:6]}-{mod_raw[6:8]}" if mod_raw and len(mod_raw) == 8 else mod_raw
+            return {
+                'id': data.get('id'),
+                'title': data.get('title'),
+                'uploader': data.get('uploader') or data.get('channel'),
+                'modified_date_raw': mod_raw,
+                'modified_date': mod_fmt,
+                'playlist_count': data.get('playlist_count'),
+                'top_video_id': entries[0].get('id') if entries else None,
+                'url': playlist_url,
+                'available': True,
+                'error': None
+            }
+        else:
+            return {'available': False, 'error': (proc.stderr or "Probe failed").strip()[:160], 'url': playlist_url}
+    except Exception as e:
+        return {'available': False, 'error': str(e)[:160], 'url': playlist_url}
+
+def check_playlist_updates(config: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+    """
+    Compares live YouTube playlist modification dates and video counts
+    against the last recorded sync in playlist_tracker.json.
+    """
+    from datetime import datetime
+    if config is None:
+        config = load_gallery_config()
+
+    tracker = load_playlist_tracker()
+    active_playlists = get_active_playlists(config)
+    now_iso = datetime.now().isoformat()
+
+    results = {
+        'checked_at': now_iso,
+        'has_updates': False,
+        'playlists': []
+    }
+
+    for p in active_playlists:
+        p_url = p.get('url')
+        p_id = p.get('id')
+        p_title = p.get('title', p_id or 'Playlist')
+
+        probe = probe_playlist_metadata(p_url)
+        saved = tracker.get('playlists', {}).get(p_id, {})
+
+        is_modified = False
+        reasons = []
+
+        if probe.get('available'):
+            live_mod = probe.get('modified_date')
+            live_count = probe.get('playlist_count')
+            live_top = probe.get('top_video_id')
+
+            saved_mod = saved.get('last_known_modified_date')
+            saved_count = saved.get('last_known_count')
+            saved_top = saved.get('last_known_top_video_id')
+
+            # 1. Check if count changed
+            if saved_count is not None and live_count is not None and live_count != saved_count:
+                is_modified = True
+                reasons.append(f"Video count changed: {saved_count} -> {live_count} items")
+
+            # 2. Check if modification date changed
+            if saved_mod and live_mod and live_mod != saved_mod:
+                is_modified = True
+                reasons.append(f"YouTube modified date changed: {saved_mod} -> {live_mod}")
+
+            # 3. Check if top video ID changed
+            if saved_top and live_top and live_top != saved_top:
+                is_modified = True
+                reasons.append(f"Top video changed: {saved_top} -> {live_top}")
+
+            # First time seeing playlist in tracker
+            if not saved:
+                is_modified = True
+                reasons.append("New playlist not previously tracked in local state")
+
+            results['playlists'].append({
+                'id': p_id,
+                'title': probe.get('title') or p_title,
+                'url': p_url,
+                'is_modified': is_modified,
+                'reasons': reasons,
+                'live_modified_date': live_mod,
+                'live_count': live_count,
+                'live_top_video_id': live_top,
+                'saved_modified_date': saved_mod,
+                'saved_count': saved_count,
+                'last_synced_at': saved.get('last_synced_at')
+            })
+
+            if is_modified:
+                results['has_updates'] = True
+        else:
+            results['playlists'].append({
+                'id': p_id,
+                'title': p_title,
+                'url': p_url,
+                'is_modified': False,
+                'error': probe.get('error', 'Unreachable'),
+                'reasons': [f"Probe failed: {probe.get('error')}"]
+            })
+
+    tracker['last_checked'] = now_iso
+    save_playlist_tracker(tracker)
+    return results
+
 def fetch_single_playlist(playlist_url: str, timeout_sec: int = 120) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
     """
     Uses yt-dlp flat-playlist extraction to safely pull video metadata
@@ -90,12 +231,18 @@ def fetch_single_playlist(playlist_url: str, timeout_sec: int = 120) -> Tuple[Li
         if proc.returncode == 0 and proc.stdout:
             data = json.loads(proc.stdout)
             entries = data.get('entries', [])
+            mod_raw = data.get('modified_date')
+            mod_fmt = f"{mod_raw[:4]}-{mod_raw[4:6]}-{mod_raw[6:8]}" if mod_raw and len(mod_raw) == 8 else mod_raw
             meta = {
                 'id': data.get('id'),
                 'title': data.get('title'),
                 'uploader': data.get('uploader') or data.get('channel'),
                 'view_count': data.get('view_count'),
-                'url': playlist_url
+                'url': playlist_url,
+                'modified_date_raw': mod_raw,
+                'modified_date': mod_fmt,
+                'playlist_count': data.get('playlist_count') or len(entries),
+                'top_video_id': entries[0].get('id') if entries else None
             }
             return entries, meta
         else:
@@ -163,7 +310,10 @@ def ingest_all_configured_playlists(config: Optional[Dict[str, Any]] = None) -> 
             'url': p_url,
             'title': p_meta.get('title') or p_title,
             'category': p_cat,
-            'videoCount': valid_entries_count
+            'videoCount': valid_entries_count,
+            'modifiedDate': p_meta.get('modified_date'),
+            'playlistCount': p_meta.get('playlist_count', valid_entries_count),
+            'topVideoId': p_meta.get('top_video_id')
         })
 
     return combined_entries, playlist_summaries
@@ -179,7 +329,29 @@ def sync_and_save_raw_catalog(output_file: str = RAW_PLAYLIST_OUTPUT) -> bool:
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(entries, f, indent=2, ensure_ascii=False)
 
+    # Persist updated modification dates & sync state into playlist_tracker.json
+    from datetime import datetime
+    tracker = load_playlist_tracker()
+    now_iso = datetime.now().isoformat()
+    for s in summaries:
+        pid = s.get('id')
+        if pid:
+            tracker.setdefault('playlists', {})[pid] = {
+                'id': pid,
+                'url': s.get('url'),
+                'title': s.get('title'),
+                'last_known_modified_date': s.get('modifiedDate'),
+                'last_known_count': s.get('playlistCount'),
+                'last_known_top_video_id': s.get('topVideoId'),
+                'last_synced_at': now_iso,
+                'synced_video_count': s.get('videoCount')
+            }
+    tracker['last_synced'] = now_iso
+    tracker['last_checked'] = now_iso
+    save_playlist_tracker(tracker)
+
     print(f"\n✅ Successfully saved {len(entries)} aggregated unique titles across {len(summaries)} playlist(s) to {output_file}.")
+    print(f"📡 Synchronized source playlist tracking state in {PLAYLIST_TRACKER_PATH}.")
     return True
 
 if __name__ == '__main__':

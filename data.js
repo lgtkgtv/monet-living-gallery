@@ -12,7 +12,9 @@ const PLAYLIST_METADATA = {
     playlistCount: 1,
     totalDuplicateGroups: 2,
     alternateCutsCount: 4,
-    declutteredVideosCount: 216
+    declutteredVideosCount: 216,
+    sourceModifiedDate: "2026-09-15",
+    sourceLastSynced: "2026-09-15"
 };
 
 const PLAYLISTS_CONFIG = [

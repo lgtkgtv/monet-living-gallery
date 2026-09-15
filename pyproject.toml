@@ -1,0 +1,7 @@
+[project]
+name = "monet-living-gallery"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "yt-dlp>=2025.1.0",
+]

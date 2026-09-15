@@ -367,10 +367,25 @@ if (standaloneVid) {
 }
 console.log('[PASS] Video modal alternate cuts switcher bar verified: interactive switching & clean isolation');
 
+// Verification 27: Source Playlist Tracker & Modification Monitoring
+const trackerPath = path.join(baseDir, 'playlist_tracker.json');
+if (!fs.existsSync(trackerPath)) {
+    throw new Error('Expected playlist_tracker.json to exist');
+}
+const trackerData = JSON.parse(fs.readFileSync(trackerPath, 'utf8'));
+if (!trackerData.playlists || Object.keys(trackerData.playlists).length === 0) {
+    throw new Error('Expected playlist_tracker.json to have tracked playlists');
+}
+const primaryPlaylist = trackerData.playlists['PLeqGkucOU6lA'];
+if (!primaryPlaylist || !primaryPlaylist.last_known_modified_date || !primaryPlaylist.last_known_count) {
+    throw new Error('Expected playlist PLeqGkucOU6lA to have last_known_modified_date and last_known_count');
+}
+console.log(`[PASS] Source playlist tracker verified: tracking ${Object.keys(trackerData.playlists).length} playlist(s) (modified: ${primaryPlaylist.last_known_modified_date}, count: ${primaryPlaylist.last_known_count})`);
+
 if (errors.length > 0) {
     console.error('❌ Uncaught runtime errors:', errors);
     process.exit(1);
 }
 
-console.log('\n🎉 ALL 26 VERIFICATION TESTS PASSED SUCCESSFULLY WITH 0 ERRORS!\n');
+console.log('\n🎉 ALL 27 VERIFICATION TESTS PASSED SUCCESSFULLY WITH 0 ERRORS!\n');
 

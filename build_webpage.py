@@ -498,6 +498,19 @@ def main():
     first_playlist_url = playlists_list[0]['url'] if playlists_list else 'https://www.youtube.com/playlist?list=PLeqGkucOU6lA'
     first_playlist_title = playlists_list[0]['title'] if playlists_list else 'sh_Monet inspired Visual Arts'
 
+    # Load source playlist modification tracking metadata
+    source_tracker = {}
+    if os.path.exists('playlist_tracker.json'):
+        try:
+            with open('playlist_tracker.json', 'r', encoding='utf-8') as f:
+                source_tracker = json.load(f)
+        except Exception:
+            pass
+    first_pid = playlists_list[0]['id'] if playlists_list else 'PLeqGkucOU6lA'
+    primary_tracker = source_tracker.get('playlists', {}).get(first_pid, {})
+    source_mod_date = primary_tracker.get('last_known_modified_date') or '2026-09-15'
+    source_sync_date = (primary_tracker.get('last_synced_at') or '2026-09-15')[:10]
+
     data_js = f"""// Generated Data for Monet Playlist Web Guide & 4K Wallpaper Archive
 const PLAYLIST_METADATA = {{
     title: "{first_playlist_title}",
@@ -512,7 +525,9 @@ const PLAYLIST_METADATA = {{
     playlistCount: {len(playlists_list)},
     totalDuplicateGroups: {total_duplicate_groups},
     alternateCutsCount: {alternate_cuts_count},
-    declutteredVideosCount: {decluttered_videos_count}
+    declutteredVideosCount: {decluttered_videos_count},
+    sourceModifiedDate: "{source_mod_date}",
+    sourceLastSynced: "{source_sync_date}"
 }};
 
 const PLAYLISTS_CONFIG = {json.dumps(playlists_list, indent=2, ensure_ascii=False)};
@@ -553,7 +568,9 @@ if (typeof window !== 'undefined') {{
             'playlistCount': len(playlists_list),
             'totalDuplicateGroups': total_duplicate_groups,
             'alternateCutsCount': alternate_cuts_count,
-            'declutteredVideosCount': decluttered_videos_count
+            'declutteredVideosCount': decluttered_videos_count,
+            'sourceModifiedDate': source_mod_date,
+            'sourceLastSynced': source_sync_date
         },
         'playlistsConfig': playlists_list,
         'duplicateGroups': duplicate_groups,
