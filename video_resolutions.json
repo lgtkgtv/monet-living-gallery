@@ -1804,5 +1804,19 @@
     "resolution": "3840x2152",
     "qualityLabel": "4K UHD",
     "is4K": true
+  },
+  "guWuLB1eI8s": {
+    "width": 1080,
+    "height": 1920,
+    "resolution": "1080x1920",
+    "qualityLabel": "1440p QHD",
+    "is4K": false
+  },
+  "fM1a1nONGv8": {
+    "width": 3840,
+    "height": 2160,
+    "resolution": "3840x2160",
+    "qualityLabel": "4K UHD",
+    "is4K": true
   }
 }
