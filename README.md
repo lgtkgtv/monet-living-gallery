@@ -470,6 +470,12 @@ uv run python3 pipeline.py --check-updates
 # Conditionally sync only if source YouTube playlist has changed on YouTube
 uv run python3 pipeline.py --sync-if-modified
 
+# Audit repository and caches for assets from removed YouTube videos
+uv run python3 pipeline.py --audit-orphans
+
+# Purge orphaned wallpaper folders and align metadata.json with active catalog
+uv run python3 pipeline.py --prune
+
 # Detect duplicate titles, re-uploads, and multi-length segment cuts
 uv run python3 pipeline.py --detect-duplicates
 
