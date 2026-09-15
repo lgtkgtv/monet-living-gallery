@@ -382,10 +382,36 @@ if (!primaryPlaylist || !primaryPlaylist.last_known_modified_date || !primaryPla
 }
 console.log(`[PASS] Source playlist tracker verified: tracking ${Object.keys(trackerData.playlists).length} playlist(s) (modified: ${primaryPlaylist.last_known_modified_date}, count: ${primaryPlaylist.last_known_count})`);
 
+// Verification 28: Title apostrophe and quote robustness in Play Video actions
+dom.window.resetFilters();
+const testSearchInput = dom.window.document.getElementById('searchInput');
+const testResSelect = dom.window.document.getElementById('resSelect');
+testSearchInput.value = "Monet's";
+testResSelect.value = 'ALL';
+dom.window.applyFilters();
+
+const monetsCards = dom.window.document.querySelectorAll('#videosGrid .video-card');
+if (monetsCards.length === 0) throw new Error("Expected to find cards matching 'Monet's'");
+let monetsLaunched = 0;
+monetsCards.forEach(card => {
+    const playBtn = card.querySelector('.btn-card-play');
+    if (!playBtn) throw new Error('Expected .btn-card-play on video card');
+    const onclickStr = playBtn.getAttribute('onclick');
+    if (!onclickStr) throw new Error('Expected onclick attribute on play button');
+    dom.window.eval(onclickStr);
+    const modal = dom.window.document.getElementById('modalOverlay');
+    if (!modal.classList.contains('open')) {
+        throw new Error('Play Video button failed to open modal for title with apostrophe');
+    }
+    monetsLaunched++;
+    dom.window.closeVideoModal();
+});
+console.log(`[PASS] Apostrophe and quote title robustness: verified ${monetsLaunched} titles with "Monet's" launch player without syntax error`);
+
 if (errors.length > 0) {
     console.error('❌ Uncaught runtime errors:', errors);
     process.exit(1);
 }
 
-console.log('\n🎉 ALL 27 VERIFICATION TESTS PASSED SUCCESSFULLY WITH 0 ERRORS!\n');
+console.log('\n🎉 ALL 28 VERIFICATION TESTS PASSED SUCCESSFULLY WITH 0 ERRORS!\n');
 

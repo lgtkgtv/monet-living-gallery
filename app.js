@@ -81,6 +81,19 @@ function debounce(func, wait = 150) {
     };
 }
 
+function escapeQuotes(str) {
+    return (str || '').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+function escapeJsAttr(str) {
+    return (str || '')
+        .replace(/\\/g, '\\\\')
+        .replace(/'/g, "\\'")
+        .replace(/"/g, '&quot;')
+        .replace(/\n/g, '\\n')
+        .replace(/\r/g, '\\r');
+}
+
 let currentViewMode = 'videos'; // 'videos', 'wallpapers', or 'favorites'
 let currentVideos = [];
 let currentWallpapers = [];
@@ -472,7 +485,7 @@ function renderChannelCards() {
             </div>
 
             <div class="channel-actions">
-                <button class="btn-filter-channel" onclick="filterByChannel('${escapeQuotes(profile.name)}')" style="width: 100%;">
+                <button class="btn-filter-channel" onclick="filterByChannel('${escapeJsAttr(profile.name)}')" style="width: 100%;">
                     🏛️ Explore ${stats.count} Curated Works
                 </button>
             </div>
@@ -818,22 +831,22 @@ function createVideoCard(v) {
     
     card.innerHTML = `
         <div class="thumb-container">
-            <img class="thumb-img" src="${thumbSrc}" alt="${videoDesc}" loading="lazy" decoding="async" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}', 0, this)" />
+            <img class="thumb-img" src="${thumbSrc}" alt="${videoDesc}" loading="lazy" decoding="async" onclick="openVideoModal('${v.id}', null, 0, this)" />
             <span class="thumb-badge-views">${formatViews(v.views)}</span>
             <span class="thumb-badge-res ${resBadgeClass}">${v.qualityLabel}</span>
             <span class="thumb-badge-duration">${v.durationFormatted}</span>
             <button class="thumb-badge-fav ${isFav ? 'active' : ''}" data-fav-video="${v.id}" onclick="toggleFavoriteVideo('${v.id}', event)" title="${isFav ? 'Remove from My Collection' : 'Save to My Collection'}" aria-label="${isFav ? 'Remove from My Collection' : 'Save to My Collection'}">
                 ${isFav ? '❤️' : '🤍'}
             </button>
-            <div class="play-overlay" role="button" aria-label="Play video: ${escapeQuotes(v.title)}" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}', 0, this)">
+            <div class="play-overlay" role="button" aria-label="Play video: ${escapeQuotes(v.title)}" onclick="openVideoModal('${v.id}', null, 0, this)">
                 <div class="play-circle">▶</div>
             </div>
         </div>
         <div class="video-content">
-            <div class="video-channel" onclick="filterByChannel('${escapeQuotes(v.channel)}')" style="cursor: pointer;" title="Click to view all from this channel">
+            <div class="video-channel" onclick="filterByChannel('${escapeJsAttr(v.channel)}')" style="cursor: pointer;" title="Click to view all from this channel">
                 ${v.channel}
             </div>
-            <h4 class="video-title" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}', 0, this)" style="cursor: pointer;" title="${escapeQuotes(v.title)}">
+            <h4 class="video-title" onclick="openVideoModal('${v.id}', null, 0, this)" style="cursor: pointer;" title="${escapeQuotes(v.title)}">
                 ${v.title}
             </h4>
             
@@ -844,7 +857,7 @@ function createVideoCard(v) {
             </div>
 
             <div class="video-actions">
-                <button class="btn-card-play" onclick="openVideoModal('${v.id}', '${escapeQuotes(v.title)}', 0, this)" aria-label="Play video ${escapeQuotes(v.title)}" title="Watch in embedded gallery player">
+                <button class="btn-card-play" onclick="openVideoModal('${v.id}', null, 0, this)" aria-label="Play video ${escapeQuotes(v.title)}" title="Watch in embedded gallery player">
                     ▶ Play Video
                 </button>
                 <button class="btn-card-wallpaper" onclick="openWallpaperModal('${v.id}', 0, this)" aria-label="View wallpapers for ${escapeQuotes(v.title)}" title="View wallpaper scene snapshots for this video">
@@ -942,7 +955,7 @@ function buildEmptyStateHTML(type = 'paintings') {
                         💡 Found <strong>${matchesInCatalog} work(s)</strong> matching "<em>${escapeQuotes(rawQuery)}</em>" in 1080p Full HD.
                     </div>
                     <div class="empty-assist-buttons">
-                        <button class="btn btn-primary" onclick="searchAllResolutionsForQuery('${escapeQuotes(rawQuery)}')">
+                        <button class="btn btn-primary" onclick="searchAllResolutionsForQuery('${escapeJsAttr(rawQuery)}')">
                             🎬 View in All Resolutions (${matchesInCatalog})
                         </button>
                         <button class="btn btn-outline-white" onclick="resetFilters()">
@@ -965,7 +978,7 @@ function buildEmptyStateHTML(type = 'paintings') {
                         💡 Found <strong>${matchesInCatalog} work(s)</strong> matching "<em>${escapeQuotes(rawQuery)}</em>" across other channels.
                     </div>
                     <div class="empty-assist-buttons">
-                        <button class="btn btn-primary" onclick="searchAllChannelsForQuery('${escapeQuotes(rawQuery)}')">
+                        <button class="btn btn-primary" onclick="searchAllChannelsForQuery('${escapeJsAttr(rawQuery)}')">
                             📺 Search All Channels (${matchesInCatalog})
                         </button>
                         <button class="btn btn-outline-white" onclick="resetFilters()">
@@ -988,7 +1001,7 @@ function buildEmptyStateHTML(type = 'paintings') {
                         💡 Found <strong>${matchesInCatalog} work(s)</strong> matching "<em>${escapeQuotes(rawQuery)}</em>" under Copyright Reserved (View-Only).
                     </div>
                     <div class="empty-assist-buttons">
-                        <button class="btn btn-primary" onclick="showAllLicensesForQuery('${escapeQuotes(rawQuery)}')">
+                        <button class="btn btn-primary" onclick="showAllLicensesForQuery('${escapeJsAttr(rawQuery)}')">
                             ⚖️ View Under All Licenses (${matchesInCatalog})
                         </button>
                         <button class="btn btn-outline-white" onclick="resetFilters()">
@@ -1010,7 +1023,7 @@ function buildEmptyStateHTML(type = 'paintings') {
                 : [];
             const featuredArtists = artists.slice(0, 8);
             const pillsHTML = featuredArtists.map(a => `
-                <button type="button" class="artist-pill-btn" onclick="selectArtistFromDropdown('${escapeQuotes(a.name)}')">
+                <button type="button" class="artist-pill-btn" onclick="selectArtistFromDropdown('${escapeJsAttr(a.name)}')">
                     ${a.icon || '🎨'} ${escapeQuotes(a.name)} (${a.count})
                 </button>
             `).join('');
@@ -1018,7 +1031,7 @@ function buildEmptyStateHTML(type = 'paintings') {
             conflictHTML = `
                 <div class="empty-state-guidance-box">
                     <div class="empty-assist-msg">
-                        🎨 "<strong>${escapeQuotes(rawQuery)}</strong>" was not found in this 220-title exhibition.
+                        🎨 "<strong>${escapeQuotes(rawQuery)}</strong>" was not found in this ${ALL_VIDEOS.length}-title exhibition.
                         <br><span style="font-size: 0.88rem; color: var(--text-muted);">The Impressionist Living Gallery features 18 masters. Explore our featured artists:</span>
                     </div>
                     <div class="artist-discovery-pills">
@@ -1210,10 +1223,6 @@ function renderWallpapers(wallpapers, append = false) {
             wallpaperObserver.observe(sentinel);
         }
     }
-}
-
-function escapeQuotes(str) {
-    return (str || '').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
 // Search Guidance & Pre-Curated Artist / Theme Suggestions
@@ -1941,9 +1950,11 @@ function loadPlayerIframe(videoId, title, startSec = 0) {
     `;
 }
 
-function openVideoModal(videoId, title, startSec = 0, triggerEl = null) {
+function openVideoModal(videoId, title = null, startSec = 0, triggerEl = null) {
+    const video = ALL_VIDEOS.find(v => v.id === videoId);
+    const resolvedTitle = title || (video ? video.title : 'Impressionist Masterwork');
     currentModalVideoId = videoId;
-    currentModalTitle = title;
+    currentModalTitle = resolvedTitle;
     currentModalStartSec = startSec;
 
     if (triggerEl) {
@@ -1962,7 +1973,6 @@ function openVideoModal(videoId, title, startSec = 0, triggerEl = null) {
         updateAudioUI(false);
     }
 
-    const video = ALL_VIDEOS.find(v => v.id === videoId);
     const modal = document.getElementById('modalOverlay');
     const titleEl = document.getElementById('modalTitle');
     const resEl = document.getElementById('modalVideoRes');
@@ -1972,7 +1982,7 @@ function openVideoModal(videoId, title, startSec = 0, triggerEl = null) {
     const modalWpCount = document.getElementById('modalWpCount');
     const wpBtn = document.getElementById('modalViewWallpapersBtn');
 
-    if (titleEl) titleEl.textContent = title;
+    if (titleEl) titleEl.textContent = resolvedTitle;
     if (resEl && video) {
         resEl.textContent = video.is4K ? `👑 Native 4K UHD (${video.resolution})` : `Native Quality: ${video.qualityLabel} (${video.resolution})`;
     }
@@ -2024,7 +2034,7 @@ function openVideoModal(videoId, title, startSec = 0, triggerEl = null) {
         }
     }
 
-    loadPlayerIframe(videoId, title, startSec);
+    loadPlayerIframe(videoId, resolvedTitle, startSec);
 
     if (modal) modal.classList.add('open');
     document.body.style.overflow = 'hidden';
