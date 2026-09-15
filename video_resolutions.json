@@ -1671,5 +1671,138 @@
     "resolution": "1920x1080",
     "qualityLabel": "1080p FHD",
     "is4K": false
+  },
+  "FJwUEI_R8NU": {
+    "width": 3840,
+    "height": 2160,
+    "resolution": "3840x2160",
+    "qualityLabel": "4K UHD",
+    "is4K": true
+  },
+  "OCnLJCmckDQ": {
+    "width": 3840,
+    "height": 2160,
+    "resolution": "3840x2160",
+    "qualityLabel": "4K UHD",
+    "is4K": true
+  },
+  "eId9iIVRT_M": {
+    "width": 3840,
+    "height": 2160,
+    "resolution": "3840x2160",
+    "qualityLabel": "4K UHD",
+    "is4K": true
+  },
+  "485t9ogWpm8": {
+    "width": 3840,
+    "height": 2160,
+    "resolution": "3840x2160",
+    "qualityLabel": "4K UHD",
+    "is4K": true
+  },
+  "7TPQifuITmM": {
+    "width": 3840,
+    "height": 2160,
+    "resolution": "3840x2160",
+    "qualityLabel": "4K UHD",
+    "is4K": true
+  },
+  "804Nu8_eZBU": {
+    "width": 1920,
+    "height": 1080,
+    "resolution": "1920x1080",
+    "qualityLabel": "1080p FHD",
+    "is4K": false
+  },
+  "9JUvonz0-5s": {
+    "width": 3840,
+    "height": 2160,
+    "resolution": "3840x2160",
+    "qualityLabel": "4K UHD",
+    "is4K": true
+  },
+  "cNVsdKLsCDM": {
+    "width": 3840,
+    "height": 2160,
+    "resolution": "3840x2160",
+    "qualityLabel": "4K UHD",
+    "is4K": true
+  },
+  "4lsZ7kLlYgs": {
+    "width": 1920,
+    "height": 1072,
+    "resolution": "1920x1072",
+    "qualityLabel": "1072p",
+    "is4K": false
+  },
+  "vY00F5WCS5o": {
+    "width": 1920,
+    "height": 1074,
+    "resolution": "1920x1074",
+    "qualityLabel": "1074p",
+    "is4K": false
+  },
+  "65npkgKIiPY": {
+    "width": 3840,
+    "height": 2160,
+    "resolution": "3840x2160",
+    "qualityLabel": "4K UHD",
+    "is4K": true
+  },
+  "HyQ0NlCc6do": {
+    "width": 3840,
+    "height": 2160,
+    "resolution": "3840x2160",
+    "qualityLabel": "4K UHD",
+    "is4K": true
+  },
+  "4oyXZY4Bs4Q": {
+    "width": 3840,
+    "height": 2160,
+    "resolution": "3840x2160",
+    "qualityLabel": "4K UHD",
+    "is4K": true
+  },
+  "H5pyEf4NL_E": {
+    "width": 3840,
+    "height": 2160,
+    "resolution": "3840x2160",
+    "qualityLabel": "4K UHD",
+    "is4K": true
+  },
+  "2hjGcBOCkfk": {
+    "width": 3840,
+    "height": 2160,
+    "resolution": "3840x2160",
+    "qualityLabel": "4K UHD",
+    "is4K": true
+  },
+  "xdF9mKfXmpQ": {
+    "width": 1920,
+    "height": 1072,
+    "resolution": "1920x1072",
+    "qualityLabel": "1072p",
+    "is4K": false
+  },
+  "S2UofNIwBQw": {
+    "width": 2560,
+    "height": 1428,
+    "resolution": "2560x1428",
+    "qualityLabel": "1080p FHD",
+    "is4K": false
+  },
+  "ONbcVsCVpxM": {
+    "width": 1920,
+    "height": 1072,
+    "resolution": "1920x1072",
+    "qualityLabel": "1072p",
+    "is4K": false
+  },
+  "ziUJgYzKNI8": {
+    "width": 3840,
+    "height": 2152,
+    "resolution": "3840x2152",
+    "qualityLabel": "4K UHD",
+    "is4K": true
   }
 }

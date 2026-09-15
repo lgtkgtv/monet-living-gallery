@@ -1872,22 +1872,6 @@
       "error": null,
       "retry_count": 0
     },
-    "RX0kyBl-4Bk": {
-      "id": "RX0kyBl-4Bk",
-      "title": "Visual Poem | Claude Monet | Living Inside Monet's \"Woman with a Parasol\" | 4K",
-      "channel": "Extraordinary Visual Art",
-      "views": 442000,
-      "tier": "Tier 1: 4K UHD",
-      "tier_rank": 1,
-      "is_4k": true,
-      "height": 2160,
-      "duration": 167,
-      "status": "completed",
-      "extracted_count": 7,
-      "last_attempt": "2026-09-13T20:09:16.129072",
-      "error": null,
-      "retry_count": 0
-    },
     "qykGjhk80Sw": {
       "id": "qykGjhk80Sw",
       "title": "Visual Poems | The Little Match Girl | A Gentel 1848 Copenhagen Winter Tale | Relaxing Classic Music",
@@ -2013,22 +1997,6 @@
       "status": "completed",
       "extracted_count": 7,
       "last_attempt": "2026-09-15T03:34:36.935511",
-      "error": null,
-      "retry_count": 0
-    },
-    "QJrKGGe6fok": {
-      "id": "QJrKGGe6fok",
-      "title": "Hallstatt in Autumn – The Most Beautiful Village in the World | 8K HDR 60p",
-      "channel": "Around The World 4K",
-      "views": 31000,
-      "tier": "Tier 1: 4K UHD",
-      "tier_rank": 1,
-      "is_4k": true,
-      "height": 4320,
-      "duration": 264,
-      "status": "completed",
-      "extracted_count": 7,
-      "last_attempt": "2026-09-13T19:18:28.382127",
       "error": null,
       "retry_count": 0
     },
